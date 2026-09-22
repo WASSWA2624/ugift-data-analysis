@@ -1,0 +1,293 @@
+{
+  "source": "new-raw-data-221092026-1114/WhatsApp Chat with DATA MANAGEMENT UGIFT.zip",
+  "identities": [
+    {
+      "speaker": "+256 779 622063",
+      "supervisor": "Denis Budali",
+      "teams": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "basis": "Exact phone match to roster."
+    },
+    {
+      "speaker": "SULAINA NANDUDU JULIET'S COLLEAGUE",
+      "supervisor": "Sulaina Nandudu",
+      "teams": [
+        16,
+        17,
+        18
+      ],
+      "basis": "Display-name and responsibility match."
+    },
+    {
+      "speaker": "SK&CO VICENT",
+      "supervisor": "Kiribakka Vincent",
+      "teams": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "basis": "Inferred name/team match; phone unavailable."
+    },
+    {
+      "speaker": "JOHNSON UGIFT",
+      "supervisor": "Gumisiriza Johnson",
+      "teams": [
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "basis": "Inferred name/western remit match; phone unavailable."
+    }
+  ],
+  "decisions": [
+    {
+      "at": "2026-09-21 16:29",
+      "speaker": "SK&CO VICENT",
+      "team": 4,
+      "lg": "Lamwo",
+      "master": "Ngomoromo HC II",
+      "ground": "Pangira HC",
+      "status": "Replacement",
+      "quote": "Ngoromoro HC in Lamwo was replaced by Pangira HC in Lamwo."
+    },
+    {
+      "at": "2026-09-21 16:29",
+      "speaker": "SK&CO VICENT",
+      "team": 4,
+      "lg": "Kitgum Mc",
+      "master": "Pandwong HC II",
+      "status": "Exists, no UgIFT assets",
+      "quote": "Pandwongo HC in Kitgum exists but did not benefit from Ugift assets.",
+      "note": "Chat says Kitgum, master Kitgum Mc."
+    },
+    {
+      "at": "2026-09-21 16:32",
+      "speaker": "SK&CO VICENT",
+      "team": 2,
+      "lg": "Yumbe",
+      "master": "Lodonga TC",
+      "status": "Not known to district",
+      "quote": "Lodonga TC in Yumbe was not know in the district."
+    },
+    {
+      "at": "2026-09-21 16:32",
+      "speaker": "SK&CO VICENT",
+      "team": 2,
+      "lg": "Maracha",
+      "master": "Loinya HC II",
+      "ground": "Liko HC",
+      "status": "Replacement by already-listed facility",
+      "quote": "Loinya HC in Maracha District was replaced by Liko HC in Maracha District",
+      "note": "Liko already master row212; do not double count."
+    },
+    {
+      "at": "2026-09-21 16:34",
+      "speaker": "+256 779 622063",
+      "team": 9,
+      "lg": "Pallisa",
+      "master": "Pallisa",
+      "ground": "Akadot Seed School",
+      "status": "Name corrected",
+      "quote": "Team 9 : in Teso-region, Pallisa does not have any any seed school called Palisa seed school, the seed school is called Akadot seed school.",
+      "note": "Edited message. Region should follow master, not Teso error in chat."
+    },
+    {
+      "at": "2026-09-21 16:40",
+      "speaker": "SULAINA NANDUDU JULIET'S COLLEAGUE",
+      "team": 16,
+      "lg": "Bugweri",
+      "master": "Igombe",
+      "ground": "Mpiita Seed School",
+      "status": "Name corrected",
+      "quote": "Team 16: Igombe Seed School is Mpiita Seed School on ground"
+    },
+    {
+      "at": "2026-09-21 16:40",
+      "speaker": "+256 779 622063",
+      "team": 8,
+      "lg": "Serere",
+      "master": "Kadungulu Seed School",
+      "ground": "Kagwara Seed Secondary School",
+      "status": "Name corrected",
+      "quote": "Team 8 in sereere Lg in Lango-sub region  Lg kadungulu seed school is actually Kagarwa seed secondary school.kadungulu is actually the sub-county where kagwara seed is located.",
+      "note": "Edited. Kagarwa/Kagwara both in message; chat's Lango region erroneous, master Teso."
+    },
+    {
+      "at": "2026-09-21 16:42",
+      "speaker": "SULAINA NANDUDU JULIET'S COLLEAGUE",
+      "team": 18,
+      "lg": "Mukono",
+      "master": "Kimenyedde Seed School",
+      "ground": "St Andrews Ndwaddemutwe SSS",
+      "status": "Name corrected",
+      "quote": "Team 18: Kimenyedde ss is St.Adrews' Ndwaddemutwe sss"
+    },
+    {
+      "at": "2026-09-21 16:46",
+      "speaker": "+256 779 622063",
+      "team": 9,
+      "lg": "Bukedea",
+      "master": "Kocheka HC II",
+      "ground": "Kangole HC III / Kocheka",
+      "status": "Ground alias reconciled",
+      "quote": "Team Nine in Lango sub-region , Kangole HC 111 is actually Kocheka, The names were changed by the DHO and his team.",
+      "note": "Master already Kocheka row125, no Kangole. Chat's Lango label erroneous."
+    },
+    {
+      "at": "2026-09-21 16:56",
+      "speaker": "+256 779 622063",
+      "team": 5,
+      "lg": "Oyam",
+      "master": [
+        "Acimi HC II",
+        "Acokara HCII",
+        "Alira HCII",
+        "Ariba HC II"
+      ],
+      "ground": [
+        "Icheme HC III",
+        "Icheme Okwir HC III",
+        "Abeja HC III",
+        "Ajaga HC III",
+        "Atura HC III",
+        "Loro HC III"
+      ],
+      "status": "Four names reported nonexistent; six facilities on ground",
+      "quote": "Team 5; Lango-sub region, Oyam  Lg, Acimi HC, Achokara HC, Aliira HC, and Ariba HC do not exist, the health centers in Oyam Lg are \n1.Icheme HC 111.\n2.Icheme Okwir HC111.\n3.Abeja HC111.\n4.Ajaga HC 111.\n5.Atura HC 111.\n6.Loro HC 111.",
+      "note": "No one-to-one replacement pairs supplied. Master has Abela, not Abeja; do not infer alias. Icheme attached narrative mentions sibling Alira, conflicting with absence claim."
+    },
+    {
+      "at": "2026-09-21 16:56",
+      "speaker": "+256 779 622063",
+      "team": 5,
+      "lg": "Lira",
+      "master": "Alik HCII",
+      "ground": [
+        "Barlonyo HC III",
+        "Onywako HC III"
+      ],
+      "status": "Alik reported nonexistent; two ground facilities named",
+      "quote": "In Lira Lg - Alik HC 111 does not exist. The Lg has two facilities namely \n1.Barlonyo Hc111\n2.Onywako HC 111.",
+      "note": "No explicit Alik→Onywako pairing. Master Punuluru omitted from chat list but not explicitly declared nonexistent. Onywako not physically verified."
+    },
+    {
+      "at": "2026-09-22 08:10",
+      "speaker": "SULAINA NANDUDU JULIET'S COLLEAGUE",
+      "team": 17,
+      "lg": "Jinja",
+      "master": "Butagaya",
+      "ground": "Buwala Seed School",
+      "status": "Replacement/name corrected",
+      "quote": "Instead of butagaya it was buwala seed for jinja",
+      "note": "IMG-20260922-WA0000.jpg master screenshot, no field photos."
+    },
+    {
+      "at": "2026-09-22 08:10",
+      "speaker": "SULAINA NANDUDU JULIET'S COLLEAGUE",
+      "team": 17,
+      "lg": "Namayingo",
+      "master": "Mwema Seed School",
+      "ground": "Mutumba Seed School",
+      "status": "Replacement/name corrected",
+      "quote": "Then for mwema it was mutumba seed",
+      "note": "IMG-20260922-WA0001.jpg master screenshot, no field photos."
+    },
+    {
+      "at": "2026-09-22 08:11–08:12",
+      "speaker": "SULAINA NANDUDU JULIET'S COLLEAGUE",
+      "team": 17,
+      "lg": "Kaliro",
+      "master": "Buyinda HC II",
+      "status": "Not UgIFT; not verified",
+      "quote": "They said it was a heath center but not among ugift\nThat is for Buyinda seed school. It was not verified since it wasn't under Ugift",
+      "note": "Explicit decision but master identification contextual: chat says HC and seed school; master has only Buyinda HC II row86."
+    }
+  ],
+  "attachments": [
+    {
+      "file": "ASSET VERIFICATION AND RECORDING TOOL KIT 222 (3).docx",
+      "at": "2026-09-21 16:47",
+      "facility": "Busota HC III",
+      "team": 18,
+      "lg": "Kamuli MC",
+      "basis": "Populated form. Chat explicitly identifies Busota.",
+      "note": "Cover says district, checklist municipal council; master Busota is Kamuli Mc. Verifier Namuganga Sharypha."
+    },
+    {
+      "file": "Icheme HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx",
+      "at": "2026-09-21 16:57",
+      "facility": "Iceme/Icheme HC III",
+      "team": 5,
+      "lg": "Oyam",
+      "basis": "Populated form, visit explicitly stated.",
+      "quote": "Note: The verification was done very late in the evening we were unable to take pictures as we reached the facility very late as per the itinerary.",
+      "note": "Verifier Apio Ruth, supervisor Denis Tawooda Budali. Narrative refers to sibling Alira despite chat absence claim."
+    },
+    {
+      "file": "Onywako HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx",
+      "at": "2026-09-21 16:57",
+      "facility": "Onywako HC III",
+      "team": 5,
+      "lg": "Lira (Itek)",
+      "basis": "Reported assets only; physical verification explicitly not done.",
+      "quote": "Physical verification of assets was not possible. The in-charge initially reported not having received UgIFT assets but later identified items he was aware had been delivered. As he indicated that he is mostly based at the district offices, the reported assets could not be physically verified at the facility.",
+      "note": "Asset remarks repeat 'Reported by in-charge; not physically verified.' Verifier Namata Maria, supervisor Denis Tawooda Budali."
+    },
+    {
+      "file": "data updates - western.xls",
+      "at": "2026-09-22 08:03",
+      "speaker": "JOHNSON UGIFT",
+      "basis": "Populated asset worksheets; not textual alias instructions.",
+      "facilities": [
+        {
+          "sheet": "Sheet2",
+          "cell": "B3",
+          "name": "NDIBAREMA MEMORIAL SSS, NSIIKA, BUHWEJU DC",
+          "team": 20,
+          "lg": "Buhweju",
+          "note": "Master Nsiika T/C possible alias but not explicit."
+        },
+        {
+          "sheet": "Sheet3",
+          "cell": "B3",
+          "name": "MAYANGA HCIII, MITOOMA",
+          "team": 19,
+          "lg": "Mitooma",
+          "note": "Master Mayanga HC II row255."
+        },
+        {
+          "sheet": "Sheet5",
+          "cell": "B2",
+          "name": "RUTOOMA HCIII, MBARARA",
+          "team": 21,
+          "lg": "Mbarara",
+          "note": "Header does not distinguish district/city. Resolve using other evidence."
+        }
+      ],
+      "note": "Ignore unrelated old finance-template sheets Exp analysis Q1-Q2 and Sheet1. Extracted rows in western_chat_rows.json."
+    },
+    {
+      "file": "IMG-20260922-WA0000.jpg",
+      "basis": "Master-list screenshot accompanying Butagaya/Buwala decision, no field verification evidence."
+    },
+    {
+      "file": "IMG-20260922-WA0001.jpg",
+      "basis": "Master-list screenshot accompanying Mwema/Mutumba decision, no field verification evidence."
+    }
+  ],
+  "guidance": [
+    "All decisions are explicit except the disclosed spelling/LG/identity mappings; do not use missing evidence as proof of absence.",
+    "A populated submitted form and physically verified facility are distinct statuses, especially Onywako.",
+    "Master Complete/Ongoing describes construction, not asset verification.",
+    "Liko and Kocheka already master-listed; do not count each alias as a separate facility.",
+    "No one-to-one replacement pairing for Oyam or Alik/Onywako supplied."
+  ]
+}

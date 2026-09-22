@@ -1,0 +1,4881 @@
+PAGE 1
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 1
+UgIFT asset verification: which facilities have sent data
+Health centres and schools on the programme list, by team, supervisor and local government. Status of the files held in
+raw-data-grouped on 21 September 2026.
+Status
+Meaning
+Received
+The facility has its own folder of data (toolkit, report, photos or register) in raw-data-grouped.
+Register only
+No folder of its own, but its verification rows are in a consolidated register the team returned. The register is named against the
+facility.
+Missing
+Nothing on file for this facility. Where the same local government has a team folder the list does not name, the note says
+"possibly": the team may have visited it under another name.
+632 facilities on the programme list: 450 received, 52 in a register only, 130 missing. Teams also sent data for 40 facilities the list
+does not name (shown in each team's full status table).
+Summary by team
+Team
+Supervisor
+Team members
+Health
+centres
+received /
+listed
+Schools
+received /
+listed
+Missing:
+health
+centres
+Missing:
+schools
+1
+Kiribakka Vincent
+Male Stella, Lukwago Isa
+6 / 9
+9 / 10
+3
+1
+2
+Kiribakka Vincent
+Fikira Sakia, Nantanja Arnold
+12 / 14
+8 / 8
+2
+0
+3
+Kiribakka Vincent
+Ochan Innocent, Kwagala Jona Kaaya
+6 / 6
+8 / 8
+0
+0
+4
+Kiribakka Vincent
+Mpaata Rodgers, Akankwasa Edwin
+9 / 11
+11 / 11
+2
+0
+5
+Denis Budali
+Nassuna Dorris, Waswa Peter, Namata Maria
+18 / 23
+8 / 8
+5
+0
+6
+Denis Budali
+Babirye Alixa, Namono Shirley Mercy, Muyombya
+Ephrahim
+13 / 13
+6 / 6
+0
+0
+7
+Denis Budali
+Nanjonjo Parvin, Aganyo Mercy
+14 / 14
+6 / 6
+0
+0
+8
+Denis Budali
+Atim Jesica, Olobo Felix, Kiwungulo Innocent
+16 / 16
+6 / 7
+0
+1
+9
+Denis Budali
+Adimo Racheal, Echwou Mark Arthur
+5 / 6
+9 / 10
+1
+1
+10
+Luminsa Kassim
+Otema Emmanuel, Mwesige Joseph
+1 / 1
+10 / 10
+0
+0
+11
+Luminsa Kassim
+Mworozi Davis, Nalukwata Shadia
+2 / 2
+7 / 7
+0
+0
+12
+Luminsa Kassim
+Sophia Nakyanzi, Butsiba Peter Jackson
+5 / 5
+11 / 11
+0
+0
+13
+Luminsa Kassim
+Kayongo Tonny, Nakiganda Lydia
+9 / 11
+11 / 12
+2
+1
+14
+Luminsa Kassim
+Asio Miriam J, Ahabwe Derick, Kyanamira Nathan
+14 / 14
+6 / 6
+0
+0
+15
+Luminsa Kassim
+Alybo Marry Topista, Shadrack Biyinzika, Nakiwala
+Doreen
+16 / 16
+7 / 7
+0
+0
+16
+Sulaina Nandudu
+Kiyumba Salim, Solomon Wandera
+12 / 12
+7 / 8
+0
+1
+17
+Sulaina Nandudu
+Shanitah Nakabiito, Kojjo Shadrack
+9 / 10
+8 / 11
+1
+3
+18
+Sulaina Nandudu
+Sharipher Namuganga, Peace Mukayisire
+7 / 8
+7 / 7
+1
+0
+19
+Gumisiriza Johnson
+Nimusiima Alex, Eclat Gumisiriza
+11 / 13
+2 / 6
+2
+4
+20
+Gumisiriza Johnson
+Kemigisha Winfred, Muhumuza Maxim, Nannono Dianah
+Patricia
+14 / 14
+6 / 7
+0
+1
+21
+Gumisiriza Johnson
+Aineukama Jeremiah, Jackson Mwatiri, Abaho Blessing
+12 / 12
+5 / 7
+0
+2
+22
+Gumisiriza Johnson
+Bugembe Hajab Lydia Mugasho
+9 / 9
+7 / 7
+0
+0
+23
+Gumisiriza Johnson
+Muhairwe Apollo, Ayamba Promise, Nkuutu Menha
+16 / 16
+5 / 6
+0
+1
+24
+Depaul Mbonigaba
+Darius Charles Mujuni, Huala Namujuzi
+2 / 5
+6 / 10
+3
+4
+25
+Depaul Mbonigaba
+Kiconco Immaculate, Kyomukama Lydia
+2 / 10
+0 / 10
+8
+10
+26
+Depaul Mbonigaba
+Zalwango Maria, Nadia Nasige, Nabbosa Sumayah
+11 / 17
+6 / 8
+6
+2
+27
+Depaul Mbonigaba
+Jane Kihumuro, Nalukuuma Faridah, Katushabe Racheal
+12 / 13
+4 / 6
+1
+2
+28
+Depaul Mbonigaba
+Namayanja Vanessa, Kato Charles, Jalia Baluubu
+15 / 16
+7 / 8
+1
+1
+29
+Depaul Mbonigaba
+Fatuma Yasin, Hindu Nakagwa, Nakitende Sharifah
+9 / 15
+0 / 7
+6
+7
+30
+Depaul Mbonigaba
+Nakandi Aida, Ali Kasule
+4 / 11
+0 / 5
+7
+5
+31
+Lawrence Kalyowa
+Ndagala Peter (Buvuma), Kyazike Viola (Kalangala)
+5 / 6
+2 / 3
+1
+1
+32
+Lawrence Kalyowa
+Mudasiru Kyewalabye, Nampebwa Emilly
+0 / 14
+2 / 5
+14
+3
+33
+Lawrence Kalyowa
+Nantumwa Penninah, Nasaali Victoria
+4 / 12
+5 / 10
+8
+5
+"Received" in the first two number columns counts both own-folder and register-only facilities. Health centres include the regional blood banks in
+the allocation.
+
+
+PAGE 2
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 2
+Missing facilities, by team
+Every facility on the programme list for which nothing is on file. Teams with nothing missing are left out.
+Team 1
+Supervisor: Kiribakka Vincent (0772628302)   |   Team members: Male Stella, Lukwago Isa
+Local government
+Facility (programme list name)
+Type
+Note
+Zombo
+Alangi
+Health centre
+possibly the team's folder Amwonyo-HC-III,
+Atyak-HC-III
+Zombo
+Ther-uru HC II
+Health centre
+possibly the team's folder Amwonyo-HC-III,
+Atyak-HC-III
+Zombo
+Abanga
+School
+possibly the team's folder
+Amei-Seed-Secondary-School
+Nebbi
+Oweko HC II
+Health centre
+possibly the team's folder Pamaka-HC-III
+Team 2
+Supervisor: Kiribakka Vincent (0772628302)   |   Team members: Fikira Sakia, Nantanja Arnold
+Local government
+Facility (programme list name)
+Type
+Note
+Yumbe
+Lodonga TC
+Health centre
+possibly the team's folder Lobe-HC-III,
+Nyori-HC-III
+Maracha
+Loinya HC II
+Health centre
+possibly the team's folder Odupiri-HC-III
+Team 4
+Supervisor: Kiribakka Vincent (0772628302)   |   Team members: Mpaata Rodgers, Akankwasa Edwin
+Local government
+Facility (programme list name)
+Type
+Note
+Lamwo
+Ngomoromo HC II
+Health centre
+possibly the team's folder Pangira-HC-III
+Kitgum MC
+Pandwong HC II
+Health centre
+Team 5
+Supervisor: Denis Budali (0779622063, 0782913296)   |   Team members: Nassuna Dorris, Waswa Peter, Namata Maria
+Local government
+Facility (programme list name)
+Type
+Note
+Lira
+Alik HCII
+Health centre
+possibly the team's folder Onywako-HC-III
+Oyam
+Acimi HC II
+Health centre
+Oyam
+Acokara HCII
+Health centre
+Oyam
+Alira HCII
+Health centre
+Oyam
+Ariba HC II
+Health centre
+Team 8
+Supervisor: Denis Budali (0779622063, 0782913296)   |   Team members: Atim Jesica, Olobo Felix, Kiwungulo Innocent
+Local government
+Facility (programme list name)
+Type
+Note
+Serere
+Kadungulu Seed School
+School
+Team 8's schools sheet also lists 'Kagawa' and
+'Kahasa' seed schools; one may be this school
+Team 9
+Supervisor: Denis Budali (0779622063, 0782913296)   |   Team members: Adimo Racheal, Echwou Mark Arthur
+Local government
+Facility (programme list name)
+Type
+Note
+Pallisa
+Pallisa
+School
+possibly the team's folder
+Akadot-Seed-Secondary-School
+Bukedea
+Kocheka HC II
+Health centre
+possibly the team's folder Kangole-HC-III
+Team 13
+Supervisor: Luminsa Kassim (0783725419, 0702806116)   |   Team members: Kayongo Tonny, Nakiganda Lydia
+Local government
+Facility (programme list name)
+Type
+Note
+Tororo MC
+Eastern Division
+School
+Busia
+Dabani
+Health centre
+possibly the team's folder Buwumba-HC-III
+Busia MC
+Busia Eastern Division
+Health centre
+
+
+PAGE 3
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 3
+Team 16
+Supervisor: Sulaina Nandudu (0758998084)   |   Team members: Kiyumba Salim, Solomon Wandera
+Local government
+Facility (programme list name)
+Type
+Note
+Bugweri
+Igombe
+School
+possibly the team's folder
+Mpiita-Seed-Secondary-School
+Team 17
+Supervisor: Sulaina Nandudu (0758998084)   |   Team members: Shanitah Nakabiito, Kojjo Shadrack
+Local government
+Facility (programme list name)
+Type
+Note
+Namayingo
+Mwema Seed School
+School
+possibly the team's folder
+Mutumba-Seed-Secondary-School
+Kaliro
+Buyinda HC II
+Health centre
+Jinja City
+Central Division
+School
+Jinja
+Butagaya
+School
+possibly the team's folder
+Buwala-Seed-Secondary-School; Busoga seed
+register lists 'Buwaya Seed School' under Jinja; it
+may be this school
+Team 18
+Supervisor: Sulaina Nandudu (0758998084)   |   Team members: Sharipher Namuganga, Peace Mukayisire
+Local government
+Facility (programme list name)
+Type
+Note
+Kamuli MC
+Busota HC II
+Health centre
+only an Office lock file for Busota reached us; the
+document itself was not sent
+Team 19
+Supervisor: Gumisiriza Johnson (0703056064)   |   Team members: Nimusiima Alex, Eclat Gumisiriza
+Local government
+Facility (programme list name)
+Type
+Note
+Bushenyi
+Rutooma HCII
+Health centre
+Bushenyi
+Bumbaire Seed School
+School
+Bushenyi
+Kyamuhunga
+School
+Mitooma
+Kashenshero
+School
+Mitooma
+Mayanga Seed School
+School
+Sheema MC
+Rwamujojo HC II
+Health centre
+Team 20
+Supervisor: Gumisiriza Johnson (0703056064)   |   Team members: Kemigisha Winfred, Muhumuza Maxim, Nannono Dianah Patricia
+Local government
+Facility (programme list name)
+Type
+Note
+Buhweju
+Nsiika T/C
+School
+Team 21
+Supervisor: Gumisiriza Johnson (0703056064)   |   Team members: Aineukama Jeremiah, Jackson Mwatiri, Abaho Blessing
+Local government
+Facility (programme list name)
+Type
+Note
+Mbarara
+Rwanyamahembe
+School
+Ibanda
+Kishangara seed school
+School
+Team 23
+Supervisor: Gumisiriza Johnson (0703056064)   |   Team members: Muhairwe Apollo, Ayamba Promise, Nkuutu Menha
+Local government
+Facility (programme list name)
+Type
+Note
+Rukungiri
+Nyakishenyi (New facilities at Nyakishenyi
+H.S.)
+School
+possibly the team's folder
+Bikurungu-Seed-Secondary-School
+
+
+PAGE 4
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 4
+Team 24
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Darius Charles Mujuni, Huala Namujuzi
+Local government
+Facility (programme list name)
+Type
+Note
+Nakasongola
+Kiralamba HC II
+Health centre
+Nakasongola
+Nakitoma
+School
+Nakaseke
+Butalangu HC II
+Health centre
+Nakaseke
+Semuto HC II
+Health centre
+Nakaseke
+Kikamulo
+School
+Nakaseke
+Nakaseke Seed School
+School
+Nakaseke
+Ngoma
+School
+Team 25
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Kiconco Immaculate, Kyomukama Lydia
+Local government
+Facility (programme list name)
+Type
+Note
+Buliisa
+Butiaba HC II
+Health centre
+Buliisa
+Kigwera HC II
+Health centre
+Buliisa
+Kihungya HC II
+Health centre
+Buliisa
+Kihungya
+School
+Buliisa
+Ngwedo Seed School
+School
+Hoima
+Buhanika
+School
+Hoima
+Kigorobya Seed School
+School
+Hoima City
+Hoima Regional Blood Bank
+Blood bank
+allocated in team-distributions.docx; an inventory
+is in the programme documents (All WIP Ugift),
+not from the team
+Kikuube
+Kiziranfumbi Seed School
+School
+Kikuube
+Kyangwali (New Facilities for Kyangwali Seed
+S.S.)
+School
+Kagadi
+Burora (Kagadi) HC II
+Health centre
+Kagadi
+Kyabasara HC II
+Health centre
+Kagadi
+Kyakabadiima HC II
+Health centre
+Kagadi
+Muhorro HC II
+Health centre
+Kagadi
+Burora
+School
+Kagadi
+Kagadi
+School
+Kagadi
+Kiryanga Seed School
+School
+Kagadi
+Ruteete
+School
+Team 26
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Zalwango Maria, Nadia Nasige, Nabbosa Sumayah
+Local government
+Facility (programme list name)
+Type
+Note
+Bundibugyo
+Kyondo HC II
+Health centre
+possibly the team's folder Busanga-HC-III
+Bundibugyo
+Mantoroba HC II
+Health centre
+possibly the team's folder Busanga-HC-III
+Kabarole
+Kidubuli HC II
+Health centre
+possibly the team's folder Iruhura-HC-III,
+Nyambuusa-HC-III
+Kabarole
+Nyabuswa HC II
+Health centre
+possibly the team's folder Iruhura-HC-III,
+Nyambuusa-HC-III
+Kabarole
+Kasenda Seed School
+School
+Kabarole
+Kichwamba
+School
+Ntoroko
+Bweramule HC II
+Health centre
+possibly the team's folder Butungama-HC-III
+Ntoroko
+Musandama HC II
+Health centre
+possibly the team's folder Butungama-HC-III
+
+
+PAGE 5
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 5
+Team 27
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Jane Kihumuro, Nalukuuma Faridah, Katushabe Racheal
+Local government
+Facility (programme list name)
+Type
+Note
+Kasese
+Kabingo HCII
+Health centre
+Bunyangabu
+Kabonero
+School
+Bunyangabu
+Kyamukube Town Council
+School
+Team 28
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Namayanja Vanessa, Kato Charles, Jalia Baluubu
+Local government
+Facility (programme list name)
+Type
+Note
+Fort-Portal City
+Karago TC
+School
+possibly the team's folder
+Bukuuku-Community-Secondary-School
+Mubende
+Kabbo
+Health centre
+possibly the team's folder Nakawala-HC-III
+Team 29
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Fatuma Yasin, Hindu Nakagwa, Nakitende Sharifah
+Local government
+Facility (programme list name)
+Type
+Note
+Kiboga
+Katoma Seed School
+School
+Kiboga
+Lwamata Town Council
+School
+Kakumiro
+Kikoola
+Health centre
+Kakumiro
+Kikwaya
+Health centre
+Kakumiro
+Masaka HC II
+Health centre
+Kakumiro
+Birembo Seed School
+School
+Kakumiro
+Mpasaana
+School
+Kyankwanzi
+Kikolimbo HC II
+Health centre
+Kyankwanzi
+Kikooma
+Health centre
+Kyankwanzi
+Sirimula HC II
+Health centre
+Kyankwanzi
+Bananywa Seed School
+School
+Kyankwanzi
+Nsambya
+School
+Kyankwanzi
+Ntwetwe
+School
+Team 30
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Nakandi Aida, Ali Kasule
+Local government
+Facility (programme list name)
+Type
+Note
+Kibaale
+Nyamarunda
+Health centre
+Kibaale
+Mugarama(new facilities for St Mugagga S.S)
+School
+Kibaale
+Nyamarwa Seed School
+School
+Kasanda
+Butoloogo HC II
+Health centre
+Kasanda
+Kyakatebe HC II
+Health centre
+Kasanda
+Makokoto HC II
+Health centre
+Kasanda
+Makokoto (New facilities at Makokoto Seed
+S.S.)
+School
+Kasanda
+Manyogaseka Seed School
+School
+Mityana
+Busunju HCII
+Health centre
+Mityana
+Mpongo HCII
+Health centre
+Mityana
+Namungo HC II
+Health centre
+Mityana
+Namungo Seed School
+School
+Team 31
+Supervisor: Lawrence Kalyowa (0774106047)   |   Team members: Ndagala Peter (Buvuma), Kyazike Viola (Kalangala)
+Local government
+Facility (programme list name)
+Type
+Note
+Buvuma
+Lwajje HC II
+Health centre
+possibly the team's folder Buvuma-HC-III
+Kalangala
+Bufumira Seed School
+School
+possibly the team's folder
+Nekemiya-Memorial-Seed-Secondary-School
+
+
+PAGE 6
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 6
+Team 32
+Supervisor: Lawrence Kalyowa (0774106047)   |   Team members: Mudasiru Kyewalabye, Nampebwa Emilly
+Local government
+Facility (programme list name)
+Type
+Note
+Kiira MC
+Kireka HCII
+Health centre
+Kiira MC
+Kirinya HCII
+Health centre
+Wakiso
+Bussi HC II
+Health centre
+Wakiso
+Kasangati TC/Mutuba-Nangabo
+Health centre
+Wakiso
+Kasoozo HCII
+Health centre
+Wakiso
+Nakitokolo Namayumba HC II
+Health centre
+Wakiso
+Zinga HC II
+Health centre
+Wakiso
+Sumbwe Seed School
+School
+Nansana MC
+Matuga HCII
+Health centre
+Makindye-Ssabagabo
+MC
+Kibiri HC III
+Health centre
+Makindye-Ssabagabo
+MC
+Mutungo HCII
+Health centre
+Mpigi
+Kiringente Seed School
+School
+Butambala
+Butaaka HC II
+Health centre
+Gomba
+Bulwadda HC II
+Health centre
+Gomba
+Mamba HC II
+Health centre
+Gomba
+Ngomanene HC II
+Health centre
+Gomba
+Maddu Seed School
+School
+possibly the team's folder
+Kyayi-Seed-Secondary-School
+Team 33
+Supervisor: Lawrence Kalyowa (0774106047)   |   Team members: Nantumwa Penninah, Nasaali Victoria
+Local government
+Facility (programme list name)
+Type
+Note
+Lwengo
+Kagganda HC II
+Health centre
+possibly the team's folder Lwengenyi-HC-III
+Lwengo
+Lwengo Seed School
+School
+possibly the team's folder
+Mbirizi-Seed-Secondary-School
+Lyantonde
+Kabetemere HC II
+Health centre
+Lyantonde
+Lyakajura HC II
+Health centre
+Lyantonde
+Kasagama
+School
+Lyantonde
+Mpumudde seed school
+School
+Sembabule
+Kyera HCII
+Health centre
+Sembabule
+Ntete HCII
+Health centre
+Masaka City
+Nyendo HC II
+Health centre
+Masaka
+Kyabakuza HCII
+Health centre
+Masaka
+Bukakata Seed School
+School
+Kyotera
+Nangoma HC II
+Health centre
+Kyotera
+Kasali TC
+School
+
+
+PAGE 7
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 7
+Full status, by team
+Every facility on the programme list, plus the facilities the teams sent that the list does not name. "Where" gives the folder under
+the team (local government/facility) or the register holding the rows.
+Team 1   15 received, 0 register only, 4 missing
+Supervisor: Kiribakka Vincent (0772628302)   |   Team members: Male Stella, Lukwago Isa
+Local government
+Facility
+Type
+Status
+Where / note
+Madi-Okollo
+Ulepi HCII
+Health centre
+Received
+team-01 / Madi-Okollo / Ulepi-HC-III
+Nwoya
+Got Apwoyo
+Health centre
+Received
+team-01 / Nwoya / Got-Apwoyo-HC-III
+Nwoya
+Koch Lii HC II
+Health centre
+Received
+team-01 / Nwoya / Koch-Lii-HC-III
+Nwoya
+Para HC II
+Health centre
+Received
+team-01 / Nwoya / Paraa-HC-III
+same facility, spelled differently
+Nwoya
+Todora HC II
+Health centre
+Received
+team-01 / Nwoya / Todora-HC-III
+Nwoya
+Got Apwoyo
+School
+Received
+team-01 / Nwoya /
+Got-Apwoyo-Seed-Secondary-School
+Nwoya
+Lungulu Seed School
+School
+Received
+team-01 / Nwoya / Lungulu-Seed-Secondary-School
+Zombo
+Alangi
+Health centre
+Missing
+possibly the team's folder Amwonyo-HC-III,
+Atyak-HC-III
+Zombo
+Amwonyo HC III
+Health centre
+Received
+team-01 / Zombo / Amwonyo-HC-III
+not on the programme list
+Zombo
+Atyak HC III
+Health centre
+Received
+team-01 / Zombo / Atyak-HC-III
+not on the programme list
+Zombo
+Otheko HC II
+Health centre
+Received
+team-01 / Zombo / Otheko-HC-III
+Zombo
+Ther-uru HC II
+Health centre
+Missing
+possibly the team's folder Amwonyo-HC-III,
+Atyak-HC-III
+Zombo
+Abanga
+School
+Missing
+possibly the team's folder
+Amei-Seed-Secondary-School
+Zombo
+Amei Seed Secondary School
+School
+Received
+team-01 / Zombo / Amei-Seed-Secondary-School
+not on the programme list
+Zombo
+Atyak Seed School
+School
+Received
+team-01 / Zombo / Atyak-Seed-Secondary-School
+Zombo
+Kango
+School
+Received
+team-01 / Zombo / Kango-Seed-Secondary-School
+Nebbi
+Oweko HC II
+Health centre
+Missing
+possibly the team's folder Pamaka-HC-III
+Nebbi
+Pamaka HC III
+Health centre
+Received
+team-01 / Nebbi / Pamaka-HC-III
+not on the programme list
+Nebbi
+Atego Seed School
+School
+Received
+team-01 / Nebbi / Atego-Seed-Secondary-School
+Nebbi
+Kucwiny
+School
+Received
+team-01 / Nebbi / Mamba-Seed-Secondary-School
+in Kucwiny sub-county
+Nebbi
+Ndhew
+School
+Received
+team-01 / Nebbi / Ndhew-Seed-Secondary-School
+Pakwach
+Alwi Seed School
+School
+Received
+team-01 / Pakwach / Alwi-Seed-Secondary-School
+Pakwach
+Wadelai
+School
+Received
+team-01 / Pakwach /
+Wadelai-Seed-Secondary-School
+Team 2   20 received, 0 register only, 2 missing
+Supervisor: Kiribakka Vincent (0772628302)   |   Team members: Fikira Sakia, Nantanja Arnold
+Local government
+Facility
+Type
+Status
+Where / note
+Yumbe
+Amanyiri
+Health centre
+Received
+team-02 / Yumbe / Amanyiri-HC-III
+Yumbe
+Kerwa HC II
+Health centre
+Received
+team-02 / Yumbe / Kerwa-HC-III
+Yumbe
+Lobe HC III
+Health centre
+Received
+team-02 / Yumbe / Lobe-HC-III
+not on the programme list
+Yumbe
+Lodonga TC
+Health centre
+Missing
+possibly the team's folder Lobe-HC-III, Nyori-HC-III
+Yumbe
+Mocha HC II
+Health centre
+Received
+team-02 / Yumbe / Mocha-HC-III
+Yumbe
+Nyori HC III
+Health centre
+Received
+team-02 / Yumbe / Nyori-HC-III
+not on the programme list
+Yumbe
+Drajini
+School
+Received
+team-02 / Yumbe /
+Drajini-Hill-Seed-Secondary-School
+Yumbe
+Kerwa
+School
+Received
+team-02 / Yumbe / Kerwa-Seed-Secondary-School
+
+
+PAGE 8
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 8
+Local government
+Facility
+Type
+Status
+Where / note
+Yumbe
+Ladonga Seed School
+School
+Received
+team-02 / Yumbe / Lodonga-Seed-Secondary-School
+same facility, spelled differently
+Arua
+Arua Regional Blood Bank
+Blood bank
+Received
+team-02 / Arua / Arua-Regional-Blood-Bank
+allocated in team-distributions.docx
+Arua
+Aroi
+School
+Received
+team-02 / Arua /
+St-Peters-Seed-Secondary-School-Aroi
+Koboko
+Chakulia HC II
+Health centre
+Received
+team-02 / Koboko / Chakulia-HC-III
+Koboko
+Lasanga HCII
+Health centre
+Received
+team-02 / Koboko MC / Lasanga-HC-III
+team filed it under Koboko MC
+Koboko
+Nyangilia
+Health centre
+Received
+team-02 / Koboko MC / Nyangilia-HC-III
+team filed it under Koboko MC
+Koboko
+Kuluba
+School
+Received
+team-02 / Koboko /
+Nyakaliso-Seed-Secondary-School
+in Kuluba sub-county
+Koboko
+Padrombu Seed School
+School
+Received
+team-02 / Koboko /
+Padrombu-Seed-Secondary-School
+Maracha
+Ajikoro HC II
+Health centre
+Received
+team-02 / Maracha / Ajikoro-HC-III
+Maracha
+Curube HC II
+Health centre
+Received
+team-02 / Maracha / Curube-HC-III
+Maracha
+Kijomoro
+Health centre
+Received
+team-02 / Maracha / Ekaligo-HC-III
+in Kijomoro sub-county
+Maracha
+Liko HC II
+Health centre
+Received
+team-02 / Maracha / Liko-HC-III
+Maracha
+Loinya HC II
+Health centre
+Missing
+possibly the team's folder Odupiri-HC-III
+Maracha
+Odupiri HC III
+Health centre
+Received
+team-02 / Maracha / Odupiri-HC-III
+not on the programme list
+Maracha
+Kololo Public
+School
+Received
+team-02 / Maracha / Kololo-Seed-Secondary-School
+Maracha
+Oluvu
+School
+Received
+team-02 / Maracha / All-Saints-Secondary-School
+in Oluvu sub-county
+Terego
+Omugo (Wati)
+Health centre
+Received
+team-02 / Terego / Wati-HC-III
+Team 3   14 received, 0 register only, 0 missing
+Supervisor: Kiribakka Vincent (0772628302)   |   Team members: Ochan Innocent, Kwagala Jona Kaaya
+Local government
+Facility
+Type
+Status
+Where / note
+Obongi
+Gimara
+School
+Received
+team-03 / Obongi / Gopele-Seed-Secondary-School
+in Gimara sub-county
+Adjumani
+Arinyapi HC II
+Health centre
+Received
+team-03 / Adjumani / Arinyapi-HC-III
+Adjumani
+Arinyapi
+School
+Received
+team-03 / Adjumani /
+Arinyapi-Seed-Secondary-School
+Adjumani
+Maaji Seed School
+School
+Received
+team-03 / Adjumani / Maaji-Seed-Secondary-School
+Moyo
+Aya HC II
+Health centre
+Received
+team-03 / Moyo / Aya-HC-III
+Moyo
+Gbari HCII
+Health centre
+Received
+team-03 / Moyo / Gbari-HC-III
+Moyo
+Lama HC II
+Health centre
+Received
+team-03 / Moyo / Lama-HC-III
+Moyo
+Dufile Seed School
+School
+Received
+team-03 / Moyo / Dufile-Seed-Secondary-School
+Gulu
+Omel HCII
+Health centre
+Received
+team-03 / Gulu / Omel-HC-III
+Gulu
+Palaro Seed School
+School
+Received
+team-03 / Gulu / Palaro-Seed-Secondary-School
+Gulu
+Patiko Seed school
+School
+Received
+team-03 / Gulu / Patiko-Seed-Secondary-School
+Amuru
+Otwee HC III
+Health centre
+Received
+team-03 / Amuru / Otwee-HC-III
+Amuru
+Amuru Seed School
+School
+Received
+team-03 / Amuru / Amuru-Seed-Secondary-School
+Amuru
+Amuru T/C
+School
+Received
+team-03 / Amuru /
+Amuru-Town-Seed-Secondary-School
+
+
+PAGE 9
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 9
+Team 4   20 received, 0 register only, 2 missing
+Supervisor: Kiribakka Vincent (0772628302)   |   Team members: Mpaata Rodgers, Akankwasa Edwin
+Local government
+Facility
+Type
+Status
+Where / note
+Lamwo
+Katum HC II
+Health centre
+Received
+team-04 / Lamwo / Katum-HC-III
+Lamwo
+Ngomoromo HC II
+Health centre
+Missing
+possibly the team's folder Pangira-HC-III
+Lamwo
+Pangira HC III
+Health centre
+Received
+team-04 / Lamwo / Pangira-HC-III
+not on the programme list
+Lamwo
+Padibe East
+School
+Received
+team-04 / Lamwo / Padibe-Seed-Secondary-School
+Lamwo
+Paloga Seed School
+School
+Received
+team-04 / Lamwo / Paloga-Seed-Secondary-School
+Pader
+Lapul Ocwida HC II
+Health centre
+Received
+team-04 / Pader / Lapul-Ocwida-HC-III
+Pader
+Okinga HC II
+Health centre
+Received
+team-04 / Pader / Okinya-HC-III
+same facility, spelled differently
+Pader
+Olok HC II
+Health centre
+Received
+team-04 / Pader / Olok-HC-III
+Pader
+Latanya
+School
+Received
+team-04 / Pader / Latanya-Seed-Secondary-School
+Pader
+Ogom Seed School
+School
+Received
+team-04 / Pader / Ogom-Seed-Secondary-School
+Agago
+Lamiyo HCII
+Health centre
+Received
+team-04 / Agago / Lamiyo-HC-III
+Agago
+Lapirin HC II
+Health centre
+Received
+team-04 / Agago / Lapirin-HC-III
+Agago
+Layita HC II
+Health centre
+Received
+team-04 / Agago / Layita-HC-III
+Agago
+Omot HC II
+Health centre
+Received
+team-04 / Agago / Omot-HC-III
+Agago
+Pacer HC II
+Health centre
+Received
+team-04 / Agago / Pacer-HC-III
+Agago
+Kotomor
+School
+Received
+team-04 / Agago / Kotomor-Seed-Secondary-School
+Agago
+Lamiyo
+School
+Received
+team-04 / Agago / Lamiyo-Seed-Secondary-School
+Agago
+Lapono Seed School
+School
+Received
+team-04 / Agago / Lapono-Seed-Secondary-School
+Agago
+Omiya Pacwa
+School
+Received
+team-04 / Agago /
+Omiya-Pacwa-Seed-Secondary-School
+Agago
+Wol
+School
+Received
+team-04 / Agago / Awor-Seed-Secondary-School
+in Wol sub-county
+Kitgum MC
+Pandwong HC II
+Health centre
+Missing
+Kitgum
+Labongo Amida Seed School
+School
+Received
+team-04 / Kitgum /
+Labongo-Amida-Seed-Secondary-School
+Kitgum
+Labongo Layamo
+School
+Received
+team-04 / Kitgum /
+Labongo-Layamo-Seed-Secondary-School
+Team 5   26 received, 0 register only, 5 missing
+Supervisor: Denis Budali (0779622063, 0782913296)   |   Team members: Nassuna Dorris, Waswa Peter, Namata Maria
+Local government
+Facility
+Type
+Status
+Where / note
+Lira
+Alik HCII
+Health centre
+Missing
+possibly the team's folder Onywako-HC-III
+Lira
+Barlonyo
+Health centre
+Received
+team-05 / Lira / Barlonyo-HC-III
+Lira
+Onywako HC III
+Health centre
+Received
+team-05 / Lira / Onywako-HC-III
+not on the programme list
+Lira
+Punuluru
+Health centre
+Received
+team-05 / Lira City / Punuluru-HC-III
+team filed it under Lira City
+Lira
+Agali Seed School
+School
+Received
+team-05 / Lira / Agali-Seed-Secondary-School
+Lira
+Ogur (Phase II of Ogur Seed S.S.)
+School
+Received
+team-05 / Lira / Ogur-Seed-Secondary-School
+Lira City
+Ngetta (Anyomorem/ Akwiaworo)
+Health centre
+Received
+team-05 / Lira City / Anyomorem-HC-III
+Lira City
+Railways Division
+School
+Received
+team-05 / Lira City / Railway-Seed-Secondary-School
+Kole
+Ayara HCII
+Health centre
+Received
+team-05 / Kole / Ayara-HC-III
+Kole
+Ayer HC II
+Health centre
+Received
+team-05 / Kole / Ayer-HC-III
+Kole
+Okole HC II
+Health centre
+Received
+team-05 / Kole / Okole-HC-III
+Kole
+Okwerodot
+Health centre
+Received
+team-05 / Kole / Okwerodot-HC-III
+Kole
+Kole T/C
+School
+Received
+team-05 / Kole / Kole-Seed-Secondary-School
+Kole
+Okwelodot Seed School
+School
+Received
+team-05 / Kole / Okwerodot-Seed-Secondary-School
+same facility, spelled differently
+Omoro
+Abwoch HC II
+Health centre
+Received
+team-05 / Omoro / Abwoch-HC-III
+Omoro
+Acet HC II
+Health centre
+Received
+team-05 / Omoro / Acet-HC-III
+
+
+PAGE 10
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 10
+Local government
+Facility
+Type
+Status
+Where / note
+Omoro
+Lakwatomer HC II
+Health centre
+Received
+team-05 / Omoro / Lakwatomer-HC-III
+Omoro
+Loyoajonga HC II
+Health centre
+Received
+team-05 / Omoro / Loyoajonga-HC-III
+Omoro
+Tekulu HC II
+Health centre
+Received
+team-05 / Omoro / Tekulu-HC-III
+Omoro
+Lakwana Seed School
+School
+Received
+team-05 / Omoro / Lakwana-Seed-Secondary-School
+Oyam
+Abela HC II
+Health centre
+Received
+team-05 / Oyam / Abela-HC-III
+Oyam
+Acimi HC II
+Health centre
+Missing
+Oyam
+Acokara HCII
+Health centre
+Missing
+Oyam
+Ajaga
+Health centre
+Received
+team-05 / Oyam / Ajaga-HC-III
+Oyam
+Alira HCII
+Health centre
+Missing
+Oyam
+Ariba HC II
+Health centre
+Missing
+Oyam
+Atura HC II
+Health centre
+Received
+team-05 / Oyam / Atura-HC-III
+Oyam
+Iceme (Okwir)
+Health centre
+Received
+team-05 / Oyam / Iceme-Okwir-HC-III
+Oyam
+Iceme HC II
+Health centre
+Received
+team-05 / Oyam / Iceme-HC-III
+Oyam
+Loro HC II
+Health centre
+Received
+team-05 / Oyam / Loro-HC-III
+Oyam
+Aleka
+School
+Received
+team-05 / Oyam / Aleka-Seed-Secondary-School
+Oyam
+Ngai
+School
+Received
+team-05 / Oyam / Ngai-Seed-Secondary-School
+Team 6   19 received, 0 register only, 0 missing
+Supervisor: Denis Budali (0779622063, 0782913296)   |   Team members: Babirye Alixa, Namono Shirley Mercy, Muyombya Ephrahim
+Local government
+Facility
+Type
+Status
+Where / note
+Apac
+Aganga HCII
+Health centre
+Received
+team-06 / Apac / Aganga-HC-III
+Apac
+Arocha HC III
+Health centre
+Received
+team-06 / Apac / Arocha-HC-III
+not on the programme list
+Apac
+Kidilani HC II
+Health centre
+Received
+team-06 / Apac / Kidilani-HC-III
+Apac
+Kungu HC II
+Health centre
+Received
+team-06 / Apac / Kungu-HC-III
+Apac
+Olelpek HC II
+Health centre
+Received
+team-06 / Apac / Olelpek-HC-III
+Apac
+Apac Seed School
+School
+Received
+team-06 / Apac / Apac-Seed-Secondary-School
+Apac MC
+Arocha
+School
+Received
+team-06 / Apac MC /
+Arocha-Seed-Secondary-School
+Kwania
+Akali HC II
+Health centre
+Received
+team-06 / Kwania / Akali-HC-III
+Kwania
+Owiny HC II
+Health centre
+Received
+team-06 / Kwania / Owiny-HC-III
+Kwania
+Aduku Seed School
+School
+Received
+team-06 / Kwania / Aduku-Seed-Secondary-School
+Amolatar
+Acii HCII
+Health centre
+Received
+team-06 / Amolatar / Acii-HC-III
+Amolatar
+Alyecmeda HC II
+Health centre
+Received
+team-06 / Amolatar / Alyecmeda-HC-III
+Amolatar
+Anamwany HC II
+Health centre
+Received
+team-06 / Amolatar / Anamwany-HC-III
+Amolatar
+Arwotchek HC II
+Health centre
+Received
+team-06 / Amolatar / Arwotcek-HC-III
+same facility, spelled differently
+Amolatar
+Awonangiro HC II
+Health centre
+Received
+team-06 / Amolatar / Awonangiro-HC-III
+Amolatar
+Biko HC II
+Health centre
+Received
+team-06 / Amolatar / Biko-HC-III
+Amolatar
+Nakatiti HC II
+Health centre
+Received
+team-06 / Amolatar / Nakatiti-HC-III
+Amolatar
+Akwon
+School
+Received
+team-06 / Amolatar / Akwon-Seed-Secondary-School
+Amolatar
+Etam
+School
+Received
+team-06 / Amolatar / Etam-Seed-Secondary-School
+Amolatar
+Muntu Seed School
+School
+Received
+team-06 / Amolatar / Muntu-Seed-Secondary-School
+
+
+PAGE 11
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 11
+Team 7   15 received, 5 register only, 0 missing
+Supervisor: Denis Budali (0779622063, 0782913296)   |   Team members: Nanjonjo Parvin, Aganyo Mercy
+Local government
+Facility
+Type
+Status
+Where / note
+Alebtong
+Adwir HC II
+Health centre
+Received
+team-07 / Alebtong / Adwir-HC-III
+Alebtong
+Anara HC II
+Health centre
+Received
+team-07 / Alebtong / Anara-HC-III
+Alebtong
+Angetta HC II
+Health centre
+Received
+team-07 / Alebtong / Angetta-HC-III
+Alebtong
+Awei HC II
+Health centre
+Received
+team-07 / Alebtong / Awei-HC-III
+Alebtong
+Moroto Abia HC II
+Health centre
+Received
+team-07 / Alebtong / Abia-HC-III
+Alebtong
+Abia Seed S.S
+School
+Register
+only
+Team 7 schools sheet (SCHOOLS FOR TEAM
+SEVEN DTB.xlsx)
+Alebtong
+Awei
+School
+Register
+only
+Team 7 schools sheet (SCHOOLS FOR TEAM
+SEVEN DTB.xlsx)
+Otuke
+Alango HCII
+Health centre
+Received
+team-07 / Otuke / Alango-HC-III
+Otuke
+Ogwete HC II
+Health centre
+Received
+team-07 / Otuke / Ogwete-HC-III
+Otuke
+Ogoro Seed School
+School
+Register
+only
+Team 7 schools sheet (SCHOOLS FOR TEAM
+SEVEN DTB.xlsx)
+Otuke
+Orum (New facilities for Okum
+Seed S.S. - Pledge)
+School
+Register
+only
+Team 7 schools sheet (SCHOOLS FOR TEAM
+SEVEN DTB.xlsx)
+Dokolo
+Abalang HC II
+Health centre
+Received
+team-07 / Dokolo / Abalang-HC-III
+Dokolo
+Adagmon HC II
+Health centre
+Received
+team-07 / Dokolo / Adagmon-HC-III
+Dokolo
+Adok HC II
+Health centre
+Received
+team-07 / Dokolo / Adok-HC-III
+Dokolo
+Amwoma HC II
+Health centre
+Received
+team-07 / Dokolo / Amwoma-HC-III
+Dokolo
+Anyacoto HC II
+Health centre
+Received
+team-07 / Dokolo / Anyacoto-HC-III
+Dokolo
+Awelo HC II
+Health centre
+Received
+team-07 / Dokolo / Awelo-HC-III
+Dokolo
+Te-Tugu HCII
+Health centre
+Received
+team-07 / Dokolo / Te-Tugu-HC-III
+Dokolo
+Adeknino
+School
+Received
+team-07 / Dokolo /
+Adeknino-Seed-Secondary-School
+Dokolo
+Batta Seed School
+School
+Register
+only
+Team 7 schools sheet (SCHOOLS FOR TEAM
+SEVEN DTB.xlsx)
+Team 8   22 received, 0 register only, 1 missing
+Supervisor: Denis Budali (0779622063, 0782913296)   |   Team members: Atim Jesica, Olobo Felix, Kiwungulo Innocent
+Local government
+Facility
+Type
+Status
+Where / note
+Amuria
+Abeko HC II
+Health centre
+Received
+team-08 / Amuria / Abeko-HC-III
+Amuria
+Akeriau HC II
+Health centre
+Received
+team-08 / Amuria / Akeriau-HC-III
+Amuria
+Alere HC II
+Health centre
+Received
+team-08 / Amuria / Alere-HC-III
+Amuria
+Golokwara (Ajaki) HC II
+Health centre
+Received
+team-08 / Amuria / Golokwara-HC-III
+Amuria
+Wera HC II
+Health centre
+Received
+team-08 / Amuria / Wera-HC-III
+Amuria
+Asamuk
+School
+Received
+team-08 / Amuria / Asamuk-Seed-Secondary-School
+Kapelebyong
+Aeket HC II
+Health centre
+Received
+team-08 / Kapelebyong / Aeket-HC-III
+Kapelebyong
+Akoromit
+Health centre
+Received
+team-08 / Kapelebyong / Akoromit-HC-III
+Kapelebyong
+Alito HCII
+Health centre
+Received
+team-08 / Kapelebyong / Alito-HC-III
+Katakwi
+Akoboi HCII
+Health centre
+Received
+team-08 / Katakwi / Akoboi-HC-III
+Katakwi
+Aliakamer HC II
+Health centre
+Received
+team-08 / Katakwi / Aliakamer-HC-III
+Katakwi
+Koritok HC II
+Health centre
+Received
+team-08 / Katakwi / Koritok-HC-III
+Katakwi
+Palam Seed School
+School
+Received
+team-08 / Katakwi / Palam-Seed-Secondary-School
+Katakwi
+Toroma
+School
+Received
+team-08 / Katakwi / Toroma-Seed-Secondary-School
+Soroti
+Soroti Regional Blood Bank
+Blood bank
+Received
+team-08 / Soroti / Soroti-Regional-Blood-Bank
+allocated in team-distributions.docx
+Soroti
+Asuret Seed School
+School
+Received
+team-08 / Soroti / Asuret-Seed-Secondary-School
+Soroti
+Kamuda
+School
+Received
+team-08 / Soroti / Kamuda-Seed-Secondary-School
+Serere
+Aarapoo HC II
+Health centre
+Received
+team-08 / Serere / Aarapoo-HC-III
+Serere
+Kagwara HC II
+Health centre
+Received
+team-08 / Serere / Kagwara-HC-III
+Serere
+Kamod HC II
+Health centre
+Received
+team-08 / Serere / Kamod-HC-III
+
+
+PAGE 12
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 12
+Local government
+Facility
+Type
+Status
+Where / note
+Serere
+Oburin HC II
+Health centre
+Received
+team-08 / Serere / Oburin-HC-III
+Serere
+Kadungulu Seed School
+School
+Missing
+Team 8's schools sheet also lists 'Kagawa' and
+'Kahasa' seed schools; one may be this school
+Serere
+Olio
+School
+Received
+team-08 / Serere / Olio-Seed-Secondary-School
+Team 9   14 received, 0 register only, 2 missing
+Supervisor: Denis Budali (0779622063, 0782913296)   |   Team members: Adimo Racheal, Echwou Mark Arthur
+Local government
+Facility
+Type
+Status
+Where / note
+Kaberamaido
+Aperikira
+School
+Received
+team-09 / Kaberamaido /
+Aperikira-Seed-Secondary-School
+Kalaki
+Apapai
+School
+Received
+team-09 / Kalaki / Apapai-Seed-Secondary-School
+Kalaki
+Kakure Seed S.S
+School
+Received
+team-09 / Kalaki / Kakure-Seed-Secondary-School
+Kumi
+Kumi Seed School
+School
+Received
+team-09 / Kumi / Kumi-Seed-Secondary-School
+Kumi
+Nyero (New facilities at Dr. Aporu
+Okol Mem. S.S.)
+School
+Received
+team-09 / Kumi /
+Dr-Aporu-Okol-Seed-Secondary-School
+Butebo
+Kachuru HC II
+Health centre
+Received
+team-09 / Butebo / Kachuru-HC-III
+Butebo
+Kanyumu HC II
+Health centre
+Received
+team-09 / Butebo / Kanyumu-HC-III
+Butebo
+Kanginima Seed School
+School
+Received
+team-09 / Butebo /
+Kanginima-Seed-Secondary-School
+Pallisa
+Akadot Seed Secondary School
+School
+Received
+team-09 / Pallisa / Akadot-Seed-Secondary-School
+not on the programme list
+Pallisa
+Olok Seed School
+School
+Received
+team-09 / Pallisa / Olok-Seed-Secondary-School
+Pallisa
+Pallisa
+School
+Missing
+possibly the team's folder
+Akadot-Seed-Secondary-School
+Bukedea
+Akuoro HC II
+Health centre
+Received
+team-09 / Bukedea / Akuoro-HC-III
+Bukedea
+Kangole HC III
+Health centre
+Received
+team-09 / Bukedea / Kangole-HC-III
+not on the programme list
+Bukedea
+Kocheka HC II
+Health centre
+Missing
+possibly the team's folder Kangole-HC-III
+Bukedea
+Nalugai HC II
+Health centre
+Received
+team-09 / Bukedea / Nalugai-HC-III
+Bukedea
+Tajar HC II
+Health centre
+Received
+team-09 / Bukedea / Tajar-HC-III
+Bukedea
+Kabarwa Seed School
+School
+Received
+team-09 / Bukedea /
+Kabarwa-Seed-Secondary-School
+Ngora
+Ngora Seed School
+School
+Received
+team-09 / Ngora / Ngora-Seed-Secondary-School
+Team 10   11 received, 0 register only, 0 missing
+Supervisor: Luminsa Kassim (0783725419, 0702806116)   |   Team members: Otema Emmanuel, Mwesige Joseph
+Local government
+Facility
+Type
+Status
+Where / note
+Moroto
+Kalemungole HCII
+Health centre
+Received
+team-10 / Moroto / Kalemungole-HC-III
+Moroto
+Katikekire
+School
+Received
+team-10 / Moroto / Katikekire-Seed-School
+Moroto
+Rupa Seed School
+School
+Received
+team-10 / Moroto / Rupa-Seed-School
+Nakapiripirit
+Moruita
+School
+Received
+team-10 / Nakapiripirit /
+Moruita-Seed-Secondary-School
+Nakapiripirit
+Nakapiripirit Seed School
+School
+Received
+team-10 / Nakapiripirit / Nakapiripirit-Seed-School
+Nabilatuk
+Lolachat Seed School
+School
+Received
+team-10 / Nabilatuk / Lolachat-Seed-School
+Napak
+Iriiri
+School
+Received
+team-10 / Napak / Iriiri-Seed-Secondary-School
+Napak
+Lopei
+School
+Received
+team-10 / Napak / Lopei-Seed-Secondary-School
+Napak
+Napak Seed School
+School
+Received
+team-10 / Napak / Napak-Seed-Secondary-School
+Amudat
+Kalita Seed School
+School
+Received
+team-10 / Amudat / Kalita-Seed-School
+Amudat
+Looro
+School
+Received
+team-10 / Amudat / Looro-Seed-Secondary-School
+
+
+PAGE 13
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 13
+Team 11   9 received, 0 register only, 0 missing
+Supervisor: Luminsa Kassim (0783725419, 0702806116)   |   Team members: Mworozi Davis, Nalukwata Shadia
+Local government
+Facility
+Type
+Status
+Where / note
+Kotido
+Kamoru HCII
+Health centre
+Received
+team-11 / Kotido / Kamoru-HC-III
+Kotido
+Panyangara Seed School
+School
+Received
+team-11 / Kotido /
+Panyangara-Seed-Secondary-School
+Kotido
+Rengen
+School
+Received
+team-11 / Kotido / Rengen-Seed-School
+Kaabong
+Sidok
+School
+Received
+team-11 / Kaabong / Sidok-Seed-Secondary-School
+Karenga
+Kalimon HCII
+Health centre
+Received
+team-11 / Karenga / Kalimon-HC-III
+Karenga
+Kapedo
+School
+Received
+team-11 / Karenga / Kapedo-Seed-Secondary-School
+Karenga
+Lokori Seed Secondary School
+School
+Received
+team-11 / Karenga / Lokori-Seed-Secondary-School
+not on the programme list
+Abim
+Alerek
+School
+Received
+team-11 / Abim / Alerek-Seed-Secondary-School
+Abim
+Magamaga
+School
+Received
+team-11 / Abim / Magamaga-Seed-School
+Abim
+Nakwae Seed School
+School
+Received
+team-11 / Abim / Nakwae-Seed-School
+Team 12   16 received, 0 register only, 0 missing
+Supervisor: Luminsa Kassim (0783725419, 0702806116)   |   Team members: Sophia Nakyanzi, Butsiba Peter Jackson
+Local government
+Facility
+Type
+Status
+Where / note
+Kibuku
+Kabweri HC II
+Health centre
+Received
+team-12 / Kibuku / Kabweri-HC-III
+Kibuku
+Lwatama HCII
+Health centre
+Received
+team-12 / Kibuku / Lwatama-HC-III
+Kibuku
+Nalubembe HC II
+Health centre
+Received
+team-12 / Kibuku / Nalubembe-HC-III
+Kibuku
+Kabweri Seed School
+School
+Received
+team-12 / Kibuku / Kabweri-Seed-Secondary-School
+Kibuku
+Kasasila Seed School
+School
+Received
+team-12 / Kibuku / Kasasira-Seed-Secondary-School
+same facility, spelled differently
+Kibuku
+Kirika
+School
+Received
+team-12 / Kibuku /
+St-Johns-Seed-Secondary-School-Kirika
+Budaka
+Namusita (Budaka) HC II
+Health centre
+Received
+team-12 / Budaka / Namusita-HC-III
+Budaka
+Kakule
+School
+Received
+team-12 / Budaka / Kakule-Seed-Secondary-School
+Budaka
+Kamonkoli Seed School
+School
+Received
+team-12 / Budaka /
+Kamonkoli-Seed-Secondary-School
+Budaka
+Mugiti
+School
+Received
+team-12 / Budaka / Mugiti-Seed-Secondary-School
+Budaka
+Nansanga
+School
+Received
+team-12 / Budaka /
+Nansanga-Seed-Secondary-School
+Butaleja
+Nampologoma HCII
+Health centre
+Received
+team-12 / Butaleja / Mazimasa-HC-III
+team document names Nampologoma
+Butaleja
+Kachonga
+School
+Received
+team-12 / Butaleja / Muhula-Seed-Secondary-School
+in Kachonga sub-county
+Butaleja
+Nakwasi Seed School
+School
+Received
+team-12 / Butaleja /
+Nakwasi-Seed-Secondary-School
+Mbale
+Bubentsye Seed School
+School
+Received
+team-12 / Mbale /
+Bubentsye-Seed-Secondary-School
+Mbale
+Lwasso
+School
+Received
+team-12 / Mbale / Lwasso-Seed-Secondary-School
+
+
+PAGE 14
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 14
+Team 13   20 received, 0 register only, 3 missing
+Supervisor: Luminsa Kassim (0783725419, 0702806116)   |   Team members: Kayongo Tonny, Nakiganda Lydia
+Local government
+Facility
+Type
+Status
+Where / note
+Tororo MC
+Kyamwinula HCII
+Health centre
+Received
+team-13 / Tororo MC / Kyamwinula-HC-III
+Tororo MC
+Eastern Division
+School
+Missing
+Tororo
+Kamuli HCII
+Health centre
+Received
+team-13 / Tororo / Kamuli-HC-III
+Tororo
+Namwaya HCII
+Health centre
+Received
+team-13 / Tororo / Namwaya-HC-III
+Tororo
+Sop Sop HC II
+Health centre
+Received
+team-13 / Tororo / Sop-Sop-HC-III
+Tororo
+Iyolwa
+School
+Received
+team-13 / Tororo / Iyolwa
+Tororo
+Malaba Seed School
+School
+Received
+team-13 / Tororo / Malaba-Seed-School
+Tororo
+Sop Sop
+School
+Received
+team-13 / Tororo / Sop-Sop
+Busia
+Bumunji HC II
+Health centre
+Received
+team-13 / Busia / Bumunji-HC-III
+Busia
+Buwembe HC II
+Health centre
+Received
+team-13 / Busia / Buwembe-HC-III
+Busia
+Buwumba HC III
+Health centre
+Received
+team-13 / Busia / Buwumba-HC-III
+not on the programme list
+Busia
+Dabani
+Health centre
+Missing
+possibly the team's folder Buwumba-HC-III
+Busia
+Majanji HC II
+Health centre
+Received
+team-13 / Busia / Majanji-HC-III
+Busia
+Sikuda HC II
+Health centre
+Received
+team-13 / Busia / Sikuda-HC-III
+Busia
+Sikuda
+School
+Received
+team-13 / Busia / Sikuda-Seed-Secondary-School
+Busia MC
+Busia Eastern Division
+Health centre
+Missing
+Manafwa
+Bukimanayi HC II
+Health centre
+Received
+team-13 / Manafwa / Bukimanayi-HC-III
+Manafwa
+Butta
+School
+Received
+team-13 / Manafwa / Butta
+Manafwa
+Buwagogo Seed School
+School
+Received
+team-13 / Manafwa / Buwagogo-Seed-School
+Manafwa
+Khabutoola
+School
+Received
+team-13 / Manafwa / Khabutoola
+Manafwa
+Sibanga Seed School
+School
+Received
+team-13 / Manafwa / Sibanga-Seed-School
+Manafwa
+Sisuni
+School
+Received
+team-13 / Manafwa / Sisuni
+Namisindwa
+Mukuto Seed School
+School
+Received
+team-13 / Namisindwa / Mukuto-Seed-School
+Namisindwa
+Namboko
+School
+Received
+team-13 / Namisindwa / Namboko
+Team 14   20 received, 0 register only, 0 missing
+Supervisor: Luminsa Kassim (0783725419, 0702806116)   |   Team members: Asio Miriam J, Ahabwe Derick, Kyanamira Nathan
+Local government
+Facility
+Type
+Status
+Where / note
+Bududa
+Bubungi HC II
+Health centre
+Received
+team-14 / Bududa / Bubungi-HC-III
+Bududa
+Bududa
+Health centre
+Received
+team-14 / Bududa / Bududa-HC-III
+Bududa
+Bumusi HC II
+Health centre
+Received
+team-14 / Bududa / Bumusi-HC-III
+Bududa
+Bunamono HC II
+Health centre
+Received
+team-14 / Bududa / Bunamono-HC-III
+Bududa
+Bushiribo
+School
+Received
+team-14 / Bududa /
+Bushiribo-Seed-Secondary-School
+Bududa
+Nakatsi
+School
+Received
+team-14 / Bududa / Nakatsi-Seed-Secondary-School
+Sironko
+Bundege HC II
+Health centre
+Received
+team-14 / Sironko / Bundege-HC-III
+Sironko
+Buyaya HC II
+Health centre
+Received
+team-14 / Sironko / Buyaya-HC-II
+Sironko
+Buyobo HC II
+Health centre
+Received
+team-14 / Sironko / Buyobo-HC-III
+Sironko
+Mutufu HC II
+Health centre
+Received
+team-14 / Sironko / Mutufu-HC-III
+Sironko
+Simu Pondo HC III
+Health centre
+Received
+team-14 / Sironko / Simu-Pondo-HC-III
+not on the programme list
+Sironko
+Bugitimwa
+School
+Received
+team-14 / Sironko /
+St-Marys-Bugitimwa-Seed-Secondary-School
+Sironko
+Bumirisa Seed School Buteza
+School
+Received
+team-14 / Sironko / Buteza-Seed-Secondary-School
+Bulambuli
+Bukhalu
+Health centre
+Received
+team-14 / Bulambuli / Kamu-HC-III
+team document names Bukhalu
+Bulambuli
+Bukibologoto HC II
+Health centre
+Received
+team-14 / Bulambuli / Bukibologoto-HC-II
+Bulambuli
+Bulaago HC II
+Health centre
+Received
+team-14 / Bulambuli / Bulaago-HC-III
+Bulambuli
+Bumugibole HC II
+Health centre
+Received
+team-14 / Bulambuli / Bumugibole-HC-III
+Bulambuli
+Bunangaka HC II
+Health centre
+Received
+team-14 / Bulambuli / Bunangaka-HC-III
+
+
+PAGE 15
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 15
+Local government
+Facility
+Type
+Status
+Where / note
+Bulambuli
+Bwikhonge HC II
+Health centre
+Received
+team-14 / Bulambuli / Bwikhonge-HC-III
+Bulambuli
+Bunambutye Seed School
+School
+Received
+team-14 / Bulambuli /
+Bumufuni-Seed-Secondary-School
+in Bunambutye
+Bulambuli
+Sisiyi
+School
+Received
+team-14 / Bulambuli / Sisiyi-Seed-Secondary-School
+Team 15   23 received, 0 register only, 0 missing
+Supervisor: Luminsa Kassim (0783725419, 0702806116)   |   Team members: Alybo Marry Topista, Shadrack Biyinzika, Nakiwala Doreen
+Local government
+Facility
+Type
+Status
+Where / note
+Kween
+Atar HC II
+Health centre
+Received
+team-15 / Kween / Atar-HC-III
+Kween
+Benet HC II
+Health centre
+Received
+team-15 / Kween / Benet-HC-III
+Kween
+Kaptum HC II
+Health centre
+Received
+team-15 / Kween / Kaptum-HC-III
+Kween
+Moyok HC II
+Health centre
+Received
+team-15 / Kween / Moyok-HC-III
+Kween
+Terenpoy HC II
+Health centre
+Received
+team-15 / Kween / Terenpoy-HC-III
+Kween
+Kaptum
+School
+Received
+team-15 / Kween / Kaptum-Seed-Secondary-School
+Kween
+Kitawoi Seed School
+School
+Received
+team-15 / Kween / Kitawoi-Seed-Secondary-School
+Kween
+Moyok
+School
+Received
+team-15 / Kween / Moyok-Seed-Secondary-School
+Kapchorwa
+Chemosong HC II
+Health centre
+Received
+team-15 / Kapchorwa / Chemosong-HC-III
+Kapchorwa
+Ngangatta HC II
+Health centre
+Received
+team-15 / Kapchorwa / Ngangatta-HC-III
+Kapchorwa
+Kabeywa Seed School
+School
+Received
+team-15 / Kapchorwa /
+Kabeywa-Seed-Secondary-School
+Kapchorwa
+Kaptanya
+School
+Received
+team-15 / Kapchorwa /
+Kaptanya-Seed-Secondary-School
+Kapchorwa MC
+Kaplelko HC II
+Health centre
+Received
+team-15 / Kapchorwa MC / Kaplelko-HC-III
+Bukwo
+Amanang HC II
+Health centre
+Received
+team-15 / Bukwo / Amanang-HC-III
+Bukwo
+Aralam HC II
+Health centre
+Received
+team-15 / Bukwo / Aralam-HC-III
+Bukwo
+Brim HC II
+Health centre
+Received
+team-15 / Bukwo / Brim-HC-III
+Bukwo
+Chepkwasta HC II
+Health centre
+Received
+team-15 / Bukwo / Chepkwasta-HC-III
+Bukwo
+Kapkoros HC II
+Health centre
+Received
+team-15 / Bukwo / Kapkoros-HC-III
+Bukwo
+Kwirwot HC II
+Health centre
+Received
+team-15 / Bukwo / Kwirwot-HC-III
+Bukwo
+Mutushet HC II
+Health centre
+Received
+team-15 / Bukwo / Mutushet-HC-III
+Bukwo
+Tulel HC II
+Health centre
+Received
+team-15 / Bukwo / Tulel-HC-III
+Bukwo
+Kaptererwo Seed School
+School
+Received
+team-15 / Bukwo /
+Kaptererwo-Seed-Secondary-School
+Bukwo
+Senendet
+School
+Received
+team-15 / Bukwo /
+Senendet-Seed-Secondary-School
+Team 16   19 received, 0 register only, 1 missing
+Supervisor: Sulaina Nandudu (0758998084)   |   Team members: Kiyumba Salim, Solomon Wandera
+Local government
+Facility
+Type
+Status
+Where / note
+Namutumba
+Namutumba Kagulu HC II
+Health centre
+Received
+team-16 / Namutumba / Kagulu-HC-III
+Namutumba
+Nangonde HCII
+Health centre
+Received
+team-16 / Namutumba / Nangonde-HC-III
+Namutumba
+Nabweyo
+School
+Received
+team-16 / Namutumba /
+Nabweyo-Seed-Secondary-School
+Namutumba
+Namutumba Seed School
+School
+Received
+team-16 / Namutumba /
+Namutumba-Seed-Secondary-School
+Luuka
+Bukendi HC II
+Health centre
+Received
+team-16 / Luuka / Bukendi-HC-III
+Luuka
+Bulalu HCII
+Health centre
+Received
+team-16 / Luuka / Bulalu-HC-III
+Luuka
+Ikumbya Seed School
+School
+Received
+team-16 / Luuka / Ikumbya-Seed-Secondary-School
+Luuka
+Nawampiti
+School
+Received
+team-16 / Luuka /
+Nawampiti-Seed-Secondary-School
+Mayuge
+Bukatube HC II
+Health centre
+Received
+team-16 / Mayuge / Bukatube-HC-III
+Mayuge
+Busaala HC II
+Health centre
+Received
+team-16 / Mayuge / Busaala-HC-III
+Mayuge
+Jagusi HC II
+Health centre
+Received
+team-16 / Mayuge / Jaguzi-HC-III
+same facility, spelled differently
+
+
+PAGE 16
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 16
+Local government
+Facility
+Type
+Status
+Where / note
+Mayuge
+Muggi HC II
+Health centre
+Received
+team-16 / Mayuge / Muggi-HC-III
+Mayuge
+Nkombe HC II
+Health centre
+Received
+team-16 / Mayuge / Nkombe-HC-III
+Mayuge
+Mpungwe Seed School
+School
+Received
+team-16 / Mayuge /
+Mpungwe-Seed-Secondary-School
+Mayuge
+Wairasa
+School
+Received
+team-16 / Mayuge / Wairasa-Seed-Secondary-School
+Bugweri
+Busembatya HCII
+Health centre
+Received
+team-16 / Bugweri / Busembatya-HC-III
+Bugweri
+Minani HC II
+Health centre
+Received
+team-16 / Bugweri / Minani-HC-III
+Bugweri
+Nawangisa HC II
+Health centre
+Received
+team-16 / Bugweri / Nawangisa-HC-III
+Bugweri
+Igombe
+School
+Missing
+possibly the team's folder
+Mpiita-Seed-Secondary-School
+Bugweri
+Mpiita Seed Secondary School
+School
+Received
+team-16 / Bugweri / Mpiita-Seed-Secondary-School
+not on the programme list
+Bugweri
+Naigombwa Seed School
+School
+Received
+team-16 / Bugweri /
+Naigombwa-Seed-Secondary-School
+Team 17   16 received, 1 register only, 4 missing
+Supervisor: Sulaina Nandudu (0758998084)   |   Team members: Shanitah Nakabiito, Kojjo Shadrack
+Local government
+Facility
+Type
+Status
+Where / note
+Bugiri
+Budhaya
+School
+Register
+only
+Busoga seed-school register (Seed School Updated
+Asset Register)
+only an Office lock file for the Word toolkit reached us
+Bugiri
+Iwemba Seed School
+School
+Received
+team-17 / Bugiri / Iwemba-Seed-Secondary-School
+Bugiri MC
+Bugiri TC HC II
+Health centre
+Received
+team-17 / Bugiri MC / Bugiri-Municipal-Council-HC-III
+Namayingo
+Bugana HC II
+Health centre
+Received
+team-17 / Namayingo / Bugana-HC-III
+Namayingo
+Lolwe HC II
+Health centre
+Received
+team-17 / Namayingo / Lolwe-HC-III
+Namayingo
+Syanyonja HC II
+Health centre
+Received
+team-17 / Namayingo / Syanyonja-HC-III
+Namayingo
+Buhemba
+School
+Received
+team-17 / Namayingo /
+Buhemba-Seed-Secondary-School
+Namayingo
+Mutumba Seed Secondary School
+School
+Received
+team-17 / Namayingo /
+Mutumba-Seed-Secondary-School
+not on the programme list
+Namayingo
+Mwema Seed School
+School
+Missing
+possibly the team's folder
+Mutumba-Seed-Secondary-School
+Iganga
+Nawanyingi Seed School
+School
+Received
+team-17 / Iganga /
+Nawanyingi-Seed-Secondary-School
+Kaliro
+Budomero HC II
+Health centre
+Received
+team-17 / Kaliro / Budomero-HC-III
+Kaliro
+Buyinda HC II
+Health centre
+Missing
+Kaliro
+Kasokwe HC II
+Health centre
+Received
+team-17 / Kaliro / Kasokwe-HC-III
+Kaliro
+Kisinda HCII
+Health centre
+Received
+team-17 / Kaliro / Kisinda-HC-III
+Kaliro
+Nawampiti HC II
+Health centre
+Received
+team-17 / Kaliro / Nawampiti-HC-III
+Kaliro
+Bukamba Seed School
+School
+Received
+team-17 / Kaliro / Bukamba-Seed-Secondary-School
+Kaliro
+Bumanya
+School
+Received
+team-17 / Kaliro / Bumanya-Seed-Secondary-School
+Kaliro
+Nansololo
+School
+Received
+team-17 / Kaliro / Nansololo-Seed-Secondary-School
+Jinja City
+Kimaka HC II
+Health centre
+Received
+team-17 / Jinja City / Kimaka-HC-III
+Jinja City
+Central Division
+School
+Missing
+Jinja
+Butagaya
+School
+Missing
+possibly the team's folder
+Buwala-Seed-Secondary-School; Busoga seed
+register lists 'Buwaya Seed School' under Jinja; it
+may be this school
+Jinja
+Buwala Seed Secondary School
+School
+Received
+team-17 / Jinja / Buwala-Seed-Secondary-School
+not on the programme list
+Jinja
+Buwenge Seed School
+School
+Received
+team-17 / Jinja / Buwenge-Seed-Secondary-School
+
+
+PAGE 17
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 17
+Team 18   14 received, 0 register only, 1 missing
+Supervisor: Sulaina Nandudu (0758998084)   |   Team members: Sharipher Namuganga, Peace Mukayisire
+Local government
+Facility
+Type
+Status
+Where / note
+Mukono MC
+Nyanja HCII
+Health centre
+Received
+team-18 / Mukono MC / Nyanja-HC-III
+Mukono
+Kimenyedde Seed School
+School
+Received
+team-18 / Mukono MC /
+St-Andrews-Ndwaddemutwe-Secondary-School
+in Kimenyedde; team filed it under Mukono MC
+Buikwe
+Nkokonjeru HCII
+Health centre
+Received
+team-18 / Buikwe / Nkokonjeru-HC-III
+Buikwe
+Ssugu Seed School
+School
+Received
+team-18 / Buikwe / Ssugu-Seed-Secondary-School
+Kayunga
+Bukamba HC II
+Health centre
+Received
+team-18 / Kayunga / Bukamba-HC-III
+Kayunga
+Busaale HC II
+Health centre
+Received
+team-18 / Kayunga / Busaale-HC-III
+Kayunga
+Nazigo Seed School
+School
+Received
+team-18 / Kayunga /
+Musiitwa-Seed-Secondary-School-Nazigo
+Buyende
+Bukungu HCII
+Health centre
+Received
+team-18 / Buyende / Bukungu-HC-III
+Buyende
+Buyende Seed School
+School
+Received
+team-18 / Buyende /
+Buyende-Seed-Secondary-School
+Kamuli MC
+Busota HC II
+Health centre
+Missing
+only an Office lock file for Busota reached us; the
+document itself was not sent
+Kamuli
+Bubago HC II
+Health centre
+Received
+team-18 / Kamuli / Bubago-HC-III
+Kamuli
+Kagumba HC II
+Health centre
+Received
+team-18 / Kamuli / Kagumba-HC-III
+Kamuli
+Kagumba
+School
+Received
+team-18 / Kamuli /
+Kagumba-Seed-Secondary-School
+Kamuli
+Kitayunjwa Seed School
+School
+Received
+team-18 / Kamuli /
+Kitayunjwa-Seed-Secondary-School
+Kamuli
+Nabwigulu
+School
+Received
+team-18 / Kamuli /
+Nabwigulu-Seed-Secondary-School
+Team 19   0 received, 13 register only, 6 missing
+Supervisor: Gumisiriza Johnson (0703056064)   |   Team members: Nimusiima Alex, Eclat Gumisiriza
+Local government
+Facility
+Type
+Status
+Where / note
+Bushenyi
+Kibazi HC II
+Health centre
+Register
+only
+Team 19 Mitooma HC list (MITOOMA HCIIIs
+List.xlsx)
+Bushenyi
+Rutooma HCII
+Health centre
+Missing
+Bushenyi
+Bumbaire Seed School
+School
+Missing
+Bushenyi
+Kyamuhunga
+School
+Missing
+Mitooma
+Bukuba HC II
+Health centre
+Register
+only
+Team 19 Mitooma HC list (MITOOMA HCIIIs
+List.xlsx)
+Mitooma
+Mayanga HC II
+Health centre
+Register
+only
+Team 19 Mitooma HC list (MITOOMA HCIIIs
+List.xlsx)
+Mitooma
+Nyakishojwa HC II
+Health centre
+Register
+only
+Team 19 Mitooma HC list (MITOOMA HCIIIs
+List.xlsx)
+Mitooma
+Ryengyerero HC II
+Health centre
+Register
+only
+Team 19 Mitooma HC list (MITOOMA HCIIIs
+List.xlsx)
+Mitooma
+Kabushaho Seed Secondary
+School
+School
+Register
+only
+Team 19 Mitooma schools list (MITOOMA DISTRICT
+SEED SCHS.xlsx)
+not on the programme list
+Mitooma
+Kashenshero
+School
+Missing
+Mitooma
+Kitojo Seed School
+School
+Register
+only
+Team 19 Mitooma schools list (MITOOMA DISTRICT
+SEED SCHS.xlsx)
+not on the programme list
+Mitooma
+Mayanga Seed School
+School
+Missing
+Sheema
+Kyeibanga HC II
+Health centre
+Register
+only
+Team 19 Sheema HC list (SHEEMA DC HCIIIs.xlsx)
+Sheema
+Kyeihara HC II
+Health centre
+Register
+only
+Team 19 Mitooma HC list (MITOOMA HCIIIs
+List.xlsx)
+Sheema
+Mabaare HC II
+Health centre
+Register
+only
+Team 19 Mitooma HC list (MITOOMA HCIIIs
+List.xlsx)
+Sheema
+Migina HC III
+Health centre
+Register
+only
+Team 19 Sheema HC list (SHEEMA DC HCIIIs.xlsx)
+not on the programme list
+
+
+PAGE 18
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 18
+Local government
+Facility
+Type
+Status
+Where / note
+Sheema
+Rugarama HC II
+Health centre
+Register
+only
+Team 19 Sheema HC list (SHEEMA DC HCIIIs.xlsx)
+Sheema
+Kigarama seed school
+School
+Register
+only
+Team 19 Sheema schools list (SHEEMA SEED
+SECONDARY SCHS.xlsx)
+Sheema
+Shuuku T/C (New facilities for
+Ryakasinga C.H.E)
+School
+Register
+only
+Team 19 Sheema schools list (SHEEMA SEED
+SECONDARY SCHS.xlsx)
+Sheema MC
+Kashoozi HCII
+Health centre
+Register
+only
+Team 19 Sheema HC list (SHEEMA DC HCIIIs.xlsx)
+Sheema MC
+Kitojo HC II
+Health centre
+Register
+only
+Team 19 Mitooma HC list (MITOOMA HCIIIs
+List.xlsx)
+Sheema MC
+Rwamujojo HC II
+Health centre
+Missing
+Team 20   20 received, 0 register only, 1 missing
+Supervisor: Gumisiriza Johnson (0703056064)   |   Team members: Kemigisha Winfred, Muhumuza Maxim, Nannono Dianah Patricia
+Local government
+Facility
+Type
+Status
+Where / note
+Kazo
+Engari
+Health centre
+Received
+team-20 / Kazo / Engari-HC-III
+Kazo
+Kyampangara
+Health centre
+Received
+team-20 / Kazo / Kyampangara-HC-III
+Kazo
+Kyengando HC II
+Health centre
+Received
+team-20 / Kazo / Kyengando-HC-III
+Kazo
+Nkungu HC II
+Health centre
+Received
+team-20 / Kazo / Nkungu-HC-III
+Kazo
+Burunga
+School
+Received
+team-20 / Kazo / Burunga-Seed-Secondary-School
+Kiruhura
+Kitura HC II
+Health centre
+Received
+team-20 / Kiruhura / Kitura-HC-III
+Kiruhura
+Nshwere HC II
+Health centre
+Received
+team-20 / Kiruhura / Nshwere-HC-III
+Kiruhura
+Rwabarata HC II
+Health centre
+Received
+team-20 / Kiruhura / Rwabarata-HC-III
+Kiruhura
+Rwentamu HC II
+Health centre
+Received
+team-20 / Kiruhura / Rwentamu-HC-III
+Kiruhura
+Rweshande HC II
+Health centre
+Received
+team-20 / Kiruhura / Rweshande-HC-III
+Kiruhura
+Kanyaryeru (New Facilities for
+Lake Mburo S.S. – Pledge)
+School
+Received
+team-20 / Kiruhura /
+Lake-Mburo-Seed-Secondary-School
+Kiruhura
+Kenshunga (New Facilities for
+Kaaro H.S. - Pledge)
+School
+Received
+team-20 / Kiruhura / Kaaro-High-School
+Kiruhura
+Nyakasharara seed school
+School
+Received
+team-20 / Kiruhura /
+Nyakasharara-Seed-Secondary-School
+Buhweju
+Bitsya HC II
+Health centre
+Received
+team-20 / Buhweju / Bitsya-HC-III
+Buhweju
+Engaju HC II
+Health centre
+Received
+team-20 / Buhweju / Engaju-HC-III
+Buhweju
+Kiyanja HC II
+Health centre
+Received
+team-20 / Buhweju / Kiyanja-HC-III
+Buhweju
+Mushasha HC II
+Health centre
+Received
+team-20 / Buhweju / Mushasha-HC-III
+Buhweju
+Rushambya HC II
+Health centre
+Received
+team-20 / Buhweju / Rushambya-HC-III
+Buhweju
+Engaaju
+School
+Received
+team-20 / Buhweju /
+Engaaju-Seed-Secondary-School
+Buhweju
+Kyankanda seed school
+School
+Received
+team-20 / Buhweju /
+St-Anthony-Seed-Secondary-School-Kyankanda
+Buhweju
+Nsiika T/C
+School
+Missing
+
+
+PAGE 19
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 19
+Team 21   17 received, 0 register only, 2 missing
+Supervisor: Gumisiriza Johnson (0703056064)   |   Team members: Aineukama Jeremiah, Jackson Mwatiri, Abaho Blessing
+Local government
+Facility
+Type
+Status
+Where / note
+Isingiro
+Busheka (Isingiro) HC II
+Health centre
+Received
+team-21 / Isingiro / Busheka-HC-III
+Isingiro
+Ruborogota seed school
+School
+Received
+team-21 / Isingiro /
+Ruborogota-Seed-Secondary-School
+Rwampara
+Nyabikungu HCII
+Health centre
+Received
+team-21 / Rwampara / Nyabikungu-HC-III
+Rwampara
+Nyaruhandagazi HC II
+Health centre
+Received
+team-21 / Rwampara / Nyaruhandagazi-HC-III
+Mbarara
+Bukiiro seed school
+School
+Received
+team-21 / Mbarara / Bukiiro-Seed-Secondary-School
+Mbarara
+Rwanyamahembe
+School
+Missing
+Mbarara City
+Kyarwabuganda HC II
+Health centre
+Received
+team-21 / Mbarara City / Kyarwabuganda-HC-III
+Rubirizi
+Butoha HC II
+Health centre
+Received
+team-21 / Rubirizi / Butoha-HC-III
+Rubirizi
+Kyabakara HC II
+Health centre
+Received
+team-21 / Rubirizi / Kyabakara-HC-III
+Rubirizi
+Munyonyi HC II
+Health centre
+Received
+team-21 / Rubirizi / Munyonyi-HC-III
+Rubirizi
+Mushumba HC II
+Health centre
+Received
+team-21 / Rubirizi / Mushumba-HC-III
+Rubirizi
+Ndagaro HC II
+Health centre
+Received
+team-21 / Rubirizi / Ndagaro-HC-III
+Rubirizi
+Magambo
+School
+Received
+team-21 / Rubirizi / St-Kizito-High-School-Magambo
+Rubirizi
+Ryeru Seed School
+School
+Received
+team-21 / Rubirizi / Ryeru-Seed-Secondary-School
+Ibanda
+Birongo HCII
+Health centre
+Received
+team-21 / Ibanda / Birongo-HC-III
+Ibanda
+Kashozi (Ibanda) HC II
+Health centre
+Received
+team-21 / Ibanda / Kashozi-HC-III
+Ibanda
+Kihani HC II
+Health centre
+Received
+team-21 / Ibanda / Kihani-HC-III
+Ibanda
+Kishangara seed school
+School
+Missing
+Ibanda
+Nyabuhikye
+School
+Received
+team-21 / Ibanda /
+Nyabuhikye-Seed-Secondary-School
+Team 22   16 received, 0 register only, 0 missing
+Supervisor: Gumisiriza Johnson (0703056064)   |   Team members: Bugembe Hajab Lydia Mugasho
+Local government
+Facility
+Type
+Status
+Where / note
+Kabale
+Buramba HC II
+Health centre
+Received
+team-22 / Kabale / Buramba-HC-III
+Kabale
+Kahondo HC II
+Health centre
+Received
+team-22 / Kabale / Kahondo-HC-III
+Kabale
+Karujanga HC II
+Health centre
+Received
+team-22 / Kabale / Karujanga-HC-III
+Kabale
+Kasheregyenyi HC II
+Health centre
+Received
+team-22 / Kabale / Kasheregyenyi-HC-III
+Kabale
+Kitooma HC II
+Health centre
+Received
+team-22 / Kabale / Kitooma-HC-III
+Kabale
+Buhara seed school
+School
+Received
+team-22 / Kabale / Buhara-Seed-Secondary-School
+Kabale MC
+Rutoma HCII
+Health centre
+Received
+team-22 / Kabale MC / Rutoma-HC-III
+Kisoro
+Maregamo HC II
+Health centre
+Received
+team-22 / Kisoro / Maregamo-HC-III
+Kisoro
+Nyabwishenya (New facilities at
+Mwumba Progressive S.S.)
+School
+Received
+team-22 / Kisoro /
+Mwumba-Progressive-Secondary-School
+Kisoro
+Nyakinama seed school
+School
+Received
+team-22 / Kisoro /
+Nyakinama-Seed-Secondary-School
+Kisoro MC
+Zindiro HC II
+Health centre
+Received
+team-22 / Kisoro MC / Zindiro-HC-III
+Rubanda
+Mpungu HC II
+Health centre
+Received
+team-22 / Rubanda / Mpungu-HC-III
+Rubanda
+Kibuzigye Secondary School
+School
+Received
+team-22 / Rubanda / Kibuzigye-Secondary-School
+not on the programme list
+Rubanda
+Nyamweru seed school
+School
+Received
+team-22 / Rubanda /
+Nyamweru-Seed-Secondary-School
+Rubanda
+Ruhija
+School
+Received
+team-22 / Rubanda / Ruhija-Seed-Secondary-School
+Rukiga
+Bukinda
+School
+Received
+team-22 / Rukiga / Bukinda-Seed-Secondary-School
+Rukiga
+Rwamucucu seed school
+School
+Received
+team-22 / Rukiga /
+Rwamucucu-Seed-Secondary-School
+
+
+PAGE 20
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 20
+Team 23   21 received, 0 register only, 1 missing
+Supervisor: Gumisiriza Johnson (0703056064)   |   Team members: Muhairwe Apollo, Ayamba Promise, Nkuutu Menha
+Local government
+Facility
+Type
+Status
+Where / note
+Ntungamo
+Ihunga (Ntungamo) HCII
+Health centre
+Received
+team-23 / Ntungamo / Ihunga-HC-III
+Ntungamo
+Kafunjo HC II
+Health centre
+Received
+team-23 / Ntungamo / Kafunjo-HC-III
+Ntungamo
+Kaina HC II
+Health centre
+Received
+team-23 / Ntungamo / Kaina-HC-III
+Ntungamo
+Karuruma HC II
+Health centre
+Received
+team-23 / Ntungamo / Karuruma-HC-III
+Ntungamo
+Kishami HCII
+Health centre
+Received
+team-23 / Ntungamo / Kishami-HC-III
+Ntungamo
+Kyamwasha HC II
+Health centre
+Received
+team-23 / Ntungamo / Kyamwasha-HC-III
+Ntungamo
+Nyanga HC II
+Health centre
+Received
+team-23 / Ntungamo / Nyanga-HC-III
+Ntungamo
+Rukoni West
+Health centre
+Received
+team-23 / Ntungamo / Rukoni-West-HC-III
+Ntungamo
+Rwanda HC II
+Health centre
+Received
+team-23 / Ntungamo / Rwanda-HC-III
+Ntungamo
+Kibatsi
+School
+Received
+team-23 / Ntungamo /
+Kibatsi-Seed-Secondary-School
+Ntungamo
+Kihanga seed school
+School
+Received
+team-23 / Ntungamo /
+Kihanga-Seed-Secondary-School
+Ntungamo
+Nyabihoko
+School
+Received
+team-23 / Ntungamo /
+Nyabihoko-Seed-Secondary-School
+Ntungamo MC
+Ruhoko HC II
+Health centre
+Received
+team-23 / Ntungamo MC / Ruhoko-HC-III
+Rukungiri
+Karuhembe HC II
+Health centre
+Received
+team-23 / Rukungiri / Karuhembe-HC-III
+Rukungiri
+Kasheshe HC II
+Health centre
+Received
+team-23 / Rukungiri / Kasheshe-HC-III
+Rukungiri
+Bikurungu Seed Secondary
+School
+School
+Received
+team-23 / Rukungiri /
+Bikurungu-Seed-Secondary-School
+not on the programme list
+Rukungiri
+Kebisoni seed school
+School
+Received
+team-23 / Rukungiri /
+Kebisoni-Seed-Secondary-School
+Rukungiri
+Nyakishenyi (New facilities at
+Nyakishenyi H.S.)
+School
+Missing
+possibly the team's folder
+Bikurungu-Seed-Secondary-School
+Rukungiri MC
+Kitimba HC II
+Health centre
+Received
+team-23 / Rukungiri MC / Kitimba-HC-III
+Kanungu
+Kinaba HC II
+Health centre
+Received
+team-23 / Kanungu / Kinaaba-HC-III
+same facility, spelled differently
+Kanungu
+Matanda HC II
+Health centre
+Received
+team-23 / Kanungu / Matanda-HC-III
+Kanungu
+Ntungamo HC II
+Health centre
+Received
+team-23 / Kanungu / Ntungamo-HC-III
+Kanungu
+Bushogye Seed Secondary
+School
+School
+Received
+team-23 / Kanungu /
+Bushogye-Seed-Secondary-School
+not on the programme list
+Kanungu
+Katete seed school
+School
+Received
+team-23 / Kanungu / Katete-Seed-Secondary-School
+Team 24   8 received, 0 register only, 7 missing
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Darius Charles Mujuni, Huala Namujuzi
+Local government
+Facility
+Type
+Status
+Where / note
+Masindi
+Budongo Seed School
+School
+Received
+team-24 / Masindi /
+Budongo-Seed-Secondary-School
+Masindi
+Kimengo (Kijunjubwa)
+School
+Received
+team-24 / Masindi /
+Kijunjubwa-Seed-Secondary-School
+Masindi MC
+Katasenywa HC II
+Health centre
+Received
+team-24 / Masindi MC / Katasenywa-HC-III
+Kiryandongo
+Kigumba T/C
+School
+Received
+team-24 / Kiryandongo /
+Kigumba-Town-Seed-Secondary-School
+Kiryandongo
+Kitwala Seed School
+School
+Received
+team-24 / Kiryandongo /
+Kitwara-Seed-Secondary-School
+same facility, spelled differently
+Luweero
+Katuugo HC II
+Health centre
+Received
+team-24 / Luweero / Katuugo-HC-III
+Luweero
+Butuntumula (New facilities at St.
+Andrew Kaggwa Kasaala S.S.)
+School
+Received
+team-24 / Luweero / St-Andrew-Kaggwa-Kasaala-Se
+ed-Secondary-School
+Luweero
+Katikamu Seed School
+School
+Received
+team-24 / Luweero /
+Luwube-Muslim-Seed-Secondary-School
+in Katikamu sub-county
+Nakasongola
+Kiralamba HC II
+Health centre
+Missing
+
+
+PAGE 21
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 21
+Local government
+Facility
+Type
+Status
+Where / note
+Nakasongola
+Nakitoma
+School
+Missing
+Nakaseke
+Butalangu HC II
+Health centre
+Missing
+Nakaseke
+Semuto HC II
+Health centre
+Missing
+Nakaseke
+Kikamulo
+School
+Missing
+Nakaseke
+Nakaseke Seed School
+School
+Missing
+Nakaseke
+Ngoma
+School
+Missing
+Team 25   0 received, 2 register only, 18 missing
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Kiconco Immaculate, Kyomukama Lydia
+Local government
+Facility
+Type
+Status
+Where / note
+Buliisa
+Avogera HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Buliisa
+Butiaba HC II
+Health centre
+Missing
+Buliisa
+Kigwera HC II
+Health centre
+Missing
+Buliisa
+Kihungya HC II
+Health centre
+Missing
+Buliisa
+Kihungya
+School
+Missing
+Buliisa
+Ngwedo Seed School
+School
+Missing
+Hoima
+Buhanika
+School
+Missing
+Hoima
+Kigorobya Seed School
+School
+Missing
+Hoima City
+Kihuukya HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Hoima City
+Hoima Regional Blood Bank
+Blood bank
+Missing
+allocated in team-distributions.docx; an inventory is in
+the programme documents (All WIP Ugift), not from
+the team
+Kikuube
+Kiziranfumbi Seed School
+School
+Missing
+Kikuube
+Kyangwali (New Facilities for
+Kyangwali Seed S.S.)
+School
+Missing
+Kagadi
+Burora (Kagadi) HC II
+Health centre
+Missing
+Kagadi
+Kyabasara HC II
+Health centre
+Missing
+Kagadi
+Kyakabadiima HC II
+Health centre
+Missing
+Kagadi
+Muhorro HC II
+Health centre
+Missing
+Kagadi
+Burora
+School
+Missing
+Kagadi
+Kagadi
+School
+Missing
+Kagadi
+Kiryanga Seed School
+School
+Missing
+Kagadi
+Ruteete
+School
+Missing
+Team 26   17 received, 0 register only, 8 missing
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Zalwango Maria, Nadia Nasige, Nabbosa Sumayah
+Local government
+Facility
+Type
+Status
+Where / note
+Bundibugyo
+Buhanda HC II
+Health centre
+Received
+team-26 / Bundibugyo / Buhanda-HC-III
+Bundibugyo
+Bundimulangya HC II
+Health centre
+Received
+team-26 / Bundibugyo / Bundimulangya-HC-III
+Bundibugyo
+Bupomboli HC II
+Health centre
+Received
+team-26 / Bundibugyo / Bupomboli-HC-III
+Bundibugyo
+Burondo HC II
+Health centre
+Received
+team-26 / Bundibugyo / Burondo-HC-III
+Bundibugyo
+Busanga HC III
+Health centre
+Received
+team-26 / Bundibugyo / Busanga-HC-III
+not on the programme list
+Bundibugyo
+Kyondo HC II
+Health centre
+Missing
+possibly the team's folder Busanga-HC-III
+Bundibugyo
+Mantoroba HC II
+Health centre
+Missing
+possibly the team's folder Busanga-HC-III
+Bundibugyo
+Mirambi HC II
+Health centre
+Received
+team-26 / Bundibugyo / Mirambi-HC-III
+Bundibugyo
+Tombwe HC II
+Health centre
+Received
+team-26 / Bundibugyo / Tombwe-HC-III
+Bundibugyo
+Burondo
+School
+Received
+team-26 / Bundibugyo /
+Burondo-Seed-Secondary-School
+Bundibugyo
+Kisuba seed school
+School
+Received
+team-26 / Bundibugyo /
+Kisuba-Seed-Secondary-School
+
+
+PAGE 22
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 22
+Local government
+Facility
+Type
+Status
+Where / note
+Bundibugyo
+Mabere (New facilities at Kabango
+S.S.)
+School
+Received
+team-26 / Bundibugyo /
+Kabango-Seed-Secondary-School
+Kabarole
+Iruhura HC III
+Health centre
+Received
+team-26 / Kabarole / Iruhura-HC-III
+not on the programme list
+Kabarole
+Kicwamba HCII
+Health centre
+Received
+team-26 / Kabarole / Kichwamba-HC-III
+same facility, spelled differently
+Kabarole
+Kidubuli HC II
+Health centre
+Missing
+possibly the team's folder Iruhura-HC-III,
+Nyambuusa-HC-III
+Kabarole
+Kiko TC
+Health centre
+Received
+team-26 / Kabarole / Kiko-Town-Council-HC-III
+Kabarole
+Kitule HC II
+Health centre
+Received
+team-26 / Kabarole / Kitule-HC-III
+Kabarole
+Nyabuswa HC II
+Health centre
+Missing
+possibly the team's folder Iruhura-HC-III,
+Nyambuusa-HC-III
+Kabarole
+Nyakitokoli HC II
+Health centre
+Received
+team-26 / Kabarole / Nyakitokoli-HC-III
+Kabarole
+Nyambuusa HC III
+Health centre
+Received
+team-26 / Kabarole / Nyambuusa-HC-III
+not on the programme list
+Kabarole
+Nyantabooma HC II
+Health centre
+Received
+team-26 / Kabarole / Nyantabooma-HC-III
+Kabarole
+Kasenda Seed School
+School
+Missing
+Kabarole
+Kichwamba
+School
+Missing
+Ntoroko
+Butungama HC III
+Health centre
+Received
+team-26 / Ntoroko / Butungama-HC-III
+not on the programme list
+Ntoroko
+Bweramule HC II
+Health centre
+Missing
+possibly the team's folder Butungama-HC-III
+Ntoroko
+Musandama HC II
+Health centre
+Missing
+possibly the team's folder Butungama-HC-III
+Ntoroko
+Butungama
+School
+Received
+team-26 / Ntoroko /
+Butungama-Seed-Secondary-School
+Ntoroko
+Kibuuku TC
+School
+Received
+team-26 / Ntoroko / Kibuuku-Seed-Secondary-School
+Ntoroko
+Nombe Seed School
+School
+Received
+team-26 / Ntoroko / Nombe-Seed-Secondary-School
+Team 27   0 received, 16 register only, 3 missing
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Jane Kihumuro, Nalukuuma Faridah, Katushabe Racheal
+Local government
+Facility
+Type
+Status
+Where / note
+Kasese
+Buhuhira HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kasese
+Bwesumbu HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kasese
+Kabingo HCII
+Health centre
+Missing
+Kasese
+Kyempara HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kasese
+Nyabirongo HCII
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kasese
+Nyakimasa HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kasese
+Rukoki General Hospital
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+not on the programme list
+Kasese
+Bwesumbu
+School
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kasese MC
+Railway HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Bunyangabu
+Kabahango HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Bunyangabu
+Kateebwa Monument HCII
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Bunyangabu
+Rubona HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Bunyangabu
+Kabonero
+School
+Missing
+Bunyangabu
+Katungunda (school)
+School
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+not on the programme list
+
+
+PAGE 23
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 23
+Local government
+Facility
+Type
+Status
+Where / note
+Bunyangabu
+Kiyombya seed school
+School
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Bunyangabu
+Kyamukube Town Council
+School
+Missing
+Kamwenge
+Kabambiro HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kamwenge
+Kabingo HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kamwenge
+Kanara HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kamwenge
+Bwizi Seed School
+School
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kitagwenda
+Kanara
+School
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Team 28   20 received, 2 register only, 2 missing
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Namayanja Vanessa, Kato Charles, Jalia Baluubu
+Local government
+Facility
+Type
+Status
+Where / note
+Fort-Portal City
+Kiguma HCII
+Health centre
+Received
+team-28 / Fort-Portal City / Kiguma-HC-III
+Fort-Portal City
+Rubingo HCII
+Health centre
+Received
+team-28 / Fort-Portal City / Rubingo-HC-III
+Fort-Portal City
+Bukuuku Community Secondary
+School
+School
+Received
+team-28 / Fort-Portal City /
+Bukuuku-Community-Secondary-School
+not on the programme list
+Fort-Portal City
+Karago TC
+School
+Missing
+possibly the team's folder
+Bukuuku-Community-Secondary-School
+Kyegegwa
+Kabweza
+Health centre
+Received
+team-28 / Kyegegwa / Kabweza-HC-III
+Kyegegwa
+Karwenyi HC II
+Health centre
+Received
+team-28 / Kyegegwa / Karwenyi-HC-III
+Kyegegwa
+Ruyonza
+School
+Received
+team-28 / Kyegegwa /
+Ruyonza-Seed-Secondary-School
+Kyegegwa
+Rwentuha seed school
+School
+Received
+team-28 / Kyegegwa /
+Rwentuha-Seed-Secondary-School
+Kyenjojo
+Kasamba
+Health centre
+Received
+team-28 / Kyenjojo / Kasamba-HC-III
+Kyenjojo
+Kataraza HC II
+Health centre
+Received
+team-28 / Kyenjojo / Kataraza-HC-III
+Kyenjojo
+Kigoyera HC II
+Health centre
+Received
+team-28 / Kyenjojo / Kigoyera-HC-III
+Kyenjojo
+Kyakaramata HC II
+Health centre
+Received
+team-28 / Kyenjojo / Kyankaramata-HC-III
+same facility, spelled differently
+Kyenjojo
+Mbale HCII
+Health centre
+Received
+team-28 / Kyenjojo / Mbale-HC-III
+Kyenjojo
+Myeri HC II
+Health centre
+Received
+team-28 / Kyenjojo / Myeri-HC-III
+Kyenjojo
+Kigaraale
+School
+Received
+team-28 / Kyenjojo /
+Kigaraale-Seed-Secondary-School
+Kyenjojo
+Kyarusozi
+School
+Received
+team-28 / Kyenjojo /
+Kyarusozi-Seed-Secondary-School
+Kyenjojo
+Kyembogo seed school
+School
+Received
+team-28 / Kyenjojo /
+Kyembogo-Seed-Secondary-School
+Mubende
+Buseregenyu HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Mubende
+Butawata HC II
+Health centre
+Received
+team-28 / Mubende / Butawata-HC-III
+Mubende
+Kabbo
+Health centre
+Missing
+possibly the team's folder Nakawala-HC-III
+Mubende
+Lumbiri HCII
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Mubende
+Mubende Gayaza HC II
+Health centre
+Received
+team-28 / Mubende / Gayaza-HC-III
+Mubende
+Nakawala HC III
+Health centre
+Received
+team-28 / Mubende / Nakawala-HC-III
+not on the programme list
+Mubende
+Bageza (New facilities at
+Mugungulu Seed S.S.)
+School
+Received
+team-28 / Mubende /
+Mugungulu-Seed-Secondary-School
+Mubende
+Kigando Seed School
+School
+Received
+team-28 / Mubende /
+Kigando-Seed-Secondary-School
+Mubende MC
+Lwemikomago HC II
+Health centre
+Received
+team-28 / Mubende MC / Lwemikomago-HC-III
+
+
+PAGE 24
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 24
+Team 29   0 received, 9 register only, 13 missing
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Fatuma Yasin, Hindu Nakagwa, Nakitende Sharifah
+Local government
+Facility
+Type
+Status
+Where / note
+Kiboga
+Bulaga HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kiboga
+Buninga HCII
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kiboga
+Katoma Seed School
+School
+Missing
+Kiboga
+Lwamata Town Council
+School
+Missing
+Kakumiro
+Birembo HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kakumiro
+Kabuubwa HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kakumiro
+Kakindo
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kakumiro
+Kigando HCII
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kakumiro
+Kikoola
+Health centre
+Missing
+Kakumiro
+Kikwaya
+Health centre
+Missing
+Kakumiro
+Kitaihuka HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kakumiro
+Masaka HC II
+Health centre
+Missing
+Kakumiro
+Mukoora HC III
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+not on the programme list
+Kakumiro
+Silumira HC III
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+not on the programme list
+Kakumiro
+Birembo Seed School
+School
+Missing
+Kakumiro
+Mpasaana
+School
+Missing
+Kyankwanzi
+Banda HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kyankwanzi
+Kikolimbo HC II
+Health centre
+Missing
+Kyankwanzi
+Kikooma
+Health centre
+Missing
+Kyankwanzi
+Mujunza HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kyankwanzi
+Sirimula HC II
+Health centre
+Missing
+Kyankwanzi
+Bananywa Seed School
+School
+Missing
+Kyankwanzi
+Nsambya
+School
+Missing
+Kyankwanzi
+Ntwetwe
+School
+Missing
+Team 30   0 received, 4 register only, 12 missing
+Supervisor: Depaul Mbonigaba (0788483159)   |   Team members: Nakandi Aida, Ali Kasule
+Local government
+Facility
+Type
+Status
+Where / note
+Kibaale
+Matale HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kibaale
+Nyamarunda
+Health centre
+Missing
+Kibaale
+Mugarama(new facilities for St
+Mugagga S.S)
+School
+Missing
+Kibaale
+Nyamarwa Seed School
+School
+Missing
+Kasanda
+Butoloogo HC II
+Health centre
+Missing
+Kasanda
+Kijuna
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kasanda
+Kikandwa HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+Kasanda
+Kyakatebe HC II
+Health centre
+Missing
+Kasanda
+Kyasansuwa HC II
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+
+
+PAGE 25
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 25
+Local government
+Facility
+Type
+Status
+Where / note
+Kasanda
+Makokoto HC II
+Health centre
+Missing
+Kasanda
+Namabaale HC III
+Health centre
+Register
+only
+DEPAUL consolidated register (Bunyoro, Tooro,
+Greater Mityana)
+not on the programme list
+Kasanda
+Makokoto (New facilities at
+Makokoto Seed S.S.)
+School
+Missing
+Kasanda
+Manyogaseka Seed School
+School
+Missing
+Mityana
+Busunju HCII
+Health centre
+Missing
+Mityana
+Mpongo HCII
+Health centre
+Missing
+Mityana
+Namungo HC II
+Health centre
+Missing
+Mityana
+Namungo Seed School
+School
+Missing
+Team 31   7 received, 0 register only, 2 missing
+Supervisor: Lawrence Kalyowa (0774106047)   |   Team members: Ndagala Peter (Buvuma), Kyazike Viola (Kalangala)
+Local government
+Facility
+Type
+Status
+Where / note
+Buvuma
+Buvuma HC III
+Health centre
+Received
+team-31 / Buvuma / Buvuma-HC-III
+not on the programme list
+Buvuma
+Buwooya HC II
+Health centre
+Received
+team-31 / Buvuma / Buwooya-HC-III
+Buvuma
+Lubya HCII
+Health centre
+Received
+team-31 / Buvuma / Lubya-HC-III
+Buvuma
+Lukale HC II
+Health centre
+Received
+team-31 / Buvuma / Lukale-HC-III
+Buvuma
+Lwajje HC II
+Health centre
+Missing
+possibly the team's folder Buvuma-HC-III
+Buvuma
+Nkata HC II
+Health centre
+Received
+team-31 / Buvuma / Nkata-HC-III
+Buvuma
+Bwema
+School
+Received
+team-31 / Buvuma /
+Bweema-Seed-Secondary-School
+same facility, spelled differently
+Kalangala
+Bubeke HC II
+Health centre
+Received
+team-31 / Kalangala / Bubeke-HC-III
+Kalangala
+Bufumira Seed School
+School
+Missing
+possibly the team's folder
+Nekemiya-Memorial-Seed-Secondary-School
+Kalangala
+Bujumba
+School
+Received
+team-31 / Kalangala /
+Gyagenda-Memorial-Seed-Secondary-School
+in Bujumba sub-county
+Kalangala
+Nekemiya Memorial Seed
+Secondary School
+School
+Received
+team-31 / Kalangala /
+Nekemiya-Memorial-Seed-Secondary-School
+not on the programme list
+Team 32   2 received, 0 register only, 17 missing
+Supervisor: Lawrence Kalyowa (0774106047)   |   Team members: Mudasiru Kyewalabye, Nampebwa Emilly
+Local government
+Facility
+Type
+Status
+Where / note
+Kiira MC
+Kireka HCII
+Health centre
+Missing
+Kiira MC
+Kirinya HCII
+Health centre
+Missing
+Wakiso
+Bussi HC II
+Health centre
+Missing
+Wakiso
+Kasangati TC/Mutuba-Nangabo
+Health centre
+Missing
+Wakiso
+Kasoozo HCII
+Health centre
+Missing
+Wakiso
+Nakitokolo Namayumba HC II
+Health centre
+Missing
+Wakiso
+Zinga HC II
+Health centre
+Missing
+Wakiso
+Sumbwe Seed School
+School
+Missing
+Nansana MC
+Matuga HCII
+Health centre
+Missing
+Makindye-Ssabagabo
+MC
+Kibiri HC III
+Health centre
+Missing
+Makindye-Ssabagabo
+MC
+Mutungo HCII
+Health centre
+Missing
+Mpigi
+Kiringente Seed School
+School
+Missing
+Butambala
+Butaaka HC II
+Health centre
+Missing
+Butambala
+Budde Seed School
+School
+Received
+team-32 / Butambala /
+Budde-Seed-Secondary-School
+
+
+PAGE 26
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 26
+Local government
+Facility
+Type
+Status
+Where / note
+Butambala
+Kibibi
+School
+Received
+team-32 / Butambala /
+St-Luke-Kibibi-Seed-Secondary-School
+Gomba
+Bulwadda HC II
+Health centre
+Missing
+Gomba
+Mamba HC II
+Health centre
+Missing
+Gomba
+Ngomanene HC II
+Health centre
+Missing
+Gomba
+Kyayi Seed Secondary School
+School
+Received
+team-32 / Gomba / Kyayi-Seed-Secondary-School
+not on the programme list
+Gomba
+Maddu Seed School
+School
+Missing
+possibly the team's folder
+Kyayi-Seed-Secondary-School
+Team 33   9 received, 0 register only, 13 missing
+Supervisor: Lawrence Kalyowa (0774106047)   |   Team members: Nantumwa Penninah, Nasaali Victoria
+Local government
+Facility
+Type
+Status
+Where / note
+Kalungu
+Kabaale HC II
+Health centre
+Received
+team-33 / Kalungu / Kabaale-HC-III
+Kalungu
+Lukaya Seed School
+School
+Received
+team-33 / Kalungu /
+Lukaaya-Seed-Secondary-School
+same facility, spelled differently
+Lwengo
+Kagganda HC II
+Health centre
+Missing
+possibly the team's folder Lwengenyi-HC-III
+Lwengo
+Kakoma HC II
+Health centre
+Received
+team-33 / Lwengo / Kakoma-HC-III
+Lwengo
+Lwengenyi HC III
+Health centre
+Received
+team-33 / Lwengo / Lwengenyi-HC-III
+not on the programme list
+Lwengo
+Katovu TC
+School
+Received
+team-33 / Lwengo / Katovu-Seed-Secondary-School
+Lwengo
+Lwengo Seed School
+School
+Missing
+possibly the team's folder
+Mbirizi-Seed-Secondary-School
+Lwengo
+Mbirizi Seed Secondary School
+School
+Received
+team-33 / Lwengo / Mbirizi-Seed-Secondary-School
+not on the programme list
+Lyantonde
+Kabetemere HC II
+Health centre
+Missing
+Lyantonde
+Lyakajura HC II
+Health centre
+Missing
+Lyantonde
+Kasagama
+School
+Missing
+Lyantonde
+Mpumudde seed school
+School
+Missing
+Sembabule
+Busheka (Sembabule) HC II
+Health centre
+Received
+team-33 / Sembabule / Busheka-HC-III
+Sembabule
+Kyera HCII
+Health centre
+Missing
+Sembabule
+Ntete HCII
+Health centre
+Missing
+Sembabule
+Lwebitakuli Seed School
+School
+Received
+team-33 / Sembabule /
+Lwebitakuli-Seed-Secondary-School
+Masaka City
+Nyendo HC II
+Health centre
+Missing
+Masaka
+Kyabakuza HCII
+Health centre
+Missing
+Masaka
+Bukakata Seed School
+School
+Missing
+Kyotera
+Nangoma HC II
+Health centre
+Missing
+Kyotera
+Kasali TC
+School
+Missing
+Rakai
+Rakai Kiziba HC II
+Health centre
+Received
+team-33 / Rakai / Kiziba-HC-III
+Rakai
+Kacheera
+School
+Received
+team-33 / Rakai / Kacheera-Seed-Secondary-School
+Rakai
+Samson Kalibbala Seed S.S
+School
+Received
+team-33 / Rakai /
+Samson-Kalibbala-Seed-Secondary-School
+
+
+PAGE 27
+UgIFT asset verification: facility data status (raw-data-grouped, 21 September 2026)
+Page 27
+How this was worked out
+  The facility list is SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx: its schools table and its list of HC III upgrades
+and new constructions, plus the three regional blood banks named in the allocation. Each facility is given the team and local
+government from team-distributions.docx. Entries listed twice (Kapedo phases II and III, Kidubuli HC II, the two Nyamarunda
+rows) are counted once.
+  Team members, supervisors and contacts are as written in team-distributions.docx. Kalangala has no team number there; it
+sits with Buvuma under "Islands", so it is shown with Team 31.
+  A facility counts as received when a folder of its own in raw-data-grouped holds at least one file. The folder may be a full
+verification or a partial return; this report does not judge completeness.
+  The list names many Phase II and III schools by sub-county, not by school. Those were linked to a team folder only where the
+team's own document for that school names the sub-county (for example Wol for Awor SSS in Agago, Gimara for Gopele SSS in
+Obongi, Kuluba for Nyakaliso SSS in Koboko). Spelling variants were linked by hand (Jagusi/Jaguzi, Kitwala/Kitwara,
+Kasasila/Kasasira and others).
+  Register only rows come from the Team 7 schools sheet, Team 19's Mitooma and Sheema lists, the Busoga seed-school
+register and the DEPAUL consolidated register for Bunyoro, Tooro and Greater Mityana. The DEPAUL register labels some
+districts differently from the list (Kabahango under Kamwenge, Kabambiro under Bunyangabu, Buseregenyu under Mityana); the
+facility name was matched, and Kabingo was taken as the Kamwenge facility. It also carries rows for Muggi HC III labelled
+Kagadi; Muggi is a Mayuge facility with its own Team 16 folder, so those rows are not counted for Kagadi.
+  Sheets that only reproduce the programme list or a district budget (Team 21 "TEAM 21 SSS (2).xlsx", Team 20 "TEAM 20
+SSSs.xls" apart from St Anthony SSS) and district asset records such as the Busia LG forms were not taken as evidence that a
+facility sent data.
+  "Possibly" notes point to a team folder in the same local government and of the same type that the list does not name. They
+are leads to confirm with the team, not matches.

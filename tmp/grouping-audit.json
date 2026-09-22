@@ -1,0 +1,692 @@
+{
+  "new": [
+    {
+      "root": "raw-data-ungrouped",
+      "source": "retoolkitsfromcentralteam.zip",
+      "size": 17144278,
+      "sha256": "b0691fb529ebb0e2c42cbdfddf4e4c59961fc47fb93cdeb611f3eed1dfdd0164"
+    },
+    {
+      "root": "raw-data-ungrouped",
+      "source": "retoolkitsfromcentralteam.zip::Wakiso.zip",
+      "size": 4043667,
+      "sha256": "500de00a1f7ff365d86658c57ffd125104c4acf16f09cf86cd1a543151a45f32"
+    },
+    {
+      "root": "raw-data-ungrouped",
+      "source": "retoolkitsfromcentralteam.zip::Wakiso.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (matugga HC  III).docx",
+      "size": 141594,
+      "sha256": "21c842928fee0763cbfd38efd58f083ea603b5ee98ae5c38a46798432837ee1e"
+    },
+    {
+      "root": "raw-data-ungrouped",
+      "source": "retoolkitsfromcentralteam.zip::Wakiso.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222(KIBIRI HC III -MAKINDYE SSABAGABO).docx",
+      "size": 143179,
+      "sha256": "1cda59beef8eb46034f5cd06ec9304c82c3268c5164fc2ea2e1c8925380e861b"
+    },
+    {
+      "root": "raw-data-ungrouped",
+      "source": "retoolkitsfromcentralteam.zip::Wakiso.zip::KIBIRI HC III report.docx",
+      "size": 3802910,
+      "sha256": "795a6c121fb688b39db380ba405566bb4d3f814f2b63cd0a6b9628f9b9716f5a"
+    },
+    {
+      "root": "raw-data-ungrouped",
+      "source": "retoolkitsfromcentralteam.zip::Masaka city.zip",
+      "size": 6182373,
+      "sha256": "cc5c9f856051364aa13f11ef8fc925b6e57d7f8372ef3d73169b3e7ded507f18"
+    },
+    {
+      "root": "raw-data-ungrouped",
+      "source": "retoolkitsfromcentralteam.zip::Masaka city.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1) NYENDO HEALTH CENTRE III (1).docx",
+      "size": 6246241,
+      "sha256": "b036609bbb22daec4e5f4addae014013aa2279d0b51f0675e2171422fe6609d6"
+    },
+    {
+      "root": "raw-data-ungrouped",
+      "source": "retoolkitsfromcentralteam.zip::Lyantonde.zip",
+      "size": 3630554,
+      "sha256": "1c6079163f5509c9406a907ce15861f50a4963d6c5ec931287b7a835aac0cb45"
+    },
+    {
+      "root": "raw-data-ungrouped",
+      "source": "retoolkitsfromcentralteam.zip::Lyantonde.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1)KABATEMERE HEALTH CENTRE III & RWAMABARA SEED SECONDARY SCHOOL.docx",
+      "size": 1498216,
+      "sha256": "86625480a18d28ae592b2758f948aa71fb1f4c0020e40067bff5da0e69b44546"
+    },
+    {
+      "root": "raw-data-ungrouped",
+      "source": "retoolkitsfromcentralteam.zip::Lyantonde.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 LYAKAJJUKA HEALTH CENTRE III & KASAGAMA SEED SECONDARY SCH.docx",
+      "size": 2177576,
+      "sha256": "74cff48deecd95181be09d8df3fd15469e259374c1b9574dd6763ce7e9173502"
+    },
+    {
+      "root": "raw-data-ungrouped",
+      "source": "retoolkitsfromcentralteam.zip::Mpigi.zip",
+      "size": 3282292,
+      "sha256": "eca99ae4faa5d775bef0240c4bc794793abf0ccccca119ebeeaf1df1ee79e524"
+    },
+    {
+      "root": "raw-data-ungrouped",
+      "source": "retoolkitsfromcentralteam.zip::Mpigi.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222( WAMATOVU SEED S.S MPIGI LGD).docx",
+      "size": 3315847,
+      "sha256": "41dc75f6abd379ee1fb89b3bd3bea066405de4e7f5be7b5ef1dd047046629564"
+    },
+    {
+      "root": "raw-data-ungrouped",
+      "source": "UGIFT KITAYUNJWA SEED SEC SCH.docx",
+      "size": 97383,
+      "sha256": "414eef3e26b5a30a38cc94cb616ee447f7131a8d35ccd98b05733b2a1e9edf25"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "fwdreportingtempalte.zip",
+      "size": 893797,
+      "sha256": "bb1dec3659e217cbac43e87c515dd0515c1928a2616326ff573fb346d4334ddd"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "fwdreportingtempalte.zip::ASSET VERIFICATION AND RECORDING TOOL KIT (NAKITOKOLO HEALTH CENTER III).docx",
+      "size": 141839,
+      "sha256": "05b28ba22a2fc08ba5c7c5cc00ec21cfa78773e4992f9cebc6af86980a33e7dd"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "fwdreportingtempalte.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (NGOMAMENE HC  III).docx",
+      "size": 143704,
+      "sha256": "3a1f62d278673523d5ceb7e8434afec532bef9c10af7994afc82818b631a2220"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "fwdreportingtempalte.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222(MAMBA HC III -GOMBA LOCAL GOVERNMENT).docx",
+      "size": 145579,
+      "sha256": "cf224759ce85b40541dfb4f460c9e1ea3ceeed253812f49620afe57dd6db2ed6"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "fwdreportingtempalte.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222( WAMATOVU SEED S.S MPIGI LGD).docx",
+      "size": 256416,
+      "sha256": "b698c3a3765c9a5103313d95bf3945bcd620953650de1d01f9e7e5d4ff333d6b"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "fwdreportingtempalte.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (matugga HC  III).docx",
+      "size": 144178,
+      "sha256": "8d32dfe213363d8c6aed5a100a1cf824f4956445f1de9366f887134d121a0109"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "fwdreportingtempalte.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222(KIBIRI HC III -MAKINDYE SSABAGABO).docx",
+      "size": 147582,
+      "sha256": "11f00a8426ea5eeee04d17041540f42cb5c15c78fee8cfd9591e879f18831981"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "retoolkitsfromcentralteam.zip",
+      "size": 17144278,
+      "sha256": "2f1b2c5be304f9a357dd8ef6cc1861e3878fa5a94848b35c4d970268552cdebf"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "retoolkitsfromcentralteam.zip::Wakiso.zip",
+      "size": 4043667,
+      "sha256": "500de00a1f7ff365d86658c57ffd125104c4acf16f09cf86cd1a543151a45f32"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "retoolkitsfromcentralteam.zip::Wakiso.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (matugga HC  III).docx",
+      "size": 141594,
+      "sha256": "21c842928fee0763cbfd38efd58f083ea603b5ee98ae5c38a46798432837ee1e"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "retoolkitsfromcentralteam.zip::Wakiso.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222(KIBIRI HC III -MAKINDYE SSABAGABO).docx",
+      "size": 143179,
+      "sha256": "1cda59beef8eb46034f5cd06ec9304c82c3268c5164fc2ea2e1c8925380e861b"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "retoolkitsfromcentralteam.zip::Wakiso.zip::KIBIRI HC III report.docx",
+      "size": 3802910,
+      "sha256": "795a6c121fb688b39db380ba405566bb4d3f814f2b63cd0a6b9628f9b9716f5a"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "retoolkitsfromcentralteam.zip::Masaka city.zip",
+      "size": 6182373,
+      "sha256": "cc5c9f856051364aa13f11ef8fc925b6e57d7f8372ef3d73169b3e7ded507f18"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "retoolkitsfromcentralteam.zip::Masaka city.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1) NYENDO HEALTH CENTRE III (1).docx",
+      "size": 6246241,
+      "sha256": "b036609bbb22daec4e5f4addae014013aa2279d0b51f0675e2171422fe6609d6"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "retoolkitsfromcentralteam.zip::Lyantonde.zip",
+      "size": 3630554,
+      "sha256": "1c6079163f5509c9406a907ce15861f50a4963d6c5ec931287b7a835aac0cb45"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "retoolkitsfromcentralteam.zip::Lyantonde.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1)KABATEMERE HEALTH CENTRE III & RWAMABARA SEED SECONDARY SCHOOL.docx",
+      "size": 1498216,
+      "sha256": "86625480a18d28ae592b2758f948aa71fb1f4c0020e40067bff5da0e69b44546"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "retoolkitsfromcentralteam.zip::Lyantonde.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 LYAKAJJUKA HEALTH CENTRE III & KASAGAMA SEED SECONDARY SCH.docx",
+      "size": 2177576,
+      "sha256": "74cff48deecd95181be09d8df3fd15469e259374c1b9574dd6763ce7e9173502"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "retoolkitsfromcentralteam.zip::Mpigi.zip",
+      "size": 3282292,
+      "sha256": "eca99ae4faa5d775bef0240c4bc794793abf0ccccca119ebeeaf1df1ee79e524"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "retoolkitsfromcentralteam.zip::Mpigi.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222( WAMATOVU SEED S.S MPIGI LGD).docx",
+      "size": 3315847,
+      "sha256": "41dc75f6abd379ee1fb89b3bd3bea066405de4e7f5be7b5ef1dd047046629564"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip",
+      "size": 25642953,
+      "sha256": "47b15e233f16b2af54db07cea8d143b0b0fc8a14136f9d5e54f423e2c6ee0e4b"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip",
+      "size": 4035670,
+      "sha256": "617471c1a9a739883006cb6b4ef84b8459e10c1750571bd23b1f7d48a34bd573"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::BUVUMA HC III ASSET VERIFICATION AND RECORDING TOOL KIT 222.docx",
+      "size": 156974,
+      "sha256": "ba9b12a7e08db836965c5ecd6d4cb6284467a08d50df11d8c19b017ade542681"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Buwooya H.C III (1).docx",
+      "size": 114366,
+      "sha256": "a5543a7c9e303c8ea95f01e15c9162c274c0168f8e2fc3bb27ba1cb65fa347a8"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Lubya H.C III.docx",
+      "size": 100604,
+      "sha256": "5ce6d28fb16448b5fb5847990347e2df6103008450471fd07ec2a998f969f4c0"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::LUKALE H.C III (1).docx",
+      "size": 114679,
+      "sha256": "50d374983599b27ae67f621598c370d9bb37cb4a478dfb619997c7dbf42cfc6f"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Nkata H.C III (1).docx",
+      "size": 114887,
+      "sha256": "db2d9280933f5562087ffa60f479f04ad303afd75cda96061ba89a7e5059a937"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Image 2026-09-12 at 13.47.21.jpeg",
+      "size": 120124,
+      "sha256": "3b7229cd766952d01d24f6bb403a750f61a69ba9b8daa63704099c67fcc20d6f"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Image 2026-09-12 at 13.47.22 (1).jpeg",
+      "size": 61489,
+      "sha256": "303634e0e9fb22fdd6c5701d080a427c8e6de99d086509905c6d60de601b5000"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Image 2026-09-12 at 13.47.22 (2).jpeg",
+      "size": 70219,
+      "sha256": "6f03e0e2c1126368221cf4305ef6d3141b40bd9c0599857018ef03ac16e6256a"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Image 2026-09-12 at 13.47.22.jpeg",
+      "size": 56381,
+      "sha256": "7a532c1173db218ccf9bd2df1b6fe84888ac326f269ae7332586ecef5236e958"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Image 2026-09-12 at 13.47.23 (1).jpeg",
+      "size": 65564,
+      "sha256": "d5f9a096864a6f0c48b3bf32062e8ec0510f60301607131727cf58578380282b"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Image 2026-09-12 at 13.47.23 (2).jpeg",
+      "size": 119058,
+      "sha256": "c8a6ffb1bcf94ff171834665c693555cadd2abac290b0ad36988a7b1373737be"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Image 2026-09-12 at 13.47.23 (3).jpeg",
+      "size": 96747,
+      "sha256": "942d4d4f5e82eb0b23ca796705adc1700834ab20abaafda23647253b6ed56eeb"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Image 2026-09-12 at 13.47.23.jpeg",
+      "size": 57350,
+      "sha256": "f7dc581361085d71c776d3d0672d4c3ffe2fac9630df34f4ef58d93ea0ee4e06"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Image 2026-09-12 at 13.47.24 (1).jpeg",
+      "size": 93677,
+      "sha256": "3078014480a1632f4a8eebf9930999ebda8444a25e73b9a96cc70821774aeaf5"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Image 2026-09-12 at 13.47.24 (2).jpeg",
+      "size": 137834,
+      "sha256": "bf9268113afae7f37e50808afb96e47313da797ee572b34885cc6009dcb1c585"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Image 2026-09-12 at 13.47.24.jpeg",
+      "size": 91875,
+      "sha256": "54817e35f0e1d95eca70e7a0684df27f2bdb89fee5fd925a582d52aad7227556"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Image 2026-09-12 at 13.47.25.jpeg",
+      "size": 123246,
+      "sha256": "e64c7f78869a76b27600c5377163dfb064c004b11307bdbf2e77287f89a1fc8e"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip",
+      "size": 2459723,
+      "sha256": "6c4e3068b1e49fb7b7b4e59243bcdd80b76778a6a885451667c14e66f15de43f"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.10.jpeg",
+      "size": 200832,
+      "sha256": "c483ccfadc9b4595077bb79173e8f63e6d2815d4de779df830ff8e20796a5352"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.11.jpeg",
+      "size": 174385,
+      "sha256": "ada9ffacc78915d2c95b105535ce43fda3b34b8fa8eceb6ca5a07aa2c523c964"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.11 (1).jpeg",
+      "size": 139767,
+      "sha256": "e05c65f3af4e7c182aacbc1ed02bf087e6e67f4be41816393c98261b14449261"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.12.jpeg",
+      "size": 129158,
+      "sha256": "fccc0c3b141a765db027f11ef4ae1e24d89a42b94cbb1c6b6029013426d43517"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.12 (1).jpeg",
+      "size": 142209,
+      "sha256": "92e1111f065114955996f67a5d20299b4e86a82b4dfed240e4393ca88c367025"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.12 (2).jpeg",
+      "size": 130710,
+      "sha256": "b68540b3e0dea4dd5bb63c8f0dc10da0e3c465b2bfd25c35f4bc12f6e1d3b76e"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.13.jpeg",
+      "size": 130637,
+      "sha256": "843c3c7d731f0b5d768e6ef062403e80e001e60dd387856b54d97817a918f0e9"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.13 (1).jpeg",
+      "size": 155653,
+      "sha256": "25f3d5285d8fbd5f5c500f2025b10d47a22cd714fa2cac48fd3e634470789793"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.15.jpeg",
+      "size": 130467,
+      "sha256": "732a8e69d1a800ff0e8d772ac7cf239fad71c49fe62ff0008da7b280e1bdcc37"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.16.jpeg",
+      "size": 127221,
+      "sha256": "057676ed3783a09ab755c8542157f02aa19f17ce7e5442ae96aa97bb1b56d2ce"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.17.jpeg",
+      "size": 143454,
+      "sha256": "ec7533834c6056cc562637230e6209746a1fb9944b13b923dba223ba0c26f324"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.17 (1).jpeg",
+      "size": 159848,
+      "sha256": "f81fc37921daa01d1cc70e414c8ebf36511b22b44a5efff40b33e7e134d3d20b"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.17 (2).jpeg",
+      "size": 76163,
+      "sha256": "cde65d6bc70051c8b6726b79a9aeebcbd325c7e3a4bd975e231ac987fc9235a0"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.18.jpeg",
+      "size": 63460,
+      "sha256": "3b3179197a6ac55ccfa32022e5b58e200a13913bdc6140276d4c6e8bb5b41741"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.19.jpeg",
+      "size": 59662,
+      "sha256": "0a54d1939c3ffcc61a1ca79747ac2112d7a38069457fbeec244e94ebed86e2db"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.19 (1).jpeg",
+      "size": 85568,
+      "sha256": "d545c24d557c65ba76f2d5d46b74487e5c61cc5ec7e9ba4d751f1224c887b101"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.20.jpeg",
+      "size": 147334,
+      "sha256": "b5bf7d24bb213101793919d70b313624917faf9f42f927959b89ff42734e4836"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.20 (1).jpeg",
+      "size": 154695,
+      "sha256": "843f88277e444a71d371bf2de3bc4050e12e79b4f5af872ed02e12a2319a8334"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Buvuma.zip::Bweema seed school/WhatsApp Unknown 2026-09-12 at 13.58.16.zip::WhatsApp Image 2026-09-12 at 13.47.20 (2).jpeg",
+      "size": 105366,
+      "sha256": "48b628853db21f003b140d03f06d59f4963f408082caf0317490923e7a51792e"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Butambala.zip",
+      "size": 12017669,
+      "sha256": "e31bf5e0cbf6fdf4c24e83240390da26f883b3816101856dd79b99dfaafc9868"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Butambala.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (BUTAMABALA DISTRICT-BUDDE SEED).docx",
+      "size": 186312,
+      "sha256": "01ab2883aa2991cbe6708c5e93ba7b30b71b5a3128ff0bbdeb81b2ed37e26d76"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Butambala.zip::BUDDE SEED SCHOOL (BUTAMABALA DISTRICT-BUDDE SEED).docx",
+      "size": 8954594,
+      "sha256": "c257a29ed11d7a7e15535f0b5eabb4b66c4510676ce05d65710c2fac67672821"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Butambala.zip::ST. LUKE SECONDARY SCHOOL KIBIBI BUTAMBALA.docx",
+      "size": 2908225,
+      "sha256": "ab7517d55682b874fc100d69f92a5a272ca6afb8b2f35d4cff6c2001d460c7ed"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::KYAYI SEED S.SASSET VERIFICATION AND RECORDING TOOL KIT 222.docx",
+      "size": 80533,
+      "sha256": "fb3293c038e12bbb39e6f7372159f8c0faf0d865f5075f04edb3cdc91fca359f"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Kalangala.zip",
+      "size": 387310,
+      "sha256": "ffc2ce8abda5b31b76edc3cdbdd820d2b96126792ac044c248a554f748bb5dab"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Kalangala.zip::Bubeke HC III/Bubeke health centre III.docx",
+      "size": 144697,
+      "sha256": "41ffefe60c05481d7d06b6fd1b8daa0c06017998926a01c9e0fe02fcfb344575"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Kalangala.zip::Gyagenda Memorial Seed School/Gyagenda memorial seed secondary school.docx",
+      "size": 80880,
+      "sha256": "5ffcc3cdb7d38977d369a74417722dbca87e07e26a2af9529710c3d52e9183a9"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Kalangala.zip::Nekemiya memorial seed secondary school.docx",
+      "size": 181674,
+      "sha256": "4ddfa5ad631096f20595da3d2b40b05d7fedda1db13cfc6980a7d3f760888148"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Kalungu.zip",
+      "size": 3895224,
+      "sha256": "e1b09bce8ae3aa3e3dba469be5481c0a79e06aaaca1c807107e74077b4d97041"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Kalungu.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1)KABAALE HC III & LUKAAYA SEED SECONDARY SCHOOL (1).docx",
+      "size": 2566083,
+      "sha256": "d1fc8566c608448871b7a80efdb63b4f75302e653567c0ae0ea6275c31030129"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Kalungu.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1)KABAALE HC III & LUKAAYA SEED SECONDARY SCHOOL.docx",
+      "size": 1378652,
+      "sha256": "785cc788bdf5c42affd294146571789d4ab337e518536fa43ac202ddfc582fed"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Kiryandongo.zip",
+      "size": 136718,
+      "sha256": "eed1c2e4020f47c3b3ff98782f6769e58733cf9277ba8e68fc8d8fbaa7694054"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Kiryandongo.zip::Kigumba Town Seed Secondary School.docx",
+      "size": 69836,
+      "sha256": "fec17c97c1b35542ddb041abec9bb7af63ae5e2fd63a69c7ff4002ae87feaa73"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Kiryandongo.zip::Kitwara Seed Secondary School.docx",
+      "size": 75585,
+      "sha256": "a67d63d7fb479103b6ca106ceba196c1b7a5f27209898d0cc843d5bf86f69a1f"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Luwero.zip",
+      "size": 197222,
+      "sha256": "6fbfecd75802f6f8c7288e24b4b56863c1367142b624a9f50f4a3899c4f489d8"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Luwero.zip::St. Andrew Kaggwa Kasaala Seed Secondary School.docx",
+      "size": 66756,
+      "sha256": "5a92baf79c8d5388fc1919e217ea2d8d07cd6533a85e63ff490cc1de422fb61c"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Luwero.zip::Katuugo Health Centre III.docx",
+      "size": 63217,
+      "sha256": "6309b688a70d0f8ed37cd6026c1aeb4ed74bf09d643a9fe9a03d9e4bc05904f8"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Luwero.zip::Luwube Muslim Seed Secondary School.docx",
+      "size": 78395,
+      "sha256": "bf68811a5d62583935ea58c867c16c1de9931dbdc7514f5c9d74935f91c3cc6a"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Lwengo.zip",
+      "size": 2760888,
+      "sha256": "4b693544ed5069cd2854445a0b8c7d5b4b1db38625b73bb15e084a7792a2ce1a"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Lwengo.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1) KAKOMA HEALTH CENTRE III & MBIRIZI SEED SECONDARY SCHOOL (1).docx",
+      "size": 1259076,
+      "sha256": "603c7bbec128b0225854e0f60b04a038b89ee04d15caa7eded07f0092b0f73e1"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Lwengo.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1) LWENGENYI HEALTH CENTRE III& KATOVU SEED SECONDARY SCHOOL.docx",
+      "size": 1547254,
+      "sha256": "21a7257a0ba9b3895105eaeee48f8fe535c69b60e76e74a43bfd8179619e020e"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Masindi DLG.zip",
+      "size": 195703,
+      "sha256": "0b2559fde2845cdce557c4ac483047aad5d56a3d622343290b8b12471138b53d"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Masindi DLG.zip::Budongo Seed Secondary School.docx",
+      "size": 65564,
+      "sha256": "af09c61cf294721e37b813e75abd24159a6ed878ccb42f232e10da3dadbc4bd5"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Masindi DLG.zip::Katasenywa Health Centre III.docx",
+      "size": 66255,
+      "sha256": "ddef5711272fc6e893acd7f47bc8af6e09edfe8f270003861918a99e878b9eaa"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Masindi DLG.zip::Kijunjubwa Community Seed Secondary School.docx",
+      "size": 76302,
+      "sha256": "7cb1dfc1317527814870df1100841477810baa85a846024640648be892513a8c"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Rakai.zip",
+      "size": 153173,
+      "sha256": "376784722f2994951cda4dc32b297e3564e39106ea91231a13fd38ee78b7c12d"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Rakai.zip::KIZIBA HEALTH CENTER 3 AND KACHEERA SEED SECONDARY SCHOOL RAKAI DISTRICT.docx",
+      "size": 181038,
+      "sha256": "70e59e773668a30a34ee79fab4a569dcb226dccd8d035e2e6931b16bb4637d91"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Rakai.zip::SAMSON KALIBBALA SEED SECONDARY SCHOOL.docx",
+      "size": 174862,
+      "sha256": "614d9c9e7059543a136b07d5e4d053fdc1da8a23d7cd3f29c15956582a12df9d"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Ssembabule.zip",
+      "size": 1783230,
+      "sha256": "98c2d31efc3e5a4fafe7146dd4e8dbc28b38790c97607208aa8b880b6b59281b"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "toolkitsfromcentralteam.zip::Ssembabule.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1) BUSHEKA HEALTH CENTRE III & LWEBITAKURE SEED SECONDARY SCHOOL (1).docx",
+      "size": 1810991,
+      "sha256": "ffe413e7175340ccce12ddd1576e14739916bbfad95d45cdd170cece8e3d94a1"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "UGIFT ASSET VERIFICATION NTWETWE SEED SEC SCH.docx",
+      "size": 35644214,
+      "sha256": "4d6e53f2539ac8455f74e7491d779e96d861152155bb70859e45c4589a74b31f"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "UGIFT MPASANA_CHRIST_THE_KING_SEED_SCHOOL.docx",
+      "size": 525468,
+      "sha256": "9295be044685b60f54d22930d95287657ea74562301218d81afa5b5512e9a52f"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "UGIFT NSAMBYA_SEED_SCHOOL.docx",
+      "size": 494871,
+      "sha256": "01ac1d7c5b9690b36cebf0e25ad3c9a8d8109d7b10a355b1bca49b5d5bc9a201"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "UGIFT ST_MATIA_MULUMBA_BIREMBO_SEED_SS.docx",
+      "size": 799400,
+      "sha256": "6c509265d8c8eefc1775e57181a811487162f80f149d88ce2780316a9c7744e4"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "WhatsApp Chat with DATA MANAGEMENT UGIFT.zip",
+      "size": 861218,
+      "sha256": "539233068a5fa3b7605d9ec17b99922bf91296afeb75293e72a43f4e67c99e01"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "WhatsApp Chat with DATA MANAGEMENT UGIFT.zip::WhatsApp Chat with DATA MANAGEMENT UGIFT.txt",
+      "size": 3785,
+      "sha256": "ce5940cdd752d9e9e38ad4eb0c24a9702f152ed79511f14c2512f9473a5a8d03"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "WhatsApp Chat with DATA MANAGEMENT UGIFT.zip::ASSET VERIFICATION AND RECORDING TOOL KIT 222 (3).docx",
+      "size": 235251,
+      "sha256": "36173465b72f84b25047a3e23fce61d4ebe6d4e1a65d5258b8b9ab6101176045"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "WhatsApp Chat with DATA MANAGEMENT UGIFT.zip::Icheme HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx",
+      "size": 183359,
+      "sha256": "5896160d46ec836812e27df84745b7f545636ef0579085293137a1664f19c724"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "WhatsApp Chat with DATA MANAGEMENT UGIFT.zip::Onywako HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx",
+      "size": 188129,
+      "sha256": "aba55e8d06f39ba312237169d73548873099467476a9ce109896bfc9175b6a8d"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "WhatsApp Chat with DATA MANAGEMENT UGIFT.zip::data updates - western.xls",
+      "size": 119808,
+      "sha256": "2b81c0b00a0033b06c5d57dd27a1f4efe885d41b65aa2a5514322acd2b26a739"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "WhatsApp Chat with DATA MANAGEMENT UGIFT.zip::IMG-20260922-WA0000.jpg",
+      "size": 156973,
+      "sha256": "d3c11abd9aa163f47bbc5dbe0fcbddf8eec114737b2e820f39e8fd3fd7cd7e95"
+    },
+    {
+      "root": "new-raw-data-221092026-1114",
+      "source": "WhatsApp Chat with DATA MANAGEMENT UGIFT.zip::IMG-20260922-WA0001.jpg",
+      "size": 136030,
+      "sha256": "6e0cef0c515898cd39f2b2d4445c4a0b9ba69c62467c47d6f3c76a77feb2df11"
+    }
+  ],
+  "changed": [],
+  "missing_indexed_sources": [],
+  "source_entry_count": 12205,
+  "prior_index_entry_count": 12222
+}

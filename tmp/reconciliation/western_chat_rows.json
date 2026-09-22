@@ -1,0 +1,6312 @@
+{
+  "Exp analysis Q1-Q2": [
+    {
+      "row": 1,
+      "values": [
+        "",
+        "SUMMARY COMPONENT ABSORPTION BY COMPONENT AS AT  DECEMBER 2014",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 2,
+      "values": [
+        "",
+        "COMPONENT ",
+        "CODE",
+        "Total Approved Budget",
+        "Q1Expenditure US$ -BoU average closing rate 30.09.14 - 2,651.61",
+        "Q2Expenditure US$ -BoU average closing rate 31.12.14 - 2,773.07",
+        "Cummulatibe exp 31 December 14",
+        "Balance US$",
+        "%ntage Absorption by component "
+      ]
+    },
+    {
+      "row": 3,
+      "values": [
+        "",
+        "MACROECONOMIC MANAGEMENT",
+        "C1",
+        23,
+        36033.40461078363,
+        122350.1548189191,
+        158383.55942970273,
+        943124.4405702974,
+        23
+      ]
+    },
+    {
+      "row": 4,
+      "values": [
+        "",
+        "BUDGET PREPARATION AND MONITORING",
+        "C2",
+        23,
+        85413.47898069474,
+        174528.4857288132,
+        259941.96470950794,
+        651714.035290492,
+        23
+      ]
+    },
+    {
+      "row": 5,
+      "values": [
+        "",
+        "FIDUCIARY MANAGEMENT SYSTEMS IN CENTRAL GOVERNMENT",
+        "C3A",
+        23,
+        469669.55585474486,
+        1074230.7163350366,
+        1543900.2721897815,
+        5215339.727810218,
+        23
+      ]
+    },
+    {
+      "row": 6,
+      "values": [
+        "",
+        "PAYROLL AND PENSIONS MANAGEMENT",
+        "C3B",
+        23,
+        143726.0758558008,
+        57938.50908329035,
+        201664.58493909115,
+        2537298.4150609085,
+        23
+      ]
+    },
+    {
+      "row": 7,
+      "values": [
+        "",
+        "PUBLIC FINANCIAL MANAGEMENT IN LOCAL GOVERNMENTS",
+        "C5",
+        23,
+        294817.24650306796,
+        1147901.74611171,
+        1442718.992614778,
+        1501709.967385222,
+        23
+      ]
+    },
+    {
+      "row": 8,
+      "values": [
+        "",
+        "PUBLIC PROCUREMENT",
+        "C4A",
+        23,
+        6605.420857516754,
+        13508.285041488314,
+        20113.70589900507,
+        510050.29410099494,
+        23
+      ]
+    },
+    {
+      "row": 9,
+      "values": [
+        "",
+        "INTERNAL OVERSIGHT",
+        "C4B",
+        23,
+        65749.36246280561,
+        52431.56526939456,
+        118180.92773220017,
+        569359.0722677999,
+        23
+      ]
+    },
+    {
+      "row": 10,
+      "values": [
+        "",
+        "EXTERNAL OVERSIGHT - OAG",
+        "C4C",
+        23,
+        125492.88092894504,
+        376311.87745711434,
+        501804.7583860594,
+        1174332.6816139407,
+        23
+      ]
+    },
+    {
+      "row": 11,
+      "values": [
+        "",
+        "LEGISLATIVE OVERSIGHT ",
+        "C4D",
+        23,
+        "",
+        "",
+        0.0,
+        158600.0,
+        23
+      ]
+    },
+    {
+      "row": 12,
+      "values": [
+        "",
+        "GOVERNANCE AND EXTERNAL ENVIRONMENT",
+        "C6A",
+        23,
+        20168.036023397104,
+        30179.454539553633,
+        50347.49056295074,
+        239204.50943704924,
+        23
+      ]
+    },
+    {
+      "row": 13,
+      "values": [
+        "",
+        "PROGRAMME COORDINATION",
+        "C6B",
+        23,
+        167237.76875181493,
+        280300.09654051287,
+        447537.8652923278,
+        801302.1347076722,
+        23
+      ]
+    },
+    {
+      "row": 15,
+      "values": [
+        "",
+        "TOTAL",
+        "",
+        23,
+        1414913.2308295714,
+        3329680.8909258335,
+        4744594.121755404,
+        14302035.278244594,
+        23
+      ]
+    }
+  ],
+  "Sheet1": [
+    {
+      "row": 1,
+      "values": [
+        "Item",
+        "Description"
+      ]
+    },
+    {
+      "row": 2,
+      "values": [
+        211101.0,
+        "General Staff Salaries"
+      ]
+    },
+    {
+      "row": 3,
+      "values": [
+        211102.0,
+        "Contract Staff Salaries (Incl. Casuals, Temporary)"
+      ]
+    },
+    {
+      "row": 4,
+      "values": [
+        211103.0,
+        "Allowances"
+      ]
+    },
+    {
+      "row": 5,
+      "values": [
+        211104.0,
+        "Statutory salaries"
+      ]
+    },
+    {
+      "row": 6,
+      "values": [
+        211105.0,
+        "Missions staff salaries"
+      ]
+    },
+    {
+      "row": 7,
+      "values": [
+        211106.0,
+        "Emoluments paid to former Presidents/Vice Presidents"
+      ]
+    },
+    {
+      "row": 8,
+      "values": [
+        212101.0,
+        "Social Security Contributions (NSSF)"
+      ]
+    },
+    {
+      "row": 9,
+      "values": [
+        212102.0,
+        "Pension for General Civil Service"
+      ]
+    },
+    {
+      "row": 10,
+      "values": [
+        212103.0,
+        "Pension for Teachers"
+      ]
+    },
+    {
+      "row": 11,
+      "values": [
+        212104.0,
+        "Pension for Military Service"
+      ]
+    },
+    {
+      "row": 12,
+      "values": [
+        212105.0,
+        "Pension and Gratuity for Local Governments"
+      ]
+    },
+    {
+      "row": 13,
+      "values": [
+        212106.0,
+        "Validation of old Pensioners"
+      ]
+    },
+    {
+      "row": 14,
+      "values": [
+        212107.0,
+        "Statutory"
+      ]
+    },
+    {
+      "row": 15,
+      "values": [
+        212201.0,
+        "Social Security Contributions"
+      ]
+    },
+    {
+      "row": 16,
+      "values": [
+        213001.0,
+        "Medical Expenses(To Employees)"
+      ]
+    },
+    {
+      "row": 17,
+      "values": [
+        213002.0,
+        "Incapacity, death benefits and funeral expenses"
+      ]
+    },
+    {
+      "row": 18,
+      "values": [
+        213003.0,
+        "Retrenchment costs"
+      ]
+    },
+    {
+      "row": 19,
+      "values": [
+        213004.0,
+        "Gratuity Payments"
+      ]
+    },
+    {
+      "row": 20,
+      "values": [
+        221001.0,
+        "Advertising and Public Relations"
+      ]
+    },
+    {
+      "row": 21,
+      "values": [
+        221002.0,
+        "Workshops and Seminars"
+      ]
+    },
+    {
+      "row": 22,
+      "values": [
+        221003.0,
+        "Staff Training"
+      ]
+    },
+    {
+      "row": 23,
+      "values": [
+        221004.0,
+        "Recruitment Expenses"
+      ]
+    },
+    {
+      "row": 24,
+      "values": [
+        221005.0,
+        "Hire of Venue (chairs, projector etc)"
+      ]
+    },
+    {
+      "row": 25,
+      "values": [
+        221006.0,
+        "Commissions and Related Charges"
+      ]
+    },
+    {
+      "row": 26,
+      "values": [
+        221007.0,
+        "Books, Periodicals and Newspapers"
+      ]
+    },
+    {
+      "row": 27,
+      "values": [
+        221008.0,
+        "Computer Supplies and IT Services"
+      ]
+    },
+    {
+      "row": 28,
+      "values": [
+        221009.0,
+        "Welfare and Entertainment"
+      ]
+    },
+    {
+      "row": 29,
+      "values": [
+        221010.0,
+        "Special Meals and Drinks"
+      ]
+    },
+    {
+      "row": 30,
+      "values": [
+        221011.0,
+        "Printing, Stationery, Photocopying and Binding"
+      ]
+    },
+    {
+      "row": 31,
+      "values": [
+        221012.0,
+        "Small Office Equipment"
+      ]
+    },
+    {
+      "row": 32,
+      "values": [
+        221013.0,
+        "Bad Debts"
+      ]
+    },
+    {
+      "row": 33,
+      "values": [
+        221014.0,
+        "Bank Charges and other Bank related costs"
+      ]
+    },
+    {
+      "row": 34,
+      "values": [
+        221015.0,
+        "Financial and related costs (e.g. Shortages, pilfrages etc.)"
+      ]
+    },
+    {
+      "row": 35,
+      "values": [
+        221016.0,
+        "IFMS Recurrent Costs"
+      ]
+    },
+    {
+      "row": 36,
+      "values": [
+        221017.0,
+        "Subscriptions"
+      ]
+    },
+    {
+      "row": 37,
+      "values": [
+        221018.0,
+        "IPPS Recurrent costs"
+      ]
+    },
+    {
+      "row": 38,
+      "values": [
+        221091.0,
+        "Purchase Price Variance"
+      ]
+    },
+    {
+      "row": 39,
+      "values": [
+        221092.0,
+        "Rate Variance Gain-Loss"
+      ]
+    },
+    {
+      "row": 40,
+      "values": [
+        221093.0,
+        "Cost of Goods Sold"
+      ]
+    },
+    {
+      "row": 41,
+      "values": [
+        221094.0,
+        "Bank Error"
+      ]
+    },
+    {
+      "row": 42,
+      "values": [
+        221095.0,
+        "Realized Gain Loss Account"
+      ]
+    },
+    {
+      "row": 43,
+      "values": [
+        221096.0,
+        "Discount Account"
+      ]
+    },
+    {
+      "row": 44,
+      "values": [
+        221099.0,
+        "Sales Tax Account VAT (System)"
+      ]
+    },
+    {
+      "row": 45,
+      "values": [
+        222001.0,
+        "Telecommunications"
+      ]
+    },
+    {
+      "row": 46,
+      "values": [
+        222002.0,
+        "Postage and Courier"
+      ]
+    },
+    {
+      "row": 47,
+      "values": [
+        222003.0,
+        "Information and Communications Technology"
+      ]
+    },
+    {
+      "row": 48,
+      "values": [
+        223001.0,
+        "Property Expenses"
+      ]
+    },
+    {
+      "row": 49,
+      "values": [
+        223002.0,
+        "Rates"
+      ]
+    },
+    {
+      "row": 50,
+      "values": [
+        223003.0,
+        "Rent - Produced Assets to private entities"
+      ]
+    },
+    {
+      "row": 51,
+      "values": [
+        223004.0,
+        "Guard and Security services"
+      ]
+    },
+    {
+      "row": 52,
+      "values": [
+        223005.0,
+        "Electricity"
+      ]
+    },
+    {
+      "row": 53,
+      "values": [
+        223006.0,
+        "Water"
+      ]
+    },
+    {
+      "row": 54,
+      "values": [
+        223007.0,
+        "Other Utilities- (fuel, gas, f"
+      ]
+    },
+    {
+      "row": 55,
+      "values": [
+        223901.0,
+        "Rent (Produced Assets) to other govt. Units"
+      ]
+    },
+    {
+      "row": 56,
+      "values": [
+        224001.0,
+        "Medical and Agricultural supplies"
+      ]
+    },
+    {
+      "row": 57,
+      "values": [
+        224002.0,
+        "General Supply of Goods and Services"
+      ]
+    },
+    {
+      "row": 58,
+      "values": [
+        224003.0,
+        "Classified Expenditure"
+      ]
+    },
+    {
+      "row": 59,
+      "values": [
+        225001.0,
+        "Consultancy Services- Short-term"
+      ]
+    },
+    {
+      "row": 60,
+      "values": [
+        225002.0,
+        "Consultancy Services- Long-term"
+      ]
+    },
+    {
+      "row": 61,
+      "values": [
+        225003.0,
+        "Taxes on (Professional) Services"
+      ]
+    },
+    {
+      "row": 62,
+      "values": [
+        226001.0,
+        "Insurances"
+      ]
+    },
+    {
+      "row": 63,
+      "values": [
+        226002.0,
+        "Licenses"
+      ]
+    },
+    {
+      "row": 64,
+      "values": [
+        227001.0,
+        "Travel Inland"
+      ]
+    },
+    {
+      "row": 65,
+      "values": [
+        227002.0,
+        "Travel Abroad"
+      ]
+    },
+    {
+      "row": 66,
+      "values": [
+        227003.0,
+        "Carriage, Haulage, Freight and Transport Hire"
+      ]
+    },
+    {
+      "row": 67,
+      "values": [
+        227004.0,
+        "Fuel, Lubricants and Oils"
+      ]
+    },
+    {
+      "row": 68,
+      "values": [
+        228001.0,
+        "Maintenance - Civil"
+      ]
+    },
+    {
+      "row": 69,
+      "values": [
+        228002.0,
+        "Maintenance - Vehicles"
+      ]
+    },
+    {
+      "row": 70,
+      "values": [
+        228003.0,
+        "Maintenance Machinery, Equipment and Furniture"
+      ]
+    },
+    {
+      "row": 71,
+      "values": [
+        228004.0,
+        "Maintenance  Other"
+      ]
+    },
+    {
+      "row": 72,
+      "values": [
+        229200.0,
+        "Sale of goods purchased for resale"
+      ]
+    },
+    {
+      "row": 73,
+      "values": [
+        229201.0,
+        "Sale of goods purchased for resale"
+      ]
+    },
+    {
+      "row": 74,
+      "values": [
+        231001.0,
+        "Non-Residential Buildings"
+      ]
+    },
+    {
+      "row": 75,
+      "values": [
+        231002.0,
+        "Residential Buildings"
+      ]
+    },
+    {
+      "row": 76,
+      "values": [
+        231003.0,
+        "Roads and Bridges"
+      ]
+    },
+    {
+      "row": 77,
+      "values": [
+        231004.0,
+        "Transport Equipment"
+      ]
+    },
+    {
+      "row": 78,
+      "values": [
+        231005.0,
+        "Machinery and Equipment"
+      ]
+    },
+    {
+      "row": 79,
+      "values": [
+        231006.0,
+        "Furniture and Fixtures"
+      ]
+    },
+    {
+      "row": 80,
+      "values": [
+        231007.0,
+        "Other Structures"
+      ]
+    },
+    {
+      "row": 81,
+      "values": [
+        231008.0,
+        "Aircraft"
+      ]
+    },
+    {
+      "row": 82,
+      "values": [
+        241001.0,
+        "Loan interest"
+      ]
+    },
+    {
+      "row": 83,
+      "values": [
+        241002.0,
+        "Commitment Charges"
+      ]
+    },
+    {
+      "row": 84,
+      "values": [
+        242001.0,
+        "Treasury bills"
+      ]
+    },
+    {
+      "row": 85,
+      "values": [
+        242002.0,
+        "Bonds"
+      ]
+    },
+    {
+      "row": 86,
+      "values": [
+        242003.0,
+        "Other"
+      ]
+    },
+    {
+      "row": 87,
+      "values": [
+        261101.0,
+        "Contributions to Foreign governments (Cuurent)"
+      ]
+    },
+    {
+      "row": 88,
+      "values": [
+        261201.0,
+        "Contributions to Foreign governments (Capital)"
+      ]
+    },
+    {
+      "row": 89,
+      "values": [
+        262101.0,
+        "Contributions to International Organisations (Current)"
+      ]
+    },
+    {
+      "row": 90,
+      "values": [
+        262201.0,
+        "Contributions to International Organisations (Capital)"
+      ]
+    },
+    {
+      "row": 91,
+      "values": [
+        263101.0,
+        "LG Conditional grants(current)"
+      ]
+    },
+    {
+      "row": 92,
+      "values": [
+        263102.0,
+        "LG Unconditional grants(current)"
+      ]
+    },
+    {
+      "row": 93,
+      "values": [
+        263103.0,
+        "LG Equalisation grants(current)"
+      ]
+    },
+    {
+      "row": 94,
+      "values": [
+        263104.0,
+        "Transfers to other gov't units(current)"
+      ]
+    },
+    {
+      "row": 95,
+      "values": [
+        263105.0,
+        "Treasury transfers to Agencies(current)"
+      ]
+    },
+    {
+      "row": 96,
+      "values": [
+        263106.0,
+        "Other Current grants(current)"
+      ]
+    },
+    {
+      "row": 97,
+      "values": [
+        263107.0,
+        "Treasury transfers to Ministries(current)"
+      ]
+    },
+    {
+      "row": 98,
+      "values": [
+        263108.0,
+        "Transfers to Treasury(current)"
+      ]
+    },
+    {
+      "row": 99,
+      "values": [
+        263201.0,
+        "LG Conditional grants(capital)"
+      ]
+    },
+    {
+      "row": 100,
+      "values": [
+        263202.0,
+        "LG Unconditional grants(capital)"
+      ]
+    },
+    {
+      "row": 101,
+      "values": [
+        263203.0,
+        "LG Equalisation grants(capital)"
+      ]
+    },
+    {
+      "row": 102,
+      "values": [
+        263204.0,
+        "Transfers to other gov't units(capital)"
+      ]
+    },
+    {
+      "row": 103,
+      "values": [
+        263205.0,
+        "Treasury transfers to Agencies(capital)"
+      ]
+    },
+    {
+      "row": 104,
+      "values": [
+        263206.0,
+        "Other Capital grants(capital)"
+      ]
+    },
+    {
+      "row": 105,
+      "values": [
+        263207.0,
+        "Treasury transfers to Ministries(capital)"
+      ]
+    },
+    {
+      "row": 106,
+      "values": [
+        263208.0,
+        "Transfers to Treasury(capital)"
+      ]
+    },
+    {
+      "row": 107,
+      "values": [
+        263314.0,
+        "Agricultural Extension non wage"
+      ]
+    },
+    {
+      "row": 108,
+      "values": [
+        263316.0,
+        "Agricultural Development Centers"
+      ]
+    },
+    {
+      "row": 109,
+      "values": [
+        263320.0,
+        "District Functional Adult Literacy"
+      ]
+    },
+    {
+      "row": 110,
+      "values": [
+        263321.0,
+        "Conditional trans. to Autonomo"
+      ]
+    },
+    {
+      "row": 111,
+      "values": [
+        263322.0,
+        "Conditional transfers to Contr"
+      ]
+    },
+    {
+      "row": 112,
+      "values": [
+        263323.0,
+        "Regional Workshops"
+      ]
+    },
+    {
+      "row": 113,
+      "values": [
+        263325.0,
+        "Contingency transfers"
+      ]
+    },
+    {
+      "row": 114,
+      "values": [
+        263327.0,
+        "PAF Monitoring and Accountability"
+      ]
+    },
+    {
+      "row": 115,
+      "values": [
+        263328.0,
+        "Rural Water"
+      ]
+    },
+    {
+      "row": 116,
+      "values": [
+        263334.0,
+        "Community Development"
+      ]
+    },
+    {
+      "row": 117,
+      "values": [
+        263336.0,
+        "District Natural Res. Grant Wetlands"
+      ]
+    },
+    {
+      "row": 118,
+      "values": [
+        263337.0,
+        "Women Youth and Disability Council Grants"
+      ]
+    },
+    {
+      "row": 119,
+      "values": [
+        263340.0,
+        "Other grants"
+      ]
+    },
+    {
+      "row": 120,
+      "values": [
+        263347.0,
+        "School Inspections Grant"
+      ]
+    },
+    {
+      "row": 121,
+      "values": [
+        263352.0,
+        "Construction of Secondary Schools"
+      ]
+    },
+    {
+      "row": 122,
+      "values": [
+        264101.0,
+        "Contributions to Autonomous Inst."
+      ]
+    },
+    {
+      "row": 123,
+      "values": [
+        264102.0,
+        "Contributions to Autonomous Inst. Wage Subventions"
+      ]
+    },
+    {
+      "row": 124,
+      "values": [
+        264103.0,
+        "Grants to Cultural Institution"
+      ]
+    },
+    {
+      "row": 125,
+      "values": [
+        264201.0,
+        "Contributions to Autonomous In"
+      ]
+    },
+    {
+      "row": 126,
+      "values": [
+        273101.0,
+        "Medical Expenses(To General Public)"
+      ]
+    },
+    {
+      "row": 127,
+      "values": [
+        273102.0,
+        "Incapacity, death benefits and and funeral expenses"
+      ]
+    },
+    {
+      "row": 128,
+      "values": [
+        273103.0,
+        "Retrenchment costs"
+      ]
+    },
+    {
+      "row": 129,
+      "values": [
+        281401.0,
+        "Rental non produced assets"
+      ]
+    },
+    {
+      "row": 130,
+      "values": [
+        281501.0,
+        "Environmental Impact Assessments for Capital Works"
+      ]
+    },
+    {
+      "row": 131,
+      "values": [
+        281502.0,
+        "Feasibility Studies for capital works"
+      ]
+    },
+    {
+      "row": 132,
+      "values": [
+        281503.0,
+        "Engineering and Design Studies and Plans for Capital Works"
+      ]
+    },
+    {
+      "row": 133,
+      "values": [
+        281504.0,
+        "Monitoring, Supervision and Appraisal of Capital Works"
+      ]
+    },
+    {
+      "row": 134,
+      "values": [
+        282091.0,
+        "Tax Account"
+      ]
+    },
+    {
+      "row": 135,
+      "values": [
+        282101.0,
+        "Donations"
+      ]
+    },
+    {
+      "row": 136,
+      "values": [
+        282102.0,
+        "Fines and Penalties"
+      ]
+    },
+    {
+      "row": 137,
+      "values": [
+        282103.0,
+        "Scholarships and related costs"
+      ]
+    },
+    {
+      "row": 138,
+      "values": [
+        282104.0,
+        "Compensation to 3rd Parties"
+      ]
+    },
+    {
+      "row": 139,
+      "values": [
+        282151.0,
+        "Fines and Penalties to other govt units"
+      ]
+    },
+    {
+      "row": 140,
+      "values": [
+        282161.0,
+        "Disposal of Assets (Loss/Gain)"
+      ]
+    },
+    {
+      "row": 141,
+      "values": [
+        282181.0,
+        "Extra-Ordinary Items (Losses/Gain)"
+      ]
+    },
+    {
+      "row": 142,
+      "values": [
+        291001.0,
+        "Tax Refund"
+      ]
+    },
+    {
+      "row": 143,
+      "values": [
+        311101.0,
+        "Land"
+      ]
+    },
+    {
+      "row": 144,
+      "values": [
+        312205.0,
+        "Aircraft"
+      ]
+    },
+    {
+      "row": 145,
+      "values": [
+        312206.0,
+        "Gross Tax"
+      ]
+    },
+    {
+      "row": 146,
+      "values": [
+        312301.0,
+        "Cultivated Assets"
+      ]
+    },
+    {
+      "row": 147,
+      "values": [
+        312302.0,
+        "Intangible Fixed Assets"
+      ]
+    },
+    {
+      "row": 148,
+      "values": [
+        312608.0,
+        "Statutory Arrears"
+      ]
+    },
+    {
+      "row": 149,
+      "values": [
+        314101.0,
+        "Petroleum Products"
+      ]
+    },
+    {
+      "row": 150,
+      "values": [
+        321105.0,
+        "Contingency Fund Account"
+      ]
+    },
+    {
+      "row": 151,
+      "values": [
+        321401.0,
+        "District Unconditional Grant"
+      ]
+    },
+    {
+      "row": 152,
+      "values": [
+        321402.0,
+        "Urban unconditional grant"
+      ]
+    },
+    {
+      "row": 153,
+      "values": [
+        321403.0,
+        "District Equalisation Grant"
+      ]
+    },
+    {
+      "row": 154,
+      "values": [
+        321404.0,
+        "District Tertiary Institutions"
+      ]
+    },
+    {
+      "row": 155,
+      "values": [
+        321405.0,
+        "Primary Teachers' Salaries"
+      ]
+    },
+    {
+      "row": 156,
+      "values": [
+        321406.0,
+        "Secondary Teacher's Salaries"
+      ]
+    },
+    {
+      "row": 157,
+      "values": [
+        321407.0,
+        "District PHC wage"
+      ]
+    },
+    {
+      "row": 158,
+      "values": [
+        321408.0,
+        "Agricultural Extension wage"
+      ]
+    },
+    {
+      "row": 159,
+      "values": [
+        321409.0,
+        "Community Development Salaries"
+      ]
+    },
+    {
+      "row": 160,
+      "values": [
+        321410.0,
+        "DSC Chair's Salaries"
+      ]
+    },
+    {
+      "row": 161,
+      "values": [
+        321411.0,
+        "UPE Capitation"
+      ]
+    },
+    {
+      "row": 162,
+      "values": [
+        321412.0,
+        "District and Urban Road Maintenance"
+      ]
+    },
+    {
+      "row": 163,
+      "values": [
+        321413.0,
+        "District PHC non-wage"
+      ]
+    },
+    {
+      "row": 164,
+      "values": [
+        321414.0,
+        "Agricultural Extension non wage"
+      ]
+    },
+    {
+      "row": 165,
+      "values": [
+        321415.0,
+        "PMA non sectoral condition grant"
+      ]
+    },
+    {
+      "row": 166,
+      "values": [
+        321416.0,
+        "Agricultural Development Centers"
+      ]
+    },
+    {
+      "row": 167,
+      "values": [
+        321417.0,
+        "District Hospital"
+      ]
+    },
+    {
+      "row": 168,
+      "values": [
+        321418.0,
+        "District NGO"
+      ]
+    },
+    {
+      "row": 169,
+      "values": [
+        321419.0,
+        "USE Capitation"
+      ]
+    },
+    {
+      "row": 170,
+      "values": [
+        321420.0,
+        "District Functional Adult Literacy"
+      ]
+    },
+    {
+      "row": 171,
+      "values": [
+        321421.0,
+        "PHC NGO Wage Subvention"
+      ]
+    },
+    {
+      "row": 172,
+      "values": [
+        321422.0,
+        "Boards and Commissions"
+      ]
+    },
+    {
+      "row": 173,
+      "values": [
+        321423.0,
+        "Regional Workshops"
+      ]
+    },
+    {
+      "row": 174,
+      "values": [
+        321424.0,
+        "Urban  Water O&M Grant(TCs)"
+      ]
+    },
+    {
+      "row": 175,
+      "values": [
+        321425.0,
+        "Contingency Transfers"
+      ]
+    },
+    {
+      "row": 176,
+      "values": [
+        321426.0,
+        "Local Development Grant"
+      ]
+    },
+    {
+      "row": 177,
+      "values": [
+        321427.0,
+        "PAF Monitoring and Accountability"
+      ]
+    },
+    {
+      "row": 178,
+      "values": [
+        321428.0,
+        "Rural Water"
+      ]
+    },
+    {
+      "row": 179,
+      "values": [
+        321429.0,
+        "NAADS"
+      ]
+    },
+    {
+      "row": 180,
+      "values": [
+        321430.0,
+        "Public Libraries"
+      ]
+    },
+    {
+      "row": 181,
+      "values": [
+        321431.0,
+        "District PHC Dev't"
+      ]
+    },
+    {
+      "row": 182,
+      "values": [
+        321432.0,
+        "Health Training Schools"
+      ]
+    },
+    {
+      "row": 183,
+      "values": [
+        321433.0,
+        "Schools' Facilities Grant"
+      ]
+    },
+    {
+      "row": 184,
+      "values": [
+        321434.0,
+        "Community Development"
+      ]
+    },
+    {
+      "row": 185,
+      "values": [
+        321435.0,
+        "District Startup Costs"
+      ]
+    },
+    {
+      "row": 186,
+      "values": [
+        321436.0,
+        "District Natural Res. Grant Wetlands"
+      ]
+    },
+    {
+      "row": 187,
+      "values": [
+        321437.0,
+        "Women Youth and Disability Council Grants"
+      ]
+    },
+    {
+      "row": 188,
+      "values": [
+        321439.0,
+        "DSC Operational Costs"
+      ]
+    },
+    {
+      "row": 189,
+      "values": [
+        321440.0,
+        "Other Grants"
+      ]
+    },
+    {
+      "row": 190,
+      "values": [
+        321441.0,
+        "District Graduated Tax Compensation"
+      ]
+    },
+    {
+      "row": 191,
+      "values": [
+        321442.0,
+        "Urban Authorities Graduated Tax Comp"
+      ]
+    },
+    {
+      "row": 192,
+      "values": [
+        321443.0,
+        "CAOs wage"
+      ]
+    },
+    {
+      "row": 193,
+      "values": [
+        321444.0,
+        "Salary and Gratuity to LG Elected Political Leaders"
+      ]
+    },
+    {
+      "row": 194,
+      "values": [
+        321445.0,
+        "Ex-Gratia for LLGs"
+      ]
+    },
+    {
+      "row": 195,
+      "values": [
+        321446.0,
+        "Special Grant for PWD's"
+      ]
+    },
+    {
+      "row": 196,
+      "values": [
+        321447.0,
+        "School Inspections Grant"
+      ]
+    },
+    {
+      "row": 197,
+      "values": [
+        321448.0,
+        "Production and Marketing"
+      ]
+    },
+    {
+      "row": 198,
+      "values": [
+        321449.0,
+        "Sanitation and Hygiene"
+      ]
+    },
+    {
+      "row": 199,
+      "values": [
+        321450.0,
+        "Urban Unconditional Grant - Wage"
+      ]
+    },
+    {
+      "row": 200,
+      "values": [
+        321451.0,
+        "District Unconditional Grants - Wage"
+      ]
+    },
+    {
+      "row": 201,
+      "values": [
+        321452.0,
+        "Construction of Secondary Schools"
+      ]
+    },
+    {
+      "row": 202,
+      "values": [
+        321453.0,
+        "Hard to Reach Allowances"
+      ]
+    },
+    {
+      "row": 203,
+      "values": [
+        321454.0,
+        "Wage Community Polytechnics"
+      ]
+    },
+    {
+      "row": 204,
+      "values": [
+        321455.0,
+        "Non Wage Community Polytechnics"
+      ]
+    },
+    {
+      "row": 205,
+      "values": [
+        321456.0,
+        "Wage Technical & Farm Schools"
+      ]
+    },
+    {
+      "row": 206,
+      "values": [
+        321457.0,
+        "Non Wage Technical & Farm Schools"
+      ]
+    },
+    {
+      "row": 207,
+      "values": [
+        321458.0,
+        "Wage National Health Service Training Colleges"
+      ]
+    },
+    {
+      "row": 208,
+      "values": [
+        321459.0,
+        "Non Wage National Health Service Training Colleges"
+      ]
+    },
+    {
+      "row": 209,
+      "values": [
+        321460.0,
+        "Wage Technical Institutes"
+      ]
+    },
+    {
+      "row": 210,
+      "values": [
+        321461.0,
+        "Non Wage Technical Institutes"
+      ]
+    },
+    {
+      "row": 211,
+      "values": [
+        321462.0,
+        "Primary Teachers Colleges (PTCs)"
+      ]
+    },
+    {
+      "row": 212,
+      "values": [
+        321463.0,
+        "Urban Equalisation Grant"
+      ]
+    },
+    {
+      "row": 213,
+      "values": [
+        321504.0,
+        "Other Advances"
+      ]
+    },
+    {
+      "row": 214,
+      "values": [
+        321603.0,
+        "Sundy Debtors"
+      ]
+    },
+    {
+      "row": 215,
+      "values": [
+        321605.0,
+        "Domestic arrears"
+      ]
+    },
+    {
+      "row": 216,
+      "values": [
+        321606.0,
+        "External Debt Repayment"
+      ]
+    },
+    {
+      "row": 217,
+      "values": [
+        321607.0,
+        "Utility Arrears"
+      ]
+    },
+    {
+      "row": 218,
+      "values": [
+        321608.0,
+        "Pension Arrears"
+      ]
+    },
+    {
+      "row": 219,
+      "values": [
+        321609.0,
+        "Teachers' Pensions Arrears"
+      ]
+    },
+    {
+      "row": 220,
+      "values": [
+        321610.0,
+        "Local Government Pensions Arrears"
+      ]
+    },
+    {
+      "row": 221,
+      "values": [
+        321611.0,
+        "Defence/Military Pensions Arrears"
+      ]
+    },
+    {
+      "row": 222,
+      "values": [
+        321612.0,
+        "Water Arrears"
+      ]
+    },
+    {
+      "row": 223,
+      "values": [
+        321613.0,
+        "Telephone Arrears"
+      ]
+    },
+    {
+      "row": 224,
+      "values": [
+        321614.0,
+        "Electricity Arrears"
+      ]
+    }
+  ],
+  "Sheet2": [
+    {
+      "row": 3,
+      "values": [
+        "",
+        "NDIBAREMA MEMORIAL SSS, NSIIKA, BUHWEJU DC",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 5,
+      "values": [
+        "",
+        "Equipment/ Item",
+        "Department",
+        "Asset Number",
+        "Item",
+        "Life in Months",
+        "Tag Number ( engrave no.)",
+        "Date Of Pur",
+        "Date Placed In Service",
+        "Recoverable cost",
+        "Cost",
+        "Acc Dep Cost",
+        "Net Book Value",
+        "Ytd Deprn",
+        "Equipment status",
+        "Remarks"
+      ]
+    },
+    {
+      "row": 6,
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 7,
+      "values": [
+        "",
+        "School desks",
+        "",
+        "",
+        "Long brown 3-4 seater",
+        "",
+        "ND2021/002",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "All in use",
+        "39 desks were supplied"
+      ]
+    },
+    {
+      "row": 8,
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "LOT 10/MOES/UGIFT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 9,
+      "values": [
+        "",
+        "OFffice chairs",
+        "",
+        "",
+        "Wooden with soft ",
+        "",
+        "ND/2021/002/LOT 10/MOES/UGIFT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Good condition",
+        "All in use 33 received"
+      ]
+    },
+    {
+      "row": 10,
+      "values": [
+        "",
+        "Lalaboratory stool",
+        "",
+        "",
+        "Lon wooden with top round ",
+        "",
+        "ND/2021/2022/002LOT /MOE/UGIFT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Good condition",
+        "120 st"
+      ]
+    },
+    {
+      "row": 11,
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "ools are in use"
+      ]
+    },
+    {
+      "row": 12,
+      "values": [
+        "",
+        "Book s",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 13,
+      "values": [
+        "",
+        "BOOK SHELVES",
+        "",
+        "",
+        "5-6 feet white with 6shelves                            ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "In good ",
+        "Shelves"
+      ]
+    },
+    {
+      "row": 14,
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "condition ",
+        "With books"
+      ]
+    },
+    {
+      "row": 15,
+      "values": [
+        "",
+        "TABLES",
+        "",
+        "",
+        "71 tables",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "In good ",
+        "All 71 tables in use"
+      ]
+    },
+    {
+      "row": 16,
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "condition",
+        ""
+      ]
+    },
+    {
+      "row": 17,
+      "values": [
+        "",
+        "LOCKERS",
+        "",
+        "",
+        "",
+        "",
+        "Not engraved",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Good condition",
+        "inuse"
+      ]
+    },
+    {
+      "row": 19,
+      "values": [
+        "",
+        "CUPBOARD",
+        "",
+        "",
+        "1 was supplied",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "In use",
+        "Good condition"
+      ]
+    },
+    {
+      "row": 21,
+      "values": [
+        "",
+        "ENT. SYSTEM",
+        "",
+        "",
+        "2 medium speakers with microphone",
+        "",
+        "Not engraved",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "In use",
+        "Functional"
+      ]
+    },
+    {
+      "row": 22,
+      "values": [
+        "",
+        "DESKTOP COMPUTERS",
+        "EDUCATION",
+        "",
+        "All are HP BLACK ",
+        "",
+        "Engraved as N.M.SS 1-20",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "FUNCTIONAL",
+        "20 were supplied"
+      ]
+    },
+    {
+      "row": 23,
+      "values": [
+        "",
+        "MULTI PURPOSE PRINTER",
+        "",
+        "",
+        "Black ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "In use",
+        "Good condition"
+      ]
+    },
+    {
+      "row": 24,
+      "values": [
+        "",
+        "1 CCTV CAMERA",
+        "",
+        "",
+        "1  was supplied",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "In use",
+        "Functional"
+      ]
+    },
+    {
+      "row": 25,
+      "values": [
+        "",
+        "UPS",
+        "",
+        "",
+        "1 U.P.S",
+        "",
+        "NOT engraved",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "In use",
+        "functional"
+      ]
+    },
+    {
+      "row": 28,
+      "values": [
+        "",
+        "SERVER PROCESSOR",
+        "",
+        "",
+        "Black and rectangular",
+        "",
+        "Engraved N.M.SS/K 01-20",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "In use",
+        "Good condition"
+      ]
+    },
+    {
+      "row": 30,
+      "values": [
+        "",
+        "NETWORK SITCH",
+        "",
+        "",
+        "Network switch 24 port 1",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Good condition",
+        "functional"
+      ]
+    },
+    {
+      "row": 31,
+      "values": [
+        "",
+        "PROJECTOR",
+        "",
+        "",
+        "Black in color",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Good condition",
+        "functional"
+      ]
+    },
+    {
+      "row": 32,
+      "values": [
+        "",
+        "AIR CONDITIONER",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Good condition",
+        "Function"
+      ]
+    },
+    {
+      "row": 41,
+      "values": [
+        "",
+        "ADMINISTRATION BLOCK",
+        "",
+        "",
+        "With H/M office,bursars office ,secretary, reception",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "functional",
+        "In use"
+      ]
+    },
+    {
+      "row": 43,
+      "values": [
+        "",
+        "CLAclasses",
+        "",
+        "",
+        "2  in one block with red iron sheets",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "functional",
+        "Good conditio"
+      ]
+    },
+    {
+      "row": 46,
+      "values": [
+        "",
+        "ICT AND LIB BLOCK",
+        "",
+        "",
+        "2 IN 1 Block with ICT and library",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Good condition"
+      ]
+    },
+    {
+      "row": 47,
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "In use",
+        ""
+      ]
+    },
+    {
+      "row": 48,
+      "values": [
+        "",
+        "STAFFstaff houses",
+        "",
+        "",
+        "Two in one building with a shade",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "functional",
+        "In use"
+      ]
+    },
+    {
+      "row": 49,
+      "values": [
+        "",
+        "KKITCHEN",
+        "",
+        "",
+        "Well ventilated  2 in 1 kitchen",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "In use",
+        "Good condition"
+      ]
+    },
+    {
+      "row": 50,
+      "values": [
+        "",
+        "PIUT   LATRINES",
+        "",
+        "",
+        "With 2 doors urinals fenced",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "In use",
+        "Good condition"
+      ]
+    },
+    {
+      "row": 52,
+      "values": [
+        "",
+        "Water tanks ",
+        "",
+        "",
+        "Round plastic crescent tank",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "In use",
+        "Good condition"
+      ]
+    }
+  ],
+  "Sheet3": [
+    {
+      "row": 3,
+      "values": [
+        "",
+        "MAYANGA  HCIII,   MITOOMA",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 4,
+      "values": [
+        "",
+        "Equipment/ Item",
+        "Department",
+        "Asset Number",
+        "Item",
+        "Life in Months",
+        "Tag Number ( engrave no.)",
+        "Date Of Purchase",
+        "Date Placed In Service",
+        "Recoverable cost",
+        "Cost",
+        "Acc Dep Cost",
+        "Net Book Value",
+        "Ytd Deprn",
+        "Equipment status",
+        "Remarks"
+      ]
+    },
+    {
+      "row": 5,
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 6,
+      "values": [
+        "",
+        "B.P. Machine, Digital",
+        "OPD ",
+        "",
+        "Digital ",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        192000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "2 received and in use "
+      ]
+    },
+    {
+      "row": 9,
+      "values": [
+        "",
+        "B.P. Machine (Aneroid wall mounted)",
+        "OPD ",
+        "",
+        "",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        1040000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 12,
+      "values": [
+        "",
+        "Autoclave 20 Liters.,Duo Operated",
+        "MAT",
+        "",
+        "Electric ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        1440000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 15,
+      "values": [
+        "",
+        "Bowl, Kick",
+        "OPD ",
+        "",
+        "Metallic ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        400000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 17,
+      "values": [
+        "",
+        "Bowl Stand",
+        "MAT",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 20,
+      "values": [
+        "",
+        "Counting chamber Neubauer- Improved",
+        "OPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        160000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in store "
+      ]
+    },
+    {
+      "row": 23,
+      "values": [
+        "",
+        "Cupboard Steel, Lockable",
+        "OPD ",
+        "",
+        "",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        1120000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "1 received and in use "
+      ]
+    },
+    {
+      "row": 26,
+      "values": [
+        "",
+        "Drip Stand",
+        "MAT",
+        "",
+        "",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        2520000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "9 received and in use "
+      ]
+    },
+    {
+      "row": 35,
+      "values": [
+        "",
+        "ESR Stand",
+        "LAB",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        120000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 38,
+      "values": [
+        "",
+        "Examination Couch",
+        "OPD ",
+        "",
+        "",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        2880000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "4 received and in use"
+      ]
+    },
+    {
+      "row": 41,
+      "values": [
+        "",
+        "Examination light,LED",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        3360000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "3 received and 1 in use"
+      ]
+    },
+    {
+      "row": 44,
+      "values": [
+        "",
+        "Glucometer",
+        "LAB ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 47,
+      "values": [
+        "",
+        "Haemoglobin Meter, Digital",
+        "LAB",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 50,
+      "values": [
+        "",
+        "Height Meter",
+        "OPD ",
+        "",
+        "",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        800000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 52,
+      "values": [
+        "",
+        "Instrument Trolley",
+        "OPD ",
+        "",
+        "",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        2720000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "4 received and in use"
+      ]
+    },
+    {
+      "row": 53,
+      "values": [
+        "",
+        "",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 56,
+      "values": [
+        "",
+        "Microscope Binocular",
+        "LAB",
+        "",
+        "Electric ",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        1520000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use "
+      ]
+    },
+    {
+      "row": 59,
+      "values": [
+        "",
+        "Otoscope",
+        "OPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        320000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in store"
+      ]
+    },
+    {
+      "row": 61,
+      "values": [
+        "",
+        "Patient Screen",
+        "MAT",
+        "",
+        "Metallic ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        1920000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "5 received and in use"
+      ]
+    },
+    {
+      "row": 66,
+      "values": [
+        "",
+        "Patient Trolley",
+        "OPD ",
+        "",
+        "Metallic ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        1120000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 68,
+      "values": [
+        "",
+        "Refrigerator, Basic",
+        "LAB",
+        "",
+        "Electric ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        2400000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 70,
+      "values": [
+        "",
+        "Stethoscope",
+        "OPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        1600000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "8 received and 8 in use"
+      ]
+    },
+    {
+      "row": 74,
+      "values": [
+        "",
+        "Stop Watch",
+        "LAB",
+        "",
+        "Digital ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 76,
+      "values": [
+        "",
+        "Stretcher",
+        "OPD",
+        "",
+        "Metallic ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        4000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and 1 seen"
+      ]
+    },
+    {
+      "row": 78,
+      "values": [
+        "",
+        "Stove, Gas",
+        "MAT",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        1120000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and 1 seen"
+      ]
+    },
+    {
+      "row": 80,
+      "values": [
+        "",
+        "Weighing Scale with Height Meter, Adult",
+        "OPD ",
+        "",
+        "Metallic ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        2560000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 82,
+      "values": [
+        "",
+        "Weighing Scale, Infant",
+        "MAT",
+        "",
+        "Analog ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 84,
+      "values": [
+        "",
+        "Weighing Scale, Toddler",
+        "OPD ",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        960000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "1 received and in use "
+      ]
+    },
+    {
+      "row": 86,
+      "values": [
+        "",
+        "Wheel Chair",
+        "OPD ",
+        "",
+        "Mechanical ",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        2560000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "4 received and 2 in use"
+      ]
+    },
+    {
+      "row": 88,
+      "values": [
+        "",
+        "Audio Visual Equipment",
+        "OPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        640000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in store "
+      ]
+    },
+    {
+      "row": 90,
+      "values": [
+        "",
+        "Medical Waste Bin",
+        "MAT",
+        "",
+        "Metallic ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 96,
+      "values": [
+        "",
+        "Wall Clock",
+        "OPD ",
+        "",
+        "Analog ",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 100,
+      "values": [
+        "",
+        "Diagnostic Equipment Set for MCH",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        600000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "3 received and in store"
+      ]
+    },
+    {
+      "row": 103,
+      "values": [
+        "",
+        "Diagnostic Equipment Set for OPD",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 106,
+      "values": [
+        "",
+        "Glassware Set, Laboratory, Basic",
+        "LAB",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        480000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "2 received and in store"
+      ]
+    },
+    {
+      "row": 108,
+      "values": [
+        "",
+        "Hollow Ware Set, Treatment",
+        "OPD",
+        "",
+        "Metallic casing",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        4000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in store"
+      ]
+    },
+    {
+      "row": 110,
+      "values": [
+        "",
+        "Instrument Set, Dressing",
+        "OPD ",
+        "",
+        "Metallic casing",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        2520000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "7 received and in store"
+      ]
+    },
+    {
+      "row": 112,
+      "values": [
+        "",
+        "Instrument Set, Basic ENT",
+        "OPD ",
+        "",
+        "Metallic casing ",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        1440000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in store"
+      ]
+    },
+    {
+      "row": 114,
+      "values": [
+        "",
+        "Instrument Set, Suture",
+        "OPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 116,
+      "values": [
+        "",
+        "Pulse Oximeter, Hand held",
+        "OPD ",
+        "",
+        "Digital",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        1050000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "3 received and in store "
+      ]
+    },
+    {
+      "row": 119,
+      "values": [
+        "",
+        "Bed, Adult Patient with Mattress",
+        "WARD ",
+        "",
+        "Metallic ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        11200000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "10 received 1 transferred to rutookye H/C III"
+      ]
+    },
+    {
+      "row": 129,
+      "values": [
+        "",
+        "Bed, Pediatric Patient, With Mattress",
+        "WARD",
+        "",
+        "Metallic",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        3840000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "4 received and in use "
+      ]
+    },
+    {
+      "row": 135,
+      "values": [
+        "",
+        "Bedside Locker",
+        "WARD",
+        "",
+        "Metallic",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        5200000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "10 received and in use"
+      ]
+    },
+    {
+      "row": 137,
+      "values": [
+        "",
+        "Cupboard, Instrument",
+        "WARD ",
+        "",
+        "Metallic",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        1440000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 139,
+      "values": [
+        "",
+        "Delivery Bed, Hydraulic Manual",
+        "WARD",
+        "",
+        "Metallic",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 141,
+      "values": [
+        "",
+        "Oxygen Therapy Apparatus, Mininum 45L cylinder",
+        "WARD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        3520000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 143,
+      "values": [
+        "",
+        "Resuscitator Manual, Infant, with all Mask sizes",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        400000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "1 received and in store"
+      ]
+    },
+    {
+      "row": 145,
+      "values": [
+        "",
+        "Resuscitator Manual, Adult, with all mask sizes",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        400000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in store"
+      ]
+    },
+    {
+      "row": 147,
+      "values": [
+        "",
+        "Suction Apparatus, (Electric)",
+        "MAT",
+        "",
+        "",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        3360000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in store"
+      ]
+    },
+    {
+      "row": 149,
+      "values": [
+        "",
+        "Nebulizer, Ultrasonic",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        720000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in store"
+      ]
+    },
+    {
+      "row": 151,
+      "values": [
+        "",
+        "Oxygen Concentrator, Duo Flow",
+        "MAT ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        8000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in store"
+      ]
+    },
+    {
+      "row": 157,
+      "values": [
+        "",
+        "Bench",
+        "OPD ",
+        "",
+        "Wooden ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        1920000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "4 received and in use "
+      ]
+    },
+    {
+      "row": 162,
+      "values": [
+        "",
+        "Disinfection Buckets",
+        "MAT",
+        "",
+        "Metallic ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Functional",
+        ""
+      ]
+    },
+    {
+      "row": 167,
+      "values": [
+        "",
+        "Baby Cot",
+        "MAT",
+        "",
+        "Metallic ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        1280000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use "
+      ]
+    },
+    {
+      "row": 172,
+      "values": [
+        "",
+        "Diagnostic Equipment Set for Ward",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        1440000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in store"
+      ]
+    },
+    {
+      "row": 175,
+      "values": [
+        "",
+        "Hollow Ware Set, Ward",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        1660000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "3 received and in store"
+      ]
+    },
+    {
+      "row": 179,
+      "values": [
+        "",
+        "Instrument Set, Delivery",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        3000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "5 received and in store"
+      ]
+    },
+    {
+      "row": 182,
+      "values": [
+        "",
+        "Instrument Set, Stitch Removing",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        1600000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "5 received and in store"
+      ]
+    },
+    {
+      "row": 186,
+      "values": [
+        "",
+        "MVA Kit",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        1000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "5 received and in store"
+      ]
+    },
+    {
+      "row": 191,
+      "values": [
+        "",
+        "Stool, Laboratory",
+        "LAB",
+        "",
+        "Metallic ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        1440000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "3 received and 1 in use "
+      ]
+    },
+    {
+      "row": 193,
+      "values": [
+        "",
+        "Penguin Sucker",
+        "MAT",
+        "",
+        "Plastic ",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 197,
+      "values": [
+        "",
+        "Fetoscope, Dopplar",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        48000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and 1 in use"
+      ]
+    },
+    {
+      "row": 199,
+      "values": [
+        "",
+        "Bubble CPAP",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 201,
+      "values": [
+        "",
+        "Centrifuge (Electric)",
+        "LAB ",
+        "",
+        "Electric ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        8000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and  in use"
+      ]
+    },
+    {
+      "row": 203,
+      "values": [
+        "",
+        "Kangaroo Mother Care Chair",
+        "MAT",
+        "",
+        "Electric ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        2560000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and  in use"
+      ]
+    },
+    {
+      "row": 205,
+      "values": [
+        "",
+        "Radiant Infant Warmer",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 207,
+      "values": [
+        "",
+        "Haemoglobin Meter, Sahli",
+        "LAB",
+        "",
+        "Digital ",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        1760000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        " 2 received and in store "
+      ]
+    },
+    {
+      "row": 211,
+      "values": [
+        "",
+        "Delivery Bed",
+        "MAT",
+        "",
+        "Metallic ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        1520000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use "
+      ]
+    },
+    {
+      "row": 218,
+      "values": [
+        "",
+        "Examination light",
+        "MAT",
+        "",
+        "Electric ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 227,
+      "values": [
+        "",
+        "Instrument set, ENT Basic for HCIII",
+        "OPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 234,
+      "values": [
+        "",
+        "Bag Valve mask (Ambu Bag), Neonatal",
+        "OPD ",
+        "",
+        "Electric ",
+        "",
+        "",
+        "",
+        "19/01/2022",
+        "",
+        7200000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "15 received and in store"
+      ]
+    },
+    {
+      "row": 238,
+      "values": [
+        "",
+        "Incubator",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 244,
+      "values": [
+        "",
+        "Office Chair",
+        "OPD ",
+        "",
+        "Rotating chair ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        29120000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "7 received and in use"
+      ]
+    },
+    {
+      "row": 245,
+      "values": [
+        "",
+        "",
+        "MAT ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 253,
+      "values": [
+        "",
+        "Desk",
+        "OPD ",
+        "",
+        "Wooden ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        3200000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "6 received and in use "
+      ]
+    },
+    {
+      "row": 254,
+      "values": [
+        "",
+        "",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 258,
+      "values": [
+        "",
+        "Filing Cabinet",
+        "OPD ",
+        "",
+        "Metallic ",
+        "",
+        "UGIFT/2021/22 MAY H/C III",
+        "",
+        "19/01/2022",
+        "",
+        5760000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "6 received and in use "
+      ]
+    },
+    {
+      "row": 259,
+      "values": [
+        "",
+        "",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 264,
+      "values": [
+        "",
+        "Non Residential Buildings",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 265,
+      "values": [
+        "",
+        "",
+        "Toilets",
+        "",
+        "Building ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Functional ",
+        "1 block and in use"
+      ]
+    },
+    {
+      "row": 266,
+      "values": [
+        "",
+        "",
+        "Placenta pit ",
+        "",
+        "Building ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Functional",
+        "1 block and in use"
+      ]
+    },
+    {
+      "row": 267,
+      "values": [
+        "",
+        "Residential Buildings",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 268,
+      "values": [
+        "",
+        "",
+        "Staff quarters ",
+        "",
+        "Building ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Functional",
+        "1 block and in use"
+      ]
+    },
+    {
+      "row": 269,
+      "values": [
+        "",
+        "",
+        "Ward ",
+        "",
+        "Building ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Functional",
+        "1 block and in use"
+      ]
+    }
+  ],
+  "Sheet5": [
+    {
+      "row": 2,
+      "values": [
+        "",
+        "RUTOOMA  HCIII,  MBARARA",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 4,
+      "values": [
+        "",
+        "Equipment/ Item",
+        "Department",
+        "Asset Number",
+        "Item",
+        "Life in Months",
+        "Tag Number ( engrave no.)",
+        "Date Of Purchase",
+        "Date Placed In Service",
+        "Recoverable cost",
+        "Cost",
+        "Acc Dep Cost",
+        "Net Book Value",
+        "Ytd Deprn",
+        "Equipment status",
+        "Remarks"
+      ]
+    },
+    {
+      "row": 5,
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "Description",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 6,
+      "values": [
+        "",
+        "B.P. Machine, Digital",
+        "OPD ",
+        "",
+        "Digital",
+        "",
+        "",
+        "",
+        "",
+        "",
+        350000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 7,
+      "values": [
+        "",
+        "",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 10,
+      "values": [
+        "",
+        "B.P. Machine (Aneroid wall mounted)",
+        "OPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        400000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in store "
+      ]
+    },
+    {
+      "row": 11,
+      "values": [
+        "",
+        "",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 12,
+      "values": [
+        "",
+        "",
+        "WARD",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 15,
+      "values": [
+        "",
+        "Autoclave 20 Liters.,Duo Operated",
+        "MAT ",
+        "",
+        "Sterilizer  ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use "
+      ]
+    },
+    {
+      "row": 18,
+      "values": [
+        "",
+        "Bowl, Kick",
+        "MAT ",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        400000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use "
+      ]
+    },
+    {
+      "row": 19,
+      "values": [
+        "",
+        "",
+        "WARD",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 21,
+      "values": [
+        "",
+        "Bowl Stand",
+        "MAT",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1800000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "3 received and in use "
+      ]
+    },
+    {
+      "row": 22,
+      "values": [
+        "",
+        "",
+        "WARD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 25,
+      "values": [
+        "",
+        "Counting chamber Neubauer- Improved",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        80000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        " 2 received and in store "
+      ]
+    },
+    {
+      "row": 28,
+      "values": [
+        "",
+        "Cupboard Steel, Lockable",
+        "ALL",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        2400000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use "
+      ]
+    },
+    {
+      "row": 31,
+      "values": [
+        "",
+        "Drip Stand",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 40,
+      "values": [
+        "",
+        "ESR Stand",
+        "LAB",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 43,
+      "values": [
+        "",
+        "Examination Couch",
+        "OPD ",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1400000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 44,
+      "values": [
+        "",
+        "",
+        "IPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 45,
+      "values": [
+        "",
+        "",
+        "WARD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 48,
+      "values": [
+        "",
+        "Examination light,LED",
+        "MAT",
+        "",
+        "Electric ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        900000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 51,
+      "values": [
+        "",
+        "Glucometer",
+        "LAB",
+        "",
+        "Digital ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        540000.0,
+        "",
+        "",
+        "",
+        "None-Functional",
+        "3 received and in store"
+      ]
+    },
+    {
+      "row": 54,
+      "values": [
+        "",
+        "Haemoglobin Meter, Digital",
+        "LAB",
+        "",
+        "Digital ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1700000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 57,
+      "values": [
+        "",
+        "Height Meter",
+        "OPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        250000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 58,
+      "values": [
+        "",
+        "",
+        "IPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 60,
+      "values": [
+        "",
+        "Instrument Trolley",
+        "ALL",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1500000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 63,
+      "values": [
+        "",
+        "Microscope Binocular",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 66,
+      "values": [
+        "",
+        "Otoscope",
+        "ENT ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        350000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "1 received and in store"
+      ]
+    },
+    {
+      "row": 68,
+      "values": [
+        "",
+        "Patient Screen",
+        "WARD ",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        2000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "4 received and in use"
+      ]
+    },
+    {
+      "row": 69,
+      "values": [
+        "",
+        "",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 74,
+      "values": [
+        "",
+        "Patient Trolley",
+        "OPD ",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        4000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 76,
+      "values": [
+        "",
+        "Refrigerator, Basic",
+        "LAB ",
+        "Electric ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        4000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 78,
+      "values": [
+        "",
+        "Stethoscope",
+        "OPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        480000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "4 received and in use"
+      ]
+    },
+    {
+      "row": 79,
+      "values": [
+        "",
+        "",
+        "IPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 80,
+      "values": [
+        "",
+        "",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 84,
+      "values": [
+        "",
+        "Stop Watch",
+        "LAB",
+        "Digital ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        80000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in store "
+      ]
+    },
+    {
+      "row": 86,
+      "values": [
+        "",
+        "Stretcher",
+        "OPD ",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        4500000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 88,
+      "values": [
+        "",
+        "Stove, Gas",
+        "MAT ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        350000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 90,
+      "values": [
+        "",
+        "Weighing Scale with Height Meter, Adult",
+        "OPD ",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        900000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 92,
+      "values": [
+        "",
+        "Weighing Scale, Infant",
+        "MAT",
+        "",
+        "Digital ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        600000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and 1 in use"
+      ]
+    },
+    {
+      "row": 94,
+      "values": [
+        "",
+        "Weighing Scale, Toddler",
+        "OPD ",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        300000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use "
+      ]
+    },
+    {
+      "row": 96,
+      "values": [
+        "",
+        "Wheel Chair",
+        "OPD ",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1200000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 98,
+      "values": [
+        "",
+        "Audio Visual Equipment",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 100,
+      "values": [
+        "",
+        "Medical Waste Bin",
+        "ALL",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        405000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "3 received and in use"
+      ]
+    },
+    {
+      "row": 106,
+      "values": [
+        "",
+        "Wall Clock",
+        "ALL",
+        "",
+        "Analog ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        200000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "4 received and in use"
+      ]
+    },
+    {
+      "row": 110,
+      "values": [
+        "",
+        "Diagnostic Equipment Set for MCH",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 113,
+      "values": [
+        "",
+        "Diagnostic Equipment Set for OPD",
+        "Opd ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        2200000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "2 received and in store"
+      ]
+    },
+    {
+      "row": 116,
+      "values": [
+        "",
+        "Glassware Set, Laboratory, Basic",
+        "LAB",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1200000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in store"
+      ]
+    },
+    {
+      "row": 118,
+      "values": [
+        "",
+        "Hollow Ware Set, Treatment",
+        "LAB",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1200000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in store"
+      ]
+    },
+    {
+      "row": 120,
+      "values": [
+        "",
+        "Instrument Set, Dressing",
+        "OPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        6000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in store"
+      ]
+    },
+    {
+      "row": 121,
+      "values": [
+        "",
+        "",
+        "MAT ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 123,
+      "values": [
+        "",
+        "Instrument Set, Basic ENT",
+        "ENT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 125,
+      "values": [
+        "",
+        "Instrument Set, Suture",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 127,
+      "values": [
+        "",
+        "Pulse Oximeter, Hand held",
+        "OPD ",
+        "",
+        "Digital ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1200000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in store"
+      ]
+    },
+    {
+      "row": 128,
+      "values": [
+        "",
+        "",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 131,
+      "values": [
+        "",
+        "Bed, Adult Patient with Mattress",
+        "WARD",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        7600000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "10 received and in use"
+      ]
+    },
+    {
+      "row": 141,
+      "values": [
+        "",
+        "Bed, Pediatric Patient, With Mattress",
+        "WARD ",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        10000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "5 received and in use"
+      ]
+    },
+    {
+      "row": 147,
+      "values": [
+        "",
+        "Bedside Locker",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 149,
+      "values": [
+        "",
+        "Cupboard, Instrument",
+        "MAT",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1500000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 151,
+      "values": [
+        "",
+        "Delivery Bed, Hydraulic Manual",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 153,
+      "values": [
+        "",
+        "Oxygen Therapy Apparatus, Mininum 45L cylinder",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 155,
+      "values": [
+        "",
+        "Resuscitator Manual, Infant, with all Mask sizes",
+        "MAT",
+        "",
+        "Manual ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        900000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in store "
+      ]
+    },
+    {
+      "row": 157,
+      "values": [
+        "",
+        "Resuscitator Manual, Adult, with all mask sizes",
+        "MAT",
+        "",
+        "Manual ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        900000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in store"
+      ]
+    },
+    {
+      "row": 158,
+      "values": [
+        "",
+        "",
+        "OPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 160,
+      "values": [
+        "",
+        "Suction Apparatus, (Electric)",
+        "MAT ",
+        "",
+        "Electric ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1500000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use "
+      ]
+    },
+    {
+      "row": 161,
+      "values": [
+        "",
+        "",
+        "OPD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 163,
+      "values": [
+        "",
+        "Nebulizer, Ultrasonic",
+        "ALL",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        450000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        " received and in store"
+      ]
+    },
+    {
+      "row": 165,
+      "values": [
+        "",
+        "Oxygen Concentrator, Duo Flow",
+        "MAT ",
+        "",
+        "Electric ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        8000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 171,
+      "values": [
+        "",
+        "Bench",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 176,
+      "values": [
+        "",
+        "Disinfection Buckets",
+        "ALL",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        300000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "6 received and in use"
+      ]
+    },
+    {
+      "row": 181,
+      "values": [
+        "",
+        "Baby Cot",
+        "MAT",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        2400000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 186,
+      "values": [
+        "",
+        "Diagnostic Equipment Set for Ward",
+        "WARD ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        750000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in store"
+      ]
+    },
+    {
+      "row": 189,
+      "values": [
+        "",
+        "Hollow Ware Set, Ward",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in store"
+      ]
+    },
+    {
+      "row": 193,
+      "values": [
+        "",
+        "Instrument Set, Delivery",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        4500000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "3 received and in store"
+      ]
+    },
+    {
+      "row": 196,
+      "values": [
+        "",
+        "Instrument Set, Stitch Removing",
+        "ALL",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 200,
+      "values": [
+        "",
+        "MVA Kit",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1200000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "3 received and in store"
+      ]
+    },
+    {
+      "row": 205,
+      "values": [
+        "",
+        "Stool, Laboratory",
+        "LAB",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        500000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 207,
+      "values": [
+        "",
+        "Penguin Sucker",
+        "MAT",
+        "",
+        "Plastic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        45000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "3 received and in use"
+      ]
+    },
+    {
+      "row": 211,
+      "values": [
+        "",
+        "Fetoscope, Dopplar",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        60000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in use"
+      ]
+    },
+    {
+      "row": 213,
+      "values": [
+        "",
+        "Bubble CPAP",
+        "MAT",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        6000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "2 received and in store"
+      ]
+    },
+    {
+      "row": 215,
+      "values": [
+        "",
+        "Centrifuge (Electric)",
+        "LAB ",
+        "",
+        "Electric ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1200000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 217,
+      "values": [
+        "",
+        "Kangaroo Mother Care Chair",
+        "MAT",
+        "",
+        "Electric ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        2700000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 219,
+      "values": [
+        "",
+        "Radiant Infant Warmer",
+        "MAT",
+        "",
+        "Electric ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        8000000.0,
+        "",
+        "",
+        "",
+        "Functional",
+        "1 received and in use"
+      ]
+    },
+    {
+      "row": 221,
+      "values": [
+        "",
+        "Haemoglobin Meter, Sahli",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 225,
+      "values": [
+        "",
+        "Delivery Bed",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 232,
+      "values": [
+        "",
+        "Examination light",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 241,
+      "values": [
+        "",
+        "Instrument set, ENT Basic for HCIII",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 248,
+      "values": [
+        "",
+        "Bag Valve mask (Ambu Bag), Neonatal",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 252,
+      "values": [
+        "",
+        "Incubator",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 258,
+      "values": [
+        "",
+        "Office Chair",
+        "ALL",
+        "",
+        "Rotating chair ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        2400000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "4 received and in use"
+      ]
+    },
+    {
+      "row": 266,
+      "values": [
+        "",
+        "Desk",
+        "ALL",
+        "",
+        "Wooden ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        3000000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        "3 received and in use"
+      ]
+    },
+    {
+      "row": 270,
+      "values": [
+        "",
+        "Filing Cabinet",
+        "ALL",
+        "",
+        "Metallic ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        1800000.0,
+        "",
+        "",
+        "",
+        "Functional ",
+        " 2 received and in use"
+      ]
+    },
+    {
+      "row": 275,
+      "values": [
+        "",
+        "Non Residential Buildings",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 276,
+      "values": [
+        "",
+        "",
+        "Placenta pit ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Functional",
+        "1 block built "
+      ]
+    },
+    {
+      "row": 277,
+      "values": [
+        "",
+        "",
+        "Toilet ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Functional",
+        "1 block built "
+      ]
+    },
+    {
+      "row": 278,
+      "values": [
+        "",
+        "Residential Buildings",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "row": 279,
+      "values": [
+        "",
+        "",
+        "Staff quarters ",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Functional",
+        "1 block built "
+      ]
+    }
+  ]
+}
