@@ -1,0 +1,51 @@
+﻿Scanning 57 files
+
+team10_reports.py: Rupa Seed School was reached and its head teacher was not, so the register
+team10_reports.py: The head teacher of Napak Seed Secondary School was away and the District
+team10_reports.py: The District Education Officer called the head teacher ahead of the visit
+team10_reports.py: The District Education Officer called the head teacher, who was away in
+team10_reports.py: The head teacher of Kalita Seed School handed over the school's own
+team11_toolkit.py: Incharge: Ameo Jesca, 0772719536.
+team11_toolkit.py: Dr Ilukol James Ignatius, 0777042187.
+team12_reports.py: Mr Dongo Fredrick, head teacher, 0782642338
+team12_reports.py: Miss Naluwende Annet, deputy head teacher, 0774606043
+team12_reports.py: School Kirika with its head teacher, and part of Lwatama HC III, both
+team12_toolkit.py: Sophie Nankyanzi 0787561925 nakyanzisophia.34@gmail.com,
+team12_toolkit.py: Butsiba Peter 0777954557 / 0753294179 butsiba2014@gmail.com
+team12_toolkit_budaka.py: Mr Sisye Fred, DOS, 077170864
+team12_toolkit_budaka.py: Mr Ochan Martin Luther, Headteacher, 0782303757
+team12_toolkit_budaka.py: Mr Masaba Alex, Headteacher, 0782025223
+team12_toolkit_butaleja.py: Mr Dongo Fredrick, head teacher, 0782642338
+team12_toolkit_butaleja.py: The Headteacher's and Deputy Headteacher offices are too small.
+team12_toolkit_kibuku.py: Mr Andrew Wagole, DOS, 0706355649
+team12_toolkit_kibuku.py: Mr Bote Emma, Incharge, 0703218127
+team12_toolkit_kibuku.py: Mr Nicholas Were, Incharge, 0781195904
+team12_toolkit_mbale.py: Miss Naluwende Annet, Deputy Headteacher, 0774606043
+team13_reports.py: Sop Sop HC III's register and informant say much of the equipment delivered
+team13_reports.py: The District Education Officer called the head teacher ahead of the visit, and
+team13_reports.py: Education Officer called the head teacher of Sikuda Seed Secondary School
+team13_reports.py: | Received by | The Senior Principal Secretary, for the Chief Administrative
+team13_reports.py: **Wanyama Anthony, District Education Officer.** Called the head teacher of
+team13_reports.py: Sikuda Seed Secondary School ahead of the visit, so that the head teacher was
+team13_reports.py: | Received by | The Chief Administrative Officer, in person |
+team13_reports.py: Sikuda Seed Secondary School, worked with its head teacher and estate
+team13_reports.py: Health Officer of Busia authorised the in-charges of six health centres
+team13_toolkit_bumunji.py: 0783230321); filled toolkit must use Kassim Luminsa / +256 702 806116
+team13_toolkit_buwembe.py: (reads near 0783230321). Filled toolkit will use Kassim Luminsa /
+team13_toolkit_kamuli.py: 0702806116 / 0783230321; filled toolkit will use Kassim Luminsa /
+team13_toolkit_majanji.py: Yes. The in-charge records and reports to Masafu Hospital which supports
+team13_toolkit_namwaya.py: 0702806116 / 0783230321; filled toolkit will use Kassim Luminsa /
+team14_more.py: Magawa Samuel Masaya, senior clinical officer and in-charge
+team14_more.py: Nandutu Annet, assistant nursing officer acting as in-charge
+team14_more.py: Nasser Kakooza, senior clinical officer and in-charge
+team14_more.py: Sambula Petronila, assistant nursing officer acting as in-charge
+team14_more.py: SEED SEC. SCH., motto Education For The Difference. The head teacher, Mr.
+team14_more.py: Nabende Paul, acting for the head teacher
+team14_more.py: Nambuya Fatumah, enrolled midwife acting for the in-charge
+team14_more.py: Nabulenge Juliet, nurse, standing in for the in-charge Mr. Charles
+team14_more.py: The in-charge was out. Nurse Nabulenge Juliet took the team round. The
+team14_more.py: Zaina Amin, assistant in-charge
+team14_more.py: The in-charge was not present. The assistant, Zaina Amin, took the team
+team14_more.py: | Received by | Mr. Kamala Alex, District Health Officer, and Mrs
+amanang.py: cramped together (Biminzika Shadrach / 0782955138; Nakiwala Doreen /
+amanang.py: 0701280450; Alabo Mary Topista / 0702185702); order above follows the

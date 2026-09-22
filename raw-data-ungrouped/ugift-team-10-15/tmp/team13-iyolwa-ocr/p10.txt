@@ -1,0 +1,38 @@
+ 222,   9 0.09 Name of School_L (okWA_CEGA_SCcQNRARL_Ixleo
+ 292,  14 0.86 Dale Placed In
+ 296, 150 1.00 Cost
+ 288, 219 0.73 Recovery
+ 291, 299 1.00 Acc Dep
+ 291, 365 0.98 Met Book
+ 289, 455 0.52 Yid
+ 291, 523 0.66 Equipment
+ 311, 223 0.72 Cost
+ 313, 307 0.75 Cosi
+ 311, 367 0.65 Value
+ 311, 457 0.94 Depr
+ 311, 521 0.33 slalus
+ 301, 637 0.72 Remarks
+ 317,  17 0.48 Geniice
+ 336, 606 0.11 fuuae
+ 369,  41 0.14 sok
+ 368,  96 0.29 86,
+ 361, 513 0.23 pocckhen
+ 362, 666 0.16 tordhav_
+ 375, 607 0.25 sewek
+ 584, 520 0.11 Sorl
+ 574, 614 0.23 fusheral
+ 590,  39 0.65 fob
+ 597,  91 0.16 2O
+ 621, 523 0.19 toreit
+ 620, 620 0.12 [gue4
+ 643, 605 0.21 MLape
+ 861, 509 0.22 (Souy
+ 872, 614 0.13 lkchlors
+ 896, 524 0.11 (OrckyHen
+ 901, 612 0.33 Gtuont
+ 901, 720 0.12 @uphodah
+ 919, 601 0.24  |Vludenkr
+ 997, 543 0.19 @C
+ 992, 620 0.24 fuxcura
+1017, 521 0.05 Lorclhn |&clatnel
+1048, 602 0.81 Alape

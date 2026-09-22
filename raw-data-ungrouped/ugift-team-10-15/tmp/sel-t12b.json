@@ -1,0 +1,33 @@
+[
+ {"tag": "t12_Butaleja_Muhula-Seed-Secondary-School",
+  "picks": [[60, "School signboard"],
+            [53, "Blocks seen from a veranda"],
+            [50, "Classroom block"],
+            [26, "Classroom set out with desks and chairs, not yet in use"],
+            [17, "Computers set out in the ICT room, new and untested"],
+            [34, "Laboratory bench run with cupboards and sink"]]},
+
+ {"tag": "t12_Butaleja_Nakwasi-Seed-Secondary-School",
+  "picks": [[96, "School blocks across the compound"],
+            [98, "School signboard"],
+            [15, "Desktop towers stacked in the administration block for the holidays"],
+            [16, "Monitors moved with them"],
+            [38, "Library with shelving and reading tables"],
+            [75, "Classroom furniture, chairs and stools"]]},
+
+ {"tag": "t12_Butaleja_Mazimasa-HC-III",
+  "picks": [[85, "Desk cut with the GOU/MOH UgIFT mark"],
+            [96, "Facility signboard"],
+            [91, "Chair base plate labelled GOU/MOH UGIFT-PROJECT 2023/2024"],
+            [46, "Beds standing in the ward"],
+            [92, "Patient screen on castors"],
+            [14, "Cartons stacked in the store, unopened"]]},
+
+ {"tag": "t12_Mbale_Bubentsye-Seed-Secondary-School",
+  "picks": [[78, "School signboard"],
+            [56, "Classroom block from the compound"],
+            [62, "Classroom with its desks, in use"],
+            [7, "Library shelving carrying its books"],
+            [29, "Laboratory bench run with cupboards"],
+            [30, "Reagents on the laboratory wall shelving"]]}
+]

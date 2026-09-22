@@ -1,0 +1,451 @@
+Compact dump. `B = "BLANK"`. Schedule lines are 15-tuples: `item, dept, asset_no, desc, life, tag, purchase, service, rec_cost, cost, acc_dep, nbv, ytd, status, remarks`. Only what the page writes.
+
+```python
+B = "BLANK"
+U = "UNREADABLE"
+
+KIBUKU_T12 = {
+
+# ═══════════════════════════════════════════════════════════════
+# KASASILA / KASASIRA SEED SECONDARY SCHOOL
+# ═══════════════════════════════════════════════════════════════
+
+"WA0640": {
+  "file": "IMG-20260831-WA0640.jpg",
+  "facility": "KASASILA SEED SECONDARY SCHOOL",
+  "page_type": "discussion guide",
+  "informant": "MR. ANDREW WAGOELE, DOS, 0706355649",
+  "heading_note": "A government school built on church land and it is supported by different programs",
+  "guide": {
+    "1a": "NO",
+    "1b": B,
+    "2": "There are onsite repairs.",
+    "3": "YES. For Nonfunctionality: students have broken some of the Assets. The high cost of operation for the ICT machines. Some assets got spoilt due to the overstay in the stores at the district.",
+    "4": "All the Assets are not engraved. Issues: The assets took long in the store and got spoilt. The ICT machines are very expensive to maintain. The program provided a nurse without a sick bay. There is need of more classroom blocks. Recommendations: A lab technician for ICT should be provided. To minimise the little space, the program should consider vertical constructing / flats. should provide the science laboratory equipment.",
+  },
+  "notes": ["not engraved", "spoilt in district store", "no sick bay"],
+},
+
+"WA0649": {
+  "file": "IMG-20260831-WA0649.jpg",
+  "facility": "KASASIRA SEED SECONDARY SCHOOL",
+  "lg": "KIBUKU",
+  "page_type": "buildings",
+  "pages": "37-38",
+  "lines": [
+    ("Class rooms (3)", "Education", B, "Permanent with windows and doors", B, "N.A", "/19", "2022", B, B, B, B, B, "Functional, in use", "3 classroom blocks. Big enough"),
+    ("Main Hall", "Education", B, "Permanent windows glass 30x100ft", B, B, "/19", B, B, B, B, B, B, "In use", "1 main Hall"),
+    ("Pit latrine", "Education", B, "Permanent (ventilated / girls)", B, "N.A", B, B, B, B, B, B, B, "Functional", "Well constructed with 5 stances. Clean. Not engraved"),
+    ("Pit latrine", "Education", B, "Permanent (ventilated / boys)", B, B, B, B, B, B, B, B, B, "Functional", "2 stances. Not engraved"),
+    ("Pit latrine", "Education", B, "Permanent (Teachers)", B, B, B, B, B, B, B, B, B, "Functional", "Well constructed 2 blocks"),
+    ("Pit latrine", "Education", B, "Permanent (residential)", B, "N.A", B, "2022", B, B, B, B, B, "In use", B),
+    ("Residential / teachers quarters", "Education", B, "Permanent", B, B, B, B, B, B, B, B, B, "In use, functional", "there are 3 blocks with two rooms each"),
+    ("Kitchen", "Education", B, "well ventilated permanent", B, "N.A", B, "2022", B, B, B, B, B, "In use", "There are 3 kitchen blocks with 2 rooms each"),
+    ("Water tank", "Education", B, "Plastic crest tank with a wall built around", B, "N.A", B, "2022", B, B, B, B, B, "In use", "A total of 3 tanks but one has a broken stand"),
+    ("Library block", "Education", B, "Permanent building", B, B, B, B, B, B, B, B, B, "In use and functional", "1 well constructed"),
+    ("Science laboratory", "Education", B, "permanent building with taps and sinks", B, "N.A", B, "2022", B, B, B, B, B, B, "Science lab"),
+    ("Administration block and staffroom", "Education", B, "Permanent", B, "N.A", B, "2022", B, B, B, B, B, "functional, well maintained", B),
+  ],
+  "notes": ["pit latrines not engraved", "1 water tank broken stand"],
+},
+
+"WA0652": {
+  "file": "IMG-20260831-WA0652.jpg",
+  "facility": "KASASIRA SEED SECONDARY SCHOOL",
+  "lg": "KIBUKU",
+  "page_type": "furniture",
+  "pages": "25",
+  "header_notes": [
+    "All the furniture were not engraved.",
+    "All the furniture was available on site, some were broken.",
+  ],
+  "lines": [
+    ("School desk", "Education", "N.A", "wooden with metallic stands", B, "N.A", B, B, B, B, B, B, B, "in use, not broken", "107 desks are in use and not broken"),
+    ("School desk (120)", "Education", B, "wooden with metallic stands", B, "N.A", B, "2022", B, B, B, B, B, "Broken", "13 desks are broken"),
+    ("Book shelf (8)", "Education", "N.A", "wooden with metallic stands", B, "N.A", B, B, B, B, B, B, B, "In use, not broken", "Total of 8 book shelves not engraved"),
+    ("Laboratory stools (90)", "Education", "N.A", "wooden with metallic stands", B, "N.A", B, "2022", B, B, B, B, B, "In use, functional", "Total of 90 laboratory stools"),
+    ("Chairs (140)", "Education", "N.A", "wooden with metallic stands", B, "N.A", B, "2022", B, B, B, B, B, "not broken but not so much in use", "A total of 140 chairs"),
+    ("Tables (49)", "Education", "N.A", "wooden with metallic stands", B, "N.A", B, "2022", B, B, B, B, B, "In good condition not broken", "A total of 49 tables. 48 tables are in good condition but one table is broken"),
+  ],
+  "notes": ["not engraved", "120 desks = 107 good + 13 broken", "1 of 49 tables broken"],
+},
+
+"WA0674": {
+  "file": "IMG-20260831-WA0674.jpg",
+  "facility": "KASASIRA SEED SECONDARY SCHOOL",
+  "lg": "KIBUKU",
+  "page_type": "ICT",
+  "lines": [
+    ("Desktop computer", "Education", "CN-0RW8M2-01501", "Dell core-i5 black in color", B, "N.A", "20", "2022", B, B, B, B, B, "Good working condition", "Not All engraved"),
+    ("Desktop computer", "Education", "ST-DFHKFF3", "Dell core-i5", B, "N.A", B, B, B, B, B, B, B, "Not working", "Not engraved"),
+    ("Desktop computer", "Education", "ST-JFHKFF3", "Dell core-i5", B, "N.A", B, "2022", B, B, B, B, B, "Not working", B),
+    ("Server Processor (1)", "Education", "ST-FIHKFF3 SN 32241727791", "Dell core i-5", B, "N.A", B, B, B, B, B, B, B, "Good working condition", B),
+    ("Network Switch (1)", "Education", B, "Cisco office 24 black in color", B, "N.A", B, "2022", B, B, B, B, B, "Good in use", B),
+    ("Air conditioner (1)", "Education", U, "Daikin white in color", B, "N.A", B, B, B, B, B, B, B, "functional but not in use", "Not engraved"),
+    ("UPS (8)", "Education", "650VA 2107 AB0618", "L-9944 Boiler black in color", B, "N.A", B, B, B, B, B, B, B, "functional in good working condition", "8 are functional"),
+    ("UPS", "Education", "2107 AB0745", "L-9944 Boiler black in color", B, "N.A", B, "2022", B, B, B, B, B, "Not functional", "20 not functional"),
+    ("CCTV Camera", "Educ", B, "HIK VISION white in color", B, "N.A", B, B, B, B, B, B, B, "Well functioning", "It is one, not engraved"),
+    ("Printer", "Education", "ecosy-m2640idw", "Kyocera white in color", B, "N.A", B, "2022", B, B, B, B, B, "Functional and in use", B),
+  ],
+  "notes": [
+    "margin: desktops 'Not all are working'; count in margin UNREADABLE (reads 24 / 27 / 28 across passes)",
+    "margin: 20 out of 28 UPS not functional",
+    "all not engraved",
+  ],
+},
+
+# ═══════════════════════════════════════════════════════════════
+# ST JOHNS SEED SECONDARY SCHOOL KIRIKA
+# ═══════════════════════════════════════════════════════════════
+
+"WA0636": {
+  "file": "IMG-20260831-WA0636.jpg",
+  "facility": "ST JOHNS SEED SECONDARY SCHOOL KIRIKA",
+  "page_type": "discussion guide",
+  "pages": "23",
+  "informant": B,
+  "heading_note": "Has partnership with church of uganda and Government",
+  "guide": {
+    "1a": "YES",
+    "1b": B,
+    "2": "We got a contractor who came and surveyed everything under UgIFT and tried to repair some broken ones.",
+    "3": "No recording on paper but on file. Everything was repaired and so now functional.",
+    "4": "Given basic infrastructure, desks, tanks. However, we need single seater desks that can be used by candidates on final UNEB exams.",
+  },
+  "notes": ["need UNEB single-seater desks"],
+},
+
+"WA0676": {
+  "file": "IMG-20260831-WA0676.jpg",
+  "facility": "ST JOHNS SEED SCH KIRIKA",
+  "lg": "KIBUKU DISTRICT",
+  "page_type": "ICT",
+  "pages": "31-32",
+  "heading_note": "ST JOHNS SEED SCHOOL KIRIKA. Is a partially owned by the Government of Uganda and the Christian Church of Uganda",
+  "footer": "School received 20 computer sets, 15 CPUs were stolen, and 8 monitors were also stolen. The case is still at court.",
+  "lines": [
+    ("CPUs (20)", "Education", "S/N GMOW N6PV; GMOW N6LD; GMOW N6ME; GMOW N6RF", "20 cpus received in faulty. The issue at the factory office which closed", B, "Not engraved / ST JOHNS SEED SEC SCH", B, "May / 2025", B, B, B, B, B, "5 cpus are functional 1 is faulty. 15 CPUs were stolen case was taken to police by the former Headteacher", "It is almost since they were stolen and this has made work hard. If government can provide more for them to learn"),
+    ("Desktops / monitors (20)", "Education", B, "20pcs Remained with 12pcs and 8 were stolen", B, "ST JOHNS SEED SEC SCH", B, "05 / 2025", B, B, B, B, B, "All the 12 are functional and 8 were stolen - still case at court", "As applied above."),
+    ("Server processor (1)", "Education", B, "1pc acquired", B, "Not engraved", B, "05 / 2025", B, B, B, B, B, "Fully functional when power is on", "Its fine and in good condition."),
+    ("Air conditioners (1)", "Education", B, "1PC Hi-sense", B, "Not engraved", B, "05 / 2025", B, B, B, B, B, "Its power got an electric shock but works when on.", "Need to replace power switches"),
+  ],
+  "notes": ["theft: 15 CPUs + 8 monitors", "case at court / police by former HT", "received faulty; factory office closed"],
+},
+
+"WA0673": {
+  "file": "IMG-20260831-WA0673.jpg",
+  "facility": "ST. JOHNS SEED SEC SCH",  # named in tag column only; header school blank
+  "page_type": "ICT",
+  "pages": "33-34",
+  "lines": [
+    ("Network switch 24 port", "Education", "DGS-F1 210-26 PS-E", "The network switches that were connected to the computers that were stolen.", B, "Not engraved", B, "05/2025", B, B, B, B, B, "Switches are not functional because the computers connected to them were stolen.", "Need for replacement of computers of the same model."),
+    ("CCTV camera", B, B, "CCTV camera", B, B, B, B, B, B, B, B, B, "All functional but no internet since link was not fixed.", "Need to restore internet."),
+    ("Multi purpose printer", "Education", B, B, B, B, B, B, B, B, B, B, B, "Fully functioning", "Not enough for the facility cause it's being among many offices."),
+    ("UPS", B, B, "Black UPS used for saving power for the computer when electricity is off.", B, "Not engraved", B, "05/2025", B, B, B, B, B, "Functional", "It is okay and working normally just that power consumption is too much."),
+    ("Projector", "Education", "S/N X8F 453039 02", "EPSON HDMI projector", B, "ST. JOHNS SEED SEC SCH", B, "05/2025", B, B, B, B, B, "Functional", "Given the new curriculum mode of teaching, there is need for more projectors."),
+    ("Server", "Education", "SN GM0S EZSG", "Server computer", B, "Not engraved (ST. JOHNS SEED SEC SCH struck through)", B, "05/2025", B, B, B, B, B, "Functional", "It is okay but been put on desk for use by students since we are left with a few computers."),
+  ],
+  "notes": ["computers stolen so switches unused", "CCTV no internet", "server used as student workstation"],
+},
+
+# ═══════════════════════════════════════════════════════════════
+# KABWERI SEED SECONDARY SCHOOL
+# ═══════════════════════════════════════════════════════════════
+
+"WA0639": {
+  "file": "IMG-20260831-WA0639.jpg",
+  "facility": "Kabweri seed school",
+  "page_type": "discussion guide",
+  "pages": "23",
+  "informant": B,
+  "guide": {
+    "1a": "YES",
+    "1b": B,
+    "2": "We always collect the faulty assets all together in our store and when comes to a reasonable number, we call the responsible persons for repair and they repair them.",
+    "3": "Not really record them but we pick them out to a specific point like store. Now like some computers (Desktops) are non functional because their monitors were stolen, and the case is at court (we arrested 2 guards) but were given bond and still in court.",
+    "4": "UgIFT has really done much with enabling our area at large on learners facilities hence doing well. we may ask that the project still comes back to enable some gaps missing within our facilities - like water which is scarce and only available when it rains.",
+  },
+  "notes": ["monitors stolen", "2 guards arrested, bond, case still in court", "water only when it rains"],
+},
+
+"WA0647": {
+  "file": "IMG-20260831-WA0647.jpg",
+  "facility": "Kabweri Seed School",
+  "lg": "Kibuku District",
+  "page_type": "buildings",
+  "lines": [
+    ("Residential blocks (3)", "Education", B, "Each block has 2 stances. Not engraved.", B, "Not engraved", B, "26/10/23", B, B, B, B, B, "six rooms on the 3 blocks. Each block with 2 rooms.", "Not enough to accommodate the administration. Also need pit latrines repainting."),
+    ("Water tanks (3)", "Education", B, "3 water tanks all functional. 1. 10,000 litres, 2. 3,000 litres, 3. 5,000 litres.", B, "Not engraved", B, "26/10/23", B, B, B, B, B, "All functional", "The water is enough but only when it rains."),
+    ("Kitchen (3 blocks)", "Education", B, "3 blocks of kitchen one for staff", B, "Not engraved", B, "26/10/23", B, B, B, B, B, "each block 2 stances making 6. All functional.", "Just good."),
+  ],
+  "notes": ["not engraved", "water rain-only"],
+},
+
+"WA0657": {
+  "file": "IMG-20260831-WA0657.jpg",
+  "facility": "KABWERI SEED SCHOOL",
+  "lg": "KIBUKU DISTRICT",
+  "page_type": "buildings",
+  "pages": "35-36",
+  "lines": [
+    ("Class rooms (3 blocks / 6 classes)", "Education", B, "3 classroom blocks with 6 classes", B, "Not engraved", B, "26/10/23", B, B, B, B, B, "functional", "The government should help put up more rooms. 6 class rooms all functional. Need for repainting"),
+    ("Administration block (1)", "education", B, "1 block. Not engraved", B, "Not engraved", B, "26/10/23", B, B, B, B, B, B, "1 block with 3 offices Headteacher Deputy Bursar and store. Fully functional and enough to the available administration."),
+    ("Pit latrines (3)", "Education", B, "3 pit latrines. 1 for administration 1 for boys and the third for girls.", B, "Not engraved", B, "26/10/23", B, B, B, B, B, "No engravements, still functional", "Status not bad, though will need emptying them very soon"),
+  ],
+  "notes": ["not engraved", "latrines need emptying soon"],
+},
+
+"WA0655": {
+  "file": "IMG-20260831-WA0655.jpg",
+  "facility": "KABWERI SEED SCHOOL",
+  "lg": "KIBUKU DISTRICT",
+  "page_type": "ICT",
+  "pages": "31-32",
+  "lines": [
+    ("Desktops (28)", "Education", "SSP/FF/3", "28 desktops. 18 desktops are functioning the rest not working because their cpus were stolen", B, "Not engraved", "08/2021", "26/10/23", B, B, B, B, B, "10 desk tops only functional. The rest were stolen and case at court. The rest are non functional because their CPUs were stolen and case at court", "Need repair. Need for engravings of all computer and to avoid theft again"),
+    ("CCTV Camera (1)", "Education", B, "1 Camera - Hik Vision", B, "Not engraved", B, "26/10/23", B, B, B, B, B, "Only 1 camera and functional operated by the Headteacher of the school.", "need for more cameras for easy monitoring"),
+    ("CPUs (28)", "Education", B, "28 cpu's", B, "Not engraved", "08/2021", "26/10/23", B, B, B, B, B, "10 cpu's functional. Some missing were stolen no police report evidenced but case in court", "Case still in court and 1 security guard was arrest and given police bond."),
+    ("Network Switch (1)", "Education", B, "1 Network Switch", B, "Not engraved", B, "26/10/23", B, B, B, B, B, "Very functional", "The network speed is good and faster."),
+  ],
+  "notes": [
+    "PAGE CONTRADICTS ITSELF: desc says 18 desktops functioning; status says 10 functional / rest stolen",
+    "theft + court; 1 guard arrested, police bond",
+    "not engraved",
+  ],
+},
+
+"WA0670": {
+  "file": "IMG-20260831-WA0670.jpg",
+  "facility": "KABWERI SEED SCHOOL",  # also catalogued as KABKIERI on this sheet
+  "lg": "KIBUKU DISTRICT",
+  "page_type": "furniture",
+  "pages": "25-26",
+  "lines": [
+    ("Desks (120)", "Education", B, "120 desks received - wooden and metallic. The top is wooden and bottom metallic.", B, "Not engraved", B, "26/10/2023", B, B, B, B, B, "All functional though not strong enough to hold for long.", "Need more desks to meet the population. Need stronger desks to last long. Need for engraving."),
+    ("Chairs (140)", "Education", B, "wooden chairs 140. (Top wooden and bottom metallic)", B, "Some are engraved and some are not.", B, "26/10/2023", B, B, B, B, B, "All functional non-broken", "Need more chairs for betterment. Need for engraving."),
+    ("Laboratory stools (90)", "Education", B, "90 stools", B, "Not engraved", B, "26/10/23", B, B, B, B, B, "All functional. Though look weak and will wear out easily.", "Improve better quality stools that can meet the standard being in environment of learners."),
+    ("Book shelves", B, B, "No shelves", B, "Not received", B, B, B, B, B, B, B, B, B),
+  ],
+  "notes": ["bookshelves not received", "mostly not engraved"],
+},
+
+# ═══════════════════════════════════════════════════════════════
+# KABWERI HC III
+# ═══════════════════════════════════════════════════════════════
+
+"WA0638": {
+  "file": "IMG-20260831-WA0638.jpg",
+  "facility": "KABWERI HEALTH CENTRE III",
+  "page_type": "discussion guide",
+  "pages": "3",
+  "informant": "MR. BOTE EMMA, INCHARGE, 0703218127",
+  "guide": {
+    "1a": "YES",
+    "1b": B,
+    "2": "The medical equipment are not fully put to use. Those that are damaged or spoilt were not repaired.",
+    "3": "No.",
+    "4": "There are many equipment provided that are not put to use. Some equipment expired without being used. Recommendations. Some of the equipment should be given to other health centres that can put them to use.",
+  },
+  "notes": ["The Health facility is fully owned by the government and is supported by different programs.", "unused / expired equipment"],
+},
+
+"WA0635": {
+  "file": "IMG-20260831-WA0635.jpg",
+  "facility": "KABWERI HEALTH CENTRE III",
+  "lg": "KIBUKU",
+  "page_type": "HC checklist",
+  "pages": "4-5",
+  "lines": [
+    ("B.P Machine, Digital", "Health", "NA", "Digital", B, B, B, "2022", B, B, B, B, B, "Spoilt", "Stopped working"),
+    ("B.P Machine Digital", "Health", B, B, B, "MOH/KBK", B, "2022", B, B, B, B, B, "Not in use", "Some parts are missing"),
+    ("B.P Machine (Aneroid wall mounted)", "Health", "NA", "Desk and wall mounted", B, "MOH/KBK", B, "2022", B, B, B, B, B, "Functional but not in use", "Not yet used"),
+    ("Autoclave 20 Liters, Dual Operated", "Health", B, "Metallic", B, "MOH/KBK", B, "2022", B, B, B, B, B, "Functional In use", B),
+    ("Bowl Kick", B, B, B, B, B, B, B, B, B, B, B, B, B, B),  # row empty / struck
+    ("Bowl Stand (3)", B, B, "Metallic", B, "MOH/KBK", B, "2022", B, B, B, B, B, "Functional in use", B),
+    ("Counting chamber Neubauer Improved (2)", "Health", "CAT NO 1101", "small, glass", B, "N.A", B, "2022", B, B, B, B, B, "New but not in use", "They are two but were not used yet"),
+    ("Cupboard Steel Lockable (6)", B, "NA", "steel lockable", B, "MOH/KBK", B, "2022", B, B, B, B, B, "All in use. In good condition", B),
+    ("Drip Stand (08)", B, "NA", "steel", B, "MOH/KBK", B, "2022", B, B, B, B, B, "Functional", "5 are in use 3 are in the store"),
+  ],
+  "notes": ["tags MOH/KBK", "Bowl Kick blank/struck", "1 digital BP spoilt; 1 digital parts missing"],
+},
+
+# ═══════════════════════════════════════════════════════════════
+# LWATAMA HC III
+# ═══════════════════════════════════════════════════════════════
+
+"WA0616": {
+  "file": "IMG-20260831-WA0616.jpg",
+  "facility": "LWATAMA HC III",
+  "page_type": "discussion guide",
+  "informant": B,
+  "guide": {
+    "1a": "Yes",
+    "1b": B,
+    "2": "Use PHC funds in terms of repairs when any is faulty for example cells for B.P machines. Use of autoclave for sterilization of equipment on maintenance. Full ownership of the facility by government.",
+    "3": "The Incharge always takes notice from the other staff in case of breakdowns for example our solar system is currently down and the Incharge has called the Engineer to work on it.",
+    "4": "It has facilitated on management, though examination machines which ease the work. Led to quality care. Improved on IPC (Infection prevention control). Improved EPI activities (Expanded program on immunization).",
+  },
+  "notes": [
+    "solar currently down; engineer called",
+    "N.B. The Incharge delivered a list of Assets that she received on arrival at the facility, so its the list we based on to extract whatever she calls for UgIFT, what was available but not on list was not counted as UgIFT Assets.",
+  ],
+},
+
+"WA0613": {
+  "file": "IMG-20260831-WA0613.jpg",
+  "facility": B,  # NAME OF FACILITY blank
+  "named_by": "tags: MOH LWATAMA HC III",
+  "page_type": "HC checklist",
+  "lines": [
+    ("B.P Machine Digital (02 Pcs)", "Health", B, "BP machine Digital", B, "MOH/RP FAN/PMT 61/2857", B, "14/02/22", B, B, B, B, B, "the makers boards got faulty", "they could go on and off even in off"),
+    ("B.P Machine (Aneroid wall mounted) (02 pcs)", "Health", B, "steel stand with a meter on the top", B, "Not engraved", B, "2022", B, B, B, B, B, "All functional in use", "They are enough"),
+    ("Autoclave 20 Liters Duo Operated (02 Pcs)", "Health", "5834", "autoclave functional", B, "MOH LWATAMA HC III", B, "DEC 2022", B, B, B, B, B, "Still in normal condition and functional", "Eases sterilization of Equipment"),
+    ("Autoclave 20 Liters Duo Operated", "Health", "5844", B, B, "MOH LWATAMA HC III", B, "DEC 2022", B, B, B, B, B, "Still functional", B),
+    ("Bowl Kick (01 pc)", "Health", "1221/136", "a bowl and one stand", B, B, B, "2022/10", B, B, B, B, B, "Not functional still packed due to lack of critical parts", "They are vital though the facility has not registered critical parts for them to be used"),
+    ("Bowl Stand (03 pcs)", "Health", B, "Steel metallic stand 3 feet", B, "Ungraved", B, "2022", B, B, B, B, B, "Functional", "Eases movement of drugs"),
+    ("Counting chamber Neubauer Improved (02 pcs)", "Health", "LT-N700 SN N700 21100017", "Lintomed 1-use and another UNREADABLE", B, "Not engraved", B, "2022", B, B, B, B, B, "Functional and tagged though some tags attached are not available", "They are enough in the level but attached are not available"),
+    ("Cupboard Steel Lockable (06 pcs)", "Health", B, "metallic cupboards steel", B, "MOH LWATAMA HC III", B, "2022", B, B, B, B, B, "Still functional with broken locks", "It has eased the storage of facility equipment"),
+    ("Drip Stand", "Health", B, B, B, B, B, B, B, B, B, B, B, "most of them are not functional due to breakage", "The metallic steel cupboards broke even before use"),
+  ],
+  "notes": ["header facility blank; tags name Lwatama", "1 digital BP faulty", "bowl kick packed / missing parts", "cupboard locks broken", "drip stands mostly broken"],
+},
+
+"WA0612": {
+  "file": "IMG-20260831-WA0612.jpg",
+  "facility": B,  # header blank
+  "named_by": "tag written vertically: MOH - LWATAMA HC III",
+  "page_type": "HC checklist / chairs",
+  "pages": "9-10",
+  "lines": [
+    ("Office Chair (09 big)", "Health", B, "Plastic", B, "MOH - LWATAMA HC III", B, "2022", B, B, B, B, B, B, "Some of the chairs are tough / poor quality / the leg just breaks when one sits. We need more furniture, chairs and strong ones. Enough for all patients and staff"),
+    ("Office Chair (04 small)", B, B, B, B, "MOH - LWATAMA HC III", B, "2022", B, B, B, B, B, B, B),
+  ],
+  "notes": ["poor quality chairs; legs break", "need stronger chairs"],
+},
+
+"WA0609": {
+  "file": "IMG-20260831-WA0609.jpg",
+  "facility": B,  # header blank
+  "named_by": "tags: LWATAMA / MOH LWATAMA HC III / MCH LWATAMA HC III",
+  "page_type": "HC checklist",
+  "caution": "Portrait of a landscape spread. Several printed item names conflict across reads; do not invent. Locked facts only below.",
+  "locked": {
+    "service": "2022",
+    "tags": "LWATAMA / MOH LWATAMA HC III",
+    "sterilizer": "electric; non functional / not working / unused",
+    "weighing_scales": "adult / infant / toddler present; infant: one good, one with rust (where readable)",
+    "wheelchair": "Wheel chairs available but not included on the copy/list of the UgIFT program",
+    "waste_bins": "Medical waste bin (10); Functional; key waste disposal and management in the facility",
+    "stethoscope": "1 functional, 1 stolen (readable on one pass; treat as UNREADABLE if you need a hard lock)",
+  },
+  "lines": [
+    (U, "Health", U, U, U, "MOH LWATAMA HC III", B, "2022", B, B, B, B, B, U, U),
+    ("Sterilizer", "Health", B, "electric - non functional", B, "MCH Lwatama HC III", B, "2022", B, B, B, B, B, "Not functional", "unused"),
+    ("Weighing Scale with height meter, Adult", "Health", B, U, B, "MOH LWATAMA HC III", B, "2022", B, B, B, B, B, "Functional", U),
+    ("Weighing Scale, Infant", "Health", B, "one good, one with rust", B, "MOH LWATAMA HC III", B, "2022", B, B, B, B, B, "Functional", "only one good"),
+    ("Weighing Scale, Toddler", "Health", B, U, B, "LWATAMA HC III", B, "2022", B, B, B, B, B, "Functional", B),
+    ("Wheel Chair", B, B, B, B, B, B, "2022", B, B, B, B, B, B, "Wheel chairs available but not included on the copy/list of the UgIFT program"),
+    ("Medical Waste Bin (10)", "Health", B, B, B, "MOH LWATAMA HC III", B, "2022", B, B, B, B, B, "Functional", "key waste disposal and management in the facility"),
+  ],
+  "notes": ["header does not name facility; tags do", "wheelchair not on UgIFT list", "sterilizer unused"],
+},
+
+# ═══════════════════════════════════════════════════════════════
+# NALUBEMBE HC III
+# ═══════════════════════════════════════════════════════════════
+
+"WA0637": {
+  "file": "IMG-20260831-WA0637.jpg",
+  "facility": "NALUBEMBE HEALTH CENTRE III",
+  "page_type": "discussion guide",
+  "pages": "3",
+  "informant": "MR. NICHOLAS WERE, INCHARGE, 0781195904",
+  "heading_note": "The Facility is fully owned by the government of Uganda.",
+  "guide": {
+    "1a": "YES",
+    "1b": B,
+    "2": "YES. In case of any damage or breakage the facility has a contractor who repairs them.",
+    "3": "YES",
+    "4": "The medical equipments and all the other UGIFT assets were not engraved and hence not yet put to use due to fear of getting lost. The buildings were all in use.",
+  },
+  "notes": ["equipment not engraved, not put to use for fear of loss", "buildings in use"],
+},
+
+"WA0665": {
+  "file": "IMG-20260831-WA0665.jpg",
+  "facility": "NALUBEMBE HEALTH CENTRE III",
+  "lg": "KIBUKU DISTRICT",
+  "page_type": "HC checklist",
+  "lines": [
+    ("B.P. Machine, Digital (2)", "Health", "N.A", "White in color scian brand", "-", "N.A", "-", "16th/10/2025", B, B, B, B, B, "Functional", "and are being put to use."),
+    ("B.P. Machine (Aneroid wall mounted) (2)", "Health", "N.A", "Black in color with the provision for wall mounting", "-", "N.A", "-", "16th/10/2025", B, B, B, B, B, "Functional", "but not in use yet."),
+    ("Autoclave 20 Liters, Duo Operated", B, B, "Did not receive.", B, B, B, B, B, B, B, B, B, B, B),
+    ("Bowl, Kick (1)", "Health", "N.A", "Made of stainless steel movable.", "-", "N.A", B, "16th/10/2025", B, B, B, B, B, "Very new", "not broken, not in use"),
+    ("Bowl Stand (2)", "Health", "N.A", "Made of stainless steel movable.", "-", "N.A", B, "16th/10/2025", B, B, B, B, B, "In good condition", "but not in use."),
+    ("Counting chamber Neubauer- Improved (2)", "Health", "N.A", "sealed in their boxes", "-", "N.A", B, "16th/10/2025", B, B, B, B, B, "Not in use", "still sealed in the boxes"),
+    ("Cupboard Steel, Lockable (2)", "Health", "N.A", "Made of stainless steel", "-", "N.A", B, "16th/10/2025", B, B, B, B, B, "Functional", "and in use."),
+    ("Drip Stand (8)", "Health", "N.A", "Movable and made of stainless steel", "-", "N.A", "-", "16th/10/2025", B, B, B, B, B, "About 5 of them have been put to use", "3 are still new."),
+  ],
+  "notes": ["autoclave did not receive", "counting chambers still boxed", "tags N.A"],
+},
+
+# ═══════════════════════════════════════════════════════════════
+# UNNAMED (do they NAME a facility?)
+# ═══════════════════════════════════════════════════════════════
+
+"WA0644": {
+  "file": "IMG-20260831-WA0644.jpg",
+  "facility": None,  # Name of LG and Name of SCHOOL both BLANK
+  "page_type": "buildings",
+  "pages": "37-38",
+  "service": "05/2025",
+  "lines": [
+    ("Classrooms blocks", "Education", B, "3 classroom blocks with 6 classes", B, B, B, "05/2025", B, B, B, B, B, "Functional. In good condition", "Need for burglar proofing of windows those are falling"),
+    ("Administration block", "Education", B, "1 block", B, B, B, "05/2025", B, B, B, B, B, "x1 block with 3 offices and staff room and small store", "Good to handle."),
+    ("Main hall", "Education", B, "1 block", B, B, B, "05/2025", B, B, B, B, B, "1 block with 2 classes", "Still enough at the moment"),
+    ("Library", "Education", B, "1 block", B, B, B, "05/2025", B, B, B, B, B, "1 block", "Need for restocking in function of books in all subjects"),
+  ],
+  "notes": ["does NOT name a facility", "date cluster 05/2025 matches named Kirika ICT pages only — do not assign"],
+},
+
+"WA0653": {
+  "file": "IMG-20260831-WA0653.jpg",
+  "facility": None,  # Name of LG and Name of School BLANK
+  "page_type": "buildings",
+  "pages": "35-36",
+  "service": "05/2025",
+  "lines": [
+    ("Water Tanks (03)", "Education", B, "Received 03 water tanks of 10000 litres, 5,000 litres and 3000 lit", B, B, B, "05/2025", B, B, B, B, B, "All the tanks are in good condition and functional", "The taps have got fault and need refixing."),
+    ("Pit latrines (3)", "Education", B, "Constructed 2 latrines for students and 1 for Administration", B, B, B, "05/2025", B, B, B, B, B, "2 latrines 1 for girls and the other for boys then also one for teachers all latrines are still functional", "Drainage system of the bathroom on the latrines has issued and need proper drainage channelling."),
+    ("Residential (3 blocks)", "Education", B, "Having 3 residential blocks with each block having 2 stances", B, B, B, "05/2025", B, B, B, B, B, "3 blocks each with 2 rooms self contained with pit latrines making 6 stances", "We are 30 staff in number but only 8 are catered for, so need for more housing for our staff."),
+  ],
+  "notes": ["does NOT name a facility", "same 05/2025 handwriting cluster as WA0644"],
+},
+
+"WA0654": {
+  "file": "IMG-20260831-WA0654.jpg",
+  "facility": None,  # no school / facility heading
+  "page_type": "science / equipment schedule",
+  "pages": "27-28",
+  "dept": "Education",
+  "service": "2022",
+  "lines": [
+    ("Science Tool kit (2)", "Education", "N.A", "big metallic box blue in color", B, "N.A", B, "2022", B, B, B, B, B, "In good condition", "2 big metallic box not engraved"),
+    ("Retort stand (12)", "Education", "N.A", "Metallic with a blue base", B, "All assets are not engraved.", B, B, B, B, B, B, B, "In use, functional", "12"),
+    ("Dummy Biological Organs (5)", B, B, "Plastic", B, "All assets are not engraved.", B, B, B, B, B, B, B, "Not damaged", "5 dummy organs"),
+    ("skeleton", "Education", "N.A", "Plastic", B, "N.A", B, "2022", B, B, B, B, B, "Not spoilt and in use", B),
+    ("Gas cylinder", "Education", "N.A", "Metallic stables 24kgs", B, "N.A", B, "2022", B, B, B, B, B, "Already in use.", B),
+  ],
+  "notes": ["does NOT name a facility", "all not engraved", "2022 + Education cluster matches named Kasasira pages only — do not assign"],
+},
+
+}
+```
+
+**Unnamed pages:** WA0644, WA0653, WA0654 do **not** name a facility. Date/handwriting clusters only: 05/2025 with Kirika; 2022 / not engraved with Kasasira. Do not file them as verified for those schools.
+
+**WA0609:** header blank; tags name Lwatama. Several printed item labels are UNREADABLE on this photo — do not invent those lines.
+
+**Kabweri ICT (WA0655):** the page itself contradicts (18 functioning vs 10 functional / stolen). Transcribe both clauses; do not pick one.
+
+Cursor Grok 4.6

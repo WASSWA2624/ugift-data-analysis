@@ -1,0 +1,32 @@
+[
+ {"tag": "t14_Bududa_Bunamono-HC-III",
+  "picks": [[14, "The block and the water tank the solar does not pump"],
+            [13, "Weighing scale beam marked BUD/DLG/BUNAMONO HCIII with a number"],
+            [3, "Bench top centrifuge"],
+            [11, "Oxygen concentrator"],
+            [6, "Suction machine"],
+            [8, "Stainless steel basin trolley"],
+            [9, "Pressure cooker autoclave"]]},
+
+ {"tag": "t14_Bududa_Bumusi-HC-III",
+  "picks": [[23, "Facility signboard on the gable"],
+            [12, "Main block with its solar panels"],
+            [11, "Placenta pit and latrine block in the courtyard"],
+            [17, "Desk top cut BUMUSI HCIII / DLG BUDUDA, the district's name and not the programme's"],
+            [14, "Hospital beds"],
+            [8, "Examination couches and privacy screen"],
+            [7, "Autoclave and covered instrument drum"],
+            [21, "Safe delivery treatment kits, still boxed"],
+            [2, "Storage cupboard and bedside lockers"]]},
+
+ {"tag": "t14_Bududa_Nakatsi-Seed-Secondary-School",
+  "picks": [[81, "Administration block"],
+            [80, "School buildings and water tank"],
+            [76, "Laboratory tables"],
+            [74, "Laboratory worktop with sink and tap"],
+            [82, "One of the twenty-one computers"],
+            [83, "UPS unit"],
+            [77, "Table edge cut NAKATSI SEED SEC SCH / UGIFT BUDUDA D.L.G"],
+            [23, "The two classroom blocks, said to be too few"],
+            [20, "Library shelving"]]}
+]

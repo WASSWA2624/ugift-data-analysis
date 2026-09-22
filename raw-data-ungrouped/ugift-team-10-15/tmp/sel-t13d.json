@@ -1,0 +1,37 @@
+[
+ {"tag": "t13_Namisindwa_Mukuto-Seed-School",
+  "picks": [[19, "Administration block and reception"],
+            [6, "Chair engraved MUKOTO SEED SEC. SCH, with no number"],
+            [22, "Classroom block"],
+            [42, "ICT laboratory"],
+            [24, "Monitors in the ICT laboratory"],
+            [12, "Library block"]]},
+
+ {"tag": "t13_Namisindwa_Namboko",
+  "picks": [[6, "Classroom block on the slope"],
+            [1, "Chairs marked NAMBOKO SEED SEC SCH"],
+            [87, "Science laboratory"],
+            [96, "Staff quarters, three blocks of two units"],
+            [117, "Laboratory stool, broken"],
+            [111, "Air conditioners still in their boxes"]]},
+
+ {"tag": "t13_Manafwa_Buwagogo-Seed-School",
+  "picks": [[3, "The ICT consignment stacked to the ceiling of the store"],
+            [1, "Cartons in the store, still sealed"],
+            [2, "Monitor cartons resting on the printer"]]},
+
+ {"tag": "t13_Manafwa_Sisuni",
+  "picks": [[1, "Classroom block"],
+            [3, "Construction signboard"],
+            [2, "Perimeter wall with its weep holes"]]},
+
+ {"tag": "t13_Manafwa_Sibanga-Seed-School",
+  "picks": [[80, "Main block with its ramp and fence"],
+            [49, "Latrine blocks on the slope"],
+            [62, "School signboard"],
+            [76, "Concrete water tank"],
+            [58, "Library shelves with books"],
+            [52, "Pile of broken furniture in one of the rooms"],
+            [64, "Generator"],
+            [50, "Classroom desks and benches"]]}
+]

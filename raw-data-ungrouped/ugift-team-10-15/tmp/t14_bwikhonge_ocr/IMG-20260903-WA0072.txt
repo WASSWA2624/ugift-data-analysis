@@ -1,0 +1,71 @@
+BEST_ANGLE=90 SCORE=365 SIZE=(1080, 810)
+
+    57    143 0.17 Equlpment Nem
+    59    785 0.88 Acc Dap
+    61    251 0.26 Dcpartmant
+    61    457 0.61 Teg Mumbar
+    63    611 0.72 Dite
+    63    911 0.51 Equlpment
+    63    967 0.61 Rematks
+    63    726 0.11 Recovet
+    64    310 0.03 Aiat
+    67    539 0.22 Date ot
+    69    681 1.00 Cost
+    71    785 0.73 Coat
+    73    357 0.36 Dascrlpton
+    73    413 0.34 Konths
+    73    613 0.70 Placod In
+    73    833 0.58 Book
+    75    461 0.21 anprave no,}
+    75    875 0.38 Dapin
+    76    310 0.16 humcor
+    79    727 0.07 Cojt
+    81    539 0.25 Purciaca
+    85    610 0.12 Seuulce
+    86    836 0.13 Halde
+   105    609 0.04 [ilas 2
+   111    173 0.11 812
+   112    140 0.01 Ranoina
+   115    357 0.06 7iaunz
+   121    247 0.04 Makaadty|
+   121    317 0.96 03
+   123    911 0.22 Adns
+   139    357 0.19 Cak&y
+   141    247 0.08 Lod
+   154    985 0.22 Etm
+   157    369 0.15 (ay
+   186   1006 0.10 Ni-
+   187    179 0.08 Dorzlar
+   191    249 0.31 H
+   199    917 0.34 Lc
+   223    133 0.05 Lacpap
+   237    986 0.27 He:
+   259    129 0.02 Tennnige (Elcht)
+   265    243 0.06 Elrty
+   269    351 0.20 Heu (Enf]
+   281    359 0.13 KOAL
+   301    131 0.00 Edt
+   301    169 0.15 Mober Cate
+   301    992 0.15 Et
+   309    349 0.45 (Hcicke %
+   311    299 0.70 D
+   319    354 0.14 Catton
+   323    611 0.45 04.0621
+   332    246 0.01 Llco
+   342    126 0.05 Pran an: Wjnter
+   383    143 0.03 oecen Kaler Saril
+   387    347 0.10 TT4T
+   389    239 0.65 Jke
+   391    301 0.45 D2
+   398    364 0.08 Io
+   407    345 0.17 Initry
+   435    351 0.07 Sa ,
+   459    155 0.09 3c
+   526    992 0.11 84+(L
+   592    114 0.08 Exanabon [i
+   603    293 0.24 01
+   605    343 0.09 IEl
+   621    227 0.12 Wikal
+   625    341 0.56 Lmp
+   640    338 0.05 {atu
+   641    229 0.20 Lud

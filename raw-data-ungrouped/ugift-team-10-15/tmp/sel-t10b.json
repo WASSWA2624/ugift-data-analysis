@@ -1,0 +1,37 @@
+[
+ {"tag": "t10_Moroto_Kalemungole-HC-III",
+  "picks": [[15, "Outpatient block with the water system and tanks"],
+            [10, "Staff quarters and staff toilet block"],
+            [20, "GOU/MOH-UGIFT PROJECT FY2023-2024/01 cut into the weighing scale"],
+            [83, "The same mark cut into the gas stove"],
+            [97, "Bubble CPAP still in its unopened carton"],
+            [82, "Treatment trolley still in the maker's film"],
+            [36, "Drip stand, broken"],
+            [39, "Pulse oximeter in its case; two of the four are missing"]]},
+
+ {"tag": "t10_Napak_Iriiri-Seed-Secondary-School",
+  "picks": [[5, "Classroom blocks, main hall and administration block"],
+            [26, "Main hall"],
+            [29, "Administration block"],
+            [33, "Science laboratory"],
+            [43, "Water tower and tanks"],
+            [1, "Desks being assembled on site during the visit"],
+            [59, "Tables and stacked furniture, none of it engraved"],
+            [57, "Staff quarter toilet blocks, where the cracks were found"]]},
+
+ {"tag": "t10_Napak_Lopei-Seed-Secondary-School",
+  "picks": [[9, "Main hall and classroom blocks, complete and handed over"],
+            [2, "Science laboratory"],
+            [11, "Book shelves and classroom furniture, unused"],
+            [7, "ICT and library block"],
+            [12, "Classroom furniture standing unused"],
+            [16, "Staff quarters, kitchen and toilet blocks"]]},
+
+ {"tag": "t10_Napak_Napak-Seed-Secondary-School",
+  "picks": [[1, "Library and ICT block, now a girls' dormitory"],
+            [11, "Bunk beds inside the block converted to a dormitory"],
+            [26, "Main hall, now a boys' dormitory"],
+            [29, "Classroom block divided into an A level dormitory and a computer room"],
+            [25, "Furniture, some of it broken and none engraved"],
+            [37, "Toilet block, cracked"]]}
+]

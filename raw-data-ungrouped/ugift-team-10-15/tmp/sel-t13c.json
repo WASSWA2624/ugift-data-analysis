@@ -1,0 +1,31 @@
+[
+ {"tag": "t13_Tororo_Kamuli-HC-III",
+  "picks": [[24, "Maternity ward building"],
+            [5, "Facility signboard"],
+            [8, "Pharmacy refrigerator in use"],
+            [49, "Rating label on the refrigerator, which carries asset number HF0195"],
+            [33, "Delivery bed"],
+            [6, "Microscope"],
+            [45, "Autoclave"],
+            [54, "Adult patient bed"]]},
+
+ {"tag": "t13_Tororo_Sop-Sop-HC-III",
+  "picks": [[74, "Maternity building"],
+            [77, "Facility signboard"],
+            [6, "Weighing scale with height meter, marked SOP SOP H/C III"],
+            [59, "Oxygen concentrator, still boxed"],
+            [12, "Second block"],
+            [41, "Oxygen cylinder trolley"],
+            [34, "Autoclave"],
+            [35, "Instrument set kept in the store, boxed"]]},
+
+ {"tag": "t13_Tororo Mc_Kyamwinula-HC-III",
+  "picks": [[97, "Maternity block frontage"],
+            [108, "Signboard naming the facility"],
+            [82, "Project plaque for the upgrade of the facility from level II to level III"],
+            [107, "Water tank on its plinth; the pump does not work"],
+            [89, "Radiant infant warmer tagged KYAM RIW 01"],
+            [101, "Rating plate on the same warmer"],
+            [17, "Stainless frame cut KYAM-3-01"],
+            [65, "Centrifuge carrying the same series"]]}
+]

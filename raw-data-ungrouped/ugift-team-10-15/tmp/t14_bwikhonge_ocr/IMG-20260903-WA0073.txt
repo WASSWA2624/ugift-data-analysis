@@ -1,0 +1,84 @@
+BEST_ANGLE=90 SCORE=435 SIZE=(1080, 810)
+
+    65    137 0.04 Eqtpntanu
+    70    246 0.11 Depatbpent
+    73    409 0.39 Lila In
+    73    455 0.24 Top Numbof
+    73    773 0.90 Acc Dap
+    74    304 0.13 eal
+    75    899 0.27 Equipmeni
+    77    957 0.14 Remamu
+    79    535 0.39 Datu 0t
+    81    719 0.28 Recovety
+    82    302 0.29 Nunber
+    85    353 0.26 Deserpuon
+    85    409 0.53 Kontng
+    85    459 0.15 ingraye no |
+    87    597 0.99 Plced In
+    87    673 0.90 Cost
+    87    773 0.12 Cosl
+    87    863 0.89 Dapm
+    87    899 0.11 stalla
+    91    535 0.51 Purchese
+    95    719 0.74 Cost
+   102    598 0.09 sortico
+   116    592 0.00 Kielftal 
+   139    178 0.09 Biaels
+   140    132 0.03 Dee 7
+   145    353 0.33 PTane
+   149    245 0.05 Adkuh]
+   149    303 0.23 {0te
+   172    250 0.03 ALt
+   177    353 0.25 LLL
+   179    901 0.15 Gd
+   232    124 0.19 0,(1
+   247    985 0.04 4Le
+   247    239 0.07 Mattni
+   247    301 0.92 02
+   249    347 0.10 fhnlcs
+   263    245 0.01 (oecd]
+   277    236 0.08 Byin
+   286    348 0.05 4L
+   301    349 0.04 rathi
+   304    240 0.05 LCa
+   330    162 0.17 Ecupmeni S0;
+   335    988 0.03 I1o}
+   340    234 0.12 LPP
+   341    119 0.31 rd
+   353    349 0.27 Jeened
+   378    352 0.02 LLlDlaeld
+   393    117 0.05 TolWara Set Wam
+   403    235 0.91 LA
+   403    341 0.10 Jew"
+   407    293 0.31 22
+   416    344 0.03 Dil_Al
+   430    342 0.02 PaLpukrl]
+   443    917 0.38 Lach
+   472    115 0.01 aetet Sal Demkery
+   472    920 0.01 ale
+   481    225 0.06 Iaaty
+   493    341 0.14 TTrrg
+   501    229 0.17 Lard
+   508    348 0.08 41
+   531    109 0.02 mtttten €24SMcn
+   542    106 0.34 Rengun
+   543    231 0.46 LD D
+   543    289 0.26 6z'
+   551    337 0.01 JoMeh
+   568    336 0.11 naidl <
+   613    103 0.35 MVAR
+   629    905 0.10 haukaeit
+   631    327 0.41 Hda
+   644    280 0.12 QL
+   647    327 0.04 Lure
+   648    907 0.24 Ll
+   657    216 0.02 Dalle
+   665    329 0.20 hetel
+   666    905 0.19 fc =
+   681    221 0.11 Lad
+   689    339 0.22 Walv?
+   706    912 0.12 44l
+   715     93 0.10 5ip31, Labcrelory
+   717    212 0.02 Aobs8h5
+   719    273 0.37 1g
+   729    323 0.10 Mousuc

@@ -1,0 +1,75 @@
+  72, 483 0.77 ICT ITEMS TO VERIFY
+ 131, 107 0.61 (Desktop Coftputer; Server Processor; Network Switch 24 Port; Multipurpurose Printer; UPS,
+ 166, 108 0.57 Projector; Air Conditoners, Server; CCTV Camera)
+ 217, 109 0.25 Name of LG_TARORQ
+ 212, 385 0.13 AJA
+ 217, 489 0.19 c
+ 246, 328 0.03 n
+ 279, 111 0.89 Equlpment
+ 281, 223 0.66 Department
+ 281, 313 0.43 A9ael
+ 281, 407 0.85 Itam
+ 275, 495 0.67 Llfe
+ 275, 589 1.00 Tag
+ 275, 645 0.48 Mumbor
+ 271, 743 0.84 Date of
+ 299, 313 0.97 Number
+ 299, 409 0.92 Descrption
+ 295, 495 0.40 Months
+ 297, 591 0.18 enarave nO.
+ 293, 745 0.99 Purchase
+ 301, 113 0.10 Wlem
+ 315,  97 0.29 [Latcp?
+ 316, 304 0.13 Noezo
+ 318, 400 0.04 [fxoctt
+ 332,  68 0.71 21
+ 358, 406 0.25 Balc
+ 350, 588 0.85 No
+ 361, 108 0.14 Cbkp
+ 363, 171 0.61 tov
+ 361, 495 0.09 Lent (
+ 360, 642 0.41 Orqlavc
+ 378, 400 0.06 Natz?
+ 390, 496 0.86 Lyks
+ 417, 404 0.19 Cova,
+ 482, 110 0.52 4Rr
+ 484, 402 0.20 HAok (
+ 510, 408 0.60 Uack
+ 517, 585 0.04 narene
+ 542, 406 0.27 Cxfov
+ 541, 455 0.28 "wlthtyv
+ 562, 400 0.24 Mhyov
+ 582, 403 0.58 Nulch:
+ 629, 333 0.11 3201043 KtT
+ 642, 107 0.49 Hervov
+ 644, 504 0.38 LYK
+ 640, 604 0.59 Nol
+ 645, 313 0.75 66
+ 665, 105 0.22 [procqNlor
+ 666, 408 0.47 Infol'
+ 672, 587 0.04 Cvijvata
+ 692, 402 0.26 [ek4
+ 734, 103 0.27 Ahk
+ 730, 214 0.62 IBan
+ 732, 406 0.17 polu
+ 727, 417 0.11 Cotou
+ 762, 111 0.20 Luka_
+ 773, 181 0.95 24
+ 772, 412 0.46 hlv
+ 807, 111 0.43 'Pov
+ 795, 407 0.59 Cove,
+ 870, 444 0.90 Wovll
+ 900, 406 0.31 Whito Ib
+ 932, 404 0.22 lcbbourwll
+ 959, 405 0.11 novndld
+ 962, 594 0.50 Ogavs &
+ 989, 311 0.15 MRISAI00
+ 999, 103 0.13 Kprepetext '
+ 996, 218 0.52 Eck
+1007, 309 0.13 2S102AF
+1018, 400 0.10 Fixlaty
+1005, 407 0.15 alowf
+1029, 325 0.27 4i0
+1027, 599 0.44 Ndl
+1057, 404 0.86 [Black
+1064, 598 0.48 GJvenecQ

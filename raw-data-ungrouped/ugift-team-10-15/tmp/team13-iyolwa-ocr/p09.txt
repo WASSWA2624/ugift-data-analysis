@@ -1,0 +1,57 @@
+  58, 215 0.93 BUILDINGS TO VERIFY
+ 120, 118 0.70 (Non- Residential and Residential, Kitchen; Toilets
+ 163, 121 0.83 Pit latrine Water tanks, Fences etc )
+ 224, 118 0.67 Name of LG.
+ 212, 246 0.24 TaR 0Q 0
+ 210, 400 0.45 LLRIG
+ 242, 234 0.00 Unaea
+ 281, 107 0.38 Equlrmenu
+ 282, 216 0.09 Poparunent | Ascat
+ 276, 510 0.02 Doln
+ 274, 602 0.02 Tan4ber (
+ 270, 754 0.01 DaX
+ 297, 521 0.16 Guthe
+ 295, 605 0.02 cihiunoL
+ 291, 755 0.17 Punl
+ 305, 111 0.20 Itom
+ 305, 309 0.06 MumeI
+ 301, 399 0.12 Doacupllon
+ 323, 172 0.04 I2e_tia 5
+ 335, 234 0.18 Ola
+ 335, 399 0.11 CNem
+ 371, 193 0.26 NGien
+ 362, 400 0.51 Mavea
+ 389, 395 0.14 Hlthm
+ 386, 634 0.40 vaec
+ 394, 598 0.26 49
+ 427, 423 0.89 I
+ 423, 445 0.31 ctfice
+ 450, 400 0.14 Deput_HM
+ 474, 398 0.21 [Recophovlourse
+ 492, 400 0.02 oHevl eoqn 
+ 517, 415 0.24 Lovos
+ 548, 115 0.43 caffreum
+ 561, 397 0.25 Fz-TF
+ 588, 402 0.26 btoc
+ 614, 404 0.29 epove
+ 627, 422 0.27 elio4
+ 655, 453 0.46 OrD
+ 665, 401 0.12 @pbrodt
+ 688, 402 0.99 Cup
+ 717, 399 0.21 Lf.2k
+ 747, 403 0.19 Llo}
+ 786, 400 0.11 K-sA
+ 782, 464 0.12 SSc
+ 814, 406 0.43 plock
+ 843, 113 0.17 Mlhpuvple
+ 874, 412 0.78 Cutre
+ 909, 407 0.13 ~C" (
+ 940, 112 0.40 Lbaxsy 4tcT
+ 940, 416 0.12 hbava d
+ 951, 311 0.23 OL
+ 973, 408 0.17 Aunwl
+ 996, 401 0.25 Lbads
+1008, 484 0.52 0Hce
+1036, 399 0.04 Iaunk tu
+1062, 408 0.07 Co)opev afkuk
+1082, 396 0.11 415+91

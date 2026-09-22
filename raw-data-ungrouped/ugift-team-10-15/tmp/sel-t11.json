@@ -1,0 +1,51 @@
+[
+ {"tag": "t11_Abim_Alerek-Seed-Secondary-School",
+  "picks": [[1, "Library and ICT block"],
+            [51, "School signboard"],
+            [7, "Desktop computers still boxed in the store"],
+            [9, "Air conditioner and paper reams, still boxed"],
+            [27, "Chair frames, unassembled"],
+            [31, "Unassembled furniture filling the store"]]},
+
+ {"tag": "t11_Abim_Magamaga-Seed-School",
+  "picks": [[3, "Classroom block, seen from outside"],
+            [1, "Project signboard at the school"],
+            [5, "Classroom block and the hills behind"]]},
+
+ {"tag": "t11_Kotido_Panyangara-Seed-Secondary-School",
+  "picks": [[6, "Administration block"],
+            [11, "Classroom blocks across the compound"],
+            [1, "Staff quarters"],
+            [13, "Air conditioner unit on the block; it does not work"]]},
+
+ {"tag": "t11_Kotido_Rengen-Seed-School",
+  "picks": [[6, "Three blocks under construction"],
+            [4, "Toilet block, two rooms"],
+            [3, "Classroom block, roofed and unfinished"],
+            [8, "Three kitchens under construction"],
+            [10, "The two water tanks"]]},
+
+ {"tag": "t11_Kotido_Kamoru-HC-III",
+  "picks": [[36, "Health centre block"],
+            [24, "Ward with beds and a wheelchair"],
+            [6, "Instrument kits held in the store"],
+            [18, "GOU/MOH-UGIFT PROJECT FY/2023/2024 cut into the table top"],
+            [11, "Hollow ware set still in its carton"],
+            [15, "Oxygen concentrator"]]},
+
+ {"tag": "t11_Kaabong_Sidok-Seed-Secondary-School",
+  "picks": [[16, "Classroom block under construction"],
+            [24, "Block shell, windows not yet in"],
+            [33, "Latrine block under construction"],
+            [22, "Termite workings running up the plaster"],
+            [9, "The consignment stacked and unopened"],
+            [3, "Service tag on a boxed desktop computer"]]},
+
+ {"tag": "t11_Karenga_Kalimon-HC-III",
+  "picks": [[31, "Facility blocks from the compound"],
+            [36, "Facility signboard"],
+            [15, "GOU/MOH UGIFT-PROJECT FY2023/2024 on the wheelchair back panel"],
+            [29, "The same mark cut into the desk edge"],
+            [3, "Ward with beds"],
+            [19, "Portable pressure steriliser, which cannot be run"]]}
+]

@@ -1,0 +1,64 @@
+ 201, 185 0.28 CLklA
+ 201, 279 0.10 Jeeh_(CcONBAR Y
+ 199, 521 0.13 cHooz;
+ 215,  21 0.27 NAME OF ScHOOL
+ 257,   7 0.75 Date Placed In
+ 262, 136 1.00 Cost
+ 257, 209 0.97 Recovery
+ 257, 305 0.95 Acc Dep
+ 257, 379 0.93 Net Book
+ 255, 461 0.78 Ytd Deprn
+ 255, 537 1.00 Equipment status
+ 255, 663 0.97 Remarks
+ 279,   9 0.44 Senvice
+ 279, 211 0.99 Cost
+ 275, 303 1.00 Cost
+ 277, 381 0.84 Malue
+ 290, 526 0.13 Eex[hez
+ 296, 654 0.45 251 chr
+ 325, 651 0.21 IcountocQ
+ 320, 737 0.53 ~Phyrialy
+ 341,  41 0.89 fo
+ 353, 653 0.13 RhoLocgrayo-Q -
+ 394, 670 0.30 demsc
+ 416, 652 0.05 DslGceq
+ 416, 751 0.58 Wbut
+ 448, 656 0.18 hoL_hubokoc
+ 504, 673 0.53 furchal a0
+ 513, 531 0.16 6o
+ 511, 571 0.27 tho
+ 527, 533 0.12 LOncl
+ 537, 653 0.14 Wate Jaaa
+ 566, 656 0.10 clfto-ont offid
+ 605, 653 0.03 UlurctytaE
+ 619, 533 0.19 Gac
+ 640, 530 0.24 Londhez
+ 635, 697 0.37 County Q
+ 647, 653 0.36 (UC @
+ 662, 646 0.17 lhVically
+ 764, 652 0.68 Ila
+ 753, 685 0.22 fhoaL
+ 794, 576 0.12 Hex (
+ 790, 654 0.16 dourtocQ
+ 789, 747 0.06 ~pbayat
+ 810, 648 0.18 a8 tn
+ 835, 641 0.05 Utetab) +41 Iab
+ 866, 648 0.16 ILbrzV
+ 871, 745 0.27 dtarl
+ 879, 803 0.32 Ipew
+ 890, 690 0.29 bcA
+ 914, 764 0.23 9004
+ 918, 654 0.13 Cl
+ 919, 685 0.05 IJ~ Un
+ 937, 649 0.25 Trchtoe
+1018,   0 0.37 Ifek-26
+1016, 652 0.88 32
+1010, 683 0.44 4rtyal
+1023, 531 0.41 S6o
+1046, 526 0.13 Cpkl huwv
+1044, 652 0.30 Lowhtocl
+1044, 740 0.63 pkyiclly
+1063, 717 0.09 Tibbred +
+1068, 648 0.11 TrthE
+1091, 645 0.61 41 Ial #
+1120, 644 0.25 Clc Laboraty

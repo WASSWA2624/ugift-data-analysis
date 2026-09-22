@@ -1,0 +1,62 @@
+  55, 200 0.95 BUILDINGS TO VERIFY
+ 122, 104 0.76 (Non- Residential and Residential, Kitchen; Toilets
+ 165, 107 0.55 Pit latrine Water tanks, Fences etc;)
+ 215, 241 0.88 ToRoko
+ 213, 385 0.60 ARA
+ 228, 104 0.92 Name of LG
+ 282, 584 0.50 Tag Number (
+ 278, 740 0.73 Date 0f
+ 289,  93 0.56 Equlpment
+ 291, 203 0.95 Department
+ 291, 293 0.98 Assel
+ 289, 383 0.94 Item
+ 285, 491 0.86 Life In
+ 297, 737 0.70 Purchase
+ 311,  95 1.00 Item
+ 311, 293 0.56 Mumber
+ 307, 383 0.70 Descripilon
+ 305, 491 1.00 Months
+ 307, 587 0.29 engrve nOZ
+ 343, 127 0.16 Ginl
+ 341, 201 0.50 Oo
+ 343, 267 0.19 0 €
+ 334, 372 0.43 tstove
+ 359, 379 0.24 ~big
+ 392, 382 0.58 UnN
+ 462, 296 0.14 JepcoLL
+ 488, 277 0.19 ancle
+ 490, 374 0.24 lih
+ 499, 345 0.80 CC
+ 520, 286 0.25 (lnuofe
+ 549, 289 0.22 (Uc | |
+ 582, 280 0.62 73000 LTRI
+ 608, 285 0.31 BlkIn
+ 648, 290 0.85 Colowr
+ 685, 289 0.17 on-lans
+ 710, 284 0.15 lukh
+ 739, 287 0.39 moniak
+ 765, 284 0.87 [Pump
+ 804, 292 0.19 plue'
+ 826, 326 0.10 4Sk5
+ 852, 325 0.17 capaxdly
+ 899, 289 0.27 On
+ 892, 312 0.18 dolczl
+ 935, 335 0.77 ~0
+ 981, 122 0.21 Iatrlre
+ 977, 286 0.40 OvN
+ 992, 281 0.13 [yctcmvee
+1017, 293 0.15 Fechlthot
+1022, 282 0.07 @nnl
+1054, 278 0.13 Baykf
+1075, 275 0.05 #4atrw
+1092, 276 0.04 "Ovabityar
+1099, 280 0.08 Cat
+1132,  78 0.20 Toathnov U
+1136, 282 0.19 unial~
+1135, 355 0.06 Eallmvtr 5
+1145, 169 0.67 Pikl
+1140, 199 0.10 Jobire
+1158, 292 0.13 Mxtee
+1160, 382 0.47 Cor Iele
+1178, 294 0.12 Actenve
+1188, 416 0.60 ferle -

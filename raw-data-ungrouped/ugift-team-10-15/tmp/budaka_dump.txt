@@ -1,0 +1,784 @@
+Paste-ready dump. `B` = blank cell. Counts sit in the item name. Wording is the team's, spelling only settled. Empty printed rows that carry no hand are listed so the line is not invented.
+
+```python
+# Team 12 Budaka hand-filled toolkit transcription. Source: tmp/team12-wa/extract/
+B = ""  # BLANK
+U = "UNREADABLE"
+
+# =============================================================================
+# Namusita HC III
+# =============================================================================
+NAMUSITA = {
+    "facility": "Namusita HC III",
+    "lg": "Budaka District",
+    "pages": {
+        "IMG-20260831-WA0924.jpg": "discussion guide (p3)",
+        "IMG-20260831-WA0945.jpg": "checklist pp 4-5",
+        "IMG-20260831-WA0953.jpg": "checklist pp 6-7",
+        "IMG-20260831-WA0950.jpg": "checklist pp 8-9",
+        "IMG-20260831-WA0951.jpg": "checklist pp 10-11",
+        "IMG-20260831-WA0961.jpg": "checklist pp 12-13",
+        "IMG-20260831-WA0967.jpg": "checklist pp 14-15",
+        "IMG-20260831-WA0935.jpg": "checklist pp 16-17",
+        "IMG-20260831-WA0932.jpg": "checklist pp 18-19",
+        "IMG-20260831-WA0920.jpg": "checklist pp 20-21",
+    },
+    "guide": {
+        "1a": "Yes.",
+        "1b": B,  # 1a is Yes
+        "2": (
+            "We are supposed to report and take the spoilt items to Mbale "
+            "regional maintenance workshop or repair for the major ones but "
+            "with minor we repair them ourselves."
+        ),
+        "3": (
+            "We don't have that particular maintenance record but have an "
+            "inventory book we do capture the item, quantity, status and "
+            "others in."
+        ),
+        "4": (
+            "Previously at HC III, we had a big gap in equipment like "
+            "furniture, MCH instruments were hard to access but when UgIFT "
+            "came, it became easy and available. We used to admit few "
+            "patients due to lack of beds and due to UgIFT we are able to "
+            "admit more than 20 now."
+        ),
+        "informant": B,
+        "informant_contact": B,
+    },
+    # 15-tuple: item, dept, asset_no, desc, life, tag, purchase, service,
+    #           rec_cost, cost, acc_dep, nbv, ytd, status, remarks
+    "schedule": [
+        # pp 4-5
+        ("B.P. Machine, Digital (2 pcs)", "Health", "S/N 23582 00874",
+         "white digital machine for taking blood pressure", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B,
+         "1-functional 1-faulty",
+         "One deliberately refuses to work even if you insert batteries."),
+        ("B.P. Machine (Aneroid wall mounted) (2 pcs)", "Health", B, "N.A",
+         B, "N.A", B, B, B, B, B, B, B, "N.A", "N.A"),
+        ("Autoclave 20 Liters, Duo Operated", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Bowl, Kick (1 pc)", "Health", B,
+         "silver bowl on silver rolling stand", B, "NAM HC / UGIFT / 24-25",
+         B, B, B, B, B, B, B, "functional", "somehow strong and enough"),
+        ("Bowl Stand (2 pcs)", "Health", B, "silver rolling stands", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B, "functional",
+         "They look weak though still in use."),
+        ("Counting chamber Neubauer-Improved (2 pcs)", "Health", B,
+         "Pink glassware", B, "Not engraved", B, B, B, B, B, B, B,
+         "Functional", "Helps in their counting"),
+        ("Cupboard Steel, Lockable (2 pcs)", "Health", B,
+         "grayish locker double door", B, "MOH-BDK-NAM HC / 25-26", B,
+         "16/9/25", B, B, B, B, B, "fully functional",
+         "Very useful to the facility but few in number."),
+        ("Drip Stand (4 pcs)", "Health", B,
+         "silver stands with blue plastic holds", B, "NAMUSITA HC III", B,
+         "16/7/25", B, B, B, B, B,
+         "still in store because we have others in use",
+         "They are enough, even lent them to Budaka HC IV at a time."),
+        # pp 6-7
+        ("ESR Stand (1 pc)", "Health", B, "white plastic with weights", B,
+         "Not engraved", B, B, B, B, B, B, B, "Functional", "still good"),
+        ("Examination Couch (2 pcs)", B, B,
+         "Bed form couch for examination of patients", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B,
+         "functional and some in stores",
+         "we want to use it in the maternity soon"),
+        ("Examination light, LED (2 pcs)", "Health", B,
+         "white LED lights examiner", B, "NAM HC III / UGIFT / 24-25", B, B,
+         B, B, B, B, B, "functional",
+         "Still good since received and still in stores."),
+        ("Glucometer (2 pcs)", "Health", B,
+         "Black digital machines used for sugar testing", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B,
+         "Fully functional",
+         "They are okay and enough for the facility. maybe add for other departments."),
+        ("Haemoglobin Meter, Digital", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Height Meter (1 pc)", "Health", B,
+         "A white meter with analogue meter counters", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B, "functional",
+         "Good."),
+        ("Instrument Trolley (2 pcs)", "Health", B, "silver double shelf stand",
+         B, "NAMUSITA HC III", B, B, B, B, B, B, B, "functional", "But weak"),
+        ("Microscope Binocular (1 pc)", "Health", U,
+         "Black and white in color microscope", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B,
+         "functional but still in store", "we already have in use"),
+        ("Otoscope (1 pc)", "Health", B, "Purple in color", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B, "functional",
+         "Still enough for now."),
+        ("Patient Screen (4 pcs)", "Health", B,
+         "Blue screens for covering patients during examination", B,
+         "Not engraved", B, B, B, B, B, B, B,
+         "functional with others still in stores",
+         "They are weak. some are still in stores because we still have others in use."),
+        ("Patient Trolley (1 pc)", "Health", B, "silver metallic trolley", B,
+         "Not engraved", B, B, B, B, B, B, B, "Fully functional",
+         "Not enough for us. need for more since we have many departments."),
+        # pp 8-9
+        ("Refrigerator, Basic (1 pc)", "Health", B, "Double door freezer",
+         "120", "NAM HCIII / UGIFT / 24-25", B, B, B, B, B, B, B,
+         "Functional", "Need for a bigger one."),
+        ("Stethoscope (4 pcs)", "Health", B, "Grey in color stethoscope", B,
+         "NAM HCIII / UGIFT / 24-25", B, B, B, B, B, B, B, "All functional",
+         "so far are enough"),
+        ("Stop Watch (2 pcs)", "Health", B, "white digital stop watch", B,
+         "NAM HCIII / UGIFT / 24-25", B, B, B, B, B, B, B, "Functional",
+         "Good and enough."),
+        ("Stretcher (1 pc)", "Health", B,
+         "moving bed like stretcher with rollers", B, "Not engraved", B, B,
+         B, B, B, B, B, "Functional", "Still organizing for placement"),
+        ("Stove, Gas (1 pc)", "Health", B, "7.9 kgs gas", B, "Not engraved",
+         B, B, B, B, B, B, B, "Functional",
+         "Not enough for the facility since it is small."),
+        ("Weighing Scale with Height Meter, Adult (1 pc)", B, B, "Large scale",
+         B, "Not engraved", B, B, B, B, B, B, B, B, B),
+        ("Weighing Scale, Infant (2 pcs)", "Health", B, "Round weighing scale",
+         B, "NAM HCIII / UGIFT / 24-25", B, B, B, B, B, B, B, "Functional",
+         "Enough"),
+        ("Weighing Scale, Toddler (2 pcs)", "Health", B,
+         "white scale takes baby's weight", B,
+         "Property of Gov't of Uganda IDA 58970 UG", B, B, B, B, B, B, B,
+         "Functional", "Good."),
+        ("Wheel Chair (2 pcs)", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Audio Visual Equipment (1 pc)", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Medical Waste Bin (6 pcs)", "Health", B, "Silver metallic waste bins",
+         B, "NAM HCIII / UGIFT / 24-25", B, B, B, B, B, B, B, "Functional",
+         "So far enough though will need more by time. Need for bigger waste bins for proper disposal of waste."),
+        ("Wall Clock (4 pcs)", "Health", B, "Round white wall clocks", B,
+         "Not engraved", B, B, B, B, B, B, B, "All functional", "Good."),
+        # pp 10-11
+        ("Diagnostic Equipment Set for MCH (2 pcs)", "Health", B,
+         "set of diagnostic equipment", B, "NAM HC III / UGIFT / 24-25", B,
+         B, B, B, B, B, B, "functional", "process under placement"),
+        ("Diagnostic Equipment Set for OPD (2 pcs)", "Health", B,
+         "set of equipment with otoscope", B, "NAM HC III / UGIFT / 24-25",
+         B, B, B, B, B, B, B, "functional", "Enough for now"),
+        ("Glassware Set, Laboratory, Basic (2 pcs)", "Health", B,
+         "glass set of items", B, "Not engraved", B, B, B, B, B, B, B,
+         "functional", "Good still in stores."),
+        ("Hollow Ware Set, Treatment", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Instrument Set, Dressing (2 pcs)", "Health", B,
+         "silver set of items", B, "NAM HC III / UGIFT / 24-25", B, B, B, B,
+         B, B, B, "functional in stores",
+         "process for ward placement is on."),
+        ("Instrument Set, Basic ENT (3 pcs)", "Health", "N.A", B, B, "N.A",
+         B, B, B, B, B, B, B, B, "N.A"),
+        ("Instrument Set, Suture", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Pulse Oximeter, Hand held (2 pcs)", "Health", B,
+         "set of digital instrument for taking pulse", B, B, B, B, B, B, B,
+         B, B, "functional", "Good and still working."),
+        ("Bed, Adult Patient with Mattress (5 pcs)", "Health", B,
+         "white metallic beds with black mattresses", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B, "Still in stores",
+         "still re-organizing the facility in order to place them in wards."),
+        ("Bed, Pediatric Patient, With Mattress (3 pcs)", "Health", B,
+         "Small pink beds", B, "MOH-BDK / NAM HCIII 25-26", B, B, B, B, B,
+         B, B, "functional though not always",
+         "They are in good conditions and not enough in case of rise."),
+        # pp 12-13
+        ("Bedside Locker", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Cupboard, Instrument", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Delivery Bed, Hydraulic Manual (1 pc)", "Health", B,
+         "Pink leathered bed for delivery", B, B, B, B, B, B, B, B, B,
+         "Still functional",
+         "We at times get more than 3 mothers a day so not enough for the facility."),
+        ("Oxygen Therapy Apparatus, Minimum 45L cylinder (2 pcs)", "Health",
+         B, "Black cylinders with white neck", B, "Not engraved", B, B, B,
+         B, B, B, B, "Non functional",
+         "Because we have not used them before / yet."),
+        ("Resuscitator Manual, Infant, with all Mask sizes (2 pcs)", "Health",
+         B, "In stores packed", B, "N.A", B, B, B, B, B, B, B, "N.A",
+         "Something should be done to be sent to HC IV since are not in use at our facility yet."),
+        ("Resuscitator Manual, Adult, with all mask sizes (2 pcs)", "Health",
+         B, "Packed", B, "N.A", B, B, B, B, B, B, B, "N.A",
+         "Something should be done to be sent to HC IV since are not in use at our facility yet."),
+        ("Suction Apparatus, (Electric) (2 pcs)", "Health", B,
+         "white color with apparatus inside", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B,
+         "still in stores and functional", "Good and enough."),
+        ("Nebulizer, Ultrasonic (2 pcs)", "Health", "NB-152U SCIAN",
+         "white ultrasonic nebulizer", B, "NAM HC III / UGIFT / 24-25", B,
+         B, B, B, B, B, B, "functional", "Still in good condition."),
+        ("Oxygen Concentrator, Duo Flow (2 pcs)", "Health", B,
+         "They are not opened yet", B, "Not opened at the facility", B, B,
+         B, B, B, B, B, "Still in stores",
+         "Go hand in hand with O2 cylinders and now still packed because not in use yet."),
+        ("Bench (4 pcs)", "Health", B, "wooden and metallic form benches", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B, "All functional",
+         "Not enough for the patients at the facility."),
+        # pp 14-15
+        ("Disinfection Buckets (6 pcs)", "Health", B,
+         "Normal buckets light blue in color", B, "Not engraved", B, B, B,
+         B, B, B, B, "All functional",
+         "They are serving their purpose and used most and stronger."),
+        ("Baby Cot (4 pcs)", "Health", B, "white metallic beds for babies", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B, "All functional",
+         "we are soon transferring them to maternity."),
+        ("Diagnostic Equipment Set for Ward (3 pcs)", "Health", B,
+         "Packed instruments", B, "NAM HC III / UGIFT / 24-25", B, B, B, B,
+         B, B, B, "functional",
+         "Enough for the facility hence need to take some for a lacking facility if possible."),
+        ("Hollow Ware Set, Ward (3 pcs)", "Health", B,
+         "Hollow metallic equipment", B, B, B, B, B, B, B, B, B,
+         "Still in stores and some functional",
+         "They are enough to the facility at the moment."),
+        ("Instrument Set, Delivery (3 pcs)", "Health", B,
+         "silver metallic equipment for delivery", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B,
+         "Functional but still in store", "Still enough"),
+        ("Instrument Set, Stitch Removing (3 pcs)", "Health", B,
+         "Silver tins for stitch removing", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B, "functional",
+         "Ready for placement to the wards."),
+        ("MVA Kit (4 pcs)", "Health", B, "silver metallic instruments", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B, "functional",
+         "But weak especially the vaginal speculum (Cusco's) in particular."),
+        ("Stool, Laboratory (1 pc)", "Health", B,
+         "Black top and silver metallic stand with rollers", B,
+         "NAM HC III / UGIFT / 24-25", B, B, B, B, B, B, B, "functional",
+         "Not enough. looks weaker"),
+        # pp 16-17
+        ("Penguin Sucker (3 pcs)", "Health", B, "Plastic tins with suckers",
+         B, "Not engraved", B, B, B, B, B, B, B, "Functional",
+         "So far enough for the available population"),
+        ("Fetoscope, Doppler (2 pcs)", "Health", B, "white digital machine",
+         B, B, B, B, B, B, B, B, B, "Functional", "Good"),
+        ("Bubble CPAP (2 pcs)", "Health", B, "Plastic instruments", B, B, B,
+         B, B, B, B, B, B, "Functional",
+         "Still in packs soon to be handed to midwives."),
+        ("Centrifuge (Electric) (2 pcs)", "Health", B, "white machine", B,
+         "UGIFT / NAM HCIII / 24-25", B, B, B, B, B, B, B, "Functional",
+         "Enough for now."),
+        ("Kangaroo Mother Care Chair (1 pc)", "Health", B,
+         "Brown kangaroo chair", B, "NAM HCIII / UGIFT / 24-25", B, B, B, B,
+         B, B, B, "Functional",
+         "Not yet used but tested and soon deployed."),
+        ("Radiant Infant Warmer", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Haemoglobin Meter, Sahli (2 pcs)", "Health", B,
+         "Red in color digital machine", B, "NAM HCIII / UGIFT / 24-25", B,
+         B, B, B, B, B, B, B, B),
+        ("Delivery Bed", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Examination light", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        # pp 18-19
+        ("Instrument set, ENT Basic for HCIII", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Bag Valve mask (Ambu Bag), Neonatal", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Incubator", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Office Chair (7 pcs)", "Health", B, B, B,
+         "MOH BDK NAM HCIII / 25-26", B, B, B, B, B, B, B,
+         "All functional in use",
+         "All still good non broken though look weak."),
+        ("Desk (3 pcs)", "Health", B, "Wooden tables with metallic legs", B,
+         "MOH-NAM HCIII / 25-26", B, B, B, B, B, B, B, "functional",
+         "Not enough for our staff."),
+        # pp 20-21
+        ("Filing Cabinet (2 pcs)", "Health", B, "four lock metallic equipment",
+         B, "NAM HCIII / UGIFT / 24-25", B, B, B, B, B, B, B,
+         "fully functional",
+         "Not enough to the departments in the facility."),
+        ("Non Residential Buildings", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+        ("Residential Buildings", B, B, B, B, B, B, B, B, B, B, B, B, B, B),
+    ],
+    "page_20_nb": [
+        "We think the facility is liable for upgrading from HC III to HC IV since we have some of the equipment that are worthy.",
+        "medicines come monthly but not enough to the community.",
+        "Transport challenges during emergencies.",
+        "challenge with staff which the district is trying to address.",
+    ],
+    "notes": [
+        "One digital B.P. machine faulty: deliberately refuses to work even if you insert batteries.",
+        "Drip stands still in store; lent to Budaka HC IV at a time.",
+        "Examination couches, LED lights, microscope, patient screens, glassware, dressing sets, adult beds, resuscitators, oxygen concentrators, ward sets, delivery sets, Bubble CPAP: in stores / packed / not opened.",
+        "Oxygen cylinders marked non-functional because not yet used.",
+        "No theft / no power / no court note on these pages.",
+    ],
+}
+
+# =============================================================================
+# Kakule Seed Secondary School
+# =============================================================================
+KAKULE = {
+    "facility": "Kakule Seed Secondary School",
+    "lg": "Budaka District",
+    "pages": {
+        "IMG-20260831-WA0919.jpg": "discussion guide (p23)",
+        "IMG-20260831-WA0958.jpg": "furniture pp 25-26",
+        "IMG-20260831-WA0957.jpg": "ICT pp 31-32",
+        "IMG-20260831-WA0966.jpg": "buildings pp 35-36",
+        "IMG-20260831-WA0963.jpg": "buildings continuation pp 37-38",
+    },
+    "guide": {
+        "1a": "Yes.",
+        "1b": "No costs attached.",  # written across 1a/1b
+        "2": "There is a contracted carpenter who repairs the furniture in case of any damage.",
+        "3": (
+            "Not yet commissioned for use. All the assets are not engraved "
+            "which has limited the school from using the assets due to fear "
+            "of getting lost."
+        ),
+        "4": (
+            "No computers were provided yet the computer lab was built. "
+            "The doors only lock from outside hence compromising with security. "
+            "The science lab is not well equipped. "
+            "The school is not fenced. "
+            "The school field is incomplete. Some of the structures are already broken, not well built."
+        ),
+        "informant": "Mr Sisye Fred, DOS",
+        "informant_contact": "077170864",
+        "margin": (
+            "All UgIFT assets are not engraved in this school. "
+            "Ownership of the school. The school is a government school but "
+            "with support from different projects."
+        ),
+    },
+    "furniture": [
+        ("Chairs (255)", "Education", "N.A",
+         "Wooden tops with metallic stands", B, "Not engraved", B, "2026",
+         B, B, B, B, B, "Functional but not in use", B),
+        ("Office chairs (13)", "Education", "N.A",
+         "Wooden back, metallic stands and cushions", B, "Not engraved", B,
+         "2026", B, B, B, B, B, "Functional",
+         "Not broken but not in use."),
+        ("Tables (66)", "Education", "N.A",
+         "Wooden top with metallic stands", B, "Not engraved", B, "2026",
+         B, B, B, B, B, "Functional. Not in use. Not broken", B),
+        ("Laboratory stools (124)", "Education", "N.A",
+         "wooden round tops with metallic stands", B, "Not engraved", B,
+         "2026", B, B, B, B, B, "Functional not in use", B),
+        ("Desks (120)", "Education", "N.A", "wooden with metallic stands", B,
+         "Not engraved", B, "2026", B, B, B, B, B,
+         "In good condition but not yet in use.", B),
+    ],
+    "ict": [
+        ("Projector", "Education", "SN: 2021154956461 / 51003057", "EPSON",
+         B, B, B, B, B, B, B, B, B, B, B),
+        ("Projector (1)", "Education", "SN: X89T2100628",
+         "EPSON EB-E01 white in color", B, "Not engraved", B, "2026", B, B,
+         B, B, B, "Functional but not yet in use",
+         "It is not in use because it is not engraved"),
+        ("Projector screen (1)", "Education", B,
+         "Diamond brand, white in color", B, "Not engraved", B, "2026", B,
+         B, B, B, B, "Functional but not yet in use",
+         "It is not in use because it is not engraved"),
+        ("Public address system (2 speakers)", "Education", "SRX715",
+         '15" two-way professional speaker, JBL with a stand', B,
+         "Not engraved", B, "2026", B, B, B, B, B, "Functional and in use",
+         B),
+        ("Public address system", "Education", "EVP",
+         "Dual 15 two-way professional speaker JBL with a stand", B,
+         "Not engraved", B, "2026", B, B, B, B, B, "Functional and in use",
+         B),
+    ],
+    "buildings": [
+        # pp 35-36. Top: construction started 30/05/2024
+        ("Main hall (1)", "Education", "N.A",
+         "big and can be separated into classrooms. Has wooden separators",
+         B, "N.A", B, "2024", B, B, B, B, B,
+         "Already in use but not fully used",
+         "Well maintained. Used only for end of term exams."),
+        ("Science laboratory (1)", "Education", "N.A",
+         "A two roomed block with stores, sinks and taps, Bunsen burners installed",
+         B, "N.A", B, "2024", B, B, B, B, B, "Functional but not in use",
+         "The buildings are not yet in use since they are not engraved"),
+        ("Computer laboratory (1)", B, B,
+         "Permanent well wired but there are no computers", B, "N.A", B,
+         "2024", B, B, B, B, B,
+         "Well built and the electric cables are installed but there are no computers.",
+         B),
+        ("Library (1)", "Education", "N.A",
+         "Permanent building, well installed book shelves", B, "N.A", B,
+         "2024", B, B, B, B, B, "Not in use.",
+         "Not yet commissioned for use."),
+        ("Water tanks (3)", "Education", "N.A", "Plastic, black in colour",
+         B, "N.A", B, "2024", B, B, B, B, B,
+         "Already in use apart from one that is raised up on the stands.",
+         "In use, they collect rainwater"),
+        # pp 37-38. Top: construction started 30/05/2024; all UGIFT buildings not commissioned
+        ("Kitchen blocks (2)", "Education", "N.A",
+         "Permanent. Each block has two rooms. Well ventilated", B, "N.A",
+         B, "2024", B, B, B, B, B, "Not in use but in good condition",
+         "Not yet commissioned"),
+        ("Pit latrine blocks (5 blocks) (16 stances) (2 bathrooms)",
+         "Education", "N.A", "Permanent with vent pipes", B, "N.A", B,
+         "2024", B, B, B, B, B, "Not in use", "Not yet commissioned"),
+        ("Classroom blocks (3 blocks) (6 classrooms)", "Education", "N.A",
+         "Permanent with chalkboards inbuilt", B, B, B, "2024", B, B, B, B,
+         B, "Not yet in use. In good condition",
+         "Not yet commissioned for use by UgIFT"),
+        ("Administration block (1) with staff room", "Education", "N.A",
+         "Permanent", B, "N.A", B, "2024", B, B, B, B, B,
+         "Not in use but new", "Not yet commissioned for use by UgIFT"),
+        ("Staff quarters (2 blocks) (4 rooms)", "Education", "N.A",
+         "Permanent with inbuilt wardrobes", B, "N.A", B, "2024", B, B, B,
+         B, B, "Not yet in use, but the verandas are already broken.",
+         "Not yet commissioned for use by UgIFT"),
+    ],
+    "notes": [
+        "All UgIFT assets not engraved; furniture not in use for that reason.",
+        "Computer lab wired; no computers provided.",
+        "Not yet commissioned. Staff-quarter verandas already broken.",
+        "No theft / boxed / no-power / court note on these named pages.",
+    ],
+}
+
+# =============================================================================
+# Kamonkoli Seed Secondary School
+# =============================================================================
+KAMONKOLI = {
+    "facility": "Kamonkoli Seed Secondary School",
+    "lg": "Budaka District",
+    "pages": {
+        "IMG-20260831-WA0936.jpg": "discussion guide",
+        "IMG-20260831-WA0934.jpg": "furniture",
+        "IMG-20260831-WA0939.jpg": "ICT",
+        "IMG-20260831-WA0960.jpg": "buildings",
+        "IMG-20260831-WA0941.jpg": "buildings continuation",
+    },
+    "guide": {
+        "1a": "Yes although not specifically for UgIFT assets only.",
+        "1b": B,
+        "2": "Yes.",
+        "3": (
+            "Yes. Reasons for non-functionality. "
+            "some ICT equipment like the UPS were faulty. "
+            "The tops on lab stools were not well fixed due to the short screws. "
+            "No internet connection and the air conditioner set was incomplete hence it does not function."
+        ),
+        "4": (
+            "Recommendations: More classrooms are needed. "
+            "Additional computers are needed. "
+            "Ceilings in the staffroom, ICT and Library need to be improved. "
+            "Main hall partitioning and completion is needed. "
+            "There is need for a sickbay given that the school has a nurse. "
+            "There is need for a store to keep the assets safely. "
+            "There is need for a water system so that the tanks fully operate."
+        ),
+        "informant": "Mr Ochan Martin Luther, Headteacher",
+        "informant_contact": "0782303757",
+        "margin": (
+            "More teachers are needed on government payroll. "
+            "The school is fully owned by government and is supported by different projects. "
+            "Benefits: The construction of the school. Employment opportunities."
+        ),
+    },
+    "furniture": [
+        ("Office chairs (3)", "Education", B, "wooden with cushions", B,
+         "N/A", B, "2023", B, B, B, B, B, "In use and in good condition", B),
+        ("Ordinary chairs (134)", "Education", B,
+         "wooden with metallic stands", B, "N/A", B, "2023", B, B, B, B, B,
+         "All in use although some are broken",
+         "About 7 chairs are missing the behind wooden due to the weak screws used"),
+        ("Desks (120)", "Education", B, "wooden top with metallic frames", B,
+         "N/A", B, "2023", B, B, B, B, B, "All in use but some are broken",
+         "About 5 desks are broken"),
+        ("Laboratory stools (180)", "Education", B,
+         "wooden square tops with metallic stands", B, "N/A", B, "2023", B,
+         B, B, B, B,
+         "All in use but most of them the top part has moved out due to the short screws used",
+         B),
+        ("Book shelves (15)", "Education", B, "wooden with metallic frames",
+         B, "Not engraved", B, "2023", B, B, B, B, B,
+         "Functional in use and not broken", B),
+    ],
+    "ict": [
+        # Top: All ICT items were not engraved. AC delivered/installed but
+        # parts missing. 10 computers were stolen.
+        ("Multipurpose Printer (1)", B, "S/N: CNDRN9K0CB",
+         "HP LaserJet Pro MFP M428dw", B, "Not engraved", B, B, B, B, B, B,
+         B, "Functional and in use.", B),
+        ("Projector (1)", "Education", "S/N: 2YHU3300525",
+         "Its an EPSON, white in color", B, "Not engraved", B, "2024", B, B,
+         B, B, B, "Functioning in use and in good working condition.", B),
+        ("Air conditioner (1)", "Education", "TKK024 0D2J5J4003", "Hisense",
+         B, "Not engraved", B, B, B, B, B, B, B, "Incomplete and not working",
+         "some parts are missing."),
+        ("Desktop computers (28)", "Education",
+         "ST: 6D9SH93 EX: 15076719385",
+         "DELL intel core i5 black in color", B, "Not engraved", B, "2024",
+         B, B, B, B, B, "Functional in use.",
+         "Some computers were stolen. A total of 10 computers were stolen. The case is already at police."),
+        ("Desktop computers", B, "ST: B7RSH93 EX: 26014807451",
+         "DELL intel core i5 black in color", B, "Not engraved", B, "2024",
+         B, B, B, B, B, "Functional in use", B),
+    ],
+    "buildings": [
+        # pp 35-36. Tops: plywood ceilings already damaged; school added
+        # burglar proofs; construction started 2018; paint already peeling;
+        # no separators in main hall hence cannot be used for classes.
+        ("Classroom blocks (3) each with two classrooms", "Education", B,
+         "Permanent, with chalkboards, soft boards and an inbuilt store which is lockable",
+         B, B, B, "2023", B, B, B, B, B,
+         "still in good condition and are in use.", B),
+        ("Science laboratory block (2 rooms)", "Education", B,
+         "Permanent with taps, sinks and Bunsen burners installed.", B, B,
+         B, "2023", B, B, B, B, B, "Already in use", B),
+        ("ICT block divided into two, one being the Library", "Education",
+         B, "Permanent, well wired and the power was connected", B, B, B,
+         "2023", B, B, B, B, B, "Already in use",
+         "Although some computers were stolen and the case is already at Police."),
+        ("Water tanks (3)", "Education", B,
+         "Plastic, 1 - 3000L, 1 - 5000L, 1 - 10,000L", B, B, B, "2023", B,
+         B, B, B, B, "All in use and in good condition.", B),
+        # pp 37-38. Tops: The classrooms are few. No school kitchen.
+        # No school store. UgIFT Program did not fence the school.
+        ("Main hall (1)", B, B,
+         "Permanent and not separated into smaller rooms.", B, B, B, "2023",
+         B, B, B, B, B, "Already in use", B),
+        ("Administration block which has the staff room (1)", B, B,
+         "Permanent", B, B, B, "2023", B, B, B, B, B, "In use.", B),
+        ("Pit latrine blocks (6 blocks) (19 stances) (8 bathrooms)", B, B,
+         "Permanent with vents", B, B, B, "2023", B, B, B, B, B,
+         "Already in use and in good condition.", B),
+        ("Teachers' quarters (3 blocks) (6 units)", B, B,
+         "Permanent with two bedrooms one sitting and a small store for each unit.",
+         B, B, B, "2023", B, B, B, B, B,
+         "Already in use still in good condition.", B),
+        ("Kitchen blocks (3 blocks) (6 rooms)", B, B,
+         "Permanent well ventilated", B, B, B, "2023", B, B, B, B, B, B, B),
+    ],
+    "notes": [
+        "THEFT: 10 computers stolen; case already at police. Written on ICT page and again on the ICT/library building line.",
+        "Air conditioner incomplete / not working; parts missing.",
+        "UPS faulty (guide Q3). Lab stool tops loose (short screws).",
+        "No school kitchen / no school store / UgIFT did not fence the school (buildings continuation margin).",
+        "No boxed / no-power note on these named pages.",
+    ],
+}
+
+# =============================================================================
+# Mugiti Seed Secondary School
+# =============================================================================
+MUGITI = {
+    "facility": "Mugiti Seed Secondary School",
+    "lg": "Budaka",
+    "pages": {
+        "IMG-20260831-WA0949.jpg": "discussion guide (p23), HT stamp 27 Aug 2026",
+        "IMG-20260831-WA0940.jpg": "furniture pp 25-26",
+        "IMG-20260831-WA0954.jpg": "ICT pp 31-32",
+        "IMG-20260831-WA0964.jpg": "buildings pp 35-36",
+        "IMG-20260831-WA0948.jpg": "buildings continuation pp 37-38",
+    },
+    "guide": {
+        "1a": "Yes.",
+        "1b": B,
+        "2": "by repairing.",
+        "3": "No.",
+        "4": (
+            "Issues: No school fence. No power supply hence the ICT items are not used. "
+            "No water source apart from the rain water. The road to the school is in poor condition. "
+            "All the UgIFT assets are not engraved. No mesh for protection from bats. "
+            "Benefits: Eased access to Education for the locals. "
+            "Provided employment opportunities for both formal and informal sectors."
+        ),
+        "informant": "Mr Masaba Alex, Headteacher",
+        "informant_contact": "0782025223",
+        "margin": (
+            "The school is owned by the government but has not yet compensated the owner (126M). "
+            "The construction of the school ended on 20th March 2025. "
+            "On 10th June 2025 the school started operating. "
+            "Commissioned on 4th/Dec/2025."
+        ),
+    },
+    "furniture": [
+        # Top: All school furniture not engraved.
+        ("Desks (102)", "Educ", B, "wooden with metallic stands.", B,
+         "Not engraved", B, "10th/June/2023", B, B, B, B, B,
+         "In use and in good condition", "None is broken."),
+        ("Teachers' tables (6)", "Educ", B,
+         "wooden with 3 drawers and metallic stands", B, "Not engraved", B,
+         "10th/June/2023", B, B, B, B, B, "All in use", "Not broken"),
+        ("Laboratory stools (120)", B, B,
+         "Round wooden tops with metallic stands", B, "Not engraved", B,
+         "13th/June/2025", B, B, B, B, B, "In use.", "Not broken"),
+        ("chairs (266)", "Educ", B, "wooden with metallic frame", B,
+         "Not engraved", B, "13th/June/2025", B, B, B, B, B, "In use.",
+         "In good condition"),
+        ("Book shelves", "Educ", B, "wooden with metallic frames and stands",
+         B, "N.A", B, "13th/June/2025", B, B, B, B, B,
+         "in use and in good condition.", B),
+        ("Pin boards (76)", "Educ", B, "wooden frames mounted on the wall",
+         B, "Not engraved", B, "18th/June/2025", B, B, B, B, B,
+         "still in good condition and in use.", B),
+    ],
+    "ict": [
+        # One written line covering the ICT given. No other ICT lines filled.
+        ("Desktop computer (28)", B, B,
+         "Could not see them since they were still sealed in their boxes. No power supply.",
+         B, B, B, "10th/October/2023", B, B, B, B, B,
+         "All the ICT equipment are still new and in boxes",
+         "There is no power source for the school to use the ICT items hence are all still in boxes."),
+    ],
+    "buildings": [
+        ("Administration block (1)", B, B,
+         "Permanent, No burglar proofing. Metallic doors with only outside locks.",
+         B, "Not engraved", B, "10th/June/2025", B, B, B, B, B,
+         "Still in good condition.", "Poorly located."),
+        ("Water tanks (3)", B, B,
+         "Plastic and well built around them on a raised level", B,
+         "Not engraved", B, "10th/June/2025", B, B, B, B, B,
+         "In use but only use rain water, not fully utilised.", B),
+        ("Main hall (1)", B, B, "Permanent. Partitioned in wooden doors.", B,
+         "Not engraved", B, "10th/June/2025", B, B, B, B, B,
+         "Still in good condition but no ceiling, no burglar proofing and the lightning conductors are not well installed.",
+         B),
+        ("ICT Library block (1)", B, B,
+         "Permanent, burglar proofed only the windows and not doors. No ceilings in the library and the computer lab. There is aluminium cover on the iron sheets from inside.",
+         B, B, B, B, B, B, B, B, B,
+         "Not in use due to lack of power connection.", B),
+        ("Lined pit latrines (2 blocks) (18 stances)", B, B,
+         "Permanent, enclosed with vents", B, "Not engraved", B,
+         "10th/June/2025", B, B, B, B, B,
+         "Functional, In use. Some hinges are already spoilt (broken).", B),
+        ("Staff houses (3 blocks)", "Education", B,
+         "Permanent, metallic doors, wooden interior doors, wardrobes, small store",
+         B, "N.A", B, "10th/June/2025", B, B, B, B, B,
+         "still in good condition and in use",
+         "But the lightning conductors were not fully installed hence they don't function."),
+        ("Staff kitchens (3)", "Educ", B, "Permanent well ventilated", B,
+         "N.A", B, B, B, B, B, B, B, "In use.", B),
+        ("Science Block (1)", B, B,
+         "Permanent fully furnished with 4 fire extinguishers, concrete work tops and open shelves, Gas, metallic boxes for storing apparatus, skeleton, dummy biological organs for study.",
+         B, "N.A", B, "10th/June/2025", B, B, B, B, B,
+         "still in good condition, in use",
+         "but not fully utilised due to lack of water connection"),
+        ("Classroom block (3) each with 2 classes", "Education", B,
+         "permanent, metallic doors, blackboard", B, B, B, "10th/June/2025",
+         B, B, B, B, B, "In use, some mirrors were broken",
+         "The paint is peeling off"),
+    ],
+    "notes": [
+        "NO POWER: ICT still sealed in boxes; could not see them. Guide and ICT page both write no power supply.",
+        "All UgIFT assets / school furniture not engraved.",
+        "Owner not yet compensated (126M).",
+        "No theft / court note on these named pages.",
+    ],
+}
+
+# =============================================================================
+# Nansanga Seed Secondary School
+# =============================================================================
+NANSANGA = {
+    "facility": "Nansanga Seed School",  # header as written; other pages: NASANGA / NANSANGA SEED SEC SCH
+    "lg": "Budaka District",
+    "pages": {
+        "IMG-20260831-WA0922.jpg": "discussion guide",
+        "IMG-20260831-WA0962.jpg": "furniture (header NASANGA SEED SEC SCHOOL)",
+        "IMG-20260831-WA0952.jpg": "ICT (header NANSANGA SEED SEC SCH)",
+        "IMG-20260831-WA0944.jpg": "buildings (header NANSANGA SEED SEC SCH)",
+    },
+    "guide": {
+        "1a": "No.",
+        "1b": (
+            "The head teacher has no record of assets because she was not "
+            "given and only came to the facility on 19/May/2025."
+        ),
+        "2": "He had a budget and gave vote for maintenance amongst the board of members of the school.",
+        "3": "Unfortunately none has been broken or faulty at the facility. therefore no records.",
+        "4": (
+            "UgIFT facilities have saved learners from moving long distances "
+            "and also given enough teachers all subjects. that will quality "
+            "learning to the students. "
+            "However the school has no fencing that makes it hard against "
+            "strangers (grazers / security is at stake)."
+        ),
+        "informant": B,  # page refers to the head teacher; no name or number
+        "informant_contact": B,
+        "margin_top": (
+            "The headteacher, last week instructed the fine art teacher, to "
+            "engrave all the instruments at the facility hence he started on "
+            "some and a few. So still engraving. Started with staff room "
+            "chairs and tables. and some classroom desks."
+        ),
+        "margin_bottom": (
+            "The school needs fencing. "
+            "power issues making computers supplied dormant. "
+            "Access road to the facility needs to be worked on. "
+            "The playground is not completed yet and too small. "
+            "The instructional materials for learners need restocking (all subjects)."
+        ),
+    },
+    "furniture": [
+        ("Desks (102)", "Education", B, "102 desks received", B,
+         "Not engraved. N.S.S.S 001 - 102. The engraving process is still ongoing at currently.",
+         B, B, B, B, B, B, B, "All functional",
+         "Within some short time to come will not be enough because we expect more enrollment now that we have UNEB centre no. U3758"),
+        ("Office chairs (259 chairs in total)", "Education", B, B, B, B, B,
+         B, B, B, B, B, B, "ALL functional, non broken",
+         "They are not enough still by time when the learners become more in number."),
+        ("Laboratory stools (118)", "Education", B, B, B,
+         "No engraving still in process", B, B, B, B, B, B, B,
+         "functional, 1 neglected broken",
+         "They still look to be in need as more learners are expected. Need to reshape the wooden stools."),
+        ("Shelves (20)", "Education", B, B, B, B, B, B, B, B, B, B, B,
+         "All functional",
+         "Shelves will still not be in need due to the growing population of students and need for storage of books."),
+    ],
+    "ict": [
+        # Top p32: no reliable power; only one computer and printer in use,
+        # shared, stationed in the secretariat's office.
+        ("Desktops (28 received)", "Education",
+         "S/N CN-0DCYCF-QDC00-3C8-1ZOQ-A07",
+         "1 functional on solar system. 27 still packed due to power issues",
+         B, "Not engraved", B, B, B, B, B, B, B,
+         "Only one monitor set up is functional at the secretary's office while others still unpacked in the office.",
+         "Need to install electricity for the facility in order for the computers to be used though the room for the ICT lab was cleared since its a new construction area."),
+        ("Server processor", "Education", "N.A", "N.A", B, B, B, B, B, B, B,
+         B, B, "N.A", "N.A"),
+        ("Network 24 port", "Education", "N.A", "N.A", B, B, B, B, B, B, B,
+         B, B, "N.A", "N.A"),
+        ("Multipurpose Printer (1 pc received)", "Education",
+         "LaserJet Pro MFP 4103 dw", "HP printer", B, B, B, B, B, B, B, B,
+         B, "Fully functional at the secretariat office",
+         "1 printer cannot be enough to the facility mostly when comes exam time. We need lithograph for printing for bulky papers work."),
+    ],
+    "buildings": [
+        ("Non residential classrooms (3 classroom blocks each with 2 stances making 6 classrooms)",
+         "Education", B,
+         "3 classroom blocks, each with 2 stances making 6 classrooms", B,
+         "No engraving", B, B, B, B, B, B, B, "Fully functional.",
+         "All classrooms have leakages when it comes to rain season. Need for burglar proofs in the windows."),
+        ("Administration block", "Education", B,
+         "1 Admin block 4 offices, 1 for headteacher, 2 Deputy H/M, 1 bursar and secretary and also contains staff room for teachers.",
+         B, "N.A", B, B, B, B, B, B, B, "Fully functional",
+         "Finishing of the lock systems (doors) need to be addressed."),
+        ("Computer lab and library", "Education", B,
+         "1 block housing the computer lab and library", B, "N.A", B, B, B,
+         B, B, B, B, "Fully functional",
+         "More books and in for library more subjects not for library only focused on meanwhile sciences. Need to start lab is UNREADABLE because using computers they are still packed in their boxes."),
+    ],
+    "notes": [
+        "NO POWER: computers supplied dormant; 27 of 28 still packed; one on solar at the secretary's office.",
+        "BOXED: computers still packed (ICT page and computer-lab remarks).",
+        "Engraving started (staff-room chairs/tables, some desks); N.S.S.S 001-102 on desks; still ongoing.",
+        "No theft / court note on these named pages.",
+        "No informant name or contact on the guide.",
+    ],
+}
+
+# Cells I could not settle (do not invent)
+UNREADABLE_OR_SOFT = [
+    "Namusita microscope serial: two readings conflict; left UNREADABLE.",
+    "Namusita pediatric-bed tag: hand is MOH-BDK / NAM HCIII 25-26 (MAJ/MAT also possible).",
+    "Namusita adult weighing-scale count: page shows 1 pc (not 2); status/remarks blank.",
+    "Kamonkoli projector serial 2YHU3300525: digits soft.",
+    "Kamonkoli desktop ST/EX serials soft; quoted as first full-page reading.",
+    "Kamonkoli pit-latrine stances: 19 (not 17).",
+    "Mugiti guide 1a read Yes on the dedicated re-read (an earlier pass said No). 1b is blank.",
+    "Mugiti owner-compensation figure: 126M as on the re-read (earlier pass said 1.26M).",
+    "Nansanga head-teacher start date: 19/May/2025 as on the re-read (earlier pass said 2023).",
+    "Nansanga computer-lab remarks: one clause UNREADABLE.",
+    "Named pages only. Kakule bookshelves/ICT continuation, Kamonkoli furniture/ICT continuation (UPS), and Nansanga tables page were not in this list.",
+]
+```
+
+**Theft / boxed / no power / court (named pages only)**
+
+| Facility | Notes on the pages |
+|---|---|
+| Namusita HC III | Stores/packed/not opened on many lines. One digital BP faulty. No theft/court/no-power. |
+| Kakule | Not engraved; not commissioned; no computers in a wired lab. No theft/court/no-power. |
+| Kamonkoli | **10 computers stolen; case at police.** AC incomplete. UPS faulty (guide). |
+| Mugiti | **No power; ICT still sealed in boxes; not seen.** Owner not compensated (126M). |
+| Nansanga | **No reliable power; 27/28 desktops packed; one on solar.** Engraving started. |
+
+Models: Cursor Grok 4.6.

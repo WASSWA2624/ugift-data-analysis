@@ -1,0 +1,76 @@
+ 132, 832 0.37 SCHOOL INTERVII
+ 158, 858 0.19 Nokllh
+ 173, 773 0.78 Name ol school;
+ 197, 811 0.15 Does te Faciley have
+ 202, 934 0.30 necord
+ 215, 811 0.28 Lel
+ 239, 809 0.23 opplied
+ 229, 811 0.57 (Obiain
+ 227, 861 0.36 record and verit; Il it
+ 258, 188 0.80 SCHOOL VERIFICATION CHECKLIST
+ 255, 811 0.04 INotask how many Wcte _{upplic
+ 284, 112 0.26 etonaanha
+ 281, 888 0.34 faciliny Maintain
+ 286, 814 0.06 Kox
+ 285, 841 0.45 docs this
+ 304, 102 0.20 Norez   eff
+ 324, 168 0.15 clarer bloiki
+ 317, 807 0.37 Yesf
+ 329, 837 0.40 Scntol
+ 327, 917 0.51 La
+ 330, 106 0.15 nvena,
+ 343, 329 0.38 610
+ 330, 368 0.18 nac_lael .
+ 330, 796 0.68 Tc
+ 335, 951 0.21 AO
+ 352,  88 0.13 Ftloy
+ 358, 224 0.57 NstaaL
+ 351, 779 0.21 K-cy
+ 355, 829 0.07 AOvQ
+ 350, 882 0.26 thay
+ 351, 939 0.37 Con
+ 360, 158 0.28 nooc
+ 369, 311 0.11 (Uyf Cv
+ 377,  98 0.28 ALes
+ 385, 173 0.08 hoccf (imttoel  (omputowr
+ 421, 815 0.19 Docs thz fa-ility Ukz regula Tcc
+ 433, 934 0.30 n
+ 435, 817 0.38 breakdown 0f the asset5
+ 461, 817 0.83 Nonfunctional
+ 463, 907 0.71 working.
+ 478, 820 0.49 Tunctona
+ 492, 808 0.50 ES
+ 532, 804 0.44 But
+ 537, 889 0.16 nDlu
+ 535, 931 0.13 #Lot
+ 541, 851 0.39 Kerr
+ 560, 806 0.17 Ter ve penk_
+ 641, 831 0.23 How nas t2 UglFT suppon
+ 658, 864 0.01 AnT
+ 656, 940 0.02 8
+ 672, 832 0.13 FeC
+ 669, 852 0.14 mmendatln_n belter
+ 682, 792 0.06 T6Kv bocn
+ 703, 793 0.32 Sumyy
+ 715, 875 0.28  O
+ 715, 928 0.10 Cor
+ 729, 799 0.43 hvmpecl
+ 733, 887 0.24 Inha fon
+ 747, 789 0.12 Aec
+ 754, 848 0.15 ~fchero l
+ 753, 923 0.18 Iolfo
+ 765, 796 0.09 (LicE
+ 779, 857 0.09 0^
+ 775, 939 0.08 molo
+ 809, 803 0.29 proceedto verificatiom AfteF
+ 830, 800 0.61 oChal
+ 835, 815 0.21 Laytea?
+ 835, 895 0.25 y
+ 854, 903 0.08 QaQu
+ 871, 815 0.27 Al
+ 874, 870 0.22 Uauwom
+ 895, 823 0.13 Xoy)
+ 905, 899 0.51 Le'
+ 907, 939 0.87 hce
+ 924, 832 0.20 ~le
+ 921, 894 0.07 halleaykte

@@ -1,0 +1,113 @@
+BEST_ANGLE=90 SCORE=636 SIZE=(1080, 810)
+
+    52    735 0.12 Bu_KHenSe
+    53     19 0.12 KealTh CENTRE CHECKLIST
+    53    976 0.62 CENTRE
+    56    888 0.61 tezlt
+    63    237 0.04 Loclt_48422LmEZI
+    66    114 0.14 BecanBul
+    67    545 0.14 NAMe Of HEALTHFAcIITY
+    83     21 0.21 NANEOFLG;
+    93    883 0.89 Equipment
+    93    945 0.63 Ramarks
+    97    737 1.00 Acc Dep
+    98    672 0.58 Recovery
+    99    545 0.61 Date
+   101    431 0.23 Date 0f
+   101    621 0.99 Cost
+   103    345 0.99 Tag Number
+   105    297 0.56 Llfa In
+   107    241 0.78 Ilem
+   107    793 0.96 Book
+   107    839 0.92 Depm
+   107    881 0.03 szeus
+   109     17 0.21 Equiprtent Nem
+   109    129 0.20 Departmant 
+   109    189 0.10 Ass01
+   111    545 0.98 Placed
+   111    737 0.99 Cost
+   115    351 0.82 engrave no,)
+   115    431 0.96 Purcnase
+   115    671 0.80 Coste
+   119    241 0.90 Description
+   119    299 0.92 Months
+   121    187 0.92 Nuntber
+   121    793 0.88 Value
+   124    544 0.58 Banice
+   141    538 0.12 24X_
+   142    428 0.72 Aet
+   145     15 0.03 DP Wactine Drlel
+   147    241 0.22 Kilm
+   147    127 0.13 [dkel
+   157    881 0.52 uctzana
+   160    237 0.01 Rchlnt
+   169    133 0.34 (urd
+   174    240 0.18 duie
+   185     75 0.12 4
+   186     26 0.00 neeee
+   195    883 0.12 NGaz
+   195    966 0.71 Net
+   205     11 0.12 1 P_Maznine ( Areroid"
+   207    127 0.10 O"'0 0
+   207   1015 0.26 2454
+   209    189 0.62 62
+   209    235 0.18 ana()
+   211    891 0.18 nasleas
+   222     30 0.09 M7DM7 &
+   228    980 0.41 A6]
+   231    889 0.16 Tuu
+   235    125 0.19 Exe
+   237    237 0.56 Leffarm
+   248    968 0.12 Uguft
+   271    233 0.06 12
+   273      9 0.05 Juiclawe 2 Lie Du
+   275    121 0.10 Lila n+
+   276    888 0.14 fche ^
+   279    185 0.11 61
+   286     10 0.02 anadet
+   287    235 0.11 JtoWya
+   297    903 0.12 +or|
+   305    979 0.12 Hl
+   329    239 0.13 Jloik
+   337      7 0.05 EowtncI
+   343    117 0.12 Ilaten (|
+   349    231 0.09 Ghled
+   359    119 0.96 Lard
+   370    982 0.29 Apz
+   370    643 0.14 AFA
+   379      5 0.33 Ezn Slrd
+   380    234 0.03 T eaTv
+   382    114 0.13 hefnh
+   382    890 0.29 fuxfe
+   384    180 0.63 el4
+   407    901 0.04 7-02
+   410    120 0.11 Lut
+   411    233 0.19 Lun htel
+   438      0 0.34 Counting chant-
+   451      0 0.10 Weubauer_WPOed
+   458    988 0.23 -[ot
+   506      0 0.02 Supbogru Sieel Loc"ede
+   510    116 0.18 0Rs
+   513    223 0.04 Dolnil
+   517    179 0.49 64
+   536    981 0.36 ENGRN
+   542    230 0.01 Ini
+   542    904 0.26 0q4p
+   548    112 0.41 EP
+   565    915 0.29 Ment
+   569      0 0.10 Ip Jtard
+   579    107 0.10 Mulenh
+   581    225 0.15 HoJkc {
+   582   1010 0.98 VED
+   583    171 0.16 oX
+   588    659 0.10 THA
+   589    905 0.14 Ca
+   603    113 0.03 Liure
+   607    903 0.46 Qalable
+   629    223 0.01 eet
+   639    107 0.16 Je <
+   639    907 0.16 CA
+   639    216 0.15 loldiy
+   657    551 0.13 25X u
+   662    900 0.11 tfdo
+   682   1000 0.05 (Gu1

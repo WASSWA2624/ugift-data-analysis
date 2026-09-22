@@ -1,0 +1,113 @@
+ 169, 193 0.97 SCHOOL INTERVIEWIDISCUSSION GUIDE
+ 207, 227 0.10 Lekll
+ 205, 367 0.16 Neek_EcON)AL
+ 208, 568 0.36 Sctool
+ 223, 117 0.46 Name 0f school;
+ 261, 165 0.57 Does the Facility have
+ 259, 321 0.85 record of all assets provided under
+ 259, 549 0.28 Yeu-
+ 277, 163 0.61 UgIFT
+ 297, 165 0.70 (Obtain
+ 295, 229 0.84 record and verify if it has the costs and numbers
+ 315, 165 0.70 supplied
+ 333, 167 0.38 ICNol ask how mani
+ 338, 302 0.07 UCic
+ 330, 331 0.97 supplied
+ 333, 389 0.26 and whecm:
+ 366, 167 0.52 How does this facility Maimtain (repair servicetreplace) the assets provided under
+ 387, 169 0.63 Leif
+ 408, 156 0.14 Vesf
+ 426, 149 0.22 TL0 Schtol
+ 424, 298 0.88 La hol
+ 420, 377 0.14 Yc 6
+ 422, 432 0.64 clor &
+ 426, 568 0.28 reper Lut
+ 448, 250 0.15 they
+ 439, 709 0.13 InCajo _
+ 451, 120 0.16 n-oy
+ 455, 183 0.12 hne
+ 456, 326 0.70 Cev
+ 458, 380 0.24 uf@ PHc
+ 464, 498 0.51 fura
+ 543, 169 0.56 Does the facility take regular record about functionality/ or
+ 542, 544 0.32 Ye
+ 560, 169 0.87 breakdown of the assets provided?
+ 597, 167 0.96 Nonfunctional
+ 595, 278 0.85 working;
+ 597, 353 0.87 and
+ 599, 395 0.52 Feasons
+ 597, 459 0.12 Tor
+ 599, 497 0.29 none
+ 617, 167 0.28 Tunctiona
+ 638, 356 0.03 Teoino
+ 632, 440 0.18 Lac
+ 644, 579 0.07 Jxz FouInul
+ 647, 305 0.02 pntel
+ 673, 167 0.02 TN eO )
+ 689, 137 0.30 But   for
+ 676, 361 0.41 havenot
+ 677, 467 0.84 hacl
+ 682, 530 0.41 Jov   muc
+ 685, 644 0.11 Qzu pha H
+ 690, 247 0.43 now #oy
+ 723, 135 0.34 ter repexr -
+ 824, 158 0.52 Hownas (he UgIFT suppor helped in service delivery in
+ 849, 157 0.33 #he
+ 851, 199 0.31 ared:
+ 849, 251 0.16 amt"
+ 849, 299 0.21 issues,
+ 841, 361 1.00 challenges
+ 845, 451 0.87 and
+ 847, 499 0.13 @mT
+ 869, 157 0.98 reco
+ 863, 196 0.56 mendations for better program implementatiom
+ 884, 200 0.11 bwo1
+ 884, 382 0.54 6vcat
+ 880, 508 0.10 Hke Jov etempke
+ 883, 773 0.44 wstou
+ 886, 108 0.15 T6 hav
+ 888, 312 0.17 Jhre;
+ 888, 462 0.98 UQ
+ 899, 749 0.31 Ja
+ 913, 104 0.18 XupoLy
+ 920, 206 0.21 #o
+ 917, 273 0.30 Conmunly 1
+ 920, 432 0.15 Curvorkky
+ 921, 549 0.41 ervii
+ 926, 696 0.27 Ihe; Wshov
+ 939, 133 0.30 mpecq
+ 942, 220 0.10 (nta fomk
+ 937, 657 0.51 D1
+ 958, 415 0.24 Suppbctoc(
+ 968,  98 0.13 Awo;
+ 972, 167 0.47 Nfcheol
+ 965, 263 0.55 16kelf
+ 968, 362 0.48 hcal
+ 961, 583 0.61 Eln
+ 963, 651 0.10 boec1+
+ 970, 776 0.14 #_
+ 975, 733 0.39 (
+ 995, 105 0.13 cklbra
+1003, 223 0.12 (v @J
+ 999, 281 0.67 I
+ 991, 302 0.56 Vorov
+ 995, 389 0.76 Iov
+1004, 440 0.08 JC
+1000, 492 0.24 4ky how
+1007, 179 0.41 O
+1045, 105 0.12 PROCEEDTo VerificATiON After ThIS DisCUsSiON
+1074, 102 0.39 ockelle
+1076, 218 0.15 4:
+1086, 113 0.16 Umtoc?
+1099, 226 0.28 Gompu
+1098, 300 0.11 Kon t
+1126, 115 0.12 Aia
+1130, 184 0.29 Uas(ruom
+1131, 431 0.85 hol Orgus
+1141, 321 0.20 OcR (
+1143, 377 0.43 6 G
+1157, 122 0.14 Avoy)
+1157, 213 0.03 ke hcccl AhzsL, Westa <
+1184, 339 0.23 "'toxt bso-k tr
+1182, 504 0.31 GlU CLANO
+1189, 128 0.10 ~e |eleqyxte

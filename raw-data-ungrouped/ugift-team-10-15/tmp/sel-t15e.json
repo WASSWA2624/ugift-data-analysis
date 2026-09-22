@@ -1,0 +1,32 @@
+[
+ {"tag": "t15_Kapchorwa_Kaptanya-Seed-Secondary-School",
+  "picks": [[4, "Library and ICT laboratory block"],
+            [5, "Multipurpose block"],
+            [6, "Classroom block"],
+            [13, "Staff house, one of those engraved KAPTANYA SSS"],
+            [12, "Staff toilets"],
+            [3, "Laboratory stools carrying the same mark"],
+            [10, "Library shelving"],
+            [1, "Classroom desks, recorded not engraved"],
+            [2, "Laboratory tables, carrying no mark"]]},
+
+ {"tag": "t15_Kapchorwa Mc_Kaplelko-HC-III",
+  "picks": [[1, "Office desk, recorded not engraved"],
+            [2, "Office chair, engraved"],
+            [8, "Refrigerator, engraved"],
+            [7, "Instrument cupboard, stocked and in use"],
+            [19, "Stretcher"],
+            [20, "Kangaroo mother care chair"],
+            [21, "Oxygen therapy apparatus, 45 litre cylinders"],
+            [15, "Autoclaves"]]},
+
+ {"tag": "t15_Kween_Benet-HC-III",
+  "picks": [[4, "Staff quarters, unroofed and unfinished"],
+            [6, "Toilet block, four stances"],
+            [9, "Waiting area, not yet handed over"],
+            [8, "Maternity ward, in use"],
+            [1, "Bedside locker, still boxed"],
+            [3, "Instruments packed in the one store"],
+            [13, "Beds in use; one of the twenty-six is not functional"],
+            [2, "Filing cabinet, still boxed"]]}
+]
