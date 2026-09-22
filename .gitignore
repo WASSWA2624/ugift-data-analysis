@@ -1,3 +1,19 @@
+# Photos stay local. Already-pushed images remain in git history.
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.bmp
+*.tif
+*.tiff
+*.heic
+*.heif
+*.jfif
+*.JPG
+*.JPEG
+*.PNG
+
 # GitHub rejects files over 100 MB. Keep these local only.
 raw-data-ungrouped/Busoga Region.zip
 raw-data-ungrouped/Guma teams.zip
