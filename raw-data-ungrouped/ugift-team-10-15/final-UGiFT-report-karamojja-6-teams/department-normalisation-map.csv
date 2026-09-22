@@ -1,0 +1,256 @@
+﻿Original department,Facility type,Standardised to,Rows
+Health,Health facility,Health,1663
+(blank),Health facility,Health,500
+Education,School,Education,339
+(blank),School,Education,261
+Edn,School,Education,217
+Laboratory,Health facility,Laboratory,99
+MCH,Health facility,MCH,79
+General,Health facility,General,49
+Outpatient,Health facility,OPD,36
+ICT,School,ICT,32
+Buildings,School,Buildings,30
+General ward,Health facility,General ward,29
+Labour suite,Health facility,Labour suite,25
+Labour suit,Health facility,Labour suite,23
+Antenatal room,Health facility,Antenatal room,20
+Educ,School,Education,20
+Maternity ward,Health facility,Maternity ward,20
+OPD / MCH,Health facility,MCH / OPD,20
+Store,Health facility,Store,19
+General wards,Health facility,General ward,16
+Maternity,Health facility,Maternity ward,16
+-,Health facility,Health,14
+M.C.H,Health facility,MCH,14
+None,Health facility,Health,14
+O.P.D,Health facility,OPD,13
+Consultation room,Health facility,Consultation room,12
+OPD,Health facility,OPD,11
+Library,School,Library,10
+Biology,School,Biology laboratory,9
+Children ward,Health facility,Children ward,9
+Laboratory,School,Laboratory,8
+Store kept,Health facility,Store,8
+Antenatal ward,Health facility,Antenatal ward,7
+education,School,Education,7
+Immunisation room,Health facility,Immunisation room,7
+Staff quarters,School,Staff quarters,7
+OPD and MCH,Health facility,MCH / OPD,6
+Biological Science,School,Biology laboratory,5
+Classroom,School,Classroom,5
+Dispensing room,Health facility,Dispensing room,5
+IPD,Health facility,IPD,5
+Kitchen,Health facility,Kitchen,5
+Building,School,Buildings,4
+Classrooms,School,Classroom,4
+Hall,School,Hall,4
+O.P.D / M.C.H,Health facility,MCH / OPD,4
+O.P.D / Store,Health facility,OPD / Store,4
+OPD & MCH,Health facility,MCH / OPD,4
+Ward,Health facility,General ward,4
+Admin,School,Administration,3
+Administration block,School,Administration,3
+Delivery room,Health facility,Delivery room,3
+Edn.,School,Education,3
+Female ward,Health facility,Female ward,3
+Kept in store,Health facility,Store,3
+Laboratory room,Health facility,Laboratory,3
+Labour suite / ward,Health facility,General ward / Labour suite,3
+Postnatal room,Health facility,Postnatal room,3
+School furniture,School,Furniture,3
+Shelter / housing,Health facility,Staff housing,3
+Staff room,School,Staff room,3
+"Classrooms, staffroom, admin",School,Administration / Classroom / Staff room,2
+Computer laboratory,School,Computer laboratory,2
+E.P.I,Health facility,EPI,2
+ENT / OPD,Health facility,ENT / OPD,2
+EPI,Health facility,EPI,2
+Examination and consultation,Health facility,Examination and consultation room,2
+IPD / OPD,Health facility,IPD / OPD,2
+"Labs ICT, science",School,ICT / Science,2
+M.C.H / O.P.D,Health facility,MCH / OPD,2
+M.C.H / Post natal ward,Health facility,MCH / Postnatal ward,2
+M.C.H ward,Health facility,MCH ward,2
+Maternity ward / E.P.I,Health facility,EPI / Maternity ward,2
+Maternity ward / Store,Health facility,Maternity ward / Store,2
+MCH / Theatre,Health facility,MCH / Theatre,2
+Multipurpose hall,School,Hall,2
+O.P.D / E.P.I,Health facility,EPI / OPD,2
+Post natal ward,Health facility,Postnatal ward,2
+Records room,Health facility,Records room,2
+Security,School,Security,2
+Staff quarters,Health facility,Staff quarters,2
+Staff toilets,School,Staff toilets,2
+Store not in use,Health facility,Store,2
+Ward / antenatal room,Health facility,Antenatal room / General ward,2
+"Admin, staffroom, classroom, science and ICT labs",School,Administration / Classroom / Science and ICT labs / Staff room,1
+"Admin, staffroom, classrooms, science and ICT labs",School,Administration / Classroom / Science and ICT labs / Staff room,1
+All wards,Health facility,General ward,1
+Antenatal / labour suite,Health facility,Antenatal room / Labour suite,1
+Antenatal room / examination and consultation,Health facility,Antenatal room / Examination and consultation room,1
+Antenatal room / female ward / maternity ward,Health facility,Antenatal room / Female ward / Maternity ward,1
+Antenatal room / Laboratory,Health facility,Antenatal room / Laboratory,1
+Antenatal ward / Labour suit,Health facility,Antenatal ward / Labour suite,1
+Block 1,School,Block 1,1
+Block 2,School,Block 2,1
+Block 3,School,Block 3,1
+Boys' toilet,School,Boys toilets,1
+Boys' toilets,School,Boys toilets,1
+Class room,School,Classroom,1
+Class rooms,School,Classroom,1
+Class rooms / School,School,Classroom,1
+Class rooms / Staff room / Reception office,School,Classroom / Reception / Staff room,1
+Cold chain room,Health facility,Cold chain room,1
+Computer laboratory / Physics / Chemistry / Biology laboratory,School,Biology laboratory / Chemistry laboratory / Computer laboratory / Physics laboratory,1
+Consultation / wards,Health facility,Consultation room / General ward,1
+Consultation room / Dispensary / EPI / Antenatal room,Health facility,Antenatal room / Consultation room / Dispensary / EPI,1
+Consultation room / EPI,Health facility,Consultation room / EPI,1
+Consultation room / Laboratory,Health facility,Consultation room / Laboratory,1
+Consultation room / Reception,Health facility,Consultation room / Reception,1
+Control room / Biochemistry / Library / Main store,School,Biochemistry laboratory / Control room / Library / Store,1
+Control room / Computer laboratory,School,Computer laboratory / Control room,1
+Control room / Office reception / Staff room,School,Control room / Reception / Staff room,1
+Delivery room / store,Health facility,Delivery room / Store,1
+Dispensary O.P.D,Health facility,Dispensary,1
+Dispensing / OPD,Health facility,Dispensing room / OPD,1
+Dispensing room / female / male ward / laboratory,Health facility,Dispensing room / Female ward / Laboratory / Male ward,1
+Dispensing room / waiting room,Health facility,Dispensing room / Waiting room,1
+Doffing / changing room,Health facility,Doffing room,1
+Edu,School,Education,1
+Examination and consultation room,Health facility,Examination and consultation room,1
+Examination area / immunisation room,Health facility,Examination room / Immunisation room,1
+Examination room / antenatal,Health facility,Antenatal room / Examination room,1
+Examination unit assistance,Health facility,Examination room,1
+Family planning room,Health facility,Family planning room,1
+Female /,Health facility,Female ward,1
+Female / male ward,Health facility,Female ward / Male ward,1
+Female ward / Antenatal ward,Health facility,Antenatal ward / Female ward,1
+Female ward / male ward / antenatal,Health facility,Antenatal room / Female ward / Male ward,1
+Female ward / male ward / postnatal room,Health facility,Female ward / Male ward / Postnatal room,1
+General / public,Health facility,General,1
+General / staff,Health facility,General,1
+General / utility,Health facility,General,1
+General office / in-charge office,Health facility,Administration / In-charge office,1
+General OPD / MCH,Health facility,MCH / OPD,1
+General public,Health facility,General,1
+General use,Health facility,General,1
+General use / staff,Health facility,General,1
+Girls' toilet,School,Girls toilets,1
+Girls' toilets,School,Girls toilets,1
+H,Health facility,Health,1
+health,Health facility,Health,1
+Health,School,Health,1
+Health / maternity,Health facility,Maternity ward,1
+Health Examination,Health facility,Examination room,1
+Health examination / consultation room,Health facility,Consultation room / Examination room,1
+Health Maternity,Health facility,Maternity ward,1
+Health workers,Health facility,General,1
+Housing,Health facility,Staff housing,1
+Immunization room,Health facility,Immunisation room,1
+In-charge's office / dispensing,Health facility,Dispensing room / In-charge office,1
+IPD / Store,Health facility,IPD / Store,1
+Kitchen,School,Kitchen,1
+Laboratory / Computer laboratory,School,Computer laboratory / Laboratory,1
+Laboratory / Maternity,Health facility,Laboratory / Maternity ward,1
+Laboratory / maternity,Health facility,Laboratory / Maternity ward,1
+Laboratory / Reception / Antenatal room,Health facility,Antenatal room / Laboratory / Reception,1
+Laboratory / Store,Health facility,Laboratory / Store,1
+Laboratory / store,Health facility,Laboratory / Store,1
+Laboratory area,Health facility,Laboratory,1
+Laboratory physics,School,Physics laboratory,1
+Laboratory suite,Health facility,Laboratory,1
+"Laboratory, labour suite and MCH",Health facility,Laboratory / Labour suite / MCH,1
+Labour,Health facility,Labour suite,1
+Labour / Maternity ward,Health facility,Labour suite / Maternity ward,1
+Labour room,Health facility,Labour suite,1
+Labour suit / antenatal room / ward,Health facility,Antenatal room / General ward / Labour suite,1
+Labour suit / male ward,Health facility,Labour suite / Male ward,1
+Labour suite / antenatal room,Health facility,Antenatal room / Labour suite,1
+Labour suite / MCH,Health facility,Labour suite / MCH,1
+Labour suite / records room,Health facility,Labour suite / Records room,1
+Labour suite / Store,Health facility,Labour suite / Store,1
+Labour ward,Health facility,Labour suite,1
+Labour ward / Labour suite,Health facility,Labour suite,1
+Learners toilets,School,Learners toilets,1
+Low health room / medical store,Health facility,Consultation room / Store,1
+Male / female ward,Health facility,Female ward / Male ward,1
+Male ward,Health facility,Male ward,1
+Maternal and child health ward,Health facility,MCH ward,1
+Maternal ward,Health facility,Maternity ward,1
+Maternity / OPD,Health facility,Maternity ward / OPD,1
+Maternity / Store,Health facility,Maternity ward / Store,1
+Maternity ward / Antenatal,Health facility,Antenatal room / Maternity ward,1
+Maternity ward / antenatal ward,Health facility,Antenatal ward / Maternity ward,1
+Maternity ward / labour room,Health facility,Labour suite / Maternity ward,1
+Maternity ward / OPD / Delivery room,Health facility,Delivery room / Maternity ward / OPD,1
+Maternity ward / Post natal ward,Health facility,Maternity ward / Postnatal ward,1
+MCH / General,Health facility,General / MCH,1
+MCH / OPD,Health facility,MCH / OPD,1
+MCH ward,Health facility,MCH ward,1
+Medical,Health facility,Health,1
+Medical ward,Health facility,Medical ward,1
+O.P.D / dispensary,Health facility,Dispensary / OPD,1
+O.P.D / IPD,Health facility,IPD / OPD,1
+O.P.D / Maternal ward,Health facility,Maternity ward / OPD,1
+O.P.D / Maternity Postnatal ward,Health facility,Maternity ward / OPD / Postnatal ward,1
+O.P.D / Post natal,Health facility,OPD / Postnatal ward,1
+O.P.D / records,Health facility,OPD / Records room,1
+Office in charge,Health facility,In-charge office,1
+Office in charge / M.C.H,Health facility,In-charge office / MCH,1
+Office of Incharge,Health facility,In-charge office,1
+Office Reception,School,Reception,1
+Offices and staff room,School,Administration / Staff room,1
+OPD / E.P.I,Health facility,EPI / OPD,1
+OPD / family planning room,Health facility,Family planning room / OPD,1
+OPD / MCH and all,Health facility,MCH / OPD,1
+OPD / Store,Health facility,OPD / Store,1
+OPD ward,Health facility,OPD,1
+Outpatient / consultation room,Health facility,Consultation room / OPD,1
+Post natal ward / M.C.H,Health facility,MCH / Postnatal ward,1
+Postnatal room / Labour suite,Health facility,Labour suite / Postnatal room,1
+Power room,Health facility,Power room,1
+Public,Health facility,General,1
+Quarter staff,Health facility,Staff quarters,1
+Reception,Health facility,Reception,1
+Reception / O.P.D,Health facility,OPD / Reception,1
+Reception / Office / Staff room,School,Administration / Reception / Staff room,1
+Reception / OPD,Health facility,OPD / Reception,1
+Reception office / Computer laboratory / Control room,School,Computer laboratory / Control room / Reception,1
+Reception office / Staff room,School,Reception / Staff room,1
+Records department,Health facility,Records room,1
+Records department room / OPD admission room,Health facility,OPD / Records room,1
+Records room / dispensing room / laboratory,Health facility,Dispensing room / Laboratory / Records room,1
+Sanitation,Health facility,Sanitation,1
+Sanitation & Hygiene,School,Sanitation and hygiene,1
+School / Staff quarters,School,Staff quarters,1
+School latrines,School,Learners toilets,1
+Senior One class to Senior Six / Study room,School,Classroom / Study room,1
+Shelter / house houses,Health facility,Staff housing,1
+Shelter / housing / home,Health facility,Staff housing,1
+Sluice room / immunisation room,Health facility,Immunisation room / Sluice room,1
+Sluice room / labour suite,Health facility,Labour suite / Sluice room,1
+Staff kitchen,School,Kitchen,1
+Staff office / lockers,Health facility,Staff room,1
+Staff quarter,School,Staff quarters,1
+Staff quarter,Health facility,Staff quarters,1
+Staff room / general,Health facility,General / Staff room,1
+Staff room / Head teacher's office / Bursar's office / Reception office,School,Administration / Reception / Staff room,1
+Staff room / Laboratory science / Computer laboratory / Library,School,Computer laboratory / Laboratory / Library / Staff room,1
+Staff room and office,School,Administration / Staff room,1
+Staff toilet,Health facility,Staff toilets,1
+Staffing quarters,Health facility,Staff quarters,1
+Store,School,Store,1
+Store / Laboratory,Health facility,Laboratory / Store,1
+Store / Maternity / Antenatal ward,Health facility,Antenatal ward / Maternity ward / Store,1
+Store / Post natal ward,Health facility,Postnatal ward / Store,1
+Store medical,Health facility,Store,1
+Teachers' quarters,School,Staff quarters,1
+Theatre / MCH,Health facility,MCH / Theatre,1
+Total block,School,Buildings,1
+Triage / Office kept,Health facility,Administration / Triage,1
+Waiting / dressing room,Health facility,Waiting room,1
+Waiting area / dispensing,Health facility,Dispensing room / Waiting room,1
+Ward / labour suite,Health facility,General ward / Labour suite,1
+Ward / labour suite / immunisation room,Health facility,General ward / Immunisation room / Labour suite,1
+Ward / Maternity room / Lab / Labour suite,Health facility,General ward / Laboratory / Labour suite / Maternity room,1
+Ward / O.P.D,Health facility,General ward / OPD,1
