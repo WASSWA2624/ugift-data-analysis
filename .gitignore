@@ -1,3 +1,9 @@
+# Office lock files
+~$*.xlsx
+~$*.xls
+~$*.docx
+~$*.doc
+
 # Photos stay local. Already-pushed images remain in git history.
 *.jpg
 *.jpeg
