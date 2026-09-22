@@ -40,3 +40,10 @@ raw-data-grouped/team-16/Bugweri/Busembatya-HC-III/BUSEMBATYA HEALTH III ASSET V
 raw-data-grouped/_multi-team/programme-documents/All WIP Ugift/All WIP Ugift/WEMIS DISTRICT EQUIPMENT.rar
 raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-verification-photographic-gallery.docx
 raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-verification-photographic-gallery.pdf
+
+# Local reconciliation and PDF review scratch files
+/tmp/
+/scripts/__pycache__/
+
+# GitHub rejects files over 100 MB. Keep these local only.
+new-raw-data-221092026-1114/new-raw-data-22092026-1556/UGIFT DEPAUL.zip

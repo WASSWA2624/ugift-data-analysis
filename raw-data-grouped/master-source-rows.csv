@@ -1,0 +1,633 @@
+﻿id,lg,type,name,phase,project_status,source_row
+S001,Kiboga,School,Lwamata Town Council,Phase III,ongoing,2
+S002,Lyantonde,School,Kasagama,Phase II,Ongoing,3
+S003,Mubende,School,Bageza (New facilities at Mugungulu Seed S.S.),Phase II,Ongoing,4
+S004,Nakaseke,School,Ngoma,Phase III,Ongoing,5
+S005,Budaka,School,Kakule,Phase III,Ongoing,6
+S006,Budaka,School,Nansanga,Phase II,Ongoing,7
+S007,Bududa,School,Bushiribo,Phase III,ongoing,8
+S008,Bududa,School,Nakatsi,Phase II,Ongoing,9
+S009,Butaleja,School,Kachonga,Phase II,Ongoing,10
+S010,Tororo Mc,School,Eastern Division,Phase III,Ongoing,11
+S011,Bugweri,School,Igombe,Phase II,Ongoing,12
+S012,Jinja City,School,Central Division,Phase III,ongoing,13
+S013,Kaliro,School,Nansololo,Phase III,ongoing,14
+S014,Bukwo,School,Senendet,Phase II,Ongoing,15
+S015,Manafwa,School,Butta,Phase III,ongoing,16
+S016,Manafwa,School,Sisuni,Phase III,Ongoing,17
+S017,Mbale,School,Bubentsye Seed School,Phase I,Ongoing,18
+S018,Namisindwa,School,Mukuto Seed School,Phase I,ongoing,19
+S019,Kaabong,School,Sidok,Phase III,Ongoing,20
+S020,Nakapiripirit,School,Moruita,Phase II,ongoing,21
+S021,Agago,School,Kotomor,Phase II,Ongoing,22
+S022,Agago,School,Lamiyo,Phase III,Ongoing,23
+S023,Agago,School,Omiya Pacwa,Phase III,Ongoing,24
+S024,Amuru,School,Amuru T/C,Phase II,Ongoing,25
+S025,Gulu,School,Patiko Seed school,Phase II,Ongoing,26
+S026,Lamwo,School,Padibe East,Phase II,ongoing,27
+S027,Amolatar,School,Akwon,Phase III,Ongoing,28
+S028,Otuke,School,Orum (New facilities for Okum Seed S.S. - Pledge),Phase II,Ongoing,29
+S029,Oyam,School,Aleka,Phase III,Ongoing,30
+S030,Arua,School,Aroi,Phase II,ongoing,31
+S031,Koboko,School,Kuluba,Phase II,ongoing,32
+S032,Maracha,School,Kololo Public,Phase I,ongoing,33
+S033,Nebbi,School,Kucwiny,Phase II,Ongoing,34
+S034,Nebbi,School,Ndhew,Phase II,Ongoing,35
+S035,Nwoya,School,Got Apwoyo,Phase II,Ongoing,36
+S036,Yumbe,School,Drajini,Phase II,Ongoing,37
+S037,Yumbe,School,Ladonga Seed School,Phase I,Ongoing,38
+S038,Ibanda,School,Nyabuhikye,Phase III,ongoing,39
+S039,Kazo,School,Burunga,Phase III,Ongoing,40
+S040,Kiruhura,School,Kanyaryeru (New Facilities for Lake Mburo S.S. – Pledge),Phase II,ongoing,41
+S041,Kiruhura,School,Kenshunga (New Facilities for Kaaro H.S. - Pledge),Phase II,ongoing,42
+S042,Ntungamo,School,Kihanga seed school,Phase I,Ongoing,43
+S043,Ntungamo,School,Kibatsi,Phase II,Ongoing,44
+S044,Rubirizi,School,Magambo,Phase II,Ongoing,45
+S045,Butambala,School,Kibibi,Phase III,Ongoing,46
+S046,Buliisa,School,Kihungya,Phase II,Ongoing,47
+S047,Kagadi,School,Burora,Phase III,ongoing,48
+S048,Kagadi,School,Kagadi,Phase II,Ongoing,49
+S049,Kagadi,School,Ruteete,Phase II,Ongoing,50
+S050,Kikuube,School,Kyangwali (New Facilities for Kyangwali Seed S.S.),Phase II,ongoing,51
+S051,Kiryandongo,School,Kigumba T/C,Phase II,ongoing,52
+S052,Masindi,School,Kimengo (Kijunjubwa),Phase II,ongoing,53
+S053,Kisoro,School,Nyabwishenya (New facilities at Mwumba Progressive S.S.),Phase II,ongoing,54
+S054,Bundibugyo,School,Burondo,Phase III,Ongoing,55
+S055,Bundibugyo,School,Mabere (New facilities at Kabango S.S.),Phase II,Ongoing,56
+S056,Bunyangabu,School,Kabonero,Phase II,Ongoing,57
+S057,Bunyangabu,School,Kyamukube Town Council,Phase III,Ongoing,58
+S058,Fort-Portal,School,Karago TC,Phase III,Ongoing,59
+S059,Kabarole,School,Kichwamba,Phase II,ongoing,60
+S060,Kasese,School,Bwesumbu,Phase II,ongoing,61
+S061,Kyenjojo,School,Kyarusozi,Phase III,ongoing,62
+S062,Ntoroko,School,Butungama,Phase II,Ongoing,63
+S063,Ntoroko,School,Kibuuku TC,Phase II,Ongoing,64
+S064,Buvuma,School,Bwema,Phase II,Complete,65
+S065,Gomba,School,Maddu Seed School,Phase I,Complete,66
+S066,Kalangala,School,Bufumira Seed School,Phase I,Complete,67
+S067,Kalangala,School,Bujumba,Phase II,Complete,68
+S068,Kalungu,School,Lukaya Seed School,Phase I,Complete,69
+S069,Kassanda,School,Makokoto (New facilities at Makokoto Seed S.S.),Phase II,Complete,70
+S070,Kassanda,School,Manyogaseka Seed School,Phase I,Complete,71
+S071,Kayunga,School,Nazigo Seed School,Phase I,Complete,72
+S072,Kiboga,School,Katoma Seed School,Phase I,Complete,73
+S073,Kyankwanzi,School,Bananywa Seed School,Phase I,Complete,74
+S074,Kyankwanzi,School,Nsambya,Phase II,Complete,75
+S075,Kyankwanzi,School,Ntwetwe,Phase III,Complete,76
+S076,Kyotera,School,Kasali TC,Phase II,Complete,77
+S077,Luweero,School,Butuntumula (New facilities at St. Andrew Kaggwa Kasaala S.S.),Phase II,Complete,78
+S078,Luwero,School,Katikamu Seed School,Phase I,Complete,79
+S079,Lwengo,School,Katovu TC,Phase II,Complete,80
+S080,Lwengo,School,Lwengo Seed School,Phase I,Complete,81
+S081,Lyantonde,School,Mpumudde seed school,Phase I,Complete,82
+S082,Masaka,School,Bukakata Seed School,Phase I,Complete,83
+S083,Mityana,School,Namungo Seed School,Phase I,Complete,84
+S084,Mpigi,School,Kiringente Seed School,Phase I,Complete,85
+S085,Mubende,School,Kigando Seed School,Phase I,Complete,86
+S086,Mukono,School,Kimenyedde Seed School,Phase I,Complete,87
+S087,Nakaseke,School,Kikamulo,Phase II,Complete,88
+S088,Nakaseke,School,Nakaseke Seed School,Phase I,Complete,89
+S089,Nakasongola,School,Nakitoma,Phase II,Complete,90
+S090,Rakai,School,Kacheera,Phase II,Complete,91
+S091,Rakia,School,Samson Kalibbala Seed S.S,Phase I,Complete,92
+S092,Sembabule,School,Lwebitakuli Seed School,Phase I,Complete,93
+S093,Wakiso,School,Sumbwe Seed School,Phase I,Complete,94
+S094,Budaka,School,Kamonkoli Seed School,Phase I,Complete,95
+S095,Budaka,School,Mugiti,Phase II,Complete,96
+S096,Busia,School,Sikuda,Phase II,Complete,97
+S097,Butaleja,School,Nakwasi Seed School,Phase I,Complete,98
+S098,Butebo,School,Kanginima Seed School,Phase I,Complete,99
+S099,Kibuku,School,Kabweri Seed School,Phase I,Complete,100
+S100,Kibuku,School,Kasasila Seed School,Phase I,Complete,101
+S101,Kibuku,School,Kirika,Phase II,Complete,102
+S102,Pallisa,School,Olok Seed School,Phase I,Complete,103
+S103,Pallisa,School,Pallisa,Phase II,Complete,104
+S104,Tororo,School,Iyolwa,Phase II,Complete,105
+S105,Tororo,School,Malaba Seed School,Phase I,Complete,106
+S106,Tororo,School,Sop Sop,Phase II,Complete,107
+S107,Bugiri,School,Budhaya,Phase II,Complete,108
+S108,Bugweri,School,Naigombwa Seed School,Phase I,Complete,109
+S109,Buyende,School,Buyende Seed School,Phase I,Complete,110
+S110,Iganga,School,Nawanyingi Seed School,Phase I,Complete,111
+S111,Jinja,School,Buwenge Seed School,Phase I,Complete,112
+S112,Jinja,School,Butagaya,Phase II,Complete,113
+S113,Kaliro,School,Bukamba Seed School,Phase I,Complete,114
+S114,Kaliro,School,Bumanya,Phase II,Complete,115
+S115,Kamuli,School,Kitayunjwa Seed School,Phase I,Complete,116
+S116,Kamuli,School,Kagumba,Phase II,Complete,117
+S117,Kamuli,School,Nabwigulu,Phase II,Complete,118
+S118,Luuka,School,Ikumbya Seed School,Phase I,Complete,119
+S119,Luuka,School,Nawampiti,Phase II,Complete,120
+S120,Mayuge,School,Mpungwe Seed School,Phase I,Complete,121
+S121,Mayuge,School,Wairasa,Phase II,Complete,122
+S122,Namayingo,School,Mwema Seed School,Phase I,Complete,123
+S123,Namayingo,School,Buhemba,Phase II,Complete,124
+S124,Namutumba,School,Namutumba Seed School,Phase I,Complete,125
+S125,Namutumba,School,Nabweyo,Phase II,Complete,126
+S126,Bukwo,School,Kaptererwo Seed School,Phase I,Complete,127
+S127,Bulambuli,School,Bunambutye Seed School,Phase I,Complete,128
+S128,Bulambuli,School,Sisiyi,Phase II,Complete,129
+S129,Kapchorwa,School,Kabeywa Seed School,Phase I,Complete,130
+S130,Kapchorwa,School,Kaptanya,Phase II,Complete,131
+S131,Kween,School,Kaptum,Phase II,Complete,132
+S132,Kween,School,Kitawoi Seed School,Phase I,Complete,133
+S133,Kween,School,Moyok,Phase II,Complete,134
+S134,Manafwa,School,Buwagogo Seed School,Phase I,Complete,135
+S135,Manafwa,School,Khabutoola,Phase II,Complete,136
+S136,Manafwa,School,Sibanga Seed School,Phase I,Complete,137
+S137,Mbale,School,Lwasso,Phase II,Complete,138
+S138,Namisindwa,School,Namboko,Phase II,Complete,139
+S139,Sironko,School,Bugitimwa,Phase II,Complete,140
+S140,Sironko,School,Bumirisa Seed School Buteza,Phase I,Complete,141
+S141,Abim,School,Alerek,Phase II,Complete,142
+S142,Abim,School,Magamaga,Phase III,Complete,143
+S143,Abim,School,Nakwae Seed School,Phase I,Complete,144
+S144,Amudat,School,Kalita Seed School,Phase I,Complete,145
+S145,Amudat,School,Looro,Phase II,Complete,146
+S146,Karenga,School,Kapedo,Phase II,Complete,147
+S147,Karenga,School,Kapedo,Phase III,Complete,148
+S148,Kotido,School,Panyangara Seed School,Phase I,Complete,149
+S149,Kotido,School,Rengen,Phase II,Complete,150
+S150,Moroto,School,Katikekire,Phase II,Complete,151
+S151,Moroto,School,Rupa Seed School,Phase I,Complete,152
+S152,Nabilatuk,School,Lolachat Seed School,Phase I,Complete,153
+S153,Nakapiripirit,School,Nakapiripirit Seed School,Phase I,Complete,154
+S154,Napak,School,Iriiri,Phase II,Complete,155
+S155,Napak,School,Lopei,Phase III,Complete,156
+S156,Napak,School,Napak Seed School,Phase I,Complete,157
+S157,Amuria,School,Asamuk,Phase II,Complete,158
+S158,Bukedea,School,Kabarwa Seed School,Phase I,Complete,159
+S159,Kaberamaido,School,Aperikira,Phase III,Complete,160
+S160,Kalaki,School,Apapai,Phase II,Complete,161
+S161,Kalaki,School,Kakure Seed S.S,Phase I,Complete,162
+S162,Katakwi,School,Palam Seed School,Phase I,Complete,163
+S163,Katakwi,School,Toroma,Phase II,Complete,164
+S164,Kumi,School,Kumi Seed School,Phase I,Complete,165
+S165,Kumi,School,Nyero (New facilities at Dr. Aporu Okol Mem. S.S.),Phase II,Complete,166
+S166,Ngora,School,Ngora Seed School,Phase I,Complete,167
+S167,Serere,School,Kadungulu Seed School,Phase I,Complete,168
+S168,Serere,School,Olio,Phase II,Complete,169
+S169,Soroti,School,Asuret Seed School,Phase I,Complete,170
+S170,Soroti,School,Kamuda,Phase II,Complete,171
+S171,Agago,School,Lapono Seed School,Phase I,Complete,172
+S172,Agago,School,Wol,Phase II,Complete,173
+S173,Amuru,School,Amuru Seed School,Phase I,Complete,174
+S174,Gulu,School,Palaro Seed School,Phase I,Complete,175
+S175,Kitgum,School,Labongo Layamo,Phase II,Complete,176
+S176,Kitgum,School,Labongo Amida Seed School,Phase I,Complete,177
+S177,Lamwo,School,Paloga Seed School,Phase I,Complete,178
+S178,Pader,School,Latanya,Phase II,Complete,179
+S179,Alebtong,School,Abia Seed S.S,Phase I,Complete,180
+S180,Alebtong,School,Awei,Phase II,Complete,181
+S181,Amolatar,School,Etam,Phase II,Complete,182
+S182,Amolatar,School,Muntu Seed School,Phase I,Complete,183
+S183,Apac,School,Apac Seed School,Phase I,Complete,184
+S184,Apac MC,School,Arocha,Phase II,Complete,185
+S185,Dokolo,School,Adeknino,Phase II,Complete,186
+S186,Dokolo,School,Batta Seed School,Phase I,Complete,187
+S187,Kole,School,Kole T/C,Phase II,Complete,188
+S188,Kole,School,Okwelodot Seed School,Phase I,Complete,189
+S189,Kwania,School,Aduku Seed School,Phase I,Complete,190
+S190,Lira,School,Agali Seed School,Phase I,Complete,191
+S191,Lira,School,Ogur (Phase II of Ogur Seed S.S.),Phase II,Complete,192
+S192,Lira MC,School,Railways Division,Phase II,Complete,193
+S193,Otuke,School,Ogoro Seed School,Phase I,Complete,194
+S194,Oyam,School,Ngai,Phase II,Complete,195
+S195,Pader,School,Ogom Seed School,Phase I,Complete,196
+S196,Adjumani,School,Arinyapi,Phase II,Complete,197
+S197,Adjumani,School,Maaji Seed School,Phase I,Complete,198
+S198,Koboko,School,Padrombu Seed School,Phase I,Complete,199
+S199,Maracha,School,Oluvu,Phase II,Complete,200
+S200,Moyo,School,Dufile Seed School,Phase I,Complete,201
+S201,Nebbi,School,Atego Seed School,Phase I,Complete,202
+S202,Nwoya,School,Lungulu Seed School,Phase I,Complete,203
+S203,Obongi,School,Gimara,Phase II,Complete,204
+S204,Omoro,School,Lakwana Seed School,Phase I,Complete,205
+S205,Pakwach,School,Alwi Seed School,Phase I,Complete,206
+S206,Pakwach,School,Wadelai,Phase II,Complete,207
+S207,Yumbe,School,Kerwa,Phase II,Complete,208
+S208,Zombo,School,Abanga,Phase III,Complete,209
+S209,Zombo,School,Atyak Seed School,Phase I,Complete,210
+S210,Zombo,School,Kango,Phase III,Complete,211
+S211,Buhweju,School,Engaaju,Phase II,Complete,212
+S212,Buhweju,School,Kyankanda seed school,Phase I,Complete,213
+S213,Buhweju,School,Nsiika T/C,Phase II,Complete,214
+S214,Bushenyi,School,Bumbaire Seed School,Phase I,Complete,215
+S215,Bushenyi,School,Kyamuhunga,Phase II,Complete,216
+S216,Ibanda,School,Kishangara seed school,Phase I,Complete,217
+S217,Isingiro,School,Ruborogota seed school,Phase I,Complete,218
+S218,Kiruhura,School,Nyakasharara seed school,Phase I,Complete,219
+S219,Mbarara,School,Bukiiro seed school,Phase I,Complete,220
+S220,Mbarara,School,Rwanyamahembe,Phase II,Complete,221
+S221,Mitooma,School,Kashenshero,Phase II,Complete,222
+S222,Mitooma,School,Mayanga Seed School,Phase I,Complete,223
+S223,Ntungamo,School,Nyabihoko,Phase II,Complete,224
+S224,Rubirizi,School,Ryeru Seed School,Phase I,Complete,225
+S225,Sheema,School,Kigarama seed school,Phase I,Complete,226
+S226,Sheema,School,Shuuku T/C (New facilities for Ryakasinga C.H.E),Phase II,Complete,227
+S227,Buikwe,School,Ssugu Seed School,Phase I,Complete,228
+S228,Butambala,School,Budde Seed School,Phase I,Complete,229
+S229,Buliisa,School,Ngwedo Seed School,Phase I,Complete,230
+S230,Hoima,School,Buhanika,Phase II,Complete,231
+S231,Hoima,School,Kigorobya Seed School,Phase I,Complete,232
+S232,Kagadi,School,Kiryanga Seed School,Phase I,Complete,233
+S233,Kakumiro,School,Birembo Seed School,Phase I,Complete,234
+S234,Kakumiro,School,Mpasaana,Phase II,Complete,235
+S235,Kibaale,School,Mugarama( new facilities for St Mugagga S.S),Phase II,Complete,236
+S236,Kibaale,School,Nyamarwa Seed School,Phase I,Complete,237
+S237,Kikuube,School,Kiziranfumbi Seed School,Phase I,Complete,238
+S238,Kiryandongo,School,Kitwala Seed School,Phase I,Complete,239
+S239,Masindi,School,Budongo Seed School,Phase I,Complete,240
+S240,Bugiri,School,Iwemba Seed School,Phase I,Complete,241
+S241,Kabale,School,Buhara seed school,Phase I,Complete,242
+S242,Kanungu,School,Katete seed school,Phase I,Complete,243
+S243,Kisoro,School,Nyakinama seed school,Phase I,Complete,244
+S244,Rubanda,School,Nyamweru seed school,Phase I,Complete,245
+S245,Rubanda,School,Ruhija,Phase II,Complete,246
+S246,Rukiga,School,Bukinda,Phase II,Complete,247
+S247,Rukiga,School,Rwamucucu seed school,Phase I,Complete,248
+S248,Rukungiri,School,Kebisoni seed school,Phase I,Complete,249
+S249,Rukungiri,School,Nyakishenyi (New facilities at Nyakishenyi H.S.),Phase II,Complete,250
+S250,Bundibugyo,School,Kisuba seed school,Phase I,Complete,251
+S251,Bunyangabu,School,Kiyombya seed school,Phase I,Complete,252
+S252,Kabarole,School,Kasenda Seed School,Phase I,Complete,253
+S253,Kamwenge,School,Bwizi Seed School,Phase I,Complete,254
+S254,Kitagwenda,School,Kanara,Phase II,Complete,255
+S255,Kyegegwa,School,Ruyonza,Phase II,Complete,256
+S256,Kyegegwa,School,Rwentuha seed school,Phase I,Complete,257
+S257,Kyenjojo,School,Kigaraale,Phase II,Complete,258
+S258,Kyenjojo,School,Kyembogo seed school,Phase I,Complete,259
+S259,Ntoroko,School,Nombe Seed School,Phase I,Complete,260
+H001,Butambala,Health centre,Butaaka HC II,,Complete,2
+H002,Buvuma,Health centre,Nkata HC II,,Complete,3
+H003,Buvuma,Health centre,Lukale HC II,,Complete,4
+H004,Buvuma,Health centre,Buwooya HC II,,Complete,5
+H005,Buvuma,Health centre,Lubya HCII,,Complete,6
+H006,Buvuma,Health centre,Lwajje HC II,,Complete,7
+H007,Gomba,Health centre,Bulwadda HC II,,Complete,8
+H008,Gomba,Health centre,Mamba HC II,,Complete,9
+H009,Gomba,Health centre,Ngomanene HC II,,Complete,10
+H010,Kasanda,Health centre,Butoloogo HC II,,Complete,11
+H011,Kasanda,Health centre,Kikandwa HC II,,Complete,12
+H012,Kasanda,Health centre,Makokoto HC II,,Complete,13
+H013,Kassanda,Health centre,Kijuna,,Complete,14
+H014,Kassanda,Health centre,Kyasansuwa HC II,,Complete,15
+H015,Kassanda,Health centre,Kyakatebe HC II,,Complete,16
+H016,Kayunga,Health centre,Busaale HC II,,Complete,17
+H017,Kayunga,Health centre,Bukamba HC II,,Complete,18
+H018,Kiboga,Health centre,Bulaga HC II,,Complete,19
+H019,Kiboga,Health centre,Buninga HCII,,Complete,20
+H020,Kyankwanzi,Health centre,Kikooma,,Complete,21
+H021,Kyankwanzi,Health centre,Banda HC II,,Complete,22
+H022,Kyankwanzi,Health centre,Mujunza HC II,,Complete,23
+H023,Kyankwanzi,Health centre,Kikolimbo HC II,,Complete,24
+H024,Kyankwanzi,Health centre,Sirimula HC II,,Complete,25
+H025,Kyotera,Health centre,Nangoma HC II,,Complete,26
+H026,Luwero,Health centre,Katuugo HC II,,Complete,27
+H027,Lwengo,Health centre,Kagganda HC II,,Complete,28
+H028,Lwengo,Health centre,Kakoma HC II,,Complete,29
+H029,Lyantonde,Health centre,Kabetemere HC II,,Complete,30
+H030,Lyantonde,Health centre,Lyakajura HC II,,Complete,31
+H031,Masaka,Health centre,Kyabakuza HCII,,Complete,32
+H032,Masaka Mc,Health centre,Nyendo HC II,,Complete,33
+H033,Mityana,Health centre,Mpongo HCII,,Complete,34
+H034,Mityana,Health centre,Busunju HCII,,Complete,35
+H035,Mityana,Health centre,Namungo HC II,,Complete,36
+H036,Mubende,Health centre,Kabbo,,Complete,37
+H037,Mubende,Health centre,Lumbiri HCII,,Complete,38
+H038,Mubende,Health centre,Mubende Gayaza HC II,,Complete,39
+H039,Mubende,Health centre,Butawata HC II,,Complete,40
+H040,Mubende,Health centre,Buseregenyu HC II,,Complete,41
+H041,Mubende Mc,Health centre,Lwemikomago HC II,,Complete,42
+H042,Mukono Mc,Health centre,Nyanja HCII,,Complete,43
+H043,Nakaseke,Health centre,Semuto HC II,,Complete,44
+H044,Nakaseke,Health centre,Butalangu HC II,,Complete,45
+H045,Nakasongola,Health centre,Kiralamba HC II,,Complete,46
+H046,Rakai,Health centre,Rakai Kiziba HC II,,Complete,47
+H047,Sembabule,Health centre,Ntete HCII,,Complete,48
+H048,Sembabule,Health centre,Kyera HCII,,Complete,49
+H049,Sembabule,Health centre,Busheka (Sembabule) HC II,,Complete,50
+H050,Ssabagabo Makindye Mc,Health centre,Kibiri HC III,,Complete,51
+H051,Wakiso,Health centre,Kasoozo HCII,,Complete,52
+H052,Wakiso,Health centre,Zinga HC II,,Complete,53
+H053,Wakiso,Health centre,Nakitokolo Namayumba HC II,,Complete,54
+H054,Wakiso,Health centre,Bussi HC II,,Complete,55
+H055,Buikwe,Health centre,Nkokonjeru HCII,,Complete,56
+H056,Kalungu,Health centre,Kabaale HC II,,Complete,57
+H057,Kalangala,Health centre,Bubeke HC II,,Complete,58
+H058,Butebo,Health centre,Kachuru HC II,,Complete,59
+H059,Butebo,Health centre,Kanyumu HC II,,Complete,60
+H060,Budaka,Health centre,Namusita (Budaka) HC II,,Complete,61
+H061,Bududa,Health centre,Bududa,,Complete,62
+H062,Bududa,Health centre,Bumusi HC II,,Complete,63
+H063,Bududa,Health centre,Bubungi HC II,,Complete,64
+H064,Bududa,Health centre,Bunamono HC II,,Complete,65
+H065,Busia,Health centre,Dabani,,Complete,66
+H066,Busia,Health centre,Bumunji HC II,,Complete,67
+H067,Busia,Health centre,Sikuda HC II,,Complete,68
+H068,Busia,Health centre,Buwembe HC II,,Complete,69
+H069,Busia,Health centre,Majanji HC II,,Complete,70
+H070,Busia Mc,Health centre,Busia Eastern Division,,Complete,71
+H071,Butaleja,Health centre,Nampologoma HCII,,Complete,72
+H072,Kibuku,Health centre,Lwatama HCII,,Complete,73
+H073,Kibuku,Health centre,Nalubembe HC II,,Complete,74
+H074,Kibuku,Health centre,Kabweri HC II,,Complete,75
+H075,Tororo,Health centre,Sop Sop HC II,,Complete,76
+H076,Tororo,Health centre,Kamuli HCII,,Complete,77
+H077,Tororo Mc,Health centre,Kyamwinula HCII,,Complete,78
+H078,Tororo,Health centre,Namwaya HCII,,Complete,79
+H079,Bugiri Mc,Health centre,Bugiri TC HC II,,Complete,80
+H080,Bugweri,Health centre,Nawangisa HC II,,Complete,81
+H081,Bugweri,Health centre,Busembatya HCII,,Complete,82
+H082,Bugweri,Health centre,Minani HC II,,Complete,83
+H083,Buyende,Health centre,Bukungu HCII,,Complete,84
+H084,Jinja Mc,Health centre,Kimaka HC II,,Complete,85
+H085,Kaliro,Health centre,Kisinda HCII,,Complete,86
+H086,Kaliro,Health centre,Buyinda HC II,,Complete,87
+H087,Kaliro,Health centre,Budomero HC II,,Complete,88
+H088,Kaliro,Health centre,Nawampiti HC II,,Complete,89
+H089,Kaliro,Health centre,Kasokwe HC II,,Complete,90
+H090,Kamuli,Health centre,Bubago HC II,,Complete,91
+H091,Kamuli,Health centre,Kagumba HC II,,Complete,92
+H092,Kamuli Mc,Health centre,Busota HC II,,Complete,93
+H093,Luuka,Health centre,Bulalu HCII,,Complete,94
+H094,Luuka,Health centre,Bukendi HC II,,Complete,95
+H095,Mayuge,Health centre,Nkombe HC II,,Complete,96
+H096,Mayuge,Health centre,Muggi HC II,,Complete,97
+H097,Mayuge,Health centre,Jagusi HC II,,Complete,98
+H098,Mayuge,Health centre,Busaala HC II,,Complete,99
+H099,Mayuge,Health centre,Bukatube HC II,,Complete,100
+H100,Namayingo,Health centre,Lolwe HC II,,Complete,101
+H101,Namayingo,Health centre,Bugana HC II,,Complete,102
+H102,Namayingo,Health centre,Syanyonja HC II,,Complete,103
+H103,Namutumba,Health centre,Nangonde HCII,,Complete,104
+H104,Namutumba,Health centre,Namutumba Kagulu HC II,,Complete,105
+H105,Bukwo,Health centre,Chepkwasta HC II,,Complete,106
+H106,Bukwo,Health centre,Brim HC II,,Complete,107
+H107,Bukwo,Health centre,Mutushet HC II,,Complete,108
+H108,Bukwo,Health centre,Amanang HC II,,Complete,109
+H109,Bukwo,Health centre,Kwirwot HC II,,Complete,110
+H110,Bulambuli,Health centre,Bukhalu,,Complete,111
+H111,Bulambuli,Health centre,Bumugibole HC II,,Complete,112
+H112,Bulambuli,Health centre,Bukibologoto HC II,,Complete,113
+H113,Bulambuli,Health centre,Bunangaka HC II,,Complete,114
+H114,Bulambuli,Health centre,Bulaago HC II,,Complete,115
+H115,Kapchorwa,Health centre,Chemosong HC II,,Complete,116
+H116,Kapchorwa,Health centre,Ngangatta HC II,,Complete,117
+H117,Kapchorwa Mc,Health centre,Kaplelko HC II,,Complete,118
+H118,Manafwa,Health centre,Bukimanayi HC II,,Complete,119
+H119,Sironko,Health centre,Buyaya HC II,,Complete,120
+H120,Sironko,Health centre,Buyobo HC II,,Complete,121
+H121,Sironko,Health centre,Bundege HC II,,Complete,122
+H122,Sironko,Health centre,Mutufu HC II,,Complete,123
+H123,Bukedea,Health centre,Nalugai HC II,,Complete,124
+H124,Bukedea,Health centre,Tajar HC II,,Complete,125
+H125,Bukedea,Health centre,Kocheka HC II,,Complete,126
+H126,Bukedea,Health centre,Akuoro HC II,,Complete,127
+H127,Kapelebyong,Health centre,Aeket HC II,,Complete,128
+H128,Kapelebyong,Health centre,Alito HCII,,Complete,129
+H129,Kapelebyong,Health centre,Akoromit,,Complete,130
+H130,Katakwi,Health centre,Koritok HC II,,Complete,131
+H131,Katakwi,Health centre,Akoboi HCII,,Complete,132
+H132,Katakwi,Health centre,Aliakamer HC II,,Complete,133
+H133,Serere,Health centre,Kamod HC II,,Complete,134
+H134,Serere,Health centre,Kagwara HC II,,Complete,135
+H135,Serere,Health centre,Aarapoo HC II,,Complete,136
+H136,Serere,Health centre,Oburin HC II,,Complete,137
+H137,Amuria,Health centre,Golokwara (Ajaki) HC II,,Complete,138
+H138,Amuria,Health centre,Abeko HC II,,Complete,139
+H139,Amuria,Health centre,Wera HC II,,Complete,140
+H140,Amuria,Health centre,Akeriau HC II,,Complete,141
+H141,Amuria,Health centre,Alere HC II,,Complete,142
+H142,Agago,Health centre,Lamiyo HCII,,Complete,143
+H143,Agago,Health centre,Pacer HC II,,Complete,144
+H144,Agago,Health centre,Lapirin HC II,,Complete,145
+H145,Agago,Health centre,Omot HC II,,Complete,146
+H146,Agago,Health centre,Layita HC II,,Complete,147
+H147,Amuru,Health centre,Otwee HC III,,Complete,148
+H148,Gulu,Health centre,Omel HCII,,Complete,149
+H149,Kitgum Mc,Health centre,Pandwong HC II,,Complete,150
+H150,Lamwo,Health centre,Ngomoromo HC II,,Complete,151
+H151,Lamwo,Health centre,Katum HC II,,Complete,152
+H152,Kween,Health centre,Moyok HC II,,Complete,153
+H153,Kween,Health centre,Atar HC II,,Complete,154
+H154,Kween,Health centre,Terenpoy HC II,,Complete,155
+H155,Kween,Health centre,Kaptum HC II,,Complete,156
+H156,Kween,Health centre,Benet HC II,,Complete,157
+H157,Karenga,Health centre,Kalimon HCII,,Complete,158
+H158,Kotido,Health centre,Kamoru HCII,,Complete,159
+H159,Moroto,Health centre,Kalemungole HCII,,Complete,160
+H160,Alebtong,Health centre,Adwir HC II,,Complete,161
+H161,Alebtong,Health centre,Moroto Abia HC II,,Complete,162
+H162,Alebtong,Health centre,Awei HC II,,Complete,163
+H163,Alebtong,Health centre,Angetta HC II,,Complete,164
+H164,Alebtong,Health centre,Anara HC II,,Complete,165
+H165,Amolatar,Health centre,Arwotchek HC II,,Complete,166
+H166,Amolatar,Health centre,Awonangiro HC II,,Complete,167
+H167,Amolatar,Health centre,Biko HC II,,Complete,168
+H168,Amolatar,Health centre,Nakatiti HC II,,Complete,169
+H169,Amolatar,Health centre,Alyecmeda HC II,,Complete,170
+H170,Amolatar,Health centre,Anamwany HC II,,Complete,171
+H171,Apac,Health centre,Aganga HCII,,Complete,172
+H172,Apac,Health centre,Kidilani HC II,,Complete,173
+H173,Apac,Health centre,Kungu HC II,,Complete,174
+H174,Apac,Health centre,Olelpek HC II,,Complete,175
+H175,Dokolo,Health centre,Te-Tugu HCII,,Complete,176
+H176,Dokolo,Health centre,Amwoma HC II,,Complete,177
+H177,Dokolo,Health centre,Abalang HC II,,Complete,178
+H178,Dokolo,Health centre,Anyacoto HC II,,Complete,179
+H179,Dokolo,Health centre,Awelo HC II,,Complete,180
+H180,Dokolo,Health centre,Adok HC II,,Complete,181
+H181,Dokolo,Health centre,Adagmon HC II,,Complete,182
+H182,Kole,Health centre,Ayara HCII,,Complete,183
+H183,Kole,Health centre,Okwerodot,,Complete,184
+H184,Kole,Health centre,Okole HC II,,Complete,185
+H185,Kole,Health centre,Ayer HC II,,Complete,186
+H186,Kwania,Health centre,Akali HC II,,Complete,187
+H187,Kwania,Health centre,Owiny HC II,,Complete,188
+H188,Lira,Health centre,Punuluru,,Complete,189
+H189,Lira,Health centre,Barlonyo,,Complete,190
+H190,Lira,Health centre,Alik HCII,,Complete,191
+H191,Otuke,Health centre,Alango HCII,,Complete,192
+H192,Otuke,Health centre,Ogwete HC II,,Complete,193
+H193,Oyam,Health centre,Alira HCII,,Complete,194
+H194,Oyam,Health centre,Ajaga,,Complete,195
+H195,Oyam,Health centre,Acokara HCII,,Complete,196
+H196,Oyam,Health centre,Iceme (Okwir),,Complete,197
+H197,Oyam,Health centre,Acimi HC II,,Complete,198
+H198,Oyam,Health centre,Abela HC II,,Complete,199
+H199,Oyam,Health centre,Atura HC II,,Complete,200
+H200,Oyam,Health centre,Ariba HC II,,Complete,201
+H201,Oyam,Health centre,Loro HC II,,Complete,202
+H202,Oyam,Health centre,Iceme HC II,,Complete,203
+H203,Pader,Health centre,Okinga HC II,,Complete,204
+H204,Pader,Health centre,Lapul Ocwida HC II,,Complete,205
+H205,Pader,Health centre,Olok HC II,,Complete,206
+H206,Adjumani,Health centre,Arinyapi HC II,,Complete,207
+H207,Koboko,Health centre,Lasanga HCII,,Complete,208
+H208,Koboko,Health centre,Nyangilia,,Complete,209
+H209,Koboko,Health centre,Chakulia HC II,,Complete,210
+H210,Madi-Okollo,Health centre,Ulepi HCII,,Complete,211
+H211,Maracha,Health centre,Kijomoro,,Complete,212
+H212,Maracha,Health centre,Liko HC II,,Complete,213
+H213,Maracha,Health centre,Loinya HC II,,Complete,214
+H214,Maracha,Health centre,Ajikoro HC II,,Complete,215
+H215,Maracha,Health centre,Curube HC II,,Complete,216
+H216,Moyo,Health centre,Gbari HCII,,Complete,217
+H217,Moyo,Health centre,Aya HC II,,Complete,218
+H218,Nebbi,Health centre,Oweko HC II,,Complete,219
+H219,Nwoya,Health centre,Todora HC II,,Complete,220
+H220,Nwoya,Health centre,Got Apwoyo,,Complete,221
+H221,Nwoya,Health centre,Koch Lii HC II,,Complete,222
+H222,Nwoya,Health centre,Para HC II,,Complete,223
+H223,Omoro,Health centre,Loyoajonga HC II,,Complete,224
+H224,Omoro,Health centre,Lakwatomer HC II,,Complete,225
+H225,Omoro,Health centre,Acet HC II,,Complete,226
+H226,Terego,Health centre,Omugo (Wati),,Complete,227
+H227,Yumbe,Health centre,Lodonga TC,,Complete,228
+H228,Yumbe,Health centre,Amanyiri,,Complete,229
+H229,Yumbe,Health centre,Mocha HC II,,Complete,230
+H230,Yumbe,Health centre,Kerwa HC II,,Complete,231
+H231,Zombo,Health centre,Alangi,,Complete,232
+H232,Zombo,Health centre,Otheko HC II,,Complete,233
+H233,Zombo,Health centre,Ther-uru HC II,,Complete,234
+H234,Buhweju,Health centre,Bitsya HC II,,Complete,235
+H235,Buhweju,Health centre,Kiyanja HC II,,Complete,236
+H236,Buhweju,Health centre,Mushasha HC II,,Complete,237
+H237,Buhweju,Health centre,Engaju HC II,,Complete,238
+H238,Buhweju,Health centre,Rushambya HC II,,Complete,239
+H239,Bushenyi,Health centre,Rutooma HCII,,Complete,240
+H240,Bushenyi,Health centre,Kibazi HC II,,Complete,241
+H241,Ibanda,Health centre,Birongo HCII,,Complete,242
+H242,Ibanda,Health centre,Kihani HC II,,Complete,243
+H243,Ibanda,Health centre,Kashozi (Ibanda) HC II,,Complete,244
+H244,Isingiro,Health centre,Busheka (Isingiro) HC II,,Complete,245
+H245,Kazo,Health centre,Kyampangara,,Complete,246
+H246,Kazo,Health centre,Kyengando HC II,,Complete,247
+H247,Kazo,Health centre,Engari,,Complete,248
+H248,Kazo,Health centre,Nkungu HC II,,Complete,249
+H249,Kiruhura,Health centre,Rwabarata HC II,,Complete,250
+H250,Kiruhura,Health centre,Rwentamu HC II,,Complete,251
+H251,Kiruhura,Health centre,Rweshande HC II,,Complete,252
+H252,Kiruhura,Health centre,Kitura HC II,,Complete,253
+H253,Kiruhura,Health centre,Nshwere HC II,,Complete,254
+H254,Mbarara Mc,Health centre,Kyarwabuganda HC II,,Complete,255
+H255,Mitooma,Health centre,Mayanga HC II,,Complete,256
+H256,Mitooma,Health centre,Bukuba HC II,,Complete,257
+H257,Mitooma,Health centre,Ryengyerero HC II,,Complete,258
+H258,Mitooma,Health centre,Nyakishojwa HC II,,Complete,259
+H259,Ntungamo,Health centre,Kaina HC II,,Complete,260
+H260,Ntungamo,Health centre,Kafunjo HC II,,Complete,261
+H261,Ntungamo,Health centre,Rukoni West,,Complete,262
+H262,Ntungamo,Health centre,Ihunga (Ntungamo) HCII,,Complete,263
+H263,Ntungamo,Health centre,Nyanga HC II,,Complete,264
+H264,Ntungamo,Health centre,Kyamwasha HC II,,Complete,265
+H265,Ntungamo,Health centre,Karuruma HC II,,Complete,266
+H266,Ntungamo,Health centre,Rwanda HC II,,Complete,267
+H267,Ntungamo,Health centre,Kishami HCII,,Complete,268
+H268,Ntungamo Mc,Health centre,Ruhoko HC II,,Complete,269
+H269,Rubirizi,Health centre,Butoha HC II,,Complete,270
+H270,Rubirizi,Health centre,Kyabakara HC II,,Complete,271
+H271,Rubirizi,Health centre,Munyonyi HC II,,Complete,272
+H272,Rubirizi,Health centre,Mushumba HC II,,Complete,273
+H273,Rubirizi,Health centre,Ndagaro HC II,,Complete,274
+H274,Rwampara,Health centre,Nyabikungu HCII,,Complete,275
+H275,Rwampara,Health centre,Nyaruhandagazi HC II,,Complete,276
+H276,Sheema,Health centre,Kyeibanga HC II,,Complete,277
+H277,Sheema,Health centre,Mabaare HC II,,Complete,278
+H278,Sheema,Health centre,Kyeihara HC II,,Complete,279
+H279,Sheema,Health centre,Rugarama HC II,,Complete,280
+H280,Sheema Mc,Health centre,Kitojo HC II,,Complete,281
+H281,Sheema Mc,Health centre,Kashoozi HCII,,Complete,282
+H282,Sheema Municipal Council,Health centre,Rwamujojo HC II,,Complete,283
+H283,Buliisa,Health centre,Avogera HC II,,Complete,284
+H284,Buliisa,Health centre,Butiaba HC II,,Complete,285
+H285,Buliisa,Health centre,Kigwera HC II,,Complete,286
+H286,Hoima Mc,Health centre,Kihuukya HC II,,Complete,287
+H287,Kagadi,Health centre,Kyakabadiima HC II,,Complete,288
+H288,Kagadi,Health centre,Muhorro HC II,,Complete,289
+H289,Kagadi,Health centre,Kyabasara HC II,,Complete,290
+H290,Kagadi,Health centre,Burora (Kagadi) HC II,,Complete,291
+H291,Kakumiro,Health centre,Kikwaya,,Complete,292
+H292,Kakumiro,Health centre,Kikoola,,Complete,293
+H293,Kakumiro,Health centre,Kabuubwa HC II,,Complete,294
+H294,Kakumiro,Health centre,Kigando HCII,,Complete,295
+H295,Kakumiro,Health centre,Kakindo,,Complete,296
+H296,Kakumiro,Health centre,Birembo HC II,,Complete,297
+H297,Kakumiro,Health centre,Masaka HC II,,Complete,298
+H298,Kakumiro,Health centre,Kitaihuka HC II,,Complete,299
+H299,Kibaale,Health centre,Nyamarunda,,Complete,300
+H300,Kibaale,Health centre,Nyamarunda,,Complete,301
+H301,Kibaale,Health centre,Matale HC II,,Complete,302
+H302,Masindi Mc,Health centre,Katasenywa HC II,,Complete,303
+H303,Kabale,Health centre,Karujanga HC II,,Complete,304
+H304,Kabale,Health centre,Kahondo HC II,,Complete,305
+H305,Kabale,Health centre,Kitooma HC II,,Complete,306
+H306,Kabale,Health centre,Kasheregyenyi HC II,,Complete,307
+H307,Kabale,Health centre,Buramba HC II,,Complete,308
+H308,Kabale Mc,Health centre,Rutoma HCII,,Complete,309
+H309,Kanungu,Health centre,Ntungamo HC II,,Complete,310
+H310,Kanungu,Health centre,Matanda HC II,,Complete,311
+H311,Kanungu,Health centre,Kinaba HC II,,Complete,312
+H312,Kisoro,Health centre,Maregamo HC II,,Complete,313
+H313,Kisoro Mc,Health centre,Zindiro HC II,,Complete,314
+H314,Rubanda,Health centre,Mpungu HC II,,Complete,315
+H315,Rukungiri,Health centre,Karuhembe HC II,,Complete,316
+H316,Rukungiri,Health centre,Kasheshe HC II,,Complete,317
+H317,Rukungiri Mc,Health centre,Kitimba HC II,,Complete,318
+H318,Bundibugyo,Health centre,Mantoroba HC II,,Complete,319
+H319,Bundibugyo,Health centre,Mirambi HC II,,Complete,320
+H320,Bundibugyo,Health centre,Burondo HC II,,Complete,321
+H321,Bundibugyo,Health centre,Bupomboli HC II,,Complete,322
+H322,Bundibugyo,Health centre,Tombwe HC II,,Complete,323
+H323,Bundibugyo,Health centre,Bundimulangya HC II,,Complete,324
+H324,Bunyangabu,Health centre,Kateebwa Monument HCII,,Complete,325
+H325,Bunyangabu,Health centre,Rubona HC II,,Complete,326
+H326,Bunyangabu,Health centre,Kabahango HC II,,Complete,327
+H327,Fortportal City,Health centre,Kiguma HCII,,Complete,328
+H328,Fortportal City,Health centre,Rubingo HCII,,Complete,329
+H329,Kabarole,Health centre,Kidubuli HC II,,Complete,330
+H330,Kabarole,Health centre,Kicwamba HCII,,Complete,331
+H331,Kabarole,Health centre,Kidubuli HCII,,Complete,332
+H332,Kabarole,Health centre,Nyabuswa HC II,,Complete,333
+H333,Kabarole,Health centre,Kiko TC,,Complete,334
+H334,Kabarole,Health centre,Nyantabooma HC II,,Complete,335
+H335,Kabarole,Health centre,Nyakitokoli HC II,,Complete,336
+H336,Kamwenge,Health centre,Kabambiro HC II,,Complete,337
+H337,Kamwenge,Health centre,Kanara HC II,,Complete,338
+H338,Kamwenge,Health centre,Kabingo HC II,,Complete,339
+H339,Kasese,Health centre,Nyabirongo HCII,,Complete,340
+H340,Kasese,Health centre,Buhuhira HC II,,Complete,341
+H341,Kasese,Health centre,Nyakimasa HC II,,Complete,342
+H342,Kasese,Health centre,Kyempara HC II,,Complete,343
+H343,Kasese,Health centre,Bwesumbu HC II,,Complete,344
+H344,Kasese Municipal Council,Health centre,Railway HC II,,Complete,345
+H345,Kyegegwa,Health centre,Kabweza,,Complete,346
+H346,Kyegegwa,Health centre,Karwenyi HC II,,Complete,347
+H347,Kyenjojo,Health centre,Kasamba,,Complete,348
+H348,Kyenjojo,Health centre,Mbale HCII,,Complete,349
+H349,Kyenjojo,Health centre,Kataraza HC II,,Complete,350
+H350,Kyenjojo,Health centre,Myeri HC II,,Complete,351
+H351,Kyenjojo,Health centre,Kyakaramata HC II,,Complete,352
+H352,Kyenjojo,Health centre,Kigoyera HC II,,Complete,353
+H353,Ntoroko,Health centre,Bweramule HC II,,Complete,354
+H354,Ntoroko,Health centre,Musandama HC II,,Complete,355
+H355,Nansana Mc,Health centre,Matuga HCII,,Ongoing,356
+H356,Ssabagabo Makindye Mc,Health centre,Mutungo HCII,,Ongoing,357
+H357,Wakiso,Health centre,Kasangati TC/Mutuba-Nangabo,,Ongoing,358
+H358,Kiira Mc,Health centre,Kirinya HCII,,Ongoing,359
+H359,Kiira Mc,Health centre,Kireka HCII,,Ongoing,360
+H360,Bukwo,Health centre,Aralam HC II,,Ongoing,361
+H361,Bukwo,Health centre,Kapkoros HC II,,Ongoing,362
+H362,Bukwo,Health centre,Tulel HC II,,Ongoing,363
+H363,Bulambuli,Health centre,Bwikhonge HC II,,Ongoing,364
+H364,Amolatar,Health centre,Acii HCII,,Ongoing,365
+H365,Lira City,Health centre,Ngetta (Anyomorem/ Akwiaworo),,Ongoing,366
+H366,Moyo,Health centre,Lama HC II,,Ongoing,367
+H367,Omoro,Health centre,Tekulu HC II,,Ongoing,368
+H368,Omoro,Health centre,Abwoch HC II,,Ongoing,369
+H369,Buliisa,Health centre,Kihungya HC II,,Ongoing,370
+H370,Bundibugyo,Health centre,Kyondo HC II,,Ongoing,371
+H371,Bundibugyo,Health centre,Buhanda HC II,,Ongoing,372
+H372,Kabarole,Health centre,Kitule HC II,,Ongoing,373
+H373,Kasese,Health centre,Kabingo HCII,,Ongoing,374

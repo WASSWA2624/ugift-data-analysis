@@ -1,0 +1,6050 @@
+[
+  {
+    "team": 1,
+    "lg": "Madi-Okollo",
+    "name": "Ulepi HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-01 / Madi-Okollo / Ulepi-HC-III",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Nwoya",
+    "name": "Got Apwoyo",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-01 / Nwoya / Got-Apwoyo-HC-III",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Nwoya",
+    "name": "Koch Lii HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-01 / Nwoya / Koch-Lii-HC-III",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Nwoya",
+    "name": "Para HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-01 / Nwoya / Paraa-HC-III same facility, spelled differently",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Nwoya",
+    "name": "Todora HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-01 / Nwoya / Todora-HC-III",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Nwoya",
+    "name": "Got Apwoyo",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-01 / Nwoya / Got-Apwoyo-Seed-Secondary-School",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Nwoya",
+    "name": "Lungulu Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-01 / Nwoya / Lungulu-Seed-Secondary-School",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Zombo",
+    "name": "Alangi",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Amwonyo-HC-III, Atyak-HC-III",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Zombo",
+    "name": "Amwonyo HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-01 / Zombo / Amwonyo-HC-III not on the programme list",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Zombo",
+    "name": "Atyak HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-01 / Zombo / Atyak-HC-III not on the programme list",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Zombo",
+    "name": "Otheko HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-01 / Zombo / Otheko-HC-III",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Zombo",
+    "name": "Ther-uru HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Amwonyo-HC-III, Atyak-HC-III",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Zombo",
+    "name": "Abanga",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Amei-Seed-Secondary-School",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Zombo",
+    "name": "Amei Seed Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-01 / Zombo / Amei-Seed-Secondary-School not on the programme list",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Zombo",
+    "name": "Atyak Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-01 / Zombo / Atyak-Seed-Secondary-School",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Zombo",
+    "name": "Kango",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-01 / Zombo / Kango-Seed-Secondary-School",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Nebbi",
+    "name": "Oweko HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Pamaka-HC-III",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Nebbi",
+    "name": "Pamaka HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-01 / Nebbi / Pamaka-HC-III not on the programme list",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Nebbi",
+    "name": "Atego Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-01 / Nebbi / Atego-Seed-Secondary-School",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Nebbi",
+    "name": "Kucwiny",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-01 / Nebbi / Mamba-Seed-Secondary-School in Kucwiny sub-county",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Nebbi",
+    "name": "Ndhew",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-01 / Nebbi / Ndhew-Seed-Secondary-School",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Pakwach",
+    "name": "Alwi Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-01 / Pakwach / Alwi-Seed-Secondary-School",
+    "old_page": 7
+  },
+  {
+    "team": 1,
+    "lg": "Pakwach",
+    "name": "Wadelai",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-01 / Pakwach / Wadelai-Seed-Secondary-School",
+    "old_page": 7
+  },
+  {
+    "team": 2,
+    "lg": "Yumbe",
+    "name": "Amanyiri",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Yumbe / Amanyiri-HC-III",
+    "old_page": 7
+  },
+  {
+    "team": 2,
+    "lg": "Yumbe",
+    "name": "Kerwa HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Yumbe / Kerwa-HC-III",
+    "old_page": 7
+  },
+  {
+    "team": 2,
+    "lg": "Yumbe",
+    "name": "Lobe HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Yumbe / Lobe-HC-III not on the programme list",
+    "old_page": 7
+  },
+  {
+    "team": 2,
+    "lg": "Yumbe",
+    "name": "Lodonga TC",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Lobe-HC-III, Nyori-HC-III",
+    "old_page": 7
+  },
+  {
+    "team": 2,
+    "lg": "Yumbe",
+    "name": "Mocha HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Yumbe / Mocha-HC-III",
+    "old_page": 7
+  },
+  {
+    "team": 2,
+    "lg": "Yumbe",
+    "name": "Nyori HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Yumbe / Nyori-HC-III not on the programme list",
+    "old_page": 7
+  },
+  {
+    "team": 2,
+    "lg": "Yumbe",
+    "name": "Drajini",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-02 / Yumbe / Drajini-Hill-Seed-Secondary-School",
+    "old_page": 7
+  },
+  {
+    "team": 2,
+    "lg": "Yumbe",
+    "name": "Kerwa",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-02 / Yumbe / Kerwa-Seed-Secondary-School",
+    "old_page": 7
+  },
+  {
+    "team": 2,
+    "lg": "Yumbe",
+    "name": "Ladonga Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-02 / Yumbe / Lodonga-Seed-Secondary-School same facility, spelled differently",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Arua",
+    "name": "Arua Regional Blood Bank",
+    "type": "Blood bank",
+    "old_status": "Received",
+    "note": "team-02 / Arua / Arua-Regional-Blood-Bank allocated in team-distributions.docx",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Arua",
+    "name": "Aroi",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-02 / Arua / St-Peters-Seed-Secondary-School-Aroi",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Koboko",
+    "name": "Chakulia HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Koboko / Chakulia-HC-III",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Koboko",
+    "name": "Lasanga HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Koboko MC / Lasanga-HC-III team filed it under Koboko MC",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Koboko",
+    "name": "Nyangilia",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Koboko MC / Nyangilia-HC-III team filed it under Koboko MC",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Koboko",
+    "name": "Kuluba",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-02 / Koboko / Nyakaliso-Seed-Secondary-School in Kuluba sub-county",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Koboko",
+    "name": "Padrombu Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-02 / Koboko / Padrombu-Seed-Secondary-School",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Maracha",
+    "name": "Ajikoro HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Maracha / Ajikoro-HC-III",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Maracha",
+    "name": "Curube HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Maracha / Curube-HC-III",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Maracha",
+    "name": "Kijomoro",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Maracha / Ekaligo-HC-III in Kijomoro sub-county",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Maracha",
+    "name": "Liko HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Maracha / Liko-HC-III",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Maracha",
+    "name": "Loinya HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Odupiri-HC-III",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Maracha",
+    "name": "Odupiri HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Maracha / Odupiri-HC-III not on the programme list",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Maracha",
+    "name": "Kololo Public",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-02 / Maracha / Kololo-Seed-Secondary-School",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Maracha",
+    "name": "Oluvu",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-02 / Maracha / All-Saints-Secondary-School in Oluvu sub-county",
+    "old_page": 8
+  },
+  {
+    "team": 2,
+    "lg": "Terego",
+    "name": "Omugo (Wati)",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-02 / Terego / Wati-HC-III",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Obongi",
+    "name": "Gimara",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-03 / Obongi / Gopele-Seed-Secondary-School in Gimara sub-county",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Adjumani",
+    "name": "Arinyapi HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-03 / Adjumani / Arinyapi-HC-III",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Adjumani",
+    "name": "Arinyapi",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-03 / Adjumani / Arinyapi-Seed-Secondary-School",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Adjumani",
+    "name": "Maaji Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-03 / Adjumani / Maaji-Seed-Secondary-School",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Moyo",
+    "name": "Aya HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-03 / Moyo / Aya-HC-III",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Moyo",
+    "name": "Gbari HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-03 / Moyo / Gbari-HC-III",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Moyo",
+    "name": "Lama HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-03 / Moyo / Lama-HC-III",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Moyo",
+    "name": "Dufile Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-03 / Moyo / Dufile-Seed-Secondary-School",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Gulu",
+    "name": "Omel HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-03 / Gulu / Omel-HC-III",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Gulu",
+    "name": "Palaro Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-03 / Gulu / Palaro-Seed-Secondary-School",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Gulu",
+    "name": "Patiko Seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-03 / Gulu / Patiko-Seed-Secondary-School",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Amuru",
+    "name": "Otwee HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-03 / Amuru / Otwee-HC-III",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Amuru",
+    "name": "Amuru Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-03 / Amuru / Amuru-Seed-Secondary-School",
+    "old_page": 8
+  },
+  {
+    "team": 3,
+    "lg": "Amuru",
+    "name": "Amuru T/C",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-03 / Amuru / Amuru-Town-Seed-Secondary-School",
+    "old_page": 8
+  },
+  {
+    "team": 4,
+    "lg": "Lamwo",
+    "name": "Katum HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-04 / Lamwo / Katum-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Lamwo",
+    "name": "Ngomoromo HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Pangira-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Lamwo",
+    "name": "Pangira HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-04 / Lamwo / Pangira-HC-III not on the programme list",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Lamwo",
+    "name": "Padibe East",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-04 / Lamwo / Padibe-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Lamwo",
+    "name": "Paloga Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-04 / Lamwo / Paloga-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Pader",
+    "name": "Lapul Ocwida HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-04 / Pader / Lapul-Ocwida-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Pader",
+    "name": "Okinga HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-04 / Pader / Okinya-HC-III same facility, spelled differently",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Pader",
+    "name": "Olok HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-04 / Pader / Olok-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Pader",
+    "name": "Latanya",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-04 / Pader / Latanya-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Pader",
+    "name": "Ogom Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-04 / Pader / Ogom-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Agago",
+    "name": "Lamiyo HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-04 / Agago / Lamiyo-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Agago",
+    "name": "Lapirin HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-04 / Agago / Lapirin-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Agago",
+    "name": "Layita HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-04 / Agago / Layita-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Agago",
+    "name": "Omot HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-04 / Agago / Omot-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Agago",
+    "name": "Pacer HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-04 / Agago / Pacer-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Agago",
+    "name": "Kotomor",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-04 / Agago / Kotomor-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Agago",
+    "name": "Lamiyo",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-04 / Agago / Lamiyo-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Agago",
+    "name": "Lapono Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-04 / Agago / Lapono-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Agago",
+    "name": "Omiya Pacwa",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-04 / Agago / Omiya-Pacwa-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Agago",
+    "name": "Wol",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-04 / Agago / Awor-Seed-Secondary-School in Wol sub-county",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Kitgum MC",
+    "name": "Pandwong HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Kitgum",
+    "name": "Labongo Amida Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-04 / Kitgum / Labongo-Amida-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 4,
+    "lg": "Kitgum",
+    "name": "Labongo Layamo",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-04 / Kitgum / Labongo-Layamo-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Lira",
+    "name": "Alik HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Onywako-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Lira",
+    "name": "Barlonyo",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Lira / Barlonyo-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Lira",
+    "name": "Onywako HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Lira / Onywako-HC-III not on the programme list",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Lira",
+    "name": "Punuluru",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Lira City / Punuluru-HC-III team filed it under Lira City",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Lira",
+    "name": "Agali Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-05 / Lira / Agali-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Lira",
+    "name": "Ogur (Phase II of Ogur Seed S.S.)",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-05 / Lira / Ogur-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Lira City",
+    "name": "Ngetta (Anyomorem/ Akwiaworo)",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Lira City / Anyomorem-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Lira City",
+    "name": "Railways Division",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-05 / Lira City / Railway-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Kole",
+    "name": "Ayara HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Kole / Ayara-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Kole",
+    "name": "Ayer HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Kole / Ayer-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Kole",
+    "name": "Okole HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Kole / Okole-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Kole",
+    "name": "Okwerodot",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Kole / Okwerodot-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Kole",
+    "name": "Kole T/C",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-05 / Kole / Kole-Seed-Secondary-School",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Kole",
+    "name": "Okwelodot Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-05 / Kole / Okwerodot-Seed-Secondary-School same facility, spelled differently",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Omoro",
+    "name": "Abwoch HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Omoro / Abwoch-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Omoro",
+    "name": "Acet HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Omoro / Acet-HC-III",
+    "old_page": 9
+  },
+  {
+    "team": 5,
+    "lg": "Omoro",
+    "name": "Lakwatomer HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Omoro / Lakwatomer-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Omoro",
+    "name": "Loyoajonga HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Omoro / Loyoajonga-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Omoro",
+    "name": "Tekulu HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Omoro / Tekulu-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Omoro",
+    "name": "Lakwana Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-05 / Omoro / Lakwana-Seed-Secondary-School",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Oyam",
+    "name": "Abela HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Oyam / Abela-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Oyam",
+    "name": "Acimi HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Oyam",
+    "name": "Acokara HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Oyam",
+    "name": "Ajaga",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Oyam / Ajaga-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Oyam",
+    "name": "Alira HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Oyam",
+    "name": "Ariba HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Oyam",
+    "name": "Atura HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Oyam / Atura-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Oyam",
+    "name": "Iceme (Okwir)",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Oyam / Iceme-Okwir-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Oyam",
+    "name": "Iceme HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Oyam / Iceme-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Oyam",
+    "name": "Loro HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-05 / Oyam / Loro-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Oyam",
+    "name": "Aleka",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-05 / Oyam / Aleka-Seed-Secondary-School",
+    "old_page": 10
+  },
+  {
+    "team": 5,
+    "lg": "Oyam",
+    "name": "Ngai",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-05 / Oyam / Ngai-Seed-Secondary-School",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Apac",
+    "name": "Aganga HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Apac / Aganga-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Apac",
+    "name": "Arocha HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Apac / Arocha-HC-III not on the programme list",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Apac",
+    "name": "Kidilani HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Apac / Kidilani-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Apac",
+    "name": "Kungu HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Apac / Kungu-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Apac",
+    "name": "Olelpek HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Apac / Olelpek-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Apac",
+    "name": "Apac Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-06 / Apac / Apac-Seed-Secondary-School",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Apac MC",
+    "name": "Arocha",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-06 / Apac MC / Arocha-Seed-Secondary-School",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Kwania",
+    "name": "Akali HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Kwania / Akali-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Kwania",
+    "name": "Owiny HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Kwania / Owiny-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Kwania",
+    "name": "Aduku Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-06 / Kwania / Aduku-Seed-Secondary-School",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Amolatar",
+    "name": "Acii HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Amolatar / Acii-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Amolatar",
+    "name": "Alyecmeda HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Amolatar / Alyecmeda-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Amolatar",
+    "name": "Anamwany HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Amolatar / Anamwany-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Amolatar",
+    "name": "Arwotchek HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Amolatar / Arwotcek-HC-III same facility, spelled differently",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Amolatar",
+    "name": "Awonangiro HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Amolatar / Awonangiro-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Amolatar",
+    "name": "Biko HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Amolatar / Biko-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Amolatar",
+    "name": "Nakatiti HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-06 / Amolatar / Nakatiti-HC-III",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Amolatar",
+    "name": "Akwon",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-06 / Amolatar / Akwon-Seed-Secondary-School",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Amolatar",
+    "name": "Etam",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-06 / Amolatar / Etam-Seed-Secondary-School",
+    "old_page": 10
+  },
+  {
+    "team": 6,
+    "lg": "Amolatar",
+    "name": "Muntu Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-06 / Amolatar / Muntu-Seed-Secondary-School",
+    "old_page": 10
+  },
+  {
+    "team": 7,
+    "lg": "Alebtong",
+    "name": "Adwir HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Alebtong / Adwir-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Alebtong",
+    "name": "Anara HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Alebtong / Anara-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Alebtong",
+    "name": "Angetta HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Alebtong / Angetta-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Alebtong",
+    "name": "Awei HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Alebtong / Awei-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Alebtong",
+    "name": "Moroto Abia HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Alebtong / Abia-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Alebtong",
+    "name": "Abia Seed S.S",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "Team 7 schools sheet (SCHOOLS FOR TEAM SEVEN DTB.xlsx)",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Alebtong",
+    "name": "Awei",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "Team 7 schools sheet (SCHOOLS FOR TEAM SEVEN DTB.xlsx)",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Otuke",
+    "name": "Alango HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Otuke / Alango-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Otuke",
+    "name": "Ogwete HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Otuke / Ogwete-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Otuke",
+    "name": "Ogoro Seed School",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "Team 7 schools sheet (SCHOOLS FOR TEAM SEVEN DTB.xlsx)",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Otuke",
+    "name": "Orum (New facilities for Okum Seed S.S. - Pledge)",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "Team 7 schools sheet (SCHOOLS FOR TEAM SEVEN DTB.xlsx)",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Dokolo",
+    "name": "Abalang HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Dokolo / Abalang-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Dokolo",
+    "name": "Adagmon HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Dokolo / Adagmon-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Dokolo",
+    "name": "Adok HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Dokolo / Adok-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Dokolo",
+    "name": "Amwoma HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Dokolo / Amwoma-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Dokolo",
+    "name": "Anyacoto HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Dokolo / Anyacoto-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Dokolo",
+    "name": "Awelo HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Dokolo / Awelo-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Dokolo",
+    "name": "Te-Tugu HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-07 / Dokolo / Te-Tugu-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Dokolo",
+    "name": "Adeknino",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-07 / Dokolo / Adeknino-Seed-Secondary-School",
+    "old_page": 11
+  },
+  {
+    "team": 7,
+    "lg": "Dokolo",
+    "name": "Batta Seed School",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "Team 7 schools sheet (SCHOOLS FOR TEAM SEVEN DTB.xlsx)",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Amuria",
+    "name": "Abeko HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Amuria / Abeko-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Amuria",
+    "name": "Akeriau HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Amuria / Akeriau-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Amuria",
+    "name": "Alere HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Amuria / Alere-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Amuria",
+    "name": "Golokwara (Ajaki) HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Amuria / Golokwara-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Amuria",
+    "name": "Wera HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Amuria / Wera-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Amuria",
+    "name": "Asamuk",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-08 / Amuria / Asamuk-Seed-Secondary-School",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Kapelebyong",
+    "name": "Aeket HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Kapelebyong / Aeket-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Kapelebyong",
+    "name": "Akoromit",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Kapelebyong / Akoromit-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Kapelebyong",
+    "name": "Alito HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Kapelebyong / Alito-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Katakwi",
+    "name": "Akoboi HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Katakwi / Akoboi-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Katakwi",
+    "name": "Aliakamer HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Katakwi / Aliakamer-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Katakwi",
+    "name": "Koritok HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Katakwi / Koritok-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Katakwi",
+    "name": "Palam Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-08 / Katakwi / Palam-Seed-Secondary-School",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Katakwi",
+    "name": "Toroma",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-08 / Katakwi / Toroma-Seed-Secondary-School",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Soroti",
+    "name": "Soroti Regional Blood Bank",
+    "type": "Blood bank",
+    "old_status": "Received",
+    "note": "team-08 / Soroti / Soroti-Regional-Blood-Bank allocated in team-distributions.docx",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Soroti",
+    "name": "Asuret Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-08 / Soroti / Asuret-Seed-Secondary-School",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Soroti",
+    "name": "Kamuda",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-08 / Soroti / Kamuda-Seed-Secondary-School",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Serere",
+    "name": "Aarapoo HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Serere / Aarapoo-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Serere",
+    "name": "Kagwara HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Serere / Kagwara-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Serere",
+    "name": "Kamod HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Serere / Kamod-HC-III",
+    "old_page": 11
+  },
+  {
+    "team": 8,
+    "lg": "Serere",
+    "name": "Oburin HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-08 / Serere / Oburin-HC-III",
+    "old_page": 12
+  },
+  {
+    "team": 8,
+    "lg": "Serere",
+    "name": "Kadungulu Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "Team 8's schools sheet also lists 'Kagawa' and 'Kahasa' seed schools; one may be this school",
+    "old_page": 12
+  },
+  {
+    "team": 8,
+    "lg": "Serere",
+    "name": "Olio",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-08 / Serere / Olio-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Kaberamaido",
+    "name": "Aperikira",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-09 / Kaberamaido / Aperikira-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Kalaki",
+    "name": "Apapai",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-09 / Kalaki / Apapai-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Kalaki",
+    "name": "Kakure Seed S.S",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-09 / Kalaki / Kakure-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Kumi",
+    "name": "Kumi Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-09 / Kumi / Kumi-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Kumi",
+    "name": "Nyero (New facilities at Dr. Aporu Okol Mem. S.S.)",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-09 / Kumi / Dr-Aporu-Okol-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Butebo",
+    "name": "Kachuru HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-09 / Butebo / Kachuru-HC-III",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Butebo",
+    "name": "Kanyumu HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-09 / Butebo / Kanyumu-HC-III",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Butebo",
+    "name": "Kanginima Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-09 / Butebo / Kanginima-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Pallisa",
+    "name": "Akadot Seed Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-09 / Pallisa / Akadot-Seed-Secondary-School not on the programme list",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Pallisa",
+    "name": "Olok Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-09 / Pallisa / Olok-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Pallisa",
+    "name": "Pallisa",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Akadot-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Bukedea",
+    "name": "Akuoro HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-09 / Bukedea / Akuoro-HC-III",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Bukedea",
+    "name": "Kangole HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-09 / Bukedea / Kangole-HC-III not on the programme list",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Bukedea",
+    "name": "Kocheka HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Kangole-HC-III",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Bukedea",
+    "name": "Nalugai HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-09 / Bukedea / Nalugai-HC-III",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Bukedea",
+    "name": "Tajar HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-09 / Bukedea / Tajar-HC-III",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Bukedea",
+    "name": "Kabarwa Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-09 / Bukedea / Kabarwa-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 9,
+    "lg": "Ngora",
+    "name": "Ngora Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-09 / Ngora / Ngora-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 10,
+    "lg": "Moroto",
+    "name": "Kalemungole HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-10 / Moroto / Kalemungole-HC-III",
+    "old_page": 12
+  },
+  {
+    "team": 10,
+    "lg": "Moroto",
+    "name": "Katikekire",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-10 / Moroto / Katikekire-Seed-School",
+    "old_page": 12
+  },
+  {
+    "team": 10,
+    "lg": "Moroto",
+    "name": "Rupa Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-10 / Moroto / Rupa-Seed-School",
+    "old_page": 12
+  },
+  {
+    "team": 10,
+    "lg": "Nakapiripirit",
+    "name": "Moruita",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-10 / Nakapiripirit / Moruita-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 10,
+    "lg": "Nakapiripirit",
+    "name": "Nakapiripirit Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-10 / Nakapiripirit / Nakapiripirit-Seed-School",
+    "old_page": 12
+  },
+  {
+    "team": 10,
+    "lg": "Nabilatuk",
+    "name": "Lolachat Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-10 / Nabilatuk / Lolachat-Seed-School",
+    "old_page": 12
+  },
+  {
+    "team": 10,
+    "lg": "Napak",
+    "name": "Iriiri",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-10 / Napak / Iriiri-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 10,
+    "lg": "Napak",
+    "name": "Lopei",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-10 / Napak / Lopei-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 10,
+    "lg": "Napak",
+    "name": "Napak Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-10 / Napak / Napak-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 10,
+    "lg": "Amudat",
+    "name": "Kalita Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-10 / Amudat / Kalita-Seed-School",
+    "old_page": 12
+  },
+  {
+    "team": 10,
+    "lg": "Amudat",
+    "name": "Looro",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-10 / Amudat / Looro-Seed-Secondary-School",
+    "old_page": 12
+  },
+  {
+    "team": 11,
+    "lg": "Kotido",
+    "name": "Kamoru HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-11 / Kotido / Kamoru-HC-III",
+    "old_page": 13
+  },
+  {
+    "team": 11,
+    "lg": "Kotido",
+    "name": "Panyangara Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-11 / Kotido / Panyangara-Seed-Secondary-School",
+    "old_page": 13
+  },
+  {
+    "team": 11,
+    "lg": "Kotido",
+    "name": "Rengen",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-11 / Kotido / Rengen-Seed-School",
+    "old_page": 13
+  },
+  {
+    "team": 11,
+    "lg": "Kaabong",
+    "name": "Sidok",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-11 / Kaabong / Sidok-Seed-Secondary-School",
+    "old_page": 13
+  },
+  {
+    "team": 11,
+    "lg": "Karenga",
+    "name": "Kalimon HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-11 / Karenga / Kalimon-HC-III",
+    "old_page": 13
+  },
+  {
+    "team": 11,
+    "lg": "Karenga",
+    "name": "Kapedo",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-11 / Karenga / Kapedo-Seed-Secondary-School",
+    "old_page": 13
+  },
+  {
+    "team": 11,
+    "lg": "Karenga",
+    "name": "Lokori Seed Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-11 / Karenga / Lokori-Seed-Secondary-School not on the programme list",
+    "old_page": 13
+  },
+  {
+    "team": 11,
+    "lg": "Abim",
+    "name": "Alerek",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-11 / Abim / Alerek-Seed-Secondary-School",
+    "old_page": 13
+  },
+  {
+    "team": 11,
+    "lg": "Abim",
+    "name": "Magamaga",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-11 / Abim / Magamaga-Seed-School",
+    "old_page": 13
+  },
+  {
+    "team": 11,
+    "lg": "Abim",
+    "name": "Nakwae Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-11 / Abim / Nakwae-Seed-School",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Kibuku",
+    "name": "Kabweri HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-12 / Kibuku / Kabweri-HC-III",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Kibuku",
+    "name": "Lwatama HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-12 / Kibuku / Lwatama-HC-III",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Kibuku",
+    "name": "Nalubembe HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-12 / Kibuku / Nalubembe-HC-III",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Kibuku",
+    "name": "Kabweri Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-12 / Kibuku / Kabweri-Seed-Secondary-School",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Kibuku",
+    "name": "Kasasila Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-12 / Kibuku / Kasasira-Seed-Secondary-School same facility, spelled differently",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Kibuku",
+    "name": "Kirika",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-12 / Kibuku / St-Johns-Seed-Secondary-School-Kirika",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Budaka",
+    "name": "Namusita (Budaka) HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-12 / Budaka / Namusita-HC-III",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Budaka",
+    "name": "Kakule",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-12 / Budaka / Kakule-Seed-Secondary-School",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Budaka",
+    "name": "Kamonkoli Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-12 / Budaka / Kamonkoli-Seed-Secondary-School",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Budaka",
+    "name": "Mugiti",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-12 / Budaka / Mugiti-Seed-Secondary-School",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Budaka",
+    "name": "Nansanga",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-12 / Budaka / Nansanga-Seed-Secondary-School",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Butaleja",
+    "name": "Nampologoma HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-12 / Butaleja / Mazimasa-HC-III team document names Nampologoma",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Butaleja",
+    "name": "Kachonga",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-12 / Butaleja / Muhula-Seed-Secondary-School in Kachonga sub-county",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Butaleja",
+    "name": "Nakwasi Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-12 / Butaleja / Nakwasi-Seed-Secondary-School",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Mbale",
+    "name": "Bubentsye Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-12 / Mbale / Bubentsye-Seed-Secondary-School",
+    "old_page": 13
+  },
+  {
+    "team": 12,
+    "lg": "Mbale",
+    "name": "Lwasso",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-12 / Mbale / Lwasso-Seed-Secondary-School",
+    "old_page": 13
+  },
+  {
+    "team": 13,
+    "lg": "Tororo MC",
+    "name": "Kyamwinula HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-13 / Tororo MC / Kyamwinula-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Tororo MC",
+    "name": "Eastern Division",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Tororo",
+    "name": "Kamuli HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-13 / Tororo / Kamuli-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Tororo",
+    "name": "Namwaya HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-13 / Tororo / Namwaya-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Tororo",
+    "name": "Sop Sop HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-13 / Tororo / Sop-Sop-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Tororo",
+    "name": "Iyolwa",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-13 / Tororo / Iyolwa",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Tororo",
+    "name": "Malaba Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-13 / Tororo / Malaba-Seed-School",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Tororo",
+    "name": "Sop Sop",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-13 / Tororo / Sop-Sop",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Busia",
+    "name": "Bumunji HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-13 / Busia / Bumunji-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Busia",
+    "name": "Buwembe HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-13 / Busia / Buwembe-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Busia",
+    "name": "Buwumba HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-13 / Busia / Buwumba-HC-III not on the programme list",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Busia",
+    "name": "Dabani",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Buwumba-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Busia",
+    "name": "Majanji HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-13 / Busia / Majanji-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Busia",
+    "name": "Sikuda HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-13 / Busia / Sikuda-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Busia",
+    "name": "Sikuda",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-13 / Busia / Sikuda-Seed-Secondary-School",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Busia MC",
+    "name": "Busia Eastern Division",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Manafwa",
+    "name": "Bukimanayi HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-13 / Manafwa / Bukimanayi-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Manafwa",
+    "name": "Butta",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-13 / Manafwa / Butta",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Manafwa",
+    "name": "Buwagogo Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-13 / Manafwa / Buwagogo-Seed-School",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Manafwa",
+    "name": "Khabutoola",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-13 / Manafwa / Khabutoola",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Manafwa",
+    "name": "Sibanga Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-13 / Manafwa / Sibanga-Seed-School",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Manafwa",
+    "name": "Sisuni",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-13 / Manafwa / Sisuni",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Namisindwa",
+    "name": "Mukuto Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-13 / Namisindwa / Mukuto-Seed-School",
+    "old_page": 14
+  },
+  {
+    "team": 13,
+    "lg": "Namisindwa",
+    "name": "Namboko",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-13 / Namisindwa / Namboko",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Bududa",
+    "name": "Bubungi HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Bududa / Bubungi-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Bududa",
+    "name": "Bududa",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Bududa / Bududa-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Bududa",
+    "name": "Bumusi HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Bududa / Bumusi-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Bududa",
+    "name": "Bunamono HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Bududa / Bunamono-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Bududa",
+    "name": "Bushiribo",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-14 / Bududa / Bushiribo-Seed-Secondary-School",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Bududa",
+    "name": "Nakatsi",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-14 / Bududa / Nakatsi-Seed-Secondary-School",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Sironko",
+    "name": "Bundege HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Sironko / Bundege-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Sironko",
+    "name": "Buyaya HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Sironko / Buyaya-HC-II",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Sironko",
+    "name": "Buyobo HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Sironko / Buyobo-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Sironko",
+    "name": "Mutufu HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Sironko / Mutufu-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Sironko",
+    "name": "Simu Pondo HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Sironko / Simu-Pondo-HC-III not on the programme list",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Sironko",
+    "name": "Bugitimwa",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-14 / Sironko / St-Marys-Bugitimwa-Seed-Secondary-School",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Sironko",
+    "name": "Bumirisa Seed School Buteza",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-14 / Sironko / Buteza-Seed-Secondary-School",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Bulambuli",
+    "name": "Bukhalu",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Bulambuli / Kamu-HC-III team document names Bukhalu",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Bulambuli",
+    "name": "Bukibologoto HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Bulambuli / Bukibologoto-HC-II",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Bulambuli",
+    "name": "Bulaago HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Bulambuli / Bulaago-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Bulambuli",
+    "name": "Bumugibole HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Bulambuli / Bumugibole-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Bulambuli",
+    "name": "Bunangaka HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Bulambuli / Bunangaka-HC-III",
+    "old_page": 14
+  },
+  {
+    "team": 14,
+    "lg": "Bulambuli",
+    "name": "Bwikhonge HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-14 / Bulambuli / Bwikhonge-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 14,
+    "lg": "Bulambuli",
+    "name": "Bunambutye Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-14 / Bulambuli / Bumufuni-Seed-Secondary-School in Bunambutye",
+    "old_page": 15
+  },
+  {
+    "team": 14,
+    "lg": "Bulambuli",
+    "name": "Sisiyi",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-14 / Bulambuli / Sisiyi-Seed-Secondary-School",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kween",
+    "name": "Atar HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Kween / Atar-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kween",
+    "name": "Benet HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Kween / Benet-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kween",
+    "name": "Kaptum HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Kween / Kaptum-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kween",
+    "name": "Moyok HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Kween / Moyok-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kween",
+    "name": "Terenpoy HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Kween / Terenpoy-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kween",
+    "name": "Kaptum",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-15 / Kween / Kaptum-Seed-Secondary-School",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kween",
+    "name": "Kitawoi Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-15 / Kween / Kitawoi-Seed-Secondary-School",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kween",
+    "name": "Moyok",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-15 / Kween / Moyok-Seed-Secondary-School",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kapchorwa",
+    "name": "Chemosong HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Kapchorwa / Chemosong-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kapchorwa",
+    "name": "Ngangatta HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Kapchorwa / Ngangatta-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kapchorwa",
+    "name": "Kabeywa Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-15 / Kapchorwa / Kabeywa-Seed-Secondary-School",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kapchorwa",
+    "name": "Kaptanya",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-15 / Kapchorwa / Kaptanya-Seed-Secondary-School",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Kapchorwa MC",
+    "name": "Kaplelko HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Kapchorwa MC / Kaplelko-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Bukwo",
+    "name": "Amanang HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Bukwo / Amanang-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Bukwo",
+    "name": "Aralam HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Bukwo / Aralam-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Bukwo",
+    "name": "Brim HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Bukwo / Brim-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Bukwo",
+    "name": "Chepkwasta HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Bukwo / Chepkwasta-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Bukwo",
+    "name": "Kapkoros HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Bukwo / Kapkoros-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Bukwo",
+    "name": "Kwirwot HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Bukwo / Kwirwot-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Bukwo",
+    "name": "Mutushet HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Bukwo / Mutushet-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Bukwo",
+    "name": "Tulel HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-15 / Bukwo / Tulel-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Bukwo",
+    "name": "Kaptererwo Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-15 / Bukwo / Kaptererwo-Seed-Secondary-School",
+    "old_page": 15
+  },
+  {
+    "team": 15,
+    "lg": "Bukwo",
+    "name": "Senendet",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-15 / Bukwo / Senendet-Seed-Secondary-School",
+    "old_page": 15
+  },
+  {
+    "team": 16,
+    "lg": "Namutumba",
+    "name": "Namutumba Kagulu HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-16 / Namutumba / Kagulu-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 16,
+    "lg": "Namutumba",
+    "name": "Nangonde HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-16 / Namutumba / Nangonde-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 16,
+    "lg": "Namutumba",
+    "name": "Nabweyo",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-16 / Namutumba / Nabweyo-Seed-Secondary-School",
+    "old_page": 15
+  },
+  {
+    "team": 16,
+    "lg": "Namutumba",
+    "name": "Namutumba Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-16 / Namutumba / Namutumba-Seed-Secondary-School",
+    "old_page": 15
+  },
+  {
+    "team": 16,
+    "lg": "Luuka",
+    "name": "Bukendi HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-16 / Luuka / Bukendi-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 16,
+    "lg": "Luuka",
+    "name": "Bulalu HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-16 / Luuka / Bulalu-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 16,
+    "lg": "Luuka",
+    "name": "Ikumbya Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-16 / Luuka / Ikumbya-Seed-Secondary-School",
+    "old_page": 15
+  },
+  {
+    "team": 16,
+    "lg": "Luuka",
+    "name": "Nawampiti",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-16 / Luuka / Nawampiti-Seed-Secondary-School",
+    "old_page": 15
+  },
+  {
+    "team": 16,
+    "lg": "Mayuge",
+    "name": "Bukatube HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-16 / Mayuge / Bukatube-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 16,
+    "lg": "Mayuge",
+    "name": "Busaala HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-16 / Mayuge / Busaala-HC-III",
+    "old_page": 15
+  },
+  {
+    "team": 16,
+    "lg": "Mayuge",
+    "name": "Jagusi HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-16 / Mayuge / Jaguzi-HC-III same facility, spelled differently",
+    "old_page": 15
+  },
+  {
+    "team": 16,
+    "lg": "Mayuge",
+    "name": "Muggi HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-16 / Mayuge / Muggi-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 16,
+    "lg": "Mayuge",
+    "name": "Nkombe HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-16 / Mayuge / Nkombe-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 16,
+    "lg": "Mayuge",
+    "name": "Mpungwe Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-16 / Mayuge / Mpungwe-Seed-Secondary-School",
+    "old_page": 16
+  },
+  {
+    "team": 16,
+    "lg": "Mayuge",
+    "name": "Wairasa",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-16 / Mayuge / Wairasa-Seed-Secondary-School",
+    "old_page": 16
+  },
+  {
+    "team": 16,
+    "lg": "Bugweri",
+    "name": "Busembatya HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-16 / Bugweri / Busembatya-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 16,
+    "lg": "Bugweri",
+    "name": "Minani HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-16 / Bugweri / Minani-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 16,
+    "lg": "Bugweri",
+    "name": "Nawangisa HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-16 / Bugweri / Nawangisa-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 16,
+    "lg": "Bugweri",
+    "name": "Igombe",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Mpiita-Seed-Secondary-School",
+    "old_page": 16
+  },
+  {
+    "team": 16,
+    "lg": "Bugweri",
+    "name": "Mpiita Seed Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-16 / Bugweri / Mpiita-Seed-Secondary-School not on the programme list",
+    "old_page": 16
+  },
+  {
+    "team": 16,
+    "lg": "Bugweri",
+    "name": "Naigombwa Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-16 / Bugweri / Naigombwa-Seed-Secondary-School",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Bugiri",
+    "name": "Budhaya",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "Busoga seed-school register (Seed School Updated Asset Register) only an Office lock file for the Word toolkit reached us",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Bugiri",
+    "name": "Iwemba Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-17 / Bugiri / Iwemba-Seed-Secondary-School",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Bugiri MC",
+    "name": "Bugiri TC HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-17 / Bugiri MC / Bugiri-Municipal-Council-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Namayingo",
+    "name": "Bugana HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-17 / Namayingo / Bugana-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Namayingo",
+    "name": "Lolwe HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-17 / Namayingo / Lolwe-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Namayingo",
+    "name": "Syanyonja HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-17 / Namayingo / Syanyonja-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Namayingo",
+    "name": "Buhemba",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-17 / Namayingo / Buhemba-Seed-Secondary-School",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Namayingo",
+    "name": "Mutumba Seed Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-17 / Namayingo / Mutumba-Seed-Secondary-School not on the programme list",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Namayingo",
+    "name": "Mwema Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Mutumba-Seed-Secondary-School",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Iganga",
+    "name": "Nawanyingi Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-17 / Iganga / Nawanyingi-Seed-Secondary-School",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Kaliro",
+    "name": "Budomero HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-17 / Kaliro / Budomero-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Kaliro",
+    "name": "Buyinda HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Kaliro",
+    "name": "Kasokwe HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-17 / Kaliro / Kasokwe-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Kaliro",
+    "name": "Kisinda HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-17 / Kaliro / Kisinda-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Kaliro",
+    "name": "Nawampiti HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-17 / Kaliro / Nawampiti-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Kaliro",
+    "name": "Bukamba Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-17 / Kaliro / Bukamba-Seed-Secondary-School",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Kaliro",
+    "name": "Bumanya",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-17 / Kaliro / Bumanya-Seed-Secondary-School",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Kaliro",
+    "name": "Nansololo",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-17 / Kaliro / Nansololo-Seed-Secondary-School",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Jinja City",
+    "name": "Kimaka HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-17 / Jinja City / Kimaka-HC-III",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Jinja City",
+    "name": "Central Division",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Jinja",
+    "name": "Butagaya",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Buwala-Seed-Secondary-School; Busoga seed register lists 'Buwaya Seed School' under Jinja; it may be this school",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Jinja",
+    "name": "Buwala Seed Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-17 / Jinja / Buwala-Seed-Secondary-School not on the programme list",
+    "old_page": 16
+  },
+  {
+    "team": 17,
+    "lg": "Jinja",
+    "name": "Buwenge Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-17 / Jinja / Buwenge-Seed-Secondary-School",
+    "old_page": 16
+  },
+  {
+    "team": 18,
+    "lg": "Mukono MC",
+    "name": "Nyanja HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-18 / Mukono MC / Nyanja-HC-III",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Mukono",
+    "name": "Kimenyedde Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-18 / Mukono MC / St-Andrews-Ndwaddemutwe-Secondary-School in Kimenyedde; team filed it under Mukono MC",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Buikwe",
+    "name": "Nkokonjeru HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-18 / Buikwe / Nkokonjeru-HC-III",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Buikwe",
+    "name": "Ssugu Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-18 / Buikwe / Ssugu-Seed-Secondary-School",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Kayunga",
+    "name": "Bukamba HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-18 / Kayunga / Bukamba-HC-III",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Kayunga",
+    "name": "Busaale HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-18 / Kayunga / Busaale-HC-III",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Kayunga",
+    "name": "Nazigo Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-18 / Kayunga / Musiitwa-Seed-Secondary-School-Nazigo",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Buyende",
+    "name": "Bukungu HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-18 / Buyende / Bukungu-HC-III",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Buyende",
+    "name": "Buyende Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-18 / Buyende / Buyende-Seed-Secondary-School",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Kamuli MC",
+    "name": "Busota HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "only an Office lock file for Busota reached us; the document itself was not sent",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Kamuli",
+    "name": "Bubago HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-18 / Kamuli / Bubago-HC-III",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Kamuli",
+    "name": "Kagumba HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-18 / Kamuli / Kagumba-HC-III",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Kamuli",
+    "name": "Kagumba",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-18 / Kamuli / Kagumba-Seed-Secondary-School",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Kamuli",
+    "name": "Kitayunjwa Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-18 / Kamuli / Kitayunjwa-Seed-Secondary-School",
+    "old_page": 17
+  },
+  {
+    "team": 18,
+    "lg": "Kamuli",
+    "name": "Nabwigulu",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-18 / Kamuli / Nabwigulu-Seed-Secondary-School",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Bushenyi",
+    "name": "Kibazi HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "Team 19 Mitooma HC list (MITOOMA HCIIIs List.xlsx)",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Bushenyi",
+    "name": "Rutooma HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Bushenyi",
+    "name": "Bumbaire Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Bushenyi",
+    "name": "Kyamuhunga",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Mitooma",
+    "name": "Bukuba HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "Team 19 Mitooma HC list (MITOOMA HCIIIs List.xlsx)",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Mitooma",
+    "name": "Mayanga HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "Team 19 Mitooma HC list (MITOOMA HCIIIs List.xlsx)",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Mitooma",
+    "name": "Nyakishojwa HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "Team 19 Mitooma HC list (MITOOMA HCIIIs List.xlsx)",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Mitooma",
+    "name": "Ryengyerero HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "Team 19 Mitooma HC list (MITOOMA HCIIIs List.xlsx)",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Mitooma",
+    "name": "Kabushaho Seed Secondary School",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "Team 19 Mitooma schools list (MITOOMA DISTRICT SEED SCHS.xlsx) not on the programme list",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Mitooma",
+    "name": "Kashenshero",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Mitooma",
+    "name": "Kitojo Seed School",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "Team 19 Mitooma schools list (MITOOMA DISTRICT SEED SCHS.xlsx) not on the programme list",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Mitooma",
+    "name": "Mayanga Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Sheema",
+    "name": "Kyeibanga HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "Team 19 Sheema HC list (SHEEMA DC HCIIIs.xlsx)",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Sheema",
+    "name": "Kyeihara HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "Team 19 Mitooma HC list (MITOOMA HCIIIs List.xlsx)",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Sheema",
+    "name": "Mabaare HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "Team 19 Mitooma HC list (MITOOMA HCIIIs List.xlsx)",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Sheema",
+    "name": "Migina HC III",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "Team 19 Sheema HC list (SHEEMA DC HCIIIs.xlsx) not on the programme list",
+    "old_page": 17
+  },
+  {
+    "team": 19,
+    "lg": "Sheema",
+    "name": "Rugarama HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "Team 19 Sheema HC list (SHEEMA DC HCIIIs.xlsx)",
+    "old_page": 18
+  },
+  {
+    "team": 19,
+    "lg": "Sheema",
+    "name": "Kigarama seed school",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "Team 19 Sheema schools list (SHEEMA SEED SECONDARY SCHS.xlsx)",
+    "old_page": 18
+  },
+  {
+    "team": 19,
+    "lg": "Sheema",
+    "name": "Shuuku T/C (New facilities for Ryakasinga C.H.E)",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "Team 19 Sheema schools list (SHEEMA SEED SECONDARY SCHS.xlsx)",
+    "old_page": 18
+  },
+  {
+    "team": 19,
+    "lg": "Sheema MC",
+    "name": "Kashoozi HCII",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "Team 19 Sheema HC list (SHEEMA DC HCIIIs.xlsx)",
+    "old_page": 18
+  },
+  {
+    "team": 19,
+    "lg": "Sheema MC",
+    "name": "Kitojo HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "Team 19 Mitooma HC list (MITOOMA HCIIIs List.xlsx)",
+    "old_page": 18
+  },
+  {
+    "team": 19,
+    "lg": "Sheema MC",
+    "name": "Rwamujojo HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kazo",
+    "name": "Engari",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Kazo / Engari-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kazo",
+    "name": "Kyampangara",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Kazo / Kyampangara-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kazo",
+    "name": "Kyengando HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Kazo / Kyengando-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kazo",
+    "name": "Nkungu HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Kazo / Nkungu-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kazo",
+    "name": "Burunga",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-20 / Kazo / Burunga-Seed-Secondary-School",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kiruhura",
+    "name": "Kitura HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Kiruhura / Kitura-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kiruhura",
+    "name": "Nshwere HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Kiruhura / Nshwere-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kiruhura",
+    "name": "Rwabarata HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Kiruhura / Rwabarata-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kiruhura",
+    "name": "Rwentamu HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Kiruhura / Rwentamu-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kiruhura",
+    "name": "Rweshande HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Kiruhura / Rweshande-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kiruhura",
+    "name": "Kanyaryeru (New Facilities for Lake Mburo S.S. \u2013 Pledge)",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-20 / Kiruhura / Lake-Mburo-Seed-Secondary-School",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kiruhura",
+    "name": "Kenshunga (New Facilities for Kaaro H.S. - Pledge)",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-20 / Kiruhura / Kaaro-High-School",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Kiruhura",
+    "name": "Nyakasharara seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-20 / Kiruhura / Nyakasharara-Seed-Secondary-School",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Buhweju",
+    "name": "Bitsya HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Buhweju / Bitsya-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Buhweju",
+    "name": "Engaju HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Buhweju / Engaju-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Buhweju",
+    "name": "Kiyanja HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Buhweju / Kiyanja-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Buhweju",
+    "name": "Mushasha HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Buhweju / Mushasha-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Buhweju",
+    "name": "Rushambya HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-20 / Buhweju / Rushambya-HC-III",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Buhweju",
+    "name": "Engaaju",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-20 / Buhweju / Engaaju-Seed-Secondary-School",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Buhweju",
+    "name": "Kyankanda seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-20 / Buhweju / St-Anthony-Seed-Secondary-School-Kyankanda",
+    "old_page": 18
+  },
+  {
+    "team": 20,
+    "lg": "Buhweju",
+    "name": "Nsiika T/C",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 18
+  },
+  {
+    "team": 21,
+    "lg": "Isingiro",
+    "name": "Busheka (Isingiro) HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-21 / Isingiro / Busheka-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Isingiro",
+    "name": "Ruborogota seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-21 / Isingiro / Ruborogota-Seed-Secondary-School",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Rwampara",
+    "name": "Nyabikungu HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-21 / Rwampara / Nyabikungu-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Rwampara",
+    "name": "Nyaruhandagazi HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-21 / Rwampara / Nyaruhandagazi-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Mbarara",
+    "name": "Bukiiro seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-21 / Mbarara / Bukiiro-Seed-Secondary-School",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Mbarara",
+    "name": "Rwanyamahembe",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Mbarara City",
+    "name": "Kyarwabuganda HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-21 / Mbarara City / Kyarwabuganda-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Rubirizi",
+    "name": "Butoha HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-21 / Rubirizi / Butoha-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Rubirizi",
+    "name": "Kyabakara HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-21 / Rubirizi / Kyabakara-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Rubirizi",
+    "name": "Munyonyi HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-21 / Rubirizi / Munyonyi-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Rubirizi",
+    "name": "Mushumba HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-21 / Rubirizi / Mushumba-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Rubirizi",
+    "name": "Ndagaro HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-21 / Rubirizi / Ndagaro-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Rubirizi",
+    "name": "Magambo",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-21 / Rubirizi / St-Kizito-High-School-Magambo",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Rubirizi",
+    "name": "Ryeru Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-21 / Rubirizi / Ryeru-Seed-Secondary-School",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Ibanda",
+    "name": "Birongo HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-21 / Ibanda / Birongo-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Ibanda",
+    "name": "Kashozi (Ibanda) HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-21 / Ibanda / Kashozi-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Ibanda",
+    "name": "Kihani HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-21 / Ibanda / Kihani-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Ibanda",
+    "name": "Kishangara seed school",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 19
+  },
+  {
+    "team": 21,
+    "lg": "Ibanda",
+    "name": "Nyabuhikye",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-21 / Ibanda / Nyabuhikye-Seed-Secondary-School",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Kabale",
+    "name": "Buramba HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-22 / Kabale / Buramba-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Kabale",
+    "name": "Kahondo HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-22 / Kabale / Kahondo-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Kabale",
+    "name": "Karujanga HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-22 / Kabale / Karujanga-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Kabale",
+    "name": "Kasheregyenyi HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-22 / Kabale / Kasheregyenyi-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Kabale",
+    "name": "Kitooma HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-22 / Kabale / Kitooma-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Kabale",
+    "name": "Buhara seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-22 / Kabale / Buhara-Seed-Secondary-School",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Kabale MC",
+    "name": "Rutoma HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-22 / Kabale MC / Rutoma-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Kisoro",
+    "name": "Maregamo HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-22 / Kisoro / Maregamo-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Kisoro",
+    "name": "Nyabwishenya (New facilities at Mwumba Progressive S.S.)",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-22 / Kisoro / Mwumba-Progressive-Secondary-School",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Kisoro",
+    "name": "Nyakinama seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-22 / Kisoro / Nyakinama-Seed-Secondary-School",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Kisoro MC",
+    "name": "Zindiro HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-22 / Kisoro MC / Zindiro-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Rubanda",
+    "name": "Mpungu HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-22 / Rubanda / Mpungu-HC-III",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Rubanda",
+    "name": "Kibuzigye Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-22 / Rubanda / Kibuzigye-Secondary-School not on the programme list",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Rubanda",
+    "name": "Nyamweru seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-22 / Rubanda / Nyamweru-Seed-Secondary-School",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Rubanda",
+    "name": "Ruhija",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-22 / Rubanda / Ruhija-Seed-Secondary-School",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Rukiga",
+    "name": "Bukinda",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-22 / Rukiga / Bukinda-Seed-Secondary-School",
+    "old_page": 19
+  },
+  {
+    "team": 22,
+    "lg": "Rukiga",
+    "name": "Rwamucucu seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-22 / Rukiga / Rwamucucu-Seed-Secondary-School",
+    "old_page": 19
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo",
+    "name": "Ihunga (Ntungamo) HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo / Ihunga-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo",
+    "name": "Kafunjo HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo / Kafunjo-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo",
+    "name": "Kaina HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo / Kaina-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo",
+    "name": "Karuruma HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo / Karuruma-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo",
+    "name": "Kishami HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo / Kishami-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo",
+    "name": "Kyamwasha HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo / Kyamwasha-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo",
+    "name": "Nyanga HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo / Nyanga-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo",
+    "name": "Rukoni West",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo / Rukoni-West-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo",
+    "name": "Rwanda HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo / Rwanda-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo",
+    "name": "Kibatsi",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo / Kibatsi-Seed-Secondary-School",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo",
+    "name": "Kihanga seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo / Kihanga-Seed-Secondary-School",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo",
+    "name": "Nyabihoko",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo / Nyabihoko-Seed-Secondary-School",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Ntungamo MC",
+    "name": "Ruhoko HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Ntungamo MC / Ruhoko-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Rukungiri",
+    "name": "Karuhembe HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Rukungiri / Karuhembe-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Rukungiri",
+    "name": "Kasheshe HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Rukungiri / Kasheshe-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Rukungiri",
+    "name": "Bikurungu Seed Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-23 / Rukungiri / Bikurungu-Seed-Secondary-School not on the programme list",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Rukungiri",
+    "name": "Kebisoni seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-23 / Rukungiri / Kebisoni-Seed-Secondary-School",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Rukungiri",
+    "name": "Nyakishenyi (New facilities at Nyakishenyi H.S.)",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Bikurungu-Seed-Secondary-School",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Rukungiri MC",
+    "name": "Kitimba HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Rukungiri MC / Kitimba-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Kanungu",
+    "name": "Kinaba HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Kanungu / Kinaaba-HC-III same facility, spelled differently",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Kanungu",
+    "name": "Matanda HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Kanungu / Matanda-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Kanungu",
+    "name": "Ntungamo HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-23 / Kanungu / Ntungamo-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Kanungu",
+    "name": "Bushogye Seed Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-23 / Kanungu / Bushogye-Seed-Secondary-School not on the programme list",
+    "old_page": 20
+  },
+  {
+    "team": 23,
+    "lg": "Kanungu",
+    "name": "Katete seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-23 / Kanungu / Katete-Seed-Secondary-School",
+    "old_page": 20
+  },
+  {
+    "team": 24,
+    "lg": "Masindi",
+    "name": "Budongo Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-24 / Masindi / Budongo-Seed-Secondary-School",
+    "old_page": 20
+  },
+  {
+    "team": 24,
+    "lg": "Masindi",
+    "name": "Kimengo (Kijunjubwa)",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-24 / Masindi / Kijunjubwa-Seed-Secondary-School",
+    "old_page": 20
+  },
+  {
+    "team": 24,
+    "lg": "Masindi MC",
+    "name": "Katasenywa HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-24 / Masindi MC / Katasenywa-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 24,
+    "lg": "Kiryandongo",
+    "name": "Kigumba T/C",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-24 / Kiryandongo / Kigumba-Town-Seed-Secondary-School",
+    "old_page": 20
+  },
+  {
+    "team": 24,
+    "lg": "Kiryandongo",
+    "name": "Kitwala Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-24 / Kiryandongo / Kitwara-Seed-Secondary-School same facility, spelled differently",
+    "old_page": 20
+  },
+  {
+    "team": 24,
+    "lg": "Luweero",
+    "name": "Katuugo HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-24 / Luweero / Katuugo-HC-III",
+    "old_page": 20
+  },
+  {
+    "team": 24,
+    "lg": "Luweero",
+    "name": "Butuntumula (New facilities at St. Andrew Kaggwa Kasaala S.S.)",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-24 / Luweero / St-Andrew-Kaggwa-Kasaala-Se ed-Secondary-School",
+    "old_page": 20
+  },
+  {
+    "team": 24,
+    "lg": "Luweero",
+    "name": "Katikamu Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-24 / Luweero / Luwube-Muslim-Seed-Secondary-School in Katikamu sub-county",
+    "old_page": 20
+  },
+  {
+    "team": 24,
+    "lg": "Nakasongola",
+    "name": "Kiralamba HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 20
+  },
+  {
+    "team": 24,
+    "lg": "Nakasongola",
+    "name": "Nakitoma",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 24,
+    "lg": "Nakaseke",
+    "name": "Butalangu HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 24,
+    "lg": "Nakaseke",
+    "name": "Semuto HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 24,
+    "lg": "Nakaseke",
+    "name": "Kikamulo",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 24,
+    "lg": "Nakaseke",
+    "name": "Nakaseke Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 24,
+    "lg": "Nakaseke",
+    "name": "Ngoma",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Buliisa",
+    "name": "Avogera HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Buliisa",
+    "name": "Butiaba HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Buliisa",
+    "name": "Kigwera HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Buliisa",
+    "name": "Kihungya HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Buliisa",
+    "name": "Kihungya",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Buliisa",
+    "name": "Ngwedo Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Hoima",
+    "name": "Buhanika",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Hoima",
+    "name": "Kigorobya Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Hoima City",
+    "name": "Kihuukya HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Hoima City",
+    "name": "Hoima Regional Blood Bank",
+    "type": "Blood bank",
+    "old_status": "Missing",
+    "note": "allocated in team-distributions.docx; an inventory is in the programme documents (All WIP Ugift), not from the team",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Kikuube",
+    "name": "Kiziranfumbi Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Kikuube",
+    "name": "Kyangwali (New Facilities for Kyangwali Seed S.S.)",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Kagadi",
+    "name": "Burora (Kagadi) HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Kagadi",
+    "name": "Kyabasara HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Kagadi",
+    "name": "Kyakabadiima HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Kagadi",
+    "name": "Muhorro HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Kagadi",
+    "name": "Burora",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Kagadi",
+    "name": "Kagadi",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Kagadi",
+    "name": "Kiryanga Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 25,
+    "lg": "Kagadi",
+    "name": "Ruteete",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 21
+  },
+  {
+    "team": 26,
+    "lg": "Bundibugyo",
+    "name": "Buhanda HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Bundibugyo / Buhanda-HC-III",
+    "old_page": 21
+  },
+  {
+    "team": 26,
+    "lg": "Bundibugyo",
+    "name": "Bundimulangya HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Bundibugyo / Bundimulangya-HC-III",
+    "old_page": 21
+  },
+  {
+    "team": 26,
+    "lg": "Bundibugyo",
+    "name": "Bupomboli HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Bundibugyo / Bupomboli-HC-III",
+    "old_page": 21
+  },
+  {
+    "team": 26,
+    "lg": "Bundibugyo",
+    "name": "Burondo HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Bundibugyo / Burondo-HC-III",
+    "old_page": 21
+  },
+  {
+    "team": 26,
+    "lg": "Bundibugyo",
+    "name": "Busanga HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Bundibugyo / Busanga-HC-III not on the programme list",
+    "old_page": 21
+  },
+  {
+    "team": 26,
+    "lg": "Bundibugyo",
+    "name": "Kyondo HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Busanga-HC-III",
+    "old_page": 21
+  },
+  {
+    "team": 26,
+    "lg": "Bundibugyo",
+    "name": "Mantoroba HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Busanga-HC-III",
+    "old_page": 21
+  },
+  {
+    "team": 26,
+    "lg": "Bundibugyo",
+    "name": "Mirambi HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Bundibugyo / Mirambi-HC-III",
+    "old_page": 21
+  },
+  {
+    "team": 26,
+    "lg": "Bundibugyo",
+    "name": "Tombwe HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Bundibugyo / Tombwe-HC-III",
+    "old_page": 21
+  },
+  {
+    "team": 26,
+    "lg": "Bundibugyo",
+    "name": "Burondo",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-26 / Bundibugyo / Burondo-Seed-Secondary-School",
+    "old_page": 21
+  },
+  {
+    "team": 26,
+    "lg": "Bundibugyo",
+    "name": "Kisuba seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-26 / Bundibugyo / Kisuba-Seed-Secondary-School",
+    "old_page": 21
+  },
+  {
+    "team": 26,
+    "lg": "Bundibugyo",
+    "name": "Mabere (New facilities at Kabango S.S.)",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-26 / Bundibugyo / Kabango-Seed-Secondary-School",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Kabarole",
+    "name": "Iruhura HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Kabarole / Iruhura-HC-III not on the programme list",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Kabarole",
+    "name": "Kicwamba HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Kabarole / Kichwamba-HC-III same facility, spelled differently",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Kabarole",
+    "name": "Kidubuli HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Iruhura-HC-III, Nyambuusa-HC-III",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Kabarole",
+    "name": "Kiko TC",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Kabarole / Kiko-Town-Council-HC-III",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Kabarole",
+    "name": "Kitule HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Kabarole / Kitule-HC-III",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Kabarole",
+    "name": "Nyabuswa HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Iruhura-HC-III, Nyambuusa-HC-III",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Kabarole",
+    "name": "Nyakitokoli HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Kabarole / Nyakitokoli-HC-III",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Kabarole",
+    "name": "Nyambuusa HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Kabarole / Nyambuusa-HC-III not on the programme list",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Kabarole",
+    "name": "Nyantabooma HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Kabarole / Nyantabooma-HC-III",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Kabarole",
+    "name": "Kasenda Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Kabarole",
+    "name": "Kichwamba",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Ntoroko",
+    "name": "Butungama HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-26 / Ntoroko / Butungama-HC-III not on the programme list",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Ntoroko",
+    "name": "Bweramule HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Butungama-HC-III",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Ntoroko",
+    "name": "Musandama HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Butungama-HC-III",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Ntoroko",
+    "name": "Butungama",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-26 / Ntoroko / Butungama-Seed-Secondary-School",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Ntoroko",
+    "name": "Kibuuku TC",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-26 / Ntoroko / Kibuuku-Seed-Secondary-School",
+    "old_page": 22
+  },
+  {
+    "team": 26,
+    "lg": "Ntoroko",
+    "name": "Nombe Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-26 / Ntoroko / Nombe-Seed-Secondary-School",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Kasese",
+    "name": "Buhuhira HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Kasese",
+    "name": "Bwesumbu HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Kasese",
+    "name": "Kabingo HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Kasese",
+    "name": "Kyempara HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Kasese",
+    "name": "Nyabirongo HCII",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Kasese",
+    "name": "Nyakimasa HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Kasese",
+    "name": "Rukoki General Hospital",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana) not on the programme list",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Kasese",
+    "name": "Bwesumbu",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Kasese MC",
+    "name": "Railway HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Bunyangabu",
+    "name": "Kabahango HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Bunyangabu",
+    "name": "Kateebwa Monument HCII",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Bunyangabu",
+    "name": "Rubona HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Bunyangabu",
+    "name": "Kabonero",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Bunyangabu",
+    "name": "Katungunda (school)",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana) not on the programme list",
+    "old_page": 22
+  },
+  {
+    "team": 27,
+    "lg": "Bunyangabu",
+    "name": "Kiyombya seed school",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 23
+  },
+  {
+    "team": 27,
+    "lg": "Bunyangabu",
+    "name": "Kyamukube Town Council",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 23
+  },
+  {
+    "team": 27,
+    "lg": "Kamwenge",
+    "name": "Kabambiro HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 23
+  },
+  {
+    "team": 27,
+    "lg": "Kamwenge",
+    "name": "Kabingo HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 23
+  },
+  {
+    "team": 27,
+    "lg": "Kamwenge",
+    "name": "Kanara HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 23
+  },
+  {
+    "team": 27,
+    "lg": "Kamwenge",
+    "name": "Bwizi Seed School",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 23
+  },
+  {
+    "team": 27,
+    "lg": "Kitagwenda",
+    "name": "Kanara",
+    "type": "School",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Fort-Portal City",
+    "name": "Kiguma HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Fort-Portal City / Kiguma-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Fort-Portal City",
+    "name": "Rubingo HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Fort-Portal City / Rubingo-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Fort-Portal City",
+    "name": "Bukuuku Community Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-28 / Fort-Portal City / Bukuuku-Community-Secondary-School not on the programme list",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Fort-Portal City",
+    "name": "Karago TC",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Bukuuku-Community-Secondary-School",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyegegwa",
+    "name": "Kabweza",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Kyegegwa / Kabweza-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyegegwa",
+    "name": "Karwenyi HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Kyegegwa / Karwenyi-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyegegwa",
+    "name": "Ruyonza",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-28 / Kyegegwa / Ruyonza-Seed-Secondary-School",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyegegwa",
+    "name": "Rwentuha seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-28 / Kyegegwa / Rwentuha-Seed-Secondary-School",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyenjojo",
+    "name": "Kasamba",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Kyenjojo / Kasamba-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyenjojo",
+    "name": "Kataraza HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Kyenjojo / Kataraza-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyenjojo",
+    "name": "Kigoyera HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Kyenjojo / Kigoyera-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyenjojo",
+    "name": "Kyakaramata HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Kyenjojo / Kyankaramata-HC-III same facility, spelled differently",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyenjojo",
+    "name": "Mbale HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Kyenjojo / Mbale-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyenjojo",
+    "name": "Myeri HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Kyenjojo / Myeri-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyenjojo",
+    "name": "Kigaraale",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-28 / Kyenjojo / Kigaraale-Seed-Secondary-School",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyenjojo",
+    "name": "Kyarusozi",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-28 / Kyenjojo / Kyarusozi-Seed-Secondary-School",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Kyenjojo",
+    "name": "Kyembogo seed school",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-28 / Kyenjojo / Kyembogo-Seed-Secondary-School",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Mubende",
+    "name": "Buseregenyu HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Mubende",
+    "name": "Butawata HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Mubende / Butawata-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Mubende",
+    "name": "Kabbo",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Nakawala-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Mubende",
+    "name": "Lumbiri HCII",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Mubende",
+    "name": "Mubende Gayaza HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Mubende / Gayaza-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Mubende",
+    "name": "Nakawala HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Mubende / Nakawala-HC-III not on the programme list",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Mubende",
+    "name": "Bageza (New facilities at Mugungulu Seed S.S.)",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-28 / Mubende / Mugungulu-Seed-Secondary-School",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Mubende",
+    "name": "Kigando Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-28 / Mubende / Kigando-Seed-Secondary-School",
+    "old_page": 23
+  },
+  {
+    "team": 28,
+    "lg": "Mubende MC",
+    "name": "Lwemikomago HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-28 / Mubende MC / Lwemikomago-HC-III",
+    "old_page": 23
+  },
+  {
+    "team": 29,
+    "lg": "Kiboga",
+    "name": "Bulaga HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kiboga",
+    "name": "Buninga HCII",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kiboga",
+    "name": "Katoma Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kiboga",
+    "name": "Lwamata Town Council",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kakumiro",
+    "name": "Birembo HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kakumiro",
+    "name": "Kabuubwa HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kakumiro",
+    "name": "Kakindo",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kakumiro",
+    "name": "Kigando HCII",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kakumiro",
+    "name": "Kikoola",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kakumiro",
+    "name": "Kikwaya",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kakumiro",
+    "name": "Kitaihuka HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kakumiro",
+    "name": "Masaka HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kakumiro",
+    "name": "Mukoora HC III",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana) not on the programme list",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kakumiro",
+    "name": "Silumira HC III",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana) not on the programme list",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kakumiro",
+    "name": "Birembo Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kakumiro",
+    "name": "Mpasaana",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kyankwanzi",
+    "name": "Banda HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kyankwanzi",
+    "name": "Kikolimbo HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kyankwanzi",
+    "name": "Kikooma",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kyankwanzi",
+    "name": "Mujunza HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kyankwanzi",
+    "name": "Sirimula HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kyankwanzi",
+    "name": "Bananywa Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kyankwanzi",
+    "name": "Nsambya",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 29,
+    "lg": "Kyankwanzi",
+    "name": "Ntwetwe",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 30,
+    "lg": "Kibaale",
+    "name": "Matale HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 30,
+    "lg": "Kibaale",
+    "name": "Nyamarunda",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 30,
+    "lg": "Kibaale",
+    "name": "Mugarama(new facilities for St Mugagga S.S)",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 30,
+    "lg": "Kibaale",
+    "name": "Nyamarwa Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 30,
+    "lg": "Kasanda",
+    "name": "Butoloogo HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 30,
+    "lg": "Kasanda",
+    "name": "Kijuna",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 30,
+    "lg": "Kasanda",
+    "name": "Kikandwa HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 30,
+    "lg": "Kasanda",
+    "name": "Kyakatebe HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 24
+  },
+  {
+    "team": 30,
+    "lg": "Kasanda",
+    "name": "Kyasansuwa HC II",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana)",
+    "old_page": 24
+  },
+  {
+    "team": 30,
+    "lg": "Kasanda",
+    "name": "Makokoto HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 30,
+    "lg": "Kasanda",
+    "name": "Namabaale HC III",
+    "type": "Health centre",
+    "old_status": "Register only",
+    "note": "DEPAUL consolidated register (Bunyoro, Tooro, Greater Mityana) not on the programme list",
+    "old_page": 25
+  },
+  {
+    "team": 30,
+    "lg": "Kasanda",
+    "name": "Makokoto (New facilities at Makokoto Seed S.S.)",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 30,
+    "lg": "Kasanda",
+    "name": "Manyogaseka Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 30,
+    "lg": "Mityana",
+    "name": "Busunju HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 30,
+    "lg": "Mityana",
+    "name": "Mpongo HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 30,
+    "lg": "Mityana",
+    "name": "Namungo HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 30,
+    "lg": "Mityana",
+    "name": "Namungo Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 31,
+    "lg": "Buvuma",
+    "name": "Buvuma HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-31 / Buvuma / Buvuma-HC-III not on the programme list",
+    "old_page": 25
+  },
+  {
+    "team": 31,
+    "lg": "Buvuma",
+    "name": "Buwooya HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-31 / Buvuma / Buwooya-HC-III",
+    "old_page": 25
+  },
+  {
+    "team": 31,
+    "lg": "Buvuma",
+    "name": "Lubya HCII",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-31 / Buvuma / Lubya-HC-III",
+    "old_page": 25
+  },
+  {
+    "team": 31,
+    "lg": "Buvuma",
+    "name": "Lukale HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-31 / Buvuma / Lukale-HC-III",
+    "old_page": 25
+  },
+  {
+    "team": 31,
+    "lg": "Buvuma",
+    "name": "Lwajje HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Buvuma-HC-III",
+    "old_page": 25
+  },
+  {
+    "team": 31,
+    "lg": "Buvuma",
+    "name": "Nkata HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-31 / Buvuma / Nkata-HC-III",
+    "old_page": 25
+  },
+  {
+    "team": 31,
+    "lg": "Buvuma",
+    "name": "Bwema",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-31 / Buvuma / Bweema-Seed-Secondary-School same facility, spelled differently",
+    "old_page": 25
+  },
+  {
+    "team": 31,
+    "lg": "Kalangala",
+    "name": "Bubeke HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-31 / Kalangala / Bubeke-HC-III",
+    "old_page": 25
+  },
+  {
+    "team": 31,
+    "lg": "Kalangala",
+    "name": "Bufumira Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Nekemiya-Memorial-Seed-Secondary-School",
+    "old_page": 25
+  },
+  {
+    "team": 31,
+    "lg": "Kalangala",
+    "name": "Bujumba",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-31 / Kalangala / Gyagenda-Memorial-Seed-Secondary-School in Bujumba sub-county",
+    "old_page": 25
+  },
+  {
+    "team": 31,
+    "lg": "Kalangala",
+    "name": "Nekemiya Memorial Seed Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-31 / Kalangala / Nekemiya-Memorial-Seed-Secondary-School not on the programme list",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Kiira MC",
+    "name": "Kireka HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Kiira MC",
+    "name": "Kirinya HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Wakiso",
+    "name": "Bussi HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Wakiso",
+    "name": "Kasangati TC/Mutuba-Nangabo",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Wakiso",
+    "name": "Kasoozo HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Wakiso",
+    "name": "Nakitokolo Namayumba HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Wakiso",
+    "name": "Zinga HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Wakiso",
+    "name": "Sumbwe Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Nansana MC",
+    "name": "Matuga HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Makindye-Ssabagabo MC",
+    "name": "Kibiri HC III",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Makindye-Ssabagabo MC",
+    "name": "Mutungo HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Mpigi",
+    "name": "Kiringente Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Butambala",
+    "name": "Butaaka HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Butambala",
+    "name": "Budde Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-32 / Butambala / Budde-Seed-Secondary-School",
+    "old_page": 25
+  },
+  {
+    "team": 32,
+    "lg": "Butambala",
+    "name": "Kibibi",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-32 / Butambala / St-Luke-Kibibi-Seed-Secondary-School",
+    "old_page": 26
+  },
+  {
+    "team": 32,
+    "lg": "Gomba",
+    "name": "Bulwadda HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 32,
+    "lg": "Gomba",
+    "name": "Mamba HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 32,
+    "lg": "Gomba",
+    "name": "Ngomanene HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 32,
+    "lg": "Gomba",
+    "name": "Kyayi Seed Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-32 / Gomba / Kyayi-Seed-Secondary-School not on the programme list",
+    "old_page": 26
+  },
+  {
+    "team": 32,
+    "lg": "Gomba",
+    "name": "Maddu Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Kyayi-Seed-Secondary-School",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Kalungu",
+    "name": "Kabaale HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-33 / Kalungu / Kabaale-HC-III",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Kalungu",
+    "name": "Lukaya Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-33 / Kalungu / Lukaaya-Seed-Secondary-School same facility, spelled differently",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Lwengo",
+    "name": "Kagganda HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Lwengenyi-HC-III",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Lwengo",
+    "name": "Kakoma HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-33 / Lwengo / Kakoma-HC-III",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Lwengo",
+    "name": "Lwengenyi HC III",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-33 / Lwengo / Lwengenyi-HC-III not on the programme list",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Lwengo",
+    "name": "Katovu TC",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-33 / Lwengo / Katovu-Seed-Secondary-School",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Lwengo",
+    "name": "Lwengo Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "possibly the team's folder Mbirizi-Seed-Secondary-School",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Lwengo",
+    "name": "Mbirizi Seed Secondary School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-33 / Lwengo / Mbirizi-Seed-Secondary-School not on the programme list",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Lyantonde",
+    "name": "Kabetemere HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Lyantonde",
+    "name": "Lyakajura HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Lyantonde",
+    "name": "Kasagama",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Lyantonde",
+    "name": "Mpumudde seed school",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Sembabule",
+    "name": "Busheka (Sembabule) HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-33 / Sembabule / Busheka-HC-III",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Sembabule",
+    "name": "Kyera HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Sembabule",
+    "name": "Ntete HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Sembabule",
+    "name": "Lwebitakuli Seed School",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-33 / Sembabule / Lwebitakuli-Seed-Secondary-School",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Masaka City",
+    "name": "Nyendo HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Masaka",
+    "name": "Kyabakuza HCII",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Masaka",
+    "name": "Bukakata Seed School",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Kyotera",
+    "name": "Nangoma HC II",
+    "type": "Health centre",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Kyotera",
+    "name": "Kasali TC",
+    "type": "School",
+    "old_status": "Missing",
+    "note": "",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Rakai",
+    "name": "Rakai Kiziba HC II",
+    "type": "Health centre",
+    "old_status": "Received",
+    "note": "team-33 / Rakai / Kiziba-HC-III",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Rakai",
+    "name": "Kacheera",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-33 / Rakai / Kacheera-Seed-Secondary-School",
+    "old_page": 26
+  },
+  {
+    "team": 33,
+    "lg": "Rakai",
+    "name": "Samson Kalibbala Seed S.S",
+    "type": "School",
+    "old_status": "Received",
+    "note": "team-33 / Rakai / Samson-Kalibbala-Seed-Secondary-School",
+    "old_page": 26
+  }
+]

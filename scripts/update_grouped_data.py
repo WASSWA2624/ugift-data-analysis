@@ -8,11 +8,14 @@ run --verify to verify the source and destination hashes of this update.
 from __future__ import annotations
 
 import argparse
+import atexit
 import csv
 import hashlib
 import io
 import json
 import re
+import subprocess
+import tempfile
 import zipfile
 from functools import lru_cache
 from collections import Counter, defaultdict
@@ -23,6 +26,91 @@ GROUPED = ROOT / 'raw-data-grouped'
 SOURCE_ROOTS = ('raw-data-ungrouped', 'new-raw-data-221092026-1114')
 SOURCE_COLUMN = 'source (in raw-data-ungrouped)'
 DEST_COLUMN = 'destination (in raw-data-grouped)'
+
+
+_RAR_TEMP_FILES = {}
+
+
+def _cleanup_rar_temp_files():
+    for _, path in _RAR_TEMP_FILES.values():
+        try:
+            path.unlink()
+        except FileNotFoundError:
+            pass
+
+
+atexit.register(_cleanup_rar_temp_files)
+
+
+def rar_members(data):
+    """Return the regular-file entries in a RAR without altering the source."""
+    try:
+        result = subprocess.run(
+            ['tar', '-tvf', str(rar_temp_path(data))],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+    except FileNotFoundError as error:
+        raise RuntimeError('RAR source found, but the system tar/bsdtar reader is unavailable.') from error
+    if result.returncode:
+        detail = result.stderr.decode(errors='replace').strip()
+        raise RuntimeError(f'Could not list RAR source: {detail}')
+    members = []
+    for line in result.stdout.decode(errors='replace').splitlines():
+        fields = line.split(maxsplit=8)
+        if len(fields) != 9:
+            raise RuntimeError(f'Could not parse RAR member listing: {line}')
+        mode, size, name = fields[0], fields[4], fields[8]
+        if mode.startswith('d'):
+            continue
+        members.append((name.replace('\\', '/'), int(size)))
+    return members
+
+
+def rar_temp_path(data):
+    """Materialise a cached, read-only RAR copy for the system archive reader."""
+    cache_key = id(data)
+    cached = _RAR_TEMP_FILES.get(cache_key)
+    if cached is not None and cached[0] is data:
+        return cached[1]
+    with tempfile.NamedTemporaryFile(suffix='.rar', delete=False) as stream:
+        stream.write(data)
+        path = Path(stream.name)
+    # Retaining the bytes object makes the identity key safe from reuse in this process.
+    _RAR_TEMP_FILES[cache_key] = (data, path)
+    return path
+
+
+def read_rar_member(data, name):
+    """Read one RAR member through bsdtar (`tar` on the supported Windows runtime)."""
+    try:
+        result = subprocess.run(
+            ['tar', '-xOf', str(rar_temp_path(data)), name],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+    except FileNotFoundError as error:
+        raise RuntimeError('RAR source found, but the system tar/bsdtar reader is unavailable.') from error
+    if result.returncode:
+        detail = result.stderr.decode(errors='replace').strip()
+        raise RuntimeError(f'Could not read RAR member {name}: {detail}')
+    return result.stdout
+
+
+def walk_rar(data, prefix):
+    for name, _ in rar_members(data):
+        content = read_rar_member(data, name)
+        path = prefix + '::' + name
+        yield path, content
+        if name.lower().endswith('.zip'):
+            try:
+                yield from walk_zip(content, path)
+            except zipfile.BadZipFile:
+                pass
+        elif name.lower().endswith('.rar'):
+            yield from walk_rar(content, path)
 
 
 def walk_zip(data, prefix):
@@ -39,6 +127,8 @@ def walk_zip(data, prefix):
                     yield from walk_zip(content, path)
                 except zipfile.BadZipFile:
                     pass
+            elif name.lower().endswith('.rar'):
+                yield from walk_rar(content, path)
 
 
 def sources():
@@ -57,6 +147,9 @@ def sources():
                         yield source_root, member, member_content
                 except zipfile.BadZipFile:
                     pass
+            elif path.suffix.lower() == '.rar':
+                for member, member_content in walk_rar(content, relative):
+                    yield source_root, member, member_content
 
 
 def load_index():
@@ -69,6 +162,19 @@ def load_index():
 
 def inventory():
     """List sources without decompressing every historical photo/document."""
+    def rar_archive_members(data, prefix):
+        for name, size in rar_members(data):
+            relative = prefix + '::' + name
+            yield relative, size
+            if relative.lower().endswith('.zip'):
+                try:
+                    content = read_rar_member(data, name)
+                    yield from archive_members(zipfile.ZipFile(io.BytesIO(content)), relative)
+                except zipfile.BadZipFile:
+                    pass
+            elif relative.lower().endswith('.rar'):
+                yield from rar_archive_members(read_rar_member(data, name), relative)
+
     def archive_members(archive, prefix):
         with archive:
             for member in archive.infolist():
@@ -81,6 +187,8 @@ def inventory():
                         yield from archive_members(zipfile.ZipFile(io.BytesIO(archive.read(member))), relative)
                     except zipfile.BadZipFile:
                         pass
+                elif relative.lower().endswith('.rar'):
+                    yield from rar_archive_members(archive.read(member), relative)
     for source_root in SOURCE_ROOTS:
         for path in sorted((ROOT / source_root).rglob('*')):
             if not path.is_file():
@@ -91,6 +199,10 @@ def inventory():
             yield source_root, relative, path.stat().st_size
             if path.suffix.lower() == '.zip':
                 yield from ((source_root, name, size) for name, size in archive_members(zipfile.ZipFile(path), relative))
+            elif path.suffix.lower() == '.rar':
+                data = path.read_bytes()
+                yield from ((source_root, name, size)
+                            for name, size in rar_archive_members(data, relative))
 
 
 @lru_cache(maxsize=16)
@@ -99,6 +211,8 @@ def source_bytes(source_root, relative):
     if len(parts) == 1:
         return (ROOT / source_root / relative).read_bytes()
     container = source_bytes(source_root, '::'.join(parts[:-1]))
+    if parts[-2].lower().endswith('.rar'):
+        return read_rar_member(container, parts[-1])
     with zipfile.ZipFile(io.BytesIO(container)) as archive:
         return archive.read(parts[-1])
 
@@ -127,9 +241,13 @@ CHAT_ROUTES = {
     'Onywako HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx': (['team-05/Lira/Onywako-HC-III'], 'Report explicitly says no physical verification; retaining a report does not establish a completed visit.'),
     'data updates - western.xls': (['_multi-team/teams-19-21'], 'Supervisor workbook with records for Buhweju, Mitooma and Mbarara; original retained intact.'),
     'IMG-20260922-WA0000.jpg': (['team-17/Jinja/Buwala-Seed-Secondary-School/_reconciliation-evidence'], 'Master-list screenshot; supervisor 22 September 2026 08:10 says Buwala replaces Butagaya. Not an on-site photograph.'),
-    'IMG-20260922-WA0001.jpg': (['team-17/Namayingo/Mutumba-Seed-Secondary-School/_reconciliation-evidence'], 'Master-list screenshot; supervisor 22 September 2026 08:11 says Mutumba replaces Mwema. Not an on-site photograph.'),
+    'IMG-20260922-WA0001.jpg': (['team-17/Namayingo/Mutumba-Seed-Secondary-School/_reconciliation-evidence'], 'Master-list screenshot; supervisor 22 September 2026 08:10 says Mutumba replaces Mwema. Not an on-site photograph.'),
 }
 CHAT_NAME = 'WhatsApp Chat with DATA MANAGEMENT UGIFT.zip'
+WEMIS_RAR = ('ugift-team-10-15/source-documents/All WIP Ugift.zip::'
+             'All WIP Ugift/WEMIS DISTRICT EQUIPMENT.rar')
+WEMIS_RAR_NOTE = ('Programme-level WEMIS tablet, desktop and UPS handover records by district; '
+                  'reviewed page by page and found not to identify facility returns.')
 
 
 def route(relative):
@@ -152,6 +270,9 @@ def update():
     by_source = defaultdict(list)
     by_basename = defaultdict(list)
     for row in rows:
+        if (row['source root'] == 'raw-data-ungrouped'
+                and row[SOURCE_COLUMN] == WEMIS_RAR):
+            row['note'] = WEMIS_RAR_NOTE
         by_source[row['source root'], row[SOURCE_COLUMN]].append(row)
         if row[DEST_COLUMN] and row['status'] in ('placed', 'duplicate'):
             by_basename[Path(row[DEST_COLUMN]).name].append(row)
@@ -195,7 +316,9 @@ def update():
         basename = relative.split('::')[-1].split('/')[-1]
         if basename.startswith('~$') or basename.lower().endswith('.py'):
             new_rows = [{DEST_COLUMN: '', 'status': 'skipped', 'note': 'Office lock file or working script; not facility data.'}]
-        elif basename.lower().endswith('.zip') and relative != CHAT_NAME:
+        elif relative.startswith(WEMIS_RAR + '::'):
+            new_rows = [{DEST_COLUMN: '', 'status': 'in-archive', 'note': WEMIS_RAR_NOTE}]
+        elif basename.lower().endswith(('.zip', '.rar')) and relative != CHAT_NAME:
             new_rows = [{DEST_COLUMN: '', 'status': 'extracted', 'note': 'Archive contents indexed individually.'}]
         else:
             prior_rows = by_source.get(('raw-data-ungrouped', relative), []) if source_root != 'raw-data-ungrouped' else []

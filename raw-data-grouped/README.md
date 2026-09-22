@@ -1,134 +1,82 @@
-# UgIFT verification data, grouped
+# UgIFT facility records
 
-Every file from `raw-data-ungrouped/` is filed here by **team → local government → facility**.
-The content of the files is unchanged, and `raw-data-ungrouped/` was not modified.
+Updated 22 September 2026 from `raw-data-ungrouped/` and `new-raw-data-221092026-1114/`, including the DATA MANAGEMENT UGIFT WhatsApp export and its attachments.
+
+Start with **facility-data-status.pdf**. It separates records received from facilities still awaiting a return, reported absences, substitutions and conflicting evidence.
+
+## What the reconciliation shows
+
+The school and health-centre master list contains 632 rows representing **629 distinct facilities**. A facility is treated as repeated only when it appears more than once within the same local government. Three facilities meet that rule: Kapedo in Karenga, Nyamarunda in Kibaale and Kidubuli HC II in Kabarole. All original rows and phase information are retained. Arua, Soroti and Hoima regional blood banks are allocated in the team distribution document and are tracked separately.
+
+| Master-list outcome | Facilities | Share |
+|---|---:|---:|
+| Completed | 500 | 79.5% |
+| No return on file | 98 | 15.6% |
+| Identity, district or verification account needs review | 22 | 3.5% |
+| Explained cases excluded from outstanding returns | 9 | 1.4% |
+| **Total distinct master facilities** | **629** | **100.0%** |
+
+**Coverage is 531 of 629 master facilities (84.4%).** Coverage includes every status except No return: 500 completed facilities, 22 needing a decision and 9 explained cases. It is an accountability measure, not a physical-verification rate.
+
+**Completed** means enough identifiable facility information is available for the reconciliation. Of the 500 completed records, 458 have facility-specific material and 42 have identifiable data in consolidated asset registers. The register records share the same Completed category; their workbook, worksheet and row references remain in `facility-evidence-index.csv`. Completion does not certify that every asset was physically inspected. For example, Ntwetwe Seed School has a facility toolkit, while Awei Seed School has identifiable entries in the Team 7 register.
+
+The 9 explained cases comprise 6 facilities reported absent or not constructed, 1 facility reported to have received no UgIFT assets, 1 reported outside UgIFT and 1 replacement counted elsewhere. “Replacement counted elsewhere” means the replacement already has its own master entry and its evidence is counted there once; Loinya HC II was replaced by Liko HC III, and Liko is represented by master entry H212.
+
+There are also **40 unmatched ground names or return identities** and **3 separately allocated blood banks**. Unmatched identities include possible aliases and district errors; they are not a count of confirmed additional physical facilities.
+
+**Completed is not a certificate that every asset was physically checked.** Supporting information may be a toolkit, report, photographs, facility register or identifiable rows in a consolidated register. Known contradictions are withheld from the Completed total. In particular, Onywako's form states that physical verification did not take place; Olok's report says the facility was not constructed; the Iceme returns disagree about whether a visit occurred. A master construction status of Complete is not a verification status.
+
+## Files to use
+
+| File | Contents |
+|---|---|
+| `facility-data-status.pdf` | Summary, supervisor decisions, outstanding cases and facility rosters |
+| `facility-reconciliation.csv` | Every distinct master facility, unmatched ground name/return and allocated blood bank, with status, source and explanation |
+| `facility-evidence-index.csv` | Links each facility ID to source files and grouped destinations, including archive members and supplementary evidence |
+| `supervisor-decisions.csv` | Exact chat wording, speaker, timestamp and treatment of each decision |
+| `master-source-rows.csv` | All 632 master-list rows, including construction status and school phase |
+| `master-duplicate-rows.csv` | The three repeated facility entries and their retained IDs |
+| `_index.csv` | All source entries and filing destinations; 12,453 index rows |
+
+`S001` means school data row 1 in the master document; `H001` means health-centre data row 1. The document's header adds one to the table row number. `X` IDs identify unmatched ground names/returns and `B` IDs identify allocated blood banks. IDs in the PDF can be looked up in the CSV files.
+
+## Filing structure
 
 ```
 team-NN/
   <Local government>/
-    <Facility>/                    one folder per health centre or school
-    _district-documents/           LG-level reports, district registers, CAO correspondence
-  _team-documents/                 team-wide registers (DTB sheets), process reports, WhatsApp exports
-_multi-team/                       material that spans several teams
-  programme-documents/             toolkit, templates, programme lists, supply worksheets
-  teams-01-04/  teams-10-15/       consolidated registers and reports for those teams
-  busoga-and-part-of-central/      consolidated Busoga / Central asset registers
-  bunyoro-tooro-greater-mityana/   DEPAUL consolidated register (Teams 24–30 area)
-_index.csv                         every source file and where it went
-facility-data-status.pdf           which facilities have sent data and which are missing,
-                                   by team, with supervisors and team members
+    <Facility>/
+    _district-documents/
+  _team-documents/
+_multi-team/
+  programme-documents/
+  teams-01-04/
+  teams-10-15/
+  teams-19-21/
+  busoga-and-part-of-central/
+  bunyoro-tooro-greater-mityana/
 ```
 
-## Conventions
+There are 498 facility folders. Shared documents may be filed under more than one facility. Folder counts therefore differ from master-list counts and must not be used as verification totals.
 
-- **Teams and local governments** follow `team-distributions.docx`. LG folder names are the
-  names used there, such as `Koboko MC`, `Lira City` and `Fort-Portal City`.
-- **Facilities** follow the programme list (`SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx`),
-  or the teams' own names where the list only gives a sub-county. Names are written as
-  `Name-HC-III` or `Name-Seed-Secondary-School`. Teams 10–15 keep the folder names they
-  already had.
-- **One document covering several facilities** (for example *"Kerwa HC – Kerwa SSS"*) is
-  filed in **each** facility's folder.
-- **Sub-folders are kept** where the teams made them (for example `PICTURES`,
-  `DELIVERY NOTES`).
+Team ownership follows `team-distributions.docx`. Master names and submitted names are both retained in the reconciliation. Routine spelling and local-government naming differences are normalized for matching; uncertain replacements and district changes remain open. Confirmed replacement names do not create an extra site: Loinya points to the already-listed Liko, and Kangole is reconciled with Kocheka. Wamatovu and Rwamabara remain unmatched because the returns do not establish links to Kiringente or Mpumudde.
 
-## How the files were brought across
+## Source handling
 
-- **Loose files are hard links**, so they take no extra disk space. Each one is the same
-  file as its original in `raw-data-ungrouped/`, which means **editing one changes the
-  other**. Copy a file somewhere else before you work on it.
-- **Zip archives were opened** and their contents filed individually, byte for byte, with
-  the archive's original dates. Nested zips were opened as well.
-- **WhatsApp chat exports** (`WhatsApp Chat with ….zip`) and the Kigaragara bid-document
-  zip are kept **as whole archives**. Teams 10–15 have already filed that media
-  photo by photo.
-- **Exact duplicates are stored once per folder.** Examples: `team2530.zip` and
-  `team2530_2.zip` are identical, the three copies of the Team 23 set, and
-  `Kaberamaido.zip`, which repeats the Team 9 folders. When two different files share a
-  name in one folder, the second gets ` (2)`.
-- **Not brought across:** Office lock files (`~$…`, 162-byte temporary files), one
-  Python script, and the Team 10–15 working folder `ugift-team-10-15/tmp/` (crops, OCR
-  output and intermediate photos derived from the originals).
+Raw files were not edited. Earlier loose-file placements are hard links: editing one of those grouped files can also change its raw original. Work on a separate copy when editing a return. The 26 files added in this update are independent copies.
 
-`_index.csv` lists all 12,222 source entries (loose files and every file inside every
-zip), with the destination and status of each:
+Archives were inspected, including nested ZIP and RAR archives. Exact duplicates were linked to existing destinations. Office lock files and the Team 10-15 working `tmp` directory were excluded. The WhatsApp archive is retained whole, with its text filed under `_multi-team/programme-documents/data-management-chat/`. Its two master-list screenshots are filed as reconciliation evidence, not site photographs.
 
-| Status | Meaning |
-|---|---|
-| placed | filed at the destination shown |
-| duplicate | identical content already filed at the destination shown |
-| extracted | an archive; its contents are listed individually |
-| in-archive | inside a WhatsApp or bid-document zip that was kept whole |
-| skipped | lock file or script; see note |
+The nested `WEMIS DISTRICT EQUIPMENT.rar` contains 107 readable, image-only PDFs covering 356 pages. Every page was reviewed. These are district equipment handover records for tablets, desktops and UPS units issued to local-government officers; they contain no school or health-facility returns. They are indexed individually as `in-archive` records and do not change the facility totals.
 
-## Coverage
+The index retains its original source column for compatibility. **Use the `source root` column** to distinguish the two input folders. `::` separates an archive from a member inside it. `placed`, `duplicate`, `extracted`, `in-archive` and `skipped` describe filing outcomes. New source rows include SHA-256 checksums. The audit found no new, changed or missing source entries across the full 12,312-entry inventory; all 221 hashed source entries and 92 referenced destinations passed the source-content check.
 
-482 facility folders in total. Allocations are from `team-distributions.docx`.
+## Reproducing this update
 
-| Team | Local governments allocated | With data on file | Facility folders |
-|---|---|---|---|
-| 1 | Madi-Okollo, Nwoya, Zombo, Nebbi MC, Nebbi, Pakwach | Madi-Okollo, Nwoya, Zombo, Nebbi, Pakwach | 19 |
-| 2 | Yumbe, Arua, Koboko, Koboko MC, Maracha, Terego | Yumbe, Arua, Koboko, Koboko MC, Maracha, Terego | 23 |
-| 3 | Obongi, Adjumani, Moyo, Gulu, Amuru | Obongi, Adjumani, Moyo, Gulu, Amuru | 14 |
-| 4 | Lamwo, Pader, Agago, Kitgum MC, Kitgum | Lamwo, Pader, Agago, Kitgum | 21 |
-| 5 | Lira, Lira City, Kole, Omoro, Oyam | Lira, Lira City, Kole, Omoro, Oyam | 27 |
-| 6 | Apac, Apac MC, Kwania, Amolatar | Apac, Apac MC, Kwania, Amolatar | 20 |
-| 7 | Alebtong, Otuke, Dokolo | Alebtong, Otuke, Dokolo | 15 |
-| 8 | Amuria, Kapelebyong, Katakwi, Soroti, Serere | Amuria, Kapelebyong, Katakwi, Soroti, Serere | 22 |
-| 9 | Kaberamaido, Kalaki, Kumi, Butebo, Pallisa, Bukedea, Ngora | Kaberamaido, Kalaki, Kumi, Butebo, Pallisa, Bukedea, Ngora | 16 |
-| 10 | Moroto, Moroto MC, Nakapiripirit, Nabilatuk, Napak, Amudat | Moroto, Nakapiripirit, Nabilatuk, Napak, Amudat | 11 |
-| 11 | Kotido, Kotido MC, Kaabong, Karenga, Abim | Kotido, Kaabong, Karenga, Abim | 10 |
-| 12 | Kibuku, Budaka, Butaleja, Mbale | Kibuku, Budaka, Butaleja, Mbale | 16 |
-| 13 | Tororo MC, Tororo, Busia, Busia MC, Manafwa, Namisindwa | Tororo MC, Tororo, Busia, Busia MC, Manafwa, Namisindwa | 21 |
-| 14 | Bududa, Sironko, Bulambuli | Bududa, Sironko, Bulambuli | 21 |
-| 15 | Kween, Kapchorwa, Kapchorwa MC, Bukwo | Kween, Kapchorwa, Kapchorwa MC, Bukwo | 23 |
-| 16 | Namutumba, Luuka, Mayuge, Bugweri | Namutumba, Luuka, Mayuge, Bugweri | 20 |
-| 17 | Bugiri, Bugiri MC, Namayingo, Iganga, Iganga MC, Kaliro, Jinja City, Jinja | Bugiri, Bugiri MC, Namayingo, Iganga, Kaliro, Jinja City, Jinja | 18 |
-| 18 | Lugazi MC, Mukono MC, Mukono, Buikwe, Njeru MC, Kayunga, Buyende, Kamuli MC, Kamuli | Mukono MC, Buikwe, Kayunga, Buyende, Kamuli | 14 |
-| 19 | Bushenyi, Bushenyi-Ishaka MC, Mitooma, Sheema, Sheema MC | Mitooma, Sheema | 0 |
-| 20 | Kazo, Kiruhura, Buhweju | Kazo, Kiruhura, Buhweju | 20 |
-| 21 | Isingiro, Rwampara, Mbarara, Mbarara City, Rubirizi, Ibanda, Ibanda MC | Isingiro, Rwampara, Mbarara, Mbarara City, Rubirizi, Ibanda | 17 |
-| 22 | Kabale, Kabale MC, Kisoro, Kisoro MC, Rubanda, Rukiga | Kabale, Kabale MC, Kisoro, Kisoro MC, Rubanda, Rukiga | 17 |
-| 23 | Ntungamo, Ntungamo MC, Rukungiri, Rukungiri MC, Kanungu | Ntungamo, Ntungamo MC, Rukungiri, Rukungiri MC, Kanungu | 23 |
-| 24 | Masindi, Masindi MC, Kiryandongo, Luweero, Nakasongola, Nakaseke | Masindi, Masindi MC, Kiryandongo, Luweero | 8 |
-| 25 | Buliisa, Hoima, Hoima City, Kikuube, Kagadi | — | 0 |
-| 26 | Bundibugyo, Kabarole, Ntoroko | Bundibugyo, Kabarole, Ntoroko | 21 |
-| 27 | Kasese, Kasese MC, Bunyangabu, Kamwenge, Kitagwenda | — | 0 |
-| 28 | Fort-Portal City, Kyegegwa, Kyenjojo, Mubende, Mubende MC | Fort-Portal City, Kyegegwa, Kyenjojo, Mubende, Mubende MC | 22 |
-| 29 | Kiboga, Kakumiro, Kyankwanzi | — | 0 |
-| 30 | Kibaale, Kasanda, Mityana MC, Mityana | — | 0 |
-| 31 | Buvuma, Kalangala | Buvuma, Kalangala | 9 |
-| 32 | Kiira MC, Wakiso, Entebbe MC, Nansana MC, Makindye-Ssabagabo MC, Mpigi, Butambala, Gomba | Butambala, Gomba | 3 |
-| 33 | Kalungu, Lwengo, Lyantonde, Bukomansimbi, Sembabule, Masaka City, Masaka, Kyotera, Rakai | Kalungu, Lwengo, Sembabule, Rakai | 11 |
+The scripts in `../scripts/` preserve the reviewed decisions and evidence mappings:
 
-Teams 25, 27, 29 and 30 sent no facility files of their own. Their work appears only in the
-consolidated DEPAUL register in `_multi-team/bunyoro-tooro-greater-mityana/`, which has rows
-for Buliisa, Hoima City and Kagadi (Team 25); Bunyangabu, Kamwenge, Kasese and Kitagwenda
-(Team 27); Kakumiro, Kiboga and Kyankwanzi (Team 29); and Kasanda, Kibaale and Mityana
-(Team 30). Team 19 sent only district-level lists for Mitooma and Sheema.
+1. `update_grouped_data.py` refreshes source filing and the index. Its `--audit` and `--verify` options check historical and new source content.
+2. `reconcile_facilities.py` rebuilds the CSV files and the report data from the master list, grouped index and reviewed mappings in `reconciliation-data/`.
+3. `build_facility_status_report.py` rebuilds the PDF from that report data.
 
-## Judgement calls worth knowing
-
-- **Filed by what the file says, not the folder it arrived in.** `team2530.zip` holds
-  Team 26 work (Bundibugyo, Kabarole, Ntoroko). The *"toolkits from central team"* zip
-  holds Teams 24, 31, 32 and 33. `Guma teams.zip` holds Teams 19–23.
-- **Team 1 file names mix districts.** *"ZOMBO – ATYAK HC III & ALWI SEED"* puts Atyak in
-  Zombo and Alwi in Pakwach. *"ZOMBO – GOT APWOYO HC"* and *"… NWOYA PARAA HC"* go to Nwoya.
-  Each facility is filed under the district the programme list gives it.
-- **Local government from the programme list where the teams differ:** Aduku Seed →
-  Kwania; Iceme HC III → Oyam (it arrived in an "OMORO DISTRICT" folder); Onywako HC III →
-  Lira; Kimaka HC III → Jinja City; Bugiri Municipal HC III → Bugiri MC; Katasenywa HC III →
-  Masindi MC; Lasanga and Nyangilia → Koboko MC; Kitimba HC III → Rukungiri MC.
-- **Identified from content, because the file name gives nothing:** the six
-  `DOC-2026…-WA00xx.xlsx` sheets in Team 21's "part of team 21" zip (Kyarwabuganda, Kashozi,
-  Ruborogota, Munyonyi, St Kizito Magambo, Mushumba); `KABAROLE DISTRICT ASSET VERIFICATION
-  … 222.docx` (Nyambuusa HC III); `Team 20.docx` in the Team 23 folder, which is really the
-  Kisoro field template (Maregamo, Mwumba, Nyakinama); `NAKAWALA HCIII` (Mubende).
-- **File name and content disagree, filed by file name.** The team probably reused a
-  template. `1 AMANYIRI HCIII.docx` reads "Ekaligo HC III" inside.
-  `LODONGA SEED SS (2).docx` reads "Liko". `ARWOTCEK HC III.docx` reads "Kyankaramata".
-  `BUWALA SEED.docx` reads "Bumaya". `MUTUMBA SEED SS.docx` reads "Buhemba". Team 28's
-  Kabweza and Kataraza process reports describe Kyankaramata. Check these before relying
-  on them.
-- **Kalangala** has no team number in the distribution document. It sits with Buvuma under
-  "Islands" (Team 31), so it is filed under `team-31`.
+The scripts require Python with the document/PDF libraries used by the builders. When another batch arrives, review its new names and supervisor decisions before changing the curated mappings. A missing return alone must never be treated as proof that a facility does not exist.
