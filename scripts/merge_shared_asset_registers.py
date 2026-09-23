@@ -49,14 +49,6 @@ HEADERS = [
 ]
 
 MAX_QUANTITY = 500
-SKIP_DIR_NAMES = {
-    "new-templates-to-follow",
-    "samples",
-    "assets-supplied-by-ugift",
-    "pdf-to-excel",
-    "registers-by-facility",
-    "updated-asset-registers",
-}
 WORD_COUNTS = {
     "a": 1, "an": 1, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
     "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10,
@@ -163,13 +155,24 @@ def file_hash(path: Path) -> str:
     return digest.hexdigest()
 
 
-def default_lg(path: Path) -> str:
-    parts = path.parts
+def path_context(path: Path) -> tuple[str, str]:
+    """Local government and facility implied by the grouped folder path."""
+    parts = path.relative_to(GROUPED).parts
     if "_district-documents" in parts:
         index = parts.index("_district-documents")
         if index:
-            return parts[index - 1].replace("-", " ")
-    return ""
+            return parts[index - 1].replace("-", " "), ""
+    if parts and re.fullmatch(r"team-\d+", parts[0]) and len(parts) >= 3:
+        if parts[1] not in {"_team-documents", "_district-documents"}:
+            facility = ""
+            if parts[2] not in {"_district-documents", "_team-documents"}:
+                facility = parts[2].replace("-", " ")
+            return parts[1].replace("-", " "), facility
+    return "", ""
+
+
+def default_lg(path: Path) -> str:
+    return path_context(path)[0]
 
 
 def excluded_programme_file(path: Path) -> bool:
@@ -191,15 +194,10 @@ def candidate_files() -> list[Path]:
             continue
         if excluded_programme_file(path):
             continue
-        parts = set(path.parts)
-        if parts & SKIP_DIR_NAMES:
-            continue
-        if not ({"_team-documents", "_district-documents", "_multi-team"} & parts):
-            continue
         found.append(path)
-    grouped: dict[str, list[Path]] = defaultdict(list)
+    grouped: dict[tuple[str, str], list[Path]] = defaultdict(list)
     for path in found:
-        grouped[family_key(path)].append(path)
+        grouped[(str(path.parent).casefold(), family_key(path))].append(path)
     chosen: list[Path] = []
     for paths in grouped.values():
         paths.sort(key=lambda item: (-item.stat().st_size, len(str(item)), str(item)))
@@ -655,19 +653,165 @@ def parse_pallisa(sheet_name: str, rows: list[list[object]], source: str) -> lis
     return assets
 
 
+def context_from_line(text: str) -> tuple[str, str] | None:
+    raw = clean(text)
+    if not raw or len(raw) > 120 or raw.endswith(":"):
+        return None
+    if re.match(r"(?i)class\s+\d", raw) or re.match(r"(?i)cost cent", raw):
+        return None
+    banner = parse_banner(raw)
+    if banner and (banner[0] or banner[1]):
+        return banner
+    if re.search(r"(?i)\b(district|municipal council|local government|city)\b", raw) and not re.search(
+        r"(?i)health|school|hospital|blood bank", raw
+    ):
+        return raw, ""
+    if re.search(r"(?i)health|seed|school|blood bank|hospital", raw):
+        return "", raw
+    return None
+
+
+def flexible_mapping(row: list[object]) -> dict[str, int] | None:
+    texts = [norm(value) for value in row]
+    if not any(texts):
+        return None
+    roles: dict[str, int] = {}
+    descriptions: list[int] = []
+    for index, text in enumerate(texts):
+        if not text or text in {"sn", "s n", "no", "item no", "pg no"}:
+            continue
+        if "imei" in text or "serial" in text or "engrave" in text or text.startswith("tag"):
+            roles.setdefault("tag", index)
+        elif "remark" in text or text.endswith("notes") or "notes" in text:
+            roles.setdefault("remarks", index)
+        elif "status" in text or text == "condition":
+            roles.setdefault("status", index)
+        elif "unit cost" in text:
+            roles.setdefault("cost", index)
+        elif ("cost" in text and "total" not in text and "center" not in text and "centre" not in text):
+            roles.setdefault("cost", index)
+        elif "qty" in text or "quantity" in text:
+            roles.setdefault("explicit_qty", index)
+        elif text in {"department", "section"} or text.startswith("department"):
+            roles.setdefault("department", index)
+        elif "asset category" in text and "sub" not in text:
+            roles.setdefault("department", index)
+        elif "physical location" in text or text in {"facility", "school", "schools", "location"}:
+            roles.setdefault("facility", index)
+        elif "location" in text and "department" in text:
+            roles.setdefault("department", index)
+        elif text in {"district", "local government"} or "local gov" in text:
+            roles.setdefault("lg", index)
+        elif any(token in text for token in ("date of purchase", "date purchased", "date of acquisition", "delivery date")) or text.startswith("date of pur"):
+            roles.setdefault("purchase", index)
+        elif "placed" in text or "issue date" in text:
+            roles.setdefault("service", index)
+        elif text in {"equipment", "equipment item", "equipment name"} or text.startswith("equipment /") or text.startswith("equipment item"):
+            roles.setdefault("item", index)
+        elif "description" in text or text in {"asset", "equipment asset"}:
+            descriptions.append(index)
+        elif "model" in text:
+            roles.setdefault("description", index)
+    if "item" not in roles and descriptions:
+        roles["item"] = descriptions.pop(0)
+    if descriptions and "description" not in roles:
+        roles["description"] = descriptions[0]
+    useful = {"tag", "status", "cost", "explicit_qty", "department", "facility"}
+    if "item" in roles and len(useful & set(roles)) >= 1 and len(roles) >= 3:
+        return roles
+    device_sheet = any(token in text for text in texts for token in ("imei", "serial", "device", "sim card"))
+    if "tag" in roles and device_sheet and ("facility" in roles or "lg" in roles or "imei" in " ".join(texts)):
+        roles.setdefault("item", -1)
+        return roles
+    return None
+
+
+def sheet_label(sheet_name: str, filename: str) -> str:
+    blob = f"{sheet_name} {filename}".casefold()
+    if "tela" in blob or "phone" in blob:
+        return "Phone"
+    if "tab" in blob:
+        return "Tablet"
+    if "inspection" in blob or "device" in blob:
+        return "Inspection device"
+    return ""
+
+
+def looks_like_budget_codes(assets: list[Asset]) -> bool:
+    if len(assets) < 8:
+        return False
+    codes = sum(1 for asset in assets if re.fullmatch(r"\d{5,8}", asset.item))
+    return codes / len(assets) > 0.5
+
+
+def parse_flexible_sheet(
+    sheet_name: str, rows: list[list[object]], source: str, filename: str, fallback_lg: str,
+) -> list[Asset]:
+    header_at = None
+    mapping: dict[str, int] = {}
+    for index, row in enumerate(rows[:15]):
+        found = flexible_mapping(row)
+        if found:
+            header_at = index
+            mapping = found
+            break
+    if header_at is None:
+        return []
+    label = sheet_label(sheet_name, filename)
+    carry_lg = fallback_lg
+    carry_facility = ""
+    for row in rows[:header_at]:
+        label_text = norm(row[0]) if row else ""
+        value = clean(row[1]) if len(row) > 1 else ""
+        if value and label_text in {"school name", "name of school", "facility", "health facility", "name of health facility"}:
+            carry_facility = value
+            continue
+        if value and label_text in {"district", "name of lg", "local government"}:
+            carry_lg = value
+            continue
+        context = context_from_line(first_text(row))
+        if not context:
+            continue
+        carry_lg = context[0] or carry_lg
+        carry_facility = context[1] or carry_facility
+    assets: list[Asset] = []
+    item_index = mapping.get("item", -1)
+    for row_number, row in enumerate(rows[header_at + 1:], header_at + 2):
+        if not any(clean(value) for value in row):
+            continue
+        context = context_from_line(first_text(row))
+        probe = take_asset(row, {key: value for key, value in mapping.items() if value >= 0}, source, "")
+        if context and not any([probe.tag, probe.status, probe.cost, probe.explicit_qty, probe.description]):
+            carry_lg = context[0] or carry_lg
+            carry_facility = context[1] or carry_facility
+            continue
+        asset = probe
+        asset.source_location = f"{sheet_name} row {row_number}"
+        if item_index < 0:
+            asset.item = label
+        if not asset.item or norm(asset.item) in {"description", "asset description", "equipment", "total"}:
+            continue
+        if asset.department and not asset.facility and re.search(r"school|health|hospital|blood bank|\bhc\b", asset.department, re.I):
+            asset.facility = asset.department
+            asset.department = ""
+        asset.lg = asset.lg or carry_lg
+        asset.facility = asset.facility or carry_facility
+        asset.facility_type = facility_type_for(asset.facility, asset.department, sheet_name, filename)
+        assets.append(asset)
+    if looks_like_budget_codes(assets):
+        return []
+    if not any(asset.tag or asset.status or asset.cost not in (None, "") or asset.explicit_qty or asset.description for asset in assets):
+        return []
+    return assets
+
+
 def read_workbook(path: Path) -> list[Asset]:
     relative = path.relative_to(GROUPED).as_posix()
-    fallback = default_lg(path)
+    fallback_lg, fallback_facility = path_context(path)
     assets: list[Asset] = []
     sheets = sheet_rows(path)
-    if "REGISTAR" in path.name.upper() or "REGISTER UGIFT" in path.name.upper() and "PALLISA" in path.name.upper():
-        for name, rows in sheets:
-            assets.extend(parse_pallisa(name, rows, relative))
-        if assets:
-            return assets
-    drafted = False
     template_maps = []
-    for name, rows in sheets:
+    for _name, rows in sheets:
         for row in rows[:20]:
             mapping = classify_header(row)
             if mapping:
@@ -677,19 +821,22 @@ def read_workbook(path: Path) -> list[Asset]:
     for name, rows in sheets:
         mapping = next((classify_header(row) for row in rows[:20] if classify_header(row)), None)
         if mapping and sheet_is_duplicate_draft(name, mapping, workbook_has_places):
-            drafted = True
             continue
+        parsed: list[Asset] = []
         if mapping:
-            assets.extend(parse_template_sheet(name, rows, relative, path.name, fallback))
-            continue
-        qty_rows = parse_qty_register(name, rows, relative, fallback)
-        if qty_rows:
-            assets.extend(qty_rows)
-    if not assets and "PALLISA" in path.name.upper():
-        for name, rows in sheets:
-            assets.extend(parse_pallisa(name, rows, relative))
-    if drafted and not assets:
-        return []
+            parsed = parse_template_sheet(name, rows, relative, path.name, fallback_lg)
+        if not parsed:
+            parsed = parse_qty_register(name, rows, relative, fallback_lg)
+        if not parsed:
+            parsed = parse_flexible_sheet(name, rows, relative, path.name, fallback_lg)
+        assets.extend(parsed)
+    for asset in assets:
+        if not asset.lg:
+            asset.lg = fallback_lg
+        if not asset.facility:
+            asset.facility = fallback_facility
+        if not asset.facility_type:
+            asset.facility_type = facility_type_for(asset.facility, asset.department, "", path.name)
     return assets
 
 
@@ -772,6 +919,9 @@ def decide_groups(asset: Asset, alone: bool) -> tuple[str, list[tuple[int, str |
         if furniture:
             name, count = furniture
             return name, [(count, None)]
+        leading = re.fullmatch(r"([1-9]\d{0,2})\s+(.+)", asset.item)
+        if leading and 1 < int(leading.group(1)) <= 100:
+            return clean(leading.group(2)), [(int(leading.group(1)), None)]
         groups = condition_groups(asset.status, asset.remarks)
         if groups and sum(count for count, _ in groups) > 1:
             return asset.item, groups
@@ -803,15 +953,40 @@ def explode(assets: list[Asset]) -> list[Asset]:
     return exploded
 
 
-def jaccard(left: Counter[str], right: Counter[str]) -> float:
-    keys_left, keys_right = set(left), set(right)
-    union = keys_left | keys_right
-    if not union:
-        return 0.0
-    return len(keys_left & keys_right) / len(union)
+def blank_tag(value: str) -> bool:
+    text = norm(value)
+    return not text or bool(re.search(r"not engrav|n a|none|nil", text))
 
 
-def drop_overlapping_facilities(assets: list[Asset]) -> tuple[list[Asset], list[str]]:
+def line_signature(asset: Asset) -> tuple[str, ...]:
+    """Identity of one recorded line, ignoring which workbook it came from."""
+    tag = "" if blank_tag(asset.tag) else norm(asset.tag)
+    if tag:
+        return ("tag", tag, norm(asset.item))
+    return ("line", norm(asset.item), norm(asset.description), norm(asset.status), norm(asset.department))
+
+
+def represented_count(asset: Asset) -> int:
+    if asset.explicit_qty and asset.explicit_qty > 1:
+        return asset.explicit_qty
+    parenthetical = parenthetical_quantity(asset.item)
+    if parenthetical:
+        return parenthetical[1]
+    furniture = furniture_quantity(asset.item)
+    if furniture:
+        return furniture[1]
+    groups = condition_groups(asset.status, asset.remarks)
+    if groups and sum(count for count, _ in groups) > 1:
+        return sum(count for count, _ in groups)
+    return 1
+
+
+def union_facility_submissions(assets: list[Asset]) -> tuple[list[Asset], list[str]]:
+    """Keep every distinct item when a facility was submitted more than once.
+
+    The same line in two returns is kept once, at the larger recorded count.
+    An item that appears in only one return is kept.
+    """
     grouped: dict[tuple[str, str], dict[str, list[Asset]]] = defaultdict(lambda: defaultdict(list))
     for asset in assets:
         if not norm(asset.facility):
@@ -822,32 +997,36 @@ def drop_overlapping_facilities(assets: list[Asset]) -> tuple[list[Asset], list[
     for sources in grouped.values():
         if len(sources) < 2:
             continue
-        names = list(sources)
-        counters = {name: Counter(norm(asset.item) for asset in rows) for name, rows in sources.items()}
-        dominated: set[str] = set()
-        for left in names:
-            for right in names:
-                if left == right or left in dominated or right in dominated:
+        buckets: dict[tuple[str, ...], list[Asset]] = defaultdict(list)
+        for rows in sources.values():
+            for asset in rows:
+                buckets[line_signature(asset)].append(asset)
+        folded = 0
+        for rows in buckets.values():
+            by_file: dict[str, list[Asset]] = defaultdict(list)
+            for asset in rows:
+                by_file[asset.source_file].append(asset)
+            if len(by_file) < 2:
+                continue
+            winner = max(
+                by_file,
+                key=lambda name: (
+                    sum(represented_count(asset) for asset in by_file[name]),
+                    len(by_file[name]),
+                ),
+            )
+            for name, file_rows in by_file.items():
+                if name == winner:
                     continue
-                if min(len(sources[left]), len(sources[right])) < 5:
-                    continue
-                if jaccard(counters[left], counters[right]) < 0.75:
-                    continue
-                if len(sources[left]) == len(sources[right]):
-                    loser, winner = sorted((left, right))[1], sorted((left, right))[0]
-                elif len(sources[left]) < len(sources[right]):
-                    loser, winner = left, right
-                else:
-                    loser, winner = right, left
-                dominated.add(loser)
-                sample = sources[loser][0]
-                notes.append(
-                    f"{sample.facility} ({sample.lg}): kept {winner}; left out {loser} "
-                    f"({len(sources[loser])} rows overlapping {len(sources[winner])})."
-                )
-        for name in dominated:
-            for asset in sources[name]:
-                drop.add(id(asset))
+                folded += len(file_rows)
+                for asset in file_rows:
+                    drop.add(id(asset))
+        if folded:
+            sample = next(iter(next(iter(sources.values()))))
+            notes.append(
+                f"{sample.facility} ({sample.lg}): {len(sources)} returns combined; "
+                f"{folded} repeated lines folded in; items found in only one return were kept."
+            )
     kept = [asset for asset in assets if id(asset) not in drop]
     return kept, notes
 
@@ -923,14 +1102,15 @@ def write_workbook(assets: list[Asset], sources: list[str], notes: list[str]) ->
         "Each physical item is one row. Where a source line stated a quantity, that line was repeated once per item and Unit shows the sequence.",
         "A quantity was taken from a quantity column, a number in brackets on the item name, a single furniture line such as Desks 125, or a count written in the status or remarks. Lines that were already one row per item were left as one row.",
         "Cost is the figure written on the source line, copied onto each item from that line.",
-        "Files under programme-documents were left out. The data-management chat in that folder is the exception.",
+        "Every spreadsheet under raw-data-grouped was read, except programme-documents. The data-management chat in that folder is the exception.",
+        "Photographs, Word reports and the reconciliation lists are not asset lines.",
         "Draft sheets were left out where the same workbook already had a consolidated sheet with local government and facility columns.",
-        "Where the same facility was filled in more than one shared workbook and the item lists matched, the fuller list was kept.",
+        "Where a team submitted more than one workbook for the same facility, the lists were combined. A repeated line was kept once, at the larger count. An item present in only one return was kept.",
         "",
         "Sources:",
         *sources,
         "",
-        "Facilities kept from one shared workbook where another copy overlapped:",
+        "Facilities combined from more than one return:",
         *(notes or ["None."]),
     ]
     for index, line in enumerate(lines, 3):
@@ -958,7 +1138,7 @@ def main() -> None:
         collected.extend(assets)
         used.append(f"{relative} ({len(assets):,} source rows)")
         print(f"{len(assets):6,}  {relative}", flush=True)
-    collected, overlap_notes = drop_overlapping_facilities(collected)
+    collected, overlap_notes = union_facility_submissions(collected)
     exploded = explode(collected)
     multi = sum(1 for asset in exploded if asset.extras.get("unit"))
     print(f"source rows kept {len(collected):,}; output rows {len(exploded):,}; rows from a quantity split {multi:,}")
