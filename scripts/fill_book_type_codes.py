@@ -8,7 +8,9 @@ The resolver follows a strict evidence order:
 4. the exact worksheet row named by ``Source locator`` (including section
    headers and carried-down district/facility columns);
 5. a facility/LG explicitly present in the source description;
-6. the owning district or MDA when the source is an entity-wide register.
+6. retain central-government rows whose facility name begins ``Ministry of``;
+7. reject other entity-wide district, council and agency rows that cannot be
+   assigned to a school or health facility.
 
 Unsupported values remain blank. The script rebuilds from the committed
 workbook when requested, inserts FACILITY_NAME beside BOOK_TYPE_CODE, and
@@ -56,6 +58,7 @@ LATEST_MAKOKOTO_SOURCE = "team-30/_team-documents/MAKOKOTO SEED SCHOOL UGIFT ASS
 LATEST_NYAMARWA_SOURCE = "team-30/_team-documents/NYAMARWA SEED SCHOOL UGIFT ASSET VERIFICATION AND RECORDING TOOL KIT - FINAL.docx"
 LATEST_MAKOKOTO_PATH = ROOT / "raw-data-grouped" / LATEST_MAKOKOTO_SOURCE
 LATEST_NYAMARWA_PATH = ROOT / "raw-data-grouped" / LATEST_NYAMARWA_SOURCE
+TEAM2_LODONGA_SOURCE = "raw-data-grouped/team-02/Yumbe/Lodonga-Seed-Secondary-School/LODONGA SEED SS (2).docx"
 LATEST_SOURCE_FILES = {
     LATEST_WESTERN_SOURCE,
     LATEST_LWAMATA_SOURCE,
@@ -131,6 +134,7 @@ FACILITY_MARKERS = re.compile(
     r"HOSPITAL|BLOOD\s*BANK|SEED\s*(?:SECONDARY\s*)?SCHOOL|SECONDARY\s*SCHOOL)\b",
     re.I,
 )
+PRIMARY_SCHOOL_MARKERS = re.compile(r"\b(?:P\.?\s*S\.?|PRIMARY\s+SCHOOL)\b", re.I)
 
 RAW_FACILITY_RE = re.compile(
     r"\b([A-Z][A-Z0-9 .&'()-]{1,55}?\s+(?:HC\s*(?:II|III|IV|2|3|4|111|LLL)|"
@@ -147,6 +151,25 @@ def clean_text(value: object) -> str:
     text = str(value).replace("\xa0", " ").replace("\\", "")
     text = re.sub(r"[…]+", " ", text)
     return re.sub(r"\s+", " ", text).strip(" \t\r\n-–—|,;:")
+
+
+def is_eligible_facility_name(value: object) -> bool:
+    """Return whether a traced owner belongs in the requested register scope."""
+    facility = clean_text(value)
+    return bool(
+        FACILITY_MARKERS.search(facility)
+        or facility.casefold().startswith("ministry of ")
+    )
+
+
+def asset_name_from_description(description: object, facility: object) -> str:
+    """Extract the asset label while removing generated provenance suffixes."""
+    text = clean_text(description)
+    text = re.sub(
+        r"\s*\[SRC-\d+;\s*item\s+\d+\s+of\s+\d+\]\s*$", "", text, flags=re.I
+    ).strip()
+    text = re.split(r"\s+-\s+", text, maxsplit=1)[0]
+    return text.strip(" \t\r\n-–—|,;:")
 
 
 def normalized_key(value: object) -> str:
@@ -681,7 +704,9 @@ def source_maps(
     unresolved = {"lg": Counter(), "facility": Counter()}
     kept_source_refs: set[str] = set()
 
-    for row in ws_source.iter_rows(min_row=2, values_only=True):
+    for source_row_number, row in enumerate(
+        ws_source.iter_rows(min_row=2, values_only=True), 2
+    ):
         first = row[index["Register first row"]]
         last = row[index["Register last row"]]
         if first is None or last is None:
@@ -695,6 +720,28 @@ def source_maps(
         source_facility = row[index["Facility / location"]]
         source_asset = row[index["Asset in source"]]
         represented = int(last) - int(first) + 1
+
+        # The combined Team 2 return has a Liko health-centre interview followed
+        # by Lodonga school asset schedules. The parser carried the interview
+        # heading into Table 11, but those rows explicitly describe Lodonga
+        # school furniture, so retain them under the school master entry.
+        if (
+            source_path_key.endswith(normalized_path(TEAM2_LODONGA_SOURCE))
+            and clean_text(row[index["Source locator"]]).casefold().startswith("table 11,")
+        ):
+            facility_id = "S037"
+            source_facility = "Lodonga Seed Secondary School"
+            ws_source.cell(
+                source_row_number, index["Facility / location"] + 1
+            ).value = source_facility
+            ws_source.cell(source_row_number, index["Facility ID"] + 1).value = facility_id
+
+        # The Sofia return is a distinct ground facility. Older register builds
+        # linked its source lines to the invalid Busia Eastern Division master
+        # row, so correct that ID before applying invalid-facility filtering.
+        if clean_text(source_file) == LATEST_SOFIA_SOURCE:
+            facility_id = "X900"
+            ws_source.cell(source_row_number, index["Facility ID"] + 1).value = facility_id
 
         if facility_id in master.invalid_facility_ids:
             rules[f"Removed: {master.status_by_id[facility_id]}"] += represented
@@ -725,7 +772,7 @@ def source_maps(
             if lg:
                 lg_rule = "district source path"
 
-        if not facility:
+        if not facility and not PRIMARY_SCHOOL_MARKERS.search(clean_text(source_facility)):
             canonical = master.canonical_facility(source_facility, lg)
             if canonical:
                 facility = canonical.name
@@ -828,6 +875,12 @@ def source_maps(
 
         if not lg or not facility:
             rules["Removed: not mapped to a valid facility or traceable owner"] += represented
+            continue
+
+        if not is_eligible_facility_name(facility):
+            rules[
+                "Removed: entity owner is not an eligible school, health facility, or ministry"
+            ] += represented
             continue
 
         kept_source_refs.add(source_ref)
@@ -1231,7 +1284,7 @@ def sofia_records(master: MasterData) -> list[dict[str, object]]:
     if not LATEST_SOFIA_PATH.is_file():
         return []
     relative = LATEST_SOFIA_SOURCE
-    facility = master.facility_by_id["X041"]
+    facility = master.facility_by_id["X900"]
     checklist = [
         (3, "B.P. Machine, Digital", 2, "Black screen with white casing"),
         (3, "B.P. Machine, Aneroid, wall mounted", 3, "Gauge with black bracket"),
@@ -1320,7 +1373,7 @@ def sofia_records(master: MasterData) -> list[dict[str, object]]:
     records = []
     for page, asset, quantity, details in checklist:
         records.append(register_source_record(
-            facility_id="X041", lg=facility.lg, facility=facility.name,
+            facility_id="X900", lg=facility.lg, facility=facility.name,
             asset=f"{asset} - {details}" if details else asset,
             source_file=relative, source_locator=f"PDF page {page}",
             quantity=quantity,
@@ -1425,6 +1478,10 @@ def append_new_records(workbook, master: MasterData) -> dict[str, int]:
         )
         for row in range(2, source.max_row + 1)
     }
+    existing_source_files = {
+        clean_text(source.cell(row, source_index["Source file"]).value)
+        for row in range(2, source.max_row + 1)
+    }
     candidate_records = [
         *latest_western_records(master),
         *lwamata_records(master),
@@ -1434,7 +1491,8 @@ def append_new_records(workbook, master: MasterData) -> dict[str, int]:
     ]
     records = [
         record for record in candidate_records
-        if (
+        if clean_text(record["Source file"]) not in existing_source_files
+        and (
             clean_text(record["Facility ID"]),
             normalized_key(record["Source locator"]),
             normalized_key(record["Asset in source"]),
@@ -1549,9 +1607,10 @@ def update_read_me(ws, *, removed_rows: int, added_rows: int, final_rows: int) -
         "Missing information": (
             "BOOK_TYPE_CODE and FACILITY_NAME are resolved from reconciled facility IDs, "
             "facility folders, source-line values, exact source worksheet rows and section "
-            "headers, and explicit facility/LG text in source descriptions. District- or "
-            "MDA-wide registers use the owning entity when no more specific facility is "
-            f"recorded. {removed_rows:,} asset rows without a valid facility or traceable owner "
+            "headers, and explicit facility/LG text in source descriptions. Central-government "
+            "rows whose FACILITY_NAME begins 'Ministry of' are retained. Entity-wide district, "
+            "council and other agency rows are excluded unless they identify a school or health "
+            f"facility. {removed_rows:,} asset rows without a valid facility "
             f"were removed; {added_rows:,} rows from the latest source batch were added. "
             f"The final register contains {final_rows:,} asset rows."
         ),
@@ -1633,6 +1692,8 @@ def build(path: Path, from_git_head: bool, dry_run: bool = False) -> dict[str, o
         additions = {"source_lines_added": 0, "asset_rows_added": 0}
     headers = [cell.value for cell in next(register.iter_rows(min_row=1, max_row=1))]
     location_column = headers.index("LOCATION_SEGMENT1") + 1
+    description_column = headers.index("DESCRIPTION") + 1
+    asset_category_column = headers.index("ASSET_CATEGORY_MAJOR") + 1
 
     stats: Counter = Counter()
     examples: list[tuple[int, str | None, str | None]] = []
@@ -1651,8 +1712,13 @@ def build(path: Path, from_git_head: bool, dry_run: bool = False) -> dict[str, o
             facility = facility or clean_text(register.cell(row_number, facility_column).value) or None
         register.cell(row_number, 1).value = book
         register.cell(row_number, facility_column).value = facility
+        asset_name = asset_name_from_description(
+            register.cell(row_number, description_column).value, facility
+        )
+        register.cell(row_number, asset_category_column).value = asset_name or None
         stats["populated_book" if book else "blank_book"] += 1
         stats["populated_facility" if facility else "blank_facility"] += 1
+        stats["populated_asset_category" if asset_name else "blank_asset_category"] += 1
         if len(examples) < 12 and (not book or not facility):
             examples.append((row_number, book, facility))
 

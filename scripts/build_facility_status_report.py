@@ -40,6 +40,9 @@ BOTTOM = 42
 GAP = 26
 COL = (CONTENT - GAP) / 2
 AS_OF = '23 September 2026'
+SUPERVISOR_CORRECTIONS = {
+    24: 'Lawrence Kalyowa',
+}
 
 
 def register_fonts():
@@ -263,7 +266,7 @@ def build(data, output):
     allowed = {'Field evidence', 'No return', 'Needs review', 'Reported absent', 'No UgIFT assets', 'Outside UgIFT', 'Replaced'}
     if set(counts) - allowed:
         raise ValueError(f'Unrecognized master statuses: {set(counts) - allowed}')
-    unmatched = [r for r in extras if r.get('scope') != 'Allocation only']
+    unmatched = [r for r in extras if r.get('scope') == 'Ground return only']
     blood = [r for r in extras if r.get('scope') == 'Allocation only']
     marked = []
     story = []
@@ -298,7 +301,7 @@ def build(data, output):
     cards = Table([[
         metric_card(coverage_count, len(master), 'Coverage', 'Every status except No return'),
         metric_card(counts['No return'], len(master), 'No return', 'Facility evidence outstanding'),
-        metric_card(counts['Needs review'], len(master), 'Needs review', 'Identity or verification conflict'),
+        metric_card(counts['Needs review'], len(master), 'Needs review', 'Reconciled; confirmation remains'),
         metric_card(exception_count, len(master), 'Explained cases', 'Excluded from outstanding returns'),
     ]], colWidths=[CONTENT / 4] * 4)
     cards.setStyle(TableStyle([
@@ -327,7 +330,8 @@ def build(data, output):
          'Example: Butiaba Health Centre III, Buliisa.'],
         ['Needs review', number_cell(counts['Needs review'], small=True),
          number_cell(percentage_text(counts['Needs review'], len(master)), small=True, accent=True),
-         'The facility name, local government or verification account conflicts. Example: Iceme Health Centre III has two different accounts of the visit.'],
+         'A submitted alternate name, commissioning stage, access constraint, or verification account requires confirmation. '
+         'These cases count as reconciled coverage, but not as completed field evidence.'],
         ['Explained cases', number_cell(exception_count, small=True),
          number_cell(percentage_text(exception_count, len(master)), small=True, accent=True),
          f'{counts["Reported absent"]} reported absent; {counts["No UgIFT assets"]} no UgIFT assets; '
@@ -341,7 +345,7 @@ def build(data, output):
                    'Liko Health Centre III; Liko is already represented by master entry H212.', 'small'))
     story.append(p('The immediate follow-up', 'sub'))
     story.append(p(f'Start with Teams 25, 30 and 32, which account for {priority_no_return} of the '
-                   f'{counts["No return"]} outstanding returns. Resolve the {counts["Needs review"]} conflicting master records '
+                   f'{counts["No return"]} outstanding returns. Resolve the {counts["Needs review"]} reconciled cases awaiting confirmation '
                    'and confirm the reported absences with the relevant local governments. '
                    'Onywako has a return but explicitly was not physically verified; Iceme has conflicting accounts of the visit.'))
     story.append(p(f'{len(unmatched)} unmatched ground names or returns are listed separately. Some may be aliases of master entries; '
@@ -355,7 +359,7 @@ def build(data, output):
                    f'names or returns and {len(blood)} regional blood banks are excluded.', 'small'))
     story.append(p('<b>Report sections.</b> 2 Team responsibility / 3 Returns needing a decision / '
                    '4 Outstanding returns and explained cases / 5 Completed facilities / 6 Unmatched ground names / '
-                   '7 Blood banks and sources.', 'small'))
+                   '7 Blood banks and counting.', 'small'))
 
     section(story, 2, 'Team responsibility')
     story.append(p('Counts below cover the master list only. <b>Completed</b> includes identifiable information from either a '
@@ -366,7 +370,10 @@ def build(data, output):
     for team in sorted(int(t) for t in data['teams']):
         records = [r for r in master if int(r['team']) == team]
         tc = Counter(r['status'] for r in records)
-        owner = next((r.get('supervisor') for r in records if r.get('supervisor')), data['teams'][str(team)].get('supervisor', ''))
+        owner = SUPERVISOR_CORRECTIONS.get(team) or next(
+            (r.get('supervisor') for r in records if r.get('supervisor')),
+            data['teams'][str(team)].get('supervisor', ''),
+        )
         owner = re.sub(r'\b\d[\d, /()-]{6,}', '', owner).strip()
         team_completed = tc['Field evidence']
         owner_rows.append([
@@ -446,19 +453,28 @@ def build(data, output):
     names_by_team(story, completed, marked, [p(f'Completed / {completed_count}', 'sub')])
 
     section(story, 6, 'Unmatched ground names and returns')
-    story.append(p(f'{len(unmatched)} ground names or returns have no confirmed master-list match. '
-                   'Some may be the same sites as unresolved master entries. Keep them separate until the local government or supervisor confirms the link; '
-                   'do not add this count to the master-facility totals.'))
-    ground_rows = [['Ground name / team and LG', 'Evidence and follow-up']]
+    story.append(p(f'<b>{len(unmatched)} submitted facility names could not be linked confidently to a master-list entry.</b> '
+                   'They are shown separately and are not included in the 629 master-facility totals. '
+                   'Confirm the correct master name, or approve the facility as an addition.'))
+    story.append(p('<b>Return received</b> means evidence is on file but the master match is unknown. '
+                   '<b>Check identity</b> means the name or local government conflicts with another record. '
+                   '<b>Not physically verified</b> means the site visit was not completed.', 'small'))
+    ground_rows = [['Submitted name / team and LG', 'What is known / next action']]
+    ground_status_labels = {
+        'Field evidence': 'Return received',
+        'Needs review': 'Check identity',
+        'Not verified': 'Not physically verified',
+    }
     for record in sorted(unmatched, key=lambda r: (int(r['team']), r['lg'], r['name'])):
         label = p(f'<b>{e(display_name(record))}</b><br/>Team {record["team"]} / {e(record["lg"])}<br/><font color="#607077">{e(source_caption(record))}</font>', 'table')
         note = compact_note(record)
         if note == 'Facility-specific return received; no confirmed master match.':
-            note = 'Return received; confirm the master-list entry or approve an addition.'
-        ground_rows.append([label, p(f'<b>{e(record["status"])}</b><br/>{e(note)}', 'table')])
+            note = 'Match this return to a master-list facility, or approve it as an additional facility.'
+        status_label = ground_status_labels.get(record['status'], record['status'])
+        ground_rows.append([label, p(f'<b>{e(status_label)}</b><br/>{e(note)}', 'table')])
     story.append(table(ground_rows, [215, CONTENT - 215], padding=5))
 
-    section(story, 7, 'Blood banks, sources and counting')
+    section(story, 7, 'Blood banks and counting')
     story.append(p('Regional blood banks', 'sub'))
     story.append(p('These three facilities are allocated in team-distributions.docx and sit outside the school/health-centre master denominator.'))
     bank_rows = [['Allocation', 'Evidence status']]
@@ -487,18 +503,6 @@ def build(data, output):
         duplicate_display_name, note = duplicate_notes.get(duplicate['duplicate'], (duplicate['name'], 'Same facility listed twice in the same local government.'))
         duplicate_rows.append([duplicate_display_name, duplicate['lg'], f'{duplicate["retained"]} + {duplicate["duplicate"]}', note])
     story.append(table(duplicate_rows, [100, 85, 88, CONTENT - 273], padding=5))
-    story.append(p('Sources and supporting files', 'sub'))
-    sources = [
-        ('Master and allocation', 'SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx; team-distributions.docx.'),
-        ('All original master rows', 'master-source-rows.csv preserves all 632 source rows, including repeated facilities and their project phases.'),
-        ('Field material', 'The source index and the 22 September update were reviewed against the master list. The latest batch adds four consolidated Health Centre III returns, Lwamata Town Council Seed Secondary School, Sofia Health Centre III, and Team 30 facility toolkits and asset records. Blank templates and explicit zero-observation rows are excluded while the original evidence trail is retained.'),
-        ('Supervisor decisions', 'WhatsApp Chat with DATA MANAGEMENT UGIFT.zip, 21 September 16:10 to 23 September 02:41. Messages and attachment references are recorded as CHAT01-CHAT20, including the CHAT15 sub-decisions.'),
-        ('Facility reconciliation', 'facility-reconciliation.csv: every retained master entry, unmatched ground name/return, status, explanation and master-row reference.'),
-        ('Evidence trail', 'facility-evidence-index.csv: facility IDs with document paths and worksheet locators; _index.csv: source-root provenance and grouped destinations.'),
-        ('Decision and duplicate logs', 'supervisor-decisions.csv preserves the messages used; master-duplicate-rows.csv records the three combined master rows.'),
-    ]
-    for label, explanation in sources:
-        story.append(p(f'<b>{e(label)}.</b> {e(explanation)}', 'small'))
     roster_counts = Counter(marked)
     expected = {r['id'] for r in master}
     if set(marked) != expected or any(count != 1 for count in roster_counts.values()):
