@@ -39,7 +39,7 @@ TOP = HEIGHT - 48
 BOTTOM = 42
 GAP = 26
 COL = (CONTENT - GAP) / 2
-AS_OF = '22 September 2026'
+AS_OF = '23 September 2026'
 
 
 def register_fonts():
@@ -130,12 +130,9 @@ def metric_card(count, total, label, note):
     return result
 
 
-def short_name(value):
-    # Standard abbreviations make narrow roster columns easier to scan.
-    value = plain(value)
-    value = re.sub(r'\bSecondary School\b', 'SS', value, flags=re.I)
-    value = re.sub(r'\bHealth Centre\b', 'HC', value, flags=re.I)
-    return value
+def display_name(record):
+    """Return the canonical reconciled facility name used in outputs."""
+    return plain(record.get('field_name') or record.get('ground_name') or record.get('name', ''))
 
 
 def source_caption(record):
@@ -151,7 +148,7 @@ def compact_note(record):
     reviewed_wording = {
         'H227': 'The supervisor could not identify Lodonga TC in Yumbe. The district should confirm the master entry.',
         'H149': 'The supervisor confirms the facility exists but received no UgIFT assets. The master assigns it to Kitgum MC.',
-        'H086': 'Sulaina says Buyinda was not verified because it is outside UgIFT. Her messages alternate between a school and health centre; confirm they refer to the listed Buyinda HC II.',
+        'H086': 'Sulaina says Buyinda was not verified because it is outside UgIFT. Her messages alternate between a school and health centre; confirm they refer to the listed Buyinda Health Centre III.',
     }
     if record.get('id') in reviewed_wording:
         return reviewed_wording[record['id']]
@@ -191,7 +188,7 @@ class Report(BaseDocTemplate):
     def __init__(self, filename):
         super().__init__(str(filename), pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN,
                          topMargin=48, bottomMargin=BOTTOM, title='UgIFT facility data status',
-                         author='UgIFT data reconciliation', subject='Master list and field-return reconciliation, 22 September 2026')
+                         author='UgIFT data reconciliation', subject='Master list and field-return reconciliation, 23 September 2026')
         height = TOP - BOTTOM
         full = Frame(MARGIN, BOTTOM, CONTENT, height, leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0, id='full')
         left = Frame(MARGIN, BOTTOM, COL, height, leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0, id='left')
@@ -241,9 +238,9 @@ def names_by_team(story, records, mark, heading_flowables=()):
     for team in sorted(groups):
         for lg_index, lg in enumerate(sorted(groups[team], key=str.casefold)):
             labels = []
-            for record in sorted(groups[team][lg], key=lambda r: (r['type'], r['name'].casefold())):
+            for record in sorted(groups[team][lg], key=lambda r: (r['type'], display_name(r).casefold())):
                 mark.append(record['id'])
-                labels.append(f'<font color="#607077">{e(record["id"])}</font> {e(short_name(record["name"]))}')
+                labels.append(f'<font color="#607077">{e(record["id"])}</font> {e(display_name(record))}')
             # One short paragraph per local government avoids a row of blank
             # space after every facility while preserving every name and ID.
             block = prefix
@@ -294,9 +291,10 @@ def build(data, output):
                    'asset registers. “Complete” means the data is sufficient for this reconciliation; it does not certify that '
                    'every asset was physically inspected.'))
     story.append(p(f'The master contains {data["master_rows"]} source rows and {len(master)} distinct schools and health centres. '
-                   'Kapedo in Karenga, Nyamarunda in Kibaale and Kidubuli HC II in Kabarole are each listed twice '
+                   'Kapedo in Karenga, Nyamarunda in Kibaale and Kidubuli Health Centre III in Kabarole are each listed twice '
                    'within the same local government, so each facility is counted once. '
-                   f'The {len(blood)} regional blood banks are reported separately.', 'small'))
+                   f'The {len(blood)} regional blood banks are reported separately. School names use the Seed Secondary School '
+                   'standard, and every master Health Centre II is shown at its upgraded Health Centre III level.', 'small'))
     cards = Table([[
         metric_card(coverage_count, len(master), 'Coverage', 'Every status except No return'),
         metric_card(counts['No return'], len(master), 'No return', 'Facility evidence outstanding'),
@@ -322,14 +320,14 @@ def build(data, output):
         ['Completed', number_cell(completed_count, small=True),
          number_cell(percentage_text(completed_count, len(master)), small=True, accent=True),
          'Identifiable facility information is available in a facility return or consolidated register. Examples: Ntwetwe Seed '
-         'School has a facility toolkit; Awei Seed School has identifiable rows in the Team 7 register.'],
+         'Secondary School has a facility toolkit; Awei Seed Secondary School has identifiable rows in the Team 7 register.'],
         ['No return', number_cell(counts['No return'], small=True),
          number_cell(percentage_text(counts['No return'], len(master)), small=True, accent=True),
          'No matched facility return or identifiable asset row is on file, and no documented reason places it in another status. This does not prove absence. '
-         'Example: Butiaba HC II, Buliisa.'],
+         'Example: Butiaba Health Centre III, Buliisa.'],
         ['Needs review', number_cell(counts['Needs review'], small=True),
          number_cell(percentage_text(counts['Needs review'], len(master)), small=True, accent=True),
-         'The facility name, local government or verification account conflicts. Example: Iceme HC II has two different accounts of the visit.'],
+         'The facility name, local government or verification account conflicts. Example: Iceme Health Centre III has two different accounts of the visit.'],
         ['Explained cases', number_cell(exception_count, small=True),
          number_cell(percentage_text(exception_count, len(master)), small=True, accent=True),
          f'{counts["Reported absent"]} reported absent; {counts["No UgIFT assets"]} no UgIFT assets; '
@@ -339,8 +337,8 @@ def build(data, output):
     story.append(status_table)
     story.append(p(f'<b>Replaced / {counts["Replaced"]} facility / '
                    f'{percentage_text(counts["Replaced"], len(master))}.</b> The replacement already has its own '
-                   'master entry, so its evidence is counted there once. Example: Loinya HC II was replaced by '
-                   'Liko HC III; Liko is already represented by master entry H212.', 'small'))
+                   'master entry, so its evidence is counted there once. Example: Loinya Health Centre III was replaced by '
+                   'Liko Health Centre III; Liko is already represented by master entry H212.', 'small'))
     story.append(p('The immediate follow-up', 'sub'))
     story.append(p(f'Start with Teams 25, 30 and 32, which account for {priority_no_return} of the '
                    f'{counts["No return"]} outstanding returns. Resolve the {counts["Needs review"]} conflicting master records '
@@ -400,7 +398,7 @@ def build(data, output):
     review_rows = [['Master entry / team and LG', 'Point to resolve']]
     for record in sorted(review, key=lambda r: (int(r['team']), r['lg'], r['name'])):
         marked.append(record['id'])
-        label = p(f'<b>{e(short_name(record["name"]))}</b><br/>Team {record["team"]} / {e(record["lg"])}<br/><font color="#607077">{e(source_caption(record))}</font>', 'table')
+        label = p(f'<b>{e(display_name(record))}</b><br/>Team {record["team"]} / {e(record["lg"])}<br/><font color="#607077">{e(source_caption(record))}</font>', 'table')
         review_rows.append([label, compact_note(record)])
     story.append(table(review_rows, [185, CONTENT - 185], padding=5))
     ony = next((r for r in unmatched if 'onywako' in r['name'].lower()), None)
@@ -426,7 +424,7 @@ def build(data, output):
         elif record['id'] == 'H190':
             note = 'Alik was reported nonexistent. The message names Barlonyo and Onywako but does not say either replaces Alik.'
         status_label = status_labels.get(record['status'], record['status'])
-        label = p(f'<b>{e(record["name"])}</b><br/>Team {record["team"]} / {e(record["lg"])}<br/>'
+        label = p(f'<b>{e(display_name(record))}</b><br/>Team {record["team"]} / {e(record["lg"])}<br/>'
                   f'<font color="#607077">{e(source_caption(record))}</font>', 'table')
         disposition_rows.append([label, p(f'<b>{e(status_label)}</b><br/>{e(note)}', 'table')])
     story.append(table(disposition_rows, [186, CONTENT - 186], padding=5))
@@ -453,7 +451,7 @@ def build(data, output):
                    'do not add this count to the master-facility totals.'))
     ground_rows = [['Ground name / team and LG', 'Evidence and follow-up']]
     for record in sorted(unmatched, key=lambda r: (int(r['team']), r['lg'], r['name'])):
-        label = p(f'<b>{e(short_name(record["name"]))}</b><br/>Team {record["team"]} / {e(record["lg"])}<br/><font color="#607077">{e(source_caption(record))}</font>', 'table')
+        label = p(f'<b>{e(display_name(record))}</b><br/>Team {record["team"]} / {e(record["lg"])}<br/><font color="#607077">{e(source_caption(record))}</font>', 'table')
         note = compact_note(record)
         if note == 'Facility-specific return received; no confirmed master match.':
             note = 'Return received; confirm the master-list entry or approve an addition.'
@@ -482,25 +480,25 @@ def build(data, output):
     duplicate_notes = {
         'S147': ('Kapedo', 'Same school listed for Phase II and Phase III; both source rows are preserved.'),
         'H300': ('Nyamarunda', 'The same health-centre name appears twice.'),
-        'H331': ('Kidubuli HC II', 'The same health centre appears as “Kidubuli HC II” and “Kidubuli HCII”.'),
+        'H331': ('Kidubuli Health Centre III', 'The same health centre appears twice in the master and is counted once at its upgraded level.'),
     }
     duplicate_rows = [['Facility', 'Local government', 'Source IDs', 'Why counted once']]
     for duplicate in data.get('duplicates', []):
-        display_name, note = duplicate_notes.get(duplicate['duplicate'], (duplicate['name'], 'Same facility listed twice in the same local government.'))
-        duplicate_rows.append([display_name, duplicate['lg'], f'{duplicate["retained"]} + {duplicate["duplicate"]}', note])
+        duplicate_display_name, note = duplicate_notes.get(duplicate['duplicate'], (duplicate['name'], 'Same facility listed twice in the same local government.'))
+        duplicate_rows.append([duplicate_display_name, duplicate['lg'], f'{duplicate["retained"]} + {duplicate["duplicate"]}', note])
     story.append(table(duplicate_rows, [100, 85, 88, CONTENT - 273], padding=5))
     story.append(p('Sources and supporting files', 'sub'))
     sources = [
         ('Master and allocation', 'SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx; team-distributions.docx.'),
         ('All original master rows', 'master-source-rows.csv preserves all 632 source rows, including repeated facilities and their project phases.'),
-        ('Field material', 'All 12,312 physical and archived source entries were indexed and opened. This includes 107 WEMIS PDFs (356 pages) inside a nested RAR; they are district equipment handover records, contain no facility returns and do not change the facility totals. Grouped files preserve the source content.'),
-        ('Supervisor decisions', 'WhatsApp Chat with DATA MANAGEMENT UGIFT.zip, 21 September 16:10 to 22 September 08:12. Messages and attachment references are recorded as CHAT01-CHAT14.'),
+        ('Field material', 'The source index and the 22 September update were reviewed against the master list. The latest batch adds four consolidated Health Centre III returns, Lwamata Town Council Seed Secondary School, Sofia Health Centre III, and Team 30 facility toolkits and asset records. Blank templates and explicit zero-observation rows are excluded while the original evidence trail is retained.'),
+        ('Supervisor decisions', 'WhatsApp Chat with DATA MANAGEMENT UGIFT.zip, 21 September 16:10 to 23 September 02:41. Messages and attachment references are recorded as CHAT01-CHAT20, including the CHAT15 sub-decisions.'),
         ('Facility reconciliation', 'facility-reconciliation.csv: every retained master entry, unmatched ground name/return, status, explanation and master-row reference.'),
         ('Evidence trail', 'facility-evidence-index.csv: facility IDs with document paths and worksheet locators; _index.csv: source-root provenance and grouped destinations.'),
         ('Decision and duplicate logs', 'supervisor-decisions.csv preserves the messages used; master-duplicate-rows.csv records the three combined master rows.'),
     ]
     for label, explanation in sources:
-        story.append(p(f'<b>{e(label)}.</b> {e(explanation)}', 'body'))
+        story.append(p(f'<b>{e(label)}.</b> {e(explanation)}', 'small'))
     roster_counts = Counter(marked)
     expected = {r['id'] for r in master}
     if set(marked) != expected or any(count != 1 for count in roster_counts.values()):

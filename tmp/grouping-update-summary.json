@@ -1,63 +1,27 @@
 {
-  "index_rows_before": 12222,
-  "index_rows_after": 12346,
-  "new_index_rows": 124,
+  "index_rows_before": 13944,
+  "index_rows_after": 13944,
+  "new_index_rows": 0,
   "new_files": [
-    "team-32/Nansana MC/Matugga-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222 (matugga HC  III).docx",
-    "team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222(KIBIRI HC III -MAKINDYE SSABAGABO).docx",
-    "team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/KIBIRI HC III report.docx",
-    "team-33/Masaka City/Nyendo-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1) NYENDO HEALTH CENTRE III (1).docx",
-    "team-33/Lyantonde/Kabatemere-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1)KABATEMERE HEALTH CENTRE III & RWAMABARA SEED SECONDARY SCHOOL.docx",
-    "team-33/Lyantonde/Rwamabara-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1)KABATEMERE HEALTH CENTRE III & RWAMABARA SEED SECONDARY SCHOOL.docx",
-    "team-33/Lyantonde/Lyakajjuka-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222 LYAKAJJUKA HEALTH CENTRE III & KASAGAMA SEED SECONDARY SCH.docx",
-    "team-33/Lyantonde/Kasagama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 LYAKAJJUKA HEALTH CENTRE III & KASAGAMA SEED SECONDARY SCH.docx",
-    "team-32/Mpigi/Wamatovu-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222( WAMATOVU SEED S.S MPIGI LGD).docx",
-    "team-18/Kamuli/Kitayunjwa-Seed-Secondary-School/UGIFT KITAYUNJWA SEED SEC SCH.docx",
-    "team-32/Wakiso/Nakitokolo-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT (NAKITOKOLO HEALTH CENTER III).docx",
-    "team-32/Gomba/Ngomamene-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222 (NGOMAMENE HC  III).docx",
-    "team-32/Gomba/Mamba-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222(MAMBA HC III -GOMBA LOCAL GOVERNMENT).docx",
-    "team-32/Mpigi/Wamatovu-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222( WAMATOVU SEED S.S MPIGI LGD) (2).docx",
-    "team-32/Nansana MC/Matugga-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222 (matugga HC  III) (2).docx",
-    "team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222(KIBIRI HC III -MAKINDYE SSABAGABO) (2).docx",
-    "team-29/Kyankwanzi/Ntwetwe-Seed-Secondary-School/UGIFT ASSET VERIFICATION NTWETWE SEED SEC SCH.docx",
-    "team-29/Kakumiro/Christ-the-King-Mpasana-Seed-Secondary-School/UGIFT MPASANA_CHRIST_THE_KING_SEED_SCHOOL.docx",
-    "team-29/Kyankwanzi/Nsambya-Seed-Secondary-School/UGIFT NSAMBYA_SEED_SCHOOL.docx",
-    "team-29/Kakumiro/St-Matia-Mulumba-Birembo-Seed-Secondary-School/UGIFT ST_MATIA_MULUMBA_BIREMBO_SEED_SS.docx",
-    "_multi-team/programme-documents/data-management-chat/WhatsApp Chat with DATA MANAGEMENT UGIFT.zip",
-    "_multi-team/programme-documents/data-management-chat/WhatsApp Chat with DATA MANAGEMENT UGIFT.txt",
-    "team-18/Kamuli MC/Busota-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222 (3).docx",
-    "_multi-team/teams-19-21/data updates - western.xls",
-    "team-17/Jinja/Buwala-Seed-Secondary-School/_reconciliation-evidence/IMG-20260922-WA0000.jpg",
-    "team-17/Namayingo/Mutumba-Seed-Secondary-School/_reconciliation-evidence/IMG-20260922-WA0001.jpg"
+    "_multi-team/programme-documents/data-management-chat/WhatsApp Chat with DATA MANAGEMENT UGIFT (2).txt",
+    "_multi-team/programme-documents/data-management-chat/IMG-20260922-WA0002.jpg"
   ],
-  "new_facilities": [
-    "team-18/Kamuli MC/Busota-HC-III",
-    "team-29/Kakumiro/Christ-the-King-Mpasana-Seed-Secondary-School",
-    "team-29/Kakumiro/St-Matia-Mulumba-Birembo-Seed-Secondary-School",
-    "team-29/Kyankwanzi/Nsambya-Seed-Secondary-School",
-    "team-29/Kyankwanzi/Ntwetwe-Seed-Secondary-School",
-    "team-32/Gomba/Mamba-HC-III",
-    "team-32/Gomba/Ngomamene-HC-III",
-    "team-32/Makindye-Ssabagabo MC/Kibiri-HC-III",
-    "team-32/Mpigi/Wamatovu-Seed-Secondary-School",
-    "team-32/Nansana MC/Matugga-HC-III",
-    "team-32/Wakiso/Nakitokolo-HC-III",
-    "team-33/Lyantonde/Kabatemere-HC-III",
-    "team-33/Lyantonde/Kasagama-Seed-Secondary-School",
-    "team-33/Lyantonde/Lyakajjuka-HC-III",
-    "team-33/Lyantonde/Rwamabara-Seed-Secondary-School",
-    "team-33/Masaka City/Nyendo-HC-III"
+  "migrated_archive_rows": 2,
+  "removed_orphans": [
+    "_multi-team/_unassigned/IMG-20260922-WA0002.jpg",
+    "_multi-team/_unassigned/WhatsApp Chat with DATA MANAGEMENT UGIFT.txt"
   ],
+  "new_facilities": [],
   "unresolved": [],
   "status_counts": {
-    "extracted": 52,
-    "placed": 9056,
-    "skipped": 12,
-    "duplicate": 1494,
-    "in-archive": 1732
+    "extracted": 56,
+    "placed": 10403,
+    "skipped": 14,
+    "duplicate": 1632,
+    "in-archive": 1839
   },
   "root_counts": {
-    "raw-data-ungrouped": 12237,
-    "new-raw-data-221092026-1114": 109
+    "raw-data-ungrouped": 12344,
+    "new-raw-data-221092026-1114": 1600
   }
 }

@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import csv
 import io
+import math
 import re
 import subprocess
 from collections import Counter, defaultdict
@@ -31,7 +32,9 @@ from pathlib import Path, PurePosixPath
 from typing import Iterable, Iterator
 
 import xlrd
+from docx import Document
 from openpyxl import load_workbook
+from openpyxl.formula.translate import Translator
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.table import TableColumn
 
@@ -40,6 +43,26 @@ DEFAULT_PATH = ROOT / "outputs" / "asset-register-2026-09-22" / "UgIFT Asset Reg
 RECONCILIATION_PATH = ROOT / "raw-data-grouped" / "facility-reconciliation.csv"
 LOCATION_MASTER_PATH = ROOT / "Location(3)2.xlsx"
 GIT_WORKBOOK_PATH = "outputs/asset-register-2026-09-22/UgIFT Asset Register.xlsx"
+ORIGINAL_REGISTER_ASSET_ROWS = 226_705
+INVALID_FACILITY_STATUSES = {"Reported absent", "No UgIFT assets", "Outside UgIFT", "Replaced"}
+LATEST_ROOT = ROOT / "new-raw-data-221092026-1114" / "new-raw-data-22092026-1556"
+LATEST_WESTERN_PATH = LATEST_ROOT / "DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT.xls"
+LATEST_LWAMATA_PATH = LATEST_ROOT / "UGIFT ASSET VERIFICATION LWAMATA T.C.C SEED SEC SCH (1).docx"
+LATEST_SOFIA_PATH = LATEST_ROOT / "Sofia health centre 111 eastern division busia MC.pdf"
+LATEST_WESTERN_SOURCE = "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls"
+LATEST_LWAMATA_SOURCE = "team-29/Kiboga/Lwamata-Town-Council-Seed-Secondary-School/UGIFT ASSET VERIFICATION LWAMATA T.C.C SEED SEC SCH (1).docx"
+LATEST_SOFIA_SOURCE = "team-13/Busia MC/Sofia-Health-Centre-III/Sofia health centre 111 eastern division busia MC.pdf"
+LATEST_MAKOKOTO_SOURCE = "team-30/_team-documents/MAKOKOTO SEED SCHOOL UGIFT ASSET VERIFICATION TOOLKIT - FINAL - 1.docx"
+LATEST_NYAMARWA_SOURCE = "team-30/_team-documents/NYAMARWA SEED SCHOOL UGIFT ASSET VERIFICATION AND RECORDING TOOL KIT - FINAL.docx"
+LATEST_MAKOKOTO_PATH = ROOT / "raw-data-grouped" / LATEST_MAKOKOTO_SOURCE
+LATEST_NYAMARWA_PATH = ROOT / "raw-data-grouped" / LATEST_NYAMARWA_SOURCE
+LATEST_SOURCE_FILES = {
+    LATEST_WESTERN_SOURCE,
+    LATEST_LWAMATA_SOURCE,
+    LATEST_SOFIA_SOURCE,
+    LATEST_MAKOKOTO_SOURCE,
+    LATEST_NYAMARWA_SOURCE,
+}
 
 SOURCE_LOCATOR_RE = re.compile(
     r"^Worksheet\s+(.*?),\s*rows?\s+(\d+)(?:\s*-\s*\d+)?\s*$", re.I
@@ -203,6 +226,8 @@ class MasterData:
 
     def __init__(self) -> None:
         self.facility_by_id: dict[str, Facility] = {}
+        self.status_by_id: dict[str, str] = {}
+        self.invalid_facility_ids: set[str] = set()
         self.folder_to_facility: dict[str, Facility] = {}
         self.lg_display: dict[str, str] = {}
         self.facility_aliases_by_lg: dict[str, dict[str, Facility]] = defaultdict(dict)
@@ -234,6 +259,12 @@ class MasterData:
                 name = clean_text(row.get("field_name") or row.get("name"))
                 lg = clean_text(row.get("lg"))
                 if not facility_id or not name or not lg:
+                    continue
+
+                status = clean_text(row.get("status"))
+                self.status_by_id[facility_id] = status
+                if status in INVALID_FACILITY_STATUSES:
+                    self.invalid_facility_ids.add(facility_id)
                     continue
 
                 lgk = self._remember_lg(lg)
@@ -639,7 +670,7 @@ def lg_from_district_path(source_file: object, master: MasterData) -> str | None
 
 def source_maps(
     ws_source, master: MasterData
-) -> tuple[dict[int, str], dict[int, str], Counter, dict[str, Counter]]:
+) -> tuple[dict[int, str], dict[int, str], Counter, dict[str, Counter], set[str]]:
     """Map register rows to source-backed LG and facility values."""
     headers = [cell.value for cell in next(ws_source.iter_rows(min_row=1, max_row=1))]
     index = {name: i for i, name in enumerate(headers)}
@@ -648,6 +679,7 @@ def source_maps(
     facility_by_row: dict[int, str] = {}
     rules: Counter = Counter()
     unresolved = {"lg": Counter(), "facility": Counter()}
+    kept_source_refs: set[str] = set()
 
     for row in ws_source.iter_rows(min_row=2, values_only=True):
         first = row[index["Register first row"]]
@@ -655,12 +687,18 @@ def source_maps(
         if first is None or last is None:
             continue
 
+        source_ref = clean_text(row[index["Source reference"]])
         facility_id = clean_text(row[index["Facility ID"]])
         source_file = row[index["Source file"]]
         source_path_key = normalized_path(clean_text(source_file))
         source_lg = row[index["Local government / MDA"]]
         source_facility = row[index["Facility / location"]]
         source_asset = row[index["Asset in source"]]
+        represented = int(last) - int(first) + 1
+
+        if facility_id in master.invalid_facility_ids:
+            rules[f"Removed: {master.status_by_id[facility_id]}"] += represented
+            continue
 
         lg: str | None = None
         facility: str | None = None
@@ -694,10 +732,6 @@ def source_maps(
                 lg = canonical.lg
                 facility_rule = "canonicalized source-line facility"
                 lg_rule = lg_rule or "source-line facility"
-            else:
-                facility = usable_facility_text(source_facility, master, lg)
-                if facility:
-                    facility_rule = "source-line facility"
 
         traceable_source = any(
             marker in source_path_key
@@ -724,10 +758,6 @@ def source_maps(
                     lg = traced_facility.lg
                     facility_rule = "canonicalized source worksheet"
                     lg_rule = lg_rule or "source worksheet facility"
-                elif not facility and traced.facility:
-                    facility = usable_facility_text(traced.facility, master, traced.lg or lg)
-                    if facility:
-                        facility_rule = traced.facility_rule
 
         if not facility:
             described = facility_from_description(source_asset, master, lg)
@@ -743,16 +773,17 @@ def source_maps(
                 facility_rule = "source filename"
                 lg_rule = lg_rule or "source filename facility"
 
-        if (
-            not facility
-            and lg
-            and source_facility
-            and lg_key(source_facility) == lg_key(lg)
-        ):
+        source_facility_text = clean_text(source_facility)
+        owner_location = (
+            not source_facility_text
+            or (lg and lg_key(source_facility_text) == lg_key(lg))
+            or bool(re.search(r"\b(?:district|municipal|city|local government|ministry)\b", source_facility_text, re.I))
+        )
+        if not facility and lg and owner_location:
             facility = entity_name(lg)
             facility_rule = "LG named as source location"
 
-        if not facility and lg and "district documents" in source_path_key:
+        if not facility and lg and "district documents" in source_path_key and owner_location:
             facility = entity_name(lg)
             facility_rule = "district-register owner"
         if not facility and lg in MDA_NAMES:
@@ -788,7 +819,6 @@ def source_maps(
             facility = MDA_NAMES[lg]
             facility_rule = lg_rule
 
-        represented = int(last) - int(first) + 1
         rules[f"LG: {lg_rule}" if lg else "LG: unresolved"] += represented
         rules[f"Facility: {facility_rule}" if facility else "Facility: unresolved"] += represented
         if not lg:
@@ -796,13 +826,509 @@ def source_maps(
         if not facility:
             unresolved["facility"][clean_text(source_file)] += represented
 
-        for register_row in range(int(first), int(last) + 1):
-            if lg:
-                lg_by_row[register_row] = lg
-            if facility:
-                facility_by_row[register_row] = facility
+        if not lg or not facility:
+            rules["Removed: not mapped to a valid facility or traceable owner"] += represented
+            continue
 
-    return lg_by_row, facility_by_row, rules, unresolved
+        kept_source_refs.add(source_ref)
+        for register_row in range(int(first), int(last) + 1):
+            lg_by_row[register_row] = lg
+            facility_by_row[register_row] = facility
+
+    return lg_by_row, facility_by_row, rules, unresolved, kept_source_refs
+
+
+def copy_cell(source, target) -> None:
+    value = source.value
+    if isinstance(value, str) and value.startswith("="):
+        try:
+            value = Translator(value, origin=source.coordinate).translate_formula(target.coordinate)
+        except (TypeError, ValueError):
+            pass
+    target.value = value
+    if source.has_style:
+        target._style = copy(source._style)
+    if source.number_format:
+        target.number_format = source.number_format
+    if source.hyperlink:
+        target._hyperlink = copy(source.hyperlink)
+    if source.comment:
+        target.comment = copy(source.comment)
+
+
+def copy_row(ws, source_row: int, target_row: int, max_column: int) -> None:
+    if source_row == target_row:
+        return
+    for column in range(1, max_column + 1):
+        copy_cell(ws.cell(source_row, column), ws.cell(target_row, column))
+    if source_row in ws.row_dimensions:
+        ws.row_dimensions[target_row] = copy(ws.row_dimensions[source_row])
+        ws.row_dimensions[target_row].index = target_row
+
+
+def compact_register(ws, kept_rows: set[int]) -> dict[int, int]:
+    """Remove rejected asset rows in one forward copy and one tail deletion."""
+    row_map: dict[int, int] = {}
+    target_row = 2
+    max_column = ws.max_column
+    for source_row in sorted(row for row in kept_rows if row >= 2):
+        copy_row(ws, source_row, target_row, max_column)
+        row_map[source_row] = target_row
+        target_row += 1
+    if target_row <= ws.max_row:
+        ws.delete_rows(target_row, ws.max_row - target_row + 1)
+    return row_map
+
+
+SOURCE_LINE_ROW_REFERENCE = re.compile(
+    r"(?P<prefix>(?:'Source Lines'|Source Lines)!\$?[A-Z]{1,3}\$?)(?P<row>\d+)",
+    re.I,
+)
+
+
+def remap_source_line_formulas(ws, source_row_map: dict[int, int]) -> int:
+    """Retarget absolute Source Lines references after source-row compaction."""
+    updated = 0
+    missing: set[int] = set()
+    for cell in ws._cells.values():
+        formula = cell.value
+        if not isinstance(formula, str) or not formula.startswith("=") or "source lines" not in formula.casefold():
+            continue
+
+        def replace(match: re.Match[str]) -> str:
+            old_row = int(match.group("row"))
+            new_row = source_row_map.get(old_row)
+            if new_row is None:
+                missing.add(old_row)
+                return match.group(0)
+            return f'{match.group("prefix")}{new_row}'
+
+        remapped = SOURCE_LINE_ROW_REFERENCE.sub(replace, formula)
+        if remapped != formula:
+            cell.value = remapped
+            updated += 1
+    if missing:
+        sample = ", ".join(str(row) for row in sorted(missing)[:12])
+        raise ValueError(f"Retained formulas reference removed Source Lines rows: {sample}")
+    return updated
+
+
+def retarget_source_line_formulas(ws, first_row: int, last_row: int, source_row: int) -> int:
+    """Point formulas in newly appended assets at their new Source Lines row."""
+    updated = 0
+    for row in ws.iter_rows(min_row=first_row, max_row=last_row):
+        for cell in row:
+            formula = cell.value
+            if not isinstance(formula, str) or not formula.startswith("=") or "source lines" not in formula.casefold():
+                continue
+            remapped = SOURCE_LINE_ROW_REFERENCE.sub(
+                lambda match: f'{match.group("prefix")}{source_row}', formula
+            )
+            if remapped != formula:
+                cell.value = remapped
+                updated += 1
+    return updated
+
+
+def compact_source_lines(ws, kept_source_refs: set[str], row_map: dict[int, int]) -> dict[int, int]:
+    headers = [cell.value for cell in ws[1]]
+    index = {name: position + 1 for position, name in enumerate(headers)}
+    target_row = 2
+    max_row = ws.max_row
+    max_column = ws.max_column
+    source_row_map: dict[int, int] = {}
+    for source_row in range(2, max_row + 1):
+        source_ref = clean_text(ws.cell(source_row, index["Source reference"]).value)
+        if source_ref not in kept_source_refs:
+            continue
+        old_first = int(ws.cell(source_row, index["Register first row"]).value)
+        old_last = int(ws.cell(source_row, index["Register last row"]).value)
+        copy_row(ws, source_row, target_row, max_column)
+        source_row_map[source_row] = target_row
+        ws.cell(target_row, index["Register first row"]).value = row_map[old_first]
+        ws.cell(target_row, index["Register last row"]).value = row_map[old_last]
+        ws.cell(target_row, index["Items represented"]).value = old_last - old_first + 1
+        target_row += 1
+    if target_row <= ws.max_row:
+        ws.delete_rows(target_row, ws.max_row - target_row + 1)
+    if ws.auto_filter.ref:
+        ws.auto_filter.ref = f"A1:{get_column_letter(ws.max_column)}{ws.max_row}"
+    return source_row_map
+
+
+def source_rows_are_all_retained(ws, kept_source_refs: set[str]) -> bool:
+    headers = [cell.value for cell in ws[1]]
+    source_reference_column = headers.index("Source reference") + 1
+    return all(
+        clean_text(ws.cell(row, source_reference_column).value) in kept_source_refs
+        for row in range(2, ws.max_row + 1)
+    )
+
+
+def count_from_text(value: object) -> int | None:
+    text = clean_text(value)
+    match = re.fullmatch(r"0*(\d+(?:\.0+)?)\s*(?:items?|units?|blocks?)?", text, re.I)
+    if not match:
+        return None
+    count = int(float(match.group(1)))
+    return count if 0 < count <= 10000 else None
+
+
+def register_source_record(
+    *, facility_id: str, lg: str, facility: str, asset: str, source_file: str,
+    source_locator: str, quantity: int, quantity_basis: str, condition: str = "",
+    remarks: str = "", service_date: object = None, life_months: object = None,
+    tag_number: str = "", asset_details: str = "",
+) -> dict[str, object]:
+    qualifications = [clean_text(remarks), "Flattened field form. Template-only labels without observations excluded."]
+    if quantity > 1 and tag_number:
+        qualifications.append("Source tag applies to an aggregate group and is not a unique per-unit identifier.")
+    qualifications.append("Per-item cost unavailable")
+    return {
+        "Local government / MDA": lg,
+        "Facility / location": facility,
+        "Asset in source": asset,
+        "Source file": source_file,
+        "Source locator": source_locator,
+        "Quantity basis": quantity_basis,
+        "Source unit cost (UGX)": None,
+        "Source line total (UGX)": None,
+        "Cost treatment": "Cost not established",
+        "Original purchase date": None,
+        "Original service date": service_date,
+        "Original condition": clean_text(condition),
+        "Source remarks and qualifications": "; ".join(item for item in qualifications if item),
+        "Asset details in source": clean_text(asset_details),
+        "Facility ID": facility_id,
+        "quantity": quantity,
+        "life_months": life_months,
+        "tag_number": clean_text(tag_number),
+    }
+
+
+def explicit_group_quantity(group: list[list[object]]) -> int | None:
+    """Return a written/recorded quantity, preserving an explicit zero."""
+    text = " | ".join(clean_text(value) for row in group for value in row if clean_text(value))
+    if re.search(r"\b(?:observed|observe)\b[^0-9]*(?:nil|nill|none)\b", text, re.I):
+        return 0
+    patterns = (
+        r"\binventory\s+quantity\b[^0-9]*(\d+)",
+        r"\bsupplier\s+quantity\b[^0-9]*(\d+)",
+        r"\bqty\b[^0-9]*(\d+)",
+        r"\b(?:observed|observe)\b[^0-9]*(\d+)",
+        r"\bsupplied\b[^0-9]*(\d+)",
+        r"\b(\d+)\s*-\s*supplied\b",
+    )
+    for pattern in patterns:
+        match = re.search(pattern, text, re.I)
+        if match:
+            return int(match.group(1))
+    for row in group[1:]:
+        for column in (0, 1):
+            if column < len(row) and (quantity := count_from_text(row[column])) is not None:
+                return quantity
+    return None
+
+
+def latest_western_records(master: MasterData) -> list[dict[str, object]]:
+    if not LATEST_WESTERN_PATH.is_file():
+        return []
+    relative = LATEST_WESTERN_SOURCE
+    ranges = [
+        ("UGIFT HEALTH 2", 1749, 2019, "H023"),
+        ("UGIFT HEALTH 2", 2022, 2306, "H020"),
+        ("UGIFT HEALTH 2", 2309, 2592, "H291"),
+        ("UGIFT HEALTH 2", 2593, 2880, "H297"),
+        ("UGIFT HEALTH", 7877, 8116, "H013"),
+        ("UGIFT HEALTH", 8122, 8355, "H011"),
+        ("UGIFT HEALTH", 8634, 8867, "H301"),
+        ("UGIFT HEALTH", 8876, 9100, "X011"),
+        ("UGIFT HEALTH", 9107, 9146, "H014"),
+    ]
+    workbook = xlrd.open_workbook(LATEST_WESTERN_PATH, on_demand=True)
+    records: list[dict[str, object]] = []
+    try:
+        for sheet_name, first, last, facility_id in ranges:
+            sheet = workbook.sheet_by_name(sheet_name)
+            facility = master.facility_by_id[facility_id]
+            rows = [(row_number, sheet.row_values(row_number - 1)) for row_number in range(first, last + 1)]
+            starts = []
+            for position, (_, row) in enumerate(rows):
+                label = clean_text(row[0] if row else "")
+                if not label or count_from_text(label) is not None:
+                    continue
+                if normalized_key(label) in {
+                    "equipment item", "description", "not engraved", "n a", "na",
+                    "in use", "not in use", "functional", "functioning",
+                }:
+                    continue
+                starts.append(position)
+            for item_index, start in enumerate(starts):
+                stop = starts[item_index + 1] if item_index + 1 < len(starts) else len(rows)
+                row_number, first_row = rows[start]
+                group = [row for _, row in rows[start:stop]]
+                label = clean_text(first_row[0])
+                quantity = explicit_group_quantity(group)
+                observed = quantity is not None or any(clean_text(row[column]) for row in group for column in (1, 3, 5, 9, 13, 14))
+                if not observed:
+                    continue
+                if quantity == 0:
+                    continue
+                quantity = quantity or 1
+                values = lambda column: [clean_text(row[column]) for row in group if clean_text(row[column])]
+                details = ", ".join(dict.fromkeys(values(3)))
+                asset = f"{label} - {details}" if details else label
+                condition = "; ".join(dict.fromkeys(values(13)))
+                remarks = "; ".join(dict.fromkeys(values(14)))
+                tags = "; ".join(dict.fromkeys(values(5)))
+                life = next((value for row in group for value in [row[4]] if isinstance(value, (int, float)) and value > 0), None)
+                service = next((value for row in group for value in [row[7]] if clean_text(value)), None)
+                records.append(register_source_record(
+                    facility_id=facility_id, lg=facility.lg, facility=facility.name,
+                    asset=asset, source_file=relative,
+                    source_locator=f"Worksheet {sheet_name}, row {row_number}",
+                    quantity=quantity,
+                    quantity_basis="explicit source quantity" if quantity > 1 else "single completed observation",
+                    condition=condition, remarks=remarks, service_date=service,
+                    life_months=life, tag_number=tags, asset_details=details,
+                ))
+    finally:
+        workbook.release_resources()
+    return records
+
+
+def makokoto_health_records(master: MasterData) -> list[dict[str, object]]:
+    """Extract only observed Makokoto HC III items; blank template rows stay excluded."""
+    if not LATEST_MAKOKOTO_PATH.is_file():
+        return []
+    facility = master.facility_by_id["H012"]
+    table = Document(LATEST_MAKOKOTO_PATH).tables[5]
+    records: list[dict[str, object]] = []
+    for row_number, row in enumerate(table.rows[1:], 2):
+        values = [clean_text(cell.text) for cell in row.cells]
+        asset = values[0]
+        if not asset:
+            continue
+        quantity = explicit_group_quantity([values])
+        if quantity is None:
+            department_count = re.search(r"(?:\s*-\s*|\s+)(\d+)\s*$", values[1])
+            quantity = int(department_count.group(1)) if department_count else None
+        if not quantity:
+            continue
+        records.append(register_source_record(
+            facility_id="H012", lg=facility.lg, facility=facility.name,
+            asset=asset, source_file=LATEST_MAKOKOTO_SOURCE,
+            source_locator=f"Table 6, row {row_number}", quantity=quantity,
+            quantity_basis="observed/supplied count in the facility checklist",
+            condition=values[13], remarks=values[14],
+            service_date=values[7] or None, life_months=values[4] or None,
+            tag_number=values[5], asset_details=values[3],
+        ))
+    return records
+
+
+def school_table_records(
+    master: MasterData, *, path: Path, source_file: str, facility_id: str,
+    table_indexes: tuple[int, ...],
+) -> list[dict[str, object]]:
+    """Extract counted school assets from grouped checklist tables."""
+    if not path.is_file():
+        return []
+    facility = master.facility_by_id[facility_id]
+    document = Document(path)
+    records: list[dict[str, object]] = []
+    for table_index in table_indexes:
+        table = document.tables[table_index]
+        rows = [
+            (row_number, [clean_text(cell.text) for cell in row.cells])
+            for row_number, row in enumerate(table.rows[1:], 2)
+        ]
+        starts = [
+            position for position, (_, values) in enumerate(rows)
+            if values and values[0] and count_from_text(values[0]) is None
+        ]
+        for item_index, start in enumerate(starts):
+            stop = starts[item_index + 1] if item_index + 1 < len(starts) else len(rows)
+            row_number, values = rows[start]
+            group = [row_values for _, row_values in rows[start:stop]]
+            quantity = explicit_group_quantity(group)
+            if not quantity:
+                continue
+            details = values[3] if len(values) > 3 else ""
+            asset = f"{values[0]} - {details}" if details else values[0]
+            records.append(register_source_record(
+                facility_id=facility_id, lg=facility.lg, facility=facility.name,
+                asset=asset, source_file=source_file,
+                source_locator=f"Table {table_index + 1}, row {row_number}",
+                quantity=quantity, quantity_basis="count written beneath item label",
+                condition=values[13] if len(values) > 13 else "",
+                remarks=values[14] if len(values) > 14 else "",
+                service_date=values[7] if len(values) > 7 and values[7] else None,
+                life_months=values[4] if len(values) > 4 and values[4] else None,
+                tag_number=values[5] if len(values) > 5 else "",
+                asset_details=details,
+            ))
+    return records
+
+
+def team30_school_records(master: MasterData) -> list[dict[str, object]]:
+    return [
+        *school_table_records(
+            master, path=LATEST_MAKOKOTO_PATH, source_file=LATEST_MAKOKOTO_SOURCE,
+            facility_id="S069", table_indexes=(10, 11, 12),
+        ),
+        *school_table_records(
+            master, path=LATEST_NYAMARWA_PATH, source_file=LATEST_NYAMARWA_SOURCE,
+            facility_id="S236", table_indexes=(10, 11, 12),
+        ),
+    ]
+
+
+def quantity_from_remarks(value: object) -> int:
+    text = clean_text(value)
+    for pattern in (r"\btotal of\s+(\d+)\b", r"\bhas\s+(\d+)\b", r"\b(\d+)\s+newly constructed\b"):
+        match = re.search(pattern, text, re.I)
+        if match:
+            return int(match.group(1))
+    words = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5}
+    match = re.search(r"\b(one|two|three|four|five)\s+newly constructed\b", text, re.I)
+    return words[match.group(1).casefold()] if match else 1
+
+
+def lwamata_records(master: MasterData) -> list[dict[str, object]]:
+    if not LATEST_LWAMATA_PATH.is_file():
+        return []
+    relative = LATEST_LWAMATA_SOURCE
+    facility = master.facility_by_id["S001"]
+    document = Document(LATEST_LWAMATA_PATH)
+    records: list[dict[str, object]] = []
+    for table_index in (4, 6):
+        table = document.tables[table_index]
+        for row_number, row in enumerate(table.rows[1:], 2):
+            values = [clean_text(cell.text) for cell in row.cells]
+            asset = values[0]
+            if not asset or normalized_key(asset) in {"n a", "na"}:
+                continue
+            remarks = values[14]
+            quantity = quantity_from_remarks(remarks)
+            details = values[3]
+            asset_label = f"{asset} - {details}" if details and normalized_key(details) not in {"n a", "na"} else asset
+            records.append(register_source_record(
+                facility_id="S001", lg=facility.lg, facility=facility.name,
+                asset=asset_label, source_file=relative,
+                source_locator=f"Table {table_index + 1}, row {row_number}",
+                quantity=quantity,
+                quantity_basis="explicit count in remarks" if quantity > 1 else "single completed observation",
+                condition=values[13], remarks=remarks,
+                service_date=values[7] if values[7] and values[7] != "N/A" else None,
+                life_months=values[4] or None, tag_number=values[5], asset_details=details,
+            ))
+    return records
+
+
+def sofia_records(master: MasterData) -> list[dict[str, object]]:
+    """Transcribe the explicit quantities in Sofia HC III's scanned checklist."""
+    if not LATEST_SOFIA_PATH.is_file():
+        return []
+    relative = LATEST_SOFIA_SOURCE
+    facility = master.facility_by_id["X041"]
+    checklist = [
+        (3, "B.P. Machine, Digital", 2, "Black screen with white casing"),
+        (3, "B.P. Machine, Aneroid, wall mounted", 3, "Gauge with black bracket"),
+        (3, "Autoclave, 20 litre, duo operated", 2, "Stainless steel"),
+        (3, "Bowl, Kick", 2, "Stainless steel"),
+        (3, "Bowl Stand", 3, "Stainless steel"),
+        (3, "Counting Chamber, Neubauer Improved", 1, "Glass with red marking"),
+        (3, "Cupboard, Steel, Lockable", 4, "Brown-grey with black handles"),
+        (3, "Drip Stand", 13, "Stainless steel with rubber base"),
+        (5, "ESR Stand", 1, "White"),
+        (5, "Examination Couch", 4, "Black mattress with stainless-steel frame"),
+        (5, "Examination Light, LED", 4, ""),
+        (5, "Glucometer", 4, "Grey"),
+        (5, "Haemoglobin Meter, Digital", 2, "White with screen and red marking"),
+        (5, "Height Meter", 2, ""),
+        (5, "Instrument Trolley", 4, ""),
+        (5, "Microscope, Binocular", 1, "White and black"),
+        (5, "Otoscope", 1, ""),
+        (5, "Patient Screen", 6, "Blue and white with stainless-steel frame"),
+        (5, "Patient Trolley", 1, "Stainless steel"),
+        (7, "Refrigerator, Basic", 3, "White-grey CHICO refrigerator"),
+        (7, "Stethoscope", 8, "Black"),
+        (7, "Stop Watch", 2, "White"),
+        (7, "Stretcher", 2, "Blue mattress"),
+        (7, "Stove, Gas", 2, ""),
+        (7, "Weighing Scale with Height Meter, Adult", 5, "White base with height ruler"),
+        (7, "Weighing Scale, Infant", 4, "White"),
+        (7, "Weighing Scale, Toddler", 2, ""),
+        (7, "Wheel Chair", 5, "Black with metal frame"),
+        (7, "Projector", 2, "Audio-visual equipment row"),
+        (7, "Projector Screen", 2, "Audio-visual equipment row"),
+        (7, "DVD Player", 3, "Black; audio-visual equipment row"),
+        (7, "Medical Waste Bin", 20, "Stainless steel"),
+        (7, "Wall Clock", 7, "Black and white"),
+        (9, "Diagnostic Equipment Set for MCH", 2, "Stainless steel"),
+        (9, "Diagnostic Equipment Set for OPD", 2, "Stainless steel"),
+        (9, "Glassware Set, Laboratory, Basic", 2, ""),
+        (9, "Hollow Ware Set, Treatment", 2, "Stainless steel"),
+        (9, "Instrument Set, Dressing", 2, "Stainless steel"),
+        (9, "Instrument Set, Basic ENT", 3, "Stainless steel"),
+        (9, "Instrument Set, Suture", 2, "Stainless steel"),
+        (9, "Pulse Oximeter, Handheld", 4, "Black screen with white casing"),
+        (9, "Bed, Adult Patient with Mattress", 30, "Black mattress with stainless-steel frame"),
+        (9, "Bed, Pediatric Patient with Mattress", 10, "Black mattress with stainless-steel frame"),
+        (11, "Bedside Locker", 10, "White-blue plastic"),
+        (11, "Cupboard, Instrument", 1, "Stainless steel"),
+        (11, "Delivery Bed, Hydraulic Manual", 2, "Black mattress"),
+        (11, "Oxygen Therapy Apparatus, Minimum 45L Cylinder", 4, ""),
+        (11, "Resuscitator Manual, Infant, with all Mask Sizes", 10, "Plastic balloon form"),
+        (11, "Resuscitator Manual, Adult, with all Mask Sizes", 10, "Plastic balloon form"),
+        (11, "Suction Apparatus, Electric", 3, ""),
+        (11, "Nebulizer, Ultrasonic", 1, ""),
+        (11, "Oxygen Concentrator, Duo Flow", 4, ""),
+        (11, "Bench", 4, "Blue-grey with metal frame"),
+        (13, "Disinfection Bucket", 10, "White"),
+        (13, "Baby Cot", 2, "Blue and black"),
+        (13, "Diagnostic Equipment Set for Ward", 2, "Stainless steel"),
+        (13, "Hollow Ware Set, Ward", 2, "Stainless steel"),
+        (13, "Instrument Set, Delivery", 2, "Stainless steel"),
+        (13, "Instrument Set, Stitch Removing", 2, "Stainless steel"),
+        (13, "MVA Kit", 5, "Plastic container"),
+        (13, "Stool, Laboratory", 5, "Blue"),
+        (15, "Penguin Sucker", 3, "Plastic container in penguin shape"),
+        (15, "Fetoscope, Doppler", 3, ""),
+        (15, "Bubble CPAP", 2, ""),
+        (15, "Centrifuge, Electric", 2, "Blue and white"),
+        (15, "Kangaroo Mother Care Chair", 1, "Brown"),
+        (15, "Radiant Infant Warmer", 2, "White and red"),
+        (15, "Haemoglobin Meter, Sahli", 2, ""),
+        (15, "Examination Light", 1, "Head-mounted surgical lamp"),
+        (17, "Instrument Set, ENT Basic for HCIII", 2, "Stainless steel"),
+        (17, "Bag Valve Mask, Ambu Bag, Neonatal", 15, ""),
+        (17, "Office Chair", 7, "Black with stainless-steel frame"),
+        (17, "Desk", 5, "Wooden, black, with metallic stand"),
+        (19, "Filing Cabinet", 2, "Grey metallic"),
+        (19, "Non-Residential Clinical Building Block", 4, "OPD and maternity buildings"),
+        (19, "Residential Staff-Quarter Block", 2, "Two staff-quarter blocks"),
+        (19, "Pit Latrine Stance", 4, "Two female and two male stances"),
+        (19, "Bathroom", 4, "Two female and two male bathrooms"),
+        (19, "Water Tank, 3,000 Litre", 1, ""),
+        (19, "Water Tank, 10,000 Litre", 2, "One connected to a pump"),
+        (19, "Water Pump", 2, "One pump reported installed"),
+        (19, "Placenta Pit", 1, ""),
+        (19, "Waste Pit", 1, ""),
+    ]
+    records = []
+    for page, asset, quantity, details in checklist:
+        records.append(register_source_record(
+            facility_id="X041", lg=facility.lg, facility=facility.name,
+            asset=f"{asset} - {details}" if details else asset,
+            source_file=relative, source_locator=f"PDF page {page}",
+            quantity=quantity,
+            quantity_basis="handwritten quantity beside checklist item",
+            remarks="Quantity manually transcribed from the scanned facility return.",
+            asset_details=details,
+        ))
+    return records
 
 
 def shift_column_dimensions_for_insert(ws, insert_at: int) -> None:
@@ -836,6 +1362,166 @@ def ensure_facility_column(ws) -> tuple[int, bool]:
     return 2, True
 
 
+def asset_keys(value: object) -> list[str]:
+    text = clean_text(value)
+    base = re.split(r"\s+-\s+", text, maxsplit=1)[0]
+    keys = [normalized_key(text), normalized_key(base)]
+    return list(dict.fromkeys(key for key in keys if key))
+
+
+def source_template_rows(ws_source, ws_register) -> dict[str, int]:
+    headers = [cell.value for cell in ws_source[1]]
+    index = {name: position for position, name in enumerate(headers)}
+    templates: dict[str, int] = {}
+    for row in ws_source.iter_rows(min_row=2, values_only=True):
+        first = row[index["Register first row"]]
+        asset = row[index["Asset in source"]]
+        if not first or not asset:
+            continue
+        for key in asset_keys(asset):
+            templates.setdefault(key, int(first))
+    return templates
+
+
+def template_row_for_asset(asset: object, templates: dict[str, int], *, health: bool) -> int:
+    for key in asset_keys(asset):
+        if key in templates:
+            return templates[key]
+    wanted = asset_keys(asset)[-1]
+    first_word = wanted.split()[0] if wanted else ""
+    candidates = [key for key in templates if key.startswith(first_word + " ") or key == first_word]
+    if not candidates:
+        candidates = [key for key in templates if first_word and first_word in key]
+    if candidates:
+        score, match = max((SequenceMatcher(None, wanted, key).ratio(), key) for key in candidates)
+        if score >= 0.55:
+            return templates[match]
+    defaults = ("stethoscope", "b p machine digital") if health else ("school desks", "desk")
+    for default in defaults:
+        if default in templates:
+            return templates[default]
+    raise ValueError(f"No classification template is available for {asset!r}")
+
+
+def location_display(lg: str) -> str:
+    upper = clean_text(lg).upper()
+    if upper in MDA_NAMES:
+        return upper
+    if upper.endswith(" MC") or upper.endswith(" CITY"):
+        return upper
+    return f"{upper} DLG"
+
+
+def append_new_records(workbook, master: MasterData) -> dict[str, int]:
+    register = workbook["Asset Register"]
+    source = workbook["Source Lines"]
+    source_headers = [cell.value for cell in source[1]]
+    source_index = {name: position + 1 for position, name in enumerate(source_headers)}
+    existing_record_keys = {
+        (
+            clean_text(source.cell(row, source_index["Facility ID"]).value),
+            normalized_key(source.cell(row, source_index["Source locator"]).value),
+            normalized_key(source.cell(row, source_index["Asset in source"]).value),
+        )
+        for row in range(2, source.max_row + 1)
+    }
+    candidate_records = [
+        *latest_western_records(master),
+        *lwamata_records(master),
+        *sofia_records(master),
+        *makokoto_health_records(master),
+        *team30_school_records(master),
+    ]
+    records = [
+        record for record in candidate_records
+        if (
+            clean_text(record["Facility ID"]),
+            normalized_key(record["Source locator"]),
+            normalized_key(record["Asset in source"]),
+        ) not in existing_record_keys
+    ]
+    if not records:
+        return {"source_lines_added": 0, "asset_rows_added": 0}
+
+    templates = source_template_rows(source, register)
+    location_by_lg: dict[str, str] = {}
+    for row in range(2, register.max_row + 1):
+        book = clean_text(register.cell(row, 1).value)
+        location = clean_text(register.cell(row, 10).value)
+        if book and location:
+            location_by_lg.setdefault(book, location)
+
+    max_reference = max(
+        (
+            int(match.group(1))
+            for row in range(2, source.max_row + 1)
+            if (match := re.fullmatch(r"SRC-(\d+)", clean_text(source.cell(row, 1).value)))
+        ),
+        default=0,
+    )
+    register_max_column = register.max_column
+    source_max_column = source.max_column
+    current_register_row = register.max_row
+    current_source_row = source.max_row
+    source_style_row = current_source_row
+    added_rows = 0
+    for record in records:
+        max_reference += 1
+        source_ref = f"SRC-{max_reference:06d}"
+        first_register_row = current_register_row + 1
+        facility = master.facility_by_id[clean_text(record["Facility ID"])]
+        book = book_code(facility.lg)
+        health = "health centre" in facility.name.casefold()
+        template_row = template_row_for_asset(record["Asset in source"], templates, health=health)
+        quantity = int(record["quantity"])
+        for item_number in range(1, quantity + 1):
+            current_register_row += 1
+            target_row = current_register_row
+            copy_row(register, template_row, target_row, register_max_column)
+            description = (
+                f"{record['Asset in source']} - {facility.name} - {facility.lg} "
+                f"[{source_ref}; item {item_number} of {quantity}]"
+            )
+            register.cell(target_row, 1).value = book
+            register.cell(target_row, 2).value = facility.name
+            register.cell(target_row, 3).value = description
+            register.cell(target_row, 9).value = 1
+            register.cell(target_row, 10).value = location_by_lg.get(book, location_display(facility.lg))
+            register.cell(target_row, 14).value = None
+            register.cell(target_row, 33).value = None
+            life = record.get("life_months")
+            if isinstance(life, (int, float)) and not isinstance(life, bool) and math.isfinite(float(life)) and float(life) > 0:
+                register.cell(target_row, 36).value = int(float(life))
+            for column in (38, 39, 41, 43, 44, 45, 46, 47, 49):
+                register.cell(target_row, column).value = None
+            status_text = normalized_key(f"{record.get('Original condition', '')} {record.get('Source remarks and qualifications', '')}")
+            if "not in use" in status_text:
+                register.cell(target_row, 48).value = "NO"
+            elif "in use" in status_text:
+                register.cell(target_row, 48).value = "YES"
+            for column in range(51, register_max_column + 1):
+                register.cell(target_row, column).value = None
+            added_rows += 1
+        last_register_row = current_register_row
+
+        current_source_row += 1
+        target_source_row = current_source_row
+        copy_row(source, source_style_row, target_source_row, source_max_column)
+        source.cell(target_source_row, source_index["Source reference"]).value = source_ref
+        source.cell(target_source_row, source_index["Register first row"]).value = first_register_row
+        source.cell(target_source_row, source_index["Register last row"]).value = last_register_row
+        source.cell(target_source_row, source_index["Items represented"]).value = quantity
+        for header in source_headers[4:]:
+            source.cell(target_source_row, source_index[header]).value = record.get(header)
+        retarget_source_line_formulas(
+            register, first_register_row, last_register_row, target_source_row
+        )
+
+    if source.auto_filter.ref:
+        source.auto_filter.ref = f"A1:{get_column_letter(source_max_column)}{current_source_row}"
+    return {"source_lines_added": len(records), "asset_rows_added": added_rows}
+
+
 def synchronize_asset_table(ws) -> None:
     table = ws.tables["AssetRegister"]
     headers = [ws.cell(1, column).value for column in range(1, ws.max_column + 1)]
@@ -853,7 +1539,7 @@ def synchronize_asset_table(ws) -> None:
         table.autoFilter.ref = table.ref
 
 
-def update_read_me(ws) -> None:
+def update_read_me(ws, *, removed_rows: int, added_rows: int, final_rows: int) -> None:
     replacements = {
         "Template": (
             "The Asset Register sheet preserves the supplied template fields and adds "
@@ -865,7 +1551,9 @@ def update_read_me(ws) -> None:
             "facility folders, source-line values, exact source worksheet rows and section "
             "headers, and explicit facility/LG text in source descriptions. District- or "
             "MDA-wide registers use the owning entity when no more specific facility is "
-            "recorded. Values without defensible source evidence remain blank."
+            f"recorded. {removed_rows:,} asset rows without a valid facility or traceable owner "
+            f"were removed; {added_rows:,} rows from the latest source batch were added. "
+            f"The final register contains {final_rows:,} asset rows."
         ),
     }
     for row in ws.iter_rows(min_row=1, max_row=ws.max_row, max_col=3):
@@ -878,6 +1566,21 @@ def update_read_me(ws) -> None:
                 "DLG/district wording, retain MC or City where applicable, and append ' BK'."
             )
             row[2].value = "Sample Header of Asset Register..xlsx; source-line reconciliation"
+
+
+def latest_source_totals(ws) -> tuple[int, int]:
+    headers = [cell.value for cell in ws[1]]
+    index = {name: position + 1 for position, name in enumerate(headers)}
+    legacy_prefix = f"{LATEST_ROOT.relative_to(ROOT).as_posix()}/"
+    source_lines = 0
+    asset_rows = 0
+    for row in range(2, ws.max_row + 1):
+        source_file = clean_text(ws.cell(row, index["Source file"]).value)
+        if source_file not in LATEST_SOURCE_FILES and not source_file.startswith(legacy_prefix):
+            continue
+        source_lines += 1
+        asset_rows += int(ws.cell(row, index["Items represented"]).value)
+    return source_lines, asset_rows
 
 
 def load_input(path: Path, from_git_head: bool):
@@ -901,12 +1604,33 @@ def save_atomically(workbook, path: Path) -> None:
 def build(path: Path, from_git_head: bool, dry_run: bool = False) -> dict[str, object]:
     workbook = load_input(path, from_git_head)
     master = MasterData()
-    lg_by_row, facility_by_row, rules, unresolved = source_maps(
+    lg_by_row, facility_by_row, rules, unresolved, kept_source_refs = source_maps(
         workbook["Source Lines"], master
     )
 
     register = workbook["Asset Register"]
     facility_column, _ = ensure_facility_column(register)
+    original_rows = register.max_row - 1
+    kept_rows = set(lg_by_row) & set(facility_by_row)
+    if not dry_run:
+        expected_register_rows = set(range(2, register.max_row + 1))
+        if kept_rows == expected_register_rows:
+            row_map = {row: row for row in expected_register_rows}
+        else:
+            row_map = compact_register(register, kept_rows)
+        source_sheet = workbook["Source Lines"]
+        if source_rows_are_all_retained(source_sheet, kept_source_refs):
+            source_row_map = {row: row for row in range(2, source_sheet.max_row + 1)}
+        else:
+            source_row_map = compact_source_lines(source_sheet, kept_source_refs, row_map)
+        remapped_formula_count = remap_source_line_formulas(register, source_row_map)
+        lg_by_row = {row_map[old_row]: value for old_row, value in lg_by_row.items() if old_row in row_map}
+        facility_by_row = {row_map[old_row]: value for old_row, value in facility_by_row.items() if old_row in row_map}
+        additions = append_new_records(workbook, master)
+    else:
+        row_map = {row: row for row in kept_rows}
+        remapped_formula_count = 0
+        additions = {"source_lines_added": 0, "asset_rows_added": 0}
     headers = [cell.value for cell in next(register.iter_rows(min_row=1, max_row=1))]
     location_column = headers.index("LOCATION_SEGMENT1") + 1
 
@@ -914,13 +1638,17 @@ def build(path: Path, from_git_head: bool, dry_run: bool = False) -> dict[str, o
     examples: list[tuple[int, str | None, str | None]] = []
     for row_number in range(2, register.max_row + 1):
         lg = lg_by_row.get(row_number)
-        if not lg:
+        if not lg and dry_run:
             lg = master.canonical_lg(register.cell(row_number, location_column).value)
             if lg:
                 rules["LG: register location"] += 1
 
+        retained_or_new = not dry_run or row_number in kept_rows
         book = book_code(lg)
         facility = facility_by_row.get(row_number)
+        if retained_or_new:
+            book = book or clean_text(register.cell(row_number, 1).value) or None
+            facility = facility or clean_text(register.cell(row_number, facility_column).value) or None
         register.cell(row_number, 1).value = book
         register.cell(row_number, facility_column).value = facility
         stats["populated_book" if book else "blank_book"] += 1
@@ -929,7 +1657,15 @@ def build(path: Path, from_git_head: bool, dry_run: bool = False) -> dict[str, o
             examples.append((row_number, book, facility))
 
     synchronize_asset_table(register)
-    update_read_me(workbook["Read Me"])
+    current_removed_rows = original_rows - len(kept_rows)
+    total_source_lines_added, total_asset_rows_added = latest_source_totals(workbook["Source Lines"])
+    removed_rows = ORIGINAL_REGISTER_ASSET_ROWS + total_asset_rows_added - (register.max_row - 1)
+    if removed_rows < 0:
+        raise ValueError("Final register exceeds the original rows plus traced new-source rows.")
+    update_read_me(
+        workbook["Read Me"], removed_rows=removed_rows,
+        added_rows=total_asset_rows_added, final_rows=register.max_row - 1,
+    )
     workbook.calculation.calcMode = "auto"
     workbook.calculation.fullCalcOnLoad = True
     workbook.calculation.forceFullCalc = True
@@ -947,6 +1683,14 @@ def build(path: Path, from_git_head: bool, dry_run: bool = False) -> dict[str, o
         "rules": rules,
         "unresolved": unresolved,
         "unresolved_examples": examples,
+        "removed_rows": removed_rows,
+        "source_lines_added": total_source_lines_added,
+        "asset_rows_added": total_asset_rows_added,
+        "current_removed_rows": current_removed_rows,
+        "current_source_lines_added": additions["source_lines_added"],
+        "current_asset_rows_added": additions["asset_rows_added"],
+        "final_rows": register.max_row - 1,
+        "remapped_formula_count": remapped_formula_count,
     }
 
 
@@ -971,6 +1715,12 @@ def main() -> int:
         f"Filled FACILITY_NAME on {stats['populated_facility']:,} rows; "
         f"left blank {stats['blank_facility']:,}."
     )
+    print(
+        f"Removed {stats['removed_rows']:,} rows without a valid facility or traceable owner; "
+        f"added {stats['asset_rows_added']:,} rows from {stats['source_lines_added']:,} new source lines. "
+        f"Final register: {stats['final_rows']:,} rows."
+    )
+    print(f"Retargeted {stats['remapped_formula_count']:,} Source Lines formula references.")
     print("Resolution rules:")
     for rule, count in stats["rules"].most_common():
         print(f"  {count:>7,}  {rule}")

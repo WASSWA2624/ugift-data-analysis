@@ -220,6 +220,13 @@ def source_bytes(source_root, relative):
 # Reviewed against the master list, document cover/interview fields and the
 # supervisor chat of 21-22 September 2026. Multiple folders mean a shared form.
 ROUTES = [
+    ('depaul - bunyoro, tooro and greater mityana -current', [
+        '_multi-team/bunyoro-tooro-greater-mityana',
+        'team-30/_team-documents',
+    ], 'Updated consolidated register for Teams 29-33; Team 30 copy retained for discoverability.'),
+    ('lwamata', ['team-29/Kiboga/Lwamata-Town-Council-Seed-Secondary-School'], 'Lwamata Town Council Seed Secondary School return; Kiboga local government.'),
+    ('sofia health centre', ['team-13/Busia MC/Sofia-Health-Centre-III'], 'Sofia Health Centre III facility return; Busia Municipal Council.'),
+    ('img_20260922_0002', ['team-10/Moroto/Rupa-Seed-Secondary-School/_supporting-documents'], 'Rupa Seed Secondary School land-title and boarding-request supporting records.'),
     ('kitayunjwa', ['team-18/Kamuli/Kitayunjwa-Seed-Secondary-School'], 'School named in source and master list.'),
     ('nakitokolo', ['team-32/Wakiso/Nakitokolo-HC-III'], 'Wakiso local government stated on cover.'),
     ('ngomamene', ['team-32/Gomba/Ngomamene-HC-III'], 'Gomba on cover; interview spells facility Ngomenene.'),
@@ -252,10 +259,22 @@ WEMIS_RAR_NOTE = ('Programme-level WEMIS tablet, desktop and UPS handover record
 
 def route(relative):
     basename = relative.split('::')[-1].split('/')[-1]
-    if relative.startswith(CHAT_NAME):
+    if relative == CHAT_NAME or f'/{CHAT_NAME}' in relative:
         if basename in CHAT_ROUTES:
             return CHAT_ROUTES[basename]
         return ['_multi-team/programme-documents/data-management-chat'], 'Supervisor discussion and source archive retained for reconciliation decisions.'
+    team_archive = re.search(
+        r'UGIFT DEPAUL\.zip::UGIFT DEPAUL/TEAM\s+(25\s*&\s*30|\d+)',
+        relative,
+        re.I,
+    )
+    if team_archive:
+        team_label = team_archive.group(1)
+        team_numbers = (25, 30) if '&' in team_label else (int(team_label),)
+        return (
+            [f'team-{number:02d}/_team-documents' for number in team_numbers],
+            f'Archive member filed under Team {team_label}; retained as team-level evidence pending facility-specific indexing.',
+        )
     for token, folders, note in ROUTES:
         if token in basename.lower():
             if token == 'kibiri' and basename == 'KIBIRI HC III report.docx':
@@ -307,6 +326,33 @@ def update():
         hashes[destination] = digest
         changed_files.append(destination)
         return destination, 'placed'
+    # Earlier runs placed previously unseen sources in _unassigned. Reapply the
+    # reviewed routing rules so newly classified archive and chat material moves
+    # into the relevant evidence area without altering bytes.
+    obsolete_unassigned = set()
+    migrated_rows = 0
+    for row in list(rows):
+        relative = row[SOURCE_COLUMN]
+        old_destination = row[DEST_COLUMN]
+        if not (
+            row['source root'] == 'new-raw-data-221092026-1114'
+            and old_destination.startswith('_multi-team/_unassigned/')
+        ):
+            continue
+        folders, note = route(relative)
+        if folders == ['_multi-team/_unassigned']:
+            continue
+        data = source_bytes(row['source root'], relative)
+        placements = [place(data, folder, Path(old_destination).name) for folder in folders]
+        obsolete_unassigned.add(old_destination)
+        row[DEST_COLUMN], row['status'] = placements[0]
+        row['note'] = note
+        for destination, status in placements[1:]:
+            extra_row = dict(row)
+            extra_row[DEST_COLUMN] = destination
+            extra_row['status'] = status
+            rows.append(extra_row)
+        migrated_rows += 1
     for source_root, relative, _ in inventory():
         key = source_root, relative
         if key in by_source:
@@ -343,6 +389,14 @@ def update():
             by_source[key].append(row)
             if row[DEST_COLUMN] and row['status'] in ('placed', 'duplicate'):
                 by_basename[Path(row[DEST_COLUMN]).name].append(row)
+    referenced_destinations = {row[DEST_COLUMN] for row in rows if row[DEST_COLUMN]}
+    removed_orphans = []
+    for destination in sorted(obsolete_unassigned - referenced_destinations):
+        target = (GROUPED / destination).resolve()
+        unassigned_root = (GROUPED / '_multi-team' / '_unassigned').resolve()
+        if target.is_file() and target.parent == unassigned_root:
+            target.unlink()
+            removed_orphans.append(destination)
     fields = [SOURCE_COLUMN, DEST_COLUMN, 'status', 'note', 'source root', 'sha256']
     staging = GROUPED / '_index.csv.new'
     with staging.open('w', encoding='utf-8-sig', newline='') as stream:
@@ -352,13 +406,17 @@ def update():
     staging.replace(GROUPED / '_index.csv')
     result = {'index_rows_before': original_count, 'index_rows_after': len(rows),
               'new_index_rows': len(rows) - original_count, 'new_files': changed_files,
+              'migrated_archive_rows': migrated_rows, 'removed_orphans': removed_orphans,
               'new_facilities': sorted(new_facilities), 'unresolved': unresolved,
               'status_counts': dict(Counter(r['status'] for r in rows)),
               'root_counts': dict(Counter(r['source root'] for r in rows))}
     output = ROOT / 'tmp' / 'grouping-update-summary.json'
     output.parent.mkdir(exist_ok=True)
     output.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding='utf-8')
-    print(json.dumps(result, indent=2))
+    print(json.dumps({
+        key: len(value) if isinstance(value, list) else value
+        for key, value in result.items()
+    }, indent=2))
 
 
 def audit():
