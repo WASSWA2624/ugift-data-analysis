@@ -104,9 +104,11 @@ def building(minor1: str, minor2: str, months: int = 600) -> tuple[str, str, str
 def classify(description: str) -> tuple[str, str, str, int | None, bool] | None:
     """Return major, minor 1, minor 2, life in months, and whether it depreciates."""
     text = description.casefold().strip()
-    if not text or text in {"set", "machine", "equipment", "item", "other", "accessory", "accessories"}:
+    if not text or text in {"set", "machine", "equipment", "item", "other", "accessory", "accessories", "-", "schools", "hospitals"}:
         return None
-    if re.search(r"\b(reagent|chemicals?|acids?|gloves?|masks?|syringes?|drugs?|medicines?|stationery|pens?|pencils?|chalks?|soap|detergent|uniforms?|jerseys?|boots?|shoes?)\b", text) and not re.search(r"\b(board|cupboard|room|block|trolley|machine|kit|set)\b", text):
+    if re.search(r"\b(total|count|requisitioned|delivered)\b", text) or re.fullmatch(r"-?\d+", text):
+        return None
+    if re.search(r"\b(pack of|single use|surgicle packs?|graph paper)\b", text):
         return None
     if re.search(r"\b(wheelchair|examination|delivery|hospital|patient|maternity|theatre|operating)\b.{0,20}\b(bed|couch|table)\b", text) or re.search(r"\b(bed|couch|table)\b.{0,20}\b(examination|delivery|hospital|patient|theatre|operating)\b", text):
         return equipment("MED LAB RESEARCH APPLIANCES")
@@ -116,7 +118,7 @@ def classify(description: str) -> tuple[str, str, str, int | None, bool] | None:
         return equipment("MED LAB RESEARCH APPLIANCES")
     if re.search(r"\btrolleys?\b", text):
         return equipment("MED LAB RESEARCH APPLIANCES")
-    if re.search(r"\b(desks?|chairs?|stools?|benches|bookshel(?:f|ves)|book\s*shel(?:f|ves)|cupboards?|cabinets?|sofas?|settees?|shelves|lockers?|drawers?|blackboards?|chalkboards?|whiteboards?|notice\s*boards?|noticeboards?|pin boards?|podiums?|lecterns?|pews?|mattresses?|curtains?|blinds?|filing cabinets?|tables?)\b", text):
+    if re.search(r"\b(desks?|deks|chairs?|stools?|bench(?:es)?|bookshel(?:f|ves?|ve)|book\s*shel(?:f|ves?|ve)|cupboards?|cabinets?|sofas?|settees?|shelves|lockers?|drawers?|blackboards?|chalkboards?|whiteboards?|notice\s*boards?|noticeboards?|pin\s*boards?|podiums?|lecterns?|pews?|mattresses?|curtains?|blinds?|filing cabinets?|tables?|waste bins?|bins?|pinboards?)\b", text):
         return equipment("FURNITURE AND FITTINGS")
     if re.search(r"\bservers?\b", text):
         return ict("HEAVY ICT HARDWARE")
@@ -124,7 +126,7 @@ def classify(description: str) -> tuple[str, str, str, int | None, bool] | None:
         return ict("TELEVISION RADIO TRANSMITTER")
     if re.search(r"\b(television|televisions|\btvs?\b|radios?|decoders?|amplifiers?|microphones?|loud\s*speakers?|speakers?|public address|pa system|cctv|cameras?|webcams?)\b", text) and not re.search(r"\b(concrete|tyre|tire)\b", text):
         return ict("OTHER ICT EQUIPMENT")
-    if re.search(r"\b(laptops?|desktops?|computers?|computer sets?|cpus?|monitors?|printers?|projectors?|scanners?|tablets?|ups\b|routers?|network switches?|modems?|keyboards?|mouses?|mice\b|hard disks?|telephones?|phones?|handsets?)\b", text) and not re.search(r"\b(laboratory|room|block|building)\b", text):
+    if re.search(r"network switches?", text) or (re.search(r"\b(laptops?|desktops?|computers?|computer sets?|cpus?|monitors?|printers?|projectors?|scanners?|tablets?|ups|routers?|modems?|keyboards?|mouses?|mice|hard disks?|telephones?|phones?|handsets?)\b", text) and not re.search(r"\b(laboratory|room|block|building)\b", text)):
         return ict("LIGHT ICT HARDWARE")
     if re.search(r"\b(photocopier|photo\s*copier|fax machines?|shredders?|laminators?|binding machines?|typewriters?|calculators?|safes?|cash boxes?|wall clocks?|clocks?)\b", text):
         return equipment("OFFICE EQUIPMENT")
@@ -162,8 +164,42 @@ def classify(description: str) -> tuple[str, str, str, int | None, bool] | None:
         return transport("HEAVY VEHICLES", 120)
     if re.search(r"\b(bicycles?|bikes?)\b", text):
         return transport("CYCLES")
-    if re.fullmatch(r"land|plot of land|plots?", text):
+    if re.search(r"\b(patient screens?|penguin suckers?|disinfection buckets?|buckets?|mva kits?|baby cots?|cots?|muac|mid upper arm|glassware|stretchers?|medical air|air cylinders?|examination lights?|esr stands?|hollow ware|pulse oximeters?|pulse oxymeters?|infant warmers?|radiant warmers?|paediatric beds?|pediatric beds?|adult beds?|icu\b|compression boots?|syringe pumps?|pendants?|bag valve|ambu|oxygen cylinders?|nstrument sets?|instrument sets?)\b", text):
+        return equipment("MED LAB RESEARCH APPLIANCES")
+    if re.search(r"\bbeds?\b", text):
+        if re.search(r"\b(paediatric|pediatric|icu|adult|hospital|patient|delivery|maternity)\b", text):
+            return equipment("MED LAB RESEARCH APPLIANCES")
+        return equipment("FURNITURE AND FITTINGS")
+    if re.search(r"\bstop watches?\b", text):
+        return equipment("MED LAB RESEARCH APPLIANCES")
+    if re.search(r"\b(conical flasks?|beakers?|boiling tubes?|burettes?|burrets?|pipettes?|prisms?|bunsen|lenses|lens holders?|cell holders?|wire gau[sz]e|meter rules?|metre rules?|magnifying)\b", text):
+        return equipment("MED LAB RESEARCH APPLIANCES")
+    if re.search(r"\b(hand lenses|magnifying lenses)\b", text):
+        return equipment("PRECISION OPTICAL INSTRUMENTS")
+    if re.search(r"\b(sockets?|switches|bulb holders?|fluorescent tubes?|flourescent tubes?|surge protectors?|power surge|lightning arrestors?|lightening arrestors?|photo\s*cell)\b", text):
+        return equipment("ELECTRICAL MACHINERY")
+    if re.search(r"\b(key\s*boards?)\b", text):
+        return ict("LIGHT ICT HARDWARE")
+    if re.search(r"\b(doors?|windows?|pinboards?|sinks?|taps?)\b", text):
+        return equipment("FURNITURE AND FITTINGS")
+    if re.search(r"\b(fire extinguishers?|air compressors?|air tanks?|dryers?)\b", text):
+        return equipment("PLANT MACHINERY", 120)
+    if re.search(r"\b(cabins?|staff quarters|office buildings?)\b", text):
+        return building("BUILDINGS OTHER THAN DWELLINGS", "NON RESIDENTIAL BUILDINGS")
+    if re.search(r"\bnon[-\s]?residential buildings?\b", text):
+        return building("BUILDINGS OTHER THAN DWELLINGS", "NON RESIDENTIAL BUILDINGS")
+    if re.search(r"\b(residential buildings?|residential|staff quarters)\b", text):
+        return building("DWELLINGS", "RESIDENTIAL BUILDINGS")
+    if re.search(r"\b(school land|office land)\b", text) or re.fullmatch(r"land|plot of land|plots?", text):
         return ("LAND", "LAND", "LAND", None, False)
+    if re.search(r"\b(down pipes?|gutters?)\b", text):
+        return structure("OTHER STRUCTURES", 240)
+    if re.search(r"\b(antivirus|anti-virus)\b", text):
+        return ("OTHER FIXED ASSETS", "INTELLECTUAL PROPERTY PRODUCTS", "COMPUTER SOFTWARE", 60, True)
+    if re.search(r"\b(audio visual|school furniture)\b", text):
+        return ict("OTHER ICT EQUIPMENT") if "audio" in text else equipment("FURNITURE AND FITTINGS")
+    if re.search(r"\b(inspection devices?)\b", text):
+        return ict("LIGHT ICT HARDWARE")
     return None
 
 
@@ -213,6 +249,10 @@ def update_row(match: re.Match[bytes], stats: dict[str, int]) -> bytes:
         elif 33 not in present:
             additions.append((33, text_cell(row_number, 33, "NO")))
 
+    if (classified or 3 in present) and 7 not in present:
+        additions.append((7, text_cell(row_number, 7, "CAPITALIZED")))
+        stats["type"] += 1
+
     status = values.get(54, "")
     if 47 not in present and status in {"Functional", "Faulty"}:
         additions.append((47, text_cell(row_number, 47, "YES" if status == "Functional" else "NO")))
@@ -231,7 +271,7 @@ def update_row(match: re.Match[bytes], stats: dict[str, int]) -> bytes:
     merged = list(present.items()) + additions
     merged.sort(key=lambda item: item[0])
     body = b"".join(xml for _, xml in merged)
-    return b'<row r="' + match.group(1) + attrs + b">" + body + b"</row>"
+    return b'<row r="' + match.group(1) + b'"' + attrs + b">" + body + b"</row>"
 
 
 def text_cell(row_number: str, column: int, value: str) -> bytes:
@@ -253,7 +293,7 @@ def column_letters(number: int) -> str:
 
 
 def main() -> None:
-    stats = {"class": 0, "salvage": 0, "in_use": 0, "model": 0, "serial": 0, "manufacturer": 0}
+    stats = {"class": 0, "salvage": 0, "in_use": 0, "model": 0, "serial": 0, "manufacturer": 0, "type": 0}
     global STRINGS
     with zipfile.ZipFile(PATH) as source:
         sheet = source.read("xl/worksheets/sheet1.xml")
