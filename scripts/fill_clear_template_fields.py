@@ -126,7 +126,7 @@ def classify(description: str) -> tuple[str, str, str, int | None, bool] | None:
         return ict("TELEVISION RADIO TRANSMITTER")
     if re.search(r"\b(television|televisions|\btvs?\b|radios?|decoders?|amplifiers?|microphones?|loud\s*speakers?|speakers?|public address|pa system|cctv|cameras?|webcams?)\b", text) and not re.search(r"\b(concrete|tyre|tire)\b", text):
         return ict("OTHER ICT EQUIPMENT")
-    if re.search(r"network switches?", text) or (re.search(r"\b(laptops?|desktops?|computers?|computer sets?|cpus?|monitors?|printers?|projectors?|scanners?|tablets?|ups|routers?|modems?|keyboards?|mouses?|mice|hard disks?|telephones?|phones?|handsets?)\b", text) and not re.search(r"\b(laboratory|room|block|building)\b", text)):
+    if re.search(r"network switch(?:es)?", text) or (re.search(r"\b(laptops?|desktops?|computers?|computer sets?|cpu(?:s|_)\b|monitors?|printers?|projectors?|scanners?|tablets?|ups\b|routers?|modems?|keyboards?|mouses?|mice\b|hard disks?|telephones?|phones?|handsets?)\b", text) and not re.search(r"\b(laboratory|room|block|building)\b", text)):
         return ict("LIGHT ICT HARDWARE")
     if re.search(r"\b(photocopier|photo\s*copier|fax machines?|shredders?|laminators?|binding machines?|typewriters?|calculators?|safes?|cash boxes?|wall clocks?|clocks?)\b", text):
         return equipment("OFFICE EQUIPMENT")
@@ -176,7 +176,7 @@ def classify(description: str) -> tuple[str, str, str, int | None, bool] | None:
         return equipment("MED LAB RESEARCH APPLIANCES")
     if re.search(r"\b(hand lenses|magnifying lenses)\b", text):
         return equipment("PRECISION OPTICAL INSTRUMENTS")
-    if re.search(r"\b(sockets?|switches|bulb holders?|fluorescent tubes?|flourescent tubes?|surge protectors?|power surge|lightning arrestors?|lightening arrestors?|photo\s*cell)\b", text):
+    if re.search(r"\b(sockets?|switches|bulb holders?|rheostats?|fluorescent tubes?|flourescent tubes?|surge protectors?|power surge|lightning arrestors?|lightening arrestors?|photo\s*cell)\b", text):
         return equipment("ELECTRICAL MACHINERY")
     if re.search(r"\b(key\s*boards?)\b", text):
         return ict("LIGHT ICT HARDWARE")
@@ -194,6 +194,14 @@ def classify(description: str) -> tuple[str, str, str, int | None, bool] | None:
         return ("LAND", "LAND", "LAND", None, False)
     if re.search(r"\b(down pipes?|gutters?)\b", text):
         return structure("OTHER STRUCTURES", 240)
+    if re.search(r"\b(diagnostic equipment|stop watches?|laboratory tools?|cornical flasks?|conical flasks?|test tube holders?|slot masses|masses|wall outlets?|data out-?lets|wire gau[sz]e|jockeys|pendulum bobs?|pulleys|crocodile clips|filter funnels?|measuring cylinders?|ventilators?|drip stands?|penguin|patient screens?|disinfection buckets?|mva kits?|glassware|stretchers?|examination lights?|esr stands?|hollow ware|pulse oxy|infant warmers?|radiant warmers?|bag valve|syringe pumps?|icu pendants?|compression boots?)\b", text):
+        return equipment("MED LAB RESEARCH APPLIANCES")
+    if re.search(r"\b(leaners?|learners?)\b", text):
+        return equipment("FURNITURE AND FITTINGS")
+    if re.search(r"\b(soap dishes?|soft boards?|wardrobes?|space optimizers?)\b", text):
+        return equipment("FURNITURE AND FITTINGS")
+    if re.search(r"\bbowl,\s*lotion\b", text):
+        return equipment("MED LAB RESEARCH APPLIANCES")
     if re.search(r"\b(antivirus|anti-virus)\b", text):
         return ("OTHER FIXED ASSETS", "INTELLECTUAL PROPERTY PRODUCTS", "COMPUTER SOFTWARE", 60, True)
     if re.search(r"\b(audio visual|school furniture)\b", text):
