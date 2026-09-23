@@ -13,11 +13,12 @@ from datetime import date, datetime
 from pathlib import Path
 
 from openpyxl import Workbook, load_workbook
+from openpyxl.utils import get_column_letter
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "outputs" / "asset-register-2026-09-23" / "UgIFT Shared Asset Register.xlsx"
+SOURCE = ROOT / "outputs" / "asset-register-2026-09-23" / "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx"
 TEMPLATE = ROOT / "Sample Header of Asset Register..xlsx"
-OUTPUT = ROOT / "outputs" / "asset-register-2026-09-23" / "UgIFT Asset Register GOU Template.xlsx"
+OUTPUT = ROOT / "outputs" / "asset-register-2026-09-23" / "ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx"
 
 # Source columns that already have a home in A-AW.
 MAPPED_TO_TEMPLATE = {
@@ -228,6 +229,8 @@ def main() -> None:
         if count % 50000 == 0:
             print(f"{count:,}", flush=True)
     source_book.close()
+    register.auto_filter.ref = f"A1:{get_column_letter(len(headers))}{count + 1}"
+    register.freeze_panes = "A2"
     notes = output.create_sheet("Read Me")
     for line in (
         "UgIFT asset register in the GOU template",

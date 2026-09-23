@@ -22,7 +22,7 @@ from openpyxl.utils import get_column_letter
 
 ROOT = Path(__file__).resolve().parents[1]
 GROUPED = ROOT / "raw-data-grouped"
-OUTPUT = ROOT / "outputs" / "asset-register-2026-09-23" / "UgIFT Shared Asset Register.xlsx"
+OUTPUT = ROOT / "outputs" / "asset-register-2026-09-23" / "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx"
 
 HEADERS = [
     "Equipment/Item",
