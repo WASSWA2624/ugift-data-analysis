@@ -265,6 +265,11 @@ EXACT_FILE_ROUTES = {
     'assets register for rwanyamahembe seed secondary school-1.xlsx': (['team-21/Mbarara/Rwanyamahembe-Seed-Secondary-School'], 'Rwanyamahembe Seed Secondary School register. The workbook names Mbarara and Rwanyamahembe Town Council.'),
     'assets register for rwanyamahembe seed secondary school.xlsx': (['team-21/Mbarara/Rwanyamahembe-Seed-Secondary-School'], 'Second Rwanyamahembe Seed Secondary School register. Johnson Gumisiriza says it came from the head teacher, Mbarara District, Team 21.'),
     'screenshot 2026-09-24 122044.png': (['team-21/Mbarara/Rwanyamahembe-Seed-Secondary-School/_reconciliation-evidence'], 'Johnson UGIFT message, 24 September 2026: the register is from the head teacher of Rwanyamahembe SSS, Mbarara District, Team 21 Western. Not a site photograph.'),
+    'screenshot 2026-09-24 133702.png': ([
+        'team-19/Bushenyi/_reconciliation-evidence',
+        'team-19/Mitooma/_reconciliation-evidence',
+        'team-19/Sheema MC/_reconciliation-evidence',
+    ], 'Johnson UGIFT, 24 September 2026 13:29-13:32. Mayanga HC III is in the Mitooma file and Mitooma District. Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HC III did not benefit from UgIFT. Not a site photograph.'),
     'assets register for rwanyamahembe seed secondary school (1).xlsx': (['team-21/Mbarara/Rwanyamahembe-Seed-Secondary-School'], 'Rwanyamahembe Seed Secondary School register sent by Johnson Gumisiriza on 24 September 2026.'),
     'team 22 excel field template-ugift team 22.xlsx': ([
         'team-22/_team-documents',

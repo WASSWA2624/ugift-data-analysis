@@ -199,6 +199,13 @@ def main():
    elif dec['id'] in ['CHAT03','CHAT10','CHAT11']: r['status']='Reported absent'; r['verification']='Reported not known/not found; not independently established'
    elif dec['id']=='CHAT02':
     r['status']='No UgIFT assets'; r['verification']='Facility exists; supervisor reports no UgIFT assets'; r['note']='The supervisor confirms that Pandwong exists but did not receive UgIFT assets. It is therefore excluded from the missing-return count.'
+   elif dec['id'] in {'CHAT44A','CHAT44B','CHAT44C','CHAT44D'}:
+    r['status']='No UgIFT assets'; r['verification']='Facility exists; supervisor reports no UgIFT assets'; r['ground_name']=dec['ground_name']
+    r['source']={'CHAT44A':'team-19/Bushenyi/_reconciliation-evidence/Screenshot 2026-09-24 133702.png','CHAT44B':'team-19/Bushenyi/_reconciliation-evidence/Screenshot 2026-09-24 133702.png','CHAT44C':'team-19/Mitooma/_reconciliation-evidence/Screenshot 2026-09-24 133702.png','CHAT44D':'team-19/Sheema MC/_reconciliation-evidence/Screenshot 2026-09-24 133702.png'}[dec['id']]
+    r['source_locator']='WhatsApp screenshot 24 September 2026 13:32'
+    r['note']=dec['note']
+   elif dec['id']=='CHAT44E':
+    r['note']='Asset section: MAYANGA  HCIII,   MITOOMA. '+dec['note']
    elif dec['id']=='CHAT14':
     r['status']='Outside UgIFT'; r['verification']='Reported outside UgIFT; not verified; facility type wording requires confirmation'; r['note']='The supervisor says Buyinda was not verified because it was outside UgIFT. The message alternates between health centre and seed school, while the master contains Buyinda HC II; retain that facility-type caveat.'
    elif dec['id'] in ['CHAT15A','CHAT15B','CHAT15C','CHAT15D','CHAT15E']:

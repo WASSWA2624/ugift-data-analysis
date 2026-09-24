@@ -994,6 +994,71 @@
       "quote": "BUMUFUNI SEED S.S",
       "explicit": true,
       "note": "The scanned toolkit names Bumufuni Seed Secondary School and Bulambuli. It is additional evidence for the master Bunambutye row already filed as Bumufuni. It does not create a second school."
+    },
+    {
+      "id": "CHAT44A",
+      "date_time": "2026-09-24 13:32",
+      "speaker": "JOHNSON UGIFT",
+      "team": 19,
+      "lg": "Bushenyi",
+      "master_name": "Bumbaire Seed School",
+      "ground_name": "Bumbaire SSS",
+      "decision": "Exists, no UgIFT assets",
+      "quote": "Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HCIII are did not benefit from Ugift",
+      "explicit": true,
+      "note": "Johnson Gumisiriza says Bumbaire SSS did not benefit from UgIFT. The wording is from the 24 September 2026 13:36 screenshot; it is not in the earlier chat export."
+    },
+    {
+      "id": "CHAT44B",
+      "date_time": "2026-09-24 13:32",
+      "speaker": "JOHNSON UGIFT",
+      "team": 19,
+      "lg": "Bushenyi",
+      "master_name": "Kyamuhunga",
+      "ground_name": "Kyamuhunga SSS",
+      "decision": "Exists, no UgIFT assets",
+      "quote": "Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HCIII are did not benefit from Ugift",
+      "explicit": true,
+      "note": "Johnson Gumisiriza says Kyamuhunga SSS did not benefit from UgIFT. The wording is from the 24 September 2026 13:36 screenshot; it is not in the earlier chat export."
+    },
+    {
+      "id": "CHAT44C",
+      "date_time": "2026-09-24 13:32",
+      "speaker": "JOHNSON UGIFT",
+      "team": 19,
+      "lg": "Mitooma",
+      "master_name": "Kashenshero",
+      "ground_name": "Kashenshero SSS",
+      "decision": "Exists, no UgIFT assets",
+      "quote": "Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HCIII are did not benefit from Ugift",
+      "explicit": true,
+      "note": "Johnson Gumisiriza says Kashenshero SSS did not benefit from UgIFT. The wording is from the 24 September 2026 13:36 screenshot; it is not in the earlier chat export."
+    },
+    {
+      "id": "CHAT44D",
+      "date_time": "2026-09-24 13:32",
+      "speaker": "JOHNSON UGIFT",
+      "team": 19,
+      "lg": "Sheema MC",
+      "master_name": "Rwamujojo HC II",
+      "ground_name": "Rwamujojo HC III",
+      "decision": "Exists, no UgIFT assets",
+      "quote": "Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HCIII are did not benefit from Ugift",
+      "explicit": true,
+      "note": "Johnson Gumisiriza says Rwamujojo HC III did not benefit from UgIFT. The wording is from the 24 September 2026 13:36 screenshot; it is not in the earlier chat export."
+    },
+    {
+      "id": "CHAT44E",
+      "date_time": "2026-09-24 13:29",
+      "speaker": "JOHNSON UGIFT",
+      "team": 19,
+      "lg": "Mitooma",
+      "master_name": "Mayanga HC II",
+      "ground_name": "Mayanga HC III",
+      "decision": "Confirmed in submitted Mitooma file",
+      "quote": "mayanga HCIII is within Mitooma File and it is in Mitooma DC",
+      "explicit": true,
+      "note": "Confirms the existing Mayanga HC III asset section in the Mitooma workbook and the Mitooma District assignment. This is the health centre, not Mayanga Seed School."
     }
   ],
   "attachments": [
@@ -1115,6 +1180,7 @@
     "Lwajje HC III is in Buvuma and is not an alias of Buvuma HC III.",
     "Do not merge Nakaseke Ngoma with Masindi Budongo. The rename message names neither district.",
     "Do not merge Lwengo Kagganda HC III with Mbirizi Seed School or with Lwengo Seed School. The message calls Kagganda a seed school while the master lists a health centre.",
-    "Lawrence report of missing Kira, Nakaseke, Nakasongola and Zingo returns is a submission gap, not evidence of absence. Zingo is not on the master list."
+    "Lawrence report of missing Kira, Nakaseke, Nakasongola and Zingo returns is a submission gap, not evidence of absence. Zingo is not on the master list.",
+    "Johnson's 24 September 13:32 screenshot says Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HC III did not benefit from UgIFT. Mayanga HC III is confirmed inside the Mitooma file. Mayanga Seed School and Kishangara are not covered by that message."
   ]
 }
