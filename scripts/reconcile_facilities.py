@@ -276,15 +276,26 @@ def main():
  # coverage, but remains Needs review until the master-to-ground link or visit
  # is confirmed. This prevents genuine team work from being scored as absent.
  for loc,name,note,source in [
-  ('Rukungiri','Nyakishenyi (New facilities at Nyakishenyi H.S.)','Team 23 submitted Bikurungu Seed Secondary School in Rukungiri; confirm whether it is the renamed Nyakishenyi master entry.','team-23/Rukungiri/Bikurungu-Seed-Secondary-School/KITIMBA HCIII and BIKURUNGU SEED SCHOOL RUKUNGIRI LG.docx'),
   ('Bundibugyo','Kyondo HC II','Depaul confirmed on 23 September 2026 that Kyondo HC III could not be visited because the CAO said the mountainous road was dangerous.','team-26/_team-documents/Team_26_Bundibugyo_UgIFT_Field_Verification_Report_Final.docx'),
-  ('Bundibugyo','Mantoroba HC II','Team 26 verified Busanga Health Centre III, which is absent from the master, while Mantoroba has no matching return; confirm the intended allocation.','team-26/Bundibugyo/Busanga-HC-III/BUSANGA HEALTH CENTRE III - ASSET VERIFICATION AND RECORDING TOOL KIT.docx'),
-  ('Kabarole','Kidubuli HC II','Team 26 submitted Iruhura and Nyambuusa Health Centre III returns while Kidubuli and Nyabuswa remain on the master; confirm the one-to-one mapping.','team-26/Kabarole/Iruhura-HC-III/KABAROLE DISTRICT   IRUHURA HC III ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1).docx'),
-  ('Kabarole','Nyabuswa HC II','Team 26 submitted Iruhura and Nyambuusa Health Centre III returns while Kidubuli and Nyabuswa remain on the master; confirm the one-to-one mapping.','team-26/Kabarole/Nyambuusa-HC-III/KABAROLE DISTRICT   ASSET VERIFICATION AND RECORDING TOOL KIT 222.docx'),
   ('Kasese','Kabingo HCII','Depaul confirmed on 23 September 2026 that the Kabingo information was obtained by phone because the team could not reach the facility. Physical verification stays unconfirmed.','team-27/_team-documents/KABINGO HCIII.docx'),
-  ('Mubende','Kabbo','Team 28 submitted Nakawala Health Centre III in Mubende while Kabbo remains on the master; confirm the intended master-to-ground mapping.','team-28/Mubende/Nakawala-HC-III/NAKAWALA HCIII VERIFICATION TOOL.pdf'),
  ]:
   review_source(loc,name,note,source)
+ # Same local government, one open master name and one submitted name that is not on the master list.
+ for loc,name,folder,ground,note in [
+  ('Rukungiri','Nyakishenyi (New facilities at Nyakishenyi H.S.)','Bikurungu-Seed-Secondary-School','Bikurungu Seed Secondary School','Gumisiriza Johnson team 23 submitted Bikurungu Seed Secondary School in Rukungiri. It is the submitted name for the master-list Nyakishenyi entry.'),
+  ('Bundibugyo','Mantoroba HC II','Busanga-HC-III','Busanga Health Centre III','Depaul team 26 submitted Busanga Health Centre III in Bundibugyo. It is the submitted name for the master-list Mantoroba entry.'),
+  ('Kabarole','Nyabuswa HC II','Nyambuusa-HC-III','Nyambuusa Health Centre III','Depaul team 26 submitted Nyambuusa Health Centre III. That spelling is the submitted name for the master-list Nyabuswa entry.'),
+  ('Kabarole','Kidubuli HC II','Iruhura-HC-III','Iruhura Health Centre III','Depaul team 26 submitted Iruhura Health Centre III in Kabarole. It is the remaining submitted health-centre name for the master-list Kidubuli entry.'),
+  ('Mubende','Kabbo','Nakawala-HC-III','Nakawala Health Centre III','Depaul team 28 submitted Nakawala Health Centre III in Mubende. It is the submitted name for the master-list Kabbo entry.'),
+  ('Mpigi','Kiringente Seed School','Wamatovu-Seed-Secondary-School','Wamatovu Seed Secondary School','Lawrence team 32 submitted Wamatovu Seed Secondary School in Mpigi. It is the submitted name for the master-list Kiringente entry.'),
+  ('Lyantonde','Mpumudde seed school','Rwamabara-Seed-Secondary-School','Rwamabara Seed Secondary School','Lawrence team 33 submitted Rwamabara Seed Secondary School in Lyantonde. It is the submitted name for the master-list Mpumudde entry.'),
+ ]:
+  r=find(loc,name)
+  set_folder(r,folder)
+  r['ground_name']=ground
+  r['note']=note
+  r['verification']='Verification records received; physical completion not certified'
+  r['decision_ref']=r.get('decision_ref') or 'NAME'
  for loc,name,verification,note in [
   ('Bundibugyo','Kyondo HC II','Visit not undertaken; the CAO confirmed the road was unsafe','Depaul confirmed on 23 September 2026 that Kyondo HC III could not be visited because the CAO said the mountainous road was dangerous.'),
   ('Kasese','Kabingo HCII','Information obtained by phone; physical verification not performed','Depaul confirmed on 23 September 2026 that the Kabingo information was obtained by phone because the team could not reach the facility. Physical verification stays unconfirmed.'),

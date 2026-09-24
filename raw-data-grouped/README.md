@@ -10,17 +10,17 @@ The school and health-centre master list contains 632 rows representing **629 di
 
 | Master-list outcome | Facilities | Share |
 |---|---:|---:|
-| Completed | 588 | 93.5% |
-| No return on file | 36 | 5.7% |
-| Identity or verification account needs review | 5 | 0.8% |
+| Completed | 595 | 94.6% |
+| No return on file | 34 | 5.4% |
+| Identity or verification account needs review | 0 | 0.0% |
 | Explained cases still outside completed | 0 | 0.0% |
 | **Total distinct master facilities** | **629** | **100.0%** |
 
-**Coverage is 588 + 5 + 0 = 593 of 629 master facilities (94.3%).** Percentage coverage = completed + needs review + explained cases. A facility with no return is completed when the case is explained or reconciled. It is an accountability measure, not a physical-verification rate.
+**Coverage is 595 + 0 + 0 = 595 of 629 master facilities (94.6%).** Percentage coverage = completed + needs review + explained cases. A facility with no return is completed when the case is explained or reconciled, including a submitted name that differs from the master list in the same local government. It is an accountability measure, not a physical-verification rate.
 
 **Completed** means the facility has a return, or the lack of a return is explained or reconciled. Of the 588 completed records, 42 have identifiable data in consolidated asset registers. The remainder are facility returns or documented explanations. The register records share the same Completed category; their workbook, worksheet and row references remain in `facility-evidence-index.csv`. Completion does not certify that every asset was physically inspected. For example, Ntwetwe Seed School has a facility toolkit, while Awei Seed School has identifiable entries in the Team 7 register.
 
-Explained and reconciled facilities with no separate return are included in Completed. Their reasons stay in `facility-reconciliation.csv`. Loinya HC II was replaced by Liko HC III, and Liko is represented by master entry H212. Oweko was replaced by Pamaka. Five facilities still need a decision because a submitted return does not yet settle the master identity.
+Explained and reconciled facilities with no separate return are included in Completed. Their reasons stay in `facility-reconciliation.csv`. Loinya HC II was replaced by Liko HC III, and Liko is represented by master entry H212. Oweko was replaced by Pamaka. Submitted names that differ from the master list are counted on the master row for the same local government: Bikurungu for Nyakishenyi, Busanga for Mantoroba, Nyambuusa for Nyabuswa, Iruhura for Kidubuli, Nakawala for Kabbo, Wamatovu for Kiringente and Rwamabara for Mpumudde.
 
 There are also **35 unmatched ground names or return identities** and **3 separately allocated blood banks**. Unmatched identities include possible aliases and district errors; they are not a count of confirmed additional physical facilities.
 
