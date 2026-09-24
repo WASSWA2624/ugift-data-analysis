@@ -265,6 +265,22 @@ EXACT_FILE_ROUTES = {
     'assets register for rwanyamahembe seed secondary school-1.xlsx': (['team-21/Mbarara/Rwanyamahembe-Seed-Secondary-School'], 'Rwanyamahembe Seed Secondary School register. The workbook names Mbarara and Rwanyamahembe Town Council.'),
     'assets register for rwanyamahembe seed secondary school.xlsx': (['team-21/Mbarara/Rwanyamahembe-Seed-Secondary-School'], 'Second Rwanyamahembe Seed Secondary School register. Johnson Gumisiriza says it came from the head teacher, Mbarara District, Team 21.'),
     'screenshot 2026-09-24 122044.png': (['team-21/Mbarara/Rwanyamahembe-Seed-Secondary-School/_reconciliation-evidence'], 'Johnson UGIFT message, 24 September 2026: the register is from the head teacher of Rwanyamahembe SSS, Mbarara District, Team 21 Western. Not a site photograph.'),
+    'assets register for rwanyamahembe seed secondary school (1).xlsx': (['team-21/Mbarara/Rwanyamahembe-Seed-Secondary-School'], 'Rwanyamahembe Seed Secondary School register sent by Johnson Gumisiriza on 24 September 2026.'),
+    'team 22 excel field template-ugift team 22.xlsx': ([
+        'team-22/_team-documents',
+        'team-22/Kisoro MC/Zindiro-HC-III',
+        'team-22/Kisoro/Maregamo-HC-III',
+        'team-22/Rubanda/Mpungu-HC-III',
+        'team-22/Kabale MC/Rutoma-HC-III',
+        'team-22/Kabale/Kasheregyenyi-HC-III',
+        'team-22/Kabale/Buramba-HC-III',
+        'team-22/Kabale/Kitooma-HC-III',
+        'team-22/Kabale/Kahondo-HC-III',
+        'team-22/Kabale/Karujanga-HC-III',
+        'team-22/Rukiga/Rwamucucu-Seed-Secondary-School',
+        'team-22/Rukiga/Bukinda-Seed-Secondary-School',
+    ], 'Team 22 workbook. Sheets name Zindiro, Maregamo, Mpungu, Rutooma, Kasheregyenyi, Buramba, Kitooma, Kahondo, Karugyanga, Rwamucucu and Bukinda. Kisoro and Rubanda school sections do not name the school.'),
+    'pdf_1790240312275.pdf': (['team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School'], 'Handwritten Nyakishenyi Seed School interview. Johnson caption said Nyakishojwa SSS, Rukungiri; the page names Nyakishenyi Seed School.'),
     'st mugaga vocational seeed school ugift asset verification tool kit updated.docx': (['team-30/Kibaale/St-Mugagga-Vocational-Seed-Secondary-School'], 'Updated St Mugagga Vocational Seed School toolkit. The school section says the asset source documents could not be accessed.'),
     'kabarole district   asset verification and recording tool kit 222.docx': (['team-26/Kabarole/Nyambuusa-HC-III'], 'Kabarole toolkit. The interview and checklist name Nyambuusa Health Centre III.'),
     'kabarole lg  asst.verification report_105758 (2).docx': (['team-26/Kabarole/_district-documents'], 'Kabarole file mixes a Miggi interview with a Mayuge/Kidubuli checklist. Kept with the district documents until those sections are separated.'),
@@ -313,6 +329,9 @@ def facility_route(relative):
     exact = EXACT_FILE_ROUTES.get(basename.lower())
     if exact:
         return exact
+    if basename.upper().startswith('IMG-20260924-WA'):
+        return (['team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School'],
+                'Handwritten Nyakishenyi Seed School asset pages, Rukungiri. Johnson caption said Nyakishojwa SSS; the pages name Nyakishenyi, not the Mitooma health centre.')
     lowered = relative.lower()
     if 'team 25 health centhera' in lowered or 'team 25.zip' in lowered or '/team 25/' in lowered:
         for token, folder, note in TEAM25_FOLDER_ROUTES:

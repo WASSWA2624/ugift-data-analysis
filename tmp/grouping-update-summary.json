@@ -1,25 +1,44 @@
 {
-  "index_rows_before": 14712,
+  "index_rows_before": 14715,
   "moved_source_rows": 0,
-  "index_rows_after": 14715,
-  "new_index_rows": 3,
+  "index_rows_after": 15504,
+  "new_index_rows": 789,
   "new_files": [
-    "team-21/Mbarara/Rwanyamahembe-Seed-Secondary-School/ASSETS REGISTER FOR Rwanyamahembe Seed Secondary school.xlsx",
-    "team-21/Mbarara/Rwanyamahembe-Seed-Secondary-School/_reconciliation-evidence/Screenshot 2026-09-24 122044.png"
+    "_multi-team/programme-documents/data-management-chat/WhatsApp Chat with DATA MANAGEMENT UGIFT (3).zip",
+    "_multi-team/programme-documents/data-management-chat/WhatsApp Chat with DATA MANAGEMENT UGIFT (4).txt",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0006.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0010.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0007.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0008.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0015.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0017.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0014.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0013.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0012.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0018.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0016.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0011.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0019.jpg",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/IMG-20260924-WA0009.jpg",
+    "team-21/Mbarara/Rwanyamahembe-Seed-Secondary-School/ASSETS REGISTER FOR Rwanyamahembe Seed Secondary school (1).xlsx",
+    "team-22/_team-documents/TEAM 22 Excel field template-Ugift Team 22.xlsx",
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School/pdf_1790240312275.pdf"
   ],
   "migrated_archive_rows": 0,
   "removed_orphans": [],
-  "new_facilities": [],
+  "new_facilities": [
+    "team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School"
+  ],
   "unresolved": [],
   "status_counts": {
-    "extracted": 63,
-    "placed": 10678,
-    "skipped": 324,
-    "duplicate": 1811,
+    "extracted": 69,
+    "placed": 10697,
+    "skipped": 634,
+    "duplicate": 2265,
     "in-archive": 1839
   },
   "root_counts": {
     "raw-data-ungrouped": 12344,
-    "new-raw-data-221092026-1114": 2371
+    "new-raw-data-221092026-1114": 3160
   }
 }

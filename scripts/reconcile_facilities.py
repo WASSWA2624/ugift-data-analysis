@@ -16,7 +16,7 @@ MASTER='SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx'
 LATEST_WESTERN='_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls'
 LATEST_LWAMATA='team-29/Kiboga/Lwamata-Town-Council-Seed-Secondary-School/UGIFT ASSET VERIFICATION LWAMATA T.C.C SEED SEC SCH (1).docx'
 LATEST_SOFIA='team-13/Busia MC/Sofia-Health-Centre-III/Sofia health centre 111 eastern division busia MC.pdf'
-LATEST_CHAT='_multi-team/programme-documents/data-management-chat/WhatsApp Chat with DATA MANAGEMENT UGIFT (3).txt'
+LATEST_CHAT='_multi-team/programme-documents/data-management-chat/WhatsApp Chat with DATA MANAGEMENT UGIFT (4).txt'
 NS={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
 def clean(value): return re.sub(r'\s+',' ',str(value)).strip()
 def key(value): return re.sub(r'[^a-z0-9]','',value.lower())
@@ -282,7 +282,6 @@ def main():
   review_source(loc,name,note,source)
  # Same local government, one open master name and one submitted name that is not on the master list.
  for loc,name,folder,ground,note in [
-  ('Rukungiri','Nyakishenyi (New facilities at Nyakishenyi H.S.)','Bikurungu-Seed-Secondary-School','Bikurungu Seed Secondary School','Gumisiriza Johnson team 23 submitted Bikurungu Seed Secondary School in Rukungiri. It is the submitted name for the master-list Nyakishenyi entry.'),
   ('Bundibugyo','Mantoroba HC II','Busanga-HC-III','Busanga Health Centre III','Depaul team 26 submitted Busanga Health Centre III in Bundibugyo. It is the submitted name for the master-list Mantoroba entry.'),
   ('Kabarole','Nyabuswa HC II','Nyambuusa-HC-III','Nyambuusa Health Centre III','Depaul team 26 submitted Nyambuusa Health Centre III. That spelling is the submitted name for the master-list Nyabuswa entry.'),
   ('Kabarole','Kidubuli HC II','Iruhura-HC-III','Iruhura Health Centre III','Depaul team 26 submitted Iruhura Health Centre III in Kabarole. It is the remaining submitted health-centre name for the master-list Kidubuli entry.'),
@@ -296,6 +295,13 @@ def main():
   r['note']=note
   r['verification']='Verification records received; physical completion not certified'
   r['decision_ref']=r.get('decision_ref') or 'NAME'
+ nyakishenyi_folder='team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School'
+ if (GROUPED/nyakishenyi_folder).is_dir():
+  nyakishenyi=find('Rukungiri','Nyakishenyi (New facilities at Nyakishenyi H.S.)')
+  set_folder(nyakishenyi,'Nyakishenyi-Seed-Secondary-School')
+  nyakishenyi['ground_name']='Nyakishenyi Seed Secondary School'
+  nyakishenyi['verification']='Verification records received; physical completion not certified'
+  nyakishenyi['note']='Handwritten pages name Nyakishenyi Seed School and Rukungiri. Johnson caption said Nyakishojwa SSS, Rukungiri. This is the master Nyakishenyi school, not Nyakishojwa Health Centre III in Mitooma, and not Bikurungu.'
  for loc,name,verification,note in [
   ('Bundibugyo','Kyondo HC II','Visit not undertaken; the CAO confirmed the road was unsafe','Depaul confirmed on 23 September 2026 that Kyondo HC III could not be visited because the CAO said the mountainous road was dangerous.'),
   ('Kasese','Kabingo HCII','Information obtained by phone; physical verification not performed','Depaul confirmed on 23 September 2026 that the Kabingo information was obtained by phone because the team could not reach the facility. Physical verification stays unconfirmed.'),

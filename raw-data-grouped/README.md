@@ -20,9 +20,9 @@ The school and health-centre master list contains 632 rows representing **629 di
 
 **Completed** means the facility has a return, or the lack of a return is explained or reconciled. Of the 588 completed records, 42 have identifiable data in consolidated asset registers. The remainder are facility returns or documented explanations. The register records share the same Completed category; their workbook, worksheet and row references remain in `facility-evidence-index.csv`. Completion does not certify that every asset was physically inspected. For example, Ntwetwe Seed School has a facility toolkit, while Awei Seed School has identifiable entries in the Team 7 register.
 
-Explained and reconciled facilities with no separate return are included in Completed. Their reasons stay in `facility-reconciliation.csv`. Loinya HC II was replaced by Liko HC III, and Liko is represented by master entry H212. Oweko was replaced by Pamaka. Submitted names that differ from the master list are counted on the master row for the same local government: Bikurungu for Nyakishenyi, Busanga for Mantoroba, Nyambuusa for Nyabuswa, Iruhura for Kidubuli, Nakawala for Kabbo, Wamatovu for Kiringente and Rwamabara for Mpumudde.
+Explained and reconciled facilities with no separate return are included in Completed. Their reasons stay in `facility-reconciliation.csv`. Loinya HC II was replaced by Liko HC III, and Liko is represented by master entry H212. Oweko was replaced by Pamaka. Submitted names that differ from the master list are counted on the master row for the same local government: Busanga for Mantoroba, Nyambuusa for Nyabuswa, Iruhura for Kidubuli, Nakawala for Kabbo, Wamatovu for Kiringente and Rwamabara for Mpumudde. Nyakishenyi in Rukungiri is completed from its own handwritten return. Bikurungu remains a separate unmatched return.
 
-There are also **35 unmatched ground names or return identities** and **3 separately allocated blood banks**. Unmatched identities include possible aliases and district errors; they are not a count of confirmed additional physical facilities.
+There are also **29 unmatched ground names or return identities** and **3 separately allocated blood banks**. Unmatched identities include possible aliases and district errors; they are not a count of confirmed additional physical facilities.
 
 **Completed is not a certificate that every asset was physically checked.** Supporting information may be a toolkit, report, photographs, facility register or identifiable rows in a consolidated register. Known contradictions are withheld from the Completed total. In particular, Onywako's form states that physical verification did not take place; Olok's report says the facility was not constructed; the Iceme returns disagree about whether a visit occurred. A master construction status of Complete is not a verification status.
 
@@ -59,7 +59,7 @@ _multi-team/
 
 There are 519 facility folders. Shared documents may be filed under more than one facility. Folder counts therefore differ from master-list counts and must not be used as verification totals.
 
-Team ownership follows `team-distributions.docx`. Master names and submitted names are both retained in the reconciliation. Routine spelling and local-government naming differences are normalized for matching; uncertain replacements and district changes remain open. Confirmed replacement names do not create an extra site: Loinya points to the already-listed Liko, and Kangole is reconciled with Kocheka. Wamatovu and Rwamabara remain unmatched because the returns do not establish links to Kiringente or Mpumudde.
+Team ownership follows `team-distributions.docx`. Master names and submitted names are both retained in the reconciliation. Routine spelling and local-government naming differences are normalized for matching; uncertain replacements and district changes remain open. Confirmed replacement names do not create an extra site: Loinya points to the already-listed Liko, and Kangole is reconciled with Kocheka. Wamatovu is the submitted name for Kiringente in Mpigi, and Rwamabara is the submitted name for Mpumudde in Lyantonde.
 
 ## Source handling
 
