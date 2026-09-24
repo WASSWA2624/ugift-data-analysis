@@ -39,7 +39,7 @@ TOP = HEIGHT - 48
 BOTTOM = 42
 GAP = 26
 COL = (CONTENT - GAP) / 2
-AS_OF = '23 September 2026'
+AS_OF = '24 September 2026'
 SUPERVISOR_CORRECTIONS = {
     24: 'Lawrence Kalyowa',
 }
@@ -191,7 +191,7 @@ class Report(BaseDocTemplate):
     def __init__(self, filename):
         super().__init__(str(filename), pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN,
                          topMargin=48, bottomMargin=BOTTOM, title='UgIFT facility data status',
-                         author='UgIFT data reconciliation', subject='Master list and field-return reconciliation, 23 September 2026')
+                         author='UgIFT data reconciliation', subject='Master list and field-return reconciliation, 24 September 2026')
         height = TOP - BOTTOM
         full = Frame(MARGIN, BOTTOM, CONTENT, height, leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0, id='full')
         left = Frame(MARGIN, BOTTOM, COL, height, leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0, id='left')
@@ -327,7 +327,7 @@ def build(data, output):
         ['No return', number_cell(counts['No return'], small=True),
          number_cell(percentage_text(counts['No return'], len(master)), small=True, accent=True),
          'No matched facility return or identifiable asset row is on file, and no documented reason places it in another status. This does not prove absence. '
-         'Example: Butiaba Health Centre III, Buliisa.'],
+         'Example: Kiziranfumbi Seed Secondary School, Kikuube.'],
         ['Needs review', number_cell(counts['Needs review'], small=True),
          number_cell(percentage_text(counts['Needs review'], len(master)), small=True, accent=True),
          'A submitted alternate name, commissioning stage, access constraint, or verification account requires confirmation. '
@@ -483,6 +483,8 @@ def build(data, output):
             bank_note = 'A facility-specific asset workbook is on file: ARUA BLOOD BANK-1.xlsx.'
         elif 'soroti' in record['name'].lower():
             bank_note = 'A combined Soroti blood-bank and Kamuda school verification toolkit is on file.'
+        elif record.get('folder'):
+            bank_note = 'Team 25 supplied the Hoima Regional Blood Bank inventory workbook and photographs on 23 September 2026.'
         else:
             bank_note = 'The team return is outstanding. A programme inventory is on file, but it does not establish team verification.'
         bank_rows.append([p(f'<b>{e(record["name"])}</b><br/>Team {record["team"]} / {e(record["lg"])} / {e(record["id"])}', 'table'),

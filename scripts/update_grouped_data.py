@@ -249,6 +249,8 @@ CHAT_ROUTES = {
     'data updates - western.xls': (['_multi-team/teams-19-21'], 'Supervisor workbook with records for Buhweju, Mitooma and Mbarara; original retained intact.'),
     'IMG-20260922-WA0000.jpg': (['team-17/Jinja/Buwala-Seed-Secondary-School/_reconciliation-evidence'], 'Master-list screenshot; supervisor 22 September 2026 08:10 says Buwala replaces Butagaya. Not an on-site photograph.'),
     'IMG-20260922-WA0001.jpg': (['team-17/Namayingo/Mutumba-Seed-Secondary-School/_reconciliation-evidence'], 'Master-list screenshot; supervisor 22 September 2026 08:10 says Mutumba replaces Mwema. Not an on-site photograph.'),
+    'IMG-20260922-WA0002.jpg': (['team-05/Oyam/_district-documents'], 'Annotated master-list screenshot for the six Oyam Health Centre IIIs confirmed as upgraded UgIFT facilities. Not an on-site photograph.'),
+    'facility-data-status.pdf': (['_multi-team/programme-documents/data-management-chat'], 'Status report circulated in the supervisor chat. It is not a facility return.'),
 }
 CHAT_NAME = 'WhatsApp Chat with DATA MANAGEMENT UGIFT.zip'
 WEMIS_RAR = ('ugift-team-10-15/source-documents/All WIP Ugift.zip::'
@@ -257,8 +259,71 @@ WEMIS_RAR_NOTE = ('Programme-level WEMIS tablet, desktop and UPS handover record
                   'reviewed page by page and found not to identify facility returns.')
 
 
+EXACT_FILE_ROUTES = {
+    'arwotcek hc iii.docx': (['team-06/Amolatar/Arwotcek-HC-III'], '23 September Arwotchek HC III toolkit. It names Arwotchek in Amolatar. The earlier file in this folder also contains a Kyankaramata checklist.'),
+    'ugift asset verification.pdf': (['team-14/Bulambuli/Bumufuni-Seed-Secondary-School'], 'Scanned Bumufuni Seed Secondary School checklist. The cover names Bulambuli.'),
+    'assets register for rwanyamahembe seed secondary school-1.xlsx': (['team-21/Mbarara/Rwanyamahembe-Seed-Secondary-School'], 'Rwanyamahembe Seed Secondary School register. The workbook names Mbarara and Rwanyamahembe Town Council.'),
+    'st mugaga vocational seeed school ugift asset verification tool kit updated.docx': (['team-30/Kibaale/St-Mugagga-Vocational-Seed-Secondary-School'], 'Updated St Mugagga Vocational Seed School toolkit. The school section says the asset source documents could not be accessed.'),
+    'kabarole district   asset verification and recording tool kit 222.docx': (['team-26/Kabarole/Nyambuusa-HC-III'], 'Kabarole toolkit. The interview and checklist name Nyambuusa Health Centre III.'),
+    'kabarole lg  asst.verification report_105758 (2).docx': (['team-26/Kabarole/_district-documents'], 'Kabarole file mixes a Miggi interview with a Mayuge/Kidubuli checklist. Kept with the district documents until those sections are separated.'),
+    'kyabasara health center iii. edited(1).docx': (['team-25/Kagadi/_district-documents'], 'Stored in the Kyabasara folder, but the form names Miggi/Muggi in Kagadi. It is not Kyabasara evidence.'),
+    'kigwera health center edited.docx': (['team-25/Buliisa/Kigwera-HC-III'], 'Edited Kigwera HC III toolkit. The checklist names Buliisa. It was packed inside the Kitegwa school archive.'),
+    'buwooya h.c iii.docx': (['team-31/Buvuma/Buwooya-HC-III'], 'Updated Buwooya Health Centre III toolkit. Buvuma.'),
+    'lubya h.c iii.docx': (['team-31/Buvuma/Lubya-HC-III'], 'Updated Lubya Health Centre III toolkit. Buvuma.'),
+    'lukale h.c iii.docx': (['team-31/Buvuma/Lukale-HC-III'], 'Updated Lukale Health Centre III toolkit. Buvuma.'),
+    'nkata h.c iii.docx': (['team-31/Buvuma/Nkata-HC-III'], 'Updated Nkata Health Centre III toolkit. Buvuma.'),
+    'lwajje h.c and bweema seed.docx': (['team-31/Buvuma/Lwajje-HC-III', 'team-31/Buvuma/Bweema-Seed-Secondary-School'], 'Shared Buvuma return. The health-centre section names Lwajje Health Centre III and the school section names Bweema Seed Secondary School.'),
+}
+TEAM25_FOLDER_ROUTES = (
+    ('avogera health', 'team-25/Buliisa/Avogera-HC-III', 'Avogera Health Centre III toolkit and photographs. Buliisa.'),
+    ('burora seed', 'team-25/Kagadi/Burora-Seed-Secondary-School', 'Burora Seed Secondary School return. Kagadi.'),
+    ('burora health', 'team-25/Kagadi/Burora-HC-III', 'Burora Health Centre III return. Kagadi.'),
+    ('butaiaba', 'team-25/Buliisa/Butiaba-HC-III', 'Butiaba Health Centre III photographs. The folder spelling is Butaiba.'),
+    ('butaiba', 'team-25/Buliisa/Butiaba-HC-III', 'Butiaba Health Centre III return. The filename spelling is Butaiba. Buliisa.'),
+    ('hoima blood bank', 'team-25/Hoima City/Hoima-Regional-Blood-Bank', 'Hoima Regional Blood Bank inventory and photographs.'),
+    ('kigwera health', 'team-25/Buliisa/Kigwera-HC-III', 'Kigwera Health Centre III material. One unedited checklist in this folder names Mayuge/Muggi and is not Muggi evidence.'),
+    ('kihungya seed', 'team-25/Buliisa/Kihungya-Seed-Secondary-School', 'Kihungya Seed Secondary School return. The 23 September message spells it Kihungye.'),
+    ('kihungya health', 'team-25/Buliisa/Kihungya-HC-III', 'Kihungya Health Centre III return. Buliisa.'),
+    ('kihuukya', 'team-25/Hoima City/Kihuukya-HC-III', 'Kihuukya Health Centre III return. Hoima City.'),
+    ('kyabakadiima', 'team-25/Kagadi/Kyakabadiima-HC-III', 'Kyakabadiima Health Centre III return. The archive folder spells it Kyabakadiima.'),
+    ('kyakabadiima', 'team-25/Kagadi/Kyakabadiima-HC-III', 'Kyakabadiima Health Centre III return. Kagadi.'),
+    ('kyabasara', 'team-25/Kagadi/Kyabasara-HC-III', 'Kyabasara Health Centre III material. The edited form that names Muggi is routed separately.'),
+    ('muhorro', 'team-25/Kagadi/Muhorro-HC-III', 'Muhorro Health Centre III return. The interview also spells it Muhororo. Kagadi.'),
+    ('king solomon', 'team-25/Kagadi/King-Solomon-Seed-Secondary-School', 'King Solomon Seed Secondary School. The supervisor says this is Kagadi SSS.'),
+    ('kitegwa', 'team-25/Kagadi/Kitegwa-Community-Seed-Secondary-School', 'Kitegwa Community Seed Secondary School. The supervisor says this is Ruteete SSS.'),
+    ('kyangwali', 'team-25/Kikuube/Kyangwali-Seed-Secondary-School', 'Kyangwali Seed Secondary School return. Kikuube.'),
+)
+
+
+def is_junk(relative):
+    basename = relative.split('::')[-1].split('/')[-1]
+    lowered = basename.lower()
+    return (
+        basename.startswith('~$') or basename.startswith('._') or lowered.endswith('.py')
+        or lowered in {'.ds_store', 'desktop.ini', 'thumbs.db'}
+        or '/__macosx/' in relative.lower() or relative.lower().startswith('__macosx/')
+    )
+
+
+def facility_route(relative):
+    """Reviewed file and archive-folder destinations for the 23-24 September intake."""
+    basename = relative.split('::')[-1].split('/')[-1]
+    exact = EXACT_FILE_ROUTES.get(basename.lower())
+    if exact:
+        return exact
+    lowered = relative.lower()
+    if 'team 25 health centhera' in lowered or 'team 25.zip' in lowered or '/team 25/' in lowered:
+        for token, folder, note in TEAM25_FOLDER_ROUTES:
+            if token in lowered:
+                return [folder], note
+    return None
+
+
 def route(relative):
     basename = relative.split('::')[-1].split('/')[-1]
+    facility = facility_route(relative)
+    if facility:
+        return facility
     if relative == CHAT_NAME or f'/{CHAT_NAME}' in relative:
         if basename in CHAT_ROUTES:
             return CHAT_ROUTES[basename]
@@ -283,8 +348,33 @@ def route(relative):
     return ['_multi-team/_unassigned'], 'No reviewed facility mapping; retained for follow-up without guessing.'
 
 
+def retarget_moved_sources(rows):
+    """Point index rows at the 24 September folder when the 22 September file moved unchanged."""
+    moved = 0
+    intake = ROOT / 'new-raw-data-221092026-1114'
+    for row in rows:
+        if row['source root'] != 'new-raw-data-221092026-1114' or not row.get('sha256'):
+            continue
+        relative = row[SOURCE_COLUMN]
+        top = relative.split('::')[0]
+        if (intake / top).exists():
+            continue
+        candidate_top = 'new-raw-data-24092026-0535/' + Path(top).name
+        candidate = candidate_top + relative[len(top):]
+        try:
+            data = source_bytes(row['source root'], candidate)
+        except (FileNotFoundError, KeyError, RuntimeError, zipfile.BadZipFile, OSError):
+            continue
+        if hashlib.sha256(data).hexdigest() != row['sha256']:
+            continue
+        row[SOURCE_COLUMN] = candidate
+        moved += 1
+    return moved
+
+
 def update():
     rows = load_index()
+    moved_sources = retarget_moved_sources(rows)
     original_count = len(rows)
     by_source = defaultdict(list)
     by_basename = defaultdict(list)
@@ -360,29 +450,36 @@ def update():
         data = source_bytes(source_root, relative)
         digest = hashlib.sha256(data).hexdigest()
         basename = relative.split('::')[-1].split('/')[-1]
-        if basename.startswith('~$') or basename.lower().endswith('.py'):
-            new_rows = [{DEST_COLUMN: '', 'status': 'skipped', 'note': 'Office lock file or working script; not facility data.'}]
+        if is_junk(relative):
+            new_rows = [{DEST_COLUMN: '', 'status': 'skipped', 'note': 'Office lock file, archive metadata or working script; not facility data.'}]
         elif relative.startswith(WEMIS_RAR + '::'):
             new_rows = [{DEST_COLUMN: '', 'status': 'in-archive', 'note': WEMIS_RAR_NOTE}]
-        elif basename.lower().endswith(('.zip', '.rar')) and relative != CHAT_NAME:
+        elif basename.lower().endswith(('.zip', '.rar')) and basename != CHAT_NAME:
             new_rows = [{DEST_COLUMN: '', 'status': 'extracted', 'note': 'Archive contents indexed individually.'}]
         else:
+            folders, note = route(relative)
             prior_rows = by_source.get(('raw-data-ungrouped', relative), []) if source_root != 'raw-data-ungrouped' else []
             prior_destinations = [r[DEST_COLUMN] for r in prior_rows if r[DEST_COLUMN] and r['status'] in ('placed', 'duplicate') and file_hash(r[DEST_COLUMN]) == digest]
             # Reuse exact matches from the prior index, retaining all placements
             # for a single document that covers several facilities.
             if not prior_destinations:
                 prior_destinations = sorted({r[DEST_COLUMN] for r in by_basename[basename] if file_hash(r[DEST_COLUMN]) == digest})
-            if prior_destinations:
-                new_rows = [{DEST_COLUMN: d, 'status': 'duplicate', 'note': 'Byte-identical to existing grouped source; original placement retained.'} for d in prior_destinations]
-            else:
-                folders, note = route(relative)
+            if folders != ['_multi-team/_unassigned']:
+                # A reviewed destination is filed even when an older copy sits in another folder.
                 new_rows = []
-                if folders == ['_multi-team/_unassigned']:
-                    unresolved.append({'source root': source_root, 'source': relative})
                 for folder in folders:
                     destination, status = place(data, folder, basename)
                     new_rows.append({DEST_COLUMN: destination, 'status': status, 'note': note})
+                already = {row[DEST_COLUMN] for row in new_rows}
+                for destination in prior_destinations:
+                    if destination not in already:
+                        new_rows.append({DEST_COLUMN: destination, 'status': 'duplicate', 'note': 'Byte-identical earlier placement retained alongside the reviewed folder.'})
+            elif prior_destinations:
+                new_rows = [{DEST_COLUMN: d, 'status': 'duplicate', 'note': 'Byte-identical to existing grouped source; original placement retained.'} for d in prior_destinations]
+            else:
+                unresolved.append({'source root': source_root, 'source': relative})
+                destination, status = place(data, folders[0], basename)
+                new_rows = [{DEST_COLUMN: destination, 'status': status, 'note': note}]
         for row in new_rows:
             row.update({SOURCE_COLUMN: relative, 'source root': source_root, 'sha256': digest})
             rows.append(row)
@@ -404,7 +501,7 @@ def update():
         writer.writeheader()
         writer.writerows(rows)
     staging.replace(GROUPED / '_index.csv')
-    result = {'index_rows_before': original_count, 'index_rows_after': len(rows),
+    result = {'index_rows_before': original_count, 'moved_source_rows': moved_sources, 'index_rows_after': len(rows),
               'new_index_rows': len(rows) - original_count, 'new_files': changed_files,
               'migrated_archive_rows': migrated_rows, 'removed_orphans': removed_orphans,
               'new_facilities': sorted(new_facilities), 'unresolved': unresolved,

@@ -1,6 +1,6 @@
 # UgIFT facility records
 
-Updated 22 September 2026 from `raw-data-ungrouped/` and `new-raw-data-221092026-1114/`, including the DATA MANAGEMENT UGIFT WhatsApp export and its attachments.
+Updated 24 September 2026 from `raw-data-ungrouped/` and `new-raw-data-221092026-1114/`, including the DATA MANAGEMENT UGIFT WhatsApp export through 23 September 2026 and its attachments. Earlier returns are retained. New files were added only where the content was not already filed.
 
 Start with **facility-data-status.pdf**. It separates records received from facilities still awaiting a return, reported absences, substitutions and conflicting evidence.
 
@@ -10,19 +10,19 @@ The school and health-centre master list contains 632 rows representing **629 di
 
 | Master-list outcome | Facilities | Share |
 |---|---:|---:|
-| Completed | 500 | 79.5% |
-| No return on file | 98 | 15.6% |
-| Identity, district or verification account needs review | 22 | 3.5% |
-| Explained cases excluded from outstanding returns | 9 | 1.4% |
+| Completed | 546 | 86.8% |
+| No return on file | 43 | 6.8% |
+| Identity, district or verification account needs review | 23 | 3.7% |
+| Explained cases excluded from outstanding returns | 17 | 2.7% |
 | **Total distinct master facilities** | **629** | **100.0%** |
 
-**Coverage is 531 of 629 master facilities (84.4%).** Coverage includes every status except No return: 500 completed facilities, 22 needing a decision and 9 explained cases. It is an accountability measure, not a physical-verification rate.
+**Coverage is 586 of 629 master facilities (93.2%).** Coverage includes every status except No return: 546 completed facilities, 23 needing a decision and 17 explained cases. It is an accountability measure, not a physical-verification rate.
 
-**Completed** means enough identifiable facility information is available for the reconciliation. Of the 500 completed records, 458 have facility-specific material and 42 have identifiable data in consolidated asset registers. The register records share the same Completed category; their workbook, worksheet and row references remain in `facility-evidence-index.csv`. Completion does not certify that every asset was physically inspected. For example, Ntwetwe Seed School has a facility toolkit, while Awei Seed School has identifiable entries in the Team 7 register.
+**Completed** means enough identifiable facility information is available for the reconciliation. Of the 546 completed records, 504 have facility-specific material and 42 have identifiable data in consolidated asset registers. The register records share the same Completed category; their workbook, worksheet and row references remain in `facility-evidence-index.csv`. Completion does not certify that every asset was physically inspected. For example, Ntwetwe Seed School has a facility toolkit, while Awei Seed School has identifiable entries in the Team 7 register.
 
-The 9 explained cases comprise 6 facilities reported absent or not constructed, 1 facility reported to have received no UgIFT assets, 1 reported outside UgIFT and 1 replacement counted elsewhere. “Replacement counted elsewhere” means the replacement already has its own master entry and its evidence is counted there once; Loinya HC II was replaced by Liko HC III, and Liko is represented by master entry H212.
+The 17 explained cases comprise 9 facilities reported absent or not constructed, 4 reported to have received no UgIFT assets or to have had those assets relocated, 2 reported outside UgIFT and 2 replacements counted elsewhere. “Replacement counted elsewhere” means the replacement already has its own master entry and its evidence is counted there once. Loinya HC II was replaced by Liko HC III, and Liko is represented by master entry H212. Oweko was replaced by Pamaka.
 
-There are also **40 unmatched ground names or return identities** and **3 separately allocated blood banks**. Unmatched identities include possible aliases and district errors; they are not a count of confirmed additional physical facilities.
+There are also **36 unmatched ground names or return identities** and **3 separately allocated blood banks**. Unmatched identities include possible aliases and district errors; they are not a count of confirmed additional physical facilities.
 
 **Completed is not a certificate that every asset was physically checked.** Supporting information may be a toolkit, report, photographs, facility register or identifiable rows in a consolidated register. Known contradictions are withheld from the Completed total. In particular, Onywako's form states that physical verification did not take place; Olok's report says the facility was not constructed; the Iceme returns disagree about whether a visit occurred. A master construction status of Complete is not a verification status.
 
@@ -36,7 +36,7 @@ There are also **40 unmatched ground names or return identities** and **3 separa
 | `supervisor-decisions.csv` | Exact chat wording, speaker, timestamp and treatment of each decision |
 | `master-source-rows.csv` | All 632 master-list rows, including construction status and school phase |
 | `master-duplicate-rows.csv` | The three repeated facility entries and their retained IDs |
-| `_index.csv` | All source entries and filing destinations; 12,453 index rows |
+| `_index.csv` | All source entries and filing destinations; 14,712 index rows |
 
 `S001` means school data row 1 in the master document; `H001` means health-centre data row 1. The document's header adds one to the table row number. `X` IDs identify unmatched ground names/returns and `B` IDs identify allocated blood banks. IDs in the PDF can be looked up in the CSV files.
 
@@ -57,19 +57,19 @@ _multi-team/
   bunyoro-tooro-greater-mityana/
 ```
 
-There are 498 facility folders. Shared documents may be filed under more than one facility. Folder counts therefore differ from master-list counts and must not be used as verification totals.
+There are 519 facility folders. Shared documents may be filed under more than one facility. Folder counts therefore differ from master-list counts and must not be used as verification totals.
 
 Team ownership follows `team-distributions.docx`. Master names and submitted names are both retained in the reconciliation. Routine spelling and local-government naming differences are normalized for matching; uncertain replacements and district changes remain open. Confirmed replacement names do not create an extra site: Loinya points to the already-listed Liko, and Kangole is reconciled with Kocheka. Wamatovu and Rwamabara remain unmatched because the returns do not establish links to Kiringente or Mpumudde.
 
 ## Source handling
 
-Raw files were not edited. Earlier loose-file placements are hard links: editing one of those grouped files can also change its raw original. Work on a separate copy when editing a return. The 26 files added in this update are independent copies.
+Raw files were not edited. Earlier loose-file placements are hard links: editing one of those grouped files can also change its raw original. Work on a separate copy when editing a return. Files added in this update are independent copies.
 
-Archives were inspected, including nested ZIP and RAR archives. Exact duplicates were linked to existing destinations. Office lock files and the Team 10-15 working `tmp` directory were excluded. The WhatsApp archive is retained whole, with its text filed under `_multi-team/programme-documents/data-management-chat/`. Its two master-list screenshots are filed as reconciliation evidence, not site photographs.
+Archives were inspected, including nested ZIP and RAR archives. Exact duplicates were linked to existing destinations. Office lock files and the Team 10-15 working `tmp` directory were excluded. The WhatsApp archive is retained whole, with its text filed under `_multi-team/programme-documents/data-management-chat/`. Master-list screenshots are filed as reconciliation evidence, not site photographs.
 
 The nested `WEMIS DISTRICT EQUIPMENT.rar` contains 107 readable, image-only PDFs covering 356 pages. Every page was reviewed. These are district equipment handover records for tablets, desktops and UPS units issued to local-government officers; they contain no school or health-facility returns. They are indexed individually as `in-archive` records and do not change the facility totals.
 
-The index retains its original source column for compatibility. **Use the `source root` column** to distinguish the two input folders. `::` separates an archive from a member inside it. `placed`, `duplicate`, `extracted`, `in-archive` and `skipped` describe filing outcomes. New source rows include SHA-256 checksums. The audit found no new, changed or missing source entries across the full 12,312-entry inventory; all 221 hashed source entries and 92 referenced destinations passed the source-content check.
+The index retains its original source column for compatibility. **Use the `source root` column** to distinguish the two input folders. `::` separates an archive from a member inside it. `placed`, `duplicate`, `extracted`, `in-archive` and `skipped` describe filing outcomes. New source rows include SHA-256 checksums. Identical files that moved from the 22 September folder to the 24 September folder keep their existing grouped copies.
 
 ## Reproducing this update
 
