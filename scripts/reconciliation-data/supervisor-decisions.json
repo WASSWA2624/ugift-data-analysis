@@ -1059,6 +1059,19 @@
       "quote": "mayanga HCIII is within Mitooma File and it is in Mitooma DC",
       "explicit": true,
       "note": "Confirms the existing Mayanga HC III asset section in the Mitooma workbook and the Mitooma District assignment. This is the health centre, not Mayanga Seed School."
+    },
+    {
+      "id": "USER03",
+      "date_time": "2026-09-24 15:15",
+      "speaker": "Wils",
+      "team": 21,
+      "lg": "Ibanda",
+      "master_name": "Kishangara seed school",
+      "ground_name": null,
+      "decision": "Does not exist",
+      "quote": "Kishangara Seed Secondary School does not exist in Ibanda.",
+      "explicit": true,
+      "note": "Direct programme data-management instruction. Preserve master entry S216 as an audit record, mark it reported absent, and do not create or infer a replacement facility."
     }
   ],
   "attachments": [
@@ -1174,6 +1187,7 @@
     "Treat the 22 September Oyam clarification as superseding the earlier Alira nonexistence statement: Alira exists but is outside the upgraded UgIFT set.",
     "Treat Sofia Health Centre III as a separately evidenced ground facility, not as an alias for the invalid Busia Eastern Division master label.",
     "Treat Team 17's Central Division master entry in Jinja City as reported absent; do not create or infer a replacement school.",
+    "Treat Team 21's Kishangara seed school master entry in Ibanda as reported absent; do not create or infer a replacement school.",
     "Treat Amanyiri Health Centre III, Ekaligo Health Centre III, Liko Health Centre III and Lodonga Seed Secondary School in Yumbe as independent facilities. Attribute asset rows by the facility name written in the relevant asset schedule.",
     "The 23 September Team 1 message relocates Alangi, Ther-uru and Abanga assets to Amwonyo, Atyak and Kango, and replaces Oweko with Pamaka.",
     "Musandama in Ntoroko is counted once through the Butungama HC III return. The chat spelling is Butangama.",
@@ -1181,6 +1195,6 @@
     "Do not merge Nakaseke Ngoma with Masindi Budongo. The rename message names neither district.",
     "Do not merge Lwengo Kagganda HC III with Mbirizi Seed School or with Lwengo Seed School. The message calls Kagganda a seed school while the master lists a health centre.",
     "Lawrence report of missing Kira, Nakaseke, Nakasongola and Zingo returns is a submission gap, not evidence of absence. Zingo is not on the master list.",
-    "Johnson's 24 September 13:32 screenshot says Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HC III did not benefit from UgIFT. Mayanga HC III is confirmed inside the Mitooma file. Mayanga Seed School and Kishangara are not covered by that message."
+    "Johnson's 24 September 13:32 screenshot says Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HC III did not benefit from UgIFT. Mayanga HC III is confirmed inside the Mitooma file. Mayanga Seed School is not covered by that message. Kishangara Seed Secondary School is a separate programme decision: it does not exist in Ibanda."
   ]
 }

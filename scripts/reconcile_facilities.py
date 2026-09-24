@@ -217,7 +217,7 @@ def main():
      r['status']='Outside UgIFT'; r['verification']='Facility exists but is outside the upgraded UgIFT set'
     else:
      r['status']='Reported absent'; r['verification']='Reported not to exist; not independently established'
-   elif dec['id'] in ['CHAT19','CHAT20','USER01']:
+   elif dec['id'] in ['CHAT19','CHAT20','USER01','USER03']:
     r['status']='Reported absent'; r['verification']='Reported not to exist; programme data-management decision'
    elif dec['id']=='USER02':
     r['status']='Field evidence'
@@ -251,6 +251,7 @@ def main():
   ('CHAT17',key('Alira HCII')):'The revised Oyam decision confirms that Alira exists, but it is outside the facilities upgraded under UgIFT.',
   ('CHAT17',key('Ariba HC II')):'The revised Oyam decision confirms that Ariba is not among the six upgraded UgIFT Health Centre IIIs and retains the earlier report that it does not exist.',
   ('USER01',key('Central Division')):'The programme data manager confirms that Central Division Seed Secondary School does not exist in Jinja City. Preserve the master row for audit and do not infer a replacement facility.',
+  ('USER03',key('Kishangara seed school')):'The programme data manager confirms that Kishangara Seed Secondary School does not exist in Ibanda. Preserve the master row for audit and do not infer a replacement facility.',
  }
  for r in records:
   reason=absence_reasons.get((r['decision_ref'],key(r['name'])))
@@ -463,6 +464,9 @@ def main():
  assert pandwong['status']=='Field evidence' and 'no UgIFT assets' in pandwong['note'], pandwong
  central_division=find('Jinja City','Central Division')
  assert central_division['id']=='S012' and central_division['status']=='Field evidence' and central_division['decision_ref']=='USER01', central_division
+ kishangara=find('Ibanda','Kishangara seed school')
+ assert kishangara['id']=='S216' and kishangara['status']=='Field evidence' and kishangara['decision_ref']=='USER03', kishangara
+ assert 'does not exist in Ibanda' in kishangara['note'] and not kishangara.get('folder'), kishangara
  amanyiri=find('Yumbe','Amanyiri')
  lodonga=find('Yumbe','Ladonga Seed School')
  assert amanyiri['status']=='Field evidence' and amanyiri['decision_ref']=='USER02', amanyiri
