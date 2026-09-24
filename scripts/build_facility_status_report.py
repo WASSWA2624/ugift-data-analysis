@@ -276,23 +276,32 @@ def build(data, output):
         r for r in completed
         if 'completed from consolidated register' in r.get('verification', '').lower()
     ]
-    facility_return_count = completed_count - len(register_completed)
+    explained_completed = [
+        r for r in completed
+        if r.get('verification', '').startswith('Case explained or reconciled')
+    ]
+    facility_return_count = completed_count - len(register_completed) - len(explained_completed)
     exception_statuses = ['Reported absent', 'No UgIFT assets', 'Outside UgIFT', 'Replaced', 'Not verified']
     exception_count = sum(counts[s] for s in exception_statuses)
-    coverage_count = len(master) - counts['No return']
+    coverage_count = completed_count + counts['Needs review'] + exception_count
+    if coverage_count != len(master) - counts['No return']:
+        raise ValueError('Coverage must equal completed + needs review + explained cases.')
     priority_teams = (25, 30, 32)
     priority_no_return = sum(1 for r in master if r['status'] == 'No return' and int(r['team']) in priority_teams)
     marker = p('01 / EXECUTIVE SUMMARY', 'eyebrow')
     marker.section_key = 'section-1'
     story.append(marker)
     story.append(p('Facility completion status', 'title'))
-    story.append(p(f'<b>Coverage is {coverage_count} of {len(master)} master facilities '
-                   f'({percentage_text(coverage_count, len(master))}).</b> Coverage includes every facility except the '
-                   f'{counts["No return"]} with no return. Within this coverage, {completed_count} are complete, '
-                   f'{counts["Needs review"]} need a decision and {exception_count} have an explained outcome. '
+    story.append(p(f'<b>Coverage is {completed_count} + {counts["Needs review"]} + {exception_count} '
+                   f'= {coverage_count} of {len(master)} master facilities '
+                   f'({percentage_text(coverage_count, len(master))}).</b> '
+                   'Percentage coverage = completed + needs review + explained cases. '
+                   f'{completed_count} are complete, {counts["Needs review"]} need a decision and '
+                   f'{exception_count} have an explained outcome. '
                    f'The completed total includes {facility_return_count} with '
-                   f'facility-specific material and {len(register_completed)} with identifiable information in consolidated '
-                   'asset registers. “Complete” means the data is sufficient for this reconciliation; it does not certify that '
+                   f'facility-specific material, {len(register_completed)} with identifiable information in consolidated '
+                   f'asset registers, and {len(explained_completed)} with no return whose case is explained or reconciled. '
+                   '“Complete” means the data is sufficient for this reconciliation; it does not certify that '
                    'every asset was physically inspected.'))
     story.append(p(f'The master contains {data["master_rows"]} source rows and {len(master)} distinct schools and health centres. '
                    'Kapedo in Karenga, Nyamarunda in Kibaale and Kidubuli Health Centre III in Kabarole are each listed twice '
@@ -300,10 +309,10 @@ def build(data, output):
                    f'The {len(blood)} regional blood banks are reported separately. School names use the Seed Secondary School '
                    'standard, and every master Health Centre II is shown at its upgraded Health Centre III level.', 'small'))
     cards = Table([[
-        metric_card(coverage_count, len(master), 'Coverage', 'Every status except No return'),
+        metric_card(coverage_count, len(master), 'Coverage', 'Completed + needs review + explained'),
         metric_card(counts['No return'], len(master), 'No return', 'Facility evidence outstanding'),
         metric_card(counts['Needs review'], len(master), 'Needs review', 'Reconciled; confirmation remains'),
-        metric_card(exception_count, len(master), 'Explained cases', 'Excluded from outstanding returns'),
+        metric_card(exception_count, len(master), 'Explained cases', 'Included in coverage'),
     ]], colWidths=[CONTENT / 4] * 4)
     cards.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (0, 0), colors.HexColor('#E9F2EF')),
@@ -335,28 +344,30 @@ def build(data, output):
          'These cases count as reconciled coverage, but not as completed field evidence.'],
         ['Explained cases', number_cell(exception_count, small=True),
          number_cell(percentage_text(exception_count, len(master)), small=True, accent=True),
+         'Explained cases with no return are listed under Completed. Their reasons remain in the reconciliation CSV.'
+         if exception_count == 0 else
          f'{counts["Reported absent"]} reported absent; {counts["No UgIFT assets"]} no UgIFT assets; '
          f'{counts["Outside UgIFT"]} outside UgIFT; {counts["Replaced"]} replaced; '
          f'{counts["Not verified"]} not physically verified.'],
     ]
     status_table = table(definitions, [90, 42, 40, CONTENT - 172], small=True, padding=4.2)
     story.append(status_table)
-    story.append(p(f'<b>Replaced / {counts["Replaced"]} facility / '
-                   f'{percentage_text(counts["Replaced"], len(master))}.</b> The replacement already has its own '
-                   'master entry, so its evidence is counted there once. Example: Loinya Health Centre III was replaced by '
-                   'Liko Health Centre III; Liko is already represented by master entry H212.', 'small'))
+    if counts['Replaced']:
+        story.append(p(f'<b>Replaced / {counts["Replaced"]} facility / '
+                       f'{percentage_text(counts["Replaced"], len(master))}.</b> The replacement already has its own '
+                       'master entry, so its evidence is counted there once. Example: Loinya Health Centre III was replaced by '
+                       'Liko Health Centre III; Liko is already represented by master entry H212.', 'small'))
     story.append(p('The immediate follow-up', 'sub'))
     story.append(p(f'Start with Teams 25, 30 and 32, which account for {priority_no_return} of the '
-                   f'{counts["No return"]} outstanding returns. Resolve the {counts["Needs review"]} reconciled cases awaiting confirmation '
-                   'and confirm the reported absences with the relevant local governments. '
-                   'Onywako has a return but explicitly was not physically verified. Kyondo was not visited, and Kabingo was reported by phone.'))
+                   f'{counts["No return"]} outstanding returns. Resolve the {counts["Needs review"]} submitted returns whose master identity is still open. '
+                   'Facilities with no return whose case is explained or reconciled are listed under Completed.'))
     story.append(p(f'{len(unmatched)} unmatched ground names or returns are listed separately. Some may be aliases of master entries; '
                    'they are not a confirmed count of additional facilities and are not added to the master evidence totals.', 'small'))
     story.append(p('Reading the lists: H = health-centre master row; S = school master row; X = unmatched ground record; B = blood bank. '
                    '“Team 17,” for example, means the field team responsible for that facility. SS means secondary school; MC means municipal council. '
                    'IDs link to the companion reconciliation and evidence CSVs.', 'small'))
     story.append(p(f'<b>Percentage basis.</b> Summary percentages use the {len(master)} distinct master facilities. '
-                   f'Each team coverage percentage uses that team\'s listed facilities and includes every status except No return. '
+                   'Each team coverage percentage is that team\'s completed + needs review + explained cases, divided by the facilities listed for the team. '
                    f'The {len(unmatched)} unmatched ground '
                    f'names or returns and {len(blood)} regional blood banks are excluded.', 'small'))
     story.append(p('<b>Report sections.</b> 2 Team responsibility / 3 Returns needing a decision / '
@@ -404,12 +415,15 @@ def build(data, output):
                    'The supervisor should resolve the point shown, then correct or confirm the return. '
                    '“Team 17,” for example, is the field team responsible for the facility. Full documents and worksheet '
                    'locations are linked by ID in facility-evidence-index.csv.'))
-    review_rows = [['Master entry / team and LG', 'Point to resolve']]
-    for record in sorted(review, key=lambda r: (int(r['team']), r['lg'], r['name'])):
-        marked.append(record['id'])
-        label = p(f'<b>{e(display_name(record))}</b><br/>Team {record["team"]} / {e(record["lg"])}<br/><font color="#607077">{e(source_caption(record))}</font>', 'table')
-        review_rows.append([label, compact_note(record)])
-    story.append(table(review_rows, [185, CONTENT - 185], padding=5))
+    if review:
+        review_rows = [['Master entry / team and LG', 'Point to resolve']]
+        for record in sorted(review, key=lambda r: (int(r['team']), r['lg'], r['name'])):
+            marked.append(record['id'])
+            label = p(f'<b>{e(display_name(record))}</b><br/>Team {record["team"]} / {e(record["lg"])}<br/><font color="#607077">{e(source_caption(record))}</font>', 'table')
+            review_rows.append([label, compact_note(record)])
+        story.append(table(review_rows, [185, CONTENT - 185], padding=5))
+    else:
+        story.append(p('No open decision remains. Facilities whose lack of a return is explained or reconciled are listed with the completed facilities.'))
     ony = next((r for r in unmatched if 'onywako' in r['name'].lower()), None)
     if ony:
         story.append(p('Onywako: return received, physical verification not done', 'sub'))
@@ -420,23 +434,25 @@ def build(data, output):
     section(story, 4, 'Outstanding returns and explained cases')
     no_return = [r for r in master if r['status'] == 'No return']
     disposition = [r for r in master if r['status'] in set(exception_statuses)]
-    story.append(p(f'<b>{len(disposition)} facilities are excluded from the {len(no_return)} outstanding-return total</b> because a '
-                   'specific reason has been documented. They remain in the master reconciliation and are not automatically treated '
-                   'as physically verified. The reason for each exclusion is shown below.'))
-    disposition_rows = [['Master entry / responsible team', 'Recorded reason']]
-    status_labels = {'Replaced': 'Replacement counted elsewhere', 'Not verified': 'Not physically verified'}
-    for record in sorted(disposition, key=lambda r: (int(r['team']), r['lg'], r['name'])):
-        marked.append(record['id'])
-        note = compact_note(record)
-        if record['id'] in {'H197', 'H195', 'H200'}:
-            note = 'Reported nonexistent in the Oyam supervisor message. No one-to-one replacement was specified.'
-        elif record['id'] == 'H190':
-            note = 'Alik was reported nonexistent. The message names Barlonyo and Onywako but does not say either replaces Alik.'
-        status_label = status_labels.get(record['status'], record['status'])
-        label = p(f'<b>{e(display_name(record))}</b><br/>Team {record["team"]} / {e(record["lg"])}<br/>'
-                  f'<font color="#607077">{e(source_caption(record))}</font>', 'table')
-        disposition_rows.append([label, p(f'<b>{e(status_label)}</b><br/>{e(note)}', 'table')])
-    story.append(table(disposition_rows, [186, CONTENT - 186], padding=5))
+    if disposition:
+        story.append(p(f'<b>{len(disposition)} facilities are excluded from the {len(no_return)} outstanding-return total</b> because a '
+                       'specific reason has been documented. They remain in the master reconciliation and are not automatically treated '
+                       'as physically verified. The reason for each exclusion is shown below.'))
+    if disposition:
+        disposition_rows = [['Master entry / responsible team', 'Recorded reason']]
+        status_labels = {'Replaced': 'Replacement counted elsewhere', 'Not verified': 'Not physically verified'}
+        for record in sorted(disposition, key=lambda r: (int(r['team']), r['lg'], r['name'])):
+            marked.append(record['id'])
+            note = compact_note(record)
+            if record['id'] in {'H197', 'H195', 'H200'}:
+                note = 'Reported nonexistent in the Oyam supervisor message. No one-to-one replacement was specified.'
+            elif record['id'] == 'H190':
+                note = 'Alik was reported nonexistent. The message names Barlonyo and Onywako but does not say either replaces Alik.'
+            status_label = status_labels.get(record['status'], record['status'])
+            label = p(f'<b>{e(display_name(record))}</b><br/>Team {record["team"]} / {e(record["lg"])}<br/>'
+                      f'<font color="#607077">{e(source_caption(record))}</font>', 'table')
+            disposition_rows.append([label, p(f'<b>{e(status_label)}</b><br/>{e(note)}', 'table')])
+        story.append(table(disposition_rows, [186, CONTENT - 186], padding=5))
     story.extend([NextPageTemplate('columns'), PageBreak()])
     story.append(p(f'{len(no_return)} returns still outstanding', 'section'))
     story.append(p(f'<b>{len(no_return)} master facilities</b> still have no matched return or usable asset rows. '
@@ -446,8 +462,9 @@ def build(data, output):
 
     section(story, 5, 'Completed facilities', columns=True)
     story.append(p(f'<b>{completed_count} completed facility records</b> follow: {facility_return_count} have facility-specific '
-                   f'material and {len(register_completed)} have identifiable information in consolidated registers. They share one '
-                   'Completed status. The companion CSVs retain the source file, worksheet and row for audit. Completion does not '
+                   f'material, {len(register_completed)} have identifiable information in consolidated registers, and '
+                   f'{len(explained_completed)} have no separate return because the case is explained or reconciled. '
+                   'They share one Completed status. The companion CSVs retain the reason. Completion does not '
                    'certify that every asset was physically inspected.'))
     story.append(p('Supervisor-confirmed naming changes are counted against the relevant master entry when field material is on file. '
                    'This includes Butagaya / Buwala and Mwema / Mutumba. The reconciliation CSV retains the submitted name, '

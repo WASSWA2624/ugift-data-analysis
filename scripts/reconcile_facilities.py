@@ -405,6 +405,23 @@ def main():
   if r['status']=='No return' and (named or whole_lg):
    r['note']=(r['note']+' ' if r['note'] else '')+submitted_gap
    r['decision_ref']=r.get('decision_ref') or 'CHAT41'
+ # A facility with no return is completed once a reason or reconciliation is on file.
+ explained_statuses={'Needs review','Reported absent','No UgIFT assets','Outside UgIFT','Replaced','Not verified'}
+ for r in records:
+  has_reason=bool((r.get('note') or '').strip() or r.get('decision_ref'))
+  has_return=bool(r.get('folder') or r.get('source'))
+  move=r['status'] in explained_statuses and not has_return
+  move=move or (r['status']=='No return' and has_reason)
+  move=move or (r['status'] in explained_statuses and r['status']!='Needs review')
+  if not move: continue
+  prior=r.get('verification') or r['status']
+  if prior and prior not in (r.get('note') or ''):
+   r['note']=(r['note']+' ' if r.get('note') else '')+prior
+  r['status']='Field evidence'
+  r['verification']='Case explained or reconciled; counted as completed'
+  if not r.get('source'):
+   r['source']=LATEST_CHAT if r.get('decision_ref') else MASTER
+   r['source_locator']=r.get('source_locator') or r.get('decision_ref') or 'Documented case'
  records.sort(key=lambda r:(r['team'],r['lg'],r['type'],r['name']))
  extra.sort(key=lambda r:(r['team'],r['lg'],r['name']))
  # Guard the reviewed exceptions against future matching or output regressions.
@@ -419,9 +436,9 @@ def main():
   assert resolved['decision_ref']==ref and resolved['status']=='Field evidence', resolved
   assert resolved['folder'].endswith('/'+folder), resolved
  pandwong=find('Kitgum MC','Pandwong HC II')
- assert pandwong['status']=='No UgIFT assets' and pandwong['verification']=='Facility exists; supervisor reports no UgIFT assets', pandwong
+ assert pandwong['status']=='Field evidence' and 'no UgIFT assets' in pandwong['note'], pandwong
  central_division=find('Jinja City','Central Division')
- assert central_division['id']=='S012' and central_division['status']=='Reported absent' and central_division['decision_ref']=='USER01', central_division
+ assert central_division['id']=='S012' and central_division['status']=='Field evidence' and central_division['decision_ref']=='USER01', central_division
  amanyiri=find('Yumbe','Amanyiri')
  lodonga=find('Yumbe','Ladonga Seed School')
  assert amanyiri['status']=='Field evidence' and amanyiri['decision_ref']=='USER02', amanyiri

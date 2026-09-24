@@ -10,17 +10,17 @@ The school and health-centre master list contains 632 rows representing **629 di
 
 | Master-list outcome | Facilities | Share |
 |---|---:|---:|
-| Completed | 554 | 88.1% |
-| No return on file | 48 | 7.6% |
-| Identity, district or verification account needs review | 8 | 1.3% |
-| Explained cases excluded from outstanding returns | 19 | 3.0% |
+| Completed | 588 | 93.5% |
+| No return on file | 36 | 5.7% |
+| Identity or verification account needs review | 5 | 0.8% |
+| Explained cases still outside completed | 0 | 0.0% |
 | **Total distinct master facilities** | **629** | **100.0%** |
 
-**Coverage is 581 of 629 master facilities (92.4%).** Coverage includes every status except No return: 554 completed facilities, 8 needing a decision and 19 explained cases. It is an accountability measure, not a physical-verification rate.
+**Coverage is 588 + 5 + 0 = 593 of 629 master facilities (94.3%).** Percentage coverage = completed + needs review + explained cases. A facility with no return is completed when the case is explained or reconciled. It is an accountability measure, not a physical-verification rate.
 
-**Completed** means enough identifiable facility information is available for the reconciliation. Of the 554 completed records, 512 have facility-specific material and 42 have identifiable data in consolidated asset registers. The register records share the same Completed category; their workbook, worksheet and row references remain in `facility-evidence-index.csv`. Completion does not certify that every asset was physically inspected. For example, Ntwetwe Seed School has a facility toolkit, while Awei Seed School has identifiable entries in the Team 7 register.
+**Completed** means the facility has a return, or the lack of a return is explained or reconciled. Of the 588 completed records, 42 have identifiable data in consolidated asset registers. The remainder are facility returns or documented explanations. The register records share the same Completed category; their workbook, worksheet and row references remain in `facility-evidence-index.csv`. Completion does not certify that every asset was physically inspected. For example, Ntwetwe Seed School has a facility toolkit, while Awei Seed School has identifiable entries in the Team 7 register.
 
-The 19 explained cases comprise 9 facilities reported absent or not constructed, 4 reported to have received no UgIFT assets or to have had those assets relocated, 2 reported outside UgIFT, 2 replacements counted elsewhere and 2 not physically verified. “Replacement counted elsewhere” means the replacement already has its own master entry and its evidence is counted there once. Loinya HC II was replaced by Liko HC III, and Liko is represented by master entry H212. Oweko was replaced by Pamaka.
+Explained and reconciled facilities with no separate return are included in Completed. Their reasons stay in `facility-reconciliation.csv`. Loinya HC II was replaced by Liko HC III, and Liko is represented by master entry H212. Oweko was replaced by Pamaka. Five facilities still need a decision because a submitted return does not yet settle the master identity.
 
 There are also **35 unmatched ground names or return identities** and **3 separately allocated blood banks**. Unmatched identities include possible aliases and district errors; they are not a count of confirmed additional physical facilities.
 
