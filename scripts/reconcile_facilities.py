@@ -36,6 +36,7 @@ def canonical_facility_name(record):
   'S069':'Makokoto Seed Secondary School',
   'S226':'Ryakasinga Seed Secondary School',
   'S235':'St Mugagga Vocational Seed Secondary School',
+  'H027':'Mbirizi Seed Secondary School',
   'S249':'Nyakishenyi Seed Secondary School',
   'X008':'Katungunda Seed Secondary School',
  }
@@ -167,8 +168,8 @@ def main():
    'Team 30 facility-specific return confirms the local government, facility identity and completed asset checklist.'
   )
  st_mugagga=find('Kibaale','Mugarama( new facilities for St Mugagga S.S)')
- st_mugagga['status']='Needs review'
- st_mugagga['verification']='Facility return received, but the team reports that source documentation was inaccessible and no assets were verified'
+ st_mugagga['status']='Field evidence'
+ st_mugagga['verification']='Visit recorded; asset source documents were not accessible and the asset rows were not completed'
  st_mugagga['note']='The 23 September message and updated toolkit record the school as St Mugagga Vocational Seed School. The toolkit says the asset source documents could not be accessed, several areas were locked, and the school had not been commissioned. Photographs were taken with school representatives.'
  mugagga_folder='team-30/Kibaale/St-Mugagga-Vocational-Seed-Secondary-School'
  if (GROUPED/mugagga_folder).is_dir():
@@ -254,14 +255,7 @@ def main():
  def explained_relocation(loc,name,status,replacement,note,source,ref):
   r=find(loc,name); r['status']=status; r['verification']='Supervisor-confirmed asset relocation/replacement; field evidence is counted under the receiving facility'; r['note']=note; r['source']=source; r['source_locator']='Supervisor message 23 September 2026 09:36'; r['ground_name']=''; r['decision_ref']=ref; return r
  r=find('Pader','Olok HC II'); r['status']='Reported absent'; r['verification']='Field report says not constructed'; r['note']='Combined Olok HC / Latanya school report records the DHO saying Olok HC does not exist and was not constructed. Latanya school is separate.'
- review('Oyam','Iceme HC II','Original Icheme return says physical verification was not conducted. Revised return says a late-evening visit took place without photos. Supervisor to confirm which account applies.')
- review('Gomba','Mamba HC II','Gomba/Mamba cover conflicts with an interview naming Kibiri. Confirm the correct form and checklist. On 23 September the supervisor also said Kyegonza HC III is Mamba HC III; that alias does not resolve the Kibiri conflict.')
- review('Makindye-Ssabagabo MC','Kibiri HC III','Kibiri cover/interview conflicts with a Gomba/Mamba checklist in one return. Separate Kibiri process report received; reconcile the toolkit.')
- review('Kamuli MC','Busota HC II','Busota softcopy received from Sulaina on 21 Sep at 16:47. Cover names Kamuli district; checklist and master name Kamuli MC. Confirm the LG heading.')
- # The two Team 28 process reports repeat a different site; do not infer a clean return.
- for loc,name in [('Kyegegwa','Kabweza'),('Kyenjojo','Kataraza HC II')]:
-  try: review(loc,name,'Process report describes Kyankaramata rather than the named facility. Confirm the report and facility-specific evidence.')
-  except ValueError: pass
+ # Resolved from the filed toolkits and the 23 September chat. The governing document is set after the folder file picker.
  explained_relocation(
   'Nebbi','Oweko HC II','Replaced','Pamaka Health Centre III',
   'Supervisor confirms that Oweko was replaced by Pamaka Health Centre III. The Pamaka return is retained as the receiving-facility evidence.',
@@ -291,14 +285,23 @@ def main():
   ('Mubende','Kabbo','Team 28 submitted Nakawala Health Centre III in Mubende while Kabbo remains on the master; confirm the intended master-to-ground mapping.','team-28/Mubende/Nakawala-HC-III/NAKAWALA HCIII VERIFICATION TOOL.pdf'),
  ]:
   review_source(loc,name,note,source)
+ for loc,name,verification,note in [
+  ('Bundibugyo','Kyondo HC II','Visit not undertaken; the CAO confirmed the road was unsafe','Depaul confirmed on 23 September 2026 that Kyondo HC III could not be visited because the CAO said the mountainous road was dangerous.'),
+  ('Kasese','Kabingo HCII','Information obtained by phone; physical verification not performed','Depaul confirmed on 23 September 2026 that the Kabingo information was obtained by phone because the team could not reach the facility. Physical verification stays unconfirmed.'),
+ ]:
+  r=find(loc,name); r['status']='Not verified'; r['verification']=verification; r['note']=note
  find('Bundibugyo','Kyondo HC II')['decision_ref']='CHAT31'
  find('Kasese','Kabingo HCII')['decision_ref']='CHAT27'
- for loc,name,note in [
-  ('Nakaseke','Ngoma','Sulaina said Ngoma Seed School was changed to Budongo Seed School, but did not name the local government. Master Ngoma is in Nakaseke and master Budongo is in Masindi, so the rows stay separate until the district is confirmed.'),
-  ('Lwengo','Kagganda HC II','Lawrence said Kagganda in Lwengo is Mbirizi Seed School. The master lists Kagganda as a health centre and lists Lwengo Seed School separately, so the health-centre row is not merged into the Mbirizi school folder.'),
-  ('Lwengo','Lwengo Seed School','The 23 September message identifies Mbirizi Seed School as Kagganda, not as Lwengo Seed School. The earlier possible link to the Mbirizi folder is not confirmed.'),
- ]:
-  review(loc,name,note)
+ review('Nakaseke','Ngoma','Sulaina said Ngoma Seed School was changed to Budongo Seed School, but did not name the local government. Master Ngoma is in Nakaseke and master Budongo is in Masindi, so the rows stay separate until the district is confirmed.')
+ kagganda=find('Lwengo','Kagganda HC II')
+ set_folder(kagganda,'Mbirizi-Seed-Secondary-School')
+ kagganda['ground_name']='Mbirizi Seed Secondary School'
+ kagganda['decision_ref']='CHAT40'
+ kagganda['verification']='Verification records received; physical completion not certified'
+ kagganda['note']='Lawrence says the Lwengo entry recorded as Kagganda is Mbirizi Seed School. The master classifies the row as a health centre; the return and the supervisor identify the school. The Mbirizi return is counted once on this row.'
+ lwengo_school=find('Lwengo','Lwengo Seed School')
+ lwengo_school['status']='No return'; lwengo_school['verification']='Not established'; lwengo_school['folder']=''; lwengo_school['source']=''; lwengo_school['ground_name']=''
+ lwengo_school['note']='The Mbirizi Seed School return is the supervisor-confirmed Kagganda entry, not this Lwengo Seed School row.'
  for r in records:
   if r['status']=='No return' and key(r.get('project_status',''))=='ongoing':
    r['status']='Needs review'
@@ -382,9 +385,22 @@ def main():
   r['master_source']=MASTER if r['scope']=='Master list' else ''
   r['field_name']=canonical_facility_name(r)
   r['note']=r['note'].replace('possibly the team\'s folder','Unconfirmed possible match:').replace('not on the programme list','No confirmed master match')
+ corrections=[
+  ('Oyam','Iceme HC II','team-05/Oyam/Iceme-HC-III/Icheme HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx','Late-evening visit recorded; photographs were not taken','The later Iceme toolkit records a late-evening visit without photographs. An earlier note says the in-charge could not identify the UgIFT items. The later toolkit is the governing return.'),
+  ('Kamuli MC','Busota HC II','team-18/Kamuli MC/Busota-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222 (3).docx','Verification records received; physical completion not certified','Sulaina identified this as the Busota HC III softcopy. The checklist and the master use Kamuli MC. The cover heading says Kamuli district.'),
+  ('Gomba','Mamba HC II','team-32/Gomba/Mamba-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222(MAMBA HC III -GOMBA LOCAL GOVERNMENT).docx','Verification records received; physical completion not certified','The filename and checklist name Mamba Health Centre III in Gomba. Lawrence says Kyegonza HC III is Mamba HC III. The interview line that says Kibiri is the same sentence copied into the separate Kibiri toolkit.'),
+  ('Makindye-Ssabagabo MC','Kibiri HC III','team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222(KIBIRI HC III -MAKINDYE SSABAGABO).docx','Verification records received; physical completion not certified','The original toolkit and the process report name Kibiri Health Centre III in Makindye-Ssabagabo. A later copy of the toolkit repeats a Gomba/Mamba checklist and is not the governing return.'),
+  ('Kyegegwa','Kabweza','team-28/Kyegegwa/Kabweza-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222 kabweza hc iii.docx','Verification records received; physical completion not certified','The Kabweza toolkit names Kabweza Health Centre III in Kyegegwa. A separate process report in the folder describes Kyankaramata and is not the facility return.'),
+  ('Kyenjojo','Kataraza HC II','team-28/Kyenjojo/Kataraza-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT katalaza.docx','Verification records received; physical completion not certified','The toolkit names Kataraza Health Centre III in Kyenjojo. The checklist spelling is Katalaza. A separate process report describes Kyankaramata and is not the facility return.'),
+ ]
+ for loc,name,source,verification,note in corrections:
+  r=find(loc,name); r['status']='Field evidence'; r['source']=source; r['verification']=verification; r['note']=note
  submitted_gap='Lawrence Kalyowa reported on 23 September 2026 that this return had not yet been submitted. A missing submission is not evidence that the facility does not exist.'
  for r in records:
-  named=key(r['name']) in {key('Kireka HCII'),key('Kirinya HCII'),key('Kasangati TC/Mutuba-Nangabo'),key('Mutungo HCII')}
+  if r['status']=='Needs review' and 'ongoing' in r.get('verification','').lower() and key(r['name']) in {key('Kireka HCII'),key('Kirinya HCII'),key('Kasangati TC/Mutuba-Nangabo'),key('Mutungo HCII')}:
+   r['status']='No return'; r['verification']='Not established'; r['note']=''; r['decision_ref']='CHAT41'
+ for r in records:
+  named=key(r['name']) in {key('Kireka HCII'),key('Kirinya HCII'),key('Kasangati TC/Mutuba-Nangabo'),key('Mutungo HCII'),key('Zinga HC II')}
   whole_lg=key(r['lg']) in {key('Nakaseke'),key('Nakasongola')}
   if r['status']=='No return' and (named or whole_lg):
    r['note']=(r['note']+' ' if r['note'] else '')+submitted_gap
@@ -422,7 +438,7 @@ def main():
  assert len(consolidated)==42, (len(consolidated),[r['id'] for r in consolidated])
  team30_confirmed={r['id'] for r in records if r['team']==30 and r['status']=='Field evidence'}
  assert {'H012','H013','H011','H014','H301','S069','S236'} <= team30_confirmed, team30_confirmed
- assert st_mugagga['status']=='Needs review', st_mugagga
+ assert st_mugagga['status']=='Field evidence', st_mugagga
  assert len([r['folder'] for r in records if r['folder']])==len({r['folder'] for r in records if r['folder']}), 'Two distinct master facilities share one folder'
  assert len(records)==629, len(records)
  assert sum(len(r['master_ids'].split('; ')) for r in records)==632

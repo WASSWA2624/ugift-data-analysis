@@ -10,19 +10,19 @@ The school and health-centre master list contains 632 rows representing **629 di
 
 | Master-list outcome | Facilities | Share |
 |---|---:|---:|
-| Completed | 546 | 86.8% |
-| No return on file | 43 | 6.8% |
-| Identity, district or verification account needs review | 23 | 3.7% |
-| Explained cases excluded from outstanding returns | 17 | 2.7% |
+| Completed | 554 | 88.1% |
+| No return on file | 48 | 7.6% |
+| Identity, district or verification account needs review | 8 | 1.3% |
+| Explained cases excluded from outstanding returns | 19 | 3.0% |
 | **Total distinct master facilities** | **629** | **100.0%** |
 
-**Coverage is 586 of 629 master facilities (93.2%).** Coverage includes every status except No return: 546 completed facilities, 23 needing a decision and 17 explained cases. It is an accountability measure, not a physical-verification rate.
+**Coverage is 581 of 629 master facilities (92.4%).** Coverage includes every status except No return: 554 completed facilities, 8 needing a decision and 19 explained cases. It is an accountability measure, not a physical-verification rate.
 
-**Completed** means enough identifiable facility information is available for the reconciliation. Of the 546 completed records, 504 have facility-specific material and 42 have identifiable data in consolidated asset registers. The register records share the same Completed category; their workbook, worksheet and row references remain in `facility-evidence-index.csv`. Completion does not certify that every asset was physically inspected. For example, Ntwetwe Seed School has a facility toolkit, while Awei Seed School has identifiable entries in the Team 7 register.
+**Completed** means enough identifiable facility information is available for the reconciliation. Of the 554 completed records, 512 have facility-specific material and 42 have identifiable data in consolidated asset registers. The register records share the same Completed category; their workbook, worksheet and row references remain in `facility-evidence-index.csv`. Completion does not certify that every asset was physically inspected. For example, Ntwetwe Seed School has a facility toolkit, while Awei Seed School has identifiable entries in the Team 7 register.
 
-The 17 explained cases comprise 9 facilities reported absent or not constructed, 4 reported to have received no UgIFT assets or to have had those assets relocated, 2 reported outside UgIFT and 2 replacements counted elsewhere. “Replacement counted elsewhere” means the replacement already has its own master entry and its evidence is counted there once. Loinya HC II was replaced by Liko HC III, and Liko is represented by master entry H212. Oweko was replaced by Pamaka.
+The 19 explained cases comprise 9 facilities reported absent or not constructed, 4 reported to have received no UgIFT assets or to have had those assets relocated, 2 reported outside UgIFT, 2 replacements counted elsewhere and 2 not physically verified. “Replacement counted elsewhere” means the replacement already has its own master entry and its evidence is counted there once. Loinya HC II was replaced by Liko HC III, and Liko is represented by master entry H212. Oweko was replaced by Pamaka.
 
-There are also **36 unmatched ground names or return identities** and **3 separately allocated blood banks**. Unmatched identities include possible aliases and district errors; they are not a count of confirmed additional physical facilities.
+There are also **35 unmatched ground names or return identities** and **3 separately allocated blood banks**. Unmatched identities include possible aliases and district errors; they are not a count of confirmed additional physical facilities.
 
 **Completed is not a certificate that every asset was physically checked.** Supporting information may be a toolkit, report, photographs, facility register or identifiable rows in a consolidated register. Known contradictions are withheld from the Completed total. In particular, Onywako's form states that physical verification did not take place; Olok's report says the facility was not constructed; the Iceme returns disagree about whether a visit occurred. A master construction status of Complete is not a verification status.
 

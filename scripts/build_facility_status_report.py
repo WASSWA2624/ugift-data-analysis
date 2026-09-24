@@ -263,7 +263,7 @@ def build(data, output):
     counts = Counter(r['status'] for r in master)
     if len(master) != data['master_facilities'] or len({r['id'] for r in master}) != len(master):
         raise ValueError('Master records must contain one unique retained ID per facility.')
-    allowed = {'Field evidence', 'No return', 'Needs review', 'Reported absent', 'No UgIFT assets', 'Outside UgIFT', 'Replaced'}
+    allowed = {'Field evidence', 'No return', 'Needs review', 'Reported absent', 'No UgIFT assets', 'Outside UgIFT', 'Replaced', 'Not verified'}
     if set(counts) - allowed:
         raise ValueError(f'Unrecognized master statuses: {set(counts) - allowed}')
     unmatched = [r for r in extras if r.get('scope') == 'Ground return only']
@@ -277,7 +277,8 @@ def build(data, output):
         if 'completed from consolidated register' in r.get('verification', '').lower()
     ]
     facility_return_count = completed_count - len(register_completed)
-    exception_count = sum(counts[s] for s in ['Reported absent', 'No UgIFT assets', 'Outside UgIFT', 'Replaced'])
+    exception_statuses = ['Reported absent', 'No UgIFT assets', 'Outside UgIFT', 'Replaced', 'Not verified']
+    exception_count = sum(counts[s] for s in exception_statuses)
     coverage_count = len(master) - counts['No return']
     priority_teams = (25, 30, 32)
     priority_no_return = sum(1 for r in master if r['status'] == 'No return' and int(r['team']) in priority_teams)
@@ -335,7 +336,8 @@ def build(data, output):
         ['Explained cases', number_cell(exception_count, small=True),
          number_cell(percentage_text(exception_count, len(master)), small=True, accent=True),
          f'{counts["Reported absent"]} reported absent; {counts["No UgIFT assets"]} no UgIFT assets; '
-         f'{counts["Outside UgIFT"]} outside UgIFT; {counts["Replaced"]} replaced.'],
+         f'{counts["Outside UgIFT"]} outside UgIFT; {counts["Replaced"]} replaced; '
+         f'{counts["Not verified"]} not physically verified.'],
     ]
     status_table = table(definitions, [90, 42, 40, CONTENT - 172], small=True, padding=4.2)
     story.append(status_table)
@@ -347,7 +349,7 @@ def build(data, output):
     story.append(p(f'Start with Teams 25, 30 and 32, which account for {priority_no_return} of the '
                    f'{counts["No return"]} outstanding returns. Resolve the {counts["Needs review"]} reconciled cases awaiting confirmation '
                    'and confirm the reported absences with the relevant local governments. '
-                   'Onywako has a return but explicitly was not physically verified; Iceme has conflicting accounts of the visit.'))
+                   'Onywako has a return but explicitly was not physically verified. Kyondo was not visited, and Kabingo was reported by phone.'))
     story.append(p(f'{len(unmatched)} unmatched ground names or returns are listed separately. Some may be aliases of master entries; '
                    'they are not a confirmed count of additional facilities and are not added to the master evidence totals.', 'small'))
     story.append(p('Reading the lists: H = health-centre master row; S = school master row; X = unmatched ground record; B = blood bank. '
@@ -381,7 +383,7 @@ def build(data, output):
             number_cell(team_completed, small=True),
             number_cell(percentage_text(len(records) - tc['No return'], len(records)), small=True, accent=True),
             number_cell(tc['No return'], small=True), number_cell(tc['Needs review'], small=True),
-            number_cell(sum(tc[s] for s in ['Reported absent', 'No UgIFT assets', 'Outside UgIFT', 'Replaced']), small=True),
+            number_cell(sum(tc[s] for s in exception_statuses), small=True),
         ])
     owner_rows.append([
         p('<b>Total</b>', 'table-small'), '', number_cell(len(master), small=True, bold=True),
@@ -394,7 +396,7 @@ def build(data, output):
         ('LINEABOVE', (0, -1), (-1, -1), .8, NAVY),
     ]))
     story.append(owner_table)
-    story.append(p('*Other = reported absent, no UgIFT assets, outside UgIFT or replaced. A zero means no entry in that status, not confirmation that verification is complete.', 'small'))
+    story.append(p('*Other = reported absent, no UgIFT assets, outside UgIFT, replaced or not physically verified. A zero means no entry in that status, not confirmation that verification is complete.', 'small'))
 
     section(story, 3, 'Returns that need a decision')
     review = [r for r in master if r['status'] == 'Needs review']
@@ -417,12 +419,12 @@ def build(data, output):
 
     section(story, 4, 'Outstanding returns and explained cases')
     no_return = [r for r in master if r['status'] == 'No return']
-    disposition = [r for r in master if r['status'] in {'Reported absent', 'No UgIFT assets', 'Outside UgIFT', 'Replaced'}]
+    disposition = [r for r in master if r['status'] in set(exception_statuses)]
     story.append(p(f'<b>{len(disposition)} facilities are excluded from the {len(no_return)} outstanding-return total</b> because a '
                    'specific reason has been documented. They remain in the master reconciliation and are not automatically treated '
                    'as physically verified. The reason for each exclusion is shown below.'))
     disposition_rows = [['Master entry / responsible team', 'Recorded reason']]
-    status_labels = {'Replaced': 'Replacement counted elsewhere'}
+    status_labels = {'Replaced': 'Replacement counted elsewhere', 'Not verified': 'Not physically verified'}
     for record in sorted(disposition, key=lambda r: (int(r['team']), r['lg'], r['name'])):
         marked.append(record['id'])
         note = compact_note(record)
