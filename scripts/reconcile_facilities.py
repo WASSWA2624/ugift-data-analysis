@@ -310,6 +310,17 @@ def main():
   nyakishenyi['ground_name']='Nyakishenyi Seed Secondary School'
   nyakishenyi['verification']='Verification records received; physical completion not certified'
   nyakishenyi['note']='Handwritten pages name Nyakishenyi Seed School and Rukungiri. Johnson caption said Nyakishojwa SSS, Rukungiri. This is the master Nyakishenyi school, not Nyakishojwa Health Centre III in Mitooma, and not Bikurungu.'
+ for loc,name,folder,ground,note in [
+  ('Hoima','Buhanika','Kidukuru-Seed-Secondary-School','Kidukuru Seed Secondary School','The 24 September 2026 handwritten return names Kidukuru Seed Secondary School in Hoima District. Kidukuru is the seed school in Buhanika Subcounty, so the return is counted on master entry S230. Kigorobya is a separate return in the same scan.'),
+  ('Hoima','Kigorobya Seed School','Kigorobya-Seed-Secondary-School','Kigorobya Seed Secondary School','The 24 September 2026 handwritten return names Kigorobya Seed Secondary School in Hoima and records its furniture, ICT and buildings.'),
+  ('Buliisa','Ngwedo Seed School','Ngwedo-Seed-Secondary-School','Ngwedo Seed Secondary School','The 24 September 2026 handwritten return names Ngwedo Seed School in Buliisa and records its furniture, science items, ICT and buildings.'),
+ ]:
+  r=find(loc,name)
+  set_folder(r,folder)
+  r['ground_name']=ground
+  r['note']=note
+  r['verification']='Verification records received; physical completion not certified'
+  r['source_locator']='Handwritten scan transcribed into the facility workbook'
  for loc,name,verification,note in [
   ('Bundibugyo','Kyondo HC II','Visit not undertaken; the CAO confirmed the road was unsafe','Depaul confirmed on 23 September 2026 that Kyondo HC III could not be visited because the CAO said the mountainous road was dangerous.'),
   ('Kasese','Kabingo HCII','Information obtained by phone; physical verification not performed','Depaul confirmed on 23 September 2026 that the Kabingo information was obtained by phone because the team could not reach the facility. Physical verification stays unconfirmed.'),
@@ -467,6 +478,13 @@ def main():
  kishangara=find('Ibanda','Kishangara seed school')
  assert kishangara['id']=='S216' and kishangara['status']=='Field evidence' and kishangara['decision_ref']=='USER03', kishangara
  assert 'does not exist in Ibanda' in kishangara['note'] and not kishangara.get('folder'), kishangara
+ for loc,name,ident,folder in [
+  ('Hoima','Buhanika','S230','Kidukuru-Seed-Secondary-School'),
+  ('Hoima','Kigorobya Seed School','S231','Kigorobya-Seed-Secondary-School'),
+  ('Buliisa','Ngwedo Seed School','S229','Ngwedo-Seed-Secondary-School'),
+ ]:
+  school=find(loc,name)
+  assert school['id']==ident and school['status']=='Field evidence' and school['folder'].endswith('/'+folder), school
  amanyiri=find('Yumbe','Amanyiri')
  lodonga=find('Yumbe','Ladonga Seed School')
  assert amanyiri['status']=='Field evidence' and amanyiri['decision_ref']=='USER02', amanyiri
