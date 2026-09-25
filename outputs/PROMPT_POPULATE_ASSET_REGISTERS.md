@@ -123,7 +123,9 @@ Land is capitalized and is not depreciated. Natural resources are not capitalize
 
 Sanitize `ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` after Stage 2. Copy that sanitized workbook to `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`, then apply the same rules again so a borrowed-cost edit cannot put raw source wording back. Do not change a recorded cost, life, or depreciation figure while sanitizing. Keep the `[item 1 of 100]` suffix.
 
-**Text.** Trim every text cell. Collapse repeated spaces and remove line breaks inside a cell. Where a whole cell is only a placeholder (`N/A`, `NA`, `nil`, `nill`, `none`, `null`, `-`, `not applicable`), clear it. Do not clear a real engraved tag.
+**Every column.** Sanitize every filled cell in MF and again in REF. Trim text, collapse repeated spaces, and remove line breaks. Use one spelling for the same fact on every row. Clear a cell whose whole value is a placeholder (`N/A`, `NA`, `nil`, `nill`, `none`, `null`, `-`, `not applicable`). Do not clear a real engraved tag. Do not change a recorded amount while cleaning text.
+
+**BOOK_TYPE_CODE.** This column is cleaned on every row. One local government has one code. Uppercase. Remove `District`, `Local Government`, `DLG`, and backslashes. Turn a hyphen into a space. Keep `MC` or `CITY` where that is the vote. Append ` BK`. Examples: `Hoima District` becomes `HOIMA BK`; `Madi-Okollo` becomes `MADI OKOLLO BK`; `Kiira Municipal Council` becomes `KIIRA MC BK`. Do not leave a raw district name in this column. `LOCATION_SEGMENT1` is the same government in vote form, such as `MADI\-OKOLLO DLG`.
 
 **Facility name** (`LOCATION_SEGMENT3`). A school ends with `Seed Secondary School`. A health centre ends with `Health Centre III`, including a master Health Centre II that was upgraded. Spell the words in full. Do not write `HCII`, `HC III`, `H/C`, `H.C`, or `Health Center`. Do not add the suffix twice. Keep a longer official name that already contains those words, such as `St Mugagga Vocational Seed Secondary School`.
 
