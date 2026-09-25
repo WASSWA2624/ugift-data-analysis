@@ -13,7 +13,7 @@ Outputs:
 
 1. `outputs/asset-register-2026-09-23/ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx`
 2. `outputs/asset-register-2026-09-23/ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` filled from the SK workbook
-3. `outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`, a copy of the MF workbook with missing purchase costs filled by the borrowing rules below
+3. `outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`, a sanitized copy of the MF workbook with missing purchase costs filled by the borrowing rules below
 
 Health centres and seed schools are rows in one workbook, not separate files. Keep header filters and a frozen header row. Record the rules you applied on a Read Me sheet.
 
@@ -119,9 +119,25 @@ A repair or spare that only restores the asset is not a new capitalized asset (s
 
 Land is capitalized and is not depreciated. Natural resources are not capitalized (section 3.2.1.4).
 
+## Sanitize the MF and REF workbooks
+
+Sanitize `ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` after Stage 2. Copy that sanitized workbook to `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`, then apply the same rules again so a borrowed-cost edit cannot put raw source wording back. Do not change a recorded cost, life, or depreciation figure while sanitizing. Keep the `[item 1 of 100]` suffix.
+
+**Text.** Trim every text cell. Collapse repeated spaces and remove line breaks inside a cell. Where a whole cell is only a placeholder (`N/A`, `NA`, `nil`, `nill`, `none`, `null`, `-`, `not applicable`), clear it. Do not clear a real engraved tag.
+
+**Facility name** (`LOCATION_SEGMENT3`). A school ends with `Seed Secondary School`. A health centre ends with `Health Centre III`, including a master Health Centre II that was upgraded. Spell the words in full. Do not write `HCII`, `HC III`, `H/C`, `H.C`, or `Health Center`. Do not add the suffix twice. Keep a longer official name that already contains those words, such as `St Mugagga Vocational Seed Secondary School`.
+
+**Facility type.** The SK facility-type value, wherever it is stored, is only `School` or `Health centre`.
+
+**Condition.** Equipment status is only `Functional` or `Faulty`. `Functional` covers in use, functioning, working well, available, verified, and good condition. `Faulty` covers damaged, broken, not in use, not functioning, obsolete, and unserviceable. Move any longer status wording into Remarks, appended to what is already there. If the source does not say which, leave the status blank. Set `IN_USE_FLAG` to `YES` for Functional and `NO` for Faulty.
+
+**Tag.** A blank tag, or a placeholder tag, is `Not Engraved`. Keep a real engraved number as written.
+
+**Amounts.** Show cost, depreciation, reserve, and net book value with thousands separators (`#,##0.##`). Do not recalculate them in this step.
+
 ## Stage 3. REF workbook: borrowed purchase costs
 
-Copy the finished MF workbook to `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`. Then fill missing purchase costs. Do not change a price that is already recorded.
+Start from the sanitized MF workbook. Then fill missing purchase costs. Do not change a price that is already recorded. After borrowing, the facility name, facility type, status, and tag rules above still hold.
 
 Existing purchase prices keep a **white** background.
 
