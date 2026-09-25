@@ -321,6 +321,30 @@ def main():
   r['note']=note
   r['verification']='Verification records received; physical completion not certified'
   r['source_locator']='Handwritten scan transcribed into the facility workbook'
+ for loc,name,folder,ground,note in [
+  ('Wakiso','Kasoozo HCII','Kasoozo-HC-III','Kasoozo Health Centre III','The 25 September toolkit names Kasoozo Health Centre III in Wakiso.'),
+  ('Kiira MC','Kirinya HCII','Kirinya-HC-III','Kirinya Health Centre III','The 25 September toolkit names Kirinya Health Centre III in Kiira Town Council.'),
+  ('Kiira MC','Kireka HCII','Kireka-HC-III','Kireka Health Centre III','The 25 September toolkit names Kireka Nsawo Health Centre III in Kira Municipal Council. It is counted on master Kireka.'),
+  ('Makindye-Ssabagabo MC','Mutungo HCII','Mutungo-HC-III','Mutungo Health Centre III','The 25 September toolkit names Mutungo Health Centre III in Makindye-Ssabagabo.'),
+  ('Wakiso','Kasangati TC/Mutuba-Nangabo','Kasangati-Mutuba-Nangabo-HC-III','Kasangati Mutuba-Nangabo Health Centre III','The 25 September toolkit names Kasangati Ngabo Health Centre III in Wakiso.'),
+  ('Wakiso','Sumbwe Seed School','Sumbwe-Seed-Secondary-School','Sumbwe Seed Secondary School','The IFMIS workbook is named Sumbwe and places the assets at Sumbwe village. Its headings also say Wakiso Seed School.'),
+  ('Masaka','Bukakata Seed School','Bukakata-Seed-Secondary-School','Bukakata Seed Secondary School','The 25 September toolkit names Bukakata Seed Secondary School in Masaka.'),
+  ('Kyotera','Nangoma HC II','Nangoma-HC-III','Nangoma Health Centre III','The 25 September toolkit names Nangoma Health Centre III in Kyotera.'),
+  ('Kyotera','Kasali TC','Kasali-Tc-Seed-Secondary-School','Kasaali Seed Secondary School','The 25 September toolkit names Kasaali Seed Secondary School. It is counted on master Kasali TC in Kyotera.'),
+  ('Kyankwanzi','Kikooma','Kikooma-HC-III','Kikoma Health Centre III','The 25 September toolkit names Kikoma Health Centre III in Kyankwanzi. The same file also contains the Bunanywa Seed Secondary School return.'),
+  ('Kyankwanzi','Bananywa Seed School','Bananywa-Seed-Secondary-School','Bunanywa Seed Secondary School','The 25 September toolkit names Bunanywa Seed Secondary School in the school section of the Kikoma file. It is counted on master Bananywa.'),
+  ('Mubende','Buseregenyu HC II','Buseregenyu-HC-III','Buseregenyu Health Centre III','The 25 September toolkit checklist names Buseregenyu Health Centre III. The cover says Mityana and a school heading says Makokoto; the supervisor already confirmed Buseregenyu is in Mubende. The Makokoto heading is not a second return.'),
+  ('Mityana','Busunju HCII','Busunju-HC-III','Busunju Health Centre III','The 25 September handwritten scan names Busunju Health Centre III in Mityana District.'),
+  ('Mityana','Namungo HC II','Namungo-HC-III','Namungo Health Centre III','The 25 September handwritten scan names Namungo Health Centre III in Mityana District.'),
+  ('Kibaale','Nyamarunda','Nyamarunda-HC-III','Nyamarunda Health Centre III','The 25 September handwritten scan names Nyamarunda Health Centre III in Kibaale District.'),
+  ('Kasanda','Manyogaseka Seed School','Manyogaseka-Seed-Secondary-School','St Maria Goretti Seed Secondary School','The 25 September handwritten scan names St Maria Goretti Seed School, Manyogaseka, in Kasanda. It is counted on master Manyogaseka.'),
+ ]:
+  r=find(loc,name)
+  set_folder(r,folder)
+  r['ground_name']=ground
+  r['note']=note
+  r['verification']='Verification records received; physical completion not certified'
+  r['source_locator']='Facility toolkit or handwritten scan transcribed into the facility workbook'
  for loc,name,verification,note in [
   ('Bundibugyo','Kyondo HC II','Visit not undertaken; the CAO confirmed the road was unsafe','Depaul confirmed on 23 September 2026 that Kyondo HC III could not be visited because the CAO said the mountainous road was dangerous.'),
   ('Kasese','Kabingo HCII','Information obtained by phone; physical verification not performed','Depaul confirmed on 23 September 2026 that the Kabingo information was obtained by phone because the team could not reach the facility. Physical verification stays unconfirmed.'),
@@ -359,10 +383,22 @@ def main():
    folder='team-25/Hoima City/Hoima-Regional-Blood-Bank'
    if (GROUPED/folder).is_dir():
     r['folder']=folder; r['status']='Field evidence'; r['verification']='Team 25 inventory and photographs received'; r['note']='Hoima Regional Blood Bank inventory and photographs were supplied in the 23 September Team 25 health archive.'; used.add(folder)
+ for r in extra:
+  if key(r.get('lg',''))==key('Kakumiro') and key(r.get('name',''))==key('Mukoora HC III'):
+   r['folder']='team-29/Kakumiro/Mukoora-HC-III'
+   r['ground_name']='Mukoora Health Centre III'
+   r['verification']='Verification records received; physical completion not certified'
+   r['note']='The 25 September toolkit names Mukoora Health Centre III in Kakumiro. It is the same ground facility previously known from the register at UGIFT HEALTH!row 9147.'
+   used.add(r['folder'])
  for path in sorted(set(folder_keys.values())-used):
   parts=path.split('/'); name=parts[2].replace('-',' '); typ='School' if 'school' in name.lower() else 'Health centre'
   r=dict(id='X'+str(len(extra)+1).zfill(3),team=int(parts[0][-2:]),lg=parts[1],name=name,type=typ,scope='Ground return only',status='Field evidence',folder=path,source='',note='Facility-specific return received; no confirmed master match.',ground_name=name,master_ids='',decision_ref='',source_locator='',verification='Verification records received; physical completion not certified')
   if identity(r) not in extra_keys: extra.append(r); extra_keys.add(identity(r))
+ for r in extra:
+  if 'kicucura' in key(r.get('name','')):
+   r['ground_name']='St Catherine Kicucura Seed Secondary School'
+   r['type']='School'
+   r['note']='The 25 September toolkit names St Catherine Kicucura Seed School in Kagadi. It is not matched to Kiryanga or another master school.'
  for r in extra:
   if 'Onywako' in r['name']:
    r['status']='Not verified'; r['verification']='Physical verification explicitly not performed'; r['note']='Form states that assets were reported by the in-charge and were not physically verified. Chat names Onywako on ground, but gives no one-to-one replacement for Alik.'; r['decision_ref']='CHAT11'
@@ -398,7 +434,7 @@ def main():
    r['scope']='Linked receiving facility'; r['master_ids']=link[0]; r['note']=link[1]+' Supervisor message 23 September 2026 09:36.'; r['decision_ref']=link[2]
  for r in extra:
   if r['team']==30 and key(r['lg'])==key('Kasanda') and key(r['name'])==key('Namabaale HC III'):
-   r['source']=f'{team30_root}/NAMABAALE HCIII UGIFT Asset Verification Tool Kit - FINAL (2).docx'
+   r['source']=f'{team30_root}/NAMABAALE HCIII UGIFT Asset Verification Tool Kit - FINAL.docx'
    r['source_locator']='Health-centre interview and checklist'
    r['verification']='Team 30 facility-specific return received; physical completion not certified'
    r['note']='Team 30 return confirms Namabaale Health Centre III in Kasanda; no confirmed master-list match.'
@@ -482,6 +518,13 @@ def main():
   ('Hoima','Buhanika','S230','Kidukuru-Seed-Secondary-School'),
   ('Hoima','Kigorobya Seed School','S231','Kigorobya-Seed-Secondary-School'),
   ('Buliisa','Ngwedo Seed School','S229','Ngwedo-Seed-Secondary-School'),
+  ('Wakiso','Kasoozo HCII','H051','Kasoozo-HC-III'),
+  ('Kiira MC','Kirinya HCII','H358','Kirinya-HC-III'),
+  ('Kiira MC','Kireka HCII','H359','Kireka-HC-III'),
+  ('Mityana','Busunju HCII','H034','Busunju-HC-III'),
+  ('Mityana','Namungo HC II','H035','Namungo-HC-III'),
+  ('Kibaale','Nyamarunda','H299','Nyamarunda-HC-III'),
+  ('Kasanda','Manyogaseka Seed School','S070','Manyogaseka-Seed-Secondary-School'),
  ]:
   school=find(loc,name)
   assert school['id']==ident and school['status']=='Field evidence' and school['folder'].endswith('/'+folder), school
@@ -498,7 +541,7 @@ def main():
  ), inherited_register_extras
  assert not [r for r in records+extra if r['status']=='Register only'], 'Register-only status must be represented as Field evidence with a consolidated-register verification basis'
  consolidated=[r for r in records if r['verification']=='Completed from consolidated register; physical inspection not certified']
- assert len(consolidated)==42, (len(consolidated),[r['id'] for r in consolidated])
+ assert len(consolidated)==41, (len(consolidated),[r['id'] for r in consolidated])
  team30_confirmed={r['id'] for r in records if r['team']==30 and r['status']=='Field evidence'}
  assert {'H012','H013','H011','H014','H301','S069','S236'} <= team30_confirmed, team30_confirmed
  assert st_mugagga['status']=='Field evidence', st_mugagga

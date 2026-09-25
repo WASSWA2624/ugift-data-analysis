@@ -39,7 +39,7 @@ TOP = HEIGHT - 48
 BOTTOM = 42
 GAP = 26
 COL = (CONTENT - GAP) / 2
-AS_OF = '24 September 2026'
+AS_OF = '25 September 2026'
 SUPERVISOR_CORRECTIONS = {
     24: 'Lawrence Kalyowa',
 }
@@ -191,7 +191,7 @@ class Report(BaseDocTemplate):
     def __init__(self, filename):
         super().__init__(str(filename), pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN,
                          topMargin=48, bottomMargin=BOTTOM, title='UgIFT facility data status',
-                         author='UgIFT data reconciliation', subject='Master list and field-return reconciliation, 24 September 2026')
+                         author='UgIFT data reconciliation', subject='Master list and field-return reconciliation, 25 September 2026')
         height = TOP - BOTTOM
         full = Frame(MARGIN, BOTTOM, CONTENT, height, leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0, id='full')
         left = Frame(MARGIN, BOTTOM, COL, height, leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0, id='left')
