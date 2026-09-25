@@ -1,6 +1,6 @@
 # Prompt: build the UgIFT asset registers
 
-You are populating three workbooks. Do the stages in order. Do not invent costs, lives, tags, or categories. Leave a cell blank when the source and the 2023 guidelines do not support a value.
+You are populating three workbooks. Do the stages in order. Read `GOU Asset Accounting Policies and Guidelines 2023.pdf` from start to finish before filling the MF or REF workbook, including the recognition, measurement, depreciation, and small-asset sections and Annex 1. For every column in the sample header, fill it when that reading or the source states the value. Leave it blank only after that check shows neither source applies. A class, an Annex 1 life, a nil residual, straight-line depreciation, `CAPITALIZED`, and `Not Engraved` are guideline values. Do not guess a code, life, or class the guidelines do not state.
 
 Read these before writing any row:
 
@@ -15,7 +15,7 @@ Outputs:
 2. `outputs/asset-register-2026-09-23/ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` filled from the SK workbook
 3. `outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`, a sanitized copy of the MF workbook with missing purchase costs filled by the borrowing rules below
 
-Health centres and seed schools are rows in one workbook, not separate files. Keep header filters and a frozen header row. Record the rules you applied on a Read Me sheet.
+Health centres and seed schools are rows in one workbook, not separate files. Keep header filters and a frozen header row. On the Read Me sheet, record the guideline sections used and, for any sample-header column left blank, the reason it did not apply.
 
 ## Stage 1. SK register from `raw-data-grouped`
 
@@ -66,7 +66,7 @@ When Asset Number or the description was only the count, clear that field on the
 
 ## Stage 2. MF register from the SK workbook
 
-Copy `Sample Header of Asset Register..xlsx` headers into columns A–AW (64 columns). Fill each SK row into one MF row. Do not change the SK workbook.
+Copy `Sample Header of Asset Register..xlsx` headers into columns A–BL (64 columns). Fill each SK row into one MF row. Do not change the SK workbook. After the mapping below, apply the guidelines to every column they cover.
 
 Map an SK column into A–AW only when the sample header and the 2023 guidelines give that column a meaning the source can fill:
 
@@ -88,9 +88,9 @@ Map an SK column into A–AW only when the sample header and the 2023 guidelines
 
 `FIXED_ASSETS_UNITS` is 1 on every row.
 
-Put every remaining SK column, in source order, in ATTRIBUTE1 onward, with the source name in the header: `ATTRIBUTE1(Item Description)`, `ATTRIBUTE2(Recoverable cost)`, and so on. Do not force empty attribute columns.
+`ATTRIBUTE1`–`ATTRIBUTE15` keep the sample headers. Fill each one when the guidelines’ attribute guide for that asset class defines it and the source states the fact. Do not rename those headers to SK column names. An SK field with no column in A–BL and no class attribute is written in Remarks, labelled with the source column name.
 
-Leave these blank unless the source or the guidelines state them: LOCATION_SEGMENT4, every expense-account and clearing-account segment, PRORATE_CONVENTION_CODE, ASSET_KEY_SEGMENT1, EMPLOYEE_NUMBER, AMORTIZATION_START_DATE, AMORTIZE_NBV_FLAG, ASSET_CATEGORY_MINOR3. Recoverable cost is not salvage value. The guidelines use salvage as the residual in a class life, and recoverable amount as an impairment test.
+Fill `PRORATE_CONVENTION_CODE` when the guidelines state the convention. Fill an expense-account or clearing-account segment only when the guidelines state that segment, including account 221012 for small office equipment and loose tools that are not capitalized. Leave `LOCATION_SEGMENT4`, `ASSET_KEY_SEGMENT1`, `EMPLOYEE_NUMBER`, `AMORTIZATION_START_DATE`, `AMORTIZE_NBV_FLAG`, and `ASSET_CATEGORY_MINOR3` blank unless the guidelines or the source state them. Recoverable cost is not salvage value. The guidelines use salvage as the residual in a class life, and recoverable amount as an impairment test.
 
 ### Columns the SK workbook does not provide
 
@@ -127,9 +127,9 @@ Sanitize `ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` after Stage 2. Copy that sa
 
 **Facility name** (`LOCATION_SEGMENT3`). A school ends with `Seed Secondary School`. A health centre ends with `Health Centre III`, including a master Health Centre II that was upgraded. Spell the words in full. Do not write `HCII`, `HC III`, `H/C`, `H.C`, or `Health Center`. Do not add the suffix twice. Keep a longer official name that already contains those words, such as `St Mugagga Vocational Seed Secondary School`.
 
-**Facility type.** The SK facility-type value, wherever it is stored, is only `School` or `Health centre`.
+**Facility type.** Where the facility type is written, it is only `School` or `Health centre`.
 
-**Condition.** Equipment status is only `Functional` or `Faulty`. `Functional` covers in use, functioning, working well, available, verified, and good condition. `Faulty` covers damaged, broken, not in use, not functioning, obsolete, and unserviceable. Move any longer status wording into Remarks, appended to what is already there. If the source does not say which, leave the status blank. Set `IN_USE_FLAG` to `YES` for Functional and `NO` for Faulty.
+**Condition.** Equipment status is only `Functional` or `Faulty`. `Functional` covers in use, functioning, working well, available, verified, and good condition. `Faulty` covers damaged, broken, not in use, not functioning, not received, obsolete, unserviceable, disposed, lost, and missing. Move any longer status wording into Remarks. If the source does not say which, leave the status blank. Set `IN_USE_FLAG` to `YES` for Functional and `NO` for Faulty.
 
 **Tag.** A blank tag, or a placeholder tag, is `Not Engraved`. Keep a real engraved number as written.
 
