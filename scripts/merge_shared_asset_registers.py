@@ -10,12 +10,14 @@ from __future__ import annotations
 
 import hashlib
 import re
+import zipfile
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, date
 from pathlib import Path
 
 import xlrd
+from docx import Document
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
@@ -49,6 +51,13 @@ HEADERS = [
 ]
 
 MAX_QUANTITY = 500
+BULK_ITEM = re.compile(
+    r"(?i)\b(desks?|chairs?|stools?|tables?|shelves|benches|beds?|cupboards?|couches?|cylinders?)\b"
+)
+MODEL_TAIL = re.compile(
+    r"(?i)^(laserjet|laptop|printer|elitebook|probook|latitude|inspiron|pavilion|"
+    r"thinkpad|monitor|cpu|iphone|samsung|nokia|tecno|inch|gen|core|mhz|gb)$"
+)
 WORD_COUNTS = {
     "a": 1, "an": 1, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
     "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10,
@@ -188,7 +197,7 @@ def excluded_programme_file(path: Path) -> bool:
 def candidate_files() -> list[Path]:
     found: list[Path] = []
     for path in GROUPED.rglob("*"):
-        if not path.is_file() or path.suffix.lower() not in {".xls", ".xlsx"}:
+        if not path.is_file() or path.suffix.lower() not in {".xls", ".xlsx", ".docx"}:
             continue
         if path.name.startswith("~$"):
             continue
@@ -200,7 +209,10 @@ def candidate_files() -> list[Path]:
         grouped[(str(path.parent).casefold(), family_key(path))].append(path)
     chosen: list[Path] = []
     for paths in grouped.values():
-        paths.sort(key=lambda item: (-item.stat().st_size, len(str(item)), str(item)))
+        paths.sort(key=lambda item: (
+            {".xlsx": 0, ".xls": 1, ".docx": 2}.get(item.suffix.lower(), 3),
+            -item.stat().st_size, len(str(item)), str(item),
+        ))
         chosen.append(paths[0])
     seen: set[str] = set()
     unique: list[Path] = []
@@ -211,6 +223,24 @@ def candidate_files() -> list[Path]:
         seen.add(digest)
         unique.append(path)
     return unique
+
+
+def docx_has_asset_table(path: Path) -> bool:
+    try:
+        with zipfile.ZipFile(path) as archive:
+            xml = archive.read("word/document.xml")
+    except (OSError, zipfile.BadZipFile, KeyError):
+        return False
+    return b"equipment" in xml.lower() and (b"asset number" in xml.lower() or b"item description" in xml.lower())
+
+
+def docx_tables(path: Path) -> list[tuple[str, list[list[object]]]]:
+    document = Document(path)
+    tables = []
+    for index, table in enumerate(document.tables, 1):
+        rows = [[clean(cell.text) for cell in row.cells] for row in table.rows]
+        tables.append((f"Table {index}", rows))
+    return tables
 
 
 def sheet_rows(path: Path) -> list[tuple[str, list[list[object]]]]:
@@ -809,7 +839,12 @@ def read_workbook(path: Path) -> list[Asset]:
     relative = path.relative_to(GROUPED).as_posix()
     fallback_lg, fallback_facility = path_context(path)
     assets: list[Asset] = []
-    sheets = sheet_rows(path)
+    if path.suffix.lower() == ".docx":
+        if not docx_has_asset_table(path):
+            return []
+        sheets = docx_tables(path)
+    else:
+        sheets = sheet_rows(path)
     template_maps = []
     for _name, rows in sheets:
         for row in rows[:20]:
@@ -838,6 +873,84 @@ def read_workbook(path: Path) -> list[Asset]:
         if not asset.facility_type:
             asset.facility_type = facility_type_for(asset.facility, asset.department, "", path.name)
     return assets
+
+
+def bare_count(value: object) -> int | None:
+    """A cell whose whole value is a count, not a year, serial or amount."""
+    if isinstance(value, bool) or value is None:
+        return None
+    if isinstance(value, (int, float)) and float(value).is_integer():
+        count = int(value)
+    else:
+        text = clean(value).replace(",", "")
+        if not re.fullmatch(r"\d{1,4}", text):
+            return None
+        count = int(text)
+    if count in range(1990, 2036) or not 1 < count <= MAX_QUANTITY:
+        return None
+    return count
+
+
+def trailing_quantity(item: str) -> tuple[str, int] | None:
+    """'Examination Couch 2' and 'Desks 125' state the count after the item name.
+
+    A model suffix such as LaserJet 1320 or Laptop 840 is not a count.
+    Larger counts are accepted only for bulk items such as desks and chairs.
+    """
+    match = re.fullmatch(r"(.+?)\s+(\d{1,4})", clean(item))
+    if not match:
+        return None
+    count = int(match.group(2))
+    name = clean(match.group(1)).rstrip(" ,.;")
+    if not name or count in range(1990, 2036) or not 1 < count <= MAX_QUANTITY:
+        return None
+    last = name.split()[-1]
+    if MODEL_TAIL.match(last):
+        return None
+    if count > 40 and not BULK_ITEM.search(name):
+        return None
+    return name, count
+
+
+def phrase_count(text: object) -> tuple[int, str] | None:
+    """'2 microscopes, white' states a count in front of the description."""
+    raw = clean(text)
+    match = re.match(
+        r"(?i)^(\d{1,3})\s+(?!inch\b|lit(?:re|er)s?\b|mm\b|cm\b|kg\b|gb\b|mhz\b|w\b)(.+)$",
+        raw,
+    )
+    if not match:
+        return None
+    count = int(match.group(1))
+    if 1 < count <= 40:
+        return count, clean(match.group(2))
+    return None
+
+
+def embedded_quantity(text: str) -> int | None:
+    """A count written inside a description, such as 'qty 100' or '3 classrooms'."""
+    raw = clean(text)
+    if not raw or bare_count(raw):
+        return None
+    patterns = (
+        rf"(?i)\b(?:qty|quantity|no\.?\s*of\s+(?:assets|items)|number\s+of\s+(?:assets|items))\s*[:\-]?\s*({COUNT_WORD})\b",
+        rf"(?i)\b({COUNT_WORD})\s*(?:pcs|pieces|units|items|desks?|chairs?|benches|stools?|tables?|beds?|sets|labs?|classrooms?|blocks?)\b",
+    )
+    for pattern in patterns:
+        match = re.search(pattern, raw)
+        if match and (count := as_count(match.group(1))) and 1 < count <= MAX_QUANTITY:
+            return count
+    return None
+
+
+def per_item_amount(value: object, total: int) -> object:
+    """Split a line total across the rows created from that line."""
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or total <= 1:
+        return value
+    share = value / total
+    if abs(share - round(share)) < 1e-6:
+        return int(round(share))
+    return round(share, 2)
 
 
 def furniture_quantity(item: str) -> tuple[str, int] | None:
@@ -908,6 +1021,14 @@ def condition_groups(status: str, remarks: str) -> list[tuple[int, str | None]] 
 
 
 def decide_groups(asset: Asset, alone: bool) -> tuple[str, list[tuple[int, str | None]]]:
+    """Choose how many asset rows a source line represents.
+
+    A stated quantity is taken from a quantity column, a number in brackets,
+    a trailing count on the item name, or — when this is the only line for
+    that item — a bare number in Asset Number, the description, or another
+    text field. The same rules already expand quantities in the 22 September
+    register: one physical item becomes one row.
+    """
     if asset.explicit_qty and asset.explicit_qty > 1:
         return asset.item, [(asset.explicit_qty, None)]
     parenthetical = parenthetical_quantity(asset.item)
@@ -915,6 +1036,22 @@ def decide_groups(asset: Asset, alone: bool) -> tuple[str, list[tuple[int, str |
         name, count = parenthetical
         return name, [(count, None)]
     if alone:
+        trailing = trailing_quantity(asset.item)
+        if trailing:
+            name, count = trailing
+            return name, [(count, None)]
+        if blank_tag(asset.tag) and (count := bare_count(asset.asset_number)):
+            return asset.item, [(count, None)]
+        if blank_tag(asset.tag) and (found := phrase_count(asset.asset_number)):
+            return asset.item, [(found[0], None)]
+        if count := bare_count(asset.description):
+            return asset.item, [(count, None)]
+        if found := phrase_count(asset.description):
+            return asset.item, [(found[0], None)]
+        if count := embedded_quantity(asset.description):
+            return asset.item, [(count, None)]
+        if count := embedded_quantity(asset.asset_number):
+            return asset.item, [(count, None)]
         furniture = furniture_quantity(asset.item)
         if furniture:
             name, count = furniture
@@ -948,7 +1085,20 @@ def explode(assets: list[Asset]) -> list[Asset]:
                 copy.item = item
                 if status:
                     copy.status = status
-                copy.extras["unit"] = f"{running} of {total}" if total > 1 else ""
+                if total > 1:
+                    if blank_tag(asset.tag) and bare_count(asset.asset_number) == total:
+                        copy.asset_number = ""
+                    elif blank_tag(asset.tag) and (found := phrase_count(asset.asset_number)) and found[0] == total:
+                        copy.asset_number = ""
+                        if not copy.description or blank_tag(copy.description):
+                            copy.description = found[1]
+                    if bare_count(asset.description) == total:
+                        copy.description = ""
+                    elif (found := phrase_count(asset.description)) and found[0] == total:
+                        copy.description = found[1]
+                    for field_name in ("recoverable", "cost", "acc_dep", "nbv", "ytd"):
+                        setattr(copy, field_name, per_item_amount(getattr(copy, field_name), total))
+                    copy.extras["unit"] = f"item {running} of {total}"
                 exploded.append(copy)
     return exploded
 
@@ -958,27 +1108,29 @@ def blank_tag(value: str) -> bool:
     return not text or bool(re.search(r"not engrav|n a|none|nil", text))
 
 
+def identity_item(item: str) -> str:
+    parenthetical = parenthetical_quantity(item)
+    if parenthetical:
+        return parenthetical[0]
+    trailing = trailing_quantity(item)
+    if trailing:
+        return trailing[0]
+    return item
+
+
 def line_signature(asset: Asset) -> tuple[str, ...]:
     """Identity of one recorded line, ignoring which workbook it came from."""
     tag = "" if blank_tag(asset.tag) else norm(asset.tag)
+    item = norm(identity_item(asset.item))
     if tag:
-        return ("tag", tag, norm(asset.item))
-    return ("line", norm(asset.item), norm(asset.description), norm(asset.status), norm(asset.department))
+        return ("tag", tag, item)
+    description = "" if bare_count(asset.description) else norm(asset.description)
+    return ("line", item, description, norm(asset.status), norm(asset.department))
 
 
 def represented_count(asset: Asset) -> int:
-    if asset.explicit_qty and asset.explicit_qty > 1:
-        return asset.explicit_qty
-    parenthetical = parenthetical_quantity(asset.item)
-    if parenthetical:
-        return parenthetical[1]
-    furniture = furniture_quantity(asset.item)
-    if furniture:
-        return furniture[1]
-    groups = condition_groups(asset.status, asset.remarks)
-    if groups and sum(count for count, _ in groups) > 1:
-        return sum(count for count, _ in groups)
-    return 1
+    _, groups = decide_groups(asset, alone=True)
+    return sum(count for count, _ in groups)
 
 
 def union_facility_submissions(assets: list[Asset]) -> tuple[list[Asset], list[str]]:
@@ -1032,8 +1184,11 @@ def union_facility_submissions(assets: list[Asset]) -> tuple[list[Asset], list[s
 
 
 def check_examples() -> None:
-    def groups(item="", status="", remarks="", qty=None, alone=True):
-        asset = Asset(item=item, status=status, remarks=remarks, explicit_qty=qty)
+    def groups(item="", status="", remarks="", qty=None, alone=True, asset_number="", description="", tag=""):
+        asset = Asset(
+            item=item, status=status, remarks=remarks, explicit_qty=qty,
+            asset_number=asset_number, description=description, tag=tag,
+        )
         return decide_groups(asset, alone)
 
     assert groups(status="2 functional and one in the store")[1] == [(2, "Functional"), (1, "In the store")]
@@ -1048,6 +1203,19 @@ def check_examples() -> None:
     assert groups(status="Not received")[1] == [(1, None)]
     assert groups(remarks="120 receive , 118 verified and in use")[1] == [(118, None)]
     assert groups(item="CPU", status="working well", alone=False)[1] == [(1, None)]
+    assert groups(item="Office chairs", asset_number="286", tag="N/A") == ("Office chairs", [(286, None)])
+    assert groups(item="Examination Couch 2") == ("Examination Couch", [(2, None)])
+    assert groups(item="Autoclave 20 Liters., Duo Operated 2")[0].endswith("Operated")
+    assert groups(item="Autoclave 20 Liters., Duo Operated 2")[1] == [(2, None)]
+    assert groups(item="Desks", description="120", tag="N/A")[1] == [(120, None)]
+    assert groups(item="CPU", asset_number="15", tag="SSUGU-SEED PC/02")[1] == [(1, None)]
+    assert groups(item="Desks", asset_number="120", alone=False)[1] == [(1, None)]
+    assert groups(item="HP LASERJET 1300")[1] == [(1, None)]
+    assert groups(item="HP LAPTOP 840")[1] == [(1, None)]
+    assert groups(item="LASERJET 1320")[1] == [(1, None)]
+    assert groups(item="School desks 120") == ("School desks", [(120, None)])
+    assert groups(item="Counting chamber", asset_number="2 microscopes, white", tag="N/A")[1] == [(2, None)]
+    assert groups(item="Monitor", description="15 inch screen")[1] == [(1, None)]
     banner = parse_banner("NAME OF LG: DOKOLO DISTRICT LOCAL GOVERNMENT NAME OF HEALTH FACILITY: ABALANG HEALTH CENTER III")
     assert banner and "ABALANG" in banner[1].upper()
     assert parse_banner("BITSYA HCIII, BUHWEJU DC")[0].upper().startswith("BUHWEJU")
@@ -1099,11 +1267,11 @@ def write_workbook(assets: list[Asset], sources: list[str], notes: list[str]) ->
     lines = [
         "One workbook. Health centres and seed schools are rows in Asset Register, not separate files.",
         "Columns follow the health-centre and seed-school templates in new-templates-to-follow. Facility holds the template Health Centre / Location value.",
-        "Each physical item is one row. Where a source line stated a quantity, that line was repeated once per item and Unit shows the sequence.",
-        "A quantity was taken from a quantity column, a number in brackets on the item name, a single furniture line such as Desks 125, or a count written in the status or remarks. Lines that were already one row per item were left as one row.",
-        "Cost is the figure written on the source line, copied onto each item from that line.",
-        "Every spreadsheet under raw-data-grouped was read, except programme-documents. The data-management chat in that folder is the exception.",
-        "Photographs, Word reports and the reconciliation lists are not asset lines.",
+        "Each physical item is one row, the same rule as the 22 September register. Where a source line stated a quantity, that line was repeated once per item. Unit shows item 1 of 100, and the units column in the GOU template is 1.",
+        "A quantity was taken from a quantity column, a number in brackets, a trailing count on the item name such as Examination Couch 2, a bare number in Asset Number or the description when that was the only line for the item, or a count written in the status or remarks. Lines that were already one row per item were left as one row.",
+        "Where a grouped line carried one cost, that figure was treated as the line total and divided by the quantity, so each asset row holds its share.",
+        "Spreadsheets and Word verification tables under raw-data-grouped were read, except programme-documents. The data-management chat in that folder is the exception.",
+        "Photographs, narrative reports and the reconciliation lists are not asset lines.",
         "Draft sheets were left out where the same workbook already had a consolidated sheet with local government and facility columns.",
         "Where a team submitted more than one workbook for the same facility, the lists were combined. A repeated line was kept once, at the larger count. An item present in only one return was kept.",
         "",

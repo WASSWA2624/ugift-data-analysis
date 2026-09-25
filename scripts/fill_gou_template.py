@@ -171,6 +171,7 @@ def build_row(values: tuple[object, ...], source_headers: list[str]) -> list[obj
     source = {name: values[index] if index < len(values) else None for index, name in enumerate(source_headers)}
     item = clean(source.get("Equipment/Item"))
     description = clean(source.get("Item Description"))
+    unit = clean(source.get("Unit"))
     department = clean(source.get("Department"))
     facility = clean(source.get("Facility"))
     lg = clean(source.get("Local Government"))
@@ -178,7 +179,8 @@ def build_row(values: tuple[object, ...], source_headers: list[str]) -> list[obj
     status = clean(source.get("Equipment status"))
     row = [None] * 64
     row[0] = book_code(lg)
-    row[1] = item or description
+    name = item or description
+    row[1] = f"{name} [{unit}]" if unit else name
     row[7] = 1
     row[8] = location_segment1(lg)
     row[9] = department
@@ -237,8 +239,8 @@ def main() -> None:
         "Filled from UgIFT Shared Asset Register. The shared register was not changed.",
         "Columns A to AW follow Sample Header of Asset Register and the 2023 asset-accounting guidelines.",
         "BOOK_TYPE_CODE is the local government in the sample form, ending in BK. LOCATION_SEGMENT1 is the same government as the vote name.",
-        "DESCRIPTION is the equipment item. LOCATION_SEGMENT2 is the department. LOCATION_SEGMENT3 is the facility.",
-        "FIXED_ASSETS_UNITS is 1 because each row is one item. Cost is the historical cost. Accumulated depreciation is the depreciation reserve. Year-to-date depreciation is YTD_DEPRN.",
+        "DESCRIPTION is the equipment item. A row created from a counted source line is marked [item 1 of 100]. LOCATION_SEGMENT2 is the department. LOCATION_SEGMENT3 is the facility.",
+        "FIXED_ASSETS_UNITS is 1 because each row is one item. A cost on a counted source line is divided by that count. Accumulated depreciation is the depreciation reserve. Year-to-date depreciation is YTD_DEPRN.",
         "Where a life in months is recorded, the row is marked depreciable on the straight-line method used in the guidelines. The life itself is the life recorded in the source.",
         "IN_USE_FLAG is YES or NO only where the equipment status says so. The full status text is kept in an attribute column.",
         "Recoverable cost is not written as salvage value. The guidelines treat salvage as the residual built into a class life, and recoverable amount as an impairment test.",
