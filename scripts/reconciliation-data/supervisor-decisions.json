@@ -1072,6 +1072,110 @@
       "quote": "Kishangara Seed Secondary School does not exist in Ibanda.",
       "explicit": true,
       "note": "Direct programme data-management instruction. Preserve master entry S216 as an audit record, mark it reported absent, and do not create or infer a replacement facility."
+    },
+    {
+      "id": "CHAT45A",
+      "date_time": "2026-09-24 16:12",
+      "speaker": "UGIFT EFICON DEPAUL",
+      "team": 29,
+      "lg": "Kakumiro",
+      "master_name": "Kikoola",
+      "ground_name": "Mukoora HC III",
+      "decision": "Renamed",
+      "quote": "The correct name for the facility is mukoola HCIII, but the master list was showing it as kikoola",
+      "explicit": true,
+      "note": "The Mukoora toolkit is the return for this master row. Count it once."
+    },
+    {
+      "id": "CHAT45B",
+      "date_time": "2026-09-24 16:15",
+      "speaker": "UGIFT EFICON DEPAUL",
+      "team": 25,
+      "lg": "Kikuube",
+      "master_name": "Kiziranfumbi Seed School",
+      "ground_name": null,
+      "decision": "Outside UgIFT",
+      "quote": "Kiziranfumbi seed secondary school is not under ugift and so should be excluded from the list",
+      "explicit": true,
+      "note": "Excluded from the UgIFT list. No replacement school is inferred."
+    },
+    {
+      "id": "CHAT45C",
+      "date_time": "2026-09-24 17:43",
+      "speaker": "UGIFT EFICON DEPAUL",
+      "team": 30,
+      "lg": "Kasanda",
+      "master_name": "Kyakatebe HC II",
+      "ground_name": "Namabaale HC III",
+      "decision": "Renamed",
+      "quote": "Kyakatebe health centre III was renamed namabaale HCIII as above.",
+      "explicit": true,
+      "note": "This later message supersedes the 17:02 statement that Kyakatebe does not exist. The Namabaale toolkit is the return. Count it once."
+    },
+    {
+      "id": "CHAT45D",
+      "date_time": "2026-09-24 17:51",
+      "speaker": "UGIFT EFICON DEPAUL",
+      "team": 30,
+      "lg": "Kasanda",
+      "master_name": "Butoloogo HC II",
+      "ground_name": null,
+      "decision": "Does not exist",
+      "quote": "There is no health facility called butoloogo health centre III in kasanda district",
+      "explicit": true,
+      "note": "Reported absent. No replacement facility is inferred."
+    },
+    {
+      "id": "CHAT45E",
+      "date_time": "2026-09-24 17:56",
+      "speaker": "SULAINA NANDUDU JULIET'S COLLEAGUE",
+      "team": 33,
+      "lg": "Masaka",
+      "master_name": "Kyabakuza HCII",
+      "ground_name": null,
+      "decision": "Staff quarters only",
+      "quote": "UgIFT only constructed staff quarters for Kyabakuza Health Center III",
+      "explicit": true,
+      "note": "The stated UgIFT scope is staff quarters only, so there is no full asset-verification return."
+    },
+    {
+      "id": "CHAT45F",
+      "date_time": "2026-09-24 18:12",
+      "speaker": "SULAINA NANDUDU JULIET'S COLLEAGUE",
+      "team": 33,
+      "lg": "Sembabule",
+      "master_name": "Kyera HCII",
+      "ground_name": null,
+      "decision": "Not verified",
+      "quote": "Kyera Health Centre III received Ugift Assets but they were all still brand new, in store and not in use. We failed to get the information concerning the facility because the incharge was new and had no knowledge about the equipments",
+      "explicit": true,
+      "note": "Assets were received but a return could not be completed."
+    },
+    {
+      "id": "CHAT45G",
+      "date_time": "2026-09-24 18:31",
+      "speaker": "SULAINA NANDUDU JULIET'S COLLEAGUE",
+      "team": 33,
+      "lg": "Sembabule",
+      "master_name": "Ntete HCII",
+      "ground_name": null,
+      "decision": "Not verified",
+      "quote": "Ntete HCIII was not verified because the person deligated to help us through did not have enough information about the equipment and all of them were new and still in store",
+      "explicit": true,
+      "note": "Assets were in store and the delegated informant could not describe them."
+    },
+    {
+      "id": "CHAT45H",
+      "date_time": "2026-09-24 19:26",
+      "speaker": "UGIFT EFICON DEPAUL",
+      "team": 25,
+      "lg": "Kagadi",
+      "master_name": "Kiryanga Seed School",
+      "ground_name": "St Catherine Kicucura Seed School",
+      "decision": "Renamed",
+      "quote": "Kiryanga Seed secondary school does not exist under ugift instead kicucura st Catherine SSS exists in kagadi under Ugift as attached below",
+      "explicit": true,
+      "note": "The St Catherine Kicucura toolkit is the return for this master row. Count it once."
     }
   ],
   "attachments": [
@@ -1195,6 +1299,7 @@
     "Do not merge Nakaseke Ngoma with Masindi Budongo. The rename message names neither district.",
     "Do not merge Lwengo Kagganda HC III with Mbirizi Seed School or with Lwengo Seed School. The message calls Kagganda a seed school while the master lists a health centre.",
     "Lawrence report of missing Kira, Nakaseke, Nakasongola and Zingo returns is a submission gap, not evidence of absence. Zingo is not on the master list.",
-    "Johnson's 24 September 13:32 screenshot says Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HC III did not benefit from UgIFT. Mayanga HC III is confirmed inside the Mitooma file. Mayanga Seed School is not covered by that message. Kishangara Seed Secondary School is a separate programme decision: it does not exist in Ibanda."
+    "Johnson's 24 September 13:32 screenshot says Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HC III did not benefit from UgIFT. Mayanga HC III is confirmed inside the Mitooma file. Mayanga Seed School is not covered by that message. Kishangara Seed Secondary School is a separate programme decision: it does not exist in Ibanda.",
+    "The 24 September evening messages rename Kikoola to Mukoora, Kyakatebe to Namabaale and Kiryanga to St Catherine Kicucura. Kiziranfumbi is outside UgIFT. Butoloogo does not exist in Kasanda. Kyabakuza received staff quarters only. Kyera and Ntete could not be verified because the assets were new and in store."
   ]
 }

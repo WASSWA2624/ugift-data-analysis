@@ -338,6 +338,8 @@ def main():
   ('Mityana','Namungo HC II','Namungo-HC-III','Namungo Health Centre III','The 25 September handwritten scan names Namungo Health Centre III in Mityana District.'),
   ('Kibaale','Nyamarunda','Nyamarunda-HC-III','Nyamarunda Health Centre III','The 25 September handwritten scan names Nyamarunda Health Centre III in Kibaale District.'),
   ('Kasanda','Manyogaseka Seed School','Manyogaseka-Seed-Secondary-School','St Maria Goretti Seed Secondary School','The 25 September handwritten scan names St Maria Goretti Seed School, Manyogaseka, in Kasanda. It is counted on master Manyogaseka.'),
+  ('Kakumiro','Kikoola','Mukoora-HC-III','Mukoora Health Centre III','Depaul said on 24 September 2026 that the master name Kikoola is Mukoora Health Centre III. The Mukoora toolkit is the return and is counted once on this row.'),
+  ('Kagadi','Kiryanga Seed School','St-Catherine-Kicucura-Seed-Secondary-School','St Catherine Kicucura Seed Secondary School','Depaul said on 24 September 2026 that Kiryanga is not a UgIFT school and that St Catherine Kicucura Seed School in Kagadi is the UgIFT school. That toolkit is counted once on this row.'),
  ]:
   r=find(loc,name)
   set_folder(r,folder)
@@ -388,7 +390,10 @@ def main():
    r['folder']='team-29/Kakumiro/Mukoora-HC-III'
    r['ground_name']='Mukoora Health Centre III'
    r['verification']='Verification records received; physical completion not certified'
-   r['note']='The 25 September toolkit names Mukoora Health Centre III in Kakumiro. It is the same ground facility previously known from the register at UGIFT HEALTH!row 9147.'
+   r['note']='The 25 September toolkit names Mukoora Health Centre III in Kakumiro. Depaul said the master list name Kikoola is this facility, so the return is counted once on H292.'
+   r['scope']='Linked receiving facility'
+   r['master_ids']='H292'
+   r['decision_ref']='CHAT45A'
    used.add(r['folder'])
  for path in sorted(set(folder_keys.values())-used):
   parts=path.split('/'); name=parts[2].replace('-',' '); typ='School' if 'school' in name.lower() else 'Health centre'
@@ -437,7 +442,18 @@ def main():
    r['source']=f'{team30_root}/NAMABAALE HCIII UGIFT Asset Verification Tool Kit - FINAL.docx'
    r['source_locator']='Health-centre interview and checklist'
    r['verification']='Team 30 facility-specific return received; physical completion not certified'
-   r['note']='Team 30 return confirms Namabaale Health Centre III in Kasanda; no confirmed master-list match.'
+   r['note']='Team 30 return confirms Namabaale Health Centre III in Kasanda. Depaul said Kyakatebe was renamed Namabaale, so this return is counted once on master H015.'
+   r['scope']='Linked receiving facility'
+   r['master_ids']='H015'
+   r['decision_ref']='CHAT45C'
+ kyakatebe=find('Kasanda','Kyakatebe HC II')
+ kyakatebe['status']='Field evidence'
+ kyakatebe['ground_name']='Namabaale Health Centre III'
+ kyakatebe['source']=f'{team30_root}/NAMABAALE HCIII UGIFT Asset Verification Tool Kit - FINAL.docx'
+ kyakatebe['source_locator']='Health-centre interview and checklist'
+ kyakatebe['decision_ref']='CHAT45C'
+ kyakatebe['verification']='Verification records received; physical completion not certified'
+ kyakatebe['note']='Depaul first said Kyakatebe does not exist in Kasanda, then said it was renamed Namabaale Health Centre III. The later rename is used. The Namabaale toolkit is the return and is counted once on this row.'
  # New Mayanga rows supplement its original register evidence.
  mayanga=find('Mitooma','Mayanga HC II'); mayanga.setdefault('supplemental_sources',[]).append('_multi-team/teams-19-21/data updates - western.xls'); mayanga.setdefault('supplemental_locators',[]).append('Sheet3!B3'); mayanga['note']+=' New western update also has Mayanga asset rows (Sheet3!B3).'
  for r in records+extra:
@@ -478,6 +494,20 @@ def main():
    r['note']=(r['note']+' ' if r['note'] else '')+submitted_gap
    r['decision_ref']=r.get('decision_ref') or 'CHAT41'
  # A facility with no return is completed once a reason or reconciliation is on file.
+ for loc,name,status,ref,note in [
+  ('Kikuube','Kiziranfumbi Seed School','Outside UgIFT','CHAT45B','Depaul said on 24 September 2026 that Kiziranfumbi Seed Secondary School is not under UgIFT and should be excluded. No replacement school is inferred.'),
+  ('Kasanda','Butoloogo HC II','Reported absent','CHAT45D','Depaul said on 24 September 2026 that there is no health facility called Butoloogo Health Centre III in Kasanda. No replacement is inferred.'),
+  ('Masaka','Kyabakuza HCII','Not verified','CHAT45E','Sulaina said on 24 September 2026 that UgIFT only constructed staff quarters for Kyabakuza Health Centre III, so there is no full asset-verification return.'),
+  ('Sembabule','Kyera HCII','Not verified','CHAT45F','Sulaina said on 24 September 2026 that Kyera received UgIFT assets but they were new, in store and not in use, and the new in-charge could not describe them.'),
+  ('Sembabule','Ntete HCII','Not verified','CHAT45G','Sulaina said on 24 September 2026 that Ntete was not verified because the delegated informant lacked information and the equipment was new and still in store.'),
+ ]:
+  r=find(loc,name)
+  r['status']=status
+  r['decision_ref']=ref
+  r['note']=note
+  r['source']=''
+  r['source_locator']=ref
+  r['folder']=''
  explained_statuses={'Needs review','Reported absent','No UgIFT assets','Outside UgIFT','Replaced','Not verified'}
  for r in records:
   has_reason=bool((r.get('note') or '').strip() or r.get('decision_ref'))
@@ -493,6 +523,8 @@ def main():
   r['verification']='Case explained or reconciled; counted as completed'
   if not r.get('source'):
    r['source']=LATEST_CHAT if r.get('decision_ref') else MASTER
+   if str(r.get('decision_ref','')).startswith('CHAT45'):
+    r['source']='_multi-team/programme-documents/data-management-chat/WhatsApp Chat with DATA MANAGEMENT UGIFT (5).txt'
    r['source_locator']=r.get('source_locator') or r.get('decision_ref') or 'Documented case'
  records.sort(key=lambda r:(r['team'],r['lg'],r['type'],r['name']))
  extra.sort(key=lambda r:(r['team'],r['lg'],r['name']))
@@ -528,6 +560,21 @@ def main():
  ]:
   school=find(loc,name)
   assert school['id']==ident and school['status']=='Field evidence' and school['folder'].endswith('/'+folder), school
+ kikoola=find('Kakumiro','Kikoola')
+ kiryanga=find('Kagadi','Kiryanga Seed School')
+ kyakatebe=find('Kasanda','Kyakatebe HC II')
+ assert kikoola['id']=='H292' and kikoola['status']=='Field evidence' and kikoola['decision_ref']=='CHAT45A', kikoola
+ assert kiryanga['id']=='S232' and kiryanga['status']=='Field evidence' and kiryanga['decision_ref']=='CHAT45H', kiryanga
+ assert kyakatebe['id']=='H015' and kyakatebe['status']=='Field evidence' and 'Namabaale' in kyakatebe['ground_name'], kyakatebe
+ for loc,name,ident in [
+  ('Kikuube','Kiziranfumbi Seed School','S237'),
+  ('Kasanda','Butoloogo HC II','H010'),
+  ('Masaka','Kyabakuza HCII','H031'),
+  ('Sembabule','Kyera HCII','H048'),
+  ('Sembabule','Ntete HCII','H047'),
+ ]:
+  closed=find(loc,name)
+  assert closed['id']==ident and closed['status']=='Field evidence' and closed['verification'].startswith('Case explained'), closed
  amanyiri=find('Yumbe','Amanyiri')
  lodonga=find('Yumbe','Ladonga Seed School')
  assert amanyiri['status']=='Field evidence' and amanyiri['decision_ref']=='USER02', amanyiri
