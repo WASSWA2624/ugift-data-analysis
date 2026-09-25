@@ -149,9 +149,9 @@ Search in this order:
 2. **Other local governments.** Use the same year, or the nearest period. Colour the cost cell **orange** (`#F4B183`).
 3. **The whole workbook.** Use this only when steps 1 and 2 find no price. Colour the cost cell **green** (`#C6EFCE`).
 
-Write the source in Remarks, including the method, the local government or governments, the purchase year, and whether the figure is one price or the median of several. Example: `Borrowed purchase cost from the same local government (Hoima DLG), purchase year 2024, the median price of 6 assets with the same name.`
+Do not write a borrowed price or a borrowed life in Remarks, or in `ATTRIBUTE6(Remarks)`. That column must never say the cost or life came from another asset, local government, year, or median. The cell colour on the cost or life is the only marker. A life already on the row stays white and unchanged.
 
-A missing useful life may be borrowed in the same order and with the same colours. Use the most common life of the matching assets, and only where life is at least 12 months and the asset is not marked out of use. Record that source in Remarks as well. A life already on the row stays white and unchanged.
+A missing useful life may be borrowed in the same order and with the same colours. Use the most common life of the matching assets, and only where life is at least 12 months and the asset is not marked out of use.
 
 Where cost, a nil residual (section 5.7), life in months, and the month placed in service are known, and the asset is in use, calculate straight-line depreciation to 30 September 2026. Monthly charge = (cost − residual) / life in months. Accumulated depreciation runs from the placed-in-service month through September 2026 and stops at the end of useful life. Year-to-date depreciation is the July–September 2026 portion. Net book value is cost minus accumulated depreciation. Leave any of those amounts unchanged when the source already recorded them.
 
