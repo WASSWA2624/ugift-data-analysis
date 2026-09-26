@@ -1,0 +1,196 @@
+account,class_name,kind
+311111,Residential Buildings,Stock
+312111,Residential Buildings,Acquisition
+313111,Residential Buildings,Improvement
+314111,Residential Buildings,Transfer
+311119,Other Dwellings,Stock
+312119,Other Dwellings,Acquisition
+313119,Other Dwellings,Improvement
+314119,Other Dwellings,Transfer
+311121,Non-Residential Buildings,Stock
+312121,Non-Residential Buildings,Acquisition
+313121,Non-Residential Buildings,Improvement
+314121,Non-Residential Buildings,Transfer
+311129,Other Buildings other than dwellings,Stock
+312129,Other Buildings other than dwellings,Acquisition
+313129,Other Buildings other than dwellings,Improvement
+314129,Other Buildings other than dwellings,Transfer
+311131,Roads and Bridges,Stock
+312131,Roads and Bridges,Acquisition
+313131,Roads and Bridges,Improvement
+314131,Roads and Bridges,Transfer
+311132,Airports and Airfields,Stock
+312132,Airports and Airfields,Acquisition
+313132,Airports and Airfields,Improvement
+314132,Airports and Airfields,Transfer
+311133,Railways and subways,Stock
+312133,Railways and subways,Acquisition
+313133,Railways and subways,Improvement
+314133,Railways and subways,Transfer
+311134,Oil Pipelines & reservoirs,Stock
+312134,Oil Pipelines & reservoirs,Acquisition
+313134,Oil Pipelines & reservoirs,Improvement
+314134,Oil Pipelines & reservoirs,Transfer
+311135,"Water Plants, pipelines and sewerage networks",Stock
+312135,"Water Plants, pipelines and sewerage networks",Acquisition
+313135,"Water Plants, pipelines and sewerage networks",Improvement
+314135,"Water Plants, pipelines and sewerage networks",Transfer
+311136,"Power lines, stations and plants",Stock
+312136,"Power lines, stations and plants",Acquisition
+313136,"Power lines, stations and plants",Improvement
+314136,"Power lines, stations and plants",Transfer
+311137,Information Communication Technology network lines,Stock
+312137,Information Communication Technology network lines,Acquisition
+313137,Information Communication Technology network lines,Improvement
+314137,Information Communication Technology network lines,Transfer
+311139,Other Structures,Stock
+312139,Other Structures,Acquisition
+313139,Other Structures,Improvement
+314139,Other Structures,Transfer
+311141,Irrigation and drainage Channels,Stock
+312141,Irrigation and drainage Channels,Acquisition
+313141,Irrigation and drainage Channels,Improvement
+314141,Irrigation and drainage Channels,Transfer
+311142,Flood barriers,Stock
+312142,Flood barriers,Acquisition
+313142,Flood barriers,Improvement
+314142,Flood barriers,Transfer
+311149,Other Land Improvements,Stock
+312149,Other Land Improvements,Acquisition
+313149,Other Land Improvements,Improvement
+314149,Other Land Improvements,Transfer
+311211,Heavy Vehicles,Stock
+312211,Heavy Vehicles,Acquisition
+313211,Heavy Vehicles,Improvement
+314211,Heavy Vehicles,Transfer
+311212,Light Vehicles,Stock
+312212,Light Vehicles,Acquisition
+313212,Light Vehicles,Improvement
+314212,Light Vehicles,Transfer
+311213,Water Vessels,Stock
+312213,Water Vessels,Acquisition
+313213,Water Vessels,Improvement
+314213,Water Vessels,Transfer
+311214,Aircrafts,Stock
+312214,Aircrafts,Acquisition
+313214,Aircrafts,Improvement
+314214,Aircrafts,Transfer
+311215,Train Engines and Wagons,Stock
+312215,Train Engines and Wagons,Acquisition
+313215,Train Engines and Wagons,Improvement
+314215,Train Engines and Wagons,Transfer
+311216,Cycles,Stock
+312216,Cycles,Acquisition
+313216,Cycles,Improvement
+314216,Cycles,Transfer
+311219,Other Transport equipment,Stock
+312219,Other Transport equipment,Acquisition
+313219,Other Transport equipment,Improvement
+314219,Other Transport equipment,Transfer
+311221,Light ICT hardware,Stock
+312221,Light ICT hardware,Acquisition
+313221,Light ICT hardware,Improvement
+314221,Light ICT hardware,Transfer
+311222,Heavy ICT hardware,Stock
+312222,Heavy ICT hardware,Acquisition
+313222,Heavy ICT hardware,Improvement
+314222,Heavy ICT hardware,Transfer
+311223,Television and radio transmitters,Stock
+312223,Television and radio transmitters,Acquisition
+313223,Television and radio transmitters,Improvement
+314223,Television and radio transmitter,Transfer
+311229,Other ICT Equipment,Stock
+312229,Other ICT Equipment,Acquisition
+313229,Other ICT Equipment,Improvement
+314229,Other ICT Equipment,Transfer
+311231,Office Equipment,Stock
+312231,Office Equipment,Acquisition
+313231,Office Equipment,Improvement
+314231,Office Equipment,Transfer
+311232,Electrical machinery,Stock
+312232,Electrical machinery,Acquisition
+313232,Electrical machinery,Improvement
+314232,Electrical machinery,Transfer
+311233,"Medical, Laboratory and Research & appliances",Stock
+312233,"Medical, Laboratory and Research & appliances",Acquisition
+313233,"Medical, Laboratory and Research & appliances",Improvement
+314233,"Medical, Laboratory and Research & appliances",Transfer
+311234,Precision and optical instruments,Stock
+312234,Precision and optical instruments,Acquisition
+313234,Precision and optical instruments,Improvement
+314234,Precision and optical instruments,Transfer
+311235,Furniture and Fittings,Stock
+312235,Furniture and Fittings,Acquisition
+313235,Furniture and Fittings,Improvement
+314235,Furniture and Fittings,Transfer
+311236,Musical instruments,Stock
+312236,Musical instruments,Acquisition
+313236,Musical instruments,Improvement
+314236,Musical instruments,Transfer
+311237,Sports Equipment,Stock
+312237,Sports Equipment,Acquisition
+313237,Sports Equipment,Improvement
+314237,Sports Equipment,Transfer
+311238,Road Furniture,Stock
+312238,Road Furniture,Acquisition
+313238,Road Furniture,Improvement
+314238,Road Furniture,Transfer
+311239,Plant Machinery,Stock
+312239,Plant Machinery,Acquisition
+313239,Plant Machinery,Improvement
+314239,Plant Machinery,Transfer
+311311,Classified Assets,Stock
+312311,Classified Assets,Acquisition
+314311,Classified Assets,Transfer
+311321,Non Classified,Stock
+312321,Non Classified,Acquisition
+313321,Non Classified,Improvement
+314321,Non Classified,Transfer
+311411,Cultivated Animals,Stock
+312411,Cultivated Animals,Acquisition
+313411,Cultivated Animals,Improvement
+314411,Cultivated Animals,Transfer
+311412,Cultivated Plants,Stock
+312412,Cultivated Plants,Acquisition
+313412,Cultivated Plants,Improvement
+314412,Cultivated Plants,Transfer
+311421,Research and Development,Stock
+312421,Research and Development,Acquisition
+313421,Research and Development,Improvement
+314421,Research and Development,Transfer
+311422,Mineral Exploration and Evaluation,Stock
+312422,Mineral Exploration and Evaluation,Acquisition
+313422,Mineral Exploration and Evaluation,Improvement
+314422,Mineral Exploration and Evaluation,Transfer
+311423,Computer Software,Stock
+312423,Computer Software,Acquisition
+313423,Computer Software,Improvement
+314423,Computer Software,Transfer
+311424,Computer databases,Stock
+312424,Computer databases,Acquisition
+313424,Computer databases,Improvement
+314424,Computer databases,Transfer
+311425,"Entertainment, Literary and Artistic Originals",Stock
+312425,"Entertainment, Literary and Artistic Originals",Acquisition
+313425,"Entertainment, Literary and Artistic Originals",Improvement
+314425,"Entertainment, Literary and Artistic Originals",Transfer
+311431,Copy Rights and Neighboring Rights,Stock
+312431,Copy Rights and Neighboring Rights,Acquisition
+313431,Copy Rights and Neighboring Rights,Improvement
+314431,Copy Rights and Neighboring Rights,Transfer
+311432,Patents / Utility Modes,Stock
+312432,Patents / Utility Modes,Acquisition
+313432,Patents / Utility Modes,Improvement
+314432,Patents / Utility Modes,Transfer
+311433,Trade Secrets,Stock
+312433,Trade Secrets,Acquisition
+313433,Trade Secrets,Improvement
+314433,Trade Secrets,Transfer
+311441,Goodwill and marketing assets,Stock
+312441,Goodwill and marketing assets,Acquisition
+313441,Goodwill and marketing assets,Improvement
+314441,Goodwill and marketing assets,Transfer
+311449,Other Intellectual Property products,Stock
+312449,Other Intellectual Property products,Acquisition
+313449,Other Intellectual Property products,Improvement
+314449,Other Intellectual Property products,Transfer
