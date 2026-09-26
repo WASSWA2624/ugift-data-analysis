@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import os
 import re
 import sys
 import zipfile
@@ -27,10 +28,12 @@ from openpyxl.utils import get_column_letter
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ugift_places import (
     LocalGovernment,
+    _edit_distance,
     canonical_facility,
     facility_base,
     facility_key,
     facility_kind,
+    fuzzy_owner,
     is_placeholder,
     known_facilities,
     known_local_governments,
@@ -544,6 +547,9 @@ def classify_header(row: list[object]) -> dict[str, int] | None:
             field_name = "lg"
         elif any(token in key for token in ("healthcentre", "healthcenter", "hospital", "school", "location", "facility")):
             field_name = "facility"
+        elif key in {"education", "educational", "health", "edn"} and index == mapping.get("item", -2) + 1:
+            # The Department header cell overtyped with the department itself.
+            field_name = "department"
         elif key.endswith("district") or resolve_lg(text, fuzzy=False) is not None:
             # A consolidation sheet that typed the block's district into the header cell.
             field_name = "lg"
@@ -644,7 +650,9 @@ def trailing_place_columns(rows: list[list[object]], mapping: dict[str, int], he
         for index, value in enumerate(header):
             text = clean(value)
             if text and not PLACE_HEADER.search(text) and resolve_lg(text, fuzzy=False) is None \
-                    and not (looks_like_facility(text) and facility_kind(text)):
+                    and not (looks_like_facility(text) and facility_kind(text)) and not bare_place_name(text):
+                # A place name typed into the header cell ("KYIKWAKYA") still heads a
+                # place column; any other heading rules the column out.
                 used.add(index)
     lg_scores: Counter[int] = Counter()
     facility_scores: Counter[int] = Counter()
@@ -662,8 +670,10 @@ def trailing_place_columns(rows: list[list[object]], mapping: dict[str, int], he
                 lg_scores[index] += 1
             elif looks_like_facility(text):
                 facility_scores[index] += 1
-            elif bare_place_name(text) and (header is None or not clean(header[index]) if index < len(header or []) else True):
-                # An unlabeled column of bare names beside the district column.
+            header_text = clean(header[index]) if header is not None and index < len(header) else ""
+            if bare_place_name(text) and (not header_text or bare_place_name(header_text)):
+                # An unlabeled column of bare names beside the district column ("MASAKA"
+                # is a health centre here even though a district shares the name).
                 bare_scores[index] += 1
     updated = dict(mapping)
     if "lg" not in updated:
@@ -901,6 +911,21 @@ def join_text(left: str, right: str, divider: str = " ") -> str:
     return f"{left}{divider}{right}"
 
 
+def same_place(left: str, right: str) -> bool:
+    """Two spellings of one facility name: equal bases, a few edits apart with the
+    same opening, or the same letters in another order."""
+    a, b = facility_base(left), facility_base(right)
+    if not a or not b:
+        return False
+    if a == b or sorted(a) == sorted(b):
+        return True
+    if a[:1] != b[:1]:
+        return False
+    distance = _edit_distance(a, b)
+    prefix = len(os.path.commonprefix([a, b]))
+    return distance <= 2 or (distance == 3 and prefix >= 4 and min(len(a), len(b)) >= 6)
+
+
 def bare_place_name(text: str) -> bool:
     """A value of a labelled facility column without a type word ("BUTAWATA" under
     a HEALTH CENTRE header); status, department and header words do not qualify."""
@@ -1063,7 +1088,8 @@ def parse_template_sheet(
             if asset.lg and resolve_lg(asset.lg):
                 carry_lg = asset.lg
             if asset.facility and (looks_like_facility(asset.facility) or ("facility" in mapping and bare_place_name(asset.facility))):
-                carry_facility = asset.facility
+                if not (carry_facility and same_place(asset.facility, carry_facility)):
+                    carry_facility = asset.facility
             continue
         continuation = not asset.item and block_last is not None and (asset.description or asset.remarks or asset.tag or asset.status)
         if not continuation and looks_like_label(asset, row):
@@ -1082,6 +1108,10 @@ def parse_template_sheet(
         else:
             asset.lg = carry_lg
         header_kind = mapping.get("facility_header_kind") or ("" if "facility" not in mapping else facility_type_for("", "", sheet_name, filename))
+        if asset.facility and carry_facility and same_place(asset.facility, carry_facility):
+            # "ALAORMIT HC III" under the banner "AKOROMIT HC III": one facility, the
+            # banner's spelling.
+            asset.facility = carry_facility
         if asset.facility and (looks_like_facility(asset.facility) or ("facility" in mapping and bare_place_name(asset.facility))):
             carry_facility = asset.facility
             carry_column = header_kind if "facility" in mapping and not looks_like_facility(asset.facility) else ""
@@ -1335,7 +1365,7 @@ def flexible_mapping(row: list[object]) -> dict[str, int] | None:
             roles.setdefault("tag", index)
         elif "remark" in text or text.endswith("notes") or "notes" in text:
             roles.setdefault("remarks", index)
-        elif "status" in text or text == "condition" or "functionality" in text or text == "functional":
+        elif "status" in text or text == "condition" or "functionality" in text or text.startswith("functional"):
             roles.setdefault("status", index)
         elif "unit cost" in text or "unit price" in text or "cost per unit" in text:
             roles.setdefault("unit_cost", index)
@@ -1346,7 +1376,7 @@ def flexible_mapping(row: list[object]) -> dict[str, int] | None:
         elif re.search(r"\b(supplied|delivered|call\s*off|ordered|deficit|register)\b", text):
             # What was supplied is not what was found.
             continue
-        elif "qty" in text or "quantity" in text or text in {"found", "verified", "counted", "physical count", "number found"}:
+        elif "qty" in text or "qtty" in text or "qnty" in text or "quantity" in text or text in {"found", "verified", "counted", "physical count", "number found"}:
             roles.setdefault("explicit_qty", index)
         elif text in {"department", "section"} or text.startswith("department"):
             roles.setdefault("department", index)
@@ -1586,7 +1616,7 @@ def resolve_places(asset: Asset, contexts: list[tuple[str, str]], relative: str)
                     if facility_key(display, kind) in known_facilities().get(sibling.key, {}):
                         owner = sibling
                         break
-            owner = owner or lg_of_known_facility(facility_text, kind)
+            owner = owner or lg_of_known_facility(facility_text, kind) or fuzzy_owner(facility_text, kind)
             if owner is not None and owner.key != lg.key:
                 PLACE_NOTES[f"{relative}: '{facility_text}' moved from {lg.display} to {owner.display}"] += 1
                 lg = owner
@@ -1660,6 +1690,10 @@ def in_scope(asset: Asset) -> bool:
         # Named under a HEALTH CENTRE or SCHOOL column of a programme verification sheet.
         return True
     raw = asset.extras.get("facility_raw") or asset.facility
+    if "/_district-documents/" in asset.source_file:
+        # A district-wide register lists every health centre of the district; only a
+        # seed school named as such, or a reconciled facility, is the programme's.
+        return bool(re.search(r"(?i)\bseed\b", raw))
     return bool(re.search(r"(?i)\bseed\b|health\s*cent(?:re|er)\s*(?:iii|111|3)\b|\bhc\s*(?:iii|111|3)\b|regional blood bank", raw))
 
 
@@ -1886,6 +1920,8 @@ def embedded_quantity(text: str) -> int | None:
     patterns = (
         rf"(?i)\b(?:qty|quantity|no\.?\s*of\s+(?:assets|items|pieces|units)|number\s+of\s+(?:assets|items|pieces|units))\s*[:\-]?\s*({COUNT_WORD})\b",
         rf"(?i)\b({COUNT_WORD})\s*(?:pcs|pieces|units|desks?|chairs?|bench(?:es)?|stools?|tables?|beds?|shel(?:f|ves))\b",
+        # "They are 13 metallic grey steel", "They received 20 beds": a count in prose.
+        rf"(?i)\b(?:they\s+are|there\s+are|received|recieved|delivered|has|have|got)\s+({COUNT_WORD})\s+[a-z]",
     )
     for pattern in patterns:
         match = re.search(pattern, raw)
@@ -1953,6 +1989,17 @@ def condition_groups(status: str, remarks: str) -> list[tuple[int, str | None]] 
             groups.append((count, "In the store"))
         if sum(count for count, _ in groups) > 1:
             return [(count, label) for count, label in groups if 0 < count <= MAX_QUANTITY]
+    # "2 in use and 2 kept in store", "16 in use & 13 not in use": each part counted.
+    parts = re.findall(
+        rf"(?i)\b({COUNT_WORD})\s+(?:are\s+|were\s+|is\s+|was\s+)?"
+        r"((?:not\s+)?in\s+(?:active\s+)?use|functional|functioning|working|kept\s+in\s+(?:the\s+)?store|in\s+(?:the\s+)?store|boxed|"
+        r"broken|damaged|faulty|spoilt|not\s+functional|non[- ]functional|not\s+working)\b",
+        text,
+    )
+    groups = [(as_count(number), phrase) for number, phrase in parts]
+    groups = [(count, phrase) for count, phrase in groups if count and valid(count)]
+    if len(groups) >= 2 and sum(count for count, _ in groups) > 1:
+        return [(count, phrase[:1].upper() + phrase[1:].lower()) for count, phrase in groups]
     verified = [int(item) for item in re.findall(r"(?i)(?<!not )(\d{1,4})\s+verified\b", text)]
     received = [int(item) for item in re.findall(r"(?i)(\d{1,4})\s+(?:were\s+|was\s+)?(?:received|recieved|supplied)\b", text)]
     received += [int(item) for item in re.findall(r"(?i)\b(?:received|recieved|supplied|counted)\s+(\d{1,4})\b", text)]

@@ -63,29 +63,32 @@ UNIT = re.compile(r"\s*\[item \d+ of \d+\]\s*$", re.I)
 # Section 3.3.3: small office equipment and loose tools are expensed on 221012.
 LOOSE = re.compile(
     r"\b(kettles?|spoons?|(?<!tuning )forks?(?!\s?lift)|calculators?|staplers?|stapling machines?|pen-?holders?|"
-    r"punches|punch|paper trays?|pin-?holders?|staple holders?|type\s?writers?)\b",
+    r"punches|punch|punching machines?|paper trays?|pin-?holders?|staple holders?|type\s?writers?)\b",
     re.I,
 )
 CONSUMABLE = re.compile(
-    r"\b(pack of|packs?\b|pkts?|single[- ]use|surgic\w* packs?|graph paper|filter paper|cover slips?|slides?,? pack|"
+    r"\b(pack of|packs?\b|pkts?|single[- ]use|surgic\w* packs?|graph paper|filter paper|cover slips?|slides?,? pack|microscope slides?|"
     r"gloves|syringes?(?!\s*pumps?)|cotton wool|bandages?|reagents?|test strips?|toner|cartridges?|stationery|"
     r"chalk(?!\s*boards?)|exercise books?|text ?books?|papers?(?!\s*(?:shredders?|cutters?|trimmers?))|"
-    r"tubings?|visking|labels?|droppers?|petri dish(?:es)?|bulbs?|fl[ou]{1,2}rescent tubes?|test tubes?|corks?|bungs?|"
-    r"crocodile clips?|litmus|indicator paper|reels?|rolls?|boxes|\bboxe?s? of\b|wires?(?!\s*gauze)|boiling tube brushes)\b",
+    r"tubings?|visking|labels?|droppers?|petri dish(?:es)?|bulbs?|fl[ou]{1,2}rescent tubes?|test tubes?|test tube (?:racks?|holders?)|corks?|bungs?|rubber bungs?|"
+    r"crocodile clips?|litmus|indicator paper|reels?|rolls?|\bboxe?s? of\b|wires?(?!\s*gauze)|boiling tube brushes|"
+    r"cannulas?|canulars?|canular|nasal cannulas?|ticker tape|wire ga[u]?ges?|catheters?|swabs?|needles?|plasters?)\b",
     re.I,
 )
 NATURAL = re.compile(r"\b(natural resources?|mineral rights?|wildlife|forests?|wetlands?|rivers?|lakes?)\b", re.I)
 NON_DEPR = re.compile(
-    r"\b(work in progress|\bwip\b|under construction|operating lease|incomplete building|"
-    r"(?:on-?\s?going|ongoing)\s+constructions?|still\s+under\s+construction|not\s+(?:yet\s+)?complet\w+)\b",
+    r"\b(work in progress|\bwip\b|under\s+constr\w+|operating lease|incomplete(?:\s+building)?|"
+    r"(?:on-?\s?going|ongoing)(?:\s+constructions?)?|still\s+(?:under|being)\s+\w+|not\s+(?:yet\s+)?complet\w+|"
+    r"unfinished|not\s+finished|pending\s+completion|constr[au]ction\s+(?:on-?going|ongoing|in progress))\b",
     re.I,
 )
 # Section 3.2.1 condition 3: the asset must exist. A row whose status says it was
 # never received, or whose remark says the asset itself is missing, lost or stolen.
 NOT_EXISTING = re.compile(
     r"\bnot\s+(?:yet\s+)?(?:received|delivered|supplied)\b|\bnever\s+(?:received|delivered)\b|"
-    r"\bdidn'?t\s+receive\b|\bnot\s+among\b|\bwas\s+not\s+(?:delivered|supplied)\b|"
-    r"^\s*(?:missing|lost|stolen|disposed|taken away|not there)\b|\b(?:is|are|was|were|got|went|been)\s+(?:missing|lost|stolen|disposed|taken away)\b",
+    r"\bdidn'?t\s+receive\b|\bnot\s+among\b|\bwas\s+not\s+(?:delivered|supplied)\b|\bstill\s+(?:in|at)\s+the\s+(?:store\s+at\s+the\s+)?district\b|"
+    r"^\s*(?:missing|lost|stolen|disposed|taken away|not there)\b|\b(?:is|are|was|were|got|went|been)\s+(?:missing|lost|stolen|disposed|taken away)\b|"
+    r"\b(?:stolen|lost)\b(?!\s+(?:and\s+)?(?:replaced|recovered|found))",
     re.I,
 )
 TOTAL_LINE = re.compile(r"(?i)^\s*(?:sub|grand)?\s*totals?\b|\btotal\s+(?:equipment|asset|units?|quantit)")
@@ -94,7 +97,7 @@ REPAIR = re.compile(
     r"\breplacement\s+(?:parts?|engine|battery|tyres?)\b"
 )
 GENERIC_HEAD = re.compile(
-    r"(?i)^(?:\w+[\s\-]+){0,2}(?:equipments?|items?|sets?|machines?|furnitures?|assorted.*|schools?|hospitals?|assets?|tools?|materials?|fittings?)$"
+    r"(?i)^(?:\w+[\s\-]+){0,2}(?:equipments?|items?|sets?|machines?|furnitures?|assorted.*|schools?|hospitals?|assets?|tools?|materials?|fittings?)$|^assorted\b"
 )
 FAULTY = re.compile(
     r"\bnot\s+(?:yet\s+)?(?:been\s+)?(?:in\s+|being\s+)?(?:use|used|usable|service|installed|assembled|fixed|connected|"
@@ -480,7 +483,8 @@ ACRONYMS = {
 }
 ACRONYM = re.compile(r"^[A-Z]+\d+[A-Z\d]*$|^\d+[A-Z]+$")
 GENERIC_NAMES = {
-    "asset", "assets", "others", "other", "various", "assorted", "assorted items", "fittings", "building", "buildings",
+    "asset", "assets", "others", "other", "various", "assorted", "assorted items", "assorted laboratory glassware and apparatus",
+    "assorted glassware", "assorted apparatus", "fittings", "building", "buildings",
     "structure", "structures", "block", "blocks", "equipments", "tools", "materials", "furniture and fittings", "ict",
     "ict equipment", "electrical", "electricals", "machinery", "machine", "items", "item", "set", "sets", "kit", "kits",
 }
@@ -565,7 +569,9 @@ class Registers:
         found = None
         if bare and not TOTAL_LINE.search(bare) and not REPAIR.search(bare) and not re.fullmatch(r"-?\d+", bare):
             found = extra_classify(bare) or classify(bare)
-            if found and (LOOSE.search(bare) or CONSUMABLE.search(bare)) and not extra_classify(bare):
+            if found and (LOOSE.search(bare) or CONSUMABLE.search(bare)):
+                # "Microscope slides pack of 72", "Rubber bungs for conical flasks": the
+                # pack, not the apparatus it serves, is what the line names.
                 found = None
             if found:
                 # Annex 1 decides life, method and salvage for the class it names.
@@ -655,21 +661,36 @@ EXTRA_CLASSES = (
      (MACHINERY, OTHER, "MED LAB RESEARCH APPLIANCES", 60, True)),
     (re.compile(r"(?i)\b(?:convex|concave|converging|diverging|plane)\b.*\b(?:lens(?:es)?|mirrors?)\b|\b(?:lens(?:es)?|mirrors?)\b.*\b(?:convex|concave|converging|diverging)\b|\bmagnifying glass(?:es)?\b"),
      (MACHINERY, OTHER, "PRECISION OPTICAL INSTRUMENTS", 60, True)),
-    (re.compile(r"(?i)\b(cpus?|cpu_light duty|central processing units?|desktop computers?|computers?|laptops?|monitors?|keyboards?|printers?|photo\s*copiers?|scanners?|projectors?|routers?|network switch(?:es)?|switch(?:es)?\b.*\b(?:port|network|lan)|ups\b|uninterrupt\w* power suppl(?:y|ies)|tablets?|smart ?phones?|tela phones?)\b"),
+    # A building named after what it houses ("Library and computer block", "Main hall",
+    # "2-stance VIP latrin") is a building, so these come before the equipment words.
+    (re.compile(r"(?i)\b(staff quarters?|teachers?['’]?\s*quarters?|staff houses?|teachers?['’]?\s*houses?|dormitor(?:y|ies)|hostels?)\b(?!.*\b(latrine|latrin|toilet|kitchen)\b)"),
+     ("BUILDINGS AND STRUCTURES", "DWELLINGS", "RESIDENTIAL BUILDINGS", 600, True)),
+    (re.compile(r"(?i)\b(blocks?|halls?|latrines?|latrins?|toilets?|kitchens?|class\s*rooms?|classrooms?|wards?|ict-?library|library)\b(?!\s*(?:materials|books?|shel))"),
+     ("BUILDINGS AND STRUCTURES", "BUILDINGS OTHER THAN DWELLINGS", "NON RESIDENTIAL BUILDINGS", 600, True)),
+    (re.compile(r"(?i)\b(concrete work\s*tops?|work\s*tops?|sports? fields?|play\s*grounds?|hand ?washing facilit(?:y|ies)|land\s*scaping|landscaping|fenc(?:e|es|ing)|walkways?|pav(?:ing|ements?)|drainage systems?|perimeter walls?|water tanks?|rain ?water harvest\w*)\b"),
+     ("BUILDINGS AND STRUCTURES", "STRUCTURES", "OTHER STRUCTURES", 240, True)),
+    (re.compile(r"(?i)\b(cpus?|cpu_light duty|central processing units?|desktop computers?|computers?|laptops?|monitors?|keyboards?|printers?|photo\s*copiers?|scanners?|projectors?|routers?|network switch(?:es)?|switch(?:es)?\b.*\b(?:port|network|lan)|ups\b|uninterrupt\w* power suppl(?:y|ies)|tablets?|smart ?phones?|tela phones?|"
+                r"switch(?:es)?|fire\s*walls?|patch panels?|network racks?|server racks?|racks?|network video recorders?|nvrs?|access points?|surge protectors?|power surge protectors?)\b"),
      (MACHINERY, "ICT EQUIPMENT", "LIGHT ICT HARDWARE", 60, True)),
+    (re.compile(r"(?i)\b(artery forceps?|dis+ecting forceps?|spong[e]? holding forceps?|forceps?|stet[eh]o?scopes?|bowel lotions?|kidney trays?|kidney dish(?:es)?|"
+                r"pulx?oxy?meters?|pulse oximeters?|oximeters?|sphygmomanometers?|nebuli[sz]ers?|suction machines?|resuscitators?|otoscopes?|fetoscopes?|"
+                r"glucometers?|haemoglobinometers?|centrifuges?|colorimeters?|incubators?|refrigerators?|fridges?|freezers?)\b"),
+     (MACHINERY, OTHER, "MED LAB RESEARCH APPLIANCES", 60, True)),
     (re.compile(r"(?i)\b(servers?|server processors?)\b"), (MACHINERY, "ICT EQUIPMENT", "HEAVY ICT HARDWARE", 60, True)),
-    (re.compile(r"(?i)\b(single seats?|seats?|desks?|deks|chairs?|stools?|bench(?:es)?|tables?|shel(?:f|ves?|ve)|cupboards?|cabinets?|lockers?|"
-                r"mattress(?:es)?|matress(?:es)?|notice\s*boards?|chalk\s*boards?|black\s*boards?|white\s*boards?|wardrobes?|beds?(?!\s*(?:side|rock)))\b"),
+    (re.compile(r"(?i)\b(single seats?|seats?|desks?|deks|chairs?|stools?|bench(?:es)?|tables?|shel(?:f|ves?|ve)|cupboards?|cabinets?|carbinets?|cabinates?|carbinates?|lockers?|"
+                r"mattress(?:es)?|matress(?:es)?|notice\s*boards?|chalk\s*boards?|black\s*boards?|white\s*boards?|wardrobes?|pigeon boxes|beds?(?!\s*(?:side|rock)))\b"),
      (MACHINERY, OTHER, "FURNITURE AND FITTINGS", 60, True)),
     (re.compile(r"(?i)\b(paper shredders?|shredders?|photocopiers?|fax machines?|laminators?|binding machines?|safes?|wall clocks?|clocks?)\b"),
      (MACHINERY, OTHER, "OFFICE EQUIPMENT", 60, True)),
-    (re.compile(r"(?i)\b(staff quarters?|teachers?['’]?\s*quarters?|staff houses?|teachers?['’]?\s*houses?|residential|dormitor(?:y|ies)|hostels?)\b(?!.*\b(latrine|toilet|kitchen)\b)"),
+    (re.compile(r"(?i)\bnon\s*-?\s*residential\b"),
+     ("BUILDINGS AND STRUCTURES", "BUILDINGS OTHER THAN DWELLINGS", "NON RESIDENTIAL BUILDINGS", 600, True)),
+    (re.compile(r"(?i)(?<!non)(?<!non )(?<!non-)\bresidential\b(?!.*\b(latrine|toilet|kitchen)\b)"),
      ("BUILDINGS AND STRUCTURES", "DWELLINGS", "RESIDENTIAL BUILDINGS", 600, True)),
-    (re.compile(r"(?i)\bnon\s*-?\s*residential\b|\b(class\s*rooms?|classrooms?|administration blocks?|admin blocks?|office blocks?|laborator(?:y|ies) blocks?|science blocks?|"
+    (re.compile(r"(?i)\b(class\s*rooms?|classrooms?|administration blocks?|admin blocks?|office blocks?|laborator(?:y|ies) blocks?|science blocks?|"
                 r"library blocks?|ict blocks?|multi-?purpose halls?|dining halls?|assembly halls?|kitchens?|latrines?|toilets?|bathrooms?|washrooms?|sick bays?|wards?|"
                 r"theatre blocks?|store blocks?|opd blocks?|mch blocks?|maternity wards?|placenta pits?|incinerators?|buildings?\b(?!\s*materials))\b"),
      ("BUILDINGS AND STRUCTURES", "BUILDINGS OTHER THAN DWELLINGS", "NON RESIDENTIAL BUILDINGS", 600, True)),
-    (re.compile(r"(?i)\b(?:school|office|hospital|facility|health\s*cent\w*|hc\s*iii?|institutional)?\s*land\b(?!\s*(?:rover|cruiser|line|scape|lord|mark))|^plots?(?: of land)?\b"),
+    (re.compile(r"(?i)\b(?:school|office|hospital|facility|health\s*cent\w*|hc\s*iii?|institutional)?\s*land\b(?!\s*(?:rover|cruiser|line|scap|lord|mark))|^plots?(?: of land)?\b"),
      ("LAND", "LAND", "LAND", None, False)),
 )
 
@@ -701,21 +722,31 @@ def explicit_serial(text: str) -> str:
 
 
 def explicit_model(text: str) -> str:
+    if re.match(r"(?i)\s*model\s+(?:of\s+)?(?:human|skeleton|torso|heart|brain|eye|ear|kidney|lung|dna|cell|atom|plant|animal)", text):
+        # "Model Human Brain" is a teaching model, not a model number.
+        return ""
     match = re.search(r"(?i)\bmodel\s*(?:no\.?|number|#)?\s*[:\-]?\s*([A-Za-z0-9][A-Za-z0-9./\-]{1,24}(?:\s+[A-Za-z0-9./\-]*\d[A-Za-z0-9./\-]*)?)\b", text)
     if not match:
         return ""
     token = match.group(1).strip(" .,-/")
-    if token.casefold() in SERIAL_STOP or not (re.search(r"\d", token) or re.fullmatch(r"[A-Z][A-Za-z0-9\-]{2,}", token)):
+    if token.casefold() in SERIAL_STOP or re.fullmatch(r"[A-Z][a-z]+", token):
+        return ""
+    if not (re.search(r"\d", token) or re.fullmatch(r"[A-Z][A-Za-z0-9\-]{2,}", token)):
         return ""
     return token
 
 
 def explicit_manufacturer(text: str) -> str:
-    match = re.search(r"(?i)\b(?:made by|manufactured by|manufacturer)\s*[:\-]?\s*([A-Z][A-Za-z0-9&.' \-]{1,40})", text)
+    match = re.search(
+        r"(?i)\b(?:made by|manufactured by|manufacturer)\s*[:\-]?\s*([A-Z][A-Za-z0-9&.'\- ]{1,40}?)(?=\s*(?:[;,.(/]|$|\b(?:serial|model|s/n|sn|and|in|with|for)\b))",
+        text,
+    )
     if not match:
         return ""
     token = clean(match.group(1)).strip(" .,-")
-    return token if token.casefold() not in SERIAL_STOP else ""
+    if not token or token.casefold() in SERIAL_STOP or re.match(r"(?i)^(?:different|various|several|the|a|an|local|some|unknown|not)\b", token):
+        return ""
+    return token
 
 
 # ---------------------------------------------------------------- one MF row
@@ -767,7 +798,8 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     if classified:
         major, minor1, minor2, class_life, class_depreciates = classified
         stats["class"] += 1
-    if major == "BUILDINGS AND STRUCTURES" and NON_DEPR.search(remarks_source):
+    if major == "BUILDINGS AND STRUCTURES" and (NON_DEPR.search(remarks_source) or NON_DEPR.search(status_text)):
+        # Section 5.5: a building still under construction is work in progress.
         non_depr = True
     life = as_life(source.get("Life in Months"))
     if life is not None and (not isinstance(life, (int, float)) or life <= 0):
@@ -817,12 +849,15 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     # Section 3.2.1: controlled, service potential beyond a year, exists, measurable.
     # The status column decides existence; a remark counts only when the status is
     # blank or negative itself (a remark about part of a group is not the row's fate).
+    # A remark that the line was not delivered, was stolen or is lost denies the row
+    # unless it splits the group ("18 were stolen, 10 in use").
+    remark_denies = bool(NOT_EXISTING.search(remarks_source)) and not MIXED.search(remarks_source)
     if status_label == "Functional":
-        exists = not NOT_EXISTING.search(status_text)
+        exists = not NOT_EXISTING.search(status_text) and not remark_denies
     elif status_text:
-        exists = not NOT_EXISTING.search(status_text) and not (status_label == "Faulty" and NOT_EXISTING.search(remarks_source))
+        exists = not NOT_EXISTING.search(status_text) and not remark_denies
     else:
-        exists = not NOT_EXISTING.search(remarks_source)
+        exists = not remark_denies
     service_potential = bool(classified) or specific or (life_source and life and life >= 12)
     capitalized = bool(cost) and exists and not loose and not consumable and not natural and not total_line and not repair and service_potential
     if is_land:
@@ -841,19 +876,24 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
         if figures:
             accumulated, current = figures
             if reserve is None:
+                # The schedule fills both figures together; a reserve the source recorded
+                # stays as written and is not paired with a computed year-to-date charge.
                 reserve = shillings(accumulated)
                 stats["reserve"] += 1
-            if ytd is None:
-                ytd = shillings(current)
-                stats["ytd"] += 1
-            computed_nbv = max(0, shillings(float(cost) - float(reserve)))
+                if ytd is None:
+                    ytd = shillings(current)
+                    stats["ytd"] += 1
+                computed_nbv = max(0, shillings(float(cost) - float(reserve)))
+            elif cost_fill is None:
+                computed_nbv = max(0, shillings(float(cost) - float(reserve)))
     source_nbv = as_number(source.get("Net Book Value"))
 
     tag_raw = plain(source.get("Tag Number (engrave no.)"))
     tag = "Not Engraved" if blank_tag(tag_raw) else tag_raw
-    serial = explicit_serial(text_blob)
-    manufacturer = explicit_manufacturer(text_blob)
-    model = explicit_model(text_blob)
+    # Only the description states these (the prompt's rule); the remarks do not.
+    serial = explicit_serial(description)
+    manufacturer = explicit_manufacturer(description)
+    model = explicit_model(description)
     user, title = user_name(remarks_source)
     facts = {
         "tag": tag,
@@ -925,7 +965,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
         "DATE_PLACED_IN_SERVICE": placed_value,
         "DEPRECIATE_FLAG": "NO" if (is_land or non_depr) and not total_line else "YES" if depreciates else None,
         "DEPRN_METHOD_CODE": "STL" if depreciates else None,
-        "LIFE_IN_MONTHS": (life, life_fill) if life and (depreciates or life_source) else None,
+        "LIFE_IN_MONTHS": (life, life_fill) if life and (depreciates or (life_source and not consumable and not non_depr)) else None,
         # Section 3.3.5.2: depreciation begins on the first day of the month the asset
         # is available for use; the sample row codes that convention GOU PRO CO.
         "PRORATE_CONVENTION_CODE": "GOU PRO CO" if depreciates else None,

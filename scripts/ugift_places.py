@@ -255,6 +255,14 @@ def resolve_lg(text: object, fuzzy: bool = True) -> LocalGovernment | None:
         ]
         if len(matches) == 1:
             candidates = matches[0]
+    if not candidates and fuzzy and len(base) >= 6:
+        # Letters in the wrong order ("Kabalore" for "Kabarole").
+        matches = [
+            lgs for known_base, lgs in index.items()
+            if known_base[0] == base[0] and len(known_base) == len(base) and sorted(known_base) == sorted(base)
+        ]
+        if len(matches) == 1:
+            candidates = matches[0]
     if not candidates:
         return None
     for lg in candidates:
@@ -266,6 +274,9 @@ def resolve_lg(text: object, fuzzy: bool = True) -> LocalGovernment | None:
             if lg.kind == "DLG":
                 return lg
         return None
+    if len(candidates) == 1 and candidates[0].kind != "DLG":
+        # "Kiira Town Council" is the vote the list holds as Kiira MC.
+        return candidates[0]
     # The text names a municipality or city the list lacks under that kind; keep the kind.
     return LocalGovernment(candidates[0].base, kind)
 
@@ -310,7 +321,7 @@ def facility_kind(*texts: object) -> str:
 def facility_base(name: object) -> str:
     """Facility name without its type words, in normalised form, for matching."""
     text = clean_text(name)
-    text = re.sub(r"(?i)\b(upgraded|proposed|new)\b", " ", text)
+    text = re.sub(r"(?i)\b(upgraded|proposed|new|ugift|ug\s*ift|lll|ll)\b", " ", text)
     text = HEALTH_TAIL.sub(" ", text)
     text = SCHOOL_TAIL.sub(" ", text)
     text = re.sub(r"(?i)\b(iii|ii|iv|111|11|3|2)\b", " ", text)
@@ -492,6 +503,14 @@ def canonical_facility(name: object, lg: LocalGovernment | None, kind: str = "")
                 }
                 if len(close) == 1:
                     return bucket[close.pop()]
+            # Letters typed in the wrong order ("Karagwa" for "Kagwara", "Kabalore").
+            jumbled = {
+                known for known in bucket
+                if known.split("|")[1] in tags and known.split("|")[0][:1] == base[:1]
+                and sorted(known.split("|")[0]) == sorted(base) and known.split("|")[0] != base
+            }
+            if len(jumbled) == 1:
+                return bucket[jumbled.pop()]
     return facility_display(name, kind), kind
 
 
@@ -500,13 +519,33 @@ def lg_of_known_facility(name: object, kind: str = "") -> LocalGovernment | None
     or None when no or several local governments do."""
     kind = facility_kind(name) or kind
     key = facility_key(name, kind)
-    if not key or key.split("|")[0] in {"", "st"} or len(key.split("|")[0]) < 5:
+    if not key or key.split("|")[0] in {"", "st"} or len(key.split("|")[0]) < 4:
         return None
     owners = {lg_key for lg_key, bucket in known_facilities().items() if key in bucket}
     if len(owners) != 1:
         return None
     lg_key = owners.pop()
     return known_local_governments().get(lg_key)
+
+
+def fuzzy_owner(name: object, kind: str = "") -> LocalGovernment | None:
+    """The one local government whose reconciled list holds a facility this name
+    misspells (Silumira for Sirimula), or None when none or several do."""
+    kind = facility_kind(name) or kind
+    base = facility_base(name)
+    if len(base) < 5:
+        return None
+    owners: set[str] = set()
+    for lg_key, bucket in known_facilities().items():
+        lg = known_local_governments().get(lg_key)
+        if lg is None:
+            continue
+        display, _kind = canonical_facility(name, lg, kind)
+        if facility_key(display, kind) in bucket:
+            owners.add(lg_key)
+    if len(owners) != 1:
+        return None
+    return known_local_governments().get(owners.pop())
 
 
 def check_examples() -> None:
