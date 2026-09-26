@@ -34,7 +34,7 @@ LG_SUFFIXES = (
     (r"\b(town council|tc)$", "TC"),
 )
 HEALTH_TAIL = re.compile(
-    r"(?i)\b(?:health\s*(?:cent(?:re|er|ere)|ctr|c)|h\s*[./]?\s*c|hc)\s*[.\-]?\s*"
+    r"(?i)\b(?:health\s*(?:cent(?:re|er|ere)|ctr|c)|h\s*[./]?\s*c|hc|ch(?=\s*(?:iii|111)))\s*[.\-]?\s*"
     r"(?:iv|iii|ii|i|1v|111|11|1|2|3|4|three|two|four)?\b\.?"
 )
 SCHOOL_TAIL = re.compile(
@@ -300,7 +300,7 @@ def lg_from_text(text: object) -> LocalGovernment | None:
 def facility_kind(*texts: object) -> str:
     """'School', 'Health centre', or '' when the words do not say."""
     blob = " ".join(clean_text(text) for text in texts)
-    if re.search(r"(?i)\bhealth\b|\bh\s*[./]?\s*c\s*(?:i{1,3}|1{1,3}|2|3|4)?\b|\bhc\s*(?:i{1,3}|1{1,3}|2|3|4)?\b|hospital|clinic|dispensary", blob):
+    if re.search(r"(?i)\bhealth\b|\bh\s*[./]?\s*c\s*(?:i{1,3}|1{1,3}|2|3|4)?\b|\bhc\s*(?:i{1,3}|1{1,3}|2|3|4)?\b|hospital|clinic|dispensary|blood\s*bank", blob):
         return "Health centre"
     if re.search(r"(?i)school|\bsss\b|\bss\b|\bs\.s\.s\b|\bs\.s\b|\bseed\b|secondary|\bsec\b|\bsch\b", blob):
         return "School"
@@ -397,6 +397,7 @@ def facility_display(name: object, kind: str = "", *, official: bool = False) ->
         )
         text = re.sub(r"(?i)\bseed\s+seed\b", "Seed", text)
         text = re.sub(r"(?i)\bseed secondary school\b(?:\s+seed secondary school\b)+", "Seed Secondary School", text)
+        text = re.sub(r"(?i)\b(?:seed\s+secondary\s+)+(?=seed secondary school\b)", "", text)
         text = re.sub(r"(?i)\bschool\s+seed secondary school\b", "Seed Secondary School", text)
         text = re.sub(r"\s+", " ", text).strip(" ,.-")
         if not re.search(r"(?i)\bseed secondary school\b", text):
@@ -427,6 +428,13 @@ def canonical_facility(name: object, lg: LocalGovernment | None, kind: str = "")
         if key in bucket:
             return bucket[key]
         base = facility_base(name)
+        # "KWANIA OWINYI HC III": the district typed in front of the facility name.
+        lg_words = norm(lg.base)
+        if lg_words and base.startswith(lg_words + " ") and len(base) > len(lg_words) + 3:
+            base = base[len(lg_words) + 1:]
+            for tag in {"School": ("s",), "Health centre": ("h",)}.get(kind, ("s", "h")):
+                if f"{base}|{tag}" in bucket:
+                    return bucket[f"{base}|{tag}"]
         tags = {"School": ("s",), "Health centre": ("h",)}.get(kind, ("s", "h"))
         for tag in tags:
             probe = f"{base}|{tag}"
@@ -452,7 +460,10 @@ def canonical_facility(name: object, lg: LocalGovernment | None, kind: str = "")
                 close = {
                     bucket[known]
                     for known in bucket
-                    if known.split("|")[1] in tags and known.split("|")[0][:1] == base[:1]
+                    if known.split("|")[1] in tags
+                    # Same first letter, or one name is the other minus its first letter
+                    # ("Wemba" for "Iwemba").
+                    and (known.split("|")[0][:1] == base[:1] or (distance == 1 and (known.split("|")[0].endswith(base) or base.endswith(known.split("|")[0]))))
                     and _edit_distance(known.split("|")[0], base) == distance
                 }
                 if len(close) == 1:

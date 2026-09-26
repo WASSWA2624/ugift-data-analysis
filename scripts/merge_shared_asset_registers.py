@@ -33,6 +33,7 @@ from ugift_places import (
     facility_kind,
     is_placeholder,
     known_facilities,
+    known_local_governments,
     lg_from_text,
     lg_of_known_facility,
     resolve_lg,
@@ -529,8 +530,14 @@ def classify_header(row: list[object]) -> dict[str, int] | None:
             field_name = "description" if has_equipment else "item"
         elif "department" in key:
             field_name = "department"
-        elif key in {"qty", "quantity"} or key.startswith(("qty", "quantity", "numberverified", "noverified", "physicalcount", "countverified")):
+        elif key in {"qty", "quantity"} or key.startswith(("qty", "quantity", "numberverified", "noverified", "physicalcount", "countverified")) or key.endswith("qty"):
             field_name = "explicit_qty"
+        elif "serial" in key:
+            field_name = "serial"
+        elif key.startswith("manufactur") or key == "make":
+            field_name = "manufacturer"
+        elif key.startswith("model"):
+            field_name = "model"
         elif key in {"cost", "initialcost", "costugx"} or key.startswith("cost"):
             field_name = "cost"
         elif "localgov" in key or key in {"district", "localgovernment", "localgovt"}:
@@ -544,6 +551,9 @@ def classify_header(row: list[object]) -> dict[str, int] | None:
             field_name = "facility"
         if field_name and field_name not in mapping:
             mapping[field_name] = index
+            if field_name == "facility" and facility_kind(text) and not re.search(r"(?i)location|physical", text):
+                # "HEALTH CENTRE" / "SCHOOL" over the column: its bare names are that kind.
+                mapping["facility_header_kind"] = facility_kind(text)
     if "remarks" not in mapping and fallback_remarks is not None:
         mapping["remarks"] = fallback_remarks
     if "item" not in mapping and "description" in mapping and (not keys[0] or keys[0] in INDEX_KEYS or 0 in mapping.values()):
@@ -553,7 +563,7 @@ def classify_header(row: list[object]) -> dict[str, int] | None:
             and len(mapping) >= 5 and 0 not in mapping.values() and keys[0] not in INDEX_KEYS:
         # A header whose first cell was overtyped ("MCH" for "Equipment/ Item").
         mapping["item"] = 0
-    if "item" in mapping and len(mapping) >= 4:
+    if "item" in mapping and len([name for name in mapping if name != "facility_header_kind"]) >= 4:
         return mapping
     return None
 
@@ -561,8 +571,9 @@ def classify_header(row: list[object]) -> dict[str, int] | None:
 # Line-number columns: never the item, never a count.
 INDEX_KEYS = {
     "vote", "itemno", "sn", "sno", "srno", "slno", "no", "nos", "number", "pgno", "s", "sr", "sl", "count",
-    "line", "id", "ref", "sr.no", "serial", "itemnumber", "lineno", "num",
+    "line", "id", "ref", "sr.no", "itemnumber", "lineno", "num",
 }
+TOTAL_ITEM = re.compile(r"(?i)^\s*(?:sub|grand)?\s*totals?\b")
 ITEM_KEYS = {
     "equipment", "equipmentasset", "equipments", "equipmentsitem", "assetequipment", "assetdescription",
     "assetsdescription", "itemname", "nameofitem", "assetname", "nameofasset", "equipmentdescription",
@@ -630,6 +641,7 @@ def trailing_place_columns(rows: list[list[object]], mapping: dict[str, int], he
                 used.add(index)
     lg_scores: Counter[int] = Counter()
     facility_scores: Counter[int] = Counter()
+    bare_scores: Counter[int] = Counter()
     filled: Counter[int] = Counter()
     for row in rows[:120]:
         for index, value in enumerate(row):
@@ -643,6 +655,9 @@ def trailing_place_columns(rows: list[list[object]], mapping: dict[str, int], he
                 lg_scores[index] += 1
             elif looks_like_facility(text):
                 facility_scores[index] += 1
+            elif bare_place_name(text) and (header is None or not clean(header[index]) if index < len(header or []) else True):
+                # An unlabeled column of bare names beside the district column.
+                bare_scores[index] += 1
     updated = dict(mapping)
     if "lg" not in updated:
         best = [index for index, count in lg_scores.most_common() if count >= 3 and count >= 0.6 * filled[index]]
@@ -655,6 +670,14 @@ def trailing_place_columns(rows: list[list[object]], mapping: dict[str, int], he
         ]
         if best:
             updated["facility"] = best[0]
+        elif "lg" in updated:
+            near = [
+                index for index, count in bare_scores.most_common()
+                if count >= 3 and count >= 0.6 * filled[index] and index > updated["lg"] and index <= updated["lg"] + 2
+            ]
+            if near:
+                updated["facility"] = near[0]
+                updated["facility_header_kind"] = ""
     return updated
 
 
@@ -688,6 +711,13 @@ def split_trailing_lg(facility: str) -> tuple[str, str]:
     match = re.search(r"^(.*?)[\s,]+[–\-]\s*([A-Za-z][A-Za-z .'\-]{2,40}(?:\bdlg|\bdistrict|\bmc|\bcity|\blg|\bdc)\.?)\s*$", facility, re.I)
     if match and resolve_lg(match.group(2)):
         return clean(match.group(1)), clean(match.group(2))
+    # "KYEIHARA HC III MITOOMA": the last word or two name the local government.
+    words = clean(facility).split()
+    for size in (2, 1):
+        if len(words) > size + 1:
+            head, tail = " ".join(words[:-size]), " ".join(words[-size:])
+            if resolve_lg(tail, fuzzy=False) and facility_kind(head) and looks_like_facility(head):
+                return head, tail
     return facility, ""
 
 
@@ -864,6 +894,34 @@ def join_text(left: str, right: str, divider: str = " ") -> str:
     return f"{left}{divider}{right}"
 
 
+def bare_place_name(text: str) -> bool:
+    """A value of a labelled facility column without a type word ("BUTAWATA" under
+    a HEALTH CENTRE header); status, department and header words do not qualify."""
+    text = clean(text)
+    if not text or is_placeholder(text) or len(text.split()) > 4 or re.search(r"\d", text):
+        return False
+    if DEPARTMENT_WORD.match(text) or re.match(
+        r"(?i)^(?:education(?:al)?|health|hospital|school|facility|location|name|n/?a|none|nil|yes|no|functional|"
+        r"faulty|good|new|not|non|in\s+use|verified|broken|damaged|missing|total)(?![A-Za-z])",
+        text,
+    ):
+        return False
+    return re.fullmatch(r"[A-Za-z][A-Za-z .'\-/&]{2,45}", text) is not None
+
+
+def unit_row(asset: Asset) -> bool:
+    """A row without an item name that still records one unit: a description together
+    with a department, tag, status, remark, cost or date. A wrapped line of the row
+    above carries only a fragment of one cell."""
+    if not asset.description:
+        return False
+    if re.match(r"^[a-z]", asset.description) and len(asset.description) < 25 and not asset.tag and not asset.status:
+        return False
+    others = sum(1 for value in (asset.department, asset.tag, asset.status, asset.remarks) if value)
+    others += sum(1 for value in (asset.cost, asset.purchase, asset.service) if value not in (None, ""))
+    return others >= 1
+
+
 def merge_continuation(previous: Asset, current: Asset) -> None:
     previous.department = join_text(previous.department, current.department, "; ")
     previous.description = join_text(previous.description, current.description)
@@ -914,11 +972,17 @@ def take_asset(row: list[object], mapping: dict[str, int], source: str, location
         # A repeated header line, not an asset.
         asset.item = ""
         asset.extras["header_repeat"] = True
-    elif asset.item and is_placeholder(asset.item):
+    elif asset.item and (is_placeholder(asset.item) or TOTAL_ITEM.match(asset.item)):
+        # A dash, "N/A" or a "TOTAL ..." line names no asset.
         asset.item = ""
         asset.extras["placeholder_item"] = True
     # A merged Word cell read once per spanned column ("KYESS KYESS KYESS").
     asset.tag = re.sub(r"(?i)^(\S+)(?:\s+\1)+$", r"\1", asset.tag)
+    # Model, serial and manufacturer columns are kept as stated facts in the description.
+    for role, label in (("model", "Model"), ("serial", "Serial number"), ("manufacturer", "Made by")):
+        value = clean(cell(row, mapping, role)) if role in mapping else ""
+        if value and not is_placeholder(value):
+            asset.description = join_text(asset.description, f"{label} {value}", "; ")
     if (cost in (None, "") and unit_cost not in (None, "")) or ("unit_cost" in mapping and "cost" not in mapping):
         # A unit price is already one item's share: it is not divided by the count.
         asset.extras["unit_cost"] = True
@@ -950,6 +1014,7 @@ def parse_template_sheet(
     assets: list[Asset] = []
     carry_lg = fallback_lg
     carry_facility = ""
+    carry_column = ""
     mapping = None
     header_indexes = {index for index, _ in mapped_rows}
     active = {index: item for index, item in mapped_rows}
@@ -964,7 +1029,7 @@ def parse_template_sheet(
             # one block until a banner, label row or place column names another.
             # A banner written on the rows just above the header names the block. A
             # data row of the previous block is not a banner.
-            for above in rows[max(0, row_number - 4):row_number - 1]:
+            for above in rows[max(0, row_number - 9):row_number - 1]:
                 filled = [clean(value) for value in above if clean(value)]
                 text = row_text(above)
                 if len(filled) > 4 and not re.search(r"(?i)name\s+of", text):
@@ -990,7 +1055,7 @@ def parse_template_sheet(
             # The "Description" sub-header row may carry the block's place columns.
             if asset.lg and resolve_lg(asset.lg):
                 carry_lg = asset.lg
-            if asset.facility and looks_like_facility(asset.facility):
+            if asset.facility and (looks_like_facility(asset.facility) or ("facility" in mapping and bare_place_name(asset.facility))):
                 carry_facility = asset.facility
             continue
         continuation = not asset.item and block_last is not None and (asset.description or asset.remarks or asset.tag or asset.status)
@@ -1002,16 +1067,33 @@ def parse_template_sheet(
                 block_last = None
             continue
         if asset.lg and (resolve_lg(asset.lg) or lg_from_text(asset.lg)):
+            new_lg, old_lg = resolve_lg(asset.lg), resolve_lg(carry_lg) if carry_lg else None
+            if new_lg is not None and old_lg is not None and new_lg.key != old_lg.key:
+                # A new district block: the facility of the block above does not carry.
+                carry_facility, carry_column = "", ""
             carry_lg = asset.lg
         else:
             asset.lg = carry_lg
-        if asset.facility and looks_like_facility(asset.facility):
+        header_kind = mapping.get("facility_header_kind") or ("" if "facility" not in mapping else facility_type_for("", "", sheet_name, filename))
+        if asset.facility and (looks_like_facility(asset.facility) or ("facility" in mapping and bare_place_name(asset.facility))):
             carry_facility = asset.facility
+            carry_column = header_kind if "facility" in mapping and not looks_like_facility(asset.facility) else ""
+        elif asset.facility and "facility" in mapping and not is_placeholder(asset.facility):
+            # The column's own value stands, whatever the tests say of it.
+            carry_facility, carry_column = asset.facility, header_kind
         else:
             asset.facility = carry_facility
+        if carry_column and asset.facility == carry_facility:
+            asset.extras["column_facility"] = carry_column
         count = bare_integer(asset.item) if asset.item else None
-        department_row = bool(asset.item) and DEPARTMENT_WORD.match(asset.item) is not None
-        if pending is not None and (count is not None or (department_row or not asset.item) and not placeholder_only(asset)):
+        department_word = bool(asset.item) and DEPARTMENT_WORD.match(asset.item) is not None
+        # "Classroom Block" with its own cost and status is a building, not the
+        # department of the row above.
+        department_row = department_word and not (
+            asset.status or asset.cost not in (None, "") or asset.purchase not in (None, "") or (asset.tag and not blank_tag(asset.tag))
+        )
+        if pending is not None and (count is not None or (department_word or not asset.item) and not placeholder_only(asset)):
+            department_row = department_word
             # Count-on-next-row layout: the item name sat alone on the previous row and
             # this row starts with the count (or the department), then the item's data.
             if department_row:
@@ -1045,6 +1127,20 @@ def parse_template_sheet(
             if count is not None and block_last.explicit_qty is None and 0 < count <= MAX_QUANTITY:
                 block_last.explicit_qty = count
             merge_continuation(block_last, asset)
+            continue
+        if not asset.item and block_last is not None and unit_row(asset):
+            # One unit per row under the item's name: "Drip Stand" on the first row,
+            # then a row per stand with its own description, tag or status.
+            asset.item = block_last.extras.get("unit_item") or identity_item(block_last.item)
+            asset.extras["unit_row"] = True
+            asset.extras["unit_item"] = asset.item
+            if not block_last.extras.get("unit_row"):
+                block_last.extras["has_unit_rows"] = True
+            if not asset.department:
+                asset.department = block_last.department
+            asset.facility_type = facility_type_for(asset.facility, asset.department, sheet_name, filename)
+            assets.append(asset)
+            block_last = asset
             continue
         if not asset.item and block_last is not None and (asset.description or asset.tag or asset.status or asset.remarks or asset.department):
             merge_continuation(block_last, asset)
@@ -1390,8 +1486,15 @@ def resolve_places(asset: Asset, contexts: list[tuple[str, str]], relative: str)
     """
     kind = asset.facility_type if asset.facility_type in {"School", "Health centre"} else ""
     banner_lg, banner_facility = strip_lg_prefix(asset.facility) if asset.facility else ("", "")
-    if not (banner_facility and not is_placeholder(banner_facility) and looks_like_facility(banner_facility)):
+    if banner_facility and not banner_lg:
+        # "KYEIHARA HC III MITOOMA": the district written after the facility.
+        banner_facility, banner_lg = split_trailing_lg(banner_facility)
+    column_kind = asset.extras.get("column_facility") or ""
+    if not (banner_facility and not is_placeholder(banner_facility)
+            and (looks_like_facility(banner_facility) or (column_kind and bare_place_name(banner_facility)))):
         banner_facility = ""
+    if not kind and column_kind and banner_facility:
+        kind = column_kind
     if not kind:
         kind = facility_kind(banner_facility) or facility_kind(asset.facility) if asset.facility else ""
     lg = resolve_lg(asset.lg) if asset.lg else None
@@ -1452,10 +1555,27 @@ def resolve_places(asset: Asset, contexts: list[tuple[str, str]], relative: str)
         # facility the reconciliation places in another local government.
         bucket = known_facilities().get(lg.key, {})
         if facility_key(facility_text, kind) not in bucket:
-            owner = lg_of_known_facility(facility_text, kind)
+            # The district and its municipality share a name (Sheema, Sheema MC): a
+            # facility the sibling vote lists, even misspelt, belongs there before a
+            # namesake in a distant district.
+            owner = None
+            for sibling in known_local_governments().values():
+                if sibling.key != lg.key and norm(sibling.base) == norm(lg.base):
+                    display, _found = canonical_facility(facility_text, sibling, kind)
+                    if facility_key(display, kind) in known_facilities().get(sibling.key, {}):
+                        owner = sibling
+                        break
+            owner = owner or lg_of_known_facility(facility_text, kind)
             if owner is not None and owner.key != lg.key:
                 PLACE_NOTES[f"{relative}: '{facility_text}' moved from {lg.display} to {owner.display}"] += 1
                 lg = owner
+    elif facility_text and lg is not None and folder_lg is not None and folder_lg.key != lg.key:
+        # The banner wrote the district ("Apac") for a facility filed, and reconciled,
+        # under the municipality ("Apac MC"): the filing names the vote.
+        key = facility_key(facility_text, kind)
+        if key in known_facilities().get(folder_lg.key, {}) and key not in known_facilities().get(lg.key, {}):
+            PLACE_NOTES[f"{relative}: '{facility_text}' moved from {lg.display} to {folder_lg.display} (filed there)"] += 1
+            lg = folder_lg
     asset.extras["facility_raw"] = facility_text
     if facility_text and not is_placeholder(facility_text):
         display, found_kind = canonical_facility(facility_text, lg, kind)
@@ -1515,6 +1635,9 @@ def in_scope(asset: Asset) -> bool:
     bucket = known_facilities().get(asset.extras.get("lg_key") or "", {})
     if key in bucket or known_anywhere(key):
         return True
+    if asset.extras.get("column_facility") and asset.facility_type in {"School", "Health centre"}:
+        # Named under a HEALTH CENTRE or SCHOOL column of a programme verification sheet.
+        return True
     raw = asset.extras.get("facility_raw") or asset.facility
     return bool(re.search(r"(?i)\bseed\b|health\s*cent(?:re|er)\s*(?:iii|111|3)\b|\bhc\s*(?:iii|111|3)\b|regional blood bank", raw))
 
@@ -1561,7 +1684,11 @@ def read_workbook(path: Path) -> list[Asset]:
     weak_context: tuple[str, str] | None = None
     if not contexts:
         stem_lg, stem_facility = stem_places(path)
-        if stem_facility and not re.search(r"(?i)\b(schools|centres|centers|hcs|dtb|team|list|register)\b", stem_facility):
+        if stem_facility and not re.search(
+            r"(?i)\b(schools|centres|centers|hcs|dtb|team|list|register|facilities|hospitals|health|centre|center|"
+            r"one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b",
+            stem_facility,
+        ):
             # "UGIFT BULAGA_HCIII.docx" names its one facility; used only when no
             # banner or column in the file names one.
             weak_context = (stem_lg, stem_facility)
@@ -1671,7 +1798,7 @@ def read_workbook(path: Path) -> list[Asset]:
 
 
 SCOPE_NOTES: dict[str, tuple[int, int]] = {}
-SUPPLY_SHEET = re.compile(r"(?i)voucher|delivery\s*note|requisition|invoice|receipt|interview|distribution\s*list|dispatch")
+SUPPLY_SHEET = re.compile(r"(?i)voucher|delivery\s*note|requisition|invoice|receipt|interview|distribution\s*list|dispatch|\bdeployed\b")
 
 
 def bare_count(value: object) -> int | None:
@@ -1831,7 +1958,7 @@ MEASURE_WORD = (
     r"lit(?:re|er)s?|ltrs?|l|ml|kgs?|g|gm|kva|kw|hp|volts?|v|watts?|w|gb|tb|mm|cm|m|x|way|tiers?|doors?|steps?|pins?|"
     r"ohms?|amps?|a|pieces?\s+set|piece\s+set|in\s+1|blocks?|classrooms?|rooms?|labs?|bed\s+capacity|capacity)"
 )
-LEADING_COUNT = re.compile(rf"(?i)^([1-9]\d{{0,3}})\s+(?!{MEASURE_WORD}\b)([A-Za-z].+)$")
+LEADING_COUNT = re.compile(rf"(?i)^0?([1-9]\d{{0,3}})\s+(?!{MEASURE_WORD}\b)([A-Za-z].+)$")
 
 
 def stated_count(asset: Asset) -> tuple[str, list[tuple[int, str | None]]] | None:
@@ -1883,6 +2010,9 @@ def decide_groups(asset: Asset, alone: bool, repeats: int = 1, per_unit_block: b
     its items once per unit, the count is a group total and is not applied.
     """
     asset.extras["alone"] = alone
+    if asset.extras.get("has_unit_rows"):
+        # The units of this line are listed on the rows below it, one each.
+        return identity_item(asset.item), [(1, None)]
     found = stated_count(asset)
     if not found:
         return asset.item, [(1, None)]
