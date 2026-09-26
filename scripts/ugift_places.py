@@ -300,7 +300,7 @@ def lg_from_text(text: object) -> LocalGovernment | None:
 def facility_kind(*texts: object) -> str:
     """'School', 'Health centre', or '' when the words do not say."""
     blob = " ".join(clean_text(text) for text in texts)
-    if re.search(r"(?i)\bhealth\b|\bh\s*[./]?\s*c\s*(?:i{1,3}|1{1,3}|2|3|4)?\b|\bhc\s*(?:i{1,3}|1{1,3}|2|3|4)?\b|hospital|clinic|dispensary|blood\s*bank", blob):
+    if re.search(r"(?i)\bhealth\b|\bh\s*[./]?\s*c\s*(?:i{1,3}|1{1,3}|2|3|4)?\b|\bhc\s*(?:i{1,3}|1{1,3}|2|3|4)?\b|hospital|\bclinics?\b|dispensary|blood\s*bank", blob):
         return "Health centre"
     if re.search(r"(?i)school|\bsss\b|\bss\b|\bs\.s\.s\b|\bs\.s\b|\bseed\b|secondary|\bsec\b|\bsch\b", blob):
         return "School"
@@ -363,6 +363,9 @@ def facility_display(name: object, kind: str = "", *, official: bool = False) ->
     text = re.sub(r"(?i)\s+\.s\.?(?=\s|$)", " ", text)
     text = re.sub(r"[…]+", " ", text)
     text = re.sub(r"(?i)\bsch\b\.?", "School", text)
+    # "KYARUSOZISEED" and "Kicwamba Seed Schools": a glued or plural suffix.
+    text = re.sub(r"(?i)(?<=[a-z]{4})seed\b", " Seed", text)
+    text = re.sub(r"(?i)\bschools\b", "School", text)
     # Stray tokens after the name: "Lll" for III, "UgIFT", "DC" for the district.
     text = re.sub(r"(?i)\s+\b(?:lll|ugift|ug\s*ift|dc|dlg)\b\.?", " ", text)
     text = re.sub(r"(?i)\bhigh\s+(?:s\.?s\.?s?\.?|sec(?:ondary)?\.?(?:\s*(?:school|sch))?)\b\.?", "High School", text)
@@ -458,7 +461,7 @@ def canonical_facility(name: object, lg: LocalGovernment | None, kind: str = "")
             allowed = 2 if len(base) >= 6 else 1
             for distance in range(1, allowed + 1):
                 close = {
-                    bucket[known]
+                    known
                     for known in bucket
                     if known.split("|")[1] in tags
                     # Same first letter, or one name is the other minus its first letter
@@ -466,10 +469,29 @@ def canonical_facility(name: object, lg: LocalGovernment | None, kind: str = "")
                     and (known.split("|")[0][:1] == base[:1] or (distance == 1 and (known.split("|")[0].endswith(base) or base.endswith(known.split("|")[0]))))
                     and _edit_distance(known.split("|")[0], base) == distance
                 }
+                if len(close) > 1:
+                    # "Angata" is two edits from both Angetta and Anara: the one
+                    # sharing the longer opening ("ang") is meant.
+                    def shared(known: str) -> int:
+                        word = known.split("|")[0]
+                        return len([1 for a, b in zip(word, base) if a == b][: next((i for i, (a, b) in enumerate(zip(word, base)) if a != b), len(base))])
+                    ranked = sorted(close, key=shared, reverse=True)
+                    if shared(ranked[0]) > shared(ranked[1]):
+                        close = {ranked[0]}
                 if len(close) == 1:
-                    return close.pop()
+                    return bucket[close.pop()]
                 if close:
                     break
+            if allowed == 1:
+                # A short name ("Ogur" for "Ogoro") two edits from the one facility of the
+                # kind that opens with the same two letters.
+                close = {
+                    known for known in bucket
+                    if known.split("|")[1] in tags and known.split("|")[0][:2] == base[:2]
+                    and _edit_distance(known.split("|")[0], base) == 2
+                }
+                if len(close) == 1:
+                    return bucket[close.pop()]
     return facility_display(name, kind), kind
 
 

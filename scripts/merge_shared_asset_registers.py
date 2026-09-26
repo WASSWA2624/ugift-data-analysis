@@ -595,6 +595,13 @@ def looks_like_facility(text: str) -> bool:
         r"(?i)\b(checklist|interview|discussion|verification|furniture|ict items|buildings to|equipment)\b", text
     ):
         return False
+    if re.search(
+        r"(?i)\b(fences?|blocks?|tanks?|latrines?|toilets?|desks?|chairs?|tables?|beds?|stools?|kits?|sets?|machines?|"
+        r"computers?|printers?|uniforms?|textbooks?|books?|shelves|shelf|thermometers?|instrument|basic|pit|kitchen|bins?)\b",
+        text,
+    ) and not re.search(r"(?i)name\s+of", text):
+        # "School fence", "Instrument set, ENT Basic for HCIII": an item, not a place.
+        return False
     base = facility_base(text)
     if re.search(r"\d{3,}", base) or re.match(r"(ugift|team|sheet|table|copy|final|residential|non residential|buildings?)\b", base):
         return False
@@ -1108,9 +1115,14 @@ def parse_template_sheet(
             pending = None
             continue
         if pending is not None:
+            if not placeholder_only(pending):
+                # A filled asset held back for a count row that never came.
+                pending.facility_type = facility_type_for(pending.facility, pending.department, sheet_name, filename)
+                assets.append(pending)
+                block_last = pending
             # The lone item name was a section label, a template line the facility
             # never received, or a fragment of the previous item's text.
-            if block_last is not None and FRAGMENT.match(pending.item) and squash(pending.item) not in TOOLKIT_INDEX:
+            elif block_last is not None and FRAGMENT.match(pending.item) and squash(pending.item) not in TOOLKIT_INDEX:
                 block_last.description = join_text(block_last.description, pending.item)
             pending = None
         if count is not None and (asset.status or asset.cost not in (None, "") or asset.purchase not in (None, "")):
@@ -1150,6 +1162,15 @@ def parse_template_sheet(
         if NOT_RECEIVED.match(asset.item) and placeholder_only(asset):
             continue
         if placeholder_only(asset):
+            if block_last is not None and squash(f"{block_last.item} {asset.item}") in TOOLKIT_INDEX:
+                # "Instrument set, ENT" / "Basic for HCIII": one item name wrapped over
+                # two rows; a count row may still follow it.
+                block_last.item = clean(f"{block_last.item} {asset.item}")
+                if assets and assets[-1] is block_last:
+                    assets.pop()
+                pending = block_last
+                block_last = None
+                continue
             pending = asset
             continue
         asset.facility_type = facility_type_for(asset.facility, asset.department, sheet_name, filename)
@@ -2362,7 +2383,12 @@ def write_workbook(assets: list[Asset], sources: list[str], notes: list[str]) ->
 
 
 def row_signature(asset: Asset) -> tuple[str, ...]:
-    return (norm(identity_item(asset.item)), norm(asset.description), norm(asset.tag), norm(asset.status), norm(asset.department))
+    # The facility is part of the line: the same lines filed for another facility are
+    # another return, not a copy.
+    return (
+        norm(identity_item(asset.item)), norm(asset.description), norm(asset.tag), norm(asset.status), norm(asset.department),
+        asset.extras.get("facility_key") or norm(asset.facility),
+    )
 
 
 def drop_near_duplicates(parsed: dict[str, list[Asset]]) -> list[str]:
