@@ -1,30 +1,32 @@
 {
-  "index_rows_before": 15515,
+  "index_rows_before": 17217,
   "moved_source_rows": 0,
-  "index_rows_after": 15519,
-  "new_index_rows": 4,
+  "index_rows_after": 17227,
+  "new_index_rows": 10,
   "new_files": [
-    "team-19/Bushenyi/_reconciliation-evidence/Screenshot 2026-09-24 133702.png",
-    "team-19/Mitooma/_reconciliation-evidence/Screenshot 2026-09-24 133702.png",
-    "team-19/Sheema MC/_reconciliation-evidence/Screenshot 2026-09-24 133702.png"
+    "team-19/Mitooma/Mayanga-Seed-Secondary-School/_reconciliation-evidence/Screenshot 2026-09-26 051220.png",
+    "_multi-team/programme-documents/data-management-chat/Screenshot 2026-09-26 051308.png",
+    "_multi-team/programme-documents/data-management-chat/Screenshot 2026-09-26 051327.png",
+    "_multi-team/programme-documents/data-management-chat/Screenshot 2026-09-26 051411.png",
+    "_multi-team/programme-documents/data-management-chat/Screenshot 2026-09-26 051449.png",
+    "_multi-team/programme-documents/data-management-chat/Screenshot 2026-09-26 051518.png",
+    "_multi-team/programme-documents/data-management-chat/Screenshot 2026-09-26 051532.png",
+    "team-19/Mitooma/Mayanga-Seed-Secondary-School/_reconciliation-evidence/Screenshot 2026-09-26 051644.png",
+    "team-14/Bulambuli/Bumufuni-Seed-Secondary-School/_reconciliation-evidence/Screenshot 2026-09-26 100642.png"
   ],
   "migrated_archive_rows": 0,
   "removed_orphans": [],
-  "new_facilities": [
-    "team-19/Bushenyi/_reconciliation-evidence",
-    "team-19/Mitooma/_reconciliation-evidence",
-    "team-19/Sheema MC/_reconciliation-evidence"
-  ],
+  "new_facilities": [],
   "unresolved": [],
   "status_counts": {
-    "extracted": 69,
-    "placed": 10711,
-    "skipped": 634,
-    "duplicate": 2266,
+    "extracted": 84,
+    "placed": 10784,
+    "skipped": 1254,
+    "duplicate": 3266,
     "in-archive": 1839
   },
   "root_counts": {
     "raw-data-ungrouped": 12344,
-    "new-raw-data-221092026-1114": 3175
+    "new-raw-data-221092026-1114": 4883
   }
 }

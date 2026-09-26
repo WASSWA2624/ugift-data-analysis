@@ -17,6 +17,7 @@ LATEST_WESTERN='_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOOR
 LATEST_LWAMATA='team-29/Kiboga/Lwamata-Town-Council-Seed-Secondary-School/UGIFT ASSET VERIFICATION LWAMATA T.C.C SEED SEC SCH (1).docx'
 LATEST_SOFIA='team-13/Busia MC/Sofia-Health-Centre-III/Sofia health centre 111 eastern division busia MC.pdf'
 LATEST_CHAT='_multi-team/programme-documents/data-management-chat/WhatsApp Chat with DATA MANAGEMENT UGIFT (4).txt'
+CHAT6='_multi-team/programme-documents/data-management-chat/WhatsApp Chat with DATA MANAGEMENT UGIFT (6).txt'
 NS={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
 def clean(value): return re.sub(r'\s+',' ',str(value)).strip()
 def key(value): return re.sub(r'[^a-z0-9]','',value.lower())
@@ -187,7 +188,7 @@ def main():
    continue
   names=dec.get('master_names',[dec.get('master_name')])
   for name in names:
-   r=find(dec.get('master_lg',dec['lg']),name); r['decision_ref']=dec['id']; r['note']=dec['decision']+'. '+dec['note']
+   r=find(dec.get('master_lg',dec['lg']),name); prior_note=r.get('note') or ''; r['decision_ref']=dec['id']; r['note']=dec['decision']+'. '+dec['note']
    return_folder=dec.get('return_folder') or aliases.get(dec['id'])
    if return_folder:
     set_folder(r,return_folder)
@@ -195,6 +196,9 @@ def main():
     r['note']=dec.get('evidence_note',dec['decision']+'. '+dec['note'])
     if dec.get('resolved_status') and r['status']!=dec['resolved_status']:
      raise ValueError(f"Supervisor decision {dec['id']} expected {dec['resolved_status']}, got {r['status']}")
+   elif dec['id']=='USER04':
+    r['status']='Replaced'; r['verification']='Village name for already-listed Zinga Health Centre III (H052); no second facility'; r['note']=dec['note']
+    r['source']='team-32/Wakiso/Zinga-HC-III/Zinga HC III asset verification.docx'; r['source_locator']='USER04: return counted once, on master H052'
    elif dec['id']=='CHAT04': r['status']='Replaced'; r['ground_name']='Liko HC III'; r['verification']='Already-listed replacement; no second verified facility'; r['note']='Loinya was replaced by Liko, which already has master entry H212. Count Liko once.'
    elif dec['id'] in ['CHAT03','CHAT10','CHAT11']: r['status']='Reported absent'; r['verification']='Reported not known/not found; not independently established'
    elif dec['id']=='CHAT02':
@@ -206,6 +210,14 @@ def main():
     r['note']=dec['note']
    elif dec['id']=='CHAT44E':
     r['note']='Asset section: MAYANGA  HCIII,   MITOOMA. '+dec['note']
+   elif dec['id'] in {'CHAT46D','CHAT46E','CHAT46F','CHAT46G'}:
+    r['note']=dec['note']+' '+prior_note
+   elif dec['id']=='CHAT46B':
+    r['ground_name']=dec['ground_name']
+    r['status']='Field evidence'
+    r['verification']='Supervisor listed the items received; no toolkit or scan was attached'
+    r['source']=CHAT6
+    r['source_locator']='25 September 2026 10:18'
    elif dec['id']=='CHAT14':
     r['status']='Outside UgIFT'; r['verification']='Reported outside UgIFT; not verified; facility type wording requires confirmation'; r['note']='The supervisor says Buyinda was not verified because it was outside UgIFT. The message alternates between health centre and seed school, while the master contains Buyinda HC II; retain that facility-type caveat.'
    elif dec['id'] in ['CHAT15A','CHAT15B','CHAT15C','CHAT15D','CHAT15E']:
@@ -340,6 +352,13 @@ def main():
   ('Kasanda','Manyogaseka Seed School','Manyogaseka-Seed-Secondary-School','St Maria Goretti Seed Secondary School','The 25 September handwritten scan names St Maria Goretti Seed School, Manyogaseka, in Kasanda. It is counted on master Manyogaseka.'),
   ('Kakumiro','Kikoola','Mukoora-HC-III','Mukoora Health Centre III','Depaul said on 24 September 2026 that the master name Kikoola is Mukoora Health Centre III. The Mukoora toolkit is the return and is counted once on this row.'),
   ('Kagadi','Kiryanga Seed School','St-Catherine-Kicucura-Seed-Secondary-School','St Catherine Kicucura Seed Secondary School','Depaul said on 24 September 2026 that Kiryanga is not a UgIFT school and that St Catherine Kicucura Seed School in Kagadi is the UgIFT school. That toolkit is counted once on this row.'),
+  ('Gomba','Bulwadda HC II','Bulwadda-HC-III','Bulwadda Health Centre III','The 25 September toolkit names Bulwadda Health Centre III in Gomba.'),
+  ('Butambala','Butaaka HC II','Butaaka-HC-III','Butaaka Health Centre III','The 25 September toolkit names Butaaka Health Centre III. The cover spells the local government Butamabala; the verifier block says Butambala.'),
+  ('Mityana','Mpongo HCII','Mpongo-HC-III','Mpongo Health Centre III','The 25 September handwritten scan names Mpongo Health Centre III in Mityana. The interview line also writes Busunju HC III; the checklist header names Mpongo.'),
+  ('Mityana','Namungo Seed School','Namungo-Seed-Secondary-School','Namungo Seed Secondary School','The 25 September handwritten scan names Namungo Seed Secondary School in Mityana. One cost page also writes Namungo HC III. It is counted on the seed school, not on Namungo Health Centre III.'),
+  ('Mitooma','Mayanga Seed School','Mayanga-Seed-Secondary-School','Mayanga Seed School','The 17 May 2022 ICT report names Mayanga Seed School in Mitooma District. Johnson sent it on 25 September 2026 and the head teacher said the assets are in good condition, in use and functional. At 15:56 he sent the 14 February 2022 acknowledgement of receiving completed facilities as additional information from the head teacher of Mayanga SSS, Mitooma. This is the school, not Mayanga Health Centre III.'),
+  ('Kabarole','Kasenda Seed School','Kasenda-Seed-Secondary-School','St Paul Nyabweya Seed School','Depaul said on 25 September 2026 that Kasenda Seed School is now St Paul Nyabweya Seed School. The toolkit interview uses that name and says it is Kasenda. An earlier message the same morning said St Peters. Count it once on this row.'),
+  ('Wakiso','Zinga HC II','Zinga-HC-III','Zzinga Health Centre III','The 26 September photographs show a Wakiso District Health Office stores list for Zzinga HC III, stamped 7 July 2026, with quantities for 75 lines. It is a district stores record, not a site-visit report. Lawrence Kalyowa had reported on 23 September 2026 that this return was not yet submitted.'),
  ]:
   r=find(loc,name)
   set_folder(r,folder)
@@ -395,7 +414,9 @@ def main():
    r['master_ids']='H292'
    r['decision_ref']='CHAT45A'
    used.add(r['folder'])
- for path in sorted(set(folder_keys.values())-used):
+ # Buloba keeps a fixed ID so existing X numbers do not shift.
+ BULOBA='team-32/Wakiso/Buloba-HC-III'
+ for path in sorted(set(folder_keys.values())-used-{BULOBA}):
   parts=path.split('/'); name=parts[2].replace('-',' '); typ='School' if 'school' in name.lower() else 'Health centre'
   r=dict(id='X'+str(len(extra)+1).zfill(3),team=int(parts[0][-2:]),lg=parts[1],name=name,type=typ,scope='Ground return only',status='Field evidence',folder=path,source='',note='Facility-specific return received; no confirmed master match.',ground_name=name,master_ids='',decision_ref='',source_locator='',verification='Verification records received; physical completion not certified')
   if identity(r) not in extra_keys: extra.append(r); extra_keys.add(identity(r))
@@ -428,6 +449,8 @@ def main():
   dict(id='X901',team=2,lg='Yumbe',name='Ekaligo Health Centre III',type='Health centre',scope='Ground return only',status='Field evidence',folder='team-02/Yumbe/Amanyiri-HC-III',source='team-02/Yumbe/Amanyiri-HC-III/1 AMANYIRI HCIII.docx',source_locator='Health-centre interview: Name of Health EKALIGO HCIII',note='The programme data manager confirms that Ekaligo and Amanyiri are independent facilities. The combined file names Ekaligo in the interview, while the asset schedule separately names Amanyiri.',ground_name='Ekaligo Health Centre III',master_ids='',decision_ref='USER02',verification='Facility named in submitted return; no separate Ekaligo asset schedule identified'),
   dict(id='X902',team=2,lg='Yumbe',name='Liko Health Centre III',type='Health centre',scope='Ground return only',status='Field evidence',folder='team-02/Yumbe/Lodonga-Seed-Secondary-School',source='team-02/Yumbe/Lodonga-Seed-Secondary-School/LODONGA SEED SS (2).docx',source_locator='Health-centre interview: Name of Health Centre Liko Health center iii',note='The programme data manager confirms that Liko and Lodonga Seed Secondary School are independent facilities. The combined file names Liko in the health-centre interview and Lodonga in the school asset schedules.',ground_name='Liko Health Centre III',master_ids='',decision_ref='USER02',verification='Facility named in submitted return; no separate Liko asset schedule identified'),
  ])
+ if (GROUPED/BULOBA).is_dir():
+  extra.append(dict(id='X903',team=32,lg='Wakiso',name='Buloba Health Centre III',type='Health centre',scope='Ground return only',status='Field evidence',folder=BULOBA,source='',note='The 26 September photographs show two Buloba HC III equipment lists with quantities and costs, one stamped by the Wakiso District Health Office. Buloba is not on the Wakiso master list and no message links it to a master facility, so it stays a separate return.',ground_name='Buloba Health Centre III',master_ids='',decision_ref='',source_locator='',verification='Verification records received; physical completion not certified'))
  linked_receivers={
   (key('Nebbi'),key('Pamaka HC III')):('H218','Receiving facility for the master-list Oweko replacement.','CHAT21D'),
   (key('Zombo'),key('Amwonyo HC III')):('H231','Receiving facility for the UgIFT assets relocated from Alangi Health Centre III.','CHAT21A'),
@@ -454,18 +477,40 @@ def main():
  kyakatebe['decision_ref']='CHAT45C'
  kyakatebe['verification']='Verification records received; physical completion not certified'
  kyakatebe['note']='Depaul first said Kyakatebe does not exist in Kasanda, then said it was renamed Namabaale Health Centre III. The later rename is used. The Namabaale toolkit is the return and is counted once on this row.'
+ for folder, loc, name, ref, note in [
+  ('team-29/Kiboga/Lwamata-Town-Council-Seed-Secondary-School','Kiboga','Lwamata Town Council','CHAT46D','Depaul confirmed on 25 September 2026 that this return is the master-list Lwamata school. Counted once on that row.'),
+  ('team-25/Kagadi/Kyabasara-HC-III','Kagadi','Kyabasara HC II','CHAT46E','Depaul confirmed on 25 September 2026 that Kyabasara HC III is on the master list. Counted once on that row.'),
+  ('team-25/Buliisa/Butiaba-HC-III','Buliisa','Butiaba HC II','CHAT46F','Depaul confirmed on 25 September 2026 that Butiaba HC III, written Butaiba in the chat, is on the master list. Counted once on that row.'),
+ ]:
+  master=find(loc,name)
+  for r in extra:
+   if r.get('folder')==folder:
+    r['scope']='Linked receiving facility'; r['master_ids']=master['id']; r['decision_ref']=ref; r['note']=note
+ for r in extra:
+  if key(r.get('name',''))==key('Muggi HC III') and key(r.get('lg',''))==key('Kagadi'):
+   r['scope']='Linked receiving facility'; r['master_ids']=find('Mayuge','Muggi HC II')['id']; r['decision_ref']='CHAT46G'
+   r['note']='Depaul said on 25 September 2026 that Muggi HC III is in Mayuge, not Kagadi. The Kagadi label is not a second facility. Counted once on the Mayuge master row.'
+  if key(r.get('name',''))==key('Rukoki General Hospital'):
+   r['decision_ref']='CHAT46H'; r['note']='Depaul confirmed on 25 September 2026 that Rukoki General Hospital is not on the master list but is a UgIFT beneficiary in Kasese Municipality. The existing register return is kept. No master row is added.'
+  if key(r.get('name',''))==key('Silumira HC III'):
+   r['decision_ref']='CHAT46I'; r['note']='Depaul confirmed on 25 September 2026 that Silumira HC III is not on the master list but was done in Kakumiro. The existing register return is kept. No master row is added.'
+  if 'bukuuku' in key(r.get('name','')):
+   r['decision_ref']='CHAT46J'; r['note']='Depaul confirmed on 25 September 2026 that Bukuuku is not on the master list but is an additional seed secondary school in Fort Portal City. The existing return is kept. No master row is added.'
  # New Mayanga rows supplement its original register evidence.
  mayanga=find('Mitooma','Mayanga HC II'); mayanga.setdefault('supplemental_sources',[]).append('_multi-team/teams-19-21/data updates - western.xls'); mayanga.setdefault('supplemental_locators',[]).append('Sheet3!B3'); mayanga['note']+=' New western update also has Mayanga asset rows (Sheet3!B3).'
+ decision_evidence={dec['id']:dec['evidence'] for dec in chat['decisions'] if dec.get('evidence')}
  for r in records+extra:
   if r.get('decision_ref','').startswith('CHAT'):
-   r.setdefault('supplemental_sources',[]).append(LATEST_CHAT)
+   r.setdefault('supplemental_sources',[]).append(decision_evidence.get(r['decision_ref'],LATEST_CHAT))
    r.setdefault('supplemental_locators',[]).append(r['decision_ref'])
  # Select a usable, facility-specific evidence file; index supplies all source versions.
+ # Photo documents, and forms transcribed from them, support a team toolkit rather than replace it.
+ photo_evidence={e['destination (in raw-data-grouped)'] for e in index if e['note'].startswith(('Captioned photographs','Transcribed from captioned photographs'))}
  for r in records+extra:
   if r.get('folder'):
    files=[p for p in all_files if p.startswith(r['folder']+'/') and '/_reconciliation-evidence/' not in p and not Path(p).name.startswith('~$')]
    order={'.docx':0,'.pdf':1,'.xlsx':2,'.xls':3,'.jpg':4,'.jpeg':4,'.png':4}
-   files.sort(key=lambda p:(order.get(Path(p).suffix.lower(),9),p))
+   files.sort(key=lambda p:(p in photo_evidence,order.get(Path(p).suffix.lower(),9),p))
    if files: r['source']=files[0]
   if r['status']=='Field evidence' and not r['source']: raise ValueError('Missing evidence source '+str(r))
   r['supervisor']=re.sub(r'[/\d].*','',teams[str(r['team'])]['supervisor']).strip()
@@ -525,6 +570,8 @@ def main():
    r['source']=LATEST_CHAT if r.get('decision_ref') else MASTER
    if str(r.get('decision_ref','')).startswith('CHAT45'):
     r['source']='_multi-team/programme-documents/data-management-chat/WhatsApp Chat with DATA MANAGEMENT UGIFT (5).txt'
+   elif str(r.get('decision_ref','')).startswith('CHAT46'):
+    r['source']=CHAT6
    r['source_locator']=r.get('source_locator') or r.get('decision_ref') or 'Documented case'
  records.sort(key=lambda r:(r['team'],r['lg'],r['type'],r['name']))
  extra.sort(key=lambda r:(r['team'],r['lg'],r['name']))
@@ -543,6 +590,8 @@ def main():
  assert pandwong['status']=='Field evidence' and 'no UgIFT assets' in pandwong['note'], pandwong
  central_division=find('Jinja City','Central Division')
  assert central_division['id']=='S012' and central_division['status']=='Field evidence' and central_division['decision_ref']=='USER01', central_division
+ bussi=find('Wakiso','Bussi HC II')
+ assert bussi['id']=='H054' and bussi['status']=='Field evidence' and bussi['decision_ref']=='USER04' and bussi['verification'].startswith('Case explained') and 'H052' in bussi['source_locator'], bussi
  kishangara=find('Ibanda','Kishangara seed school')
  assert kishangara['id']=='S216' and kishangara['status']=='Field evidence' and kishangara['decision_ref']=='USER03', kishangara
  assert 'does not exist in Ibanda' in kishangara['note'] and not kishangara.get('folder'), kishangara
@@ -557,6 +606,7 @@ def main():
   ('Mityana','Namungo HC II','H035','Namungo-HC-III'),
   ('Kibaale','Nyamarunda','H299','Nyamarunda-HC-III'),
   ('Kasanda','Manyogaseka Seed School','S070','Manyogaseka-Seed-Secondary-School'),
+  ('Wakiso','Zinga HC II','H052','Zinga-HC-III'),
  ]:
   school=find(loc,name)
   assert school['id']==ident and school['status']=='Field evidence' and school['folder'].endswith('/'+folder), school

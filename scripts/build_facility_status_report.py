@@ -39,7 +39,7 @@ TOP = HEIGHT - 48
 BOTTOM = 42
 GAP = 26
 COL = (CONTENT - GAP) / 2
-AS_OF = '25 September 2026'
+AS_OF = '26 September 2026'
 SUPERVISOR_CORRECTIONS = {
     24: 'Lawrence Kalyowa',
 }
@@ -191,7 +191,7 @@ class Report(BaseDocTemplate):
     def __init__(self, filename):
         super().__init__(str(filename), pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN,
                          topMargin=48, bottomMargin=BOTTOM, title='UgIFT facility data status',
-                         author='UgIFT data reconciliation', subject='Master list and field-return reconciliation, 25 September 2026')
+                         author='UgIFT data reconciliation', subject=f'Master list and field-return reconciliation, {AS_OF}')
         height = TOP - BOTTOM
         full = Frame(MARGIN, BOTTOM, CONTENT, height, leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0, id='full')
         left = Frame(MARGIN, BOTTOM, COL, height, leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0, id='left')
@@ -287,6 +287,7 @@ def build(data, output):
     if coverage_count != len(master) - counts['No return']:
         raise ValueError('Coverage must equal completed + needs review + explained cases.')
     priority_teams = (25, 30, 32)
+    no_return_records = sorted((r for r in master if r['status'] == 'No return'), key=lambda r: r['id'])
     priority_no_return = sum(1 for r in master if r['status'] == 'No return' and int(r['team']) in priority_teams)
     marker = p('01 / EXECUTIVE SUMMARY', 'eyebrow')
     marker.section_key = 'section-1'
@@ -336,8 +337,8 @@ def build(data, output):
          'Secondary School has a facility toolkit; Awei Seed Secondary School has identifiable rows in the Team 7 register.'],
         ['No return', number_cell(counts['No return'], small=True),
          number_cell(percentage_text(counts['No return'], len(master)), small=True, accent=True),
-         'No matched facility return or identifiable asset row is on file, and no documented reason places it in another status. This does not prove absence. '
-         'Example: Kiziranfumbi Seed Secondary School, Kikuube.'],
+         'No matched facility return or identifiable asset row is on file, and no documented reason places it in another status. This does not prove absence.'
+         + (f' Example: {display_name(no_return_records[0])}, {no_return_records[0]["lg"]}.' if no_return_records else ' No master facility is in this status.')],
         ['Needs review', number_cell(counts['Needs review'], small=True),
          number_cell(percentage_text(counts['Needs review'], len(master)), small=True, accent=True),
          'A submitted alternate name, commissioning stage, access constraint, or verification account requires confirmation. '
@@ -358,8 +359,10 @@ def build(data, output):
                        'master entry, so its evidence is counted there once. Example: Loinya Health Centre III was replaced by '
                        'Liko Health Centre III; Liko is already represented by master entry H212.', 'small'))
     story.append(p('The immediate follow-up', 'sub'))
-    story.append(p(f'Start with Teams 25, 30 and 32, which account for {priority_no_return} of the '
-                   f'{counts["No return"]} outstanding returns. Resolve the {counts["Needs review"]} submitted returns whose master identity is still open. '
+    outstanding = (f'Start with Teams 25, 30 and 32, which account for {priority_no_return} of the '
+                   f'{counts["No return"]} outstanding returns. ' if counts['No return'] else
+                   'Every master facility now has a return or a documented explanation. ')
+    story.append(p(outstanding + f'Resolve the {counts["Needs review"]} submitted returns whose master identity is still open. '
                    'Facilities with no return whose case is explained or reconciled are listed under Completed.'))
     story.append(p(f'{len(unmatched)} unmatched ground names or returns are listed separately. Some may be aliases of master entries; '
                    'they are not a confirmed count of additional facilities and are not added to the master evidence totals.', 'small'))
@@ -453,11 +456,21 @@ def build(data, output):
                       f'<font color="#607077">{e(source_caption(record))}</font>', 'table')
             disposition_rows.append([label, p(f'<b>{e(status_label)}</b><br/>{e(note)}', 'table')])
         story.append(table(disposition_rows, [186, CONTENT - 186], padding=5))
-    story.extend([NextPageTemplate('columns'), PageBreak()])
-    story.append(p(f'{len(no_return)} returns still outstanding', 'section'))
-    story.append(p(f'<b>{len(no_return)} master facilities</b> still have no matched return or usable asset rows. '
-                   'Names below are from the master. Naming changes expressly confirmed by a supervisor and linked to field material '
-                   'are counted as Completed. Possible aliases without that confirmation remain open in the reconciliation CSV.'))
+        story.extend([NextPageTemplate('columns'), PageBreak()])
+    else:
+        story.append(NextPageTemplate('columns'))
+    if no_return:
+        story.append(p(f'{len(no_return)} returns still outstanding', 'section'))
+        story.append(p(f'<b>{len(no_return)} master facilities</b> still have no matched return or usable asset rows. '
+                       'Names below are from the master. Naming changes expressly confirmed by a supervisor and linked to field material '
+                       'are counted as Completed. Possible aliases without that confirmation remain open in the reconciliation CSV.'))
+    else:
+        story.append(p('No returns outstanding', 'section'))
+        story.append(p('Every master facility has a matched return, identifiable asset rows or a documented explanation. '
+                       'Naming changes expressly confirmed by a supervisor or the data manager are counted as Completed. '
+                       'Bussi Health Centre III (H054) is the village name for Zinga Health Centre III, so the Zinga return is counted once, on H052.'
+                       if any(r['id'] == 'H054' and r.get('decision_ref') == 'USER04' for r in master) else
+                       'Every master facility has a matched return, identifiable asset rows or a documented explanation.'))
     names_by_team(story, no_return, marked)
 
     section(story, 5, 'Completed facilities', columns=True)

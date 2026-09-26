@@ -296,7 +296,39 @@ EXACT_FILE_ROUTES = {
     'lukale h.c iii.docx': (['team-31/Buvuma/Lukale-HC-III'], 'Updated Lukale Health Centre III toolkit. Buvuma.'),
     'nkata h.c iii.docx': (['team-31/Buvuma/Nkata-HC-III'], 'Updated Nkata Health Centre III toolkit. Buvuma.'),
     'lwajje h.c and bweema seed.docx': (['team-31/Buvuma/Lwajje-HC-III', 'team-31/Buvuma/Bweema-Seed-Secondary-School'], 'Shared Buvuma return. The health-centre section names Lwajje Health Centre III and the school section names Bweema Seed Secondary School.'),
+    'bulwadda  health center iii.docx': (['team-32/Gomba/Bulwadda-HC-III'], '25 September 2026 toolkit. The interview and checklist name Bulwadda Health Centre III in Gomba.'),
+    'kasoozi hciii.docx': (['team-32/Wakiso/Kasoozo-HC-III'], '25 September 2026 toolkit. The interview names Kasoozo Health Centre III in Wakiso. The filename spells it Kasoozi. It is the same master facility as the earlier Kasoozo toolkit.'),
+    'butaaka hc iii in butambala local govermnent..docx': (['team-32/Butambala/Butaaka-HC-III'], '25 September 2026 toolkit. The checklist names Butaaka Health Centre III. The cover spells the local government Butamabala; the verifier block says Butambala.'),
+    'asset verification and recording tool kit (kasoozo  health center iii).docx': (['team-32/Wakiso/Kasoozo-HC-III'], 'Another 25 September 2026 Kasoozo Health Centre III toolkit. The filename has a double space. It is not a byte copy of the other Kasoozo files.'),
+    'kasanagat ngabo hc 111(1).docx': (['team-32/Wakiso/Kasangati-Mutuba-Nangabo-HC-III'], 'Another 25 September 2026 Kasangati Ngabo Health Centre III toolkit. It is not a byte copy of the filed Kasangati file.'),
+    'kireka nsawo hc 111.docx': (['team-32/Kiira MC/Kireka-HC-III'], 'Another 25 September 2026 Kireka Nsawo Health Centre III toolkit. It is not a byte copy of the filed Kireka file.'),
+    'mirambi health centre iii - asset verification and recording tool kit - st. paul nabweya.docx': ([
+        'team-26/Bundibugyo/Mirambi-HC-III',
+        'team-26/Kabarole/Kasenda-Seed-Secondary-School',
+    ], 'Shared 25 September 2026 toolkit. The health-centre section names Mirambi Health Centre III in Bundibugyo. The school section names St Paul Nyabweya Seed School and says it is Kasenda Seed School. The furniture heading spells the local government Kabalore. Count the school once on master Kasenda.'),
+    'mayanga report on ict.pdf': (['team-19/Mitooma/Mayanga-Seed-Secondary-School'], '17 May 2022 ICT verification report for Mayanga Seed School, Mitooma District. Johnson sent it on 25 September 2026.'),
+    'screenshot 2026-09-25 132130.png': (['team-19/Mitooma/Mayanga-Seed-Secondary-School/_reconciliation-evidence'], 'Johnson UGIFT, 25 September 2026 13:07. The attached report is for Mayanga SSS, Mitooma District, and the head teacher said the assets are in good condition, in use and functional. Not a site photograph.'),
+    'camscanner 25-09-2026 10.57.pdf': (['team-30/Mityana/Mpongo-HC-III'], 'Handwritten Mpongo Health Centre III pages, Mityana. The interview line also writes Busunju HC III. The checklist header names Mpongo HC III.'),
+    'camscanner 25-09-2026 11.01.pdf': (['team-30/Mityana/Mpongo-HC-III'], 'Handwritten Mpongo Health Centre III asset pages, Mityana.'),
+    'camscanner 25-09-2026 11.02.pdf': (['team-30/Mityana/Mpongo-HC-III'], 'Handwritten Mpongo Health Centre III asset pages, Mityana.'),
+    'camscanner 25-09-2026 11.07.pdf': (['team-30/Mityana/Namungo-Seed-Secondary-School'], 'Handwritten Namungo Seed Secondary School return, Mityana. One cost page also writes Namungo HC III; the interview and later pages name the seed school.'),
+    'acknowledgement of receiving  ompletetion facilities.pdf': (['team-19/Mitooma/Mayanga-Seed-Secondary-School'], 'Scanned 14 February 2022 letter from Mayanga Progressive Seed Secondary School, Mitooma District, acknowledging receipt of the completed facilities. Signed by head teacher Ainebyona Samuel. It lists buildings, furniture and fittings with counts.'),
+    'gyagenda memorial seed secondary school pictures.docx': (['team-31/Kalangala/Gyagenda-Memorial-Seed-Secondary-School'], 'Captioned photographs of Gyagenda Memorial Seed Secondary School furniture, laboratory items, projector, public address system and buildings, Kalangala. Received 26 September 2026.'),
+    'nekemeya memorial seed secondary school pictures.docx': (['team-31/Kalangala/Nekemiya-Memorial-Seed-Secondary-School'], 'Captioned photographs of Nekemeya (Nekemiya) Memorial Seed Secondary School furniture, ICT items and buildings, Kalangala. The verifier notes that the items could not be moved and checked one by one because the head teacher was away. Received 26 September 2026.'),
+    'nabwigulu seed school assets.docx': (['team-18/Kamuli/Nabwigulu-Seed-Secondary-School'], 'Captioned photographs of Nabwigulu Seed Secondary School assets, prepared by the school on its letterhead (P.O. Box 171, Kamuli). Received 26 September 2026.'),
 }
+# Generic photo names are routed by their intake folder and file prefix.
+INTAKE_PREFIX_ROUTES = (
+    ('new-raw-data-26092026-0947/Screenshot 2026-09-26 051220.png', ['team-19/Mitooma/Mayanga-Seed-Secondary-School/_reconciliation-evidence'], 'DATA MANAGEMENT UGIFT screenshot taken 26 September 2026. Johnson UGIFT, 25 September 2026 15:56, sends the acknowledgement of receiving completed facilities as additional information from the head teacher of Mayanga SSS, Mitooma. Also shows Depaul messages of 13:08-13:24 already in the chat export. Not a site photograph.'),
+    ('new-raw-data-26092026-0947/Screenshot 2026-09-26 051644.png', ['team-19/Mitooma/Mayanga-Seed-Secondary-School/_reconciliation-evidence'], 'Johnson UGIFT chat screenshot taken 26 September 2026: the Mayanga ICT report (13:07) and the acknowledgement letter (15:56) sent as additional information from the head teacher of Mayanga SSS, Mitooma. Not a site photograph.'),
+    ('new-raw-data-26092026-0947/Screenshot 2026-09-26 100642.png', ['team-14/Bulambuli/Bumufuni-Seed-Secondary-School/_reconciliation-evidence'], 'Kassim Luminsa chat screenshot taken 26 September 2026: UGIFT asset verification.pdf (8 pages) forwarded at 20:51 with "Update this to Bumufuni." Not a site photograph.'),
+    ('new-raw-data-26092026-0947/Screenshot 2026-09-26 0513', ['_multi-team/programme-documents/data-management-chat'], 'DATA MANAGEMENT UGIFT screenshot taken 26 September 2026. The messages shown (25 September 2026) are already in the chat export. Not a site photograph.'),
+    ('new-raw-data-26092026-0947/Screenshot 2026-09-26 0514', ['_multi-team/programme-documents/data-management-chat'], 'DATA MANAGEMENT UGIFT screenshot taken 26 September 2026. The messages shown (25 September 2026) are already in the chat export. Not a site photograph.'),
+    ('new-raw-data-26092026-0947/Screenshot 2026-09-26 0515', ['_multi-team/programme-documents/data-management-chat'], 'DATA MANAGEMENT UGIFT screenshot taken 26 September 2026. The messages shown (25 September 2026) are already in the chat export. Not a site photograph.'),
+    ('new-raw-data-26092026-0947/list-', ['team-32/Wakiso/Zinga-HC-III'], 'Photographed Wakiso District Health Office stores list for Zzinga HC III: 75 numbered lines with quantities. Stamped 7 July 2026, with a handwritten compiled-by note dated the same day. Master Zinga, Wakiso. Received 26 September 2026.'),
+    ('new-raw-data-26092026-0947/prices-3', ['team-32/Wakiso/Buloba-HC-III'], 'Photographed "Medical equipments - Buloba HC III" priced list: 28 lines with quantities, rates and amounts, a handwritten prepared-by note and a Wakiso District Health Office stamp. Buloba is not on the master list. Received 26 September 2026.'),
+    ('new-raw-data-26092026-0947/prices-', ['team-32/Wakiso/Buloba-HC-III'], 'Photographed Buloba HC III equipment table: 60 numbered lines with quantities, unit costs and values, and a Wakiso District Health Office stamp. Buloba is not on the master list. Received 26 September 2026.'),
+)
 TEAM25_FOLDER_ROUTES = (
     ('avogera health', 'team-25/Buliisa/Avogera-HC-III', 'Avogera Health Centre III toolkit and photographs. Buliisa.'),
     ('burora seed', 'team-25/Kagadi/Burora-Seed-Secondary-School', 'Burora Seed Secondary School return. Kagadi.'),
@@ -334,6 +366,9 @@ def facility_route(relative):
     exact = EXACT_FILE_ROUTES.get(basename.lower())
     if exact:
         return exact
+    for prefix, folders, note in INTAKE_PREFIX_ROUTES:
+        if relative.startswith(prefix):
+            return folders, note
     if basename.upper().startswith('IMG-20260924-WA'):
         return (['team-23/Rukungiri/Nyakishenyi-Seed-Secondary-School'],
                 'Handwritten Nyakishenyi Seed School asset pages, Rukungiri. Johnson caption said Nyakishojwa SSS; the pages name Nyakishenyi, not the Mitooma health centre.')
@@ -490,7 +525,26 @@ def update():
             # for a single document that covers several facilities.
             if not prior_destinations:
                 prior_destinations = sorted({r[DEST_COLUMN] for r in by_basename[basename] if file_hash(r[DEST_COLUMN]) == digest})
-            if folders != ['_multi-team/_unassigned']:
+            if not prior_destinations:
+                prior_destinations = sorted({
+                    r[DEST_COLUMN] for r in rows
+                    if r.get('sha256') == digest and r[DEST_COLUMN] and r['status'] in ('placed', 'duplicate')
+                })
+            chat_folder = '_multi-team/programme-documents/data-management-chat'
+            already_filed = (
+                folders == [chat_folder]
+                and basename not in CHAT_ROUTES
+                and basename.lower() not in {
+                    'whatsapp chat with data management ugift.txt',
+                    'whatsapp chat with data management ugift.zip',
+                    'facility-data-status.pdf',
+                    'facility-data-status-1.pdf',
+                }
+                and bool(prior_destinations)
+            )
+            if already_filed:
+                new_rows = [{DEST_COLUMN: destination, 'status': 'duplicate', 'note': 'Byte-identical to existing grouped source; original placement retained.'} for destination in prior_destinations]
+            elif folders != ['_multi-team/_unassigned']:
                 # A reviewed destination is filed even when an older copy sits in another folder.
                 new_rows = []
                 for folder in folders:

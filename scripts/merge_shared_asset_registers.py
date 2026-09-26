@@ -1327,6 +1327,10 @@ def context_from_line(text: str) -> tuple[str, str] | None:
     raw = clean(text)
     if not raw or len(raw) > 160 or raw.endswith(":") or is_placeholder(raw):
         return None
+    if re.match(r"^[.\u2026…]{3,}", raw):
+        remainder = re.sub(r"^[.\u2026…\s]+", "", raw)
+        if re.fullmatch(r"(?i)(district(\s+lo+c+a+l+\s+government)?|health\s+cent(?:re|er)\s*(?:iii|3)?)", remainder.strip()):
+            return None
     if re.match(r"(?i)class\s+\d", raw) or re.match(r"(?i)cost cent|source\b|vote\b", raw):
         return None
     # "Local Government: Rubirizi District | Facility: Munyonyi HC III"
