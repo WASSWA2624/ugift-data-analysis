@@ -51,6 +51,19 @@ class QuantitySpecificationTests(unittest.TestCase):
         self.check(900, item="Received 900 textbooks")
         self.check(3, item="Delivery kit", description="3 kits containing 14 items")
 
+    def test_plain_parenthetical_package_counts_remain_asset_quantities(self):
+        for item, expected in (
+            ("Instrument Set(20)", 20),
+            ("Diagnostic Equipment Set(2)", 2),
+            ("Delivery Kit (2)", 2),
+            ("Storage Box [20]", 20),
+            ("Hollow Ware Set, Ward(03)", 3),
+        ):
+            with self.subTest(item=item):
+                self.check(expected, item=item)
+        self.check(1, item="Dissecting kit (14 pieces)")
+        self.check(1, item="Instrument set (20 items)")
+
     def test_mutushet_original_three_sets_retains_conflict(self):
         asset = self.check(3, item="Hollow Ware Set, Hospital", asset_number="3",
                            description="one set containing 11 items of the ward", tag="Not yet",

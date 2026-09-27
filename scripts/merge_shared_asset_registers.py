@@ -2107,9 +2107,13 @@ def quantity_inventory_text(text: str) -> str:
     """
     raw = clean(text)
     package = r"(?:packs?|box(?:es)?|sets?|kits?)"
-    contents = rf"{COUNT_START}{COUNT_WORD}{COUNT_END}(?:\s*(?:pcs|pieces|items|units)\b)?"
+    count = rf"{COUNT_START}{COUNT_WORD}{COUNT_END}"
+    content_units = r"(?:pcs|pieces|items|units)\b"
+    contents = rf"{count}(?:\s*{content_units})?"
     raw = re.sub(rf"(?i)\b({package})\s+of\s+{contents}", r"\1", raw)
-    raw = re.sub(rf"(?i)\b({package})\s*[\[(]\s*{contents}\s*[\])]", r"\1", raw)
+    # A plain Set(20) is twenty sets; only explicit contents such as
+    # Kit(14 pieces) describe the number of components inside one package.
+    raw = re.sub(rf"(?i)\b({package})\s*[\[(]\s*{count}\s*{content_units}\s*[\])]", r"\1", raw)
     raw = re.sub(rf"(?i)\b(?:containing|contains?|comprising)\s+{contents}", "", raw)
     return clean(raw)
 
