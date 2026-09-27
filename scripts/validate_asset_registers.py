@@ -666,6 +666,7 @@ def record_read_me(directory: Path, result: dict, report_path: Path):
     for key, finding in result["review_notes"].items():
         outcomes.append(f"Review note: {key}; {finding['count']:,} occurrences. These are not silently treated as passed rules.")
     outcomes.extend("Scope limitation: " + line for line in result["limitations"])
+    outcomes.extend("Independent review: " + line for line in result.get("independent_reviews", []))
     if result.get("quantity_audit"):
         outcomes.append(
             f"Quantity audit reconciled against SK before borrowing: {metrics.get('audited_retained_source_lines', 0):,} retained source lines; "

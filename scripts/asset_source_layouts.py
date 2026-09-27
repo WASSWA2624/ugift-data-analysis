@@ -52,6 +52,64 @@ NSHWERE_LAYOUTS = (
 )
 
 
+@dataclass(frozen=True)
+class ReviewedUnitBlock:
+    source: str
+    first: int
+    last: int
+    primary: str
+    primary_location: str
+    primary_quantity: int
+    primary_item: str
+    unit_item: str
+    primary_description: str
+    unit_description: str
+
+
+_SCHOOLS_7 = "team-07/_team-documents/SCHOOLS FOR TEAM SEVEN DTB.xlsx"
+_SCHOOLS_8 = "team-08/_team-documents/TEAM EIGHT SCHOOLS DTB 2.xlsx"
+_SCHOOLS_9 = "team-09/_team-documents/TEAM NINE SCHOOLS DTB.xlsx"
+_AWEI = "team-07/Alebtong/Abia-HC-III/ABIA HC III.docx"
+_ADEKNINO = "team-07/Dokolo/Abalang-HC-III/ABALANG HEALTH CENTER III $ ADEKNINO SEED.docx"
+_OGORO = "team-07/Otuke/Alango-HC-III/ALANGO (1) HC 111.docx"
+_BATTA = "team-07/Dokolo/Te-Tugu-HC-III/TE-TUGU HC III ..docx"
+_ASAMUK = "team-08/Amuria/Asamuk-Seed-Secondary-School/asamuk,wera  ASSET VERIFICATION AND RECORDING TOOL KIT 222-1edit.docx"
+_ASURET = "team-08/Soroti/Asuret-Seed-Secondary-School/ASURET SEED SS ASSET VERIFICATION AND RECORDING TOOL KIT 222.docx"
+_KAGWARA = "team-08/Serere/Kagwara-HC-III/kagwara HC III and school-2.docx"
+_KANGINIMA = "team-09/Butebo/Kanginima-Seed-Secondary-School/KANGINIMA SEED SECONDRY SCHOOL.docx"
+_APAPAI = "team-09/Kalaki/Apapai-Seed-Secondary-School/apapai seed secondary school.docx"
+_APERIKIRA = "team-09/Kaberamaido/Aperikira-Seed-Secondary-School/APERIKIRA SEED SCHOOL ASSET VERIFICATION.docx"
+
+# Each range was checked against the original spreadsheet and the named
+# primary toolkit. These are expanded statements of the same physical list,
+# not a heuristic based on repeated names or a matching number of rows.
+REVIEWED_UNIT_BLOCKS = (
+    ReviewedUnitBlock(_SCHOOLS_7, 132, 254, _ADEKNINO, "Table 11 row 33", 122, "Laboratory stools(122)", "Laboratory stools(122)", "Wooden", "Wooden"),
+    ReviewedUnitBlock(_SCHOOLS_7, 258, 273, _ADEKNINO, "Table 11 row 47", 15, "Bookshelves (15)", "Bookshelves (15)", "Metallic", "Metallic"),
+    ReviewedUnitBlock(_SCHOOLS_7, 328, 448, _OGORO, "Table 11 row 2", 120, "School Desk 120", "School Desk 120", "Wooden", "Wooden"),
+    ReviewedUnitBlock(_SCHOOLS_7, 450, 470, _OGORO, "Table 11 row 16", 20, "Office Chairs (20)", "Office Chairs (20)", "Metallic with cushion", "Metallic with cushion"),
+    ReviewedUnitBlock(_SCHOOLS_7, 473, 665, _OGORO, "Table 11 row 19", 192, "Laboratory stools (192)", "Laboratory stools (192)", "Wooden and metallic in nature", "Wooden and metallic in nature"),
+    ReviewedUnitBlock(_SCHOOLS_7, 672, 721, _OGORO, "Table 12 row 2", 48, "Desktop Computer (48)", "Desktop Computer (48)", "Digital S", "Digital"),
+    ReviewedUnitBlock(_SCHOOLS_7, 914, 1180, _AWEI, "Table 11 row 5", 266, "OFFICE CHAIRS 266", "OFFICE CHAIRS 266", "WOODEN AND METALLIC BROWM IN COLOUR", "WOODEN AND METALLIC BROWM IN COLOUR"),
+    ReviewedUnitBlock(_SCHOOLS_7, 1183, 1281, _AWEI, "Table 11 row 7", 98, "LABARATORY STOOLS 98", "LABARATORY STOOLS 98", "WOODEN IN NATURE", "WOODEN IN NATURE"),
+    ReviewedUnitBlock(_SCHOOLS_7, 1284, 1303, _AWEI, "Table 11 row 10", 19, "BOOK SHELVES 19 19", "BOOK SHELVES 19", "2 BIG ONES 17 SMALL ONES", "2 BIG ONES"),
+    ReviewedUnitBlock(_SCHOOLS_7, 2350, 2378, _BATTA, "Table 13 row 2", 28, "DESKTOP COMPUTERS (28)", "DESKTOP COMPUTERS (28)", "", ""),
+    ReviewedUnitBlock(_SCHOOLS_7, 2384, 2413, _BATTA, "Table 13 row 6", 28, "UPS (28)", "UPS (28)", "MODEL APC 650YK", "MODEL APC 650YK"),
+    ReviewedUnitBlock(_SCHOOLS_8, 5, 113, _ASAMUK, "Table 11 row 2", 107, "Desks 107", "Desks 107", "Metallic & wood", "Metallic & wood"),
+    ReviewedUnitBlock(_SCHOOLS_8, 875, 1177, _ASURET, "Table 11 row 3", 302, "Chairs with hard seat 302", "Chairs with hard seat 302", "Single chair with hard seats", "Single chair with hard seats"),
+    ReviewedUnitBlock(_SCHOOLS_8, 1598, 1618, _KAGWARA, "Table 11 row 2", 20, "office chair 20", "office chair", "metallic red cushion", "metallic red cushion"),
+    ReviewedUnitBlock(_SCHOOLS_8, 1628, 1932, _KAGWARA, "Table 11 row 4", 305, "Chairs 305", "Chairs", "metallic & Hard wood", "metallic & Hard wood"),
+    ReviewedUnitBlock(_SCHOOLS_9, 1233, 1266, _KANGINIMA, "Table 6 row 3", 32, "Chairs (32)", "Chairs", "Cushioned top, metallic stands", "Cushioned top, metallic stands"),
+    ReviewedUnitBlock(_SCHOOLS_9, 1268, 1559, _KANGINIMA, "Table 6 row 4", 292, "Laboratory stools (292)", "Laboratory stools", "Round wooden top, metallic stand", "Round wooden top, metallic stand"),
+    ReviewedUnitBlock(_SCHOOLS_9, 1609, 1637, _KANGINIMA, "Table 8 row 2", 28, "Monitors (28)", "Monitors", "", ""),
+    ReviewedUnitBlock(_SCHOOLS_9, 1668, 1695, _KANGINIMA, "Table 8 row 4", 28, "Keyboards (28)", "Keyboards", "", ""),
+    ReviewedUnitBlock(_SCHOOLS_9, 1697, 1724, _KANGINIMA, "Table 8 row 5", 28, "Mouse (28)", "Mouse", "", ""),
+    ReviewedUnitBlock(_SCHOOLS_9, 2681, 2684, _APERIKIRA, "Table 7 row 43", 4, "Filter paper 4 boxes (400 pcs)", "Filter paper box (400 pcs)", "", ""),
+    ReviewedUnitBlock(_SCHOOLS_9, 3656, 3677, _APAPAI, "Table 7 row 2", 21, "Monitors (21)", "Monitors", "Lenovo", "Lenovo"),
+    ReviewedUnitBlock(_SCHOOLS_9, 3682, 3702, _APAPAI, "Table 7 row 3", 21, "CPU (21)", "CPU", "Lenovo", "Lenovo"),
+)
+
+
 # Verified against the original DOCX table and its XML. This table is headed
 # SCHOOL FURNITURE for Nyakashashara Seed School; the first column mostly holds
 # rooms, while the description holds the furniture and its physical quantities.
@@ -96,6 +154,98 @@ NSHWERE_DESCRIPTIONS = {
 
 def _normalized(value: object) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip().casefold()
+
+
+def repair_reviewed_unit_blocks(parsed: dict[str, list[Any]]) -> list[dict[str, Any]]:
+    """Keep source-proven physical rows once and fold their primary statement.
+
+    Only the reviewed source coordinates and matching primary facts qualify.
+    An ordinary first row is never discarded as a guessed group header, even
+    where the consolidated unit count differs from the primary printed total.
+    """
+    plans = []
+    for block in REVIEWED_UNIT_BLOCKS:
+        if block.source not in parsed or block.primary not in parsed:
+            continue
+        locations = {f"Sheet1 row {number}" for number in range(block.first, block.last + 1)}
+        units = [asset for asset in parsed[block.source] if asset.source_location in locations]
+        if units and all(asset.extras.get("reviewed_unit_block") for asset in units):
+            continue
+        if len(units) != len(locations) or {asset.source_location for asset in units} != locations:
+            raise ValueError(f"Reviewed unit block changed: {block.source} rows {block.first}-{block.last}")
+        primaries = [asset for asset in parsed[block.primary] if asset.source_location == block.primary_location]
+        if len(primaries) != 1:
+            raise ValueError(f"Reviewed primary row missing or repeated: {block.primary} {block.primary_location}")
+        primary = primaries[0]
+        if (_normalized(primary.item) != _normalized(block.primary_item)
+                or _normalized(primary.description) != _normalized(block.primary_description)):
+            raise ValueError(f"Reviewed primary asset facts changed: {block.primary} {block.primary_location}")
+        place = (_normalized(primary.lg), _normalized(primary.facility), primary.facility_type)
+        if any((_normalized(asset.lg), _normalized(asset.facility), asset.facility_type) != place
+               or _normalized(asset.item) != _normalized(block.unit_item)
+               or _normalized(asset.description) != _normalized(block.unit_description) for asset in units):
+            raise ValueError(f"Reviewed unit identity changed: {block.source} rows {block.first}-{block.last}")
+        # These reviewed lists contain no money. A new priced aggregate needs
+        # reconciliation of its amounts before it can be folded into units.
+        if any(getattr(asset, name) not in (None, "") for asset in [primary, *units] for name in MONEY_FIELDS):
+            raise ValueError(f"Reviewed unit block now has monetary facts: {block.source} rows {block.first}-{block.last}")
+        plans.append((block, units, primary))
+
+    audit = []
+    for block, units, primary in plans:
+        location = f"Sheet1 rows {block.first}-{block.last}"
+        count = len(units)
+        discrepancy = (
+            f" Source count conflict: the primary states {block.primary_quantity}, while the consolidation has {count} ordinary unit rows. "
+            "No first row is independently identified as a group header; all individual rows are retained."
+            if count != block.primary_quantity else ""
+        )
+        proof = (
+            f"Reviewed original {block.primary} ({block.primary_location}) states one group of {block.primary_quantity}: "
+            f"'{primary.item}', description '{primary.description}', status '{primary.status}', remarks '{primary.remarks}', tag '{primary.tag}'. "
+            f"The same facility and asset facts appear as an expanded unit list in {block.source} ({location}). "
+            f"Each of its {count} physical rows is retained once; the repeated aggregate statement from the primary return is folded in."
+            + discrepancy
+            + " Individual Functional/Broken/Spoilt/Spoiled remarks control only the stated unit's status. "
+            "Other repeated aggregate condition or loss wording is preserved without assigning unidentified lost units."
+        )
+        primary_snapshot = {key: deepcopy(value) for key, value in vars(primary).items() if key != "extras"}
+        primary_snapshot["source_cells"] = deepcopy(primary.extras.get("source_cells", []))
+        for asset in units:
+            asset.extras["reviewed_unit_block"] = {
+                "consolidated_source": block.source, "consolidated_rows": location,
+                "primary_source": block.primary, "primary_location": block.primary_location,
+                "primary_quantity": block.primary_quantity, "retained_unit_rows": count,
+                "primary_facts": deepcopy(primary_snapshot),
+                "original_status": asset.status, "original_explicit_qty": asset.explicit_qty,
+            }
+            asset.extras["proven_unit_row"] = True
+            asset.extras["source_group_locations"] = [asset.source_location]
+            asset.extras["quantity_layout_evidence"] = proof
+            asset.extras["quantity_evidence"] = [(1, "reviewed primary statement and expanded physical unit layout")]
+            asset.explicit_qty = 1
+            # Preserve original wording in Remarks. Only a standalone unit
+            # condition overrides the repeated aggregate status on that row.
+            if _normalized(asset.remarks) in {"functional", "broken", "spoilt", "spoiled"}:
+                asset.status = asset.remarks
+            # The same source statement may supply an omitted recorded fact,
+            # but never an aggregate tag, description or condition for a unit.
+            for name in ("life", "purchase", "service"):
+                if getattr(asset, name) in (None, "") and getattr(primary, name) not in (None, ""):
+                    setattr(asset, name, deepcopy(getattr(primary, name)))
+            asset.extras.setdefault("filled_from", set()).add(block.primary)
+        parsed[block.primary][:] = [asset for asset in parsed[block.primary] if asset is not primary]
+        audit.append({
+            "source_file": block.source,
+            "source_location": location,
+            "status": "reviewed_unit_records",
+            "source_records": count + 1,
+            "named_groups": count,
+            "physical_assets": count,
+            "counts_by_item": {block.unit_item: count},
+            "reason": proof,
+        })
+    return audit
 
 
 def repair_nyamarwa_air_conditioner(assets: list[Any]) -> list[dict[str, Any]]:

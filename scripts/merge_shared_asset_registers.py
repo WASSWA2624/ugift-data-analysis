@@ -31,7 +31,11 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from asset_source_layouts import repair_nshwere_furniture, repair_nyamarwa_air_conditioner
+from asset_source_layouts import (
+    repair_nshwere_furniture,
+    repair_nyamarwa_air_conditioner,
+    repair_reviewed_unit_blocks,
+)
 from ugift_places import (
     LocalGovernment,
     _edit_distance,
@@ -2083,13 +2087,31 @@ QUANTITY_IDENTIFIER_CONTEXT = re.compile(
 )
 QUANTITY_MODEL_CONTEXT = re.compile(
     r"(?i)\b(?:office\s+jet|dvr|catalyst|ram|rom|memory|processor|core\s+i[3579]|"
-    r"intel|ryzen|celeron|pentium|xeon|i[3579]|ssd|hdd|frequency|resolution)\b"
+    r"intel|ryzen|celeron|pentium|xeon|i[3579]|ssd|hdd|frequency|resolution|mt[\s-]*400)\b"
+)
+QUANTITY_MEASURE_CONTEXT = re.compile(
+    r"(?i)\b(?:swg\s*\d+|\d+\s*gauge|\d+\s*n?m[3³]\s*/\s*(?:h|hr|hour))\b"
 )
 QUANTITY_COMPONENT = re.compile(
     r"(?i)^(?:(?:spare|pvc|bed|silver|white|black|blue|red|grey|gray|stainless(?:\s+steel)?|metallic|big|large|small)\s+)*"
     r"(?:bedrooms?|(?:sitting|dining)\s+rooms?|sections?|jars?|wheels?|wheelers?|handles?|shel(?:f|ves)|stands?|legs?|locks?|folds?|sided|burners?|"
-    r"bottles?|tub(?:e|es|ing)|rooms?|roomed|doors?|drawers?|ports?|seaters?|va|cc|btu)\b"
+    r"bottles?|tub(?:e|es|ing)|rooms?|roomed|doors?|drawers?|ports?|seaters?|gauge|n?m[3³]\s*/\s*(?:h|hr|hour)|va|cc|btu)\b"
 )
+
+
+def quantity_inventory_text(text: str) -> str:
+    """Read package counts without treating the package's contents as assets.
+
+    Only the inference text changes; original item/description wording remains
+    on the source record. A box, pack or set can itself have a stated quantity.
+    """
+    raw = clean(text)
+    package = r"(?:packs?|box(?:es)?|sets?|kits?)"
+    contents = rf"{COUNT_START}{COUNT_WORD}{COUNT_END}(?:\s*(?:pcs|pieces|items|units)\b)?"
+    raw = re.sub(rf"(?i)\b({package})\s+of\s+{contents}", r"\1", raw)
+    raw = re.sub(rf"(?i)\b({package})\s*[\[(]\s*{contents}\s*[\])]", r"\1", raw)
+    raw = re.sub(rf"(?i)\b(?:containing|contains?|comprising)\s+{contents}", "", raw)
+    return clean(raw)
 
 
 def quantity_specification(text: str) -> bool:
@@ -2097,7 +2119,7 @@ def quantity_specification(text: str) -> bool:
     raw = clean(text)
     return bool(
         NUMBER_CONTEXT.search(raw) or QUANTITY_IDENTIFIER_CONTEXT.search(raw)
-        or MODEL_FAMILY.search(raw) or QUANTITY_MODEL_CONTEXT.search(raw)
+        or MODEL_FAMILY.search(raw) or QUANTITY_MODEL_CONTEXT.search(raw) or QUANTITY_MEASURE_CONTEXT.search(raw)
         or re.search(r"(?i)\b(?:ups\s*\d+|ce\s*\d+|\d+\s*(?:va|cc))\b", raw)
         or re.search(r"\b(?=\S*[A-Za-z])(?=\S*\d)[A-Za-z0-9/-]+\s+\d+\s*$", raw)
     )
@@ -2110,7 +2132,7 @@ def component_quantity(tail: str, item: str) -> bool:
     component = match.group().casefold()
     # Shelves/bottles can themselves be the registered asset, but are parts of
     # a cupboard/suction machine. Ratings and room counts are never unit counts.
-    if re.search(r"\b(?:va|cc|btu|rooms?|bedrooms?|sections?|roomed|ports?|seaters?|sided|folds?|burners?|wheelers?)\b", component):
+    if re.search(r"\b(?:va|cc|btu|gauge|n?m[3³]|rooms?|bedrooms?|sections?|roomed|ports?|seaters?|sided|folds?|burners?|wheelers?)\b", component):
         return True
     component_words = {word.rstrip("s") for word in re.findall(r"[a-z]+", component)}
     item_words = {word.rstrip("s") for word in re.findall(r"[a-z]+", item.casefold())}
@@ -2119,18 +2141,22 @@ def component_quantity(tail: str, item: str) -> bool:
 
 def asset_quantity_phrase(text: str, item: str = "") -> int | None:
     """Explicit units/count phrases, excluding parts of the named asset."""
-    raw = clean(text)
+    raw = quantity_inventory_text(text)
     patterns = (
         rf"(?i)\b(?:qty|quantity|no\.?\s*of\s+(?:assets|items|pieces|units)|number\s+of\s+(?:assets|items|pieces|units))\s*[:=]?\s*{COUNT_START}({COUNT_WORD}){COUNT_END}",
         rf"(?i){COUNT_START}({COUNT_WORD})(?![\d.,])\s*(?:pcs|pieces|units|assets?|items?)\b",
         rf"(?i){COUNT_START}({COUNT_WORD}){COUNT_END}\s*(?:desks?|chairs?|bench(?:es)?|stools?|tables?|beds?|shel(?:f|ves)|machines?|microscopes?|computers?|laptops?)\b",
         rf"(?i)\b(?:they\s+are|there\s+are|received|recieved|delivered)\s+{COUNT_START}({COUNT_WORD}){COUNT_END}\s+[a-z]",
+        rf"(?i){COUNT_START}({COUNT_WORD}){COUNT_END}\s+(?:packs?|box(?:es)?|sets?|kits?)\b",
     )
     found = []
     for index, pattern in enumerate(patterns):
         for match in re.finditer(pattern, raw):
             prefix = re.split(r"[;\n]", raw[:match.start()])[-1]
-            if index and re.search(r"(?i)\b(?:has|have|with|contains?|compris\w*)\s*$", prefix):
+            if index and re.search(r"(?i)\b(?:has|have|with|contain\w*|compris\w*|capacity)\s*[:=]?\s*$", prefix):
+                continue
+            if index == 4 and re.search(r"(?i)\d\s*[x×]\s*$", prefix):
+                # A cover-slip dimension (22×22 pack) is not 22 packs.
                 continue
             if index == 1 and component_quantity(raw[match.end():], item):
                 continue
@@ -2147,7 +2173,7 @@ def asset_quantity_phrase(text: str, item: str = "") -> int | None:
 
 def condition_groups(status: str, remarks: str, *additional: str, asset_item: str = "") -> list[tuple[int, str | None]] | None:
     """Add subsets within a statement, reconcile totals across separate cells."""
-    statements = list(dict.fromkeys(clean(value) for value in (status, remarks, *additional) if clean(value)))
+    statements = list(dict.fromkeys(quantity_inventory_text(value) for value in (status, remarks, *additional) if clean(value)))
     alternatives = []
     for text in statements:
         def subset_of_total(match: re.Match) -> str:
@@ -2238,16 +2264,18 @@ def stated_count(asset: Asset) -> tuple[str, list[tuple[int, str | None]]] | Non
     """Read all count evidence once; repeated totals do not add extra units."""
     candidates: list[tuple[int, str]] = []
     name = asset.item
+    item_text = quantity_inventory_text(asset.item)
+    description_text = quantity_inventory_text(asset.description)
     if asset.explicit_qty:
         candidates.append((asset.explicit_qty, "quantity column"))
     if asset.extras.get("recorded_group_total"):
         provenance = "; ".join(asset.extras.get("source_group_locations", [asset.source_location]))
         candidates.append((asset.extras["recorded_group_total"], f"recorded group total; {provenance}; {asset.extras.get('quantity_layout_evidence', '')}"))
-    item_count = None if QUANTITY_MODEL_CONTEXT.search(asset.item) else parenthetical_quantity(asset.item) or trailing_quantity(asset.item)
+    item_count = None if QUANTITY_MODEL_CONTEXT.search(item_text) or QUANTITY_MEASURE_CONTEXT.search(item_text) else parenthetical_quantity(item_text) or trailing_quantity(item_text)
     if item_count:
         name, count = item_count
         candidates.append((count, "item"))
-    elif found := phrase_count(asset.item):
+    elif found := phrase_count(item_text):
         if not component_quantity(found[1], asset.item):
             name = found[1]
             candidates.append((found[0], "item"))
@@ -2259,15 +2287,22 @@ def stated_count(asset: Asset) -> tuple[str, list[tuple[int, str | None]]] | Non
     )
     if description_is_model_label:
         candidates.append((3, "source row states one green and two maroon stoves, all three functional; 78/79 describe models"))
-    elif count := bare_count(asset.description):
+    elif count := bare_count(description_text):
         if not (re.match(r"^0\d", asset.description) and not blank_tag(asset.tag)):
             candidates.append((count, "description"))
-    elif found := phrase_count(asset.description):
+    elif found := phrase_count(description_text):
         if not component_quantity(found[1], asset.item) and not re.match(r"(?=\S*[A-Za-z])(?=\S*\d)\S+", found[1]):
             candidates.append((found[0], "description"))
-    elif not quantity_specification(asset.description):
-        if found := parenthetical_quantity(asset.description) or trailing_quantity(asset.description):
+    elif not quantity_specification(description_text):
+        if found := parenthetical_quantity(description_text) or trailing_quantity(description_text):
             candidates.append((found[1], "description"))
+    if (asset.source_file == "team-15/Bukwo/Mutushet-HC-III/Asset-Verification-Toolkit.docx"
+            and asset.source_location == "Table 6 row 103"
+            and bare_count(asset.asset_number) == 3
+            and re.search(r"(?i)one\s+set\s+containing\s+11\s+items", asset.description)):
+        # Original table uses Asset Number as quantity (adjacent sets 2/4/3).
+        # The description states one set's composition; retain that ambiguity.
+        candidates.append((3, "source count conflict: Asset Number records 3 hospital hollow-ware sets; description says one set containing 11 items; preserve 3 sets and the original descriptive wording"))
     # Raw cells retain facts from arbitrary/unknown columns and original strings
     # converted to dates or monetary values by the mapped fields.
     non_quantity_dates = {clean(value) for value in (asset.purchase, asset.service)
@@ -2755,9 +2790,17 @@ def mark_unit_records(assets: list[Asset]) -> None:
             identifiers.append(norm(asset.tag) if not blank_tag(asset.tag) else norm(serial.group(1)) if serial else "")
             found = stated_count(asset)
             counts.add(sum(count for count, _ in found[1]) if found else 1)
-        if len(counts) == 1 and 1 < next(iter(counts)) <= len(rows) and all(identifiers) and len(set(identifiers)) == len(rows):
+        group_identifiers = any(re.search(r"\b(?:group|batch|lot)(?:\b|\d)", value) for value in identifiers)
+        if 1 < max(counts) <= len(rows) and all(identifiers) and len(set(identifiers)) == len(rows) and not group_identifiers:
+            evidence = (
+                f"Distinct unit identifiers prove {len(rows)} individual source records; "
+                "repeated group quantities and differing condition totals are not additional assets."
+            )
             for asset in rows:
                 asset.extras["proven_unit_row"] = True
+                existing = asset.extras.get("quantity_layout_evidence", "")
+                if evidence not in existing:
+                    asset.extras["quantity_layout_evidence"] = "; ".join(filter(None, (existing, evidence)))
 
 
 QUANTITY_AUDIT: list[dict] = []
@@ -3826,19 +3869,24 @@ def main() -> None:
     layout_audit = zero_audit + recover_standalone_count_rows(parsed)
     layout_summaries = [f"Reviewed zero quantity: {row['item']}, {row['source_file']} ({row['source_location']}). {row['reason']}"
                         for row in zero_audit]
+    reviewed_layouts = []
     for source_assets in parsed.values():
-        for summary in [*repair_nshwere_furniture(source_assets), *repair_nyamarwa_air_conditioner(source_assets)]:
-            layout_summaries.append(
-                f"Reviewed source layout: {summary['source_file']} ({summary['source_location']}): "
-                f"{summary['source_records']} parsed records restored as {summary['named_groups']} named groups "
-                f"and {summary['physical_assets']} physical assets. {summary['reason']}"
-            )
-            layout_audit.append({
-                "source_file": summary["source_file"], "source_location": summary["source_location"],
-                "item": ", ".join(summary["counts_by_item"]), "quantity": summary["physical_assets"],
-                "status": "mixed_assets_recovered" if summary["named_groups"] > 1 else "source_layout_repaired",
-                "reason": summary["reason"] + "; counts: " + json.dumps(summary["counts_by_item"]),
-            })
+        reviewed_layouts.extend(repair_nshwere_furniture(source_assets))
+        reviewed_layouts.extend(repair_nyamarwa_air_conditioner(source_assets))
+    reviewed_layouts.extend(repair_reviewed_unit_blocks(parsed))
+    for summary in reviewed_layouts:
+        layout_summaries.append(
+            f"Reviewed source layout: {summary['source_file']} ({summary['source_location']}): "
+            f"{summary['source_records']} parsed records reconciled into {summary['named_groups']} named groups "
+            f"and {summary['physical_assets']} physical assets. {summary['reason']}"
+        )
+        status = "mixed_assets_recovered" if summary["named_groups"] > 1 else "source_layout_repaired"
+        layout_audit.append({
+            "source_file": summary["source_file"], "source_location": summary["source_location"],
+            "item": ", ".join(summary["counts_by_item"]), "quantity": summary["physical_assets"],
+            "status": "reviewed_unit_records" if summary.get("status") == "reviewed_unit_records" else status,
+            "reason": summary["reason"] + "; counts: " + json.dumps(summary["counts_by_item"]),
+        })
     write_audit(OUTPUT.with_suffix(".source-layout-audit.csv"), layout_audit)
     print(f"Source layout review complete: {len(layout_audit):,} audit entries", flush=True)
     # Source layout proof must be settled before counts enter duplicate signatures.

@@ -9,9 +9,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from asset_source_layouts import (
     NSHWERE_CONSOLIDATED_SOURCE, NSHWERE_SOURCE, NYAMARWA_SOURCE,
-    repair_nshwere_furniture, repair_nyamarwa_air_conditioner,
+    REVIEWED_UNIT_BLOCKS, repair_nshwere_furniture, repair_nyamarwa_air_conditioner,
+    repair_reviewed_unit_blocks,
 )
-from merge_shared_asset_registers import explode, read_workbook, union_facility_submissions
+from merge_shared_asset_registers import Asset, explode, read_workbook, union_facility_submissions
 
 
 class NshwereFurnitureTests(unittest.TestCase):
@@ -123,6 +124,48 @@ class NyamarwaLayoutTests(unittest.TestCase):
         self.assertFalse(any(a.item == "1 SET" for a in assets))
         self.assertEqual(len(explode([recovered])), 1)
         self.assertEqual(repair_nyamarwa_air_conditioner(assets), [])
+
+
+class ReviewedUnitBlockTests(unittest.TestCase):
+    def test_original_returns_prove_units_and_preserve_count_discrepancies(self):
+        from copy import deepcopy
+
+        sources = {block.source for block in REVIEWED_UNIT_BLOCKS} | {block.primary for block in REVIEWED_UNIT_BLOCKS}
+        root = Path(__file__).resolve().parents[1] / "raw-data-grouped"
+        parsed = {source: read_workbook(root / source) for source in sorted(sources)}
+        # Two independent, identical grouped source lines still represent 240
+        # assets. No normalization is inferred from their repetition alone.
+        unrelated = Asset(item="Chairs (120)", source_file="unreviewed.docx", source_location="Table 1 row 2")
+        parsed["unreviewed.docx"] = [unrelated, deepcopy(unrelated)]
+        before = sum(map(len, parsed.values()))
+        audit = repair_reviewed_unit_blocks(parsed)
+        self.assertEqual(len(audit), len(REVIEWED_UNIT_BLOCKS))
+        self.assertEqual(sum(map(len, parsed.values())), before - len(REVIEWED_UNIT_BLOCKS))
+        for block in REVIEWED_UNIT_BLOCKS:
+            records = [a for a in parsed[block.source] if a.extras.get("reviewed_unit_block", {}).get("primary_location") == block.primary_location
+                       and a.extras.get("reviewed_unit_block", {}).get("primary_source") == block.primary]
+            expected = block.last - block.first + 1
+            self.assertEqual(len(records), expected)
+            self.assertEqual(len(explode(records)), expected)
+            self.assertTrue(all(a.extras["proven_unit_row"] for a in records))
+            self.assertFalse(any(a.source_location == block.primary_location for a in parsed[block.primary]))
+            self.assertTrue(all(block.primary in a.extras["filled_from"] for a in records))
+            if expected != block.primary_quantity:
+                self.assertTrue(all("Source count conflict" in a.extras["quantity_layout_evidence"] for a in records))
+        bad_by_block = {}
+        for assets in parsed.values():
+            for asset in assets:
+                block = asset.extras.get("reviewed_unit_block")
+                if block and asset.remarks.casefold() in {"broken", "spoilt", "spoiled"}:
+                    self.assertEqual(asset.status, asset.remarks)
+                    key = block["consolidated_rows"]
+                    bad_by_block[key] = bad_by_block.get(key, 0) + 1
+        self.assertEqual(bad_by_block["Sheet1 rows 875-1177"], 3)
+        self.assertEqual(bad_by_block["Sheet1 rows 473-665"], 3)
+        self.assertEqual(bad_by_block["Sheet1 rows 328-448"], 10)
+        self.assertEqual(bad_by_block["Sheet1 rows 1628-1932"], 4)
+        self.assertEqual(len(explode(parsed["unreviewed.docx"])), 240)
+        self.assertEqual(repair_reviewed_unit_blocks(parsed), [])
 
 
 if __name__ == "__main__":

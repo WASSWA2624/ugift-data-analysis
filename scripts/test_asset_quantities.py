@@ -108,6 +108,22 @@ class PhysicalAssetQuantityTests(unittest.TestCase):
             self.assertEqual(len(rows), 120, description)
             self.assertEqual(sum(row.status == "Broken" for row in rows), 4, description)
 
+    def test_kagwara_distinct_unit_tags_survive_mixed_condition_totals(self):
+        sources = [asset(item="Chairs", tag=f"UGIFT/KAGWARAARX SEED SS {index:03}",
+                         description="metallic & Hard wood", status="301 Functional",
+                         remarks="301 Functional and 4 broken" if index <= 301 else "BROKEN")
+                   for index in range(1, 306)]
+        rows = explode(sources)
+        self.assertEqual(len(rows), 305)
+        self.assertTrue(all(row.extras.get("proven_unit_row") for row in sources))
+        self.assertTrue(all("Distinct unit identifiers" in row["quantity_layout_evidence"] for row in QUANTITY_AUDIT))
+        self.assertEqual(sum(row.remarks == "BROKEN" for row in rows), 4)
+        grouped = [asset(item="BP machines", explicit_qty=120, tag=f"BP/{index}") for index in range(2)]
+        self.assertEqual(len(explode(grouped)), 240)
+        for prefix in ("Batch/", "Lot"):
+            identified_groups = [asset(item="BP machines", explicit_qty=2, tag=f"{prefix}{index}") for index in range(2)]
+            self.assertEqual(len(explode(identified_groups)), 4)
+
     def test_line_totals_unit_prices_and_provenance(self):
         source = asset(item="BP machine", explicit_qty=120, description="120 BP machines, digital",
                        cost=120000, recoverable=60000, acc_dep=12000, nbv=108000, ytd=2400,
@@ -165,6 +181,12 @@ class PhysicalAssetQuantityTests(unittest.TestCase):
     def test_negative_and_fractional_counts_are_not_partial_integers(self):
         for value in ("-120 units", "-2 functional and -3 damaged", "1.5 functional and 2.5 damaged", "Quantity: -120", "Quantity: 1.5", "⁹", "m²"):
             self.assertEqual(len(explode([asset(item="BP machine", description=value, status=value)])), 1, value)
+
+    def test_delivery_bed_mt400_is_model_and_explicit_quantity_still_wins(self):
+        for description in ("I blue padded surface, washable delivery hydraulic bed. MT 400",
+                            "1 delivery hydraulic bed MT-400"):
+            self.assertEqual(len(explode([asset(item="Delivery Bed, Hydraulic Manual", description=description)])), 1)
+            self.assertEqual(len(explode([asset(item="Delivery Bed, Hydraulic Manual", description=description, explicit_qty=400)])), 400)
 
     def test_anyomorem_flattened_columns_restore_three_benches(self):
         row = Asset(item="Not in use", description="Bench 2025 Good condition", explicit_qty=1,
