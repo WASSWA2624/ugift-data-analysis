@@ -479,6 +479,33 @@ def borrow_key(bare: str) -> str:
     return " ".join(words)
 
 
+def reviewed_equivalent(bare: str, description: str) -> str | None:
+    """Resolve field labels that identify an asset more clearly in context.
+
+    These matches are deliberately narrow. A generic label without a confirming
+    description must not inherit the price of a different asset.
+    """
+    name, detail = norm_name(bare), norm_name(description)
+    if name == "laboratory tools" and detail == "wooden top metallic stand":
+        return "Lab Stool"
+    if name == "laboratory schools" and "laboratory stools" in detail:
+        return "Lab Stool"
+    if name == "desk top sets" and detail == "desktop computers":
+        return "Desktop Computer"
+    if name == "hpprp tower 290 69 dessktops" and detail.startswith("black in colour"):
+        return "Desktop Computer"
+    if name == "trpled stand":
+        return "Tripod Stands"
+    if name in {"blood pressure machine", "bp machine", "delivery instrument set", "hollow ware sets"}:
+        return bare
+    if name == "audio visual equipment":
+        if re.search(r"\b(?:television|flat screen tv)\b", detail) and not "projector" in detail:
+            return "Television set"
+        if detail == "projector":
+            return "Projector"
+    return None
+
+
 def plausible(values: list, name: str) -> list:
     """Donor prices inside the plausibility band of the name's workbook-wide median.
     With fewer than three stated prices for the name nothing can be excluded."""
@@ -859,10 +886,11 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     total_line = bool(TOTAL_LINE.search(bare))
     repair = bool(REPAIR.search(bare) or (description and REPAIR.search(description)))
     service = bool(SERVICE.search(bare))
-    classified = None if total_line or repair or service else registers.classify(bare)
+    equivalent = reviewed_equivalent(bare, description)
+    classified = None if total_line or repair or service else registers.classify(equivalent or bare)
     if classified is None and description and not total_line and not repair and (GENERIC_HEAD.match(bare) or not registers.classify(bare)):
         classified = registers.classify(display_item(canonical_item(description)))
-    class_word = bare if registers.classify(bare) else (description if classified else bare)
+    class_word = equivalent or (bare if registers.classify(bare) else (description if classified else bare))
     loose = bool(LOOSE.search(class_word)) and not (classified and not LOOSE.search(class_word))
     consumable = bool(CONSUMABLE.search(class_word)) and not classified
     if classified is None:
@@ -931,17 +959,18 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     placed_text = placed_source.isoformat() if placed_source else as_date_text(source.get("Date Placed In Service"))
     years = row_years(purchase_text, placed_text)
     asset_name = borrow_key(bare)
+    comparable_name = borrow_key(equivalent) if equivalent else asset_name
     minor_key = norm_name(minor2)
     lg_key = lg.key if lg else ""
-    specific = (bool(classified) or usable_name(asset_name)) and asset_name not in GENERIC_NAMES and not GENERIC_HEAD.match(bare) \
+    specific = (bool(classified) or usable_name(asset_name)) and (bool(equivalent) or (asset_name not in GENERIC_NAMES and not GENERIC_HEAD.match(bare))) \
         and not total_line and not repair and not service
-    if borrow and cost is not None and cost > 0 and not non_depr:
+    if borrow and cost is not None and cost > 0 and not non_depr and not is_land:
         # A recorded cost twenty times above or below the median for the name (or,
         # where the name has fewer than three prices, fifty times off its class median)
         # is a block total typed on one unit, a divided line total, or a slip: the unit
         # price is borrowed instead and the recorded figure stays in ATTRIBUTE10 on the
         # MF workbook.
-        centre = PRICE_MEDIAN.get(asset_name)
+        centre = PRICE_MEDIAN.get(comparable_name)
         band = PRICE_BAND
         if centre is None and minor_key in CLASS_MEDIAN:
             centre, band = CLASS_MEDIAN[minor_key], CLASS_BAND
@@ -976,10 +1005,10 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
                 date_fill = FILLS[method]
                 stats[f"date_{method}"] += 1
         if cost is None:
-            found = choose(costs, asset_name, lg_key, years, minor_key)
+            found = choose(costs, comparable_name, lg_key, years, minor_key)
             if found:
                 method, groups = found
-                values = plausible([value for _, _, bucket in groups for value in bucket], asset_name)
+                values = plausible([value for _, _, bucket in groups for value in bucket], comparable_name)
                 if values:
                     cost = shillings(median(values))
                     cost_fill = FILLS[method]
@@ -994,7 +1023,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
                 stats[f"life_{method}"] += 1
                 depreciates = not is_land and not natural and not non_depr
     if borrow:
-        if cost is None and specific and not costs.get(asset_name) and not non_asset and not non_depr and minor_key:
+        if cost is None and specific and not costs.get(comparable_name) and not non_asset and not non_depr and minor_key:
             # Step 4: no priced asset of the same name anywhere, so the Annex 1 class
             # supplies the price, same government first, then other governments.
             found = choose(CLASS_COSTS, minor_key, lg_key, years, "")

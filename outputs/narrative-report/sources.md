@@ -91,25 +91,25 @@ facility-reconciliation.csv and supervisor-decisions.csv, selected final outcome
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; all national holdings on each listed vote; TAG_NUMBER.
 
 ### Table 9: Central region: findings and recommended actions
-[{"facility": "Busaale Health Centre III", "lg": "Kayunga", "finding": "The facility used Primary Health Care funds for maintenance and kept a quarterly condition record.", "gap": "The maternity roof leaked, door hinges were damaged and the solar battery needed replacement.", "action": "Cost and complete the roof, door and battery repairs, then confirm that the affected rooms and solar system are working.", "source_ids": ["O01", "O02", "O03"], "case_type": "gap"}, {"facility": "Musiitwa Seed Secondary School", "lg": "Kayunga", "finding": "The school checked furniture and fittings each term and repaired them when funds allowed.", "gap": "Broken furniture remained out of use while funding was arranged.", "action": "Prepare a termly repair list and fund repairs in order of their effect on teaching and safety.", "source_ids": ["O04"], "case_type": "gap"}, {"facility": "Musiitwa Seed Secondary School", "lg": "Kayunga", "finding": "The school improved access to secondary education and used irrigation equipment for teaching and food production.", "gap": "Long walking distances and pupils' engagement in petty trade affected attendance.", "action": "Maintain the practical teaching equipment and work with parents and the district education office on attendance barriers.", "source_ids": ["O05", "O06"], "case_type": "gap"}, {"facility": "Lukale Health Centre III", "lg": "Buvuma", "finding": "Staff reported that the maternity ward allowed women to give birth locally and with greater privacy.", "gap": "", "action": "Protect the service through routine care of the maternity building and equipment.", "source_ids": ["O27"], "case_type": "benefit"}]
+[{"facility": "Busaale Health Centre III", "lg": "Kayunga", "finding": "The facility used Primary Health Care funds for maintenance and kept a quarterly condition record.", "gap": "The maternity roof leaked, door hinges were damaged and the solar battery needed replacement.", "action": "Cost and complete the roof, door and battery repairs, then confirm that the affected rooms and solar system are working.", "source_ids": ["O01", "O02", "O03"], "case_type": "gap"}, {"facility": "Musiitwa Seed Secondary School", "lg": "Kayunga", "finding": "The school checked furniture and fittings each term and repaired them when funds allowed.", "gap": "Broken furniture remained out of use while funding was arranged.", "action": "Prepare a termly repair list and fund repairs in order of their effect on teaching and safety.", "source_ids": ["O04"], "case_type": "gap"}, {"facility": "Musiitwa Seed Secondary School", "lg": "Kayunga", "finding": "The school improved access to secondary education and used irrigation equipment for teaching and food production.", "gap": "Long walking distances and pupils' engagement in petty trade affected attendance.", "action": "Maintain the practical teaching equipment and work with parents and the district education office on attendance barriers.", "source_ids": ["O05", "O06"], "case_type": "gap"}, {"facility": "Lukale Health Centre III", "lg": "Buvuma", "finding": "Staff reported that the maternity ward allowed women to give birth locally and with greater privacy.", "gap": "Benefit to sustain.", "action": "Protect the service through routine care of the maternity building and equipment.", "source_ids": ["O27"], "case_type": "benefit"}, {"id": "AD01", "region": "Central", "facility": "Kijuna Health Centre III", "lg": "Kassanda", "expected": "Patient equipment and basic utilities should be available when care is needed.", "found": "The wheelchairs were not functional, and a failed water pump left the facility with inadequate water. Inadequate power also prevented full use of electronic equipment.", "finding": "Expected: Patient equipment and basic utilities should be available when care is needed. Found: The wheelchairs were not functional, and a failed water pump left the facility with inadequate water. Inadequate power also prevented full use of electronic equipment.", "gap": "The facility faced separate constraints on patient movement, water supply and equipment use.", "action": "Kassanda District should arrange technical assessment and repair of the wheelchairs and pump, restore a dependable power supply and test the affected equipment before returning it to use.", "priority": "High", "source_ids": ["AD01"]}, {"id": "AD02", "region": "Central", "facility": "Kikandwa Health Centre III", "lg": "Kassanda", "expected": "The health facility should provide powered equipment, durable buildings and secure custody of its assets.", "found": "Electronic equipment could not be used because reliable electricity and solar power were unavailable. Storage for damaged assets was inadequate, the facility lacked a perimeter fence, and defects were observed in flooring and skirting.", "finding": "Expected: The health facility should provide powered equipment, durable buildings and secure custody of its assets. Found: Electronic equipment could not be used because reliable electricity and solar power were unavailable. Storage for damaged assets was inadequate, the facility lacked a perimeter fence, and defects were observed in flooring and skirting.", "gap": "Power, secure storage and correction of building defects remained necessary for full and safe use.", "action": "Kassanda District should agree a joint power, security and defects plan, provide secure temporary storage, and have technical staff verify repairs and equipment operation.", "priority": "High", "source_ids": ["AD02"]}, {"id": "AD03", "region": "Central", "facility": "Kyasansuwa Health Centre III", "lg": "Kassanda", "expected": "Computer equipment should support administration and reporting, while floors and bathrooms should remain usable and easy to maintain.", "found": "The facility reported three computers completely damaged following unstable power and surges. Poor floor finishes and defective staff bathroom levels were also observed.", "finding": "Expected: Computer equipment should support administration and reporting, while floors and bathrooms should remain usable and easy to maintain. Found: The facility reported three computers completely damaged following unstable power and surges. Poor floor finishes and defective staff bathroom levels were also observed.", "gap": "Unstable electricity threatened the remaining electronics, while defective finishes and drainage needed correction.", "action": "Kassanda District should stabilise and protect the electrical supply, assess the three computers for repair or replacement, and correct the floor and bathroom defects under technical supervision.", "priority": "High", "source_ids": ["AD03"]}]
 
 ### Table 10: Central assets and identification by category
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region=Central; mutually exclusive report categories.
 
 ### Table 11: Eastern region: findings and recommended actions
-[{"facility": "Kagumba Health Centre III", "lg": "Kamuli", "finding": "Staff reported increased maternity and antenatal service use, and the facility kept an asset condition book.", "gap": "Staff housing was under pressure; outpatient, laboratory, storage and kitchen space were identified as needs.", "action": "Assess the supporting space against patient demand and include the agreed works in the district health investment plan.", "source_ids": ["O07", "O08", "O09"], "case_type": "gap"}, {"facility": "Kagumba Seed Secondary School", "lg": "Kamuli", "finding": "The school reported that broken furniture had been repaired during the second term.", "gap": "", "action": "Continue condition checks and scheduled furniture repairs before each term.", "source_ids": ["O28"], "case_type": "practice"}, {"facility": "Sikuda Seed Secondary School", "lg": "Busia", "finding": "Broken desks and a cracked laboratory stool were found.", "gap": "The cracked stool was still in use.", "action": "Withdraw unsafe furniture from use and repair or replace it before returning it to classrooms or laboratories.", "source_ids": ["O11"], "case_type": "gap"}, {"facility": "Bubago Health Centre", "lg": "Kamuli", "finding": "Staff identified difficulty operating and maintaining an oxygen concentrator.", "gap": "Equipment use depended on stronger user and basic maintenance skills.", "action": "Arrange practical user training and a technical check, then demonstrate operation with the staff responsible for the equipment.", "source_ids": ["O29"], "case_type": "gap"}, {"facility": "Bumunji, Buwembe and Majanji health centres; Masafu Hospital", "lg": "Busia", "finding": "Equipment had been transferred from the health centres to Masafu Hospital.", "gap": "", "action": "Confirm the receiving custodian, location and service need, and retain signed transfer and receipt documentation.", "source_ids": ["O10"], "case_type": "custody"}]
+[{"facility": "Kagumba Health Centre III", "lg": "Kamuli", "finding": "Staff reported increased maternity and antenatal service use, and the facility kept an asset condition book.", "gap": "Staff housing was under pressure; outpatient, laboratory, storage and kitchen space were identified as needs.", "action": "Assess the supporting space against patient demand and include the agreed works in the district health investment plan.", "source_ids": ["O07", "O08", "O09"], "case_type": "gap"}, {"facility": "Kagumba Seed Secondary School", "lg": "Kamuli", "finding": "The school reported that broken furniture had been repaired during the second term.", "gap": "Practice to sustain.", "action": "Continue condition checks and scheduled furniture repairs before each term.", "source_ids": ["O28"], "case_type": "practice"}, {"facility": "Sikuda Seed Secondary School", "lg": "Busia", "finding": "Broken desks and a cracked laboratory stool were found.", "gap": "The cracked stool was still in use.", "action": "Withdraw unsafe furniture from use and repair or replace it before returning it to classrooms or laboratories.", "source_ids": ["O11"], "case_type": "gap"}, {"facility": "Bubago Health Centre", "lg": "Kamuli", "finding": "Staff identified difficulty operating and maintaining an oxygen concentrator.", "gap": "Equipment use depended on stronger user and basic maintenance skills.", "action": "Arrange practical user training and a technical check, then demonstrate operation with the staff responsible for the equipment.", "source_ids": ["O29"], "case_type": "gap"}, {"facility": "Bumunji, Buwembe and Majanji health centres; Masafu Hospital", "lg": "Busia", "finding": "Equipment had been transferred from the health centres to Masafu Hospital.", "gap": "Allocation and custody require confirmation.", "action": "Confirm the receiving custodian, location and service need, and retain signed transfer and receipt documentation.", "source_ids": ["O10"], "case_type": "custody"}, {"id": "AD06", "region": "Eastern", "facility": "Nansanga Seed Secondary School", "lg": "Budaka", "expected": "The supplied desktop computers should be installed and available for teaching.", "found": "The school lacked reliable power, and twenty-seven of its twenty-eight desktops remained packed.", "finding": "Expected: The supplied desktop computers should be installed and available for teaching. Found: The school lacked reliable power, and twenty-seven of its twenty-eight desktops remained packed.", "gap": "Most of the supplied computer capacity had not reached classroom use because a basic operating requirement was unresolved.", "action": "Budaka District and the school should settle the power connection or suitable alternative, arrange installation and testing, and confirm the number of computers available to learners.", "priority": "High", "source_ids": ["AD06"]}, {"id": "AD07", "region": "Eastern", "facility": "Muhula Seed Secondary School", "lg": "Butaleja", "expected": "The school should receive completed buildings and tested equipment before formal handover and operation.", "found": "The contractor had not handed over the school, and it was not operating. Buildings showed cracks, an air conditioner remained boxed with a missing fan, and the installed water pump was not working.", "finding": "Expected: The school should receive completed buildings and tested equipment before formal handover and operation. Found: The contractor had not handed over the school, and it was not operating. Buildings showed cracks, an air conditioner remained boxed with a missing fan, and the installed water pump was not working.", "gap": "Construction completion, equipment completeness and successful testing had not come together to make the school ready.", "action": "Butaleja District and the Ministry of Education and Sports should agree a defects and handover schedule with the contractor, rectify the works, complete the equipment and witness operational tests before handover.", "priority": "High", "source_ids": ["AD07"]}, {"id": "AD08", "region": "Eastern", "facility": "Sop Sop Health Centre III", "lg": "Tororo", "expected": "Delivered equipment should be accompanied by the skills and accessories needed to use it.", "found": "The facility reported that much of its equipment remained in store because staff did not know how to operate it. Oxygen equipment had arrived without cylinders. Tuberculosis testing and maternity services had nevertheless improved.", "finding": "Expected: Delivered equipment should be accompanied by the skills and accessories needed to use it. Found: The facility reported that much of its equipment remained in store because staff did not know how to operate it. Oxygen equipment had arrived without cylinders. Tuberculosis testing and maternity services had nevertheless improved.", "gap": "Equipment delivery had not been matched consistently with user training and a complete operating package.", "action": "Tororo District and the Ministry of Health should arrange practical training at the facility, confirm the required oxygen components, and check that trained staff can safely use each released item.", "priority": "High", "source_ids": ["AD08"]}, {"id": "AD09", "region": "Eastern", "facility": "Bunamono Health Centre III", "lg": "Bududa", "expected": "The installed water system should supply the staff houses, and supplied clinical equipment should be ready for use.", "found": "The water tank was not working and the solar pump was not connected, leaving the staff houses without water. A supplied laboratory stand remained boxed because staff could not assemble it, and a glucometer lacked test strips.", "finding": "Expected: The installed water system should supply the staff houses, and supplied clinical equipment should be ready for use. Found: The water tank was not working and the solar pump was not connected, leaving the staff houses without water. A supplied laboratory stand remained boxed because staff could not assemble it, and a glucometer lacked test strips.", "gap": "The facility needed installation, demonstration and consumables to turn delivered assets into usable services.", "action": "Bududa District should complete and test the water connection, arrange assembly and user demonstration for the laboratory stand, and establish a supply of compatible glucometer strips.", "priority": "High", "source_ids": ["AD09"]}]
 
 ### Table 12: Eastern assets and identification by category
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region=Eastern; mutually exclusive report categories.
 
 ### Table 13: Northern region: findings and recommended actions
-[{"facility": "Got Apwoyo Seed Secondary School", "lg": "Nwoya", "finding": "The school was under construction and had not been commissioned. Delivered furniture was on site and computer equipment was held at district headquarters.", "gap": "Incomplete buildings prevented commissioning and installation.", "action": "Agree a costed completion and handover plan, then move and install the equipment when the rooms and utilities are ready.", "source_ids": ["O30"], "case_type": "gap"}, {"facility": "Ndhew Seed School", "lg": "Nebbi", "finding": "Buildings were incomplete, with computer and science equipment held at district headquarters and furniture not yet installed.", "gap": "Delivery of equipment had not translated into an equipped school.", "action": "Complete the outstanding works and sanitation facilities and coordinate furniture and equipment installation with handover.", "source_ids": ["O31"], "case_type": "gap"}, {"facility": "Mamba Seed School", "lg": "Nebbi", "finding": "Construction was incomplete. Computers were temporarily accommodated in older structures, while science equipment remained at district headquarters.", "gap": "The planned laboratory and computer spaces were not ready for full installation.", "action": "Complete and commission the buildings, install the equipment and confirm safe operation before formal handover.", "source_ids": ["O32"], "case_type": "gap"}, {"facility": "Atego Seed School", "lg": "Nebbi", "finding": "Computers were connected and working in older rooms while construction continued.", "gap": "Staff reported power surges and the planned facilities were not fully commissioned.", "action": "Stabilise the power supply, protect the installed computers and finish the remaining works.", "source_ids": ["O33"], "case_type": "gap"}, {"facility": "Lungulu Seed Secondary School", "lg": "Nwoya", "finding": "The school funded minor repairs and kept breakdown information, but computers remained in storage pending power.", "gap": "The stored equipment included defective desktop units, and the assets were not engraved.", "action": "Provide a suitable power connection, repair defective units, install the usable equipment and apply asset identification markings.", "source_ids": ["O12", "O13", "O34"], "case_type": "gap"}, {"facility": "Todora and Paraa Health Centres III", "lg": "Nwoya", "finding": "Todora used the regional technical maintenance team, while some equipment originally intended for Todora remained at Paraa after redirection during construction.", "gap": "Equipment location and final allocation required a district decision.", "action": "Confirm the service need at both facilities, formally allocate or transfer the equipment and update the named custodians.", "source_ids": ["O14", "O15"], "case_type": "gap"}, {"facility": "Pamaka Health Centre III", "lg": "Nebbi", "finding": "Staff reported increased attendance and community confidence.", "gap": "The solar system was not working, oxygen equipment could not be used because of power constraints, and staffing was under pressure.", "action": "Restore reliable power and demonstrate oxygen equipment operation; review staffing against patient demand.", "source_ids": ["O16", "O17"], "case_type": "gap"}, {"facility": "Kalemungole Health Centre III", "lg": "Moroto", "finding": "Neonatal respiratory equipment remained in an unopened carton and treatment trolleys were still wrapped.", "gap": "Delivered items had not been brought into routine use.", "action": "Check the equipment, confirm the room and staff requirements, and arrange installation and user orientation.", "source_ids": ["O18"], "case_type": "gap"}, {"facility": "Rupa Seed School", "lg": "Moroto", "finding": "The school hired a generator for practical lessons and used its library and computer laboratory block as dormitories.", "gap": "The intended learning spaces and a permanent power connection were unavailable for their planned use.", "action": "Agree a room-use plan and power solution that restores the library and computer laboratory functions.", "source_ids": ["O19"], "case_type": "gap"}]
+[{"facility": "Got Apwoyo Seed Secondary School", "lg": "Nwoya", "finding": "The school was under construction and had not been commissioned. Delivered furniture was on site and computer equipment was held at district headquarters.", "gap": "Incomplete buildings prevented commissioning and installation.", "action": "Agree a costed completion and handover plan, then move and install the equipment when the rooms and utilities are ready.", "source_ids": ["O30"], "case_type": "gap"}, {"facility": "Ndhew Seed School", "lg": "Nebbi", "finding": "Buildings were incomplete, with computer and science equipment held at district headquarters and furniture not yet installed.", "gap": "Delivery of equipment had not translated into an equipped school.", "action": "Complete the outstanding works and sanitation facilities and coordinate furniture and equipment installation with handover.", "source_ids": ["O31"], "case_type": "gap"}, {"facility": "Mamba Seed School", "lg": "Nebbi", "finding": "Construction was incomplete. Computers were temporarily accommodated in older structures, while science equipment remained at district headquarters.", "gap": "The planned laboratory and computer spaces were not ready for full installation.", "action": "Complete and commission the buildings, install the equipment and confirm safe operation before formal handover.", "source_ids": ["O32"], "case_type": "gap"}, {"facility": "Atego Seed School", "lg": "Nebbi", "finding": "Computers were connected and working in older rooms while construction continued.", "gap": "Staff reported power surges and the planned facilities were not fully commissioned.", "action": "Stabilise the power supply, protect the installed computers and finish the remaining works.", "source_ids": ["O33"], "case_type": "gap"}, {"facility": "Lungulu Seed Secondary School", "lg": "Nwoya", "finding": "The school funded minor repairs and kept breakdown information, but computers remained in storage pending power.", "gap": "The stored equipment included defective desktop units, and the assets were not engraved.", "action": "Provide a suitable power connection, repair defective units, install the usable equipment and apply asset identification markings.", "source_ids": ["O12", "O13", "O34"], "case_type": "gap"}, {"facility": "Todora and Paraa Health Centres III", "lg": "Nwoya", "finding": "Todora used the regional technical maintenance team, while some equipment originally intended for Todora remained at Paraa after redirection during construction.", "gap": "Equipment location and final allocation required a district decision.", "action": "Confirm the service need at both facilities, formally allocate or transfer the equipment and update the named custodians.", "source_ids": ["O14", "O15"], "case_type": "gap"}, {"facility": "Pamaka Health Centre III", "lg": "Nebbi", "finding": "Staff reported increased attendance and community confidence.", "gap": "The solar system was not working, oxygen equipment could not be used because of power constraints, and staffing was under pressure.", "action": "Restore reliable power and demonstrate oxygen equipment operation; review staffing against patient demand.", "source_ids": ["O16", "O17"], "case_type": "gap"}, {"facility": "Kalemungole Health Centre III", "lg": "Moroto", "finding": "Neonatal respiratory equipment remained in an unopened carton and treatment trolleys were still wrapped.", "gap": "Delivered items had not been brought into routine use.", "action": "Check the equipment, confirm the room and staff requirements, and arrange installation and user orientation.", "source_ids": ["O18"], "case_type": "gap"}, {"facility": "Rupa Seed School", "lg": "Moroto", "finding": "The school hired a generator for practical lessons and used its library and computer laboratory block as dormitories.", "gap": "The intended learning spaces and a permanent power connection were unavailable for their planned use.", "action": "Agree a room-use plan and power solution that restores the library and computer laboratory functions.", "source_ids": ["O19"], "case_type": "gap"}, {"id": "AD04", "region": "Northern", "facility": "Alwi Seed Secondary School", "lg": "Pakwach", "expected": "The computer laboratory and security equipment should support teaching and school operation.", "found": "The school reported power surges. Nine monitors and ten system units were not working, as were the server power-backup unit and twenty other power-backup units. Only one of thirteen security cameras was functional.", "finding": "Expected: The computer laboratory and security equipment should support teaching and school operation. Found: The school reported power surges. Nine monitors and ten system units were not working, as were the server power-backup unit and twenty other power-backup units. Only one of thirteen security cameras was functional.", "gap": "The loss of working computer stations and power protection reduced the usable laboratory capacity and left much of the camera system unavailable.", "action": "Pakwach District and the school should first assess the electrical supply and protection, then repair or replace failed equipment and test the whole laboratory and camera system before acceptance.", "priority": "High", "source_ids": ["AD04"]}, {"id": "AD05", "region": "Northern", "facility": "Wadelai Seed Secondary School", "lg": "Pakwach", "expected": "The school should be able to use its computer laboratory reliably and keep water storage structures safe.", "found": "Twenty desktop computers were recorded as working and in use, but the school reported a solar fault that interrupted use of electrical equipment. One water-tank stand was broken and presented a threat to students.", "finding": "Expected: The school should be able to use its computer laboratory reliably and keep water storage structures safe. Found: Twenty desktop computers were recorded as working and in use, but the school reported a solar fault that interrupted use of electrical equipment. One water-tank stand was broken and presented a threat to students.", "gap": "Usable equipment remained dependent on an unreliable power supply, and the damaged tank support required immediate attention.", "action": "The school and Pakwach District should restrict access around the damaged tank support pending an engineering assessment, repair the support, and restore and test the solar system.", "priority": "High", "source_ids": ["AD05"]}]
 
 ### Table 14: Northern assets and identification by category
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region=Northern; mutually exclusive report categories.
 
 ### Table 15: Western region: findings and recommended actions
-[{"facility": "Nyamarunda Health Centre III", "lg": "Kibaale", "finding": "The facility identified and set aside broken items and referred them to the District Health Officer.", "gap": "Staff raised concerns about staff-quarter workmanship, electrical installation, drainage, water security and storage.", "action": "Carry out a joint engineering and health inspection, make unsafe installations safe and complete the agreed repairs.", "source_ids": ["O20", "O21"], "case_type": "gap"}, {"facility": "Avogera Health Centre III", "lg": "Buliisa", "finding": "The facility carried out local repairs and received technical support from Hoima Regional Referral Hospital.", "gap": "Items that could not be repaired remained stored; staff identified technical skills, user orientation and storage needs.", "action": "Assess the stored items for repair, give practical user training and agree a suitable storage arrangement.", "source_ids": ["O22"], "case_type": "gap"}, {"facility": "Ngwedo Seed Secondary School", "lg": "Buliisa", "finding": "A caretaker attended monthly for repairs, and the Directorate of Industrial Training repaired furniture.", "gap": "", "action": "Continue the repair schedule and record the items returned to use.", "source_ids": ["O23"], "case_type": "practice"}, {"facility": "Bundimulangya Health Centre III", "lg": "Bundibugyo", "finding": "The District Health Officer arranged maintenance support, and staff said the power house and solar installation supported continued operation.", "gap": "", "action": "Keep the technical referral arrangement active and include the power and solar systems in routine servicing.", "source_ids": ["O24"], "case_type": "practice"}, {"facility": "Kyankaramata Health Centre III", "lg": "Kyenjojo", "finding": "Primary Health Care funds paid for minor repairs.", "gap": "Major repair costs were a constraint.", "action": "Prepare costed technical referrals for major repairs and agree district funding and follow-up.", "source_ids": ["O25"], "case_type": "gap"}, {"facility": "Kigorobya Seed Secondary School", "lg": "Hoima", "finding": "Equipped classrooms, the computer room and chemistry laboratory supported teaching; the school and ministry shared maintenance work.", "gap": "Staffing and study materials constrained use of the improved facilities.", "action": "Review teaching staff and materials alongside the maintenance plan.", "source_ids": ["O26"], "case_type": "gap"}, {"facility": "Butungama Seed School", "lg": "Ntoroko", "finding": "The school was still under construction at the time of the interview.", "gap": "The construction works required completion.", "action": "Confirm the outstanding works with the district engineer and agree the completion and handover sequence.", "source_ids": ["O35"], "case_type": "gap"}, {"facility": "Butiaba Health Centre III", "lg": "Buliisa", "finding": "The hydraulic delivery bed was not in use because staff needed operating guidance. Staff also reported difficulty obtaining test strips for the supplied glucometers.", "gap": "Equipment use depended on practical training and access to compatible consumables.", "action": "Demonstrate safe operation of the delivery bed with its users and arrange a reliable supply of compatible glucometer strips.", "source_ids": ["O36"], "case_type": "gap"}]
+[{"facility": "Nyamarunda Health Centre III", "lg": "Kibaale", "finding": "The facility identified and set aside broken items and referred them to the District Health Officer.", "gap": "Staff raised concerns about staff-quarter workmanship, electrical installation, drainage, water security and storage.", "action": "Carry out a joint engineering and health inspection, make unsafe installations safe and complete the agreed repairs.", "source_ids": ["O20", "O21"], "case_type": "gap"}, {"facility": "Avogera Health Centre III", "lg": "Buliisa", "finding": "The facility carried out local repairs and received technical support from Hoima Regional Referral Hospital.", "gap": "Items that could not be repaired remained stored; staff identified technical skills, user orientation and storage needs.", "action": "Assess the stored items for repair, give practical user training and agree a suitable storage arrangement.", "source_ids": ["O22"], "case_type": "gap"}, {"facility": "Ngwedo Seed Secondary School", "lg": "Buliisa", "finding": "A caretaker attended monthly for repairs, and the Directorate of Industrial Training repaired furniture.", "gap": "Practice to sustain.", "action": "Continue the repair schedule and record the items returned to use.", "source_ids": ["O23"], "case_type": "practice"}, {"facility": "Bundimulangya Health Centre III", "lg": "Bundibugyo", "finding": "The District Health Officer arranged maintenance support, and staff said the power house and solar installation supported continued operation.", "gap": "Practice to sustain.", "action": "Keep the technical referral arrangement active and include the power and solar systems in routine servicing.", "source_ids": ["O24"], "case_type": "practice"}, {"facility": "Kyankaramata Health Centre III", "lg": "Kyenjojo", "finding": "Primary Health Care funds paid for minor repairs.", "gap": "Major repair costs were a constraint.", "action": "Prepare costed technical referrals for major repairs and agree district funding and follow-up.", "source_ids": ["O25"], "case_type": "gap"}, {"facility": "Kigorobya Seed Secondary School", "lg": "Hoima", "finding": "Equipped classrooms, the computer room and chemistry laboratory supported teaching; the school and ministry shared maintenance work.", "gap": "Staffing and study materials constrained use of the improved facilities.", "action": "Review teaching staff and materials alongside the maintenance plan.", "source_ids": ["O26"], "case_type": "gap"}, {"facility": "Butungama Seed School", "lg": "Ntoroko", "finding": "The school was still under construction at the time of the interview.", "gap": "The construction works required completion.", "action": "Confirm the outstanding works with the district engineer and agree the completion and handover sequence.", "source_ids": ["O35"], "case_type": "gap"}, {"facility": "Butiaba Health Centre III", "lg": "Buliisa", "finding": "The hydraulic delivery bed was not in use because staff needed operating guidance. Staff also reported difficulty obtaining test strips for the supplied glucometers.", "gap": "Equipment use depended on practical training and access to compatible consumables.", "action": "Demonstrate safe operation of the delivery bed with its users and arrange a reliable supply of compatible glucometer strips.", "source_ids": ["O36"], "case_type": "gap"}, {"id": "AD10", "region": "Western", "facility": "Kihungya Seed Secondary School", "lg": "Buliisa", "expected": "The school investment should provide usable science and computer laboratories, staff accommodation, water and secure premises.", "found": "The science block, computer laboratory and library were still under construction, and staff quarters were incomplete. The school reported no electricity for computer sessions, no water for sanitation and no perimeter fence. Its administration block was already in use.", "finding": "Expected: The school investment should provide usable science and computer laboratories, staff accommodation, water and secure premises. Found: The science block, computer laboratory and library were still under construction, and staff quarters were incomplete. The school reported no electricity for computer sessions, no water for sanitation and no perimeter fence. Its administration block was already in use.", "gap": "The school was partly in use while essential teaching spaces, utilities and security remained unfinished.", "action": "Buliisa District and the Ministry of Education and Sports should use one completion plan for the laboratories, staff housing, electricity, water and security, with separate testing and handover of each finished element.", "priority": "High", "source_ids": ["AD10"]}, {"id": "AD11", "region": "Western", "facility": "Kihungya Health Centre III", "lg": "Buliisa", "expected": "Expanded buildings and equipment should support care at the health centre, with responsibility clear for any items kept elsewhere.", "found": "Staff reported more room for patients, easier working arrangements through staff accommodation, and electricity from the new solar power house. Buildings were in use. A gas stove, electric suction apparatus, laboratory stool and electric centrifuge were recorded at the subcounty rather than the health centre.", "finding": "Expected: Expanded buildings and equipment should support care at the health centre, with responsibility clear for any items kept elsewhere. Found: Staff reported more room for patients, easier working arrangements through staff accommodation, and electricity from the new solar power house. Buildings were in use. A gas stove, electric suction apparatus, laboratory stool and electric centrifuge were recorded at the subcounty rather than the health centre.", "gap": "The building and power investment was supporting care, but the intended use and custody of equipment held away from the facility needed confirmation.", "action": "Buliisa District and facility management should preserve the working building and solar arrangements, confirm who holds the off-site equipment, and agree whether it should be deployed to the health centre or remain at its present location.", "priority": "Medium", "source_ids": ["AD11"]}]
 
 ### Table 16: Western assets and identification by category
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region=Western; mutually exclusive report categories.
@@ -171,147 +171,347 @@ UgIFT field photograph P12; raw-data-grouped/team-29/Kiboga/Lwamata-Town-Council
 Output file: `outputs/narrative-report/figures/photo_13_butungama_construction.jpg`.
 UgIFT field photograph P13; raw-data-grouped/team-26/_team-documents/Butungama Seed School.pdf; {"embedded_image": "PDF page 7, image 1", "body_block": null, "table": null, "adjacent_text": "Photographic PDF page 7; the school sign appears on page 3. The paired return raw-data-grouped/team-26/Ntoroko/Butungama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUTUNGAMA HEALTH CENTRE III AND BUTUNGAMA SEED SCHOOL (1).docx, body blocks 113, 119 and 178 identify the school and ongoing construction.", "page": 7}
 
-### Figure 5: Science laboratory tables and stools at a seed secondary school, Kalangala District (Buganda)
-Output file: `outputs/narrative-report/figures/photo_01_central_laboratory_furniture.jpg`.
-UgIFT field photograph P01; raw-data-grouped/team-31/Kalangala/Gyagenda-Memorial-Seed-Secondary-School/Gyagenda memorial seed secondary school pictures.docx; {"embedded_image": "word/media/image9.jpeg", "body_block": 35, "table": null, "adjacent_text": "5. Science laboratory tables and stools | 5. Science laboratory tables and stools"}
+### Figure 5: School buildings and courtyard at a seed secondary school, Buvuma District (Buganda)
+Output file: `outputs/narrative-report/figures/photo_33_buvuma_school_blocks.jpg`.
+UgIFT field photograph P33; raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.23 (3).jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph WhatsApp Image 2026-09-12 at 13.47.23 (3).jpeg under Bweema-Seed-Secondary-School/Buvuma. The same source photo collection includes a school sign identifying Bweema and Buvuma."}
 
-### Figure 6: Infant radiant warmer at a health centre, Makindye-Ssabagabo Municipal Council (Buganda)
-Output file: `outputs/narrative-report/figures/photo_02_central_infant_warmer.jpg`.
-UgIFT field photograph P02; raw-data-grouped/team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/KIBIRI HC III report.docx; {"embedded_image": "word/media/image22.jpeg", "body_block": 77, "table": null, "adjacent_text": ""}
+### Figure 6: Raised water storage tank at a seed secondary school, Buvuma District (Buganda)
+Output file: `outputs/narrative-report/figures/photo_34_buvuma_raised_water_tank.jpg`.
+UgIFT field photograph P34; raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.25.jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph WhatsApp Image 2026-09-12 at 13.47.25.jpeg under Bweema-Seed-Secondary-School/Buvuma."}
 
 ### Figure 7: Boxed pulse oximeters at a health centre, Makindye-Ssabagabo Municipal Council (Buganda)
 Output file: `outputs/narrative-report/figures/photo_21_kibiri_boxed_oximeters.jpg`.
 UgIFT field photograph P21; raw-data-grouped/team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/KIBIRI HC III report.docx; {"embedded_image": "word/media/image17.jpeg", "body_block": 77, "table": null, "adjacent_text": "Kibiri Health Centre III report image17.jpeg, body block 77. Blocks 1 and 5 identify Kibiri; the packaging explicitly identifies Handheld Pulse Oximeter."}
 
-### Figure 8: School buildings and courtyard at a seed secondary school, Buvuma District (Buganda)
-Output file: `outputs/narrative-report/figures/photo_33_buvuma_school_blocks.jpg`.
-UgIFT field photograph P33; raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.23 (3).jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph WhatsApp Image 2026-09-12 at 13.47.23 (3).jpeg under Bweema-Seed-Secondary-School/Buvuma. The same source photo collection includes a school sign identifying Bweema and Buvuma."}
+### Figure 8: Programme and school engraving on a chair at Budde Seed Secondary School, Butambala District (Buganda)
+Output file: `outputs/narrative-report/figures/photo_71_budde_seed_secondary_school_programme_and_school_engraving_on_a_chair.jpg`.
+UgIFT field photograph P71; raw-data-grouped/team-32/Butambala/Budde-Seed-Secondary-School/BUDDE SEED SCHOOL (BUTAMABALA DISTRICT-BUDDE SEED).docx; {"embedded_image": "word/media/image43.png", "body_block": 102, "table": 8, "adjacent_text": "Budde Seed Secondary School return: PICTORIAL EVIDENCE, body block 102, table 8, word/media/image43.png. The visible mark identifies UGIFT and the school."}
 
-### Figure 9: Desktop computers and classroom furniture at a seed secondary school, Busia District (Bukedi)
-Output file: `outputs/narrative-report/figures/photo_03_eastern_school_computers.jpg`.
-UgIFT field photograph P03; raw-data-grouped/team-13/Busia/Sikuda-Seed-Secondary-School/43_ict-room-desktop-computers_ref0257.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": null}
+### Figure 9: Laboratory benches and sinks at Bweema Seed Secondary School, Buvuma District (Buganda)
+Output file: `outputs/narrative-report/figures/photo_67_bweema_seed_secondary_school_laboratory_benches_and_sinks.jpg`.
+UgIFT field photograph P67; raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.22 (2).jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Buvuma / Bweema-Seed-Secondary-School; original filename: WhatsApp Image 2026-09-12 at 13.47.22 (2).jpeg."}
 
-### Figure 10: Delivery bed with a torn mattress cover at a health centre, Busia District (Bukedi)
-Output file: `outputs/narrative-report/figures/photo_04_eastern_torn_bed_cover.jpg`.
-UgIFT field photograph P04; raw-data-grouped/team-13/Busia/Majanji-HC-III/050_delivery-bed-with-torn-cover_ref20260827-0646.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": null}
+### Figure 10: Classroom desks at Bweema Seed Secondary School, Buvuma District (Buganda)
+Output file: `outputs/narrative-report/figures/photo_68_bweema_seed_secondary_school_classroom_desks.jpg`.
+UgIFT field photograph P68; raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Unknown 2026-09-12 at 13.58.16/WhatsApp Image 2026-09-12 at 13.47.17 (2).jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Buvuma / Bweema-Seed-Secondary-School; original filename: WhatsApp Image 2026-09-12 at 13.47.17 (2).jpeg."}
 
-### Figure 11: Cracked health centre block above collapsed ground, Bulambuli District (Bugisu)
-Output file: `outputs/narrative-report/figures/photo_14_bulambuli_structural_damage.jpg`.
-UgIFT field photograph P14; raw-data-grouped/team-14/Bulambuli/Bukibologoto-HC-II/08_block-over-collapsed-ground-wide_ref20260911-0005.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 08_block-over-collapsed-ground-wide_ref20260911-0005.jpg. Facility and local government are established by its Bukibologoto-HC-II/Bulambuli source folders."}
+### Figure 11: Sanitation block at Bweema Seed Secondary School, Buvuma District (Buganda)
+Output file: `outputs/narrative-report/figures/photo_69_bweema_seed_secondary_school_sanitation_block.jpg`.
+UgIFT field photograph P69; raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Unknown 2026-09-12 at 13.58.16/WhatsApp Image 2026-09-12 at 13.47.20 (1).jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Buvuma / Bweema-Seed-Secondary-School; original filename: WhatsApp Image 2026-09-12 at 13.47.20 (1).jpeg."}
 
-### Figure 12: Stained and peeling ceiling at a health centre, Sironko District (Bugisu)
-Output file: `outputs/narrative-report/figures/photo_15_sironko_damaged_ceiling.jpg`.
-UgIFT field photograph P15; raw-data-grouped/team-14/Sironko/Bundege-HC-III/15_water-damaged-ceiling_ref20260829-0569.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 15_water-damaged-ceiling_ref20260829-0569.jpg under Bundege-HC-III/Sironko."}
+### Figure 12: Science laboratory tables and stools at a seed secondary school, Kalangala District (Buganda)
+Output file: `outputs/narrative-report/figures/photo_01_central_laboratory_furniture.jpg`.
+UgIFT field photograph P01; raw-data-grouped/team-31/Kalangala/Gyagenda-Memorial-Seed-Secondary-School/Gyagenda memorial seed secondary school pictures.docx; {"embedded_image": "word/media/image9.jpeg", "body_block": 35, "table": null, "adjacent_text": "5. Science laboratory tables and stools | 5. Science laboratory tables and stools"}
 
-### Figure 13: Buildings at a seed secondary school, Nwoya District (Acholi)
-Output file: `outputs/narrative-report/figures/photo_05_northern_school_buildings.jpg`.
-UgIFT field photograph P05; raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx; {"embedded_image": "word/media/image14.jpeg", "body_block": 107, "table": null, "adjacent_text": ""}
+### Figure 13: Oxygen cylinders at Kibiri HC III, Makindye-Ssabagabo Municipality (Buganda)
+Output file: `outputs/narrative-report/figures/photo_70_kibiri_hc_iii_oxygen_cylinders.jpg`.
+UgIFT field photograph P70; raw-data-grouped/team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/KIBIRI HC III report.docx; {"embedded_image": "word/media/image27.jpeg", "body_block": 77, "table": null, "adjacent_text": "Kibiri HC III report: oxygen-cylinder photograph word/media/image27.jpeg in body block 77, within the facility pictorial record."}
 
-### Figure 14: Health centre building, Nwoya District (Acholi)
-Output file: `outputs/narrative-report/figures/photo_06_northern_health_building.jpg`.
-UgIFT field photograph P06; raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx; {"embedded_image": "word/media/image37.jpeg", "body_block": 308, "table": null, "adjacent_text": ""}
+### Figure 14: Infant radiant warmer at a health centre, Makindye-Ssabagabo Municipal Council (Buganda)
+Output file: `outputs/narrative-report/figures/photo_02_central_infant_warmer.jpg`.
+UgIFT field photograph P02; raw-data-grouped/team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/KIBIRI HC III report.docx; {"embedded_image": "word/media/image22.jpeg", "body_block": 77, "table": null, "adjacent_text": ""}
 
-### Figure 15: Stacked desks, chairs and stools at a seed secondary school, Napak District (Karamoja)
-Output file: `outputs/narrative-report/figures/photo_18_napak_stacked_furniture.jpg`.
-UgIFT field photograph P18; raw-data-grouped/team-10/Napak/Napak-Seed-Secondary-School/25_furniture-some-broken-none-engraved_ref20260827-0417.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 25_furniture-some-broken-none-engraved_ref20260827-0417.jpg under Napak-Seed-Secondary-School/Napak."}
+### Figure 15: ICT laboratory interior under construction at Kitawoi Seed Secondary School, Kween District (Sebei)
+Output file: `outputs/narrative-report/figures/photo_84_kitawoi_seed_secondary_school_ict_laboratory_interior_under_construction.jpg`.
+UgIFT field photograph P84; raw-data-grouped/team-15/Kween/Kitawoi-Seed-Secondary-School/09_ict-lab-under-construction_ref1386.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kween / Kitawoi-Seed-Secondary-School; original filename: 09_ict-lab-under-construction_ref1386.jpg."}
 
-### Figure 16: Building works and construction materials at Ndhew Seed Secondary School, Nebbi District (West Nile)
-Output file: `outputs/narrative-report/figures/photo_23_ndhew_construction.jpg`.
-UgIFT field photograph P23; raw-data-grouped/team-01/Nebbi/_district-documents/UGIFT Assets Verification Nebbi District Report.docx; {"embedded_image": "word/media/image17.jpeg", "body_block": 89, "table": null, "adjacent_text": "Nebbi district report image17.jpeg at body block 89, within the Ndhew school section beginning at block 40 and field photographs beginning at block 63. Block 42 records ongoing construction and ICT/science equipment at district headquarters; block 59 links construction delay with equipment installation delay."}
-
-### Figure 17: Classroom desks at a seed secondary school, Ntoroko District (Tooro)
-Output file: `outputs/narrative-report/figures/photo_08_western_classroom_desks.jpg`.
-UgIFT field photograph P08; raw-data-grouped/team-26/Ntoroko/Nombe-Seed-Secondary-School/NTOROKO ASSET NOMBE SEED SECONDARY SCHOOL VERIFICATION AND RECORDING TOOL KIT 222.docx; {"embedded_image": "word/media/image4.jpeg", "body_block": 110, "table": null, "adjacent_text": "Equipment/ Item | Department | Asset Number | Item | Description | Life in Months | Tag Number  | ( engrave |  no.) | Date Of  | Pur | Date Placed  | In |  Service | Recoverable cost | Cost | Acc Dep Cost | Net Book Value | Ytd |   | Deprn | Equipment status | Remarks | Non residential | Education | Painted cream and white | Good condition | They are in use. They are seven in number. | Residential | Education | Painted cream and white | Good condition | They are all in use. | They are 3 in number. | Kitchen | Education | Not built. | Toilets | Education | Not constructed | Pit latrine | Education | They are painted cream and white. | Good condition | They are all in use. | They are all in use. | 3 are for residential and 3 are not for residential. | Water tanks | Education | They are black in  | colour | One is faulty and  | two are working. | Two in use.  | They re |  three. Not constructed. | Fence | Not constructed."}
-
-### Figure 18: Delivery bed and clinical furniture at a health centre, Kabarole District (Tooro)
-Output file: `outputs/narrative-report/figures/photo_09_western_delivery_bed.jpg`.
-UgIFT field photograph P09; raw-data-grouped/team-26/Kabarole/Iruhura-HC-III/KABAROLE DISTRICT   IRUHURA HC III ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1).docx; {"embedded_image": "word/media/image10.jpeg", "body_block": 96, "table": null, "adjacent_text": "OPD                                           |                               |      | Pit latrine |                               |                       Power House |                       | Weighing scale with a height meter"}
-
-### Figure 19: Clinical equipment packed among cartons at a health centre, Hoima City (Bunyoro)
-Output file: `outputs/narrative-report/figures/photo_19_hoima_stored_clinical_equipment.jpg`.
-UgIFT field photograph P19; raw-data-grouped/_multi-team/programme-documents/data-management-chat/unpacked/TEAM 25 HEALTH CENTHERA/TEAM 25 HEALTH CENTHERA/KIHUUKYA HEALTH CENTER III/kihuukya photos/stored equipement nort in use.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph in the KIHUUKYA HEALTH CENTER III/kihuukya photos folder. It is byte-identical (SHA256 a76c46aa7f6ab2856ac601a320125dfdf7cb174a6ec0c29eec25dab06232de97) to the team-25/_team-documents copy. The KIHUUKYA HEALTHCENTER III. Edited.docx return, block 29, identifies Hoima City and Bunyoro; block 38 names the facility."}
-
-### Figure 20: Laboratory stools and other school furniture in storage, Ntoroko District (Tooro)
-Output file: `outputs/narrative-report/figures/photo_20_butungama_stored_furniture.jpg`.
-UgIFT field photograph P20; raw-data-grouped/team-26/_team-documents/Butungama Seed School.pdf; {"embedded_image": "PDF page 12, image 1", "body_block": null, "table": null, "adjacent_text": "Photographic PDF page 12. The paired return raw-data-grouped/team-26/Ntoroko/Butungama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUTUNGAMA HEALTH CENTRE III AND BUTUNGAMA SEED SCHOOL (1).docx, body block 162, records laboratory stools, desks, office chairs and tables in good condition but not in use, still stored. Blocks 119 and 178 describe ongoing construction.", "page": 12}
-
-### Figure 21: Unfinished laboratory building at a health centre, Sironko District (Bugisu)
+### Figure 16: Unfinished laboratory building at a health centre, Sironko District (Bugisu)
 Output file: `outputs/narrative-report/figures/photo_26_sironko_unfinished_health_lab.jpg`.
 UgIFT field photograph P26; raw-data-grouped/team-14/Sironko/Simu-Pondo-HC-III/06_unfinished-laboratory-building_ref20260829-0541.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 06_unfinished-laboratory-building_ref20260829-0541.jpg under Simu-Pondo-HC-III/Sironko."}
 
-### Figure 22: Biology laboratory under construction at a seed secondary school, Buliisa District (Bunyoro)
-Output file: `outputs/narrative-report/figures/photo_31_buliisa_laboratory_works.jpg`.
-UgIFT field photograph P31; raw-data-grouped/team-25/Buliisa/Kihungya-Seed-Secondary-School/boilogy lab under construction.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph boilogy lab under construction.jpg under Kihungya-Seed-Secondary-School/Buliisa. kihungya seed school.docx body block 107 identifies the science block as not in use and under construction; block 63 states that most structures were not ready and there was no electricity for ICT sessions or water for sanitation."}
+### Figure 17: Empty computer laboratory at a seed secondary school, Kween District (Sebei)
+Output file: `outputs/narrative-report/figures/photo_35_kween_empty_computer_laboratory.jpg`.
+UgIFT field photograph P35; raw-data-grouped/team-15/Kween/Kaptum-Seed-Secondary-School/09_computer-lab-no-power-supply_ref0537.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 09_computer-lab-no-power-supply_ref0537.jpg under Kaptum-Seed-Secondary-School/Kween. The source filename identifies the computer laboratory and no power supply."}
 
-### Figure 23: Water tank on a cracked base at a seed secondary school, Kibuku District (Bukedi)
+### Figure 18: Computer sets stacked in a store at Bumufuni Seed Secondary School, Bulambuli District (Bugisu)
+Output file: `outputs/narrative-report/figures/photo_76_bumufuni_seed_secondary_school_computer_sets_stacked_in_a_store.jpg`.
+UgIFT field photograph P76; raw-data-grouped/team-14/Bulambuli/Bumufuni-Seed-Secondary-School/07_computer-sets-stacked-in-store_ref20260911-0011.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Bulambuli / Bumufuni-Seed-Secondary-School; original filename: 07_computer-sets-stacked-in-store_ref20260911-0011.jpg."}
+
+### Figure 19: Examination lamp in protective wrapping at Buwumba HC III, Busia District (Bukedi)
+Output file: `outputs/narrative-report/figures/photo_74_buwumba_hc_iii_examination_lamp_in_protective_wrapping.jpg`.
+UgIFT field photograph P74; raw-data-grouped/team-13/Busia/Buwumba-HC-III/006_examination-lamp-still-wrapped_ref20260828-0285.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Busia / Buwumba-HC-III; original filename: 006_examination-lamp-still-wrapped_ref20260828-0285.jpg."}
+
+### Figure 20: Pedal suction unit in packaging at Majanji HC III, Busia District (Bukedi)
+Output file: `outputs/narrative-report/figures/photo_75_majanji_hc_iii_pedal_suction_unit_in_packaging.jpg`.
+UgIFT field photograph P75; raw-data-grouped/team-13/Busia/Majanji-HC-III/042_pedal-suction-unit-in-its-packing_ref20260827-0637.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Busia / Majanji-HC-III; original filename: 042_pedal-suction-unit-in-its-packing_ref20260827-0637.jpg."}
+
+### Figure 21: Cracked health centre block above collapsed ground, Bulambuli District (Bugisu)
+Output file: `outputs/narrative-report/figures/photo_14_bulambuli_structural_damage.jpg`.
+UgIFT field photograph P14; raw-data-grouped/team-14/Bulambuli/Bukibologoto-HC-II/08_block-over-collapsed-ground-wide_ref20260911-0005.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 08_block-over-collapsed-ground-wide_ref20260911-0005.jpg. Facility and local government are established by its Bukibologoto-HC-II/Bulambuli source folders."}
+
+### Figure 22: Stained and peeling ceiling at a health centre, Sironko District (Bugisu)
+Output file: `outputs/narrative-report/figures/photo_15_sironko_damaged_ceiling.jpg`.
+UgIFT field photograph P15; raw-data-grouped/team-14/Sironko/Bundege-HC-III/15_water-damaged-ceiling_ref20260829-0569.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 15_water-damaged-ceiling_ref20260829-0569.jpg under Bundege-HC-III/Sironko."}
+
+### Figure 23: Cracked desk surface bearing a school marking, Tororo District (Bukedi)
+Output file: `outputs/narrative-report/figures/photo_28_tororo_cracked_desktop.jpg`.
+UgIFT field photograph P28; raw-data-grouped/team-13/Tororo/Iyolwa/107_desk-marked-iyolwa-seed-ss-cracked-corner_ref20260830-0799.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 107_desk-marked-iyolwa-seed-ss-cracked-corner_ref20260830-0799.jpg under Iyolwa/Tororo. The institutional school name appears on the wood; no personal name is present."}
+
+### Figure 24: Water tank on a cracked base at a seed secondary school, Kibuku District (Bukedi)
 Output file: `outputs/narrative-report/figures/photo_16_kibuku_cracked_tank_base.jpg`.
 UgIFT field photograph P16; raw-data-grouped/team-12/Kibuku/Kasasira-Seed-Secondary-School/39_water-tank-on-cracked-base_ref0332.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 39_water-tank-on-cracked-base_ref0332.jpg under Kasasira-Seed-Secondary-School/Kibuku."}
-
-### Figure 24: Damaged drip stand at a health centre, Moroto District (Karamoja)
-Output file: `outputs/narrative-report/figures/photo_25_moroto_broken_drip_stand.jpg`.
-UgIFT field photograph P25; raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/124_broken-drip-stand_ref20260827-0349.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 124_broken-drip-stand_ref20260827-0349.jpg under Kalemungole-HC-III/Moroto. The stand lacks its supporting base. Crop retains the stand and a gloved hand; no face or identifier is present."}
 
 ### Figure 25: Broken desk frame at a seed secondary school, Namisindwa District (Bugisu)
 Output file: `outputs/narrative-report/figures/photo_27_namisindwa_broken_desk.jpg`.
 UgIFT field photograph P27; raw-data-grouped/team-13/Namisindwa/Namboko/032_broken-desk_ref20260902-0126.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 032_broken-desk_ref20260902-0126.jpg under Namboko/Namisindwa."}
 
-### Figure 26: Cracked desk surface bearing a school marking, Tororo District (Bukedi)
-Output file: `outputs/narrative-report/figures/photo_28_tororo_cracked_desktop.jpg`.
-UgIFT field photograph P28; raw-data-grouped/team-13/Tororo/Iyolwa/107_desk-marked-iyolwa-seed-ss-cracked-corner_ref20260830-0799.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 107_desk-marked-iyolwa-seed-ss-cracked-corner_ref20260830-0799.jpg under Iyolwa/Tororo. The institutional school name appears on the wood; no personal name is present."}
-
-### Figure 27: Damaged chair back joint at a seed secondary school, Budaka District (Bukedi)
+### Figure 26: Damaged chair back joint at a seed secondary school, Budaka District (Bukedi)
 Output file: `outputs/narrative-report/figures/photo_29_budaka_damaged_chair.jpg`.
 UgIFT field photograph P29; raw-data-grouped/team-12/Budaka/Nansanga-Seed-Secondary-School/086_chair-back-rail-broken-at-the-joint_ref0700.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 086_chair-back-rail-broken-at-the-joint_ref0700.jpg under Nansanga-Seed-Secondary-School/Budaka."}
 
-### Figure 28: Flood-affected older health facility at Butiaba, Buliisa District (Bunyoro)
-Output file: `outputs/narrative-report/figures/photo_32_buliisa_flood_affected_old_facility.jpg`.
-UgIFT field photograph P32; raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/butaiba submurged facility.jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph butaiba submurged facility.jpeg under Butiaba-HC-III/Buliisa. The paired butaiba report.docx body block 11 (paragraph 10) explicitly states that the old facility built by UgIFT and its equipment were affected by floods."}
-
-### Figure 29: Most assets had no engraved identification
-Output file: `outputs/narrative-report/figures/chart_04_engraving.png`.
-Source: REF Asset Register, TAG_NUMBER; case-insensitive UGIFT or UGFT matching.
-
-### Figure 30: UgIFT identification on a desk at a seed school, Tororo District (Bukedi)
-Output file: `outputs/narrative-report/figures/photo_10_eastern_ugift_marking.jpg`.
-UgIFT field photograph P10; raw-data-grouped/team-13/Tororo/Malaba-Seed-School/049_desk-engraving-gou-moh-ugift_ref20260829-0338.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": null}
-
-### Figure 31: UgIFT engraving on a health centre bench, Bududa District (Bugisu)
+### Figure 27: UgIFT engraving on a health centre bench, Bududa District (Bugisu)
 Output file: `outputs/narrative-report/figures/photo_22_bududa_bench_engraving.jpg`.
 UgIFT field photograph P22; raw-data-grouped/team-14/Bududa/Bududa-HC-III/09_bench-engraved-gou-moh-ugift-project_ref20260827-0187.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 09_bench-engraved-gou-moh-ugift-project_ref20260827-0187.jpg under Bududa-HC-III/Bududa. Visible institutional marking reads GOU/MOH-UGIFT PROJECT and F/Y 2023/2024."}
 
-### Figure 32: Boxed computers and related equipment in a seed school store, Nwoya District (Acholi)
-Output file: `outputs/narrative-report/figures/photo_07_northern_stored_computers.jpg`.
-UgIFT field photograph P07; raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx; {"embedded_image": "word/media/image9.jpeg", "body_block": 83, "table": null, "adjacent_text": "Laboratory stool supply: Procure and deliver an additional cohort of laboratory stools (recommended minimum 66 stools) to meet the standard lab allocation of 74 stools. | Field photos"}
+### Figure 28: Engraving on a wheelchair armrest at Bumugibole HC III, Bulambuli District (Bugisu)
+Output file: `outputs/narrative-report/figures/photo_77_bumugibole_hc_iii_engraving_on_a_wheelchair_armrest.jpg`.
+UgIFT field photograph P77; raw-data-grouped/team-14/Bulambuli/Bumugibole-HC-III/05_wheelchair-armrest-engraving_ref20260831-0202.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Bulambuli / Bumugibole-HC-III; original filename: 05_wheelchair-armrest-engraving_ref20260831-0202.jpg."}
 
-### Figure 33: Hospital beds and screens stacked in storage at a health centre, Kagadi District (Bunyoro)
+### Figure 29: Institutional engraving on equipment at Moyok HC III, Kween District (Sebei)
+Output file: `outputs/narrative-report/figures/photo_85_moyok_hc_iii_institutional_engraving_on_equipment.jpg`.
+UgIFT field photograph P85; raw-data-grouped/team-15/Kween/Moyok-HC-III/14_engraving-kwn-med-eq-moyok-hciii_ref0038.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kween / Moyok-HC-III; original filename: 14_engraving-kwn-med-eq-moyok-hciii_ref0038.jpg."}
+
+### Figure 30: Autoclave at Atar HC III, Kween District (Sebei)
+Output file: `outputs/narrative-report/figures/photo_81_atar_hc_iii_autoclave.jpg`.
+UgIFT field photograph P81; raw-data-grouped/team-15/Kween/Atar-HC-III/07_autoclave-01_ref0458.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kween / Atar-HC-III; original filename: 07_autoclave-01_ref0458.jpg."}
+
+### Figure 31: Solar batteries and control equipment at Atar HC III, Kween District (Sebei)
+Output file: `outputs/narrative-report/figures/photo_82_atar_hc_iii_solar_batteries_and_control_equipment.jpg`.
+UgIFT field photograph P82; raw-data-grouped/team-15/Kween/Atar-HC-III/21_solar-batteries_ref0444.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kween / Atar-HC-III; original filename: 21_solar-batteries_ref0444.jpg."}
+
+### Figure 32: Kangaroo care chair at Atar HC III, Kween District (Sebei)
+Output file: `outputs/narrative-report/figures/photo_83_atar_hc_iii_kangaroo_care_chair.jpg`.
+UgIFT field photograph P83; raw-data-grouped/team-15/Kween/Atar-HC-III/36_kangaroo-mother-care-chair-1-not-engraved_ref20260830-0604.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kween / Atar-HC-III; original filename: 36_kangaroo-mother-care-chair-1-not-engraved_ref20260830-0604.jpg."}
+
+### Figure 33: Solar batteries at Bunangaka HC III, Bulambuli District (Bugisu)
+Output file: `outputs/narrative-report/figures/photo_78_bunangaka_hc_iii_solar_batteries.jpg`.
+UgIFT field photograph P78; raw-data-grouped/team-14/Bulambuli/Bunangaka-HC-III/01_solar-batteries_ref20260830-0421.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Bulambuli / Bunangaka-HC-III; original filename: 01_solar-batteries_ref20260830-0421.jpg."}
+
+### Figure 34: Infant weighing scale at Buwembe HC III, Busia District (Bukedi)
+Output file: `outputs/narrative-report/figures/photo_72_buwembe_hc_iii_infant_weighing_scale.jpg`.
+UgIFT field photograph P72; raw-data-grouped/team-13/Busia/Buwembe-HC-III/127_baby-weighing-scale-yrbb-20_ref20260828-0082.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Busia / Buwembe-HC-III; original filename: 127_baby-weighing-scale-yrbb-20_ref20260828-0082.jpg."}
+
+### Figure 35: Autoclave above a gas cylinder at Buwembe HC III, Busia District (Bukedi)
+Output file: `outputs/narrative-report/figures/photo_73_buwembe_hc_iii_autoclave_above_a_gas_cylinder.jpg`.
+UgIFT field photograph P73; raw-data-grouped/team-13/Busia/Buwembe-HC-III/136_autoclave-on-a-gas-cylinder_ref20260828-0091.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Busia / Buwembe-HC-III; original filename: 136_autoclave-on-a-gas-cylinder_ref20260828-0091.jpg."}
+
+### Figure 36: Computer equipment in the school ICT room at Kabeywa Seed Secondary School, Kapchorwa District (Sebei)
+Output file: `outputs/narrative-report/figures/photo_79_kabeywa_seed_secondary_school_computer_equipment_in_the_school_ict_room.jpg`.
+UgIFT field photograph P79; raw-data-grouped/team-15/Kapchorwa/Kabeywa-Seed-Secondary-School/07_28computers_ref20260830-0271.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kapchorwa / Kabeywa-Seed-Secondary-School; original filename: 07_28computers_ref20260830-0271.jpg."}
+
+### Figure 37: Library shelving and tables at Kabeywa Seed Secondary School, Kapchorwa District (Sebei)
+Output file: `outputs/narrative-report/figures/photo_80_kabeywa_seed_secondary_school_library_shelving_and_tables.jpg`.
+UgIFT field photograph P80; raw-data-grouped/team-15/Kapchorwa/Kabeywa-Seed-Secondary-School/24_library_ref20260830-0842.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kapchorwa / Kabeywa-Seed-Secondary-School; original filename: 24_library_ref20260830-0842.jpg."}
+
+### Figure 38: Delivery bed with a torn mattress cover at a health centre, Busia District (Bukedi)
+Output file: `outputs/narrative-report/figures/photo_04_eastern_torn_bed_cover.jpg`.
+UgIFT field photograph P04; raw-data-grouped/team-13/Busia/Majanji-HC-III/050_delivery-bed-with-torn-cover_ref20260827-0646.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": null}
+
+### Figure 39: Desktop computers and classroom furniture at a seed secondary school, Busia District (Bukedi)
+Output file: `outputs/narrative-report/figures/photo_03_eastern_school_computers.jpg`.
+UgIFT field photograph P03; raw-data-grouped/team-13/Busia/Sikuda-Seed-Secondary-School/43_ict-room-desktop-computers_ref0257.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": null}
+
+### Figure 40: Building works and construction materials at Ndhew Seed Secondary School, Nebbi District (West Nile)
+Output file: `outputs/narrative-report/figures/photo_23_ndhew_construction.jpg`.
+UgIFT field photograph P23; raw-data-grouped/team-01/Nebbi/_district-documents/UGIFT Assets Verification Nebbi District Report.docx; {"embedded_image": "word/media/image17.jpeg", "body_block": 89, "table": null, "adjacent_text": "Nebbi district report image17.jpeg at body block 89, within the Ndhew school section beginning at block 40 and field photographs beginning at block 63. Block 42 records ongoing construction and ICT/science equipment at district headquarters; block 59 links construction delay with equipment installation delay."}
+
+### Figure 41: Unfinished classroom block at Sidok Seed Secondary School, Kaabong District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_50_sidok_seed_secondary_school_unfinished_classroom_block.jpg`.
+UgIFT field photograph P50; raw-data-grouped/team-11/Kaabong/Sidok-Seed-Secondary-School/16_classroom-block-under-construction_ref0316.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kaabong / Sidok-Seed-Secondary-School; original filename: 16_classroom-block-under-construction_ref0316.jpg."}
+
+### Figure 42: Latrine block under construction at Sidok Seed Secondary School, Kaabong District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_51_sidok_seed_secondary_school_latrine_block_under_construction.jpg`.
+UgIFT field photograph P51; raw-data-grouped/team-11/Kaabong/Sidok-Seed-Secondary-School/33_latrine-block-under-construction_ref0310.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kaabong / Sidok-Seed-Secondary-School; original filename: 33_latrine-block-under-construction_ref0310.jpg."}
+
+### Figure 43: Boxed desktop computers at Alerek Seed Secondary School, Abim District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_47_alerek_seed_secondary_school_boxed_desktop_computers.jpg`.
+UgIFT field photograph P47; raw-data-grouped/team-11/Abim/Alerek-Seed-Secondary-School/07_boxed-desktop-computers-in-the-store_ref0769.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Abim / Alerek-Seed-Secondary-School; original filename: 07_boxed-desktop-computers-in-the-store_ref0769.jpg."}
+
+### Figure 44: Stacked desks, chairs and stools at a seed secondary school, Napak District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_18_napak_stacked_furniture.jpg`.
+UgIFT field photograph P18; raw-data-grouped/team-10/Napak/Napak-Seed-Secondary-School/25_furniture-some-broken-none-engraved_ref20260827-0417.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 25_furniture-some-broken-none-engraved_ref20260827-0417.jpg under Napak-Seed-Secondary-School/Napak."}
+
+### Figure 45: Boxed printer and equipment at Sidok Seed Secondary School, Kaabong District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_49_sidok_seed_secondary_school_boxed_printer_and_equipment.jpg`.
+UgIFT field photograph P49; raw-data-grouped/team-11/Kaabong/Sidok-Seed-Secondary-School/05_boxed-printer-and-equipment_ref0317.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kaabong / Sidok-Seed-Secondary-School; original filename: 05_boxed-printer-and-equipment_ref0317.jpg."}
+
+### Figure 46: Damaged drip stand at a health centre, Moroto District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_25_moroto_broken_drip_stand.jpg`.
+UgIFT field photograph P25; raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/124_broken-drip-stand_ref20260827-0349.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 124_broken-drip-stand_ref20260827-0349.jpg under Kalemungole-HC-III/Moroto. The stand lacks its supporting base. Crop retains the stand and a gloved hand; no face or identifier is present."}
+
+### Figure 47: Programme engraving on a weighing scale at Kalemungole HC III, Moroto District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_38_kalemungole_hc_iii_programme_engraving_on_a_weighing_scale.jpg`.
+UgIFT field photograph P38; raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/10_engraving-weighing-scale_ref20260826-0429.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 10_engraving-weighing-scale_ref20260826-0429.jpg."}
+
+### Figure 48: Programme engraving on a delivery bed at Kalemungole HC III, Moroto District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_39_kalemungole_hc_iii_programme_engraving_on_a_delivery_bed.jpg`.
+UgIFT field photograph P39; raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/37_engraving-delivery-bed_ref20260826-0456.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 37_engraving-delivery-bed_ref20260826-0456.jpg."}
+
+### Figure 49: Programme engraving on a table at Kamoru HC III, Kotido District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_53_kamoru_hc_iii_programme_engraving_on_a_table.jpg`.
+UgIFT field photograph P53; raw-data-grouped/team-11/Kotido/Kamoru-HC-III/18_engraved-table-top_ref1107.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kotido / Kamoru-HC-III; original filename: 18_engraved-table-top_ref1107.jpg."}
+
+### Figure 50: Classroom furniture with school markings at Rupa Seed School, Moroto District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_44_rupa_seed_school_classroom_furniture_with_school_markings.jpg`.
+UgIFT field photograph P44; raw-data-grouped/team-10/Moroto/Rupa-Seed-School/18_classroom-furniture-engraved-rupa-seed_ref20260909-photo-p08.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Moroto / Rupa-Seed-School; original filename: 18_classroom-furniture-engraved-rupa-seed_ref20260909-photo-p08.jpg."}
+
+### Figure 51: Laboratory reagent containers at Alerek Seed Secondary School, Abim District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_48_alerek_seed_secondary_school_laboratory_reagent_containers.jpg`.
+UgIFT field photograph P48; raw-data-grouped/team-11/Abim/Alerek-Seed-Secondary-School/44_laboratory-chemicals-on-the-bench_ref0859.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Abim / Alerek-Seed-Secondary-School; original filename: 44_laboratory-chemicals-on-the-bench_ref0859.jpg."}
+
+### Figure 52: Health centre building, Nwoya District (Acholi)
+Output file: `outputs/narrative-report/figures/photo_06_northern_health_building.jpg`.
+UgIFT field photograph P06; raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx; {"embedded_image": "word/media/image37.jpeg", "body_block": 308, "table": null, "adjacent_text": ""}
+
+### Figure 53: Section of the science laboratory exterior at Iriiri Seed Secondary School, Napak District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_45_iriiri_seed_secondary_school_section_of_the_science_laboratory_exterior.jpg`.
+UgIFT field photograph P45; raw-data-grouped/team-10/Napak/Iriiri-Seed-Secondary-School/33_science-laboratory_ref20260827-0463.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Napak / Iriiri-Seed-Secondary-School; original filename: 33_science-laboratory_ref20260827-0463.jpg."}
+
+### Figure 54: Solar panels at Kalemungole HC III, Moroto District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_36_kalemungole_hc_iii_solar_panels.jpg`.
+UgIFT field photograph P36; raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/102_water-system-solar-panels-and-tanks_ref20260827-0369.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 102_water-system-solar-panels-and-tanks_ref20260827-0369.jpg."}
+
+### Figure 55: Patient toilet block at Kalemungole HC III, Moroto District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_37_kalemungole_hc_iii_patient_toilet_block.jpg`.
+UgIFT field photograph P37; raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/108_patient-toilets_ref20260827-0367.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 108_patient-toilets_ref20260827-0367.jpg."}
+
+### Figure 56: Oxygen concentrator at Kalemungole HC III, Moroto District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_40_kalemungole_hc_iii_oxygen_concentrator.jpg`.
+UgIFT field photograph P40; raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/40_oxygen-concentrator_ref20260826-0459.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 40_oxygen-concentrator_ref20260826-0459.jpg."}
+
+### Figure 57: Suction apparatus at Kalemungole HC III, Moroto District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_41_kalemungole_hc_iii_suction_apparatus.jpg`.
+UgIFT field photograph P41; raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/50_suction-apparatus_ref20260826-0469.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 50_suction-apparatus_ref20260826-0469.jpg."}
+
+### Figure 58: Wheelchair with programme marking at Kalemungole HC III, Moroto District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_42_kalemungole_hc_iii_wheelchair_with_programme_marking.jpg`.
+UgIFT field photograph P42; raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/69_wheelchair-marked-gou-moh-ugift_ref20260826-0488.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 69_wheelchair-marked-gou-moh-ugift_ref20260826-0488.jpg."}
+
+### Figure 59: Oxygen concentrator at Kamoru HC III, Kotido District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_52_kamoru_hc_iii_oxygen_concentrator.jpg`.
+UgIFT field photograph P52; raw-data-grouped/team-11/Kotido/Kamoru-HC-III/15_oxygen-concentrator_ref1167.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kotido / Kamoru-HC-III; original filename: 15_oxygen-concentrator_ref1167.jpg."}
+
+### Figure 60: Borehole apron and pipework at Katikekire Seed School, Moroto District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_43_katikekire_seed_school_borehole_apron_and_pipework.jpg`.
+UgIFT field photograph P43; raw-data-grouped/team-10/Moroto/Katikekire-Seed-School/02_borehole-apron-and-pipework_ref20260826-0421.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Moroto / Katikekire-Seed-School; original filename: 02_borehole-apron-and-pipework_ref20260826-0421.jpg."}
+
+### Figure 61: Water storage tanks at Lopei Seed Secondary School, Napak District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_46_lopei_seed_secondary_school_water_storage_tanks.jpg`.
+UgIFT field photograph P46; raw-data-grouped/team-10/Napak/Lopei-Seed-Secondary-School/20_water-tanks_ref20260828-0562.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Napak / Lopei-Seed-Secondary-School; original filename: 20_water-tanks_ref20260828-0562.jpg."}
+
+### Figure 62: Buildings at a seed secondary school, Nwoya District (Acholi)
+Output file: `outputs/narrative-report/figures/photo_05_northern_school_buildings.jpg`.
+UgIFT field photograph P05; raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx; {"embedded_image": "word/media/image14.jpeg", "body_block": 107, "table": null, "adjacent_text": ""}
+
+### Figure 63: Water storage tanks at Rengen Seed School, Kotido District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_54_rengen_seed_school_water_storage_tanks.jpg`.
+UgIFT field photograph P54; raw-data-grouped/team-11/Kotido/Rengen-Seed-School/10_water-tanks-x2_ref0642.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kotido / Rengen-Seed-School; original filename: 10_water-tanks-x2_ref0642.jpg."}
+
+### Figure 64: Biology laboratory under construction at a seed secondary school, Buliisa District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_31_buliisa_laboratory_works.jpg`.
+UgIFT field photograph P31; raw-data-grouped/team-25/Buliisa/Kihungya-Seed-Secondary-School/boilogy lab under construction.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph boilogy lab under construction.jpg under Kihungya-Seed-Secondary-School/Buliisa. kihungya seed school.docx body block 107 identifies the science block as not in use and under construction; block 63 states that most structures were not ready and there was no electricity for ICT sessions or water for sanitation."}
+
+### Figure 65: Unfinished laboratory interior at Kihungya Seed Secondary School, Buliisa District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_57_kihungya_seed_secondary_school_unfinished_laboratory_interior.jpg`.
+UgIFT field photograph P57; raw-data-grouped/team-25/Buliisa/Kihungya-Seed-Secondary-School/IMG-20260905-WA0028.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Buliisa / Kihungya-Seed-Secondary-School; original filename: IMG-20260905-WA0028.jpg."}
+
+### Figure 66: Library interior under construction at Kihungya Seed Secondary School, Buliisa District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_58_kihungya_seed_secondary_school_library_interior_under_construction.jpg`.
+UgIFT field photograph P58; raw-data-grouped/team-25/Buliisa/Kihungya-Seed-Secondary-School/library.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Buliisa / Kihungya-Seed-Secondary-School; original filename: library.jpg."}
+
+### Figure 67: Laboratory stools and other school furniture in storage, Ntoroko District (Tooro)
+Output file: `outputs/narrative-report/figures/photo_20_butungama_stored_furniture.jpg`.
+UgIFT field photograph P20; raw-data-grouped/team-26/_team-documents/Butungama Seed School.pdf; {"embedded_image": "PDF page 12, image 1", "body_block": null, "table": null, "adjacent_text": "Photographic PDF page 12. The paired return raw-data-grouped/team-26/Ntoroko/Butungama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUTUNGAMA HEALTH CENTRE III AND BUTUNGAMA SEED SCHOOL (1).docx, body block 162, records laboratory stools, desks, office chairs and tables in good condition but not in use, still stored. Blocks 119 and 178 describe ongoing construction.", "page": 12}
+
+### Figure 68: Clinical equipment packed among cartons at a health centre, Hoima City (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_19_hoima_stored_clinical_equipment.jpg`.
+UgIFT field photograph P19; raw-data-grouped/_multi-team/programme-documents/data-management-chat/unpacked/TEAM 25 HEALTH CENTHERA/TEAM 25 HEALTH CENTHERA/KIHUUKYA HEALTH CENTER III/kihuukya photos/stored equipement nort in use.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph in the KIHUUKYA HEALTH CENTER III/kihuukya photos folder. It is byte-identical (SHA256 a76c46aa7f6ab2856ac601a320125dfdf7cb174a6ec0c29eec25dab06232de97) to the team-25/_team-documents copy. The KIHUUKYA HEALTHCENTER III. Edited.docx return, block 29, identifies Hoima City and Bunyoro; block 38 names the facility."}
+
+### Figure 69: Stacked classroom furniture at King Solomon Seed Secondary School, Kagadi District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_59_king_solomon_seed_secondary_school_stacked_classroom_furniture.jpg`.
+UgIFT field photograph P59; raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_115519_265.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_115519_265.jpg."}
+
+### Figure 70: Boxed projector and other equipment at King Solomon Seed Secondary School, Kagadi District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_62_king_solomon_seed_secondary_school_boxed_projector_and_other_equipment.jpg`.
+UgIFT field photograph P62; raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_120857_349.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_120857_349.jpg."}
+
+### Figure 71: Hospital beds and screens stacked in storage at a health centre, Kagadi District (Bunyoro)
 Output file: `outputs/narrative-report/figures/photo_30_kagadi_beds_in_storage.jpg`.
 UgIFT field photograph P30; raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/BEDS IN STORAGE .jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph BEDS IN STORAGE .jpg under Kyabasara-HC-III/Kagadi. The source filename and visible stacking identify storage."}
 
-### Figure 34: Raised water storage tank at a seed secondary school, Buvuma District (Buganda)
-Output file: `outputs/narrative-report/figures/photo_34_buvuma_raised_water_tank.jpg`.
-UgIFT field photograph P34; raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.25.jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph WhatsApp Image 2026-09-12 at 13.47.25.jpeg under Bweema-Seed-Secondary-School/Buvuma."}
+### Figure 72: Flood-affected older health facility at Butiaba, Buliisa District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_32_buliisa_flood_affected_old_facility.jpg`.
+UgIFT field photograph P32; raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/butaiba submurged facility.jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph butaiba submurged facility.jpeg under Butiaba-HC-III/Buliisa. The paired butaiba report.docx body block 11 (paragraph 10) explicitly states that the old facility built by UgIFT and its equipment were affected by floods."}
 
-### Figure 35: Empty computer laboratory at a seed secondary school, Kween District (Sebei)
-Output file: `outputs/narrative-report/figures/photo_35_kween_empty_computer_laboratory.jpg`.
-UgIFT field photograph P35; raw-data-grouped/team-15/Kween/Kaptum-Seed-Secondary-School/09_computer-lab-no-power-supply_ref0537.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 09_computer-lab-no-power-supply_ref0537.jpg under Kaptum-Seed-Secondary-School/Kween. The source filename identifies the computer laboratory and no power supply."}
+### Figure 73: School engraving on wooden furniture at King Solomon Seed Secondary School, Kagadi District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_61_king_solomon_seed_secondary_school_school_engraving_on_wooden_furniture.jpg`.
+UgIFT field photograph P61; raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_115836_836.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_115836_836.jpg."}
 
-### Figure 36: School furniture forms the largest asset category
+### Figure 74: Programme engraving on a table at Kyabasara HC III, Kagadi District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_64_kyabasara_hc_iii_programme_engraving_on_a_table.jpg`.
+UgIFT field photograph P64; raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/IMG-20260908-WA0107.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kagadi / Kyabasara-HC-III; original filename: IMG-20260908-WA0107.jpg."}
+
+### Figure 75: Medical-waste bins and ward beds at Butiaba HC III, Buliisa District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_55_butiaba_hc_iii_medical_waste_bins_and_ward_beds.jpg`.
+UgIFT field photograph P55; raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/dust bins.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Buliisa / Butiaba-HC-III; original filename: dust bins.jpg."}
+
+### Figure 76: Laboratory centrifuge at Butiaba HC III, Buliisa District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_56_butiaba_hc_iii_laboratory_centrifuge.jpg`.
+UgIFT field photograph P56; raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/IMG-20260907-WA0097.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Buliisa / Butiaba-HC-III; original filename: IMG-20260907-WA0097.jpg."}
+
+### Figure 77: Delivery bed and clinical furniture at a health centre, Kabarole District (Tooro)
+Output file: `outputs/narrative-report/figures/photo_09_western_delivery_bed.jpg`.
+UgIFT field photograph P09; raw-data-grouped/team-26/Kabarole/Iruhura-HC-III/KABAROLE DISTRICT   IRUHURA HC III ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1).docx; {"embedded_image": "word/media/image10.jpeg", "body_block": 96, "table": null, "adjacent_text": "OPD                                           |                               |      | Pit latrine |                               |                       Power House |                       | Weighing scale with a height meter"}
+
+### Figure 78: Classroom desks at King Solomon Seed Secondary School, Kagadi District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_60_king_solomon_seed_secondary_school_classroom_desks.jpg`.
+UgIFT field photograph P60; raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_115826_769.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_115826_769.jpg."}
+
+### Figure 79: Gas cylinders and pipework at King Solomon Seed Secondary School, Kagadi District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_63_king_solomon_seed_secondary_school_gas_cylinders_and_pipework.jpg`.
+UgIFT field photograph P63; raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_121503_686.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_121503_686.jpg."}
+
+### Figure 80: Kangaroo care chair at Kyabasara HC III, Kagadi District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_65_kyabasara_hc_iii_kangaroo_care_chair.jpg`.
+UgIFT field photograph P65; raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/kangaro chair.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kagadi / Kyabasara-HC-III; original filename: kangaro chair.jpg."}
+
+### Figure 81: Power house at Kyabasara HC III, Kagadi District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_66_kyabasara_hc_iii_power_house.jpg`.
+UgIFT field photograph P66; raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/power house.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose field photograph filed under Kagadi / Kyabasara-HC-III; original filename: power house.jpg."}
+
+### Figure 82: Classroom desks at a seed secondary school, Ntoroko District (Tooro)
+Output file: `outputs/narrative-report/figures/photo_08_western_classroom_desks.jpg`.
+UgIFT field photograph P08; raw-data-grouped/team-26/Ntoroko/Nombe-Seed-Secondary-School/NTOROKO ASSET NOMBE SEED SECONDARY SCHOOL VERIFICATION AND RECORDING TOOL KIT 222.docx; {"embedded_image": "word/media/image4.jpeg", "body_block": 110, "table": null, "adjacent_text": "Equipment/ Item | Department | Asset Number | Item | Description | Life in Months | Tag Number  | ( engrave |  no.) | Date Of  | Pur | Date Placed  | In |  Service | Recoverable cost | Cost | Acc Dep Cost | Net Book Value | Ytd |   | Deprn | Equipment status | Remarks | Non residential | Education | Painted cream and white | Good condition | They are in use. They are seven in number. | Residential | Education | Painted cream and white | Good condition | They are all in use. | They are 3 in number. | Kitchen | Education | Not built. | Toilets | Education | Not constructed | Pit latrine | Education | They are painted cream and white. | Good condition | They are all in use. | They are all in use. | 3 are for residential and 3 are not for residential. | Water tanks | Education | They are black in  | colour | One is faulty and  | two are working. | Two in use.  | They re |  three. Not constructed. | Fence | Not constructed."}
+
+### Figure 83: Most assets had no engraved identification
+Output file: `outputs/narrative-report/figures/chart_04_engraving.png`.
+Source: REF Asset Register, TAG_NUMBER; case-insensitive UGIFT or UGFT matching.
+
+### Figure 84: UgIFT identification on a desk at a seed school, Tororo District (Bukedi)
+Output file: `outputs/narrative-report/figures/photo_10_eastern_ugift_marking.jpg`.
+UgIFT field photograph P10; raw-data-grouped/team-13/Tororo/Malaba-Seed-School/049_desk-engraving-gou-moh-ugift_ref20260829-0338.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": null}
+
+### Figure 85: Boxed computers and related equipment in a seed school store, Nwoya District (Acholi)
+Output file: `outputs/narrative-report/figures/photo_07_northern_stored_computers.jpg`.
+UgIFT field photograph P07; raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx; {"embedded_image": "word/media/image9.jpeg", "body_block": 83, "table": null, "adjacent_text": "Laboratory stool supply: Procure and deliver an additional cohort of laboratory stools (recommended minimum 66 stools) to meet the standard lab allocation of 74 stools. | Field photos"}
+
+### Figure 86: School furniture forms the largest asset category
 Output file: `outputs/narrative-report/figures/chart_02_condition_category.png`.
 Source: REF Asset Register, all rows; report category and ATTRIBUTE14 condition.
 
-### Figure 37: The Functional classification predominates across sub-regions
+### Figure 87: The Functional classification predominates across sub-regions
 Output file: `outputs/narrative-report/figures/chart_03_condition_subregion.png`.
 Source: REF Asset Register, local government rows; sub-region mapping and ATTRIBUTE14.
 
-### Figure 38: Eastern holds the largest regional recorded value
+### Figure 88: Eastern holds the largest regional recorded value
 Output file: `outputs/narrative-report/figures/chart_05_value_region.png`.
 Source: REF Asset Register, cost and depreciation; row net book value floored at zero.
 
-### Figure 39: MoFPED and MoES hold the largest ministry recorded values
+### Figure 89: MoFPED and MoES hold the largest ministry recorded values
 Output file: `outputs/narrative-report/figures/chart_06_value_mda.png`.
 Source: REF Asset Register, national ministry and agency book codes; all held facility types.
 
-### Figure 40: Recorded use is concentrated in school furniture
+### Figure 90: Recorded use is concentrated in school furniture
 Output file: `outputs/narrative-report/figures/chart_07_use_category.png`.
 Source: REF Asset Register, IN_USE_FLAG; SK condition and remarks for non-use reasons.
 
@@ -531,6 +731,256 @@ Full source image inspected. Selected crop excludes identifiable faces, personal
 `raw-data-grouped/team-15/Kween/Kaptum-Seed-Secondary-School/09_computer-lab-no-power-supply_ref0537.jpg`; `None`; body block None; adjacent text: Loose photograph 09_computer-lab-no-power-supply_ref0537.jpg under Kaptum-Seed-Secondary-School/Kween. The source filename identifies the computer laboratory and no power supply.
 Loose photograph 09_computer-lab-no-power-supply_ref0537.jpg under Kaptum-Seed-Secondary-School/Kween. The source filename identifies the computer laboratory and no power supply.
 Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P36
+`raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/102_water-system-solar-panels-and-tanks_ref20260827-0369.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 102_water-system-solar-panels-and-tanks_ref20260827-0369.jpg.
+Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 102_water-system-solar-panels-and-tanks_ref20260827-0369.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P37
+`raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/108_patient-toilets_ref20260827-0367.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 108_patient-toilets_ref20260827-0367.jpg.
+Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 108_patient-toilets_ref20260827-0367.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P38
+`raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/10_engraving-weighing-scale_ref20260826-0429.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 10_engraving-weighing-scale_ref20260826-0429.jpg.
+Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 10_engraving-weighing-scale_ref20260826-0429.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P39
+`raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/37_engraving-delivery-bed_ref20260826-0456.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 37_engraving-delivery-bed_ref20260826-0456.jpg.
+Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 37_engraving-delivery-bed_ref20260826-0456.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P40
+`raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/40_oxygen-concentrator_ref20260826-0459.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 40_oxygen-concentrator_ref20260826-0459.jpg.
+Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 40_oxygen-concentrator_ref20260826-0459.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P41
+`raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/50_suction-apparatus_ref20260826-0469.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 50_suction-apparatus_ref20260826-0469.jpg.
+Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 50_suction-apparatus_ref20260826-0469.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P42
+`raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/69_wheelchair-marked-gou-moh-ugift_ref20260826-0488.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 69_wheelchair-marked-gou-moh-ugift_ref20260826-0488.jpg.
+Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 69_wheelchair-marked-gou-moh-ugift_ref20260826-0488.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P43
+`raw-data-grouped/team-10/Moroto/Katikekire-Seed-School/02_borehole-apron-and-pipework_ref20260826-0421.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Moroto / Katikekire-Seed-School; original filename: 02_borehole-apron-and-pipework_ref20260826-0421.jpg.
+Loose field photograph filed under Moroto / Katikekire-Seed-School; original filename: 02_borehole-apron-and-pipework_ref20260826-0421.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P44
+`raw-data-grouped/team-10/Moroto/Rupa-Seed-School/18_classroom-furniture-engraved-rupa-seed_ref20260909-photo-p08.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Moroto / Rupa-Seed-School; original filename: 18_classroom-furniture-engraved-rupa-seed_ref20260909-photo-p08.jpg.
+Loose field photograph filed under Moroto / Rupa-Seed-School; original filename: 18_classroom-furniture-engraved-rupa-seed_ref20260909-photo-p08.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P45
+`raw-data-grouped/team-10/Napak/Iriiri-Seed-Secondary-School/33_science-laboratory_ref20260827-0463.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Napak / Iriiri-Seed-Secondary-School; original filename: 33_science-laboratory_ref20260827-0463.jpg.
+Loose field photograph filed under Napak / Iriiri-Seed-Secondary-School; original filename: 33_science-laboratory_ref20260827-0463.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P46
+`raw-data-grouped/team-10/Napak/Lopei-Seed-Secondary-School/20_water-tanks_ref20260828-0562.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Napak / Lopei-Seed-Secondary-School; original filename: 20_water-tanks_ref20260828-0562.jpg.
+Loose field photograph filed under Napak / Lopei-Seed-Secondary-School; original filename: 20_water-tanks_ref20260828-0562.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P47
+`raw-data-grouped/team-11/Abim/Alerek-Seed-Secondary-School/07_boxed-desktop-computers-in-the-store_ref0769.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Abim / Alerek-Seed-Secondary-School; original filename: 07_boxed-desktop-computers-in-the-store_ref0769.jpg.
+Loose field photograph filed under Abim / Alerek-Seed-Secondary-School; original filename: 07_boxed-desktop-computers-in-the-store_ref0769.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P48
+`raw-data-grouped/team-11/Abim/Alerek-Seed-Secondary-School/44_laboratory-chemicals-on-the-bench_ref0859.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Abim / Alerek-Seed-Secondary-School; original filename: 44_laboratory-chemicals-on-the-bench_ref0859.jpg.
+Loose field photograph filed under Abim / Alerek-Seed-Secondary-School; original filename: 44_laboratory-chemicals-on-the-bench_ref0859.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P49
+`raw-data-grouped/team-11/Kaabong/Sidok-Seed-Secondary-School/05_boxed-printer-and-equipment_ref0317.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kaabong / Sidok-Seed-Secondary-School; original filename: 05_boxed-printer-and-equipment_ref0317.jpg.
+Loose field photograph filed under Kaabong / Sidok-Seed-Secondary-School; original filename: 05_boxed-printer-and-equipment_ref0317.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P50
+`raw-data-grouped/team-11/Kaabong/Sidok-Seed-Secondary-School/16_classroom-block-under-construction_ref0316.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kaabong / Sidok-Seed-Secondary-School; original filename: 16_classroom-block-under-construction_ref0316.jpg.
+Loose field photograph filed under Kaabong / Sidok-Seed-Secondary-School; original filename: 16_classroom-block-under-construction_ref0316.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P51
+`raw-data-grouped/team-11/Kaabong/Sidok-Seed-Secondary-School/33_latrine-block-under-construction_ref0310.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kaabong / Sidok-Seed-Secondary-School; original filename: 33_latrine-block-under-construction_ref0310.jpg.
+Loose field photograph filed under Kaabong / Sidok-Seed-Secondary-School; original filename: 33_latrine-block-under-construction_ref0310.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P52
+`raw-data-grouped/team-11/Kotido/Kamoru-HC-III/15_oxygen-concentrator_ref1167.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kotido / Kamoru-HC-III; original filename: 15_oxygen-concentrator_ref1167.jpg.
+Loose field photograph filed under Kotido / Kamoru-HC-III; original filename: 15_oxygen-concentrator_ref1167.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P53
+`raw-data-grouped/team-11/Kotido/Kamoru-HC-III/18_engraved-table-top_ref1107.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kotido / Kamoru-HC-III; original filename: 18_engraved-table-top_ref1107.jpg.
+Loose field photograph filed under Kotido / Kamoru-HC-III; original filename: 18_engraved-table-top_ref1107.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P54
+`raw-data-grouped/team-11/Kotido/Rengen-Seed-School/10_water-tanks-x2_ref0642.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kotido / Rengen-Seed-School; original filename: 10_water-tanks-x2_ref0642.jpg.
+Loose field photograph filed under Kotido / Rengen-Seed-School; original filename: 10_water-tanks-x2_ref0642.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P55
+`raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/dust bins.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Buliisa / Butiaba-HC-III; original filename: dust bins.jpg.
+Loose field photograph filed under Buliisa / Butiaba-HC-III; original filename: dust bins.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P56
+`raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/IMG-20260907-WA0097.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Buliisa / Butiaba-HC-III; original filename: IMG-20260907-WA0097.jpg.
+Loose field photograph filed under Buliisa / Butiaba-HC-III; original filename: IMG-20260907-WA0097.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P57
+`raw-data-grouped/team-25/Buliisa/Kihungya-Seed-Secondary-School/IMG-20260905-WA0028.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Buliisa / Kihungya-Seed-Secondary-School; original filename: IMG-20260905-WA0028.jpg.
+Loose field photograph filed under Buliisa / Kihungya-Seed-Secondary-School; original filename: IMG-20260905-WA0028.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P58
+`raw-data-grouped/team-25/Buliisa/Kihungya-Seed-Secondary-School/library.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Buliisa / Kihungya-Seed-Secondary-School; original filename: library.jpg.
+Loose field photograph filed under Buliisa / Kihungya-Seed-Secondary-School; original filename: library.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P59
+`raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_115519_265.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_115519_265.jpg.
+Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_115519_265.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P60
+`raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_115826_769.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_115826_769.jpg.
+Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_115826_769.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P61
+`raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_115836_836.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_115836_836.jpg.
+Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_115836_836.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P62
+`raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_120857_349.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_120857_349.jpg.
+Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_120857_349.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P63
+`raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_121503_686.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_121503_686.jpg.
+Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_121503_686.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P64
+`raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/IMG-20260908-WA0107.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kagadi / Kyabasara-HC-III; original filename: IMG-20260908-WA0107.jpg.
+Loose field photograph filed under Kagadi / Kyabasara-HC-III; original filename: IMG-20260908-WA0107.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P65
+`raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/kangaro chair.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kagadi / Kyabasara-HC-III; original filename: kangaro chair.jpg.
+Loose field photograph filed under Kagadi / Kyabasara-HC-III; original filename: kangaro chair.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P66
+`raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/power house.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kagadi / Kyabasara-HC-III; original filename: power house.jpg.
+Loose field photograph filed under Kagadi / Kyabasara-HC-III; original filename: power house.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P67
+`raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.22 (2).jpeg`; `None`; body block None; adjacent text: Loose field photograph filed under Buvuma / Bweema-Seed-Secondary-School; original filename: WhatsApp Image 2026-09-12 at 13.47.22 (2).jpeg.
+Loose field photograph filed under Buvuma / Bweema-Seed-Secondary-School; original filename: WhatsApp Image 2026-09-12 at 13.47.22 (2).jpeg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P68
+`raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Unknown 2026-09-12 at 13.58.16/WhatsApp Image 2026-09-12 at 13.47.17 (2).jpeg`; `None`; body block None; adjacent text: Loose field photograph filed under Buvuma / Bweema-Seed-Secondary-School; original filename: WhatsApp Image 2026-09-12 at 13.47.17 (2).jpeg.
+Loose field photograph filed under Buvuma / Bweema-Seed-Secondary-School; original filename: WhatsApp Image 2026-09-12 at 13.47.17 (2).jpeg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P69
+`raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Unknown 2026-09-12 at 13.58.16/WhatsApp Image 2026-09-12 at 13.47.20 (1).jpeg`; `None`; body block None; adjacent text: Loose field photograph filed under Buvuma / Bweema-Seed-Secondary-School; original filename: WhatsApp Image 2026-09-12 at 13.47.20 (1).jpeg.
+Loose field photograph filed under Buvuma / Bweema-Seed-Secondary-School; original filename: WhatsApp Image 2026-09-12 at 13.47.20 (1).jpeg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P70
+`raw-data-grouped/team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/KIBIRI HC III report.docx`; `word/media/image27.jpeg`; body block 77; adjacent text: Kibiri HC III report: oxygen-cylinder photograph word/media/image27.jpeg in body block 77, within the facility pictorial record.
+Kibiri HC III report: oxygen-cylinder photograph word/media/image27.jpeg in body block 77, within the facility pictorial record.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P71
+`raw-data-grouped/team-32/Butambala/Budde-Seed-Secondary-School/BUDDE SEED SCHOOL (BUTAMABALA DISTRICT-BUDDE SEED).docx`; `word/media/image43.png`; body block 102; adjacent text: Budde Seed Secondary School return: PICTORIAL EVIDENCE, body block 102, table 8, word/media/image43.png. The visible mark identifies UGIFT and the school.
+Budde Seed Secondary School return: PICTORIAL EVIDENCE, body block 102, table 8, word/media/image43.png. The visible mark identifies UGIFT and the school.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P72
+`raw-data-grouped/team-13/Busia/Buwembe-HC-III/127_baby-weighing-scale-yrbb-20_ref20260828-0082.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Busia / Buwembe-HC-III; original filename: 127_baby-weighing-scale-yrbb-20_ref20260828-0082.jpg.
+Loose field photograph filed under Busia / Buwembe-HC-III; original filename: 127_baby-weighing-scale-yrbb-20_ref20260828-0082.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P73
+`raw-data-grouped/team-13/Busia/Buwembe-HC-III/136_autoclave-on-a-gas-cylinder_ref20260828-0091.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Busia / Buwembe-HC-III; original filename: 136_autoclave-on-a-gas-cylinder_ref20260828-0091.jpg.
+Loose field photograph filed under Busia / Buwembe-HC-III; original filename: 136_autoclave-on-a-gas-cylinder_ref20260828-0091.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P74
+`raw-data-grouped/team-13/Busia/Buwumba-HC-III/006_examination-lamp-still-wrapped_ref20260828-0285.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Busia / Buwumba-HC-III; original filename: 006_examination-lamp-still-wrapped_ref20260828-0285.jpg.
+Loose field photograph filed under Busia / Buwumba-HC-III; original filename: 006_examination-lamp-still-wrapped_ref20260828-0285.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P75
+`raw-data-grouped/team-13/Busia/Majanji-HC-III/042_pedal-suction-unit-in-its-packing_ref20260827-0637.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Busia / Majanji-HC-III; original filename: 042_pedal-suction-unit-in-its-packing_ref20260827-0637.jpg.
+Loose field photograph filed under Busia / Majanji-HC-III; original filename: 042_pedal-suction-unit-in-its-packing_ref20260827-0637.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P76
+`raw-data-grouped/team-14/Bulambuli/Bumufuni-Seed-Secondary-School/07_computer-sets-stacked-in-store_ref20260911-0011.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Bulambuli / Bumufuni-Seed-Secondary-School; original filename: 07_computer-sets-stacked-in-store_ref20260911-0011.jpg.
+Loose field photograph filed under Bulambuli / Bumufuni-Seed-Secondary-School; original filename: 07_computer-sets-stacked-in-store_ref20260911-0011.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P77
+`raw-data-grouped/team-14/Bulambuli/Bumugibole-HC-III/05_wheelchair-armrest-engraving_ref20260831-0202.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Bulambuli / Bumugibole-HC-III; original filename: 05_wheelchair-armrest-engraving_ref20260831-0202.jpg.
+Loose field photograph filed under Bulambuli / Bumugibole-HC-III; original filename: 05_wheelchair-armrest-engraving_ref20260831-0202.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P78
+`raw-data-grouped/team-14/Bulambuli/Bunangaka-HC-III/01_solar-batteries_ref20260830-0421.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Bulambuli / Bunangaka-HC-III; original filename: 01_solar-batteries_ref20260830-0421.jpg.
+Loose field photograph filed under Bulambuli / Bunangaka-HC-III; original filename: 01_solar-batteries_ref20260830-0421.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P79
+`raw-data-grouped/team-15/Kapchorwa/Kabeywa-Seed-Secondary-School/07_28computers_ref20260830-0271.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kapchorwa / Kabeywa-Seed-Secondary-School; original filename: 07_28computers_ref20260830-0271.jpg.
+Loose field photograph filed under Kapchorwa / Kabeywa-Seed-Secondary-School; original filename: 07_28computers_ref20260830-0271.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P80
+`raw-data-grouped/team-15/Kapchorwa/Kabeywa-Seed-Secondary-School/24_library_ref20260830-0842.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kapchorwa / Kabeywa-Seed-Secondary-School; original filename: 24_library_ref20260830-0842.jpg.
+Loose field photograph filed under Kapchorwa / Kabeywa-Seed-Secondary-School; original filename: 24_library_ref20260830-0842.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P81
+`raw-data-grouped/team-15/Kween/Atar-HC-III/07_autoclave-01_ref0458.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kween / Atar-HC-III; original filename: 07_autoclave-01_ref0458.jpg.
+Loose field photograph filed under Kween / Atar-HC-III; original filename: 07_autoclave-01_ref0458.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P82
+`raw-data-grouped/team-15/Kween/Atar-HC-III/21_solar-batteries_ref0444.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kween / Atar-HC-III; original filename: 21_solar-batteries_ref0444.jpg.
+Loose field photograph filed under Kween / Atar-HC-III; original filename: 21_solar-batteries_ref0444.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P83
+`raw-data-grouped/team-15/Kween/Atar-HC-III/36_kangaroo-mother-care-chair-1-not-engraved_ref20260830-0604.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kween / Atar-HC-III; original filename: 36_kangaroo-mother-care-chair-1-not-engraved_ref20260830-0604.jpg.
+Loose field photograph filed under Kween / Atar-HC-III; original filename: 36_kangaroo-mother-care-chair-1-not-engraved_ref20260830-0604.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P84
+`raw-data-grouped/team-15/Kween/Kitawoi-Seed-Secondary-School/09_ict-lab-under-construction_ref1386.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kween / Kitawoi-Seed-Secondary-School; original filename: 09_ict-lab-under-construction_ref1386.jpg.
+Loose field photograph filed under Kween / Kitawoi-Seed-Secondary-School; original filename: 09_ict-lab-under-construction_ref1386.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+
+### P85
+`raw-data-grouped/team-15/Kween/Moyok-HC-III/14_engraving-kwn-med-eq-moyok-hciii_ref0038.jpg`; `None`; body block None; adjacent text: Loose field photograph filed under Kween / Moyok-HC-III; original filename: 14_engraving-kwn-med-eq-moyok-hciii_ref0038.jpg.
+Loose field photograph filed under Kween / Moyok-HC-III; original filename: 14_engraving-kwn-med-eq-moyok-hciii_ref0038.jpg.
+Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
 
 
 # Facility reconciliation and geography source audit
@@ -791,7 +1241,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
 - Condition assessment share: REF Read Me row14 says 37122 rows were classified Functional where no condition was recorded anywhere, and the Faulty class includes idle, stored, unseen, lost and other states. Therefore 94.0% is explicitly a register classification share, not a rate of assets assessed on the ground. The chart labels preserve Functional and Faulty and do not substitute non-functional for Faulty.
 - Valuation basis: REF Read Me row41 applies comparators by item and by asset class, makes some price adjustments, and uses a UGX10000 rule; the prompt-only same-item wording is narrower than the workbook. The report uses accounting language that includes comparable asset classes and does not describe values as solely original facility costs. REF Read Me rows9,40,42,43 describe useful lives, dates and depreciation. Work in progress is kept in its stated cost basis.
 - Separate Rwenzori and Tooro totals: supplied sources do not establish a defensible split, so the combined source-supported grouping is retained.
-- National MDA photographs: inspected programme All WIP documents and asset-distribution scans contain no attributable usable asset photograph meeting the privacy rules. 33 regional photographs are used.
+- National MDA photographs: inspected programme All WIP documents and asset-distribution scans contain no attributable usable asset photograph meeting the privacy rules. 83 regional photographs are used.
 - National maintenance arrangements are included only where specific register remarks support them; the report makes no assumed servicing claims.
 
 - The draft describes 13 MDAs in paragraph 140 but lists 15 in paragraph 146. The report preserves the complete visited list from paragraph 146 and does not repeat the conflicting 13 count.
@@ -4074,7 +4524,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
           "facility": "Lukale Health Centre III",
           "lg": "Buvuma",
           "finding": "Staff reported that the maternity ward allowed women to give birth locally and with greater privacy.",
-          "gap": "",
+          "gap": "Benefit to sustain.",
           "action": "Protect the service through routine care of the maternity building and equipment.",
           "source_ids": [
             "O27"
@@ -4116,7 +4566,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
           "facility": "Kagumba Seed Secondary School",
           "lg": "Kamuli",
           "finding": "The school reported that broken furniture had been repaired during the second term.",
-          "gap": "",
+          "gap": "Practice to sustain.",
           "action": "Continue condition checks and scheduled furniture repairs before each term.",
           "source_ids": [
             "O28"
@@ -4149,7 +4599,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
           "facility": "Bumunji, Buwembe and Majanji health centres; Masafu Hospital",
           "lg": "Busia",
           "finding": "Equipment had been transferred from the health centres to Masafu Hospital.",
-          "gap": "",
+          "gap": "Allocation and custody require confirmation.",
           "action": "Confirm the receiving custodian, location and service need, and retain signed transfer and receipt documentation.",
           "source_ids": [
             "O10"
@@ -4331,7 +4781,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
           "facility": "Ngwedo Seed Secondary School",
           "lg": "Buliisa",
           "finding": "A caretaker attended monthly for repairs, and the Directorate of Industrial Training repaired furniture.",
-          "gap": "",
+          "gap": "Practice to sustain.",
           "action": "Continue the repair schedule and record the items returned to use.",
           "source_ids": [
             "O23"
@@ -4342,7 +4792,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
           "facility": "Bundimulangya Health Centre III",
           "lg": "Bundibugyo",
           "finding": "The District Health Officer arranged maintenance support, and staff said the power house and solar installation supported continued operation.",
-          "gap": "",
+          "gap": "Practice to sustain.",
           "action": "Keep the technical referral arrangement active and include the power and solar systems in routine servicing.",
           "source_ids": [
             "O24"
@@ -5090,6 +5540,1505 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
       "text": "The older UgIFT-built Butiaba facility and its equipment were affected by floods. A photograph should identify the older flood-affected facility, rather than imply that all current services are submerged."
     }
   ]
+}
+```
+
+
+## Revision evidence: narrative/additional_cases.json
+
+```json
+{
+  "purpose": "Additional evidence-backed field content for the expanded narrative report. Only case prose is for publication; source_index and audit notes are private.",
+  "editorial_notes": [
+    "Expected statements describe the intended service or management outcome; they do not assert a separately verified contractual promise. Actions and priorities are proposed recommendations, not completed interventions.",
+    "These cases were checked against the current report text extracted from the 46-page version; none of the eleven local facilities appeared in that text. The national cases add details beyond the existing MoWT vehicle-maintenance and OPM damaged-laptop examples.",
+    "Keep institutional and facility names in the report; keep filenames, source IDs, paths, quotations and audit notes outside it.",
+    "There are no monetary figures. Do not convert reported conditions, item remarks or user accounts into a claim that every asset was independently tested."
+  ],
+  "local_cases": [
+    {
+      "id": "AD01",
+      "region": "Central",
+      "facility": "Kijuna Health Centre III",
+      "lg": "Kassanda",
+      "expected": "Patient equipment and basic utilities should be available when care is needed.",
+      "found": "The wheelchairs were not functional, and a failed water pump left the facility with inadequate water. Inadequate power also prevented full use of electronic equipment.",
+      "finding": "Expected: Patient equipment and basic utilities should be available when care is needed. Found: The wheelchairs were not functional, and a failed water pump left the facility with inadequate water. Inadequate power also prevented full use of electronic equipment.",
+      "gap": "The facility faced separate constraints on patient movement, water supply and equipment use.",
+      "action": "Kassanda District should arrange technical assessment and repair of the wheelchairs and pump, restore a dependable power supply and test the affected equipment before returning it to use.",
+      "priority": "High",
+      "source_ids": [
+        "AD01"
+      ]
+    },
+    {
+      "id": "AD02",
+      "region": "Central",
+      "facility": "Kikandwa Health Centre III",
+      "lg": "Kassanda",
+      "expected": "The health facility should provide powered equipment, durable buildings and secure custody of its assets.",
+      "found": "Electronic equipment could not be used because reliable electricity and solar power were unavailable. Storage for damaged assets was inadequate, the facility lacked a perimeter fence, and defects were observed in flooring and skirting.",
+      "finding": "Expected: The health facility should provide powered equipment, durable buildings and secure custody of its assets. Found: Electronic equipment could not be used because reliable electricity and solar power were unavailable. Storage for damaged assets was inadequate, the facility lacked a perimeter fence, and defects were observed in flooring and skirting.",
+      "gap": "Power, secure storage and correction of building defects remained necessary for full and safe use.",
+      "action": "Kassanda District should agree a joint power, security and defects plan, provide secure temporary storage, and have technical staff verify repairs and equipment operation.",
+      "priority": "High",
+      "source_ids": [
+        "AD02"
+      ]
+    },
+    {
+      "id": "AD03",
+      "region": "Central",
+      "facility": "Kyasansuwa Health Centre III",
+      "lg": "Kassanda",
+      "expected": "Computer equipment should support administration and reporting, while floors and bathrooms should remain usable and easy to maintain.",
+      "found": "The facility reported three computers completely damaged following unstable power and surges. Poor floor finishes and defective staff bathroom levels were also observed.",
+      "finding": "Expected: Computer equipment should support administration and reporting, while floors and bathrooms should remain usable and easy to maintain. Found: The facility reported three computers completely damaged following unstable power and surges. Poor floor finishes and defective staff bathroom levels were also observed.",
+      "gap": "Unstable electricity threatened the remaining electronics, while defective finishes and drainage needed correction.",
+      "action": "Kassanda District should stabilise and protect the electrical supply, assess the three computers for repair or replacement, and correct the floor and bathroom defects under technical supervision.",
+      "priority": "High",
+      "source_ids": [
+        "AD03"
+      ]
+    },
+    {
+      "id": "AD04",
+      "region": "Northern",
+      "facility": "Alwi Seed Secondary School",
+      "lg": "Pakwach",
+      "expected": "The computer laboratory and security equipment should support teaching and school operation.",
+      "found": "The school reported power surges. Nine monitors and ten system units were not working, as were the server power-backup unit and twenty other power-backup units. Only one of thirteen security cameras was functional.",
+      "finding": "Expected: The computer laboratory and security equipment should support teaching and school operation. Found: The school reported power surges. Nine monitors and ten system units were not working, as were the server power-backup unit and twenty other power-backup units. Only one of thirteen security cameras was functional.",
+      "gap": "The loss of working computer stations and power protection reduced the usable laboratory capacity and left much of the camera system unavailable.",
+      "action": "Pakwach District and the school should first assess the electrical supply and protection, then repair or replace failed equipment and test the whole laboratory and camera system before acceptance.",
+      "priority": "High",
+      "source_ids": [
+        "AD04"
+      ]
+    },
+    {
+      "id": "AD05",
+      "region": "Northern",
+      "facility": "Wadelai Seed Secondary School",
+      "lg": "Pakwach",
+      "expected": "The school should be able to use its computer laboratory reliably and keep water storage structures safe.",
+      "found": "Twenty desktop computers were recorded as working and in use, but the school reported a solar fault that interrupted use of electrical equipment. One water-tank stand was broken and presented a threat to students.",
+      "finding": "Expected: The school should be able to use its computer laboratory reliably and keep water storage structures safe. Found: Twenty desktop computers were recorded as working and in use, but the school reported a solar fault that interrupted use of electrical equipment. One water-tank stand was broken and presented a threat to students.",
+      "gap": "Usable equipment remained dependent on an unreliable power supply, and the damaged tank support required immediate attention.",
+      "action": "The school and Pakwach District should restrict access around the damaged tank support pending an engineering assessment, repair the support, and restore and test the solar system.",
+      "priority": "High",
+      "source_ids": [
+        "AD05"
+      ]
+    },
+    {
+      "id": "AD06",
+      "region": "Eastern",
+      "facility": "Nansanga Seed Secondary School",
+      "lg": "Budaka",
+      "expected": "The supplied desktop computers should be installed and available for teaching.",
+      "found": "The school lacked reliable power, and twenty-seven of its twenty-eight desktops remained packed.",
+      "finding": "Expected: The supplied desktop computers should be installed and available for teaching. Found: The school lacked reliable power, and twenty-seven of its twenty-eight desktops remained packed.",
+      "gap": "Most of the supplied computer capacity had not reached classroom use because a basic operating requirement was unresolved.",
+      "action": "Budaka District and the school should settle the power connection or suitable alternative, arrange installation and testing, and confirm the number of computers available to learners.",
+      "priority": "High",
+      "source_ids": [
+        "AD06"
+      ]
+    },
+    {
+      "id": "AD07",
+      "region": "Eastern",
+      "facility": "Muhula Seed Secondary School",
+      "lg": "Butaleja",
+      "expected": "The school should receive completed buildings and tested equipment before formal handover and operation.",
+      "found": "The contractor had not handed over the school, and it was not operating. Buildings showed cracks, an air conditioner remained boxed with a missing fan, and the installed water pump was not working.",
+      "finding": "Expected: The school should receive completed buildings and tested equipment before formal handover and operation. Found: The contractor had not handed over the school, and it was not operating. Buildings showed cracks, an air conditioner remained boxed with a missing fan, and the installed water pump was not working.",
+      "gap": "Construction completion, equipment completeness and successful testing had not come together to make the school ready.",
+      "action": "Butaleja District and the Ministry of Education and Sports should agree a defects and handover schedule with the contractor, rectify the works, complete the equipment and witness operational tests before handover.",
+      "priority": "High",
+      "source_ids": [
+        "AD07"
+      ]
+    },
+    {
+      "id": "AD08",
+      "region": "Eastern",
+      "facility": "Sop Sop Health Centre III",
+      "lg": "Tororo",
+      "expected": "Delivered equipment should be accompanied by the skills and accessories needed to use it.",
+      "found": "The facility reported that much of its equipment remained in store because staff did not know how to operate it. Oxygen equipment had arrived without cylinders. Tuberculosis testing and maternity services had nevertheless improved.",
+      "finding": "Expected: Delivered equipment should be accompanied by the skills and accessories needed to use it. Found: The facility reported that much of its equipment remained in store because staff did not know how to operate it. Oxygen equipment had arrived without cylinders. Tuberculosis testing and maternity services had nevertheless improved.",
+      "gap": "Equipment delivery had not been matched consistently with user training and a complete operating package.",
+      "action": "Tororo District and the Ministry of Health should arrange practical training at the facility, confirm the required oxygen components, and check that trained staff can safely use each released item.",
+      "priority": "High",
+      "source_ids": [
+        "AD08"
+      ]
+    },
+    {
+      "id": "AD09",
+      "region": "Eastern",
+      "facility": "Bunamono Health Centre III",
+      "lg": "Bududa",
+      "expected": "The installed water system should supply the staff houses, and supplied clinical equipment should be ready for use.",
+      "found": "The water tank was not working and the solar pump was not connected, leaving the staff houses without water. A supplied laboratory stand remained boxed because staff could not assemble it, and a glucometer lacked test strips.",
+      "finding": "Expected: The installed water system should supply the staff houses, and supplied clinical equipment should be ready for use. Found: The water tank was not working and the solar pump was not connected, leaving the staff houses without water. A supplied laboratory stand remained boxed because staff could not assemble it, and a glucometer lacked test strips.",
+      "gap": "The facility needed installation, demonstration and consumables to turn delivered assets into usable services.",
+      "action": "Bududa District should complete and test the water connection, arrange assembly and user demonstration for the laboratory stand, and establish a supply of compatible glucometer strips.",
+      "priority": "High",
+      "source_ids": [
+        "AD09"
+      ]
+    },
+    {
+      "id": "AD10",
+      "region": "Western",
+      "facility": "Kihungya Seed Secondary School",
+      "lg": "Buliisa",
+      "expected": "The school investment should provide usable science and computer laboratories, staff accommodation, water and secure premises.",
+      "found": "The science block, computer laboratory and library were still under construction, and staff quarters were incomplete. The school reported no electricity for computer sessions, no water for sanitation and no perimeter fence. Its administration block was already in use.",
+      "finding": "Expected: The school investment should provide usable science and computer laboratories, staff accommodation, water and secure premises. Found: The science block, computer laboratory and library were still under construction, and staff quarters were incomplete. The school reported no electricity for computer sessions, no water for sanitation and no perimeter fence. Its administration block was already in use.",
+      "gap": "The school was partly in use while essential teaching spaces, utilities and security remained unfinished.",
+      "action": "Buliisa District and the Ministry of Education and Sports should use one completion plan for the laboratories, staff housing, electricity, water and security, with separate testing and handover of each finished element.",
+      "priority": "High",
+      "source_ids": [
+        "AD10"
+      ]
+    },
+    {
+      "id": "AD11",
+      "region": "Western",
+      "facility": "Kihungya Health Centre III",
+      "lg": "Buliisa",
+      "expected": "Expanded buildings and equipment should support care at the health centre, with responsibility clear for any items kept elsewhere.",
+      "found": "Staff reported more room for patients, easier working arrangements through staff accommodation, and electricity from the new solar power house. Buildings were in use. A gas stove, electric suction apparatus, laboratory stool and electric centrifuge were recorded at the subcounty rather than the health centre.",
+      "finding": "Expected: Expanded buildings and equipment should support care at the health centre, with responsibility clear for any items kept elsewhere. Found: Staff reported more room for patients, easier working arrangements through staff accommodation, and electricity from the new solar power house. Buildings were in use. A gas stove, electric suction apparatus, laboratory stool and electric centrifuge were recorded at the subcounty rather than the health centre.",
+      "gap": "The building and power investment was supporting care, but the intended use and custody of equipment held away from the facility needed confirmation.",
+      "action": "Buliisa District and facility management should preserve the working building and solar arrangements, confirm who holds the off-site equipment, and agree whether it should be deployed to the health centre or remain at its present location.",
+      "priority": "Medium",
+      "source_ids": [
+        "AD11"
+      ]
+    }
+  ],
+  "national_cases": [
+    {
+      "id": "AD12",
+      "institution": "Ministry of Finance, Planning and Economic Development",
+      "facility": "Ministry of Finance, Planning and Economic Development",
+      "region": "National",
+      "lg": "National",
+      "expected": "Staff computers should support their workload, and portable equipment should remain identifiable and accountable.",
+      "found": "Most computers were working, but some keyboards and power-backup units had failed, and some older computers were freezing. Laptop losses were supported by police letters. The team also reported difficulty obtaining some laptops for engraving.",
+      "finding": "Expected: Staff computers should support their workload, and portable equipment should remain identifiable and accountable. Found: Most computers were working, but some keyboards and power-backup units had failed, and some older computers were freezing. Laptop losses were supported by police letters. The team also reported difficulty obtaining some laptops for engraving.",
+      "gap": "Equipment reliability, follow-up of lost assets and completion of identification each required a specific management response.",
+      "action": "The ministry should assess the failed accessories and freezing computers, follow up the reported laptop losses, and arrange a supervised exercise to identify and mark all remaining portable equipment.",
+      "priority": "High",
+      "source_ids": [
+        "AD12"
+      ]
+    },
+    {
+      "id": "AD13",
+      "institution": "Ministry of Finance, Planning and Economic Development",
+      "facility": "Ministry of Finance, Planning and Economic Development",
+      "region": "National",
+      "lg": "National",
+      "expected": "Furniture should remain assigned to a location and custodian when offices move.",
+      "found": "When programme staff moved to premises already furnished, their earlier furniture was left in the old building. Some remained in store, while staff said other items had gone to different offices.",
+      "finding": "Expected: Furniture should remain assigned to a location and custodian when offices move. Found: When programme staff moved to premises already furnished, their earlier furniture was left in the old building. Some remained in store, while staff said other items had gone to different offices.",
+      "gap": "The move had split the furniture between storage and other offices, requiring confirmation of its present custody and use.",
+      "action": "The ministry should inspect the old store and recipient offices, confirm the condition and custodian of each item, and approve reuse or other appropriate treatment of furniture no longer required.",
+      "priority": "Medium",
+      "source_ids": [
+        "AD13"
+      ]
+    },
+    {
+      "id": "AD14",
+      "institution": "Office of the Prime Minister",
+      "facility": "Office of the Prime Minister",
+      "region": "National",
+      "lg": "National",
+      "expected": "Computers should have enough capacity for the work assigned to their users.",
+      "found": "Users reported that the capacity of the HP Envy i3 laptops was below the volume of work handled, although the machines were described as being in fair condition.",
+      "finding": "Expected: Computers should have enough capacity for the work assigned to their users. Found: Users reported that the capacity of the HP Envy i3 laptops was below the volume of work handled, although the machines were described as being in fair condition.",
+      "gap": "A usable laptop could still be poorly matched to the workload of its user.",
+      "action": "The office should assess the requirements of the affected users and decide whether upgrading, reallocating or replacing the laptops would provide suitable capacity.",
+      "priority": "Medium",
+      "source_ids": [
+        "AD14"
+      ]
+    },
+    {
+      "id": "AD15",
+      "institution": "Ministry of Works and Transport",
+      "facility": "Ministry of Works and Transport",
+      "region": "National",
+      "lg": "National",
+      "expected": "Installed office and conferencing equipment should support the secretariat and carry a traceable asset identity.",
+      "found": "The secretariat reported that the installed photocopier supported its daily work. The video-conferencing system was installed and functioning, but it had not been engraved or included in the asset list presented for verification.",
+      "finding": "Expected: Installed office and conferencing equipment should support the secretariat and carry a traceable asset identity. Found: The secretariat reported that the installed photocopier supported its daily work. The video-conferencing system was installed and functioning, but it had not been engraved or included in the asset list presented for verification.",
+      "gap": "An operational system still required clear identification and custody.",
+      "action": "The ministry should identify the conferencing system and its components, assign a custodian, and apply a suitable durable identifier without damaging the equipment.",
+      "priority": "Medium",
+      "source_ids": [
+        "AD15"
+      ]
+    },
+    {
+      "id": "AD16",
+      "institution": "Ministry of Health",
+      "facility": "Ministry of Health",
+      "region": "National",
+      "lg": "National",
+      "expected": "Office equipment in use should be identifiable by a durable asset mark.",
+      "found": "Two heavy-duty printers, one at the Industrial Area engineering office and one at headquarters, were in use and in good condition but unengraved. One headquarters laptop was also recorded without engraving.",
+      "finding": "Expected: Office equipment in use should be identifiable by a durable asset mark. Found: Two heavy-duty printers, one at the Industrial Area engineering office and one at headquarters, were in use and in good condition but unengraved. One headquarters laptop was also recorded without engraving.",
+      "gap": "Working equipment at separate offices still lacked the marking needed for straightforward physical identification.",
+      "action": "The ministry should mark these items, link the marks to their serial numbers and office locations, and obtain custody confirmation from the receiving units.",
+      "priority": "Medium",
+      "source_ids": [
+        "AD16"
+      ]
+    },
+    {
+      "id": "AD17",
+      "institution": "National Environment Management Authority",
+      "facility": "National Environment Management Authority",
+      "region": "National",
+      "lg": "National",
+      "expected": "Computers and shared office equipment should remain identifiable wherever they are used.",
+      "found": "Four Lenovo laptops serving the executive office and environmental audit, together with a heavy-duty printer, were recorded as functional but not engraved.",
+      "finding": "Expected: Computers and shared office equipment should remain identifiable wherever they are used. Found: Four Lenovo laptops serving the executive office and environmental audit, together with a heavy-duty printer, were recorded as functional but not engraved.",
+      "gap": "The equipment could support work, but lacked a durable identifying mark.",
+      "action": "The authority should mark the five items, record their serial numbers and custodians, and include them in regular physical checks.",
+      "priority": "Medium",
+      "source_ids": [
+        "AD17"
+      ]
+    },
+    {
+      "id": "AD18",
+      "institution": "Ministry of Water and Environment",
+      "facility": "Ministry of Water and Environment",
+      "region": "National",
+      "lg": "National",
+      "expected": "Portable tablets should carry an asset identifier and have an assigned custodian.",
+      "found": "Ten Apple tablets were recorded without engraving.",
+      "finding": "Expected: Portable tablets should carry an asset identifier and have an assigned custodian. Found: Ten Apple tablets were recorded without engraving.",
+      "gap": "Portable equipment required an identification method that would allow each unit to be traced to its user and location.",
+      "action": "The ministry should apply suitable durable identifiers, link them to serial numbers, and confirm custody before the next physical check.",
+      "priority": "Medium",
+      "source_ids": [
+        "AD18"
+      ]
+    }
+  ],
+  "source_index": {
+    "AD01": {
+      "path": "raw-data-grouped/team-25/_team-documents/KIJUNA HCIII UGIFT Asset Verification - FINAL.docx",
+      "excerpts": [
+        {
+          "locator": "table 1, row 5",
+          "text": "Name of Local Government | KASANDA DISTRICT LOCAL GOVERNMENT"
+        },
+        {
+          "locator": "paragraph 154",
+          "text": "The facility has inadequate power supply to support the functioning of all electronic assets, resulting in underutilisation of some equipment and potentially affecting effective service delivery."
+        },
+        {
+          "locator": "paragraph 158",
+          "text": "The wheelchairs available at the facility were not functional, limiting their effective use in supporting patients who require mobility assistance."
+        },
+        {
+          "locator": "paragraph 174",
+          "text": "The facility has inadequate water supply due to a non-performing water pump, affecting the availability of water required for normal facility operations and service delivery."
+        }
+      ],
+      "audit_note": ""
+    },
+    "AD02": {
+      "path": "raw-data-grouped/team-25/_team-documents/KIKANDWA HCIII UGIFT Asset Verification Tool Kit - FINAL.docx",
+      "excerpts": [
+        {
+          "locator": "table 1, row 5",
+          "text": "Name of Local Government | KASANDA DISTRICT LOCAL GOVERNMENT"
+        },
+        {
+          "locator": "paragraph 152",
+          "text": "Electronic assets are not functioning due to the lack of solar power and reliable electricity, resulting in underutilisation and affecting effective service delivery."
+        },
+        {
+          "locator": "paragraph 154",
+          "text": "There is inadequate storage space for damaged and non-functional assets, making proper custody, management and safeguarding of such assets difficult."
+        },
+        {
+          "locator": "paragraph 158",
+          "text": "Poor workmanship has been observed, particularly on the building skirting and flooring, which may affect the quality, durability and general condition of the facility."
+        },
+        {
+          "locator": "paragraph 160",
+          "text": "The absence of a perimeter fence presents potential security risks to the facility, staff, patients and assets."
+        }
+      ],
+      "audit_note": ""
+    },
+    "AD03": {
+      "path": "raw-data-grouped/team-25/_team-documents/Kyasansuwa HCIII UGIFT Asset Verification Tool Kit - FINAL.docx",
+      "excerpts": [
+        {
+          "locator": "table 1, row 5",
+          "text": "Name of Local Government | Kasanda Local Government"
+        },
+        {
+          "locator": "paragraph 159",
+          "text": "Concern/Observation: The facility experiences inadequate and unstable power conditions, including power surges, which have affected the functionality of computers. Three computers are reported to be completely damaged. This reduces the facility's capacity to effectively use available information and communication technology for administration, reporting, records management and other health service functions. Continued exposure of electronic equipment to unstable power also presents a risk of further equipment damage."
+        },
+        {
+          "locator": "paragraph 168",
+          "text": "Concern/Observation: The facility has areas where the floors have been poorly done. Poor floor finishing and workmanship can affect the durability, cleanliness and general usability of the facility. Where floor surfaces are uneven or poorly finished, they may also create difficulties for cleaning, movement of patients and equipment and the general maintenance of a safe health care environment."
+        },
+        {
+          "locator": "paragraph 174",
+          "text": "Concern/Observation: Poor workmanship was observed in relation to the staff bathrooms, particularly the levels and arrangement affecting how water flows and drains. Inadequate levels can result in poor drainage and water stagnation, which may contribute to unhygienic conditions, deterioration of surfaces and inconvenience to users. This reflects the need for closer attention to quality control and finishing of facility construction and improvement works."
+        }
+      ],
+      "audit_note": ""
+    },
+    "AD04": {
+      "path": "raw-data-grouped/team-01/Pakwach/Alwi-Seed-Secondary-School/ZOMBO - ATYAK HC III & ALWI SEED.docx",
+      "excerpts": [
+        {
+          "locator": "table 10, row 1",
+          "text": "4 | How has the UgIFT support helped in service delivery in the area, any issues, challenges and any recommendations for better program implementation. | The setup of the school has completely revolutionized l education service delivery. However, there is an issue of power surges, under staffing, the ratio of students to classes and latrines, numbers are high over 1,000 students. ugIFT should support to ensure power stability, recruit more staff."
+        },
+        {
+          "locator": "table 12, row 2",
+          "text": "Desktop Computer | Education |  | 28\nDell Optiplex\n3010 Intel \ncore i5, \n19.5 Inch \nDisplay Monitor - Pakwach District – Alwi SC – Alwi Seed School  |  | ALWI SEED S.S |  |  |  |  |  |  |  | Some are functional some are  | In use, 9 monitors and 10 System Units are not working "
+        },
+        {
+          "locator": "table 12, row 7",
+          "text": "Server UPS | Education |  | 1 Server UPS - Pakwach District – Alwi SC – Alwi Seed School |  |  |  |  |  |  |  |  |  | Functional  | Not working"
+        },
+        {
+          "locator": "table 12, row 8",
+          "text": "UPS | Education |  | 20   \nIntex \nLW UPS 850 - Pakwach District – Alwi SC – Alwi Seed School |  | ALWI SEED S.S |  |  |  |  |  |  |  | Non-Functional | Not working"
+        },
+        {
+          "locator": "table 12, row 11",
+          "text": "CCTV Camera | Education |  | 13 CCTV \nCamera - Pakwach District – Alwi SC – Alwi Seed School |  |  |  |  |  |  |  |  |  | Non-Functional  | Only 1 is in use and functional "
+        }
+      ],
+      "audit_note": "The document contains two facilities. Only the school interview and school tables 10 and 12 support this case. Use item-level remarks over the conflicting Functional label on the server power-backup row. Twelve failed cameras is derived from 13 present and only one functional."
+    },
+    "AD05": {
+      "path": "raw-data-grouped/team-01/Pakwach/Wadelai-Seed-Secondary-School/ZOMBO AMWONYO & WADELAI 2.docx",
+      "excerpts": [
+        {
+          "locator": "table 10, row 1",
+          "text": "4 | How has the UgIFT support helped in service delivery in the area, any issues, challenges and any recommendations for better program implementation. | The setup of the school structures has created room for academic progress in the community i.e., featuring science labs, staff quarters, and modern sanitation blocks that will completely revolutionize rural education service delivery. However, there is an issue with the solar panel and it has hindered the usage of the electric assets. As well there is a broken water tank stand which poses a threat to students. Need support for a reliable power supply."
+        },
+        {
+          "locator": "table 12, row 2",
+          "text": "Desktop Computer | Education |  | 20\nDell Vostro \n3030 Intel \ncore i5, \n19.5 Inch \nDisplay Monitor - Pakwach District – Wadelai SC – Wadelai Seed School  |  | Not engraved | 10/10/25 |  |  | 4,100,000 |  |  |  | Functional  | In use Cost amount is for 1 item"
+        },
+        {
+          "locator": "table 13, row 11",
+          "text": "Water tanks | Education |  | 4, (5000) plastic water tanks – Pakwach District, Wadelai SC, Wadelai Seed SS  |  | Not engraved |  |  |  |  |  |  |  | Functional | In use however, 1 the water tank stand is broken"
+        }
+      ],
+      "audit_note": "The document also covers Amwonyo Health Centre. This case uses only the Wadelai school interview and tables. Working computers do not establish continuous use where the interview reports a solar fault."
+    },
+    "AD06": {
+      "path": "raw-data-grouped/team-12/Budaka/_district-documents/Budaka-local-government-report.docx",
+      "excerpts": [
+        {
+          "locator": "paragraph 55",
+          "text": "Nansanga Seed Secondary School has no reliable power and 27 of 28 desktops remain packed."
+        }
+      ],
+      "audit_note": ""
+    },
+    "AD07": {
+      "path": "raw-data-grouped/team-12/Butaleja/Muhula-Seed-Secondary-School/Butaleja-school-Muhula-Seed-Secondary-School.docx",
+      "excerpts": [
+        {
+          "locator": "paragraph 5",
+          "text": "The school was photographed and a hand-filled toolkit that names it is on file. The guide spells the name MUHUVLA; the schedules spell MUHULA. The programme list names Kachonga. No visitors' register was seen. The contractor has not handed the site over, so the school is not operating."
+        },
+        {
+          "locator": "paragraph 14",
+          "text": "The air conditioner set is incomplete, the fan missing, and still in its box. Buildings already show cracks while the contractor claims the works finished."
+        },
+        {
+          "locator": "table 2, row 3",
+          "text": "Functionality | Furniture and most ICT items recorded as new and not yet tested. A printer and a projector are recorded as in use. The water pump is installed and not yet working."
+        },
+        {
+          "locator": "table 2, row 4",
+          "text": "Usage / performance | Not in use. The contractor has not handed the school over."
+        }
+      ],
+      "audit_note": "The institution is described as not operating, but one printer and projector are separately marked in use. The case does not claim every item was unused. It does not resolve programme naming Kachonga/Muhula; that belongs to reconciliation."
+    },
+    "AD08": {
+      "path": "raw-data-grouped/team-13/Tororo/Sop-Sop-HC-III/Tororo-health-centre-Sop-Sop-HC-III.docx",
+      "excerpts": [
+        {
+          "locator": "paragraph 16",
+          "text": "The discussion guide was answered. The informant says much of the equipment delivered is still in the store because staff lack knowledge of how to operate it, and asks for training, more staff and fencing."
+        },
+        {
+          "locator": "table 2, row 4",
+          "text": "Usage / performance | Partly established. TB testing and maternity service have improved, but oxygen came without cylinders, staffing is low and the facility is not fenced."
+        }
+      ],
+      "audit_note": ""
+    },
+    "AD09": {
+      "path": "raw-data-grouped/team-14/Bududa/Bunamono-HC-III/Bududa-health-centre-Bunamono-HC-III.docx",
+      "excerpts": [
+        {
+          "locator": "paragraph 16",
+          "text": "The discussion guide on the booklet records that the facility holds a record of all the assets provided under the programme, that broken assets go to the store, and that nothing is written down about what has failed. It names the health services being closer to the people and the jobs the support brought, then the want of a water connection, a 5000 litre tank that does not work and a solar installation that is not finished. The assistant asked for the water tank to be put back into service and for the solar pump to be connected, so that the staff houses have water."
+        },
+        {
+          "locator": "table 2, row 3",
+          "text": "Functionality | Reported line by line on the hand-filled booklet, which runs the whole checklist. Most lines are working. Both digital blood pressure machines are not, one of the two aneroid machines is not, two of the four stethoscopes are not, one delivery bed and three MVA kits are broken, one examination light is broken, one filing cabinet is faulty and one glucometer has no strips. The water tank is not working and the solar that should pump it is not connected, so the staff houses have no water."
+        },
+        {
+          "locator": "table 2, row 4",
+          "text": "Usage / performance | Reported item by item in the remarks beside each line. Some assets are held new in the store rather than in service: the kick bowls, the bowl stands, four wall clocks and the ESR stand, which is still boxed because the staff could not set it up."
+        }
+      ],
+      "audit_note": "The instrument stand is described only as an ESR stand in the source; body wording avoids an unsupported expansion of the abbreviation."
+    },
+    "AD10": {
+      "path": "raw-data-grouped/team-25/Buliisa/Kihungya-Seed-Secondary-School/kihungya seed school.docx",
+      "excerpts": [
+        {
+          "locator": "table 5, row 1",
+          "text": "4 | How has the UgIFT support helped in service delivery in the area, any issues, challenges and any recommendations for better program implementation. | It has brought free education services to people within the area.\nOffered jobs to people around the school and market for their agricultural products\nChallenegs \nSchool is under construction and most structures not ready for use.\nNo eletricity to run the ICT sessions\nNo fence\nLack enough learning materials, were given study material for only physics , chemistry, Bisology and math S1 & S2\nNo water which affects sanitation\nRecommendations\nGive gaurds to have safety of the values provided and  a fence (chain link).\nDrill water\n\n\n\n\n"
+        },
+        {
+          "locator": "table 8, row 3",
+          "text": "Admin block |  | 1 | Office & staff room |  |  |  |  |  |  |  |  |  | IN USE | "
+        },
+        {
+          "locator": "table 8, row 9",
+          "text": "Science block |  | 1 | 2 sections of lab chemisry and Boilogy lab |  |  |  |  |  |  |  |  |  | Not in use | Under construction"
+        },
+        {
+          "locator": "table 8, row 10",
+          "text": "Computer and library |  | 1 | 2 sections 1 computer lab\n1 library |  |  |  |  |  |  |  |  |  | Not in use | Under construction"
+        },
+        {
+          "locator": "table 8, row 11",
+          "text": "Staff quarters |  | 3 | 2 units on each block with kicthen and toilet |  |  |  |  |  |  |  |  |  | Incomplete | Under construction"
+        }
+      ],
+      "audit_note": "The administration block is marked in use, so the whole school must not be called unopened. The unfinished laboratories and staff quarters are specific."
+    },
+    "AD11": {
+      "path": "raw-data-grouped/team-25/Buliisa/Kihungya-HC-III/BULIISA KIHUNGYA HC III ASSET VERIFICATION AND RECORDING TOOL KIT 222.docx",
+      "excerpts": [
+        {
+          "locator": "table 5, row 1",
+          "text": "4 | How has the UgIFT support helped in service delivery in the area, any issues, challenges and any recommendations for better program implementation. | The UgIFT support  has helped the facility with good service delivery.\nEfficient health care due to the expansion and renovation of more facilities and new buildings.\nAccommodation of staff member has made work easy for health care workers.\nPatients well being.\nEnough space to take in more patients than before.\nAvailability of electricity due to the construction of the solar power house."
+        },
+        {
+          "locator": "table 6, row 73",
+          "text": "Stove, Gas | HEALTH |  | Heats water or sterilizes |  | Not\nEngraved |  |  |  |  |  |  |  | FUNCTIONAL | At the sub- county"
+        },
+        {
+          "locator": "table 6, row 142",
+          "text": "Suction Apparatus, (Electric) | \nHEALTH |  | Removes fluid/secretions from airway |  | \nNot\nEngraved |  | \n |  |  |  |  |  | \nFUNCTIONAL | At the sub- county"
+        },
+        {
+          "locator": "table 6, row 186",
+          "text": "Stool, Laboratory | \nHEALTH |  | Seating for laboratory staff |  | Not\nEngraved |  |  |  |  |  |  |  | FUNCTIONAL | At the sub- county"
+        },
+        {
+          "locator": "table 6, row 196",
+          "text": "Centrifuge (Electric) | \nHEALTH |  | Spins blood samples |  | Not\nEngraved |  | \n |  |  |  |  |  | \nFUNCTIONAL | At the sub- county"
+        },
+        {
+          "locator": "table 6, row 262",
+          "text": "Non Residential Buildings | \nHEALTH |  | TOILETS\nPLACENTER PIT\nSOLAR POWER HOUSE |  |  |  |  |  |  |  |  |  | FUNCTIONAL | All in use and good condition"
+        },
+        {
+          "locator": "table 6, row 265",
+          "text": "Residential Buildings | \nHEALTH |  | STAFF QUARTERS\nMULTIPURPOSE BUILDING |  |  |  |  |  |  |  |  |  | \nFUNCTIONAL | All are in use and in good condithion"
+        }
+      ],
+      "audit_note": "Interview evidence is reported experience, not measured patient outcomes. Location At the sub-county does not by itself prove loss or diversion; action calls for confirmation and appropriate deployment."
+    },
+    "AD12": {
+      "path": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "excerpts": [
+        {
+          "locator": "MoFPED worksheet, row 3",
+          "selected_cells": {
+            "2": "Lenovo Desktop Computer",
+            "4": "Budget Policy and Evaluation Dep't-UGIFT-MOFPED",
+            "6": "V5BYC581",
+            "7": "Lenovo Monitor 21.5Inch V50131MB",
+            "9": "UGIFT-BPED/MON/21-01",
+            "17": "Functioning",
+            "18": "Most of the computers are in good condition and working well, expect others where we found out that some of the accessories like keyboard and the UPS are spoilt and other computers have started freezing especially those acquired in the first years of the programme.\n\nSome of the staff lost thier laptops and we managed to get police letter confirming the case number.\n\nsome of the staff intentionally refuse thier gadgets like laptops to be engraved",
+            "19": "MOFPED"
+          }
+        }
+      ],
+      "audit_note": "A narrative remark summarises several computers and laptops; it must not be treated as a count attached to the single row. The same material is copied into the MoWT worksheet from row 60; the institution field and dedicated MoFPED sheet establish ownership. No claim of intentional misconduct is needed in the report."
+    },
+    "AD13": {
+      "path": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "excerpts": [
+        {
+          "locator": "MoFPED worksheet, row 82",
+          "selected_cells": {
+            "2": "Office Chair 1400D * 600MM",
+            "4": "Budget Policy and Evaluation Dep't-UGIFT-MOFPED",
+            "6": "Chair",
+            "7": "Office Chairs Dimension W700HX Black",
+            "9": "UGIFT-BPED/CHR/23-01",
+            "17": "",
+            "18": "All furniture was left in the old building since the new building where Ugift staff were transferred had its own new furniture and fixtures.\n\nThe old items were left in store and others distributed to offices were we did not have access to.",
+            "19": "MOFPED"
+          }
+        }
+      ],
+      "audit_note": "The remark describes furniture collectively. Do not state a total quantity or that all furniture is idle: some was redistributed and access was not obtained. Duplicate text at MoWT row 139 still belongs to MoFPED."
+    },
+    "AD14": {
+      "path": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "excerpts": [
+        {
+          "locator": "OPM worksheet, row 3",
+          "selected_cells": {
+            "1": "HP Laptop Envy i3",
+            "3": "LG M & E",
+            "4": "CND1518LXZ",
+            "5": "HP Laptop",
+            "6": "HP Envy i3-BA1073NE",
+            "8": "UGIFT-LGMSD/LT/22-01",
+            "16": "fair condition",
+            "17": "This laptop though of good quality, its capacity is lower than the volume of work that the officer handles."
+          }
+        },
+        {
+          "locator": "OPM worksheet, row 4",
+          "selected_cells": {
+            "1": "HP Laptop Envy i3",
+            "3": "LG M & E",
+            "4": "CND1518LX4",
+            "5": "HP Laptop",
+            "6": "HP Envy i3-BA1073NE",
+            "8": "UGIFT-LGMSD/LT/22-02",
+            "16": "fair condition",
+            "17": "This laptop though of good quality, its capacity is lower than the volume of work that the officer handles."
+          }
+        },
+        {
+          "locator": "OPM worksheet, row 5",
+          "selected_cells": {
+            "1": "HP Laptop Envy i3",
+            "3": "LG M & E",
+            "4": "CND1518LX6",
+            "5": "HP Laptop",
+            "6": "HP Envy i3-BA1073NE",
+            "8": "UGIFT-LGMSD/LT/22-03",
+            "16": "fair condition",
+            "17": "This laptop though of good quality, its capacity is lower than the volume of work that the officer handles."
+          }
+        },
+        {
+          "locator": "OPM worksheet, row 6",
+          "selected_cells": {
+            "1": "HP Laptop Envy i3",
+            "3": "LG M & E",
+            "4": "CND1518LYJ",
+            "5": "HP Laptop",
+            "6": "HP Envy i3-BA1073NE",
+            "8": "UGIFT-LGMSD/LT/22-04",
+            "16": "fair condition",
+            "17": "This laptop though of good quality, its capacity is lower than the volume of work that the officer handles."
+          }
+        }
+      ],
+      "audit_note": "This is a user assessment of capacity relative to workload, separate from the damaged unused laptops already in the report. Do not invent a benchmark test or the particular software involved."
+    },
+    "AD15": {
+      "path": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "excerpts": [
+        {
+          "locator": "MoWT worksheet, row 5",
+          "selected_cells": {
+            "2": "Kyocera 5054ci Photocopier",
+            "4": "MoWT-Department of Public Structures",
+            "6": "",
+            "7": "Taskalfa 5004i",
+            "9": "UGIFT-MOWT/PHC/22-01",
+            "17": "Delivered, installed \nand well functioning",
+            "18": "The UGIFT secretariat at \nthe MoWT are able to carryout their work smoothly using these Printers",
+            "19": "MOWT"
+          }
+        },
+        {
+          "locator": "MoWT worksheet, row 34",
+          "selected_cells": {
+            "2": "Huwaei Video ConferencingEquipment",
+            "4": "MoWT-Department of Public Structures",
+            "6": "2155151014XHQ6000271",
+            "7": "Huawei Video conferencing equipment; 65'' smart screen, microphones, speaker and touch pens",
+            "9": "Not engraved",
+            "17": "Delivered, Installed and Functioning",
+            "18": "The equipment was not recorded in the UGIFT asset register provided by the Ministry of Finance and not engraved because of its appearance and ……..",
+            "19": "MOWT"
+          }
+        }
+      ],
+      "audit_note": "Use direct delivered/installed/functioning and engraving observations. The apparently future service date on row 5 is not repeated. Do not attribute the MoFPED section copied later in this worksheet to MoWT."
+    },
+    "AD16": {
+      "path": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "excerpts": [
+        {
+          "locator": "MoH worksheet, row 3",
+          "selected_cells": {
+            "2": "Printer",
+            "4": "Engineering",
+            "6": "Newly purchased ICT equipment",
+            "7": "Kyocera Heavy duty Colour Copier & Printer - MoH - Industrial area office",
+            "9": "TASKalfa 4053Ci",
+            "17": "In user & good condition",
+            "18": "Not engraved",
+            "19": "MoH"
+          }
+        },
+        {
+          "locator": "MoH worksheet, row 4",
+          "selected_cells": {
+            "2": "Printer",
+            "4": "RBF",
+            "6": "Newly purchased ICT equipment",
+            "7": "Kyocera Heavy duty Colour Copier & Printer - MoH - H/Q - Mainbuilding",
+            "9": "TASKalfa 6003Ci",
+            "17": "In user & good condition",
+            "18": "Not engraved",
+            "19": "MoH"
+          }
+        },
+        {
+          "locator": "MoH worksheet, row 16",
+          "selected_cells": {
+            "2": "Laptop",
+            "4": "RBF",
+            "6": "Newly purchased ICT equipment",
+            "7": "Lenova Laptop - MoH - H/Q - Mainbuilding",
+            "9": "No engravement",
+            "17": "In user & good condition",
+            "18": "",
+            "19": "MoH"
+          }
+        }
+      ],
+      "audit_note": "The finding is limited to the two identified printers and one laptop. Other laptops have programme engravings. It is not a ministry-wide assertion that all equipment is unmarked."
+    },
+    "AD17": {
+      "path": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "excerpts": [
+        {
+          "locator": "NEMA worksheet, row 2",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "Exective Directors office",
+            "4": "Not engraved",
+            "5": "Lenovo Think pad i7",
+            "6": "Computer",
+            "8": "None",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "NEMA worksheet, row 3",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "Environment Audit",
+            "4": "Not engraved",
+            "5": "Lenovo Think pad i7",
+            "6": "Computer",
+            "8": "None",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "NEMA worksheet, row 4",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "Environal Audit",
+            "4": "Not engraved",
+            "5": "Lenovo Think pad i7",
+            "6": "Computer",
+            "8": "None",
+            "16": "Funtional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "NEMA worksheet, row 5",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "Environmental Audit",
+            "4": "Not engraved",
+            "5": "Lenovo Think pad i7",
+            "6": "Computer",
+            "8": "None",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "NEMA worksheet, row 6",
+          "selected_cells": {
+            "1": "Printer",
+            "3": "Nema General",
+            "4": "Not engraved",
+            "5": "Kyocera TASK 5054ci",
+            "6": "Heavy duty printer",
+            "8": "None",
+            "16": "Funtional",
+            "17": ""
+          }
+        }
+      ],
+      "audit_note": "The five listed items are four laptops and one printer. The status wording is direct in the inspection return, not the later default condition classification. No claim about all authority holdings is made."
+    },
+    "AD18": {
+      "path": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "excerpts": [
+        {
+          "locator": "MoWE worksheet, row 703",
+          "selected_cells": {
+            "1": "Apple Tablets",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "8": "Not Engraved",
+            "16": "",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoWE worksheet, row 704",
+          "selected_cells": {
+            "1": "Apple Tablets",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "8": "Not Engraved",
+            "16": "",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoWE worksheet, row 705",
+          "selected_cells": {
+            "1": "Apple Tablets",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "8": "Not Engraved",
+            "16": "",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoWE worksheet, row 706",
+          "selected_cells": {
+            "1": "Apple Tablets",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "8": "Not Engraved",
+            "16": "",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoWE worksheet, row 707",
+          "selected_cells": {
+            "1": "Apple Tablets",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "8": "Not Engraved",
+            "16": "",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoWE worksheet, row 708",
+          "selected_cells": {
+            "1": "Apple Tablets",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "8": "Not Engraved",
+            "16": "",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoWE worksheet, row 709",
+          "selected_cells": {
+            "1": "Apple Tablets",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "8": "Not Engraved",
+            "16": "",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoWE worksheet, row 710",
+          "selected_cells": {
+            "1": "Apple Tablets",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "8": "Not Engraved",
+            "16": "",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoWE worksheet, row 711",
+          "selected_cells": {
+            "1": "Apple Tablets",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "8": "Not Engraved",
+            "16": "",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoWE worksheet, row 712",
+          "selected_cells": {
+            "1": "Apple Tablets",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "8": "Not Engraved",
+            "16": "",
+            "17": ""
+          }
+        }
+      ],
+      "audit_note": "Ten separate one-unit Apple tablet rows explicitly say Not Engraved. Their functionality cells are blank, so no assertion about use, performance or condition is supported."
+    }
+  }
+}
+```
+
+
+## Revision evidence: narrative/national_supporting_descriptions.json
+
+```json
+{
+  "MAAIF BK": {
+    "paragraphs": [
+      "The ministry had working laptops and printers carrying programme asset identifiers. Keeping those identifiers linked to the equipment and its custodian will support continued accountability after programme closure. Routine condition checks should identify new faults and keep usable equipment in service."
+    ],
+    "private_audit": {
+      "path": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "excerpts": [
+        {
+          "locator": "MAAIF worksheet, row 4",
+          "selected_cells": {
+            "2": "Laptops",
+            "4": "",
+            "6": "PF3VD5K3-LAPTOP",
+            "7": "LENOVO THINKPAD 11TH GEN INTEL® CORE TM(I7) 2.8GHZ 16GRAM ROM 1T",
+            "9": "UGIFT-MAAIF/LT/23-04",
+            "17": "Good working condition",
+            "18": "",
+            "19": "MAAIF"
+          }
+        },
+        {
+          "locator": "MAAIF worksheet, row 5",
+          "selected_cells": {
+            "2": "Laptops",
+            "4": "",
+            "6": "PF3V8R8L-",
+            "7": "LENOVO THINKPAD 11TH GEN INTEL® CORE TM(I7) 2.8GHZ 16GRAM ROM 1T",
+            "9": "UGIFT-MAAIF/LT/23-02",
+            "17": "Good working condition",
+            "18": "",
+            "19": "MAAIF"
+          }
+        },
+        {
+          "locator": "MAAIF worksheet, row 6",
+          "selected_cells": {
+            "2": "Laptops",
+            "4": "",
+            "6": "PF3V8R85",
+            "7": "LENOVO THINKPAD 11TH GEN INTEL® CORE TM(I7) 2.8GHZ 16GRAM ROM 1T",
+            "9": "UGIFT-MAAIF/LT/23-01",
+            "17": "Good working condition",
+            "18": "",
+            "19": "MAAIF"
+          }
+        },
+        {
+          "locator": "MAAIF worksheet, row 7",
+          "selected_cells": {
+            "2": "Laptops",
+            "4": "",
+            "6": "PF3TR6E8",
+            "7": "LENOVO THINKPAD 11TH GEN INTEL® CORE TM(I7) 2.8GHZ 16GRAM ROM 1T",
+            "9": "UGIFT-MAAIF/LT/23-03",
+            "17": "Good working condition",
+            "18": "",
+            "19": "MAAIF"
+          }
+        },
+        {
+          "locator": "MAAIF worksheet, row 205",
+          "selected_cells": {
+            "2": "Printers",
+            "4": "",
+            "6": "",
+            "7": "HP LaserJet Pro MFP 4103fdw - Black",
+            "9": "UGIFT-MAAIF/PR/25/001",
+            "17": "Good working condition",
+            "18": "",
+            "19": "MAAIF"
+          }
+        },
+        {
+          "locator": "MAAIF worksheet, row 206",
+          "selected_cells": {
+            "2": "Printers",
+            "4": "",
+            "6": "",
+            "7": "HP LaserJet Pro MFP 4103fdw - Black",
+            "9": "UGIFT-MAAIF/PR/25/002",
+            "17": "Good working condition",
+            "18": "",
+            "19": "MAAIF"
+          }
+        },
+        {
+          "locator": "MAAIF worksheet, row 207",
+          "selected_cells": {
+            "2": "Printers",
+            "4": "",
+            "6": "",
+            "7": "HP LaserJet Pro MFP 4103fdw - Black",
+            "9": "UGIFT-MAAIF/PR/25/003",
+            "17": "Good working condition",
+            "18": "",
+            "19": "MAAIF"
+          }
+        },
+        {
+          "locator": "MAAIF worksheet, row 208",
+          "selected_cells": {
+            "2": "Printers",
+            "4": "",
+            "6": "",
+            "7": "HP LaserJet Pro MFP 4103fdw - color",
+            "9": "UGIFT-MAAIF/PR/25/004",
+            "17": "Good working condition",
+            "18": "",
+            "19": "MAAIF"
+          }
+        },
+        {
+          "locator": "MAAIF worksheet, row 209",
+          "selected_cells": {
+            "2": "Printers",
+            "4": "",
+            "6": "",
+            "7": "HP LaserJet Pro MFP 4103fdw - color",
+            "9": "UGIFT-MAAIF/PR/25/005",
+            "17": "Good working condition",
+            "18": "",
+            "19": "MAAIF"
+          }
+        },
+        {
+          "locator": "MAAIF worksheet, row 210",
+          "selected_cells": {
+            "2": "Printers",
+            "4": "",
+            "6": "",
+            "7": "Kyocera Taskalfa 6003i Multifunction Monochrome Printer (Print/Scan/Copy/Fax),",
+            "9": "UGIFT-MAAIF/PH/25/01",
+            "17": "Good working condition",
+            "18": "",
+            "19": "MAAIF"
+          }
+        }
+      ],
+      "note": "Direct condition and tag fields support this positive example. It is not a claim that every MAAIF asset was tested or that an existing maintenance programme was demonstrated. The first four laptop rows and six printer/copier rows provide examples rather than a total of all holdings."
+    }
+  },
+  "MGLSD BK": {
+    "paragraphs": [
+      "Laptops serving Finance and Administration were functional and engraved. Two tablets, one for Finance and Administration and the other for Youth and Children Affairs, were functional but unengraved. The ministry should mark the tablets and link their identifiers to the units and officers responsible for them."
+    ],
+    "private_audit": {
+      "path": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "excerpts": [
+        {
+          "locator": "MoGLSD worksheet, row 3",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "Finance and Administration",
+            "4": "Engraved",
+            "5": "Lenovo ThinkBook Laptop 14 Gi7 IML-21MR",
+            "6": "Computer",
+            "8": "008/UGIFT/LT/001",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoGLSD worksheet, row 4",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "Finance and Administration",
+            "4": "Engraved",
+            "5": "Lenovo ThinkBook Laptop 14 Gi7 IML-21MR",
+            "6": "Computer",
+            "8": "008/UGIFT/LT/002",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoGLSD worksheet, row 5",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "Finance and Administration",
+            "4": "Engraved",
+            "5": "Lenovo ThinkBook Laptop 14 Gi7 IML-21MR",
+            "6": "Computer",
+            "8": "008/UGIFT/LT/003",
+            "16": "Funtional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoGLSD worksheet, row 6",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "Finance and Administration",
+            "4": "Engraved",
+            "5": "Lenovo ThinkBook Laptop 14 Gi7 IML-21MR",
+            "6": "Computer",
+            "8": "008/UGIFT/LT/004",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoGLSD worksheet, row 7",
+          "selected_cells": {
+            "1": "Tablet",
+            "3": "Finance and Administration",
+            "4": "Not Engraved",
+            "5": "Samsung galaxy Tab A7 light",
+            "6": "Tablet",
+            "8": "None",
+            "16": "Funtional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoGLSD worksheet, row 8",
+          "selected_cells": {
+            "1": "Tablet",
+            "3": "Youth and Children affairs",
+            "4": "Not Engraved",
+            "5": "Samsung galaxy Tab A7 light",
+            "6": "Tablet",
+            "8": "None",
+            "16": "Funtional",
+            "17": ""
+          }
+        }
+      ],
+      "note": "Four laptop rows explicitly say Engraved; two tablet rows explicitly say Not Engraved. Both classes have direct functional statuses. Source purchase dates advance by one year per row and include future years; those dates are not used."
+    }
+  },
+  "PPDA BK": {
+    "paragraphs": [
+      "The authority had functioning laptops, a tablet and a printer assigned to its legal and strategy/planning units. These items carried programme identifiers. The authority should keep the identifiers linked to current custodians and update custody whenever equipment moves between units."
+    ],
+    "private_audit": {
+      "path": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "excerpts": [
+        {
+          "locator": "PPDA worksheet, row 2",
+          "selected_cells": {
+            "1": "Lenovo Thinkpad Notebook P14s",
+            "3": "Legal",
+            "4": "",
+            "5": "Lenovo Notebook P14s",
+            "6": "Computer",
+            "8": "UGFT-PPDA/LT/24-01",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "PPDA worksheet, row 3",
+          "selected_cells": {
+            "1": "Lenovo Thinkpad Notebook P14s",
+            "3": "Strategy/Planning",
+            "4": "",
+            "5": "Lenovonote book P14s",
+            "6": "Computer",
+            "8": "UGFT-PPDA/LT/24/02",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "PPDA worksheet, row 4",
+          "selected_cells": {
+            "1": "Lenovo Thinkpad Notebook P14s",
+            "3": "Strategy/Planning",
+            "4": "",
+            "5": "Lenovo Notebook P14s",
+            "6": "Computer",
+            "8": "UGFT-PPDA/LT/24-03",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "PPDA worksheet, row 5",
+          "selected_cells": {
+            "1": "Samsung Galaxy Tab S9 Ultra",
+            "3": "Strategy/Planning",
+            "4": "",
+            "5": "Samsung Galaxy Tab S9 Ultra Tablet",
+            "6": "Tab",
+            "8": "UGFT-PPDA/TB/24-01",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "PPDA worksheet, row 6",
+          "selected_cells": {
+            "1": "HP Laserjet Pro MFP Printer",
+            "3": "Legal",
+            "4": "",
+            "5": "Printer",
+            "6": "HP Laserjet Pro MFP Printer-4103fdw",
+            "8": "UGFT-PPDA/PRT/24-01",
+            "16": "Functional",
+            "17": ""
+          }
+        }
+      ],
+      "note": "Three laptops, one tablet and one printer are explicitly functional with UgIFT identifiers in the inspection return. No claim is made about procurement efficiency or other measured service outcomes. This prose describes the items directly rather than the master register category split of three Other and two ICT entries."
+    }
+  },
+  "OAG BK": {
+    "paragraphs": [
+      "The office had working laptops, printers and two pickup vehicles. The pickups had changed registration numbers. The office should retain the link between the earlier and current registrations, the chassis numbers and the assigned custodians so that each vehicle remains traceable."
+    ],
+    "private_audit": {
+      "path": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "excerpts": [
+        {
+          "locator": "OAG worksheet, row 3",
+          "selected_cells": {
+            "1": "Laptop",
+            "3": "Office of the Auditor General",
+            "4": "FM2YR14",
+            "5": "Dell XPS 15 I7 Laptop",
+            "6": "Dell XPS 15 9530 I7 13TH Gen 32GB 1TB Win 11 PRO",
+            "8": "UGIFT-OAG-HQT-LT-24-081",
+            "16": "Well Functioning",
+            "17": ""
+          }
+        },
+        {
+          "locator": "OAG worksheet, row 4",
+          "selected_cells": {
+            "1": "Laptop",
+            "3": "Office of the Auditor General",
+            "4": "31WXR14",
+            "5": "Dell XPS 15 I7 Laptop",
+            "6": "Dell XPS 15 9530 I7 13TH Gen 32GB 1TB Win 11 PRO",
+            "8": "UGIFT-OAG-HQT-LT-24-092",
+            "16": "Well Functioning",
+            "17": ""
+          }
+        },
+        {
+          "locator": "OAG worksheet, row 5",
+          "selected_cells": {
+            "1": "Laptop",
+            "3": "Office of the Auditor General",
+            "4": "4WTYR14",
+            "5": "Dell XPS 15 I7 Laptop",
+            "6": "Dell XPS 15 9530 I7 13TH Gen 32GB 1TB Win 11 PRO",
+            "8": "UGIFT-OAG-HQT-LT-24-093",
+            "16": "Well Functioning",
+            "17": ""
+          }
+        },
+        {
+          "locator": "OAG worksheet, row 16",
+          "selected_cells": {
+            "1": "Printer",
+            "3": "Office of the Auditor General",
+            "4": "CZBBT4J0FH",
+            "5": "HP Color Printer",
+            "6": "HP Colored Laserjet Printer MFP 5800dn",
+            "8": "OAG-HQT-PRT-25-011",
+            "16": "Well Functioning",
+            "17": ""
+          }
+        },
+        {
+          "locator": "OAG worksheet, row 17",
+          "selected_cells": {
+            "1": "Printer",
+            "3": "Office of the Auditor General",
+            "4": "CZBBT4618L",
+            "5": "HP Color Printer",
+            "6": "HP Colored Laserjet Printer MFP 5800dn",
+            "8": "OAG-HQT-PRT-25-012",
+            "16": "Well Functioning",
+            "17": ""
+          }
+        },
+        {
+          "locator": "OAG worksheet, row 18",
+          "selected_cells": {
+            "1": "Vechicle",
+            "3": "",
+            "4": "GUN126R-D77HX",
+            "5": "Toyota Hilux Double Cabin",
+            "6": "MROBA3CD300170246 GUN126R-D77HX, Eng. No. 1GD5308162, Yr of Man. 2023 Eng Cap. 2755cc, Color; Grey Metallic",
+            "8": "UG2300011",
+            "16": "Well Functioning",
+            "17": "There was change in the number plate"
+          }
+        },
+        {
+          "locator": "OAG worksheet, row 19",
+          "selected_cells": {
+            "1": "Vechicle",
+            "3": "",
+            "4": "GUN126R-D77HX",
+            "5": "Toyota Hilux Double Cabin",
+            "6": "MROBA3CD400169364,GUN126R-D77HX, Eng. No. 1GD5313181, Yr of Man. 2023 Eng Cap. 2755cc, Color; Grey Metallic",
+            "8": "UG2300054",
+            "16": "Well Functioning",
+            "17": "There was change in the number plate"
+          }
+        }
+      ],
+      "note": "Rows 3–5 are laptop examples, rows 16–17 printer examples, and rows 18–19 the pickups. Both pickup remarks explicitly record changed number plates. Working condition comes from the direct inspection entries rather than a later default classification. No particular former registration is invented."
+    }
+  },
+  "MOLG BK": {
+    "paragraphs": [
+      "The District Administration unit had a working pickup, photocopier and computer equipment. Two laptops and a desktop set, including its keyboard and mouse, lacked engraving. The ministry should mark the unengraved equipment and confirm its location and custodian while keeping the working assets in service."
+    ],
+    "private_audit": {
+      "path": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "excerpts": [
+        {
+          "locator": "MoLG worksheet, row 2",
+          "selected_cells": {
+            "1": "VECHICLES",
+            "3": "District Administration",
+            "4": "ACVDSCJRXJ4027187",
+            "5": "Motor Vechicle",
+            "6": "Pick up-Double cabin",
+            "8": "UG3400003",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoLG worksheet, row 3",
+          "selected_cells": {
+            "1": "Copier",
+            "3": "District Administration",
+            "4": "",
+            "5": "Heavy Duty Photocopier",
+            "6": "Kyocera Tasklafa Copier 6054CI-MFP",
+            "8": "UGIFT-MOLG/PHC/23-01",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoLG worksheet, row 4",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "District Administration",
+            "4": "",
+            "5": "Lenovo Think Monitor",
+            "6": "ThinkVision 27inch M70t Gen3 Monitor",
+            "8": "UGFT-MOLG/MON/24-01",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoLG worksheet, row 5",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "District Administration",
+            "4": "",
+            "5": "Keyboard",
+            "6": "Lenovo Kyboard",
+            "8": "UGFT-MOLG/KB/24-01",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoLG worksheet, row 6",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "District Administration",
+            "4": "",
+            "5": "CPU",
+            "6": "Lenovo ThinkCentre neo 50t Gen 4 Core i7-13700,1TB, 11 Pro",
+            "8": "UGFT-MOLG/CPU/24-01",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoLG worksheet, row 7",
+          "selected_cells": {
+            "1": "Laptop",
+            "3": "District Administration",
+            "4": "",
+            "5": "Lenovo Notebook Thinkbook-14, Yoga Gen3, Bag, Wireless Mouse",
+            "6": "Lenovo Notebook Thinkbook",
+            "8": "UGFT-MOLG/LT/24-01",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoLG worksheet, row 8",
+          "selected_cells": {
+            "1": "Laptop",
+            "3": "District Administration",
+            "4": "",
+            "5": "Lenovo Notebook Thinkbook-14, Yoga Gen3, Bag, Wireless Mouse",
+            "6": "Lenovo Notebook Thinkbook",
+            "8": "UGFT-MOLG/LT/24-02",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoLG worksheet, row 9",
+          "selected_cells": {
+            "1": "Laptop",
+            "3": "District Administration",
+            "4": "",
+            "5": "Lenovo Thinkpad",
+            "6": "Lenovo Thinkpad Laptop",
+            "8": "Not engraved",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoLG worksheet, row 10",
+          "selected_cells": {
+            "1": "Laptop",
+            "3": "District Administration",
+            "4": "",
+            "5": "HP Spectre X360",
+            "6": "HP Spectre X360 Laptop",
+            "8": "Not engraved",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoLG worksheet, row 11",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "District Administration",
+            "4": "",
+            "5": "HP all-in-One Desktop",
+            "6": "HP all-in-One Desktop -13th Gen Corei7-1355u, 16GB",
+            "8": "Not engraved",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoLG worksheet, row 12",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "District Administration",
+            "4": "",
+            "5": "Keyboard",
+            "6": "HP Keyboard",
+            "8": "Not engraved",
+            "16": "Functional",
+            "17": ""
+          }
+        },
+        {
+          "locator": "MoLG worksheet, row 13",
+          "selected_cells": {
+            "1": "Computer",
+            "3": "District Administration",
+            "4": "",
+            "5": "Mouse",
+            "6": "HP Mouse",
+            "8": "Not engraved",
+            "16": "Functional",
+            "17": ""
+          }
+        }
+      ],
+      "note": "Rows 2–8 describe working transport/office equipment with identifiers. Rows 9–13 explicitly say Not engraved and Functional: two laptops plus desktop, keyboard and mouse. The finding applies to these five items, not to all ministry assets."
+    }
+  }
 }
 ```
 
@@ -7926,3 +9875,437 @@ National source review: central-government programme documents contained distrib
 - Field point: The photograph documents an empty computer laboratory. The no-power finding comes from the supplied source label, rather than being inferred visually.
 - Theme: service delivery; dimensions: 1280 x 816 pixels.
 - Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+
+# Expanded field photograph sources
+
+50 additional photographs; IDs P36 onward. Karenga excluded. No generated photographs. Original source data unchanged. Cropping, rotation and downscaling only.
+
+All source paths and technical locators are audit material, not report captions. Loose photographs are attributed through the supplied district/facility folder. Captions describe visible assets and do not establish functionality, duration, causation or programme funding by appearance alone.
+
+## P36 — Solar panels at Kalemungole HC III, Moroto District (Karamoja).
+- Source: `raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/102_water-system-solar-panels-and-tanks_ref20260827-0369.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 102_water-system-solar-panels-and-tanks_ref20260827-0369.jpg.'}
+- Field point: Solar panels. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: utilities; crop fractions: [0.05, 0.23, 0.64, 0.9]; rotation: 0°; output: (637, 543).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_36_kalemungole_hc_iii_solar_panels.jpg`
+
+## P37 — Patient toilet block at Kalemungole HC III, Moroto District (Karamoja).
+- Source: `raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/108_patient-toilets_ref20260827-0367.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 108_patient-toilets_ref20260827-0367.jpg.'}
+- Field point: Patient toilet block. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: sanitation; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (810, 1080).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_37_kalemungole_hc_iii_patient_toilet_block.jpg`
+
+## P38 — Programme engraving on a weighing scale at Kalemungole HC III, Moroto District (Karamoja).
+- Source: `raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/10_engraving-weighing-scale_ref20260826-0429.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 10_engraving-weighing-scale_ref20260826-0429.jpg.'}
+- Field point: Programme engraving on a weighing scale. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: engraving; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1280, 720).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_38_kalemungole_hc_iii_programme_engraving_on_a_weighing_scale.jpg`
+
+## P39 — Programme engraving on a delivery bed at Kalemungole HC III, Moroto District (Karamoja).
+- Source: `raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/37_engraving-delivery-bed_ref20260826-0456.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 37_engraving-delivery-bed_ref20260826-0456.jpg.'}
+- Field point: Programme engraving on a delivery bed. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: engraving; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1280, 720).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_39_kalemungole_hc_iii_programme_engraving_on_a_delivery_bed.jpg`
+
+## P40 — Oxygen concentrator at Kalemungole HC III, Moroto District (Karamoja).
+- Source: `raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/40_oxygen-concentrator_ref20260826-0459.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 40_oxygen-concentrator_ref20260826-0459.jpg.'}
+- Field point: Oxygen concentrator. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: clinical equipment; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (540, 960).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_40_kalemungole_hc_iii_oxygen_concentrator.jpg`
+
+## P41 — Suction apparatus at Kalemungole HC III, Moroto District (Karamoja).
+- Source: `raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/50_suction-apparatus_ref20260826-0469.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 50_suction-apparatus_ref20260826-0469.jpg.'}
+- Field point: Suction apparatus. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: clinical equipment; crop fractions: [0, 0.12, 1, 0.87]; rotation: 0°; output: (540, 720).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_41_kalemungole_hc_iii_suction_apparatus.jpg`
+
+## P42 — Wheelchair with programme marking at Kalemungole HC III, Moroto District (Karamoja).
+- Source: `raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/69_wheelchair-marked-gou-moh-ugift_ref20260826-0488.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Moroto / Kalemungole-HC-III; original filename: 69_wheelchair-marked-gou-moh-ugift_ref20260826-0488.jpg.'}
+- Field point: Wheelchair with programme marking. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: clinical equipment; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (540, 960).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_42_kalemungole_hc_iii_wheelchair_with_programme_marking.jpg`
+
+## P43 — Borehole apron and pipework at Katikekire Seed School, Moroto District (Karamoja).
+- Source: `raw-data-grouped/team-10/Moroto/Katikekire-Seed-School/02_borehole-apron-and-pipework_ref20260826-0421.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Moroto / Katikekire-Seed-School; original filename: 02_borehole-apron-and-pipework_ref20260826-0421.jpg.'}
+- Field point: Borehole apron and pipework. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: utilities; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (810, 1080).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_43_katikekire_seed_school_borehole_apron_and_pipework.jpg`
+
+## P44 — Classroom furniture with school markings at Rupa Seed School, Moroto District (Karamoja).
+- Source: `raw-data-grouped/team-10/Moroto/Rupa-Seed-School/18_classroom-furniture-engraved-rupa-seed_ref20260909-photo-p08.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Moroto / Rupa-Seed-School; original filename: 18_classroom-furniture-engraved-rupa-seed_ref20260909-photo-p08.jpg.'}
+- Field point: Classroom furniture with school markings. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: engraving; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1240, 930).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_44_rupa_seed_school_classroom_furniture_with_school_markings.jpg`
+
+## P45 — Section of the science laboratory exterior at Iriiri Seed Secondary School, Napak District (Karamoja).
+- Source: `raw-data-grouped/team-10/Napak/Iriiri-Seed-Secondary-School/33_science-laboratory_ref20260827-0463.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Napak / Iriiri-Seed-Secondary-School; original filename: 33_science-laboratory_ref20260827-0463.jpg.'}
+- Field point: Section of the science laboratory exterior. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: buildings; crop fractions: [0.48, 0.28, 0.91, 0.73]; rotation: 0°; output: (430, 338).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_45_iriiri_seed_secondary_school_section_of_the_science_laboratory_exterior.jpg`
+
+## P46 — Water storage tanks at Lopei Seed Secondary School, Napak District (Karamoja).
+- Source: `raw-data-grouped/team-10/Napak/Lopei-Seed-Secondary-School/20_water-tanks_ref20260828-0562.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Napak / Lopei-Seed-Secondary-School; original filename: 20_water-tanks_ref20260828-0562.jpg.'}
+- Field point: Water storage tanks. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: utilities; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (810, 1080).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_46_lopei_seed_secondary_school_water_storage_tanks.jpg`
+
+## P47 — Boxed desktop computers at Alerek Seed Secondary School, Abim District (Karamoja).
+- Source: `raw-data-grouped/team-11/Abim/Alerek-Seed-Secondary-School/07_boxed-desktop-computers-in-the-store_ref0769.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Abim / Alerek-Seed-Secondary-School; original filename: 07_boxed-desktop-computers-in-the-store_ref0769.jpg.'}
+- Field point: Boxed desktop computers. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: storage; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1600, 1200).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_47_alerek_seed_secondary_school_boxed_desktop_computers.jpg`
+
+## P48 — Laboratory reagent containers at Alerek Seed Secondary School, Abim District (Karamoja).
+- Source: `raw-data-grouped/team-11/Abim/Alerek-Seed-Secondary-School/44_laboratory-chemicals-on-the-bench_ref0859.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Abim / Alerek-Seed-Secondary-School; original filename: 44_laboratory-chemicals-on-the-bench_ref0859.jpg.'}
+- Field point: Laboratory reagent containers. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: laboratory; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1600, 1200).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_48_alerek_seed_secondary_school_laboratory_reagent_containers.jpg`
+
+## P49 — Boxed printer and equipment at Sidok Seed Secondary School, Kaabong District (Karamoja).
+- Source: `raw-data-grouped/team-11/Kaabong/Sidok-Seed-Secondary-School/05_boxed-printer-and-equipment_ref0317.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kaabong / Sidok-Seed-Secondary-School; original filename: 05_boxed-printer-and-equipment_ref0317.jpg.'}
+- Field point: Boxed printer and equipment. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: storage; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1600, 1200).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_49_sidok_seed_secondary_school_boxed_printer_and_equipment.jpg`
+
+## P50 — Unfinished classroom block at Sidok Seed Secondary School, Kaabong District (Karamoja).
+- Source: `raw-data-grouped/team-11/Kaabong/Sidok-Seed-Secondary-School/16_classroom-block-under-construction_ref0316.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kaabong / Sidok-Seed-Secondary-School; original filename: 16_classroom-block-under-construction_ref0316.jpg.'}
+- Field point: Unfinished classroom block. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: construction; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1600, 1200).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_50_sidok_seed_secondary_school_unfinished_classroom_block.jpg`
+
+## P51 — Latrine block under construction at Sidok Seed Secondary School, Kaabong District (Karamoja).
+- Source: `raw-data-grouped/team-11/Kaabong/Sidok-Seed-Secondary-School/33_latrine-block-under-construction_ref0310.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kaabong / Sidok-Seed-Secondary-School; original filename: 33_latrine-block-under-construction_ref0310.jpg.'}
+- Field point: Latrine block under construction. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: construction; crop fractions: [0, 0, 1, 0.68]; rotation: 0°; output: (1600, 816).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_51_sidok_seed_secondary_school_latrine_block_under_construction.jpg`
+
+## P52 — Oxygen concentrator at Kamoru HC III, Kotido District (Karamoja).
+- Source: `raw-data-grouped/team-11/Kotido/Kamoru-HC-III/15_oxygen-concentrator_ref1167.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kotido / Kamoru-HC-III; original filename: 15_oxygen-concentrator_ref1167.jpg.'}
+- Field point: Oxygen concentrator. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: clinical equipment; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1200, 1600).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_52_kamoru_hc_iii_oxygen_concentrator.jpg`
+
+## P53 — Programme engraving on a table at Kamoru HC III, Kotido District (Karamoja).
+- Source: `raw-data-grouped/team-11/Kotido/Kamoru-HC-III/18_engraved-table-top_ref1107.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kotido / Kamoru-HC-III; original filename: 18_engraved-table-top_ref1107.jpg.'}
+- Field point: Programme engraving on a table. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: engraving; crop fractions: (0, 0, 1, 1); rotation: 180°; output: (1600, 1200).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_53_kamoru_hc_iii_programme_engraving_on_a_table.jpg`
+
+## P54 — Water storage tanks at Rengen Seed School, Kotido District (Karamoja).
+- Source: `raw-data-grouped/team-11/Kotido/Rengen-Seed-School/10_water-tanks-x2_ref0642.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kotido / Rengen-Seed-School; original filename: 10_water-tanks-x2_ref0642.jpg.'}
+- Field point: Water storage tanks. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: utilities; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1600, 900).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_54_rengen_seed_school_water_storage_tanks.jpg`
+
+## P55 — Medical-waste bins and ward beds at Butiaba HC III, Buliisa District (Bunyoro).
+- Source: `raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/dust bins.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Buliisa / Butiaba-HC-III; original filename: dust bins.jpg.'}
+- Field point: Medical-waste bins and ward beds. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: clinical equipment; crop fractions: (0, 0.18, 1, 1); rotation: 0°; output: (1600, 984).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_55_butiaba_hc_iii_medical_waste_bins_and_ward_beds.jpg`
+
+## P56 — Laboratory centrifuge at Butiaba HC III, Buliisa District (Bunyoro).
+- Source: `raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/IMG-20260907-WA0097.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Buliisa / Butiaba-HC-III; original filename: IMG-20260907-WA0097.jpg.'}
+- Field point: Laboratory centrifuge. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: laboratory; crop fractions: (0.08, 0.01, 1, 0.79); rotation: 0°; output: (1416, 1600).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_56_butiaba_hc_iii_laboratory_centrifuge.jpg`
+
+## P57 — Unfinished laboratory interior at Kihungya Seed Secondary School, Buliisa District (Bunyoro).
+- Source: `raw-data-grouped/team-25/Buliisa/Kihungya-Seed-Secondary-School/IMG-20260905-WA0028.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Buliisa / Kihungya-Seed-Secondary-School; original filename: IMG-20260905-WA0028.jpg.'}
+- Field point: Unfinished laboratory interior. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: construction; crop fractions: (0, 0.08, 1, 1); rotation: 0°; output: (1040, 718).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_57_kihungya_seed_secondary_school_unfinished_laboratory_interior.jpg`
+
+## P58 — Library interior under construction at Kihungya Seed Secondary School, Buliisa District (Bunyoro).
+- Source: `raw-data-grouped/team-25/Buliisa/Kihungya-Seed-Secondary-School/library.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Buliisa / Kihungya-Seed-Secondary-School; original filename: library.jpg.'}
+- Field point: Library interior under construction. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: construction; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1040, 780).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_58_kihungya_seed_secondary_school_library_interior_under_construction.jpg`
+
+## P59 — Stacked classroom furniture at King Solomon Seed Secondary School, Kagadi District (Bunyoro).
+- Source: `raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_115519_265.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_115519_265.jpg.'}
+- Field point: Stacked classroom furniture. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: storage; crop fractions: (0, 0.12, 1, 1); rotation: 0°; output: (1600, 1056).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_59_king_solomon_seed_secondary_school_stacked_classroom_furniture.jpg`
+
+## P60 — Classroom desks at King Solomon Seed Secondary School, Kagadi District (Bunyoro).
+- Source: `raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_115826_769.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_115826_769.jpg.'}
+- Field point: Classroom desks. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: school furniture; crop fractions: (0, 0.12, 1, 1); rotation: 0°; output: (1600, 1056).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_60_king_solomon_seed_secondary_school_classroom_desks.jpg`
+
+## P61 — School engraving on wooden furniture at King Solomon Seed Secondary School, Kagadi District (Bunyoro).
+- Source: `raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_115836_836.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_115836_836.jpg.'}
+- Field point: School engraving on wooden furniture. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: engraving; crop fractions: (0, 0.18, 1, 1); rotation: 0°; output: (1600, 984).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_61_king_solomon_seed_secondary_school_school_engraving_on_wooden_furniture.jpg`
+
+## P62 — Boxed projector and other equipment at King Solomon Seed Secondary School, Kagadi District (Bunyoro).
+- Source: `raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_120857_349.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_120857_349.jpg.'}
+- Field point: Boxed projector and other equipment. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: storage; crop fractions: (0.15, 0, 1, 0.96); rotation: 0°; output: (1600, 1355).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_62_king_solomon_seed_secondary_school_boxed_projector_and_other_equipment.jpg`
+
+## P63 — Gas cylinders and pipework at King Solomon Seed Secondary School, Kagadi District (Bunyoro).
+- Source: `raw-data-grouped/team-25/Kagadi/King-Solomon-Seed-Secondary-School/IMG_20260901_121503_686.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kagadi / King-Solomon-Seed-Secondary-School; original filename: IMG_20260901_121503_686.jpg.'}
+- Field point: Gas cylinders and pipework. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: utilities; crop fractions: (0, 0.08, 1, 0.98); rotation: 0°; output: (1333, 1600).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_63_king_solomon_seed_secondary_school_gas_cylinders_and_pipework.jpg`
+
+## P64 — Programme engraving on a table at Kyabasara HC III, Kagadi District (Bunyoro).
+- Source: `raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/IMG-20260908-WA0107.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kagadi / Kyabasara-HC-III; original filename: IMG-20260908-WA0107.jpg.'}
+- Field point: Programme engraving on a table. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: engraving; crop fractions: (0, 0.43, 1, 0.84); rotation: 0°; output: (810, 443).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_64_kyabasara_hc_iii_programme_engraving_on_a_table.jpg`
+
+## P65 — Kangaroo care chair at Kyabasara HC III, Kagadi District (Bunyoro).
+- Source: `raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/kangaro chair.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kagadi / Kyabasara-HC-III; original filename: kangaro chair.jpg.'}
+- Field point: Kangaroo care chair. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: clinical equipment; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (810, 1080).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_65_kyabasara_hc_iii_kangaroo_care_chair.jpg`
+
+## P66 — Power house at Kyabasara HC III, Kagadi District (Bunyoro).
+- Source: `raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/power house.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kagadi / Kyabasara-HC-III; original filename: power house.jpg.'}
+- Field point: Power house. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: utilities; crop fractions: (0.05, 0.1, 0.95, 0.76); rotation: 0°; output: (730, 713).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_66_kyabasara_hc_iii_power_house.jpg`
+
+## P67 — Laboratory benches and sinks at Bweema Seed Secondary School, Buvuma District (Buganda).
+- Source: `raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.22 (2).jpeg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Buvuma / Bweema-Seed-Secondary-School; original filename: WhatsApp Image 2026-09-12 at 13.47.22 (2).jpeg.'}
+- Field point: Laboratory benches and sinks. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: laboratory; crop fractions: (0, 0.04, 1, 0.68); rotation: 0°; output: (1280, 615).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_67_bweema_seed_secondary_school_laboratory_benches_and_sinks.jpg`
+
+## P68 — Classroom desks at Bweema Seed Secondary School, Buvuma District (Buganda).
+- Source: `raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Unknown 2026-09-12 at 13.58.16/WhatsApp Image 2026-09-12 at 13.47.17 (2).jpeg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Buvuma / Bweema-Seed-Secondary-School; original filename: WhatsApp Image 2026-09-12 at 13.47.17 (2).jpeg.'}
+- Field point: Classroom desks. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: school furniture; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1280, 960).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_68_bweema_seed_secondary_school_classroom_desks.jpg`
+
+## P69 — Sanitation block at Bweema Seed Secondary School, Buvuma District (Buganda).
+- Source: `raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Unknown 2026-09-12 at 13.58.16/WhatsApp Image 2026-09-12 at 13.47.20 (1).jpeg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Buvuma / Bweema-Seed-Secondary-School; original filename: WhatsApp Image 2026-09-12 at 13.47.20 (1).jpeg.'}
+- Field point: Sanitation block. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: sanitation; crop fractions: (0.06, 0.18, 1, 0.78); rotation: 0°; output: (1203, 576).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_69_bweema_seed_secondary_school_sanitation_block.jpg`
+
+## P70 — Oxygen cylinders at Kibiri HC III, Makindye-Ssabagabo Municipality (Buganda).
+- Source: `raw-data-grouped/team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/KIBIRI HC III report.docx`
+- Locator: {'embedded_image': 'word/media/image27.jpeg', 'body_block': 77, 'table': None, 'adjacent_text': 'Kibiri HC III report: oxygen-cylinder photograph word/media/image27.jpeg in body block 77, within the facility pictorial record.'}
+- Field point: Oxygen cylinders. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: clinical equipment; crop fractions: (0.02, 0.08, 0.85, 0.58); rotation: 0°; output: (800, 640).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_70_kibiri_hc_iii_oxygen_cylinders.jpg`
+
+## P71 — Programme and school engraving on a chair at Budde Seed Secondary School, Butambala District (Buganda).
+- Source: `raw-data-grouped/team-32/Butambala/Budde-Seed-Secondary-School/BUDDE SEED SCHOOL (BUTAMABALA DISTRICT-BUDDE SEED).docx`
+- Locator: {'embedded_image': 'word/media/image43.png', 'body_block': 102, 'table': 8, 'adjacent_text': 'Budde Seed Secondary School return: PICTORIAL EVIDENCE, body block 102, table 8, word/media/image43.png. The visible mark identifies UGIFT and the school.'}
+- Field point: Programme and school engraving on a chair. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: engraving; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (408, 306).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_71_budde_seed_secondary_school_programme_and_school_engraving_on_a_chair.jpg`
+
+## P72 — Infant weighing scale at Buwembe HC III, Busia District (Bukedi).
+- Source: `raw-data-grouped/team-13/Busia/Buwembe-HC-III/127_baby-weighing-scale-yrbb-20_ref20260828-0082.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Busia / Buwembe-HC-III; original filename: 127_baby-weighing-scale-yrbb-20_ref20260828-0082.jpg.'}
+- Field point: Infant weighing scale. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: clinical equipment; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1080, 1080).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_72_buwembe_hc_iii_infant_weighing_scale.jpg`
+
+## P73 — Autoclave above a gas cylinder at Buwembe HC III, Busia District (Bukedi).
+- Source: `raw-data-grouped/team-13/Busia/Buwembe-HC-III/136_autoclave-on-a-gas-cylinder_ref20260828-0091.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Busia / Buwembe-HC-III; original filename: 136_autoclave-on-a-gas-cylinder_ref20260828-0091.jpg.'}
+- Field point: Autoclave above a gas cylinder. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: clinical equipment; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1080, 1080).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_73_buwembe_hc_iii_autoclave_above_a_gas_cylinder.jpg`
+
+## P74 — Examination lamp in protective wrapping at Buwumba HC III, Busia District (Bukedi).
+- Source: `raw-data-grouped/team-13/Busia/Buwumba-HC-III/006_examination-lamp-still-wrapped_ref20260828-0285.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Busia / Buwumba-HC-III; original filename: 006_examination-lamp-still-wrapped_ref20260828-0285.jpg.'}
+- Field point: Examination lamp in protective wrapping. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: storage; crop fractions: [0.08, 0, 1, 1]; rotation: 0°; output: (994, 1080).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_74_buwumba_hc_iii_examination_lamp_in_protective_wrapping.jpg`
+
+## P75 — Pedal suction unit in packaging at Majanji HC III, Busia District (Bukedi).
+- Source: `raw-data-grouped/team-13/Busia/Majanji-HC-III/042_pedal-suction-unit-in-its-packing_ref20260827-0637.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Busia / Majanji-HC-III; original filename: 042_pedal-suction-unit-in-its-packing_ref20260827-0637.jpg.'}
+- Field point: Pedal suction unit in packaging. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: storage; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (960, 1280).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_75_majanji_hc_iii_pedal_suction_unit_in_packaging.jpg`
+
+## P76 — Computer sets stacked in a store at Bumufuni Seed Secondary School, Bulambuli District (Bugisu).
+- Source: `raw-data-grouped/team-14/Bulambuli/Bumufuni-Seed-Secondary-School/07_computer-sets-stacked-in-store_ref20260911-0011.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Bulambuli / Bumufuni-Seed-Secondary-School; original filename: 07_computer-sets-stacked-in-store_ref20260911-0011.jpg.'}
+- Field point: Computer sets stacked in a store. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: storage; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1280, 576).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_76_bumufuni_seed_secondary_school_computer_sets_stacked_in_a_store.jpg`
+
+## P77 — Engraving on a wheelchair armrest at Bumugibole HC III, Bulambuli District (Bugisu).
+- Source: `raw-data-grouped/team-14/Bulambuli/Bumugibole-HC-III/05_wheelchair-armrest-engraving_ref20260831-0202.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Bulambuli / Bumugibole-HC-III; original filename: 05_wheelchair-armrest-engraving_ref20260831-0202.jpg.'}
+- Field point: Engraving on a wheelchair armrest. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: engraving; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1280, 960).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_77_bumugibole_hc_iii_engraving_on_a_wheelchair_armrest.jpg`
+
+## P78 — Solar batteries at Bunangaka HC III, Bulambuli District (Bugisu).
+- Source: `raw-data-grouped/team-14/Bulambuli/Bunangaka-HC-III/01_solar-batteries_ref20260830-0421.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Bulambuli / Bunangaka-HC-III; original filename: 01_solar-batteries_ref20260830-0421.jpg.'}
+- Field point: Solar batteries. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: utilities; crop fractions: [0.13, 0.3, 0.81, 0.88]; rotation: 0°; output: (735, 470).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_78_bunangaka_hc_iii_solar_batteries.jpg`
+
+## P79 — Computer equipment in the school ICT room at Kabeywa Seed Secondary School, Kapchorwa District (Sebei).
+- Source: `raw-data-grouped/team-15/Kapchorwa/Kabeywa-Seed-Secondary-School/07_28computers_ref20260830-0271.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kapchorwa / Kabeywa-Seed-Secondary-School; original filename: 07_28computers_ref20260830-0271.jpg.'}
+- Field point: Computer equipment in the school ICT room. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: ICT; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1280, 960).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_79_kabeywa_seed_secondary_school_computer_equipment_in_the_school_ict_room.jpg`
+
+## P80 — Library shelving and tables at Kabeywa Seed Secondary School, Kapchorwa District (Sebei).
+- Source: `raw-data-grouped/team-15/Kapchorwa/Kabeywa-Seed-Secondary-School/24_library_ref20260830-0842.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kapchorwa / Kabeywa-Seed-Secondary-School; original filename: 24_library_ref20260830-0842.jpg.'}
+- Field point: Library shelving and tables. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: school furniture; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1080, 810).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_80_kabeywa_seed_secondary_school_library_shelving_and_tables.jpg`
+
+## P81 — Autoclave at Atar HC III, Kween District (Sebei).
+- Source: `raw-data-grouped/team-15/Kween/Atar-HC-III/07_autoclave-01_ref0458.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kween / Atar-HC-III; original filename: 07_autoclave-01_ref0458.jpg.'}
+- Field point: Autoclave. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: clinical equipment; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (960, 1280).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_81_atar_hc_iii_autoclave.jpg`
+
+## P82 — Solar batteries and control equipment at Atar HC III, Kween District (Sebei).
+- Source: `raw-data-grouped/team-15/Kween/Atar-HC-III/21_solar-batteries_ref0444.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kween / Atar-HC-III; original filename: 21_solar-batteries_ref0444.jpg.'}
+- Field point: Solar batteries and control equipment. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: utilities; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1280, 720).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_82_atar_hc_iii_solar_batteries_and_control_equipment.jpg`
+
+## P83 — Kangaroo care chair at Atar HC III, Kween District (Sebei).
+- Source: `raw-data-grouped/team-15/Kween/Atar-HC-III/36_kangaroo-mother-care-chair-1-not-engraved_ref20260830-0604.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kween / Atar-HC-III; original filename: 36_kangaroo-mother-care-chair-1-not-engraved_ref20260830-0604.jpg.'}
+- Field point: Kangaroo care chair. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: clinical equipment; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1280, 720).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_83_atar_hc_iii_kangaroo_care_chair.jpg`
+
+## P84 — ICT laboratory interior under construction at Kitawoi Seed Secondary School, Kween District (Sebei).
+- Source: `raw-data-grouped/team-15/Kween/Kitawoi-Seed-Secondary-School/09_ict-lab-under-construction_ref1386.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kween / Kitawoi-Seed-Secondary-School; original filename: 09_ict-lab-under-construction_ref1386.jpg.'}
+- Field point: ICT laboratory interior under construction. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: construction; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1280, 720).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_84_kitawoi_seed_secondary_school_ict_laboratory_interior_under_construction.jpg`
+
+## P85 — Institutional engraving on equipment at Moyok HC III, Kween District (Sebei).
+- Source: `raw-data-grouped/team-15/Kween/Moyok-HC-III/14_engraving-kwn-med-eq-moyok-hciii_ref0038.jpg`
+- Locator: {'embedded_image': None, 'body_block': None, 'table': None, 'adjacent_text': 'Loose field photograph filed under Kween / Moyok-HC-III; original filename: 14_engraving-kwn-med-eq-moyok-hciii_ref0038.jpg.'}
+- Field point: Institutional engraving on equipment. The image illustrates the asset or visible condition; operational status and causes require separate field evidence.
+- Theme: engraving; crop fractions: (0, 0, 1, 1); rotation: 0°; output: (1280, 720).
+- Privacy: Full original inspected individually; selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses. Northern and Eastern originals received independent review.
+- Output: `outputs/narrative-report/figures/photo_85_moyok_hc_iii_institutional_engraving_on_equipment.jpg`
+
+
+# Private source audit: additional field cases
+
+This note and the `source_index` in `additional_cases.json` are working provenance only. Neither filenames nor these source identifiers should appear in the report, its appendices or photograph captions.
+
+The addition contains 11 local cases (three Central, four Eastern, two Northern and two Western) and seven national cases. All eleven local facility names were absent from the text extracted from the then-current 46-page report. National cases add specific observations beyond the existing Works and Transport vehicle-servicing example and damaged Prime Minister's Office laptops.
+
+Every locator was resolved against its original document or worksheet. Word paragraph, table and row numbers are one-based and include empty paragraphs/rows. The JSON retains excerpts from the resolved locations. Expected outcomes and actions are editorial recommendations; they are not assertions of a separately checked contract or completed follow-up.
+
+Material source distinctions preserved:
+
+- AD01–AD03: Local-government identity is confirmed by table 1 row 5. The three facilities are in Kassanda; sources spell the name Kasanda. Buseregenyu was excluded because its identity table says Mityana while its later prose says Kasanda.
+- AD04: The combined Atyak/Alwi document contains two facilities. Only the Alwi interview and school equipment tables support the case. The server power-backup row has conflicting status and remark fields; the explicit “Not working” remark is used. Camera failure is stated as only one of thirteen functioning, avoiding unnecessary derived totals. The case reports the power-surge problem without asserting an independently established cause of every failed item.
+- AD05: The combined Amwonyo/Wadelai document also covers two facilities. Only the school interview and school tables are used. The twenty desktops being marked in use does not imply uninterrupted availability; the interview separately identifies a solar fault.
+- AD06: The power and packed-desktop statement is explicit in the district report, paragraph 55. No unboxing or independent performance test is claimed.
+- AD07: Muhula was not handed over and the school was described as not operating. A printer and projector were separately marked in use, so the case does not say that every item was unused. The Kachonga/Muhula beneficiary-name question is left to reconciliation.
+- AD08–AD09: Staff training, missing operating accessories, consumables and connection problems are explicit field findings. Actions do not imply that every stored item is damaged. The unexplained abbreviation ESR is avoided by using “laboratory stand.”
+- AD10: Kihungya's administration block was in use while its laboratories and staff quarters remained unfinished. The case does not describe the whole school as unopened.
+- AD11: Kihungya Health Centre's service benefits are attributed to staff. “At the subcounty” establishes a location, not theft, diversion or permanent loss. The recommendation asks managers to confirm custody and appropriate deployment.
+- AD12–AD13: The MoWT worksheet contains a copied MoFPED section beginning at row 59. The dedicated MoFPED worksheet and institution fields establish the correct institution. Shared narrative remarks concern several items, so no total number of losses, failed accessories or stored furniture is asserted. Police letters support reported laptop losses; refusal or difficulty obtaining engraving is not elevated into a finding of theft or intentional misconduct.
+- AD14: OPM's concern is the user's assessment that laptop capacity is below workload. It is distinct from a hardware-failure assessment or a performance benchmark.
+- AD15: Works and Transport's equipment was described directly as delivered, installed and functioning. Its photocopier row has an apparently future service date, which is omitted. The case does not reuse the later MoFPED material as a Works finding.
+- AD16–AD17: Direct inspection entries support the condition and engraving findings. The findings apply to the specified items, not to all ministry or authority holdings.
+- AD18: Ten one-unit Apple tablet rows explicitly say “Not Engraved.” Blank functionality cells do not support an assertion about use or performance, and none is made.
+
+No monetary figures, source filenames or personal names are included in publishable case prose. The cases do not treat procurement warranties as present maintenance arrangements, or the reconciled master register's default classifications as physical tests.
