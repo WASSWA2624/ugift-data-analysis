@@ -496,8 +496,6 @@ def reviewed_equivalent(bare: str, description: str) -> str | None:
         return "Desktop Computer"
     if name == "trpled stand":
         return "Tripod Stands"
-    if name in {"blood pressure machine", "bp machine", "delivery instrument set", "hollow ware sets"}:
-        return bare
     if name == "audio visual equipment":
         if re.search(r"\b(?:television|flat screen tv)\b", detail) and not "projector" in detail:
             return "Television set"
