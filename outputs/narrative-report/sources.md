@@ -22,7 +22,7 @@ National level: the union of Facility type MDA, Hospital or Blood bank and rows 
 [
   {
     "section": "3 Executive summary",
-    "filter": "All REF Asset Register rows 2:225134; count rows, status, tags, cost, reserve and row-level max(cost-reserve,0). Coverage: README / facility-data-status PDF pages 1,5. Fieldwork dates: client draft paragraphs 140:164.",
+    "filter": "All REF Asset Register data rows 2:225134, plus facility reconciliation and direct field observations identified in revision_narrative.json.",
     "values": {
       "assets": 225133,
       "functional": 211613,
@@ -41,6 +41,25 @@ National level: the union of Facility type MDA, Hospital or Blood bank and rows 
       "capitalized": 193552,
       "cip": 4,
       "facilities": 899
+    },
+    "coverage": {
+      "master_source_rows": 632,
+      "master_distinct": 629,
+      "master_health_centres": 371,
+      "master_schools": 258,
+      "accounted_for": 629,
+      "facility_specific_material": 548,
+      "consolidated_register": 41,
+      "explained_or_reconciled_without_separate_return": 40,
+      "ground_return_identities": 24,
+      "linked_receiving_records": 11,
+      "separately_allocated_blood_banks": 3,
+      "physical_verified_facility_total": null,
+      "definition": "Accountability coverage, not physical-verification coverage. Physical verification total is not supported by supplied reconciliation sources.",
+      "locators": [
+        "raw-data-grouped/README.md, What the reconciliation shows",
+        "raw-data-grouped/facility-data-status.pdf, pages 1 and 5"
+      ]
     }
   }
 ]
@@ -51,209 +70,250 @@ National level: the union of Facility type MDA, Hospital or Blood bank and rows 
 Client draft, itinerary table 1, rows 2 to 7.
 
 ### Table 2: Programme outputs at closure
-Client draft, paragraphs 69 to 75. These are programme outputs at closure.
+Client draft, paragraphs 69 to 75, programme outputs at closure.
 
-### Table 3: Programme asset summary
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; all rows; reviewed transfer and storage wording. Appendix 8.1 provides the full regional summary schedule.
+### Table 3: Facilities on the verification master list
+README and facility-reconciliation.csv, Master list scope; 629 distinct records.
 
-### Table 4: Master-list coverage and reconciliation
-README, What the reconciliation shows; facility-data-status.pdf pages 1 and 5; facility-reconciliation.csv, scope Master list.
+### Table 4: Facilities requiring completion or preparation for use
+[{"case_id": "F09", "theme": "Incomplete school and equipment awaiting use", "facility": "Got Apwoyo Seed Secondary School", "lg": "Nwoya", "expected": "Got Apwoyo was intended to provide secondary education with completed buildings and installed ICT equipment.", "found": "The team found construction continuing and the school uncommissioned. Its ICT package remained at Nwoya District headquarters, while delivered furniture and structures had not been brought into use.", "gap": "The assets were not yet supporting teaching at the intended school, and custody was divided between the district and the site.", "action": "Nwoya District and the Ministry of Education should set a completion and handover plan, check the stored equipment, and arrange installation, testing and signed transfer when the school is ready."}, {"case_id": "F10", "theme": "Construction damage and displaced service delivery", "facility": "Bukibologoto Health Centre", "lg": "Bulambuli", "expected": "Bukibologoto was listed as complete and was intended to provide care from the constructed health facility.", "found": "The team found that mudslides had damaged the works before completion. A corner was undermined and a wall cracked. Care was being provided at Simu subcounty offices, with equipment held in district stores.", "gap": "The planned facility was unavailable for its intended use, and the temporary service and storage arrangements needed a lasting solution.", "action": "Bulambuli District and the Ministry of Health should obtain an engineering assessment, decide on repair or relocation, inventory the equipment and provide for continuing care."}, {"case_id": "F11", "theme": "Incomplete works and site readiness", "facility": "Kyangwali Seed Secondary School", "lg": "Kikuube", "expected": "Kyangwali school needed completed works, electricity, security and handover to use its assets fully.", "found": "The team recorded continuing construction. The school reported a lack of electricity and an incomplete perimeter fence, and the facility had not been handed over.", "gap": "Finishing the buildings alone would not make the school ready: power, security and responsibility for the assets also remained unresolved.", "action": "Kikuube District, the Ministry of Education and the contractor should close these requirements through one readiness plan, followed by joint testing and handover. The plan should name who will operate, safeguard and maintain the assets."}, {"case_id": "F12", "theme": "Incomplete works and unopened equipment", "facility": "Sidok Seed Secondary School", "lg": "Kaabong", "expected": "Sidok school needed completed buildings and checked equipment before the investment could support full operations.", "found": "The team found blocks, a kitchen and toilets under construction, with termite workings on the plaster of two blocks. The school consignment remained unopened and its contents had not been counted.", "gap": "Both unfinished works and unchecked equipment prevented a complete assessment of readiness for use.", "action": "Kaabong District should secure completion and treatment of the affected works, then arrange a witnessed opening, count and condition check of the equipment. Accepted items should be recorded, assigned to custodians and issued for use."}, {"case_id": "F14", "theme": "Installation and commissioning outstanding", "facility": "Buwagogo Seed Secondary School", "lg": "Manafwa", "expected": "Buwagogo school was intended to use its supplied ICT equipment for teaching.", "found": "The team found the March 2024 ICT consignment still boxed in the store, with contractor installation pending and commissioning delayed.", "gap": "Delivery had not translated into operational ICT capacity. Equipment continued to require secure custody while installation remained outstanding.", "action": "Manafwa District and the Ministry of Education should agree an installation and commissioning date with the contractor, reconcile the stored equipment against delivery records and test it before acceptance. The handover should assign responsibility for operation, maintenance and reporting of faults."}]
 
-### Table 5: Supported master-list reconciliation outcomes
-facility-reconciliation.csv and supervisor-decisions.csv; selected final outcomes, one per master ID. Full identity and decision references are in Appendix 8.6.
+### Table 5: Facility reconciliation outcomes
+facility-reconciliation.csv and supervisor-decisions.csv, selected final outcomes by distinct master identity.
 
-### Table 6: MoFPED asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = MOFPED BK; all rows held on this national vote.
+### Table 6: Expected facilities and the outcomes established during verification
+[{"case_id": "F01", "theme": "Listed complete but not constructed", "facility": "Olok Health Centre", "lg": "Pader", "expected": "Olok was listed as a completed health facility intended to serve its catchment in Pader.", "found": "The district health officer confirmed to the verification team that Olok Health Centre had not been constructed and did not exist in the district.", "gap": "The completed entry could not be matched to the intended facility. The reason for non-construction requires a documented resolution.", "action": "Pader District and the Ministry of Health should reconcile the approved project, construction and payment records, correct the beneficiary schedule and decide how the intended health-service need will be met."}, {"case_id": "F02", "theme": "Invalid facility identity", "facility": "Busia Eastern Division health-centre entry", "lg": "Busia Municipal Council", "expected": "The beneficiary schedule should identify the particular health facility supported in Busia Municipality.", "found": "Reconciliation confirmed that no health facility called Busia Eastern Division existed. A separate return identified Sofia Health Centre III within Eastern Division.", "gap": "An administrative division had been used as a facility name. The available confirmation did not identify Sofia as its replacement or establish that the two names referred to the same beneficiary.", "action": "The municipality and Ministry of Health should resolve the original beneficiary identity and document the programme status of Sofia before linking or changing the two entries."}, {"case_id": "F04", "theme": "Beneficiary replacements", "facility": "Ngomoromo, Oweko, Musandama and Loinya health centres", "lg": "Lamwo, Nebbi, Ntoroko and Maracha", "expected": "The beneficiary schedule should name the facility that received each planned investment.", "found": "Supervisors confirmed that Pangira replaced Ngomoromo in Lamwo, Pamaka replaced Oweko in Nebbi, Butungama replaced Musandama in Ntoroko, and Liko replaced Loinya in Maracha. Liko was already listed separately.", "gap": "The programme account needs to link each original entry to its confirmed replacement to prevent duplicate counting and identify the service location.", "action": "The districts and Ministry of Health should attach the replacement decisions, link the original projects to their recipients and retain one active facility identity for each recipient."}, {"case_id": "F05", "theme": "Assets moved to other facilities", "facility": "Alangi, Ther-uru and Abanga", "lg": "Zombo", "expected": "Asset locations and custodians should agree with the facilities holding and using the equipment.", "found": "The supervisor confirmed that Alangi, Ther-uru and Abanga existed, but their UgIFT assets had moved respectively to Amwonyo Health Centre, Atyak Health Centre and Kango Seed Secondary School.", "gap": "The original beneficiary names no longer described where the assets were held. Custody, location and the service arrangements at the original sites needed to be made clear.", "action": "Zombo District should reconcile transfer approvals and signed receipts with both sets of inventories, name the current custodians and confirm how the original catchments are served."}, {"case_id": "F06", "theme": "Facilities outside programme scope", "facility": "Alira Health Centre and Kiziranfumbi Seed Secondary School", "lg": "Oyam and Kikuube", "expected": "The programme beneficiary schedule should include institutions supported under UgIFT.", "found": "The later Oyam clarification confirmed that Alira Health Centre existed but was not among the facilities upgraded under UgIFT. The supervisor also confirmed that Kiziranfumbi Seed Secondary School in Kikuube was outside the programme.", "gap": "The list confused the existence of an institution with its eligibility as a UgIFT beneficiary. Alira had initially been reported absent, but that account was corrected.", "action": "The local governments and sector ministries should approve the scope corrections, remove the institutions from the active UgIFT schedule and preserve the reasons for the changes."}, {"case_id": "F07", "theme": "Existing facilities without UgIFT assets", "facility": "Pandwong Health Centre; Bumbaire, Kyamuhunga and Kashenshero schools; Rwamujojo Health Centre", "lg": "Kitgum Municipal Council, Bushenyi, Mitooma and Sheema Municipal Council", "expected": "Each listed beneficiary should have a supported account of the programme assistance it received.", "found": "Supervisors confirmed that Pandwong Health Centre, Bumbaire and Kyamuhunga schools, Kashenshero school and Rwamujojo Health Centre existed but had not benefited from UgIFT assets.", "gap": "Their appearance on the beneficiary list did not establish delivery. The cause of the difference between the list and the reported benefits needs to be resolved.", "action": "The responsible districts, municipalities and sector ministries should check beneficiary approvals and delivery records, then correct the schedule or record an approved outstanding delivery with an accountable officer and follow-up date."}, {"case_id": "F08", "theme": "Names and aliases", "facility": "Bussi/Zinga and Dabani/Buwumba", "lg": "Wakiso and Busia", "expected": "Each facility should have one stable identity, with local and former names linked to it.", "found": "Bussi was confirmed to be the village name for the already-listed Zinga Health Centre in Wakiso. In Busia, the Buwumba return was reconciled to the master entry named Dabani.", "gap": "Different names could make one facility appear to be two, distort coverage and separate its asset history from the correct institution.", "action": "The districts should adopt the confirmed operating names, retain the old names as aliases and link the beneficiary, project and asset information to one facility identifier. Zinga should be counted once."}]
 
-### Table 7: MoWT asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = MOWT BK; all rows held on this national vote.
+### Table 7: Examples encountered outside the master-list names
+[{"case_id": "F17", "facility": "Rukoki General Hospital", "lg": "Kasese Municipality", "expected": "Confirmed beneficiaries should be included in the programme account.", "found": "The supervisor confirmed that Rukoki General Hospital was a UgIFT beneficiary in Kasese Municipality, although it was absent from the master list used for verification.", "gap": "The programme list omitted a confirmed recipient.", "action": "The Ministry of Health and municipality should approve the beneficiary entry and link its asset information to a stable facility identifier."}, {"case_id": "F17", "facility": "Silumira Health Centre III", "lg": "Kakumiro", "expected": "The beneficiary schedule should include supported health facilities.", "found": "The supervisor confirmed that Silumira Health Centre III had benefited in Kakumiro but was not on the master list.", "gap": "The facility was missing from the list used to plan and account for verification.", "action": "Kakumiro District and the Ministry of Health should approve the addition and connect the beneficiary decision to the facility asset inventory."}, {"case_id": "F16", "facility": "Bukuuku Community Seed Secondary School", "lg": "Fort Portal City", "expected": "Confirmed seed-school beneficiaries should appear in the programme account, with assets handed over for full use.", "found": "Bukuuku was confirmed as an additional beneficiary. The team recorded improved science and computer teaching following laboratory construction, while some asset handover remained pending.", "gap": "The school was omitted from the master list and handover was incomplete.", "action": "The city and Ministry of Education should regularise the beneficiary entry and complete joint handover of the outstanding assets."}]
 
-### Table 8: MoES asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = MOES BK; all rows held on this national vote.
+### Table 8: Asset identification at the listed national ministries and agencies
+REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; all national holdings on each listed vote; TAG_NUMBER.
 
-### Table 9: MAAIF asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = MAAIF BK; all rows held on this national vote.
+### Table 9: Central region: findings and recommended actions
+[{"facility": "Busaale Health Centre III", "lg": "Kayunga", "finding": "The facility used Primary Health Care funds for maintenance and kept a quarterly condition record.", "gap": "The maternity roof leaked, door hinges were damaged and the solar battery needed replacement.", "action": "Cost and complete the roof, door and battery repairs, then confirm that the affected rooms and solar system are working.", "source_ids": ["O01", "O02", "O03"], "case_type": "gap"}, {"facility": "Musiitwa Seed Secondary School", "lg": "Kayunga", "finding": "The school checked furniture and fittings each term and repaired them when funds allowed.", "gap": "Broken furniture remained out of use while funding was arranged.", "action": "Prepare a termly repair list and fund repairs in order of their effect on teaching and safety.", "source_ids": ["O04"], "case_type": "gap"}, {"facility": "Musiitwa Seed Secondary School", "lg": "Kayunga", "finding": "The school improved access to secondary education and used irrigation equipment for teaching and food production.", "gap": "Long walking distances and pupils' engagement in petty trade affected attendance.", "action": "Maintain the practical teaching equipment and work with parents and the district education office on attendance barriers.", "source_ids": ["O05", "O06"], "case_type": "gap"}, {"facility": "Lukale Health Centre III", "lg": "Buvuma", "finding": "Staff reported that the maternity ward allowed women to give birth locally and with greater privacy.", "gap": "", "action": "Protect the service through routine care of the maternity building and equipment.", "source_ids": ["O27"], "case_type": "benefit"}]
 
-### Table 10: MoH asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = MOH BK; all rows held on this national vote.
+### Table 10: Central assets and identification by category
+REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region=Central; mutually exclusive report categories.
 
-### Table 11: OPM asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = OPM BK; all rows held on this national vote.
+### Table 11: Eastern region: findings and recommended actions
+[{"facility": "Kagumba Health Centre III", "lg": "Kamuli", "finding": "Staff reported increased maternity and antenatal service use, and the facility kept an asset condition book.", "gap": "Staff housing was under pressure; outpatient, laboratory, storage and kitchen space were identified as needs.", "action": "Assess the supporting space against patient demand and include the agreed works in the district health investment plan.", "source_ids": ["O07", "O08", "O09"], "case_type": "gap"}, {"facility": "Kagumba Seed Secondary School", "lg": "Kamuli", "finding": "The school reported that broken furniture had been repaired during the second term.", "gap": "", "action": "Continue condition checks and scheduled furniture repairs before each term.", "source_ids": ["O28"], "case_type": "practice"}, {"facility": "Sikuda Seed Secondary School", "lg": "Busia", "finding": "Broken desks and a cracked laboratory stool were found.", "gap": "The cracked stool was still in use.", "action": "Withdraw unsafe furniture from use and repair or replace it before returning it to classrooms or laboratories.", "source_ids": ["O11"], "case_type": "gap"}, {"facility": "Bubago Health Centre", "lg": "Kamuli", "finding": "Staff identified difficulty operating and maintaining an oxygen concentrator.", "gap": "Equipment use depended on stronger user and basic maintenance skills.", "action": "Arrange practical user training and a technical check, then demonstrate operation with the staff responsible for the equipment.", "source_ids": ["O29"], "case_type": "gap"}, {"facility": "Bumunji, Buwembe and Majanji health centres; Masafu Hospital", "lg": "Busia", "finding": "Equipment had been transferred from the health centres to Masafu Hospital.", "gap": "", "action": "Confirm the receiving custodian, location and service need, and retain signed transfer and receipt documentation.", "source_ids": ["O10"], "case_type": "custody"}]
 
-### Table 12: MoWE asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = MOWE BK; all rows held on this national vote.
+### Table 12: Eastern assets and identification by category
+REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region=Eastern; mutually exclusive report categories.
 
-### Table 13: MoGLSD asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = MGLSD BK; all rows held on this national vote.
+### Table 13: Northern region: findings and recommended actions
+[{"facility": "Got Apwoyo Seed Secondary School", "lg": "Nwoya", "finding": "The school was under construction and had not been commissioned. Delivered furniture was on site and computer equipment was held at district headquarters.", "gap": "Incomplete buildings prevented commissioning and installation.", "action": "Agree a costed completion and handover plan, then move and install the equipment when the rooms and utilities are ready.", "source_ids": ["O30"], "case_type": "gap"}, {"facility": "Ndhew Seed School", "lg": "Nebbi", "finding": "Buildings were incomplete, with computer and science equipment held at district headquarters and furniture not yet installed.", "gap": "Delivery of equipment had not translated into an equipped school.", "action": "Complete the outstanding works and sanitation facilities and coordinate furniture and equipment installation with handover.", "source_ids": ["O31"], "case_type": "gap"}, {"facility": "Mamba Seed School", "lg": "Nebbi", "finding": "Construction was incomplete. Computers were temporarily accommodated in older structures, while science equipment remained at district headquarters.", "gap": "The planned laboratory and computer spaces were not ready for full installation.", "action": "Complete and commission the buildings, install the equipment and confirm safe operation before formal handover.", "source_ids": ["O32"], "case_type": "gap"}, {"facility": "Atego Seed School", "lg": "Nebbi", "finding": "Computers were connected and working in older rooms while construction continued.", "gap": "Staff reported power surges and the planned facilities were not fully commissioned.", "action": "Stabilise the power supply, protect the installed computers and finish the remaining works.", "source_ids": ["O33"], "case_type": "gap"}, {"facility": "Lungulu Seed Secondary School", "lg": "Nwoya", "finding": "The school funded minor repairs and kept breakdown information, but computers remained in storage pending power.", "gap": "The stored equipment included defective desktop units, and the assets were not engraved.", "action": "Provide a suitable power connection, repair defective units, install the usable equipment and apply asset identification markings.", "source_ids": ["O12", "O13", "O34"], "case_type": "gap"}, {"facility": "Todora and Paraa Health Centres III", "lg": "Nwoya", "finding": "Todora used the regional technical maintenance team, while some equipment originally intended for Todora remained at Paraa after redirection during construction.", "gap": "Equipment location and final allocation required a district decision.", "action": "Confirm the service need at both facilities, formally allocate or transfer the equipment and update the named custodians.", "source_ids": ["O14", "O15"], "case_type": "gap"}, {"facility": "Pamaka Health Centre III", "lg": "Nebbi", "finding": "Staff reported increased attendance and community confidence.", "gap": "The solar system was not working, oxygen equipment could not be used because of power constraints, and staffing was under pressure.", "action": "Restore reliable power and demonstrate oxygen equipment operation; review staffing against patient demand.", "source_ids": ["O16", "O17"], "case_type": "gap"}, {"facility": "Kalemungole Health Centre III", "lg": "Moroto", "finding": "Neonatal respiratory equipment remained in an unopened carton and treatment trolleys were still wrapped.", "gap": "Delivered items had not been brought into routine use.", "action": "Check the equipment, confirm the room and staff requirements, and arrange installation and user orientation.", "source_ids": ["O18"], "case_type": "gap"}, {"facility": "Rupa Seed School", "lg": "Moroto", "finding": "The school hired a generator for practical lessons and used its library and computer laboratory block as dormitories.", "gap": "The intended learning spaces and a permanent power connection were unavailable for their planned use.", "action": "Agree a room-use plan and power solution that restores the library and computer laboratory functions.", "source_ids": ["O19"], "case_type": "gap"}]
 
-### Table 14: NEMA asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = NEMA BK; all rows held on this national vote.
+### Table 14: Northern assets and identification by category
+REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region=Northern; mutually exclusive report categories.
 
-### Table 15: PPDA asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = PPDA BK; all rows held on this national vote.
+### Table 15: Western region: findings and recommended actions
+[{"facility": "Nyamarunda Health Centre III", "lg": "Kibaale", "finding": "The facility identified and set aside broken items and referred them to the District Health Officer.", "gap": "Staff raised concerns about staff-quarter workmanship, electrical installation, drainage, water security and storage.", "action": "Carry out a joint engineering and health inspection, make unsafe installations safe and complete the agreed repairs.", "source_ids": ["O20", "O21"], "case_type": "gap"}, {"facility": "Avogera Health Centre III", "lg": "Buliisa", "finding": "The facility carried out local repairs and received technical support from Hoima Regional Referral Hospital.", "gap": "Items that could not be repaired remained stored; staff identified technical skills, user orientation and storage needs.", "action": "Assess the stored items for repair, give practical user training and agree a suitable storage arrangement.", "source_ids": ["O22"], "case_type": "gap"}, {"facility": "Ngwedo Seed Secondary School", "lg": "Buliisa", "finding": "A caretaker attended monthly for repairs, and the Directorate of Industrial Training repaired furniture.", "gap": "", "action": "Continue the repair schedule and record the items returned to use.", "source_ids": ["O23"], "case_type": "practice"}, {"facility": "Bundimulangya Health Centre III", "lg": "Bundibugyo", "finding": "The District Health Officer arranged maintenance support, and staff said the power house and solar installation supported continued operation.", "gap": "", "action": "Keep the technical referral arrangement active and include the power and solar systems in routine servicing.", "source_ids": ["O24"], "case_type": "practice"}, {"facility": "Kyankaramata Health Centre III", "lg": "Kyenjojo", "finding": "Primary Health Care funds paid for minor repairs.", "gap": "Major repair costs were a constraint.", "action": "Prepare costed technical referrals for major repairs and agree district funding and follow-up.", "source_ids": ["O25"], "case_type": "gap"}, {"facility": "Kigorobya Seed Secondary School", "lg": "Hoima", "finding": "Equipped classrooms, the computer room and chemistry laboratory supported teaching; the school and ministry shared maintenance work.", "gap": "Staffing and study materials constrained use of the improved facilities.", "action": "Review teaching staff and materials alongside the maintenance plan.", "source_ids": ["O26"], "case_type": "gap"}, {"facility": "Butungama Seed School", "lg": "Ntoroko", "finding": "The school was still under construction at the time of the interview.", "gap": "The construction works required completion.", "action": "Confirm the outstanding works with the district engineer and agree the completion and handover sequence.", "source_ids": ["O35"], "case_type": "gap"}, {"facility": "Butiaba Health Centre III", "lg": "Buliisa", "finding": "The hydraulic delivery bed was not in use because staff needed operating guidance. Staff also reported difficulty obtaining test strips for the supplied glucometers.", "gap": "Equipment use depended on practical training and access to compatible consumables.", "action": "Demonstrate safe operation of the delivery bed with its users and arrange a reliable supply of compatible glucometer strips.", "source_ids": ["O36"], "case_type": "gap"}]
 
-### Table 16: OAG asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = OAG BK; all rows held on this national vote.
+### Table 16: Western assets and identification by category
+REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region=Western; mutually exclusive report categories.
 
-### Table 17: MoLG asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = MOLG BK; all rows held on this national vote.
+### Table 17: Priority actions to protect assets and restore service
+[{"priority": "1. Immediate safety and essential service", "action": "Withdraw damaged furniture that presents a safety concern, inspect the electrical concerns at Nyamarunda, and assess the failed solar and oxygen equipment arrangements at Pamaka.", "owner": "Facility managers, district health and education officers, district engineers and regional medical equipment technical teams", "timing": "Proposed: inspect within 30 days of report approval; complete minor corrective work within 60 days.", "completion_evidence": "Unsafe items withdrawn; signed technical assessment; repair record and demonstration of safe operation.", "source_ids": ["O11", "O16", "O21"]}, {"priority": "2. Complete and commission facilities", "action": "Agree completion plans for Got Apwoyo, Ndhew, Mamba and Butungama seed schools. Coordinate the remaining works, utilities, furniture and equipment installation; protect ongoing equipment use at Atego.", "owner": "District Accounting Officers, district engineers, district education officers, contractors and Ministry of Education and Sports", "timing": "Proposed: agree site-specific completion plans within 30 days; track progress monthly against the approved dates.", "completion_evidence": "Outstanding-works schedule; approved completion dates; inspection and handover documents; classrooms or laboratories opened for their intended use.", "source_ids": ["O30", "O31", "O32", "O33", "O35"]}, {"priority": "3. Bring stored equipment into use", "action": "Provide the power required at Lungulu, assess and install the boxed equipment at Kalemungole, and assess the repair needs of stored items at Avogera. Keep damaged and usable stored items on separate action lists.", "owner": "District health and education officers, facility managers, electrical contractors and regional technical teams", "timing": "Proposed: confirm readiness and actions within 30 days; complete installation within 90 days where rooms and utilities are ready.", "completion_evidence": "Equipment location check; power and installation sign-off; named custodian; practical demonstration and date first used.", "source_ids": ["O13", "O18", "O22", "O34"]}, {"priority": "4. Clear priority repairs", "action": "Repair the roof, doors and solar system at Busaale, arrange the major repair support needed at Kyankaramata and assess damaged laptops at the Office of the Prime Minister.", "owner": "Facility managers, district health officers, district engineers and the responsible national institution asset managers", "timing": "Proposed: agree priority work within 30 days and complete funded repairs within 90 days.", "completion_evidence": "Approved repair list; work orders; repairs checked and assets returned to use or assigned a formal disposal decision.", "source_ids": ["O03", "O25", "N02"]}, {"priority": "5. Strengthen user skills", "action": "Provide practical operation and basic maintenance training for oxygen equipment users at Bubago and the staff requiring equipment orientation at Avogera.", "owner": "District health officers, facility in-charges, suppliers and regional medical equipment technical teams", "timing": "Proposed: complete initial training within 60 days and review use after a further 30 days.", "completion_evidence": "Training attendance by role; practical demonstration of equipment use; named technical support contact.", "source_ids": ["O22", "O29"]}, {"priority": "6. Mark assets and confirm custody", "action": "Mark eligible unengraved assets, starting with the identified Lungulu holdings, and confirm the final allocation of transferred equipment at Todora, Paraa and Masafu.", "owner": "Institution asset managers, facility managers and district finance, health and education offices", "timing": "Proposed: confirm allocation within 30 days and complete priority marking and custody checks within 90 days.", "completion_evidence": "Readable identification; item-to-custodian match; signed transfer or receipt and agreed final location.", "source_ids": ["O10", "O15", "O34", "Q01"]}, {"priority": "7. Fund routine maintenance", "action": "Retain the functioning local and regional repair arrangements and prepare annual maintenance plans that separate minor repairs from specialist work. Review unresolved faults each quarter.", "owner": "Facility managers, school governing bodies, district health and education officers and national institution Accounting Officers", "timing": "Proposed: prepare plans within 90 days, include costs in the next budget cycle and review quarterly.", "completion_evidence": "Funded maintenance plan; fault list with responsible roles and due dates; service history and closed repair actions.", "source_ids": ["O01", "O02", "O04", "O07", "O12", "O14", "O20", "O23", "O24", "O25", "O28", "N01"]}, {"priority": "8. Match service capacity to demand", "action": "Review supporting clinical space and staffing at Kagumba and Pamaka, teaching staff and materials at Kigorobya, and attendance barriers at Musiitwa. Include operating needs in future asset planning.", "owner": "District health and education officers, facility managers and the relevant sector ministries", "timing": "Proposed: complete service-needs reviews within 90 days and include agreed measures in the next planning and budget cycle.", "completion_evidence": "Agreed staffing and space priorities; service or teaching plan; funded actions and periodic review of use.", "source_ids": ["O05", "O08", "O09", "O17", "O26", "O27"]}]
 
-### Table 18: MoLHUD asset holdings and recorded value
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; BOOK_TYPE_CODE = MOLHUD BK; all rows held on this national vote.
-
-### Table 19: Other national holdings by institution group
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; Hospital, Blood bank, and MDA rows for KCCA BK, MODV BK and UBTS BK.
-
-### Table 20: Central health centre assets by report category
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region = Central; Facility type = Health centre; report category precedence in section 5.6.
-
-### Table 21: Central school assets by report category
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region = Central; Facility type = School; report category precedence in section 5.6.
-
-### Table 22: Central sub-region distribution
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; local government level, region = Central; geography crosswalk in sources.md.
-
-### Table 23: Eastern health centre assets by report category
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region = Eastern; Facility type = Health centre; report category precedence in section 5.6.
-
-### Table 24: Eastern school assets by report category
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region = Eastern; Facility type = School; report category precedence in section 5.6.
-
-### Table 25: Eastern sub-region distribution
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; local government level, region = Eastern; geography crosswalk in sources.md.
-
-### Table 26: Northern health centre assets by report category
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region = Northern; Facility type = Health centre; report category precedence in section 5.6.
-
-### Table 27: Northern school assets by report category
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region = Northern; Facility type = School; report category precedence in section 5.6.
-
-### Table 28: Northern sub-region distribution
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; local government level, region = Northern; geography crosswalk in sources.md.
-
-### Table 29: Western health centre assets by report category
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region = Western; Facility type = Health centre; report category precedence in section 5.6.
-
-### Table 30: Western school assets by report category
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; region = Western; Facility type = School; report category precedence in section 5.6.
-
-### Table 31: Western sub-region distribution
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; local government level, region = Western; geography crosswalk in sources.md.
-
-### Table 32: Whole programme and regional summary counts
+### Table 18: Whole programme and regional summary counts
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; count filters and reviewed transfer evidence in sources.md; reconciliation tables by scope and final outcome.
 
-### Table 33: Asset rows by report category and region
+### Table 19: Asset rows by report category and region
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; mutually exclusive report category mapping in section 5.6.
 
-### Table 34: Asset rows by register class and region
+### Table 20: Asset rows by register class and region
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; ASSET_CATEGORY_MINOR2 grouped by region. Other recorded items retain rows outside the listed classes.
 
-### Table 35: Condition classifications by report category
+### Table 21: Condition classifications by report category
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; ATTRIBUTE14(Equipment status), grouped by category.
 
-### Table 36: Condition classifications by sub-region
+### Table 22: Condition classifications by sub-region
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; ATTRIBUTE14(Equipment status), grouped by subregion.
 
-### Table 37: Recorded value and net book value by region
+### Table 23: Recorded value and net book value by region
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; FIXED_ASSETS_COST, DEPRN_RESERVE and row-level max(cost less reserve, 0).
 
-### Table 38: National ministry and agency value schedule
+### Table 24: National ministry and agency value schedule
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; all rows on national ministry and agency books, plus Hospital holdings; blood banks are included on the UBTS vote.
 
-### Table 39: Use flags and recorded reasons by report category
+### Table 25: Use flags and recorded reasons by report category
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; IN_USE_FLAG, SK Equipment status and Remarks; negative and conflicting wording excluded from the stored group.
 
-### Table 40: Engraving by region
+### Table 26: Engraving by region
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx, Asset Register, rows 2 to 225,134; TAG_NUMBER is not Not engraved; programme marking contains UGIFT or UGFT, ignoring case.
 
-### Table 41: Master-list entries accounted for through reconciliation
+### Table 27: Master-list entries accounted for through reconciliation
 facility-reconciliation.csv, selected master IDs; supervisor-decisions.csv, decision references shown; exact CSV record numbers in sources.md.
 
-### Table 42: Ground-return identities outside master-list names
+### Table 28: Ground-return identities outside master-list names
 facility-reconciliation.csv, scope Ground return only, X identities. Names are retained as reconciliation identities.
 
-### Table 43: Accompanying register files
+### Table 29: Asset information prepared for handover
 The three accompanying workbook Asset Register and Read Me worksheets; data rows 2 to 225,134.
-
-### Table 44: Core sources
-Supplied project documents and register files.
-
-### Table 45: Field observation source index
-Facility and district reports identified by institution; full source file paths in sources.md.
-
-### Table 46: Photographic source index
-Field photographic returns and district reports; complete paths and adjacent caption text in sources.md.
 
 ## Charts and photographs
 
-### Figure 1: All 629 master-list records are accounted for
+### Figure 1: All 629 master-list entries were accounted for
 Output file: `outputs/narrative-report/figures/chart_01_coverage.png`.
-facility-reconciliation.csv, Master list scope; README coverage definition; 40 explained records included in the 629.
+facility-reconciliation.csv, Master list scope; master_by_region_type counts; README accountability coverage definition.
 
-### Figure 2: MoFPED and MoES hold the largest ministry recorded values
-Output file: `outputs/narrative-report/figures/chart_06_value_mda.png`.
-Source: REF Asset Register, national ministry and agency book codes; all held facility types.
+### Figure 2: Unfinished school block at Got Apwoyo Seed Secondary School, Nwoya District (Acholi)
+Output file: `outputs/narrative-report/figures/photo_11_got_apwoyo_construction.jpg`.
+UgIFT field photograph P11; raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx; {"embedded_image": "word/media/image1.jpeg", "body_block": 31, "table": null, "adjacent_text": "Nwoya district report body block 7 identifies Got Apwoyo Seed Secondary School. Blocks 10 to 14 describe ongoing construction, no commissioning, and ICT held at the district. Field photographs begin at block 30; image1.jpeg occurs at block 31."}
 
-### Figure 3: Science laboratory tables and stools at a seed secondary school, Kalangala District (Buganda)
+### Figure 3: Building works at a seed secondary school, Kiboga District (Buganda)
+Output file: `outputs/narrative-report/figures/photo_12_lwamata_construction.jpg`.
+UgIFT field photograph P12; raw-data-grouped/team-29/Kiboga/Lwamata-Town-Council-Seed-Secondary-School/UGIFT ASSET VERIFICATION LWAMATA T.C.C SEED SEC SCH.docx; {"embedded_image": "word/media/image6.jpeg", "body_block": 79, "table": null, "adjacent_text": "Lwamata school return body block 11 identifies the school, block 33 states that some buildings remain under construction and laboratory equipment was expected after structures were completed. Image6.jpeg is at block 79 after PICTURES OF ASSETS VISITED AND VERIFIED."}
+
+### Figure 4: School block awaiting completion at Butungama Seed Secondary School, Ntoroko District (Tooro)
+Output file: `outputs/narrative-report/figures/photo_13_butungama_construction.jpg`.
+UgIFT field photograph P13; raw-data-grouped/team-26/_team-documents/Butungama Seed School.pdf; {"embedded_image": "PDF page 7, image 1", "body_block": null, "table": null, "adjacent_text": "Photographic PDF page 7; the school sign appears on page 3. The paired return raw-data-grouped/team-26/Ntoroko/Butungama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUTUNGAMA HEALTH CENTRE III AND BUTUNGAMA SEED SCHOOL (1).docx, body blocks 113, 119 and 178 identify the school and ongoing construction.", "page": 7}
+
+### Figure 5: Science laboratory tables and stools at a seed secondary school, Kalangala District (Buganda)
 Output file: `outputs/narrative-report/figures/photo_01_central_laboratory_furniture.jpg`.
-Field photographic record P01; Kalangala District; photograph locators in Appendix 8.8 and sources.md.
+UgIFT field photograph P01; raw-data-grouped/team-31/Kalangala/Gyagenda-Memorial-Seed-Secondary-School/Gyagenda memorial seed secondary school pictures.docx; {"embedded_image": "word/media/image9.jpeg", "body_block": 35, "table": null, "adjacent_text": "5. Science laboratory tables and stools | 5. Science laboratory tables and stools"}
 
-### Figure 4: Infant radiant warmer at a health centre, Makindye-Ssabagabo Municipal Council (Buganda)
+### Figure 6: Infant radiant warmer at a health centre, Makindye-Ssabagabo Municipal Council (Buganda)
 Output file: `outputs/narrative-report/figures/photo_02_central_infant_warmer.jpg`.
-Field photographic record P02; Makindye-Ssabagabo Municipal Council; photograph locators in Appendix 8.8 and sources.md.
+UgIFT field photograph P02; raw-data-grouped/team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/KIBIRI HC III report.docx; {"embedded_image": "word/media/image22.jpeg", "body_block": 77, "table": null, "adjacent_text": ""}
 
-### Figure 5: Desktop computers and classroom furniture at a seed secondary school, Busia District (Bukedi)
+### Figure 7: Boxed pulse oximeters at a health centre, Makindye-Ssabagabo Municipal Council (Buganda)
+Output file: `outputs/narrative-report/figures/photo_21_kibiri_boxed_oximeters.jpg`.
+UgIFT field photograph P21; raw-data-grouped/team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/KIBIRI HC III report.docx; {"embedded_image": "word/media/image17.jpeg", "body_block": 77, "table": null, "adjacent_text": "Kibiri Health Centre III report image17.jpeg, body block 77. Blocks 1 and 5 identify Kibiri; the packaging explicitly identifies Handheld Pulse Oximeter."}
+
+### Figure 8: School buildings and courtyard at a seed secondary school, Buvuma District (Buganda)
+Output file: `outputs/narrative-report/figures/photo_33_buvuma_school_blocks.jpg`.
+UgIFT field photograph P33; raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.23 (3).jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph WhatsApp Image 2026-09-12 at 13.47.23 (3).jpeg under Bweema-Seed-Secondary-School/Buvuma. The same source photo collection includes a school sign identifying Bweema and Buvuma."}
+
+### Figure 9: Desktop computers and classroom furniture at a seed secondary school, Busia District (Bukedi)
 Output file: `outputs/narrative-report/figures/photo_03_eastern_school_computers.jpg`.
-Field photographic record P03; Busia District; photograph locators in Appendix 8.8 and sources.md.
+UgIFT field photograph P03; raw-data-grouped/team-13/Busia/Sikuda-Seed-Secondary-School/43_ict-room-desktop-computers_ref0257.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": null}
 
-### Figure 6: Delivery bed with a torn mattress cover at a health centre, Busia District (Bukedi)
+### Figure 10: Delivery bed with a torn mattress cover at a health centre, Busia District (Bukedi)
 Output file: `outputs/narrative-report/figures/photo_04_eastern_torn_bed_cover.jpg`.
-Field photographic record P04; Busia District; photograph locators in Appendix 8.8 and sources.md.
+UgIFT field photograph P04; raw-data-grouped/team-13/Busia/Majanji-HC-III/050_delivery-bed-with-torn-cover_ref20260827-0646.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": null}
 
-### Figure 7: Buildings at a seed secondary school, Nwoya District (Acholi)
+### Figure 11: Cracked health centre block above collapsed ground, Bulambuli District (Bugisu)
+Output file: `outputs/narrative-report/figures/photo_14_bulambuli_structural_damage.jpg`.
+UgIFT field photograph P14; raw-data-grouped/team-14/Bulambuli/Bukibologoto-HC-II/08_block-over-collapsed-ground-wide_ref20260911-0005.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 08_block-over-collapsed-ground-wide_ref20260911-0005.jpg. Facility and local government are established by its Bukibologoto-HC-II/Bulambuli source folders."}
+
+### Figure 12: Stained and peeling ceiling at a health centre, Sironko District (Bugisu)
+Output file: `outputs/narrative-report/figures/photo_15_sironko_damaged_ceiling.jpg`.
+UgIFT field photograph P15; raw-data-grouped/team-14/Sironko/Bundege-HC-III/15_water-damaged-ceiling_ref20260829-0569.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 15_water-damaged-ceiling_ref20260829-0569.jpg under Bundege-HC-III/Sironko."}
+
+### Figure 13: Buildings at a seed secondary school, Nwoya District (Acholi)
 Output file: `outputs/narrative-report/figures/photo_05_northern_school_buildings.jpg`.
-Field photographic record P05; Nwoya District; photograph locators in Appendix 8.8 and sources.md.
+UgIFT field photograph P05; raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx; {"embedded_image": "word/media/image14.jpeg", "body_block": 107, "table": null, "adjacent_text": ""}
 
-### Figure 8: Health centre building, Nwoya District (Acholi)
+### Figure 14: Health centre building, Nwoya District (Acholi)
 Output file: `outputs/narrative-report/figures/photo_06_northern_health_building.jpg`.
-Field photographic record P06; Nwoya District; photograph locators in Appendix 8.8 and sources.md.
+UgIFT field photograph P06; raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx; {"embedded_image": "word/media/image37.jpeg", "body_block": 308, "table": null, "adjacent_text": ""}
 
-### Figure 9: Classroom desks at a seed secondary school, Ntoroko District (Tooro)
+### Figure 15: Stacked desks, chairs and stools at a seed secondary school, Napak District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_18_napak_stacked_furniture.jpg`.
+UgIFT field photograph P18; raw-data-grouped/team-10/Napak/Napak-Seed-Secondary-School/25_furniture-some-broken-none-engraved_ref20260827-0417.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 25_furniture-some-broken-none-engraved_ref20260827-0417.jpg under Napak-Seed-Secondary-School/Napak."}
+
+### Figure 16: Building works and construction materials at Ndhew Seed Secondary School, Nebbi District (West Nile)
+Output file: `outputs/narrative-report/figures/photo_23_ndhew_construction.jpg`.
+UgIFT field photograph P23; raw-data-grouped/team-01/Nebbi/_district-documents/UGIFT Assets Verification Nebbi District Report.docx; {"embedded_image": "word/media/image17.jpeg", "body_block": 89, "table": null, "adjacent_text": "Nebbi district report image17.jpeg at body block 89, within the Ndhew school section beginning at block 40 and field photographs beginning at block 63. Block 42 records ongoing construction and ICT/science equipment at district headquarters; block 59 links construction delay with equipment installation delay."}
+
+### Figure 17: Classroom desks at a seed secondary school, Ntoroko District (Tooro)
 Output file: `outputs/narrative-report/figures/photo_08_western_classroom_desks.jpg`.
-Field photographic record P08; Ntoroko District; photograph locators in Appendix 8.8 and sources.md.
+UgIFT field photograph P08; raw-data-grouped/team-26/Ntoroko/Nombe-Seed-Secondary-School/NTOROKO ASSET NOMBE SEED SECONDARY SCHOOL VERIFICATION AND RECORDING TOOL KIT 222.docx; {"embedded_image": "word/media/image4.jpeg", "body_block": 110, "table": null, "adjacent_text": "Equipment/ Item | Department | Asset Number | Item | Description | Life in Months | Tag Number  | ( engrave |  no.) | Date Of  | Pur | Date Placed  | In |  Service | Recoverable cost | Cost | Acc Dep Cost | Net Book Value | Ytd |   | Deprn | Equipment status | Remarks | Non residential | Education | Painted cream and white | Good condition | They are in use. They are seven in number. | Residential | Education | Painted cream and white | Good condition | They are all in use. | They are 3 in number. | Kitchen | Education | Not built. | Toilets | Education | Not constructed | Pit latrine | Education | They are painted cream and white. | Good condition | They are all in use. | They are all in use. | 3 are for residential and 3 are not for residential. | Water tanks | Education | They are black in  | colour | One is faulty and  | two are working. | Two in use.  | They re |  three. Not constructed. | Fence | Not constructed."}
 
-### Figure 10: Delivery bed and clinical furniture at a health centre, Kabarole District (Tooro)
+### Figure 18: Delivery bed and clinical furniture at a health centre, Kabarole District (Tooro)
 Output file: `outputs/narrative-report/figures/photo_09_western_delivery_bed.jpg`.
-Field photographic record P09; Kabarole District; photograph locators in Appendix 8.8 and sources.md.
+UgIFT field photograph P09; raw-data-grouped/team-26/Kabarole/Iruhura-HC-III/KABAROLE DISTRICT   IRUHURA HC III ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1).docx; {"embedded_image": "word/media/image10.jpeg", "body_block": 96, "table": null, "adjacent_text": "OPD                                           |                               |      | Pit latrine |                               |                       Power House |                       | Weighing scale with a height meter"}
 
-### Figure 11: School furniture forms the largest asset category
-Output file: `outputs/narrative-report/figures/chart_02_condition_category.png`.
-Source: REF Asset Register, all rows; report category and ATTRIBUTE14 condition.
+### Figure 19: Clinical equipment packed among cartons at a health centre, Hoima City (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_19_hoima_stored_clinical_equipment.jpg`.
+UgIFT field photograph P19; raw-data-grouped/_multi-team/programme-documents/data-management-chat/unpacked/TEAM 25 HEALTH CENTHERA/TEAM 25 HEALTH CENTHERA/KIHUUKYA HEALTH CENTER III/kihuukya photos/stored equipement nort in use.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph in the KIHUUKYA HEALTH CENTER III/kihuukya photos folder. It is byte-identical (SHA256 a76c46aa7f6ab2856ac601a320125dfdf7cb174a6ec0c29eec25dab06232de97) to the team-25/_team-documents copy. The KIHUUKYA HEALTHCENTER III. Edited.docx return, block 29, identifies Hoima City and Bunyoro; block 38 names the facility."}
 
-### Figure 12: The Functional classification predominates across sub-regions
-Output file: `outputs/narrative-report/figures/chart_03_condition_subregion.png`.
-Source: REF Asset Register, local government rows; sub-region mapping and ATTRIBUTE14.
+### Figure 20: Laboratory stools and other school furniture in storage, Ntoroko District (Tooro)
+Output file: `outputs/narrative-report/figures/photo_20_butungama_stored_furniture.jpg`.
+UgIFT field photograph P20; raw-data-grouped/team-26/_team-documents/Butungama Seed School.pdf; {"embedded_image": "PDF page 12, image 1", "body_block": null, "table": null, "adjacent_text": "Photographic PDF page 12. The paired return raw-data-grouped/team-26/Ntoroko/Butungama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUTUNGAMA HEALTH CENTRE III AND BUTUNGAMA SEED SCHOOL (1).docx, body block 162, records laboratory stools, desks, office chairs and tables in good condition but not in use, still stored. Blocks 119 and 178 describe ongoing construction.", "page": 12}
 
-### Figure 13: Recorded use is concentrated in school furniture
-Output file: `outputs/narrative-report/figures/chart_07_use_category.png`.
-Source: REF Asset Register, IN_USE_FLAG; SK condition and remarks for non-use reasons.
+### Figure 21: Unfinished laboratory building at a health centre, Sironko District (Bugisu)
+Output file: `outputs/narrative-report/figures/photo_26_sironko_unfinished_health_lab.jpg`.
+UgIFT field photograph P26; raw-data-grouped/team-14/Sironko/Simu-Pondo-HC-III/06_unfinished-laboratory-building_ref20260829-0541.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 06_unfinished-laboratory-building_ref20260829-0541.jpg under Simu-Pondo-HC-III/Sironko."}
 
-### Figure 14: Boxed computers and related equipment in a seed school store, Nwoya District (Acholi)
-Output file: `outputs/narrative-report/figures/photo_07_northern_stored_computers.jpg`.
-Field photographic record P07; Nwoya District; photograph locators in Appendix 8.8 and sources.md.
+### Figure 22: Biology laboratory under construction at a seed secondary school, Buliisa District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_31_buliisa_laboratory_works.jpg`.
+UgIFT field photograph P31; raw-data-grouped/team-25/Buliisa/Kihungya-Seed-Secondary-School/boilogy lab under construction.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph boilogy lab under construction.jpg under Kihungya-Seed-Secondary-School/Buliisa. kihungya seed school.docx body block 107 identifies the science block as not in use and under construction; block 63 states that most structures were not ready and there was no electricity for ICT sessions or water for sanitation."}
 
-### Figure 15: Most asset rows carry the Not engraved designation
+### Figure 23: Water tank on a cracked base at a seed secondary school, Kibuku District (Bukedi)
+Output file: `outputs/narrative-report/figures/photo_16_kibuku_cracked_tank_base.jpg`.
+UgIFT field photograph P16; raw-data-grouped/team-12/Kibuku/Kasasira-Seed-Secondary-School/39_water-tank-on-cracked-base_ref0332.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 39_water-tank-on-cracked-base_ref0332.jpg under Kasasira-Seed-Secondary-School/Kibuku."}
+
+### Figure 24: Damaged drip stand at a health centre, Moroto District (Karamoja)
+Output file: `outputs/narrative-report/figures/photo_25_moroto_broken_drip_stand.jpg`.
+UgIFT field photograph P25; raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/124_broken-drip-stand_ref20260827-0349.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 124_broken-drip-stand_ref20260827-0349.jpg under Kalemungole-HC-III/Moroto. The stand lacks its supporting base. Crop retains the stand and a gloved hand; no face or identifier is present."}
+
+### Figure 25: Broken desk frame at a seed secondary school, Namisindwa District (Bugisu)
+Output file: `outputs/narrative-report/figures/photo_27_namisindwa_broken_desk.jpg`.
+UgIFT field photograph P27; raw-data-grouped/team-13/Namisindwa/Namboko/032_broken-desk_ref20260902-0126.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 032_broken-desk_ref20260902-0126.jpg under Namboko/Namisindwa."}
+
+### Figure 26: Cracked desk surface bearing a school marking, Tororo District (Bukedi)
+Output file: `outputs/narrative-report/figures/photo_28_tororo_cracked_desktop.jpg`.
+UgIFT field photograph P28; raw-data-grouped/team-13/Tororo/Iyolwa/107_desk-marked-iyolwa-seed-ss-cracked-corner_ref20260830-0799.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 107_desk-marked-iyolwa-seed-ss-cracked-corner_ref20260830-0799.jpg under Iyolwa/Tororo. The institutional school name appears on the wood; no personal name is present."}
+
+### Figure 27: Damaged chair back joint at a seed secondary school, Budaka District (Bukedi)
+Output file: `outputs/narrative-report/figures/photo_29_budaka_damaged_chair.jpg`.
+UgIFT field photograph P29; raw-data-grouped/team-12/Budaka/Nansanga-Seed-Secondary-School/086_chair-back-rail-broken-at-the-joint_ref0700.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 086_chair-back-rail-broken-at-the-joint_ref0700.jpg under Nansanga-Seed-Secondary-School/Budaka."}
+
+### Figure 28: Flood-affected older health facility at Butiaba, Buliisa District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_32_buliisa_flood_affected_old_facility.jpg`.
+UgIFT field photograph P32; raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/butaiba submurged facility.jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph butaiba submurged facility.jpeg under Butiaba-HC-III/Buliisa. The paired butaiba report.docx body block 11 (paragraph 10) explicitly states that the old facility built by UgIFT and its equipment were affected by floods."}
+
+### Figure 29: Most assets had no engraved identification
 Output file: `outputs/narrative-report/figures/chart_04_engraving.png`.
 Source: REF Asset Register, TAG_NUMBER; case-insensitive UGIFT or UGFT matching.
 
-### Figure 16: UgIFT identification on a desk at a seed school, Tororo District (Bukedi)
+### Figure 30: UgIFT identification on a desk at a seed school, Tororo District (Bukedi)
 Output file: `outputs/narrative-report/figures/photo_10_eastern_ugift_marking.jpg`.
-Field photographic record P10; Tororo District; photograph locators in Appendix 8.8 and sources.md.
+UgIFT field photograph P10; raw-data-grouped/team-13/Tororo/Malaba-Seed-School/049_desk-engraving-gou-moh-ugift_ref20260829-0338.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": null}
 
-### Figure 17: Eastern holds the largest regional recorded value
+### Figure 31: UgIFT engraving on a health centre bench, Bududa District (Bugisu)
+Output file: `outputs/narrative-report/figures/photo_22_bududa_bench_engraving.jpg`.
+UgIFT field photograph P22; raw-data-grouped/team-14/Bududa/Bududa-HC-III/09_bench-engraved-gou-moh-ugift-project_ref20260827-0187.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 09_bench-engraved-gou-moh-ugift-project_ref20260827-0187.jpg under Bududa-HC-III/Bududa. Visible institutional marking reads GOU/MOH-UGIFT PROJECT and F/Y 2023/2024."}
+
+### Figure 32: Boxed computers and related equipment in a seed school store, Nwoya District (Acholi)
+Output file: `outputs/narrative-report/figures/photo_07_northern_stored_computers.jpg`.
+UgIFT field photograph P07; raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx; {"embedded_image": "word/media/image9.jpeg", "body_block": 83, "table": null, "adjacent_text": "Laboratory stool supply: Procure and deliver an additional cohort of laboratory stools (recommended minimum 66 stools) to meet the standard lab allocation of 74 stools. | Field photos"}
+
+### Figure 33: Hospital beds and screens stacked in storage at a health centre, Kagadi District (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_30_kagadi_beds_in_storage.jpg`.
+UgIFT field photograph P30; raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/BEDS IN STORAGE .jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph BEDS IN STORAGE .jpg under Kyabasara-HC-III/Kagadi. The source filename and visible stacking identify storage."}
+
+### Figure 34: Raised water storage tank at a seed secondary school, Buvuma District (Buganda)
+Output file: `outputs/narrative-report/figures/photo_34_buvuma_raised_water_tank.jpg`.
+UgIFT field photograph P34; raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.25.jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph WhatsApp Image 2026-09-12 at 13.47.25.jpeg under Bweema-Seed-Secondary-School/Buvuma."}
+
+### Figure 35: Empty computer laboratory at a seed secondary school, Kween District (Sebei)
+Output file: `outputs/narrative-report/figures/photo_35_kween_empty_computer_laboratory.jpg`.
+UgIFT field photograph P35; raw-data-grouped/team-15/Kween/Kaptum-Seed-Secondary-School/09_computer-lab-no-power-supply_ref0537.jpg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph 09_computer-lab-no-power-supply_ref0537.jpg under Kaptum-Seed-Secondary-School/Kween. The source filename identifies the computer laboratory and no power supply."}
+
+### Figure 36: School furniture forms the largest asset category
+Output file: `outputs/narrative-report/figures/chart_02_condition_category.png`.
+Source: REF Asset Register, all rows; report category and ATTRIBUTE14 condition.
+
+### Figure 37: The Functional classification predominates across sub-regions
+Output file: `outputs/narrative-report/figures/chart_03_condition_subregion.png`.
+Source: REF Asset Register, local government rows; sub-region mapping and ATTRIBUTE14.
+
+### Figure 38: Eastern holds the largest regional recorded value
 Output file: `outputs/narrative-report/figures/chart_05_value_region.png`.
 Source: REF Asset Register, cost and depreciation; row net book value floored at zero.
+
+### Figure 39: MoFPED and MoES hold the largest ministry recorded values
+Output file: `outputs/narrative-report/figures/chart_06_value_mda.png`.
+Source: REF Asset Register, national ministry and agency book codes; all held facility types.
+
+### Figure 40: Recorded use is concentrated in school furniture
+Output file: `outputs/narrative-report/figures/chart_07_use_category.png`.
+Source: REF Asset Register, IN_USE_FLAG; SK condition and remarks for non-use reasons.
 
 ## Narrative sources
 
@@ -356,6 +416,121 @@ Selected image inspected; no identifiable faces, name badges, signatures or pers
 `raw-data-grouped/team-13/Tororo/Malaba-Seed-School/049_desk-engraving-gou-moh-ugift_ref20260829-0338.jpg`; `None`; body block None; adjacent text: None
 Loose photograph; source filename identifies desk engraving GOU MOH UGIFT; facility and district from source folders. The visible marking reads GOU/MOH-UGIFT PROJECT, F/Y 2023/2024.
 Selected image inspected; no identifiable faces, name badges, signatures or personal documents visible.
+
+### P11
+`raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx`; `word/media/image1.jpeg`; body block 31; adjacent text: Nwoya district report body block 7 identifies Got Apwoyo Seed Secondary School. Blocks 10 to 14 describe ongoing construction, no commissioning, and ICT held at the district. Field photographs begin at block 30; image1.jpeg occurs at block 31.
+Nwoya district report body block 7 identifies Got Apwoyo Seed Secondary School. Blocks 10 to 14 describe ongoing construction, no commissioning, and ICT held at the district. Field photographs begin at block 30; image1.jpeg occurs at block 31.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P12
+`raw-data-grouped/team-29/Kiboga/Lwamata-Town-Council-Seed-Secondary-School/UGIFT ASSET VERIFICATION LWAMATA T.C.C SEED SEC SCH.docx`; `word/media/image6.jpeg`; body block 79; adjacent text: Lwamata school return body block 11 identifies the school, block 33 states that some buildings remain under construction and laboratory equipment was expected after structures were completed. Image6.jpeg is at block 79 after PICTURES OF ASSETS VISITED AND VERIFIED.
+Lwamata school return body block 11 identifies the school, block 33 states that some buildings remain under construction and laboratory equipment was expected after structures were completed. Image6.jpeg is at block 79 after PICTURES OF ASSETS VISITED AND VERIFIED.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P13
+`raw-data-grouped/team-26/_team-documents/Butungama Seed School.pdf`; `PDF page 7, image 1`; body block None; adjacent text: Photographic PDF page 7; the school sign appears on page 3. The paired return raw-data-grouped/team-26/Ntoroko/Butungama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUTUNGAMA HEALTH CENTRE III AND BUTUNGAMA SEED SCHOOL (1).docx, body blocks 113, 119 and 178 identify the school and ongoing construction.
+Photographic PDF page 7; the school sign appears on page 3. The paired return raw-data-grouped/team-26/Ntoroko/Butungama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUTUNGAMA HEALTH CENTRE III AND BUTUNGAMA SEED SCHOOL (1).docx, body blocks 113, 119 and 178 identify the school and ongoing construction.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P14
+`raw-data-grouped/team-14/Bulambuli/Bukibologoto-HC-II/08_block-over-collapsed-ground-wide_ref20260911-0005.jpg`; `None`; body block None; adjacent text: Loose photograph 08_block-over-collapsed-ground-wide_ref20260911-0005.jpg. Facility and local government are established by its Bukibologoto-HC-II/Bulambuli source folders.
+Loose photograph 08_block-over-collapsed-ground-wide_ref20260911-0005.jpg. Facility and local government are established by its Bukibologoto-HC-II/Bulambuli source folders.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P15
+`raw-data-grouped/team-14/Sironko/Bundege-HC-III/15_water-damaged-ceiling_ref20260829-0569.jpg`; `None`; body block None; adjacent text: Loose photograph 15_water-damaged-ceiling_ref20260829-0569.jpg under Bundege-HC-III/Sironko.
+Loose photograph 15_water-damaged-ceiling_ref20260829-0569.jpg under Bundege-HC-III/Sironko.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P16
+`raw-data-grouped/team-12/Kibuku/Kasasira-Seed-Secondary-School/39_water-tank-on-cracked-base_ref0332.jpg`; `None`; body block None; adjacent text: Loose photograph 39_water-tank-on-cracked-base_ref0332.jpg under Kasasira-Seed-Secondary-School/Kibuku.
+Loose photograph 39_water-tank-on-cracked-base_ref0332.jpg under Kasasira-Seed-Secondary-School/Kibuku.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P18
+`raw-data-grouped/team-10/Napak/Napak-Seed-Secondary-School/25_furniture-some-broken-none-engraved_ref20260827-0417.jpg`; `None`; body block None; adjacent text: Loose photograph 25_furniture-some-broken-none-engraved_ref20260827-0417.jpg under Napak-Seed-Secondary-School/Napak.
+Loose photograph 25_furniture-some-broken-none-engraved_ref20260827-0417.jpg under Napak-Seed-Secondary-School/Napak.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P19
+`raw-data-grouped/_multi-team/programme-documents/data-management-chat/unpacked/TEAM 25 HEALTH CENTHERA/TEAM 25 HEALTH CENTHERA/KIHUUKYA HEALTH CENTER III/kihuukya photos/stored equipement nort in use.jpg`; `None`; body block None; adjacent text: Loose photograph in the KIHUUKYA HEALTH CENTER III/kihuukya photos folder. It is byte-identical (SHA256 a76c46aa7f6ab2856ac601a320125dfdf7cb174a6ec0c29eec25dab06232de97) to the team-25/_team-documents copy. The KIHUUKYA HEALTHCENTER III. Edited.docx return, block 29, identifies Hoima City and Bunyoro; block 38 names the facility.
+Loose photograph in the KIHUUKYA HEALTH CENTER III/kihuukya photos folder. It is byte-identical (SHA256 a76c46aa7f6ab2856ac601a320125dfdf7cb174a6ec0c29eec25dab06232de97) to the team-25/_team-documents copy. The KIHUUKYA HEALTHCENTER III. Edited.docx return, block 29, identifies Hoima City and Bunyoro; block 38 names the facility.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P20
+`raw-data-grouped/team-26/_team-documents/Butungama Seed School.pdf`; `PDF page 12, image 1`; body block None; adjacent text: Photographic PDF page 12. The paired return raw-data-grouped/team-26/Ntoroko/Butungama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUTUNGAMA HEALTH CENTRE III AND BUTUNGAMA SEED SCHOOL (1).docx, body block 162, records laboratory stools, desks, office chairs and tables in good condition but not in use, still stored. Blocks 119 and 178 describe ongoing construction.
+Photographic PDF page 12. The paired return raw-data-grouped/team-26/Ntoroko/Butungama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUTUNGAMA HEALTH CENTRE III AND BUTUNGAMA SEED SCHOOL (1).docx, body block 162, records laboratory stools, desks, office chairs and tables in good condition but not in use, still stored. Blocks 119 and 178 describe ongoing construction.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P21
+`raw-data-grouped/team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/KIBIRI HC III report.docx`; `word/media/image17.jpeg`; body block 77; adjacent text: Kibiri Health Centre III report image17.jpeg, body block 77. Blocks 1 and 5 identify Kibiri; the packaging explicitly identifies Handheld Pulse Oximeter.
+Kibiri Health Centre III report image17.jpeg, body block 77. Blocks 1 and 5 identify Kibiri; the packaging explicitly identifies Handheld Pulse Oximeter.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P22
+`raw-data-grouped/team-14/Bududa/Bududa-HC-III/09_bench-engraved-gou-moh-ugift-project_ref20260827-0187.jpg`; `None`; body block None; adjacent text: Loose photograph 09_bench-engraved-gou-moh-ugift-project_ref20260827-0187.jpg under Bududa-HC-III/Bududa. Visible institutional marking reads GOU/MOH-UGIFT PROJECT and F/Y 2023/2024.
+Loose photograph 09_bench-engraved-gou-moh-ugift-project_ref20260827-0187.jpg under Bududa-HC-III/Bududa. Visible institutional marking reads GOU/MOH-UGIFT PROJECT and F/Y 2023/2024.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P23
+`raw-data-grouped/team-01/Nebbi/_district-documents/UGIFT Assets Verification Nebbi District Report.docx`; `word/media/image17.jpeg`; body block 89; adjacent text: Nebbi district report image17.jpeg at body block 89, within the Ndhew school section beginning at block 40 and field photographs beginning at block 63. Block 42 records ongoing construction and ICT/science equipment at district headquarters; block 59 links construction delay with equipment installation delay.
+Nebbi district report image17.jpeg at body block 89, within the Ndhew school section beginning at block 40 and field photographs beginning at block 63. Block 42 records ongoing construction and ICT/science equipment at district headquarters; block 59 links construction delay with equipment installation delay.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P25
+`raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/124_broken-drip-stand_ref20260827-0349.jpg`; `None`; body block None; adjacent text: Loose photograph 124_broken-drip-stand_ref20260827-0349.jpg under Kalemungole-HC-III/Moroto. The stand lacks its supporting base. Crop retains the stand and a gloved hand; no face or identifier is present.
+Loose photograph 124_broken-drip-stand_ref20260827-0349.jpg under Kalemungole-HC-III/Moroto. The stand lacks its supporting base. Crop retains the stand and a gloved hand; no face or identifier is present.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P26
+`raw-data-grouped/team-14/Sironko/Simu-Pondo-HC-III/06_unfinished-laboratory-building_ref20260829-0541.jpg`; `None`; body block None; adjacent text: Loose photograph 06_unfinished-laboratory-building_ref20260829-0541.jpg under Simu-Pondo-HC-III/Sironko.
+Loose photograph 06_unfinished-laboratory-building_ref20260829-0541.jpg under Simu-Pondo-HC-III/Sironko.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P27
+`raw-data-grouped/team-13/Namisindwa/Namboko/032_broken-desk_ref20260902-0126.jpg`; `None`; body block None; adjacent text: Loose photograph 032_broken-desk_ref20260902-0126.jpg under Namboko/Namisindwa.
+Loose photograph 032_broken-desk_ref20260902-0126.jpg under Namboko/Namisindwa.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P28
+`raw-data-grouped/team-13/Tororo/Iyolwa/107_desk-marked-iyolwa-seed-ss-cracked-corner_ref20260830-0799.jpg`; `None`; body block None; adjacent text: Loose photograph 107_desk-marked-iyolwa-seed-ss-cracked-corner_ref20260830-0799.jpg under Iyolwa/Tororo. The institutional school name appears on the wood; no personal name is present.
+Loose photograph 107_desk-marked-iyolwa-seed-ss-cracked-corner_ref20260830-0799.jpg under Iyolwa/Tororo. The institutional school name appears on the wood; no personal name is present.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P29
+`raw-data-grouped/team-12/Budaka/Nansanga-Seed-Secondary-School/086_chair-back-rail-broken-at-the-joint_ref0700.jpg`; `None`; body block None; adjacent text: Loose photograph 086_chair-back-rail-broken-at-the-joint_ref0700.jpg under Nansanga-Seed-Secondary-School/Budaka.
+Loose photograph 086_chair-back-rail-broken-at-the-joint_ref0700.jpg under Nansanga-Seed-Secondary-School/Budaka.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P30
+`raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/BEDS IN STORAGE .jpg`; `None`; body block None; adjacent text: Loose photograph BEDS IN STORAGE .jpg under Kyabasara-HC-III/Kagadi. The source filename and visible stacking identify storage.
+Loose photograph BEDS IN STORAGE .jpg under Kyabasara-HC-III/Kagadi. The source filename and visible stacking identify storage.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P31
+`raw-data-grouped/team-25/Buliisa/Kihungya-Seed-Secondary-School/boilogy lab under construction.jpg`; `None`; body block None; adjacent text: Loose photograph boilogy lab under construction.jpg under Kihungya-Seed-Secondary-School/Buliisa. kihungya seed school.docx body block 107 identifies the science block as not in use and under construction; block 63 states that most structures were not ready and there was no electricity for ICT sessions or water for sanitation.
+Loose photograph boilogy lab under construction.jpg under Kihungya-Seed-Secondary-School/Buliisa. kihungya seed school.docx body block 107 identifies the science block as not in use and under construction; block 63 states that most structures were not ready and there was no electricity for ICT sessions or water for sanitation.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P32
+`raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/butaiba submurged facility.jpeg`; `None`; body block None; adjacent text: Loose photograph butaiba submurged facility.jpeg under Butiaba-HC-III/Buliisa. The paired butaiba report.docx body block 11 (paragraph 10) explicitly states that the old facility built by UgIFT and its equipment were affected by floods.
+Loose photograph butaiba submurged facility.jpeg under Butiaba-HC-III/Buliisa. The paired butaiba report.docx body block 11 (paragraph 10) explicitly states that the old facility built by UgIFT and its equipment were affected by floods.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P33
+`raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.23 (3).jpeg`; `None`; body block None; adjacent text: Loose photograph WhatsApp Image 2026-09-12 at 13.47.23 (3).jpeg under Bweema-Seed-Secondary-School/Buvuma. The same source photo collection includes a school sign identifying Bweema and Buvuma.
+Loose photograph WhatsApp Image 2026-09-12 at 13.47.23 (3).jpeg under Bweema-Seed-Secondary-School/Buvuma. The same source photo collection includes a school sign identifying Bweema and Buvuma.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P34
+`raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.25.jpeg`; `None`; body block None; adjacent text: Loose photograph WhatsApp Image 2026-09-12 at 13.47.25.jpeg under Bweema-Seed-Secondary-School/Buvuma.
+Loose photograph WhatsApp Image 2026-09-12 at 13.47.25.jpeg under Bweema-Seed-Secondary-School/Buvuma.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+### P35
+`raw-data-grouped/team-15/Kween/Kaptum-Seed-Secondary-School/09_computer-lab-no-power-supply_ref0537.jpg`; `None`; body block None; adjacent text: Loose photograph 09_computer-lab-no-power-supply_ref0537.jpg under Kaptum-Seed-Secondary-School/Kween. The source filename identifies the computer laboratory and no power supply.
+Loose photograph 09_computer-lab-no-power-supply_ref0537.jpg under Kaptum-Seed-Secondary-School/Kween. The source filename identifies the computer laboratory and no power supply.
+Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
 
 
 # Facility reconciliation and geography source audit
@@ -616,7 +791,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
 - Condition assessment share: REF Read Me row14 says 37122 rows were classified Functional where no condition was recorded anywhere, and the Faulty class includes idle, stored, unseen, lost and other states. Therefore 94.0% is explicitly a register classification share, not a rate of assets assessed on the ground. The chart labels preserve Functional and Faulty and do not substitute non-functional for Faulty.
 - Valuation basis: REF Read Me row41 applies comparators by item and by asset class, makes some price adjustments, and uses a UGX10000 rule; the prompt-only same-item wording is narrower than the workbook. The report uses accounting language that includes comparable asset classes and does not describe values as solely original facility costs. REF Read Me rows9,40,42,43 describe useful lives, dates and depreciation. Work in progress is kept in its stated cost basis.
 - Separate Rwenzori and Tooro totals: supplied sources do not establish a defensible split, so the combined source-supported grouping is retained.
-- National MDA photographs: inspected programme All WIP documents and asset-distribution scans contain no attributable usable asset photograph meeting the privacy rules. Ten regional photographs are used.
+- National MDA photographs: inspected programme All WIP documents and asset-distribution scans contain no attributable usable asset photograph meeting the privacy rules. 33 regional photographs are used.
 - National maintenance arrangements are included only where specific register remarks support them; the report makes no assumed servicing claims.
 
 - The draft describes 13 MDAs in paragraph 140 but lists 15 in paragraph 146. The report preserves the complete visited list from paragraph 146 and does not repeat the conflicting 13 count.
@@ -3673,9 +3848,3145 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
   ]
 }
 
-## Exact reviewed selection for stored assets in good or new condition
+## Revision evidence: narrative/revision_narrative.json
 
-The 483 reported rows require REF AU IN_USE_FLAG = NO and affirmative good/new/sealed condition together with storage wording in SK N Equipment status or O Remarks. They exclude contrary condition and uncertain custody wording. Worksheet row numbers below are inclusive and refer to the aligned Asset Register sheets, data rows 2:225134. The broader storage wording selection is not used as the good-condition count.
+```json
+{
+  "executive_paragraphs": [
+    "The verification found that UgIFT buildings and equipment were supporting local services, while unfinished works, power constraints, damage and delayed installation prevented some assets from serving their intended purpose. Health staff described improved access to maternity and antenatal care. Schools described better teaching facilities and wider access to secondary education. The main follow-up is to put unused assets into service and sustain those already working.",
+    "The verification and reconciliation accounted for 629 master-list entries: 371 health centres and 258 schools. Outcomes included operating names, replacement facilities, relocated assets and sites not constructed. Section 7.1 explains how the institutions were accounted for.",
+    "Construction and service readiness need attention together. Got Apwoyo Seed Secondary School in Nwoya had not been commissioned and its computer equipment remained at district headquarters. At Ndhew and Mamba seed schools in Nebbi, unfinished buildings delayed installation. At Atego in the same district, computers were already working in older rooms while construction continued.",
+    "Power and repairs were immediate constraints. Lungulu Seed Secondary School in Nwoya held computers in storage pending a suitable power connection. Pamaka Health Centre III in Nebbi could not use oxygen equipment because of power constraints, and Busaale Health Centre III in Kayunga needed roof, door and solar repairs. Among assets recorded as out of use, 2,569 had damage, fault or repair remarks, while 483 were stored and described as good or new.",
+    "Asset identification also needs follow-up. Of 225,133 asset entries, 50,211 carried markings, including 21,023 with UgIFT marking. The findings at Lungulu included unengraved assets. Districts should combine marking with decisions on custody and allocation, particularly where equipment has moved between facilities.",
+    "The proposed priorities are to make unsafe items safe, restore essential equipment, complete works and utilities, and install usable stored assets. Facility managers should lead routine checks and minor repairs, supported by district engineers, health and education officers and the relevant technical teams. The action schedule proposes owners, timing and evidence that each action has been completed."
+  ],
+  "background_sections": [
+    {
+      "heading": "4.1 Introduction",
+      "paragraphs": [
+        "UgIFT invested in facilities and equipment to bring education and health services closer to communities and strengthen the institutions that support them. This verification examined where those assets were, how they were being used and what was needed to keep them working. The findings focus on facilities, equipment, custody, maintenance and the services available to the public."
+      ],
+      "source_note": "Client draft, paragraphs 10, 13 and 35 to 48"
+    },
+    {
+      "heading": "4.2 Background to the verification",
+      "paragraphs": [
+        "The programme ended on 31 December 2025. The Ministry of Finance, Planning and Economic Development commissioned the verification to support closure and the continued use of programme assets. The exercise covered national institutions, government seed secondary schools and health facilities upgraded from Health Centre II to Health Centre III."
+      ],
+      "source_note": "Client draft, paragraph 13"
+    },
+    {
+      "heading": "4.3 Justification",
+      "paragraphs": [
+        "Buildings and equipment need staff, utilities, maintenance and clear responsibility for their care. The verification provided a basis for handover and identified practical actions to bring unused assets into service, repair damaged items and protect assets already in use."
+      ],
+      "source_note": "Client draft, paragraphs 13, 35 to 41 and 43 to 49"
+    },
+    {
+      "heading": "4.4 Objectives of the assignment",
+      "paragraphs": [
+        "The assignment was to identify and locate programme assets, check their condition and use, assess how institutions cared for them and recommend action where assets were damaged or unserviceable. It also prepared asset information for government reporting and the Integrated Financial Management Information System (IFMIS)."
+      ],
+      "source_note": "Client draft, paragraphs 35 to 41"
+    },
+    {
+      "heading": "4.5 Scope of work",
+      "paragraphs": [
+        "Teams reviewed institutional asset information, inspected facilities and equipment, and spoke with the officers responsible for their use and care. The scope included buildings, furniture, medical equipment, computers, vehicles and motorcycles. Small office items such as staplers and punches and disposable school laboratory items were excluded from physical inspection."
+      ],
+      "source_note": "Client draft, paragraphs 43 to 49 and 161; Government of Uganda Asset Accounting Policies and Guidelines 2023, section 3.3.3, printed page 48, PDF page 60"
+    },
+    {
+      "heading": "5.1 Preparation",
+      "paragraphs": [
+        "The entry meeting on 29 May 2026 agreed the scope, approach and work plan. A pilot at Buloba Health Centre III and Sumbwe Seed School in Wakiso District tested the tools and visit arrangements. Teams planned visits with Accounting Officers, district health and education officers, finance staff, head teachers and health centre in-charges."
+      ],
+      "source_note": "Client draft, paragraphs 95 to 109, 132 and 136 to 137"
+    },
+    {
+      "heading": "5.2 What teams checked",
+      "paragraphs": [
+        "At each institution, the team checked the assets present, their location, identification markings, condition and use. Interviews covered repairs, servicing, breakdowns, storage, operating constraints and service benefits. Photographs documented selected assets and facilities."
+      ],
+      "source_note": "Client draft, paragraphs 111 to 129 and 134"
+    },
+    {
+      "heading": "5.3 Fieldwork and itinerary",
+      "paragraphs": [
+        "National verification began on 24 July 2026 and included 10 working days of collection and repeat visits. Training for the local government teams took place on 20 and 21 August 2026. Local government fieldwork ran from 24 August to 7 September 2026, with 10 working days of collection.",
+        "The Consultant deployed 33 teams of 2 to 3 people, comprising 80 research assistants, supported by 6 supervisors and a team leader, across 176 local governments. Teams first met the local government leadership, reviewed the planned investments, visited the facilities and discussed the findings with the responsible officers."
+      ],
+      "source_note": "Client draft, paragraphs 140 to 164; itinerary table 1, rows 2 to 7",
+      "itinerary": [
+        [
+          "1",
+          "Arrival and entry",
+          "Register the visit at the Accounting Officer's office and hold the entry meeting with finance and administration."
+        ],
+        [
+          "1",
+          "Document review",
+          "Review UgIFT documents and the asset register."
+        ],
+        [
+          "2",
+          "Physical verification",
+          "Inspect identified assets in offices, health centres and schools."
+        ],
+        [
+          "2",
+          "Service interviews",
+          "Discuss functionality, maintenance and sustainability with institution and facility management."
+        ],
+        [
+          "2",
+          "Follow up and debrief",
+          "Complete follow up checks, debrief the responsible officers and finalise verification."
+        ]
+      ]
+    },
+    {
+      "heading": "5.4 Quality assurance",
+      "paragraphs": [
+        "Regional supervisors checked daily field activity and reviewed the completed tools. The central technical team carried out spot checks and helped resolve operational questions. Teams compared institutional asset information with the items and explanations provided during visits, while supervisors referred matters requiring clarification to the team leader and field coordinator."
+      ],
+      "source_note": "Client draft, paragraphs 197 to 206"
+    },
+    {
+      "heading": "5.5 Bringing the findings together",
+      "paragraphs": [
+        "The analysis brought the facility findings, interviews and asset counts together by region, institution and type of asset. Master-list names were reconciled with operating names, replacements and receiving facilities. Section 7.1 explains those outcomes, while the later sections examine use, condition, marking, maintenance and service delivery."
+      ],
+      "source_note": "Client draft, paragraphs 172 to 195"
+    },
+    {
+      "heading": "5.6 Reading the asset measures",
+      "paragraphs": [
+        "Asset counts refer to individual entries, while facility counts refer to the master-list institutions and their reconciled identities. Health centre and school assets are grouped separately, with national institutional holdings shown under the responsible ministry or agency. Buildings, furniture, transport, computers and medical equipment are grouped by their purpose and location; maternity equipment is identified by its description or ward.",
+        "The condition tables use the classifications assigned to the assets. The discussion of equipment in use, in storage or awaiting repair draws on the stated use and condition of each item and the facility findings. The detailed classification and accounting basis is given in the appendices."
+      ],
+      "source_note": "Government of Uganda Asset Accounting Policies and Guidelines 2023, sections 3.2.1, 3.3.3, 5.5 and 5.7 and Annex 1; REF register, Read Me rows 14, 40 to 43"
+    },
+    {
+      "heading": "6.1 Programme background and design",
+      "paragraphs": [
+        "UgIFT began in financial year 2017/18 to improve the financing and delivery of local government services. Initial support focused on education and health. Later support extended the programme to water and environment and agricultural micro scale irrigation, including services for refugees and host communities."
+      ],
+      "source_note": "Client draft, paragraphs 52 and 54"
+    },
+    {
+      "heading": "6.2 Programme components",
+      "paragraphs": [
+        "The programme supported a fairer system of grants to local governments, new secondary schools in underserved subcounties, and construction and upgrading of health facilities. School investments included classrooms, laboratories, administration blocks, sanitation and teachers' housing. Health investments included buildings, equipment, staff accommodation and sanitation.",
+        "It also supported local government planning, budgeting, procurement and infrastructure management, together with performance assessment and technical support. National institutions received equipment and transport to support programme administration and oversight."
+      ],
+      "source_note": "Client draft, paragraphs 56 to 67 and 77 to 78"
+    },
+    {
+      "heading": "6.3 Programme objectives",
+      "paragraphs": [
+        "The programme sought more adequate and predictable support, fairer allocation of resources and stronger oversight of local services. Its intended result was wider access to education, health, water and irrigation services and better management of the facilities and resources used to provide them."
+      ],
+      "source_note": "Client draft, paragraphs 86 to 91"
+    },
+    {
+      "heading": "6.4 Delivery position at programme closure",
+      "paragraphs": [
+        "At closure, 196 of the 259 seed schools in the programme output account were complete and 189 were operational. The health output account showed 354 of 373 upgrades and new constructions complete. These closure figures show the delivery position before the later verification visits; section 7 describes the facilities and assets found during those visits."
+      ],
+      "source_ids": [
+        "D01"
+      ],
+      "source_note": "Client draft, paragraphs 69 to 75",
+      "table": [
+        [
+          "Education",
+          "196 of 259 seed schools complete; 189 operational."
+        ],
+        [
+          "Health",
+          "354 of 373 health facility upgrades and new constructions complete."
+        ],
+        [
+          "Water and environment",
+          "758 piped water systems; 5,398 point water sources; 7,082 water supply systems rehabilitated; 325 designs completed; 256 sanitation facilities."
+        ],
+        [
+          "Micro scale irrigation",
+          "More than 6,235 irrigation systems installed, covering 4,843 hectares; 632 demonstration sites in 135 local governments."
+        ],
+        [
+          "Refugee host services",
+          "51 primary schools and 35 health facilities transitioned into local government services."
+        ],
+        [
+          "Blood banks",
+          "Arua and Hoima regional blood banks completed and commissioned; Soroti Regional Blood Bank rehabilitated."
+        ]
+      ]
+    }
+  ],
+  "regional_findings": {
+    "Central": {
+      "paragraphs": [
+        "Central region showed both service gains and repair needs. At Lukale Health Centre III in Buvuma, staff said the maternity ward enabled women to give birth locally instead of crossing water and gave them greater privacy. At Musiitwa Seed Secondary School in Kayunga, new facilities improved access to secondary education, and the irrigation system supported practical teaching and food production.",
+        "Busaale Health Centre III in Kayunga used Primary Health Care funds for maintenance and reviewed asset condition quarterly. The maternity roof was leaking, door hinges needed repair and the solar system required a replacement battery. At Musiitwa, furniture and fittings were checked each term, but broken items remained out of use until the school could fund repairs.",
+        "The immediate actions are to repair Busaale's roof, doors and solar system and clear the furniture repair backlog at Musiitwa. The school also reported attendance pressures linked to long walking distances and pupils' involvement in petty trade. School management and the district education office should address these alongside the physical improvements."
+      ],
+      "cases": [
+        {
+          "facility": "Busaale Health Centre III",
+          "lg": "Kayunga",
+          "finding": "The facility used Primary Health Care funds for maintenance and kept a quarterly condition record.",
+          "gap": "The maternity roof leaked, door hinges were damaged and the solar battery needed replacement.",
+          "action": "Cost and complete the roof, door and battery repairs, then confirm that the affected rooms and solar system are working.",
+          "source_ids": [
+            "O01",
+            "O02",
+            "O03"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Musiitwa Seed Secondary School",
+          "lg": "Kayunga",
+          "finding": "The school checked furniture and fittings each term and repaired them when funds allowed.",
+          "gap": "Broken furniture remained out of use while funding was arranged.",
+          "action": "Prepare a termly repair list and fund repairs in order of their effect on teaching and safety.",
+          "source_ids": [
+            "O04"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Musiitwa Seed Secondary School",
+          "lg": "Kayunga",
+          "finding": "The school improved access to secondary education and used irrigation equipment for teaching and food production.",
+          "gap": "Long walking distances and pupils' engagement in petty trade affected attendance.",
+          "action": "Maintain the practical teaching equipment and work with parents and the district education office on attendance barriers.",
+          "source_ids": [
+            "O05",
+            "O06"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Lukale Health Centre III",
+          "lg": "Buvuma",
+          "finding": "Staff reported that the maternity ward allowed women to give birth locally and with greater privacy.",
+          "gap": "",
+          "action": "Protect the service through routine care of the maternity building and equipment.",
+          "source_ids": [
+            "O27"
+          ],
+          "case_type": "benefit"
+        }
+      ],
+      "sources": [
+        "O01",
+        "O02",
+        "O03",
+        "O04",
+        "O05",
+        "O06",
+        "O27"
+      ]
+    },
+    "Eastern": {
+      "paragraphs": [
+        "At Kagumba Health Centre III in Kamuli, staff linked the new maternity ward to increased use of delivery and antenatal services. The facility kept an asset condition book, but staff identified pressure on housing and a need for outpatient, laboratory, storage and kitchen space. These needs should be assessed against the services now provided at the facility.",
+        "Repairs had returned broken furniture to use at Kagumba Seed Secondary School during the second term. In contrast, Sikuda Seed Secondary School in Busia had broken desks and a cracked laboratory stool that was still being used. At Bubago Health Centre in Kamuli, staff needed training to operate and maintain an oxygen concentrator.",
+        "Equipment from Bumunji, Buwembe and Majanji health centres in Busia had been transferred to Masafu Hospital. The district should confirm the continuing service need at each location and keep responsibility for the transferred equipment clear. Repairing unsafe furniture and training the oxygen equipment users are immediate priorities."
+      ],
+      "cases": [
+        {
+          "facility": "Kagumba Health Centre III",
+          "lg": "Kamuli",
+          "finding": "Staff reported increased maternity and antenatal service use, and the facility kept an asset condition book.",
+          "gap": "Staff housing was under pressure; outpatient, laboratory, storage and kitchen space were identified as needs.",
+          "action": "Assess the supporting space against patient demand and include the agreed works in the district health investment plan.",
+          "source_ids": [
+            "O07",
+            "O08",
+            "O09"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Kagumba Seed Secondary School",
+          "lg": "Kamuli",
+          "finding": "The school reported that broken furniture had been repaired during the second term.",
+          "gap": "",
+          "action": "Continue condition checks and scheduled furniture repairs before each term.",
+          "source_ids": [
+            "O28"
+          ],
+          "case_type": "practice"
+        },
+        {
+          "facility": "Sikuda Seed Secondary School",
+          "lg": "Busia",
+          "finding": "Broken desks and a cracked laboratory stool were found.",
+          "gap": "The cracked stool was still in use.",
+          "action": "Withdraw unsafe furniture from use and repair or replace it before returning it to classrooms or laboratories.",
+          "source_ids": [
+            "O11"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Bubago Health Centre",
+          "lg": "Kamuli",
+          "finding": "Staff identified difficulty operating and maintaining an oxygen concentrator.",
+          "gap": "Equipment use depended on stronger user and basic maintenance skills.",
+          "action": "Arrange practical user training and a technical check, then demonstrate operation with the staff responsible for the equipment.",
+          "source_ids": [
+            "O29"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Bumunji, Buwembe and Majanji health centres; Masafu Hospital",
+          "lg": "Busia",
+          "finding": "Equipment had been transferred from the health centres to Masafu Hospital.",
+          "gap": "",
+          "action": "Confirm the receiving custodian, location and service need, and retain signed transfer and receipt documentation.",
+          "source_ids": [
+            "O10"
+          ],
+          "case_type": "custody"
+        }
+      ],
+      "sources": [
+        "O07",
+        "O08",
+        "O09",
+        "O10",
+        "O11",
+        "O28",
+        "O29"
+      ]
+    },
+    "Northern": {
+      "paragraphs": [
+        "Unfinished construction delayed the use of delivered equipment at several schools. Got Apwoyo Seed Secondary School in Nwoya had not been commissioned; furniture was on site and computer equipment remained at district headquarters. At Ndhew and Mamba Seed Schools in Nebbi, unfinished buildings also delayed installation, with science equipment held at district headquarters. Mamba was using older structures to accommodate its computers.",
+        "Conditions differed within Nebbi. Atego Seed School was still under construction, but its computers were connected and working in older rooms. Staff reported power surges. This calls for completion of the planned facilities and a stable electricity supply while protecting the equipment already in use.",
+        "Power also restricted use of completed facilities. Lungulu Seed Secondary School in Nwoya kept computers and related equipment in storage pending a suitable power connection; the stored equipment included defective desktop units requiring separate attention. At Pamaka Health Centre III in Nebbi, a nonfunctional solar system and power constraints prevented use of oxygen equipment. Rupa Seed School in Moroto hired a generator for practical lessons and used the library and computer laboratory block as dormitories.",
+        "Some equipment had yet to be brought into use. Neonatal respiratory equipment at Kalemungole Health Centre III in Moroto remained in an unopened carton and treatment trolleys were still wrapped. Equipment intended for Todora Health Centre III in Nwoya had been sent to Paraa during construction and had not all been transferred back. Each case needs a clear decision on installation, allocation and custody.",
+        "Todora referred major medical equipment repairs through the District Health Officer to the Gulu Regional Referral Hospital technical team. Lungulu funded minor repairs from school revenue and sought district technical support. Its assets also required engraving. At Pamaka, staff reported greater community confidence and patient attendance, alongside pressure on staffing."
+      ],
+      "cases": [
+        {
+          "facility": "Got Apwoyo Seed Secondary School",
+          "lg": "Nwoya",
+          "finding": "The school was under construction and had not been commissioned. Delivered furniture was on site and computer equipment was held at district headquarters.",
+          "gap": "Incomplete buildings prevented commissioning and installation.",
+          "action": "Agree a costed completion and handover plan, then move and install the equipment when the rooms and utilities are ready.",
+          "source_ids": [
+            "O30"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Ndhew Seed School",
+          "lg": "Nebbi",
+          "finding": "Buildings were incomplete, with computer and science equipment held at district headquarters and furniture not yet installed.",
+          "gap": "Delivery of equipment had not translated into an equipped school.",
+          "action": "Complete the outstanding works and sanitation facilities and coordinate furniture and equipment installation with handover.",
+          "source_ids": [
+            "O31"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Mamba Seed School",
+          "lg": "Nebbi",
+          "finding": "Construction was incomplete. Computers were temporarily accommodated in older structures, while science equipment remained at district headquarters.",
+          "gap": "The planned laboratory and computer spaces were not ready for full installation.",
+          "action": "Complete and commission the buildings, install the equipment and confirm safe operation before formal handover.",
+          "source_ids": [
+            "O32"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Atego Seed School",
+          "lg": "Nebbi",
+          "finding": "Computers were connected and working in older rooms while construction continued.",
+          "gap": "Staff reported power surges and the planned facilities were not fully commissioned.",
+          "action": "Stabilise the power supply, protect the installed computers and finish the remaining works.",
+          "source_ids": [
+            "O33"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Lungulu Seed Secondary School",
+          "lg": "Nwoya",
+          "finding": "The school funded minor repairs and kept breakdown information, but computers remained in storage pending power.",
+          "gap": "The stored equipment included defective desktop units, and the assets were not engraved.",
+          "action": "Provide a suitable power connection, repair defective units, install the usable equipment and apply asset identification markings.",
+          "source_ids": [
+            "O12",
+            "O13",
+            "O34"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Todora and Paraa Health Centres III",
+          "lg": "Nwoya",
+          "finding": "Todora used the regional technical maintenance team, while some equipment originally intended for Todora remained at Paraa after redirection during construction.",
+          "gap": "Equipment location and final allocation required a district decision.",
+          "action": "Confirm the service need at both facilities, formally allocate or transfer the equipment and update the named custodians.",
+          "source_ids": [
+            "O14",
+            "O15"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Pamaka Health Centre III",
+          "lg": "Nebbi",
+          "finding": "Staff reported increased attendance and community confidence.",
+          "gap": "The solar system was not working, oxygen equipment could not be used because of power constraints, and staffing was under pressure.",
+          "action": "Restore reliable power and demonstrate oxygen equipment operation; review staffing against patient demand.",
+          "source_ids": [
+            "O16",
+            "O17"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Kalemungole Health Centre III",
+          "lg": "Moroto",
+          "finding": "Neonatal respiratory equipment remained in an unopened carton and treatment trolleys were still wrapped.",
+          "gap": "Delivered items had not been brought into routine use.",
+          "action": "Check the equipment, confirm the room and staff requirements, and arrange installation and user orientation.",
+          "source_ids": [
+            "O18"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Rupa Seed School",
+          "lg": "Moroto",
+          "finding": "The school hired a generator for practical lessons and used its library and computer laboratory block as dormitories.",
+          "gap": "The intended learning spaces and a permanent power connection were unavailable for their planned use.",
+          "action": "Agree a room-use plan and power solution that restores the library and computer laboratory functions.",
+          "source_ids": [
+            "O19"
+          ],
+          "case_type": "gap"
+        }
+      ],
+      "sources": [
+        "O12",
+        "O13",
+        "O14",
+        "O15",
+        "O16",
+        "O17",
+        "O18",
+        "O19",
+        "O30",
+        "O31",
+        "O32",
+        "O33",
+        "O34"
+      ]
+    },
+    "Western": {
+      "paragraphs": [
+        "Repair needs affected buildings as well as equipment. At Nyamarunda Health Centre III in Kibaale, staff raised concerns about staff-quarter workmanship, electrical installation, drainage, water security and storage space. The facility recorded broken items, set them aside and referred them to the District Health Officer. A technical inspection should establish the repairs needed and their order of priority.",
+        "Avogera Health Centre III in Buliisa carried out some repairs locally and received support from Hoima Regional Referral Hospital. Items that could not be repaired remained in storage, and staff identified a need for technical skills, user orientation and more storage space. Kyankaramata Health Centre III in Kyenjojo funded minor repairs from Primary Health Care funds, but the cost of major repairs was a constraint.",
+        "There were practical maintenance arrangements to continue. Ngwedo Seed Secondary School in Buliisa engaged a caretaker monthly and used the Directorate of Industrial Training for furniture repairs. Bundimulangya Health Centre III in Bundibugyo referred maintenance needs to the District Health Officer, who sent a team; staff said the power house and solar installation supported continued operation.",
+        "Butungama Seed School in Ntoroko remained under construction. At Kigorobya Seed Secondary School in Hoima, classrooms, the computer room and chemistry laboratory supported teaching, while staffing and study materials remained constraints. These findings call for completion of outstanding works and operating support alongside the assets already supplied."
+      ],
+      "cases": [
+        {
+          "facility": "Nyamarunda Health Centre III",
+          "lg": "Kibaale",
+          "finding": "The facility identified and set aside broken items and referred them to the District Health Officer.",
+          "gap": "Staff raised concerns about staff-quarter workmanship, electrical installation, drainage, water security and storage.",
+          "action": "Carry out a joint engineering and health inspection, make unsafe installations safe and complete the agreed repairs.",
+          "source_ids": [
+            "O20",
+            "O21"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Avogera Health Centre III",
+          "lg": "Buliisa",
+          "finding": "The facility carried out local repairs and received technical support from Hoima Regional Referral Hospital.",
+          "gap": "Items that could not be repaired remained stored; staff identified technical skills, user orientation and storage needs.",
+          "action": "Assess the stored items for repair, give practical user training and agree a suitable storage arrangement.",
+          "source_ids": [
+            "O22"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Ngwedo Seed Secondary School",
+          "lg": "Buliisa",
+          "finding": "A caretaker attended monthly for repairs, and the Directorate of Industrial Training repaired furniture.",
+          "gap": "",
+          "action": "Continue the repair schedule and record the items returned to use.",
+          "source_ids": [
+            "O23"
+          ],
+          "case_type": "practice"
+        },
+        {
+          "facility": "Bundimulangya Health Centre III",
+          "lg": "Bundibugyo",
+          "finding": "The District Health Officer arranged maintenance support, and staff said the power house and solar installation supported continued operation.",
+          "gap": "",
+          "action": "Keep the technical referral arrangement active and include the power and solar systems in routine servicing.",
+          "source_ids": [
+            "O24"
+          ],
+          "case_type": "practice"
+        },
+        {
+          "facility": "Kyankaramata Health Centre III",
+          "lg": "Kyenjojo",
+          "finding": "Primary Health Care funds paid for minor repairs.",
+          "gap": "Major repair costs were a constraint.",
+          "action": "Prepare costed technical referrals for major repairs and agree district funding and follow-up.",
+          "source_ids": [
+            "O25"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Kigorobya Seed Secondary School",
+          "lg": "Hoima",
+          "finding": "Equipped classrooms, the computer room and chemistry laboratory supported teaching; the school and ministry shared maintenance work.",
+          "gap": "Staffing and study materials constrained use of the improved facilities.",
+          "action": "Review teaching staff and materials alongside the maintenance plan.",
+          "source_ids": [
+            "O26"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Butungama Seed School",
+          "lg": "Ntoroko",
+          "finding": "The school was still under construction at the time of the interview.",
+          "gap": "The construction works required completion.",
+          "action": "Confirm the outstanding works with the district engineer and agree the completion and handover sequence.",
+          "source_ids": [
+            "O35"
+          ],
+          "case_type": "gap"
+        },
+        {
+          "facility": "Butiaba Health Centre III",
+          "lg": "Buliisa",
+          "finding": "The hydraulic delivery bed was not in use because staff needed operating guidance. Staff also reported difficulty obtaining test strips for the supplied glucometers.",
+          "gap": "Equipment use depended on practical training and access to compatible consumables.",
+          "action": "Demonstrate safe operation of the delivery bed with its users and arrange a reliable supply of compatible glucometer strips.",
+          "source_ids": [
+            "O36"
+          ],
+          "case_type": "gap"
+        }
+      ],
+      "sources": [
+        "O20",
+        "O21",
+        "O22",
+        "O23",
+        "O24",
+        "O25",
+        "O26",
+        "O35",
+        "O36"
+      ]
+    }
+  },
+  "national_findings": {
+    "heading": "7.2 National institutions",
+    "paragraphs": [
+      "National support provided computers, office equipment, furniture and transport for programme administration and oversight. National institutions, hospitals and blood banks held 15,793 recorded assets. The practical follow-up is to keep usable equipment assigned, serviced and marked, and decide what to do with damaged items.",
+      "The Ministry of Works and Transport identified an established servicing arrangement for its Toyota Hilux pickup: the Ministry of Finance, Planning and Economic Development undertook repairs and servicing. The Office of the Prime Minister identified damaged laptops that were no longer in use. Those laptops require technical assessment and a decision on repair, replacement or disposal.",
+      "At national level, 4,969 items carried identification markings, including 4,805 with UgIFT marking. Institutions should confirm that markings remain readable and linked to the office or officer responsible for each asset."
+    ],
+    "cases": [
+      {
+        "facility": "Ministry of Works and Transport",
+        "lg": "National",
+        "finding": "The Ministry of Finance, Planning and Economic Development undertook repairs and servicing of the Toyota Hilux pickup.",
+        "gap": "",
+        "action": "Continue scheduled servicing and retain the service history with the vehicle.",
+        "source_ids": [
+          "N01"
+        ],
+        "case_type": "practice"
+      },
+      {
+        "facility": "Office of the Prime Minister",
+        "lg": "National",
+        "finding": "Damaged laptops were identified as no longer in use.",
+        "gap": "The laptops were not supporting office work.",
+        "action": "Obtain a technical assessment and decide which items to repair and which to process for replacement or disposal.",
+        "source_ids": [
+          "N02"
+        ],
+        "case_type": "gap"
+      }
+    ],
+    "source_ids": [
+      "N01",
+      "N02",
+      "Q01"
+    ],
+    "per_institution_body_template": "{institution} held {count} programme assets, including {supported_asset_types}. {specific_use_or_condition_finding_if_explicitly_supported} {specific_maintenance_finding_if_supported} {engraving_count_sentence} {specific_action_if_supported}",
+    "author_note": "Optional sentences must not be filled from acquisition warranty or a generic Functional classification. Leave them out where no specific observation exists. Procurement warranty periods do not demonstrate current cover or servicing."
+  },
+  "thematic_sections": [
+    {
+      "heading": "7.4 Condition and use of assets",
+      "subsections": [
+        {
+          "heading": "7.4.1 Equipment in use and items awaiting action",
+          "paragraphs": [
+            "The visits showed why availability, condition and use need to be considered together. At Lungulu Seed Secondary School, a power connection was needed before stored computers could be installed. At Kalemungole Health Centre III, equipment remained boxed or wrapped. At Sikuda Seed Secondary School, a damaged stool was still being used.",
+            "Among assets recorded as out of use, 2,569 had damage, fault or repair remarks, while 483 were stored and described as good or new. These groups require different action: damaged items need technical assessment, while usable stored items need the conditions for safe installation and use."
+          ],
+          "source_ids": [
+            "O11",
+            "O13",
+            "O18",
+            "Q01"
+          ]
+        },
+        {
+          "heading": "7.4.2 Complete the setting in which equipment will work",
+          "paragraphs": [
+            "At Got Apwoyo, Ndhew and Mamba seed schools, unfinished buildings delayed the use or installation of equipment. At Rupa Seed School, the library and computer laboratory block had been put to another use. Completion plans should bring buildings, electricity, furniture, equipment and staffing together so that handover leads to an operating service.",
+            "At Atego Seed School, equipment was already working in older rooms while construction continued. Completion should protect this use while the planned facilities are finished and the power supply is stabilised."
+          ],
+          "source_ids": [
+            "O19",
+            "O30",
+            "O31",
+            "O32",
+            "O33"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "7.5 Asset management practices, gaps and actions",
+      "subsections": [
+        {
+          "heading": "7.5.1 Identification and custody",
+          "paragraphs": [
+            "Across the programme, 50,211 assets carried identification markings, representing 22.3% of the 225,133 entries. Of these, 21,023 had UgIFT marking and 29,188 had other markings. Lungulu Seed Secondary School provided a specific example of assets requiring engraving.",
+            "Marking should identify the asset and the institution responsible for it. Where assets have moved, custody needs to move with them: equipment from three Busia health centres had gone to Masafu Hospital, while equipment intended for Todora in Nwoya had gone to Paraa during construction. The district should confirm the continuing allocation and retain signed handover or transfer documentation."
+          ],
+          "source_ids": [
+            "Q01",
+            "O10",
+            "O15",
+            "O34"
+          ]
+        },
+        {
+          "heading": "7.5.2 Maintenance and repairs",
+          "paragraphs": [
+            "Facilities used several practical arrangements. Busaale Health Centre III reviewed condition quarterly and used Primary Health Care funds for repairs. Kagumba Health Centre III kept a condition book, and Kagumba Seed Secondary School had repaired broken furniture during the second term. Ngwedo Seed Secondary School used a monthly caretaker visit and specialist furniture repair support.",
+            "Major medical equipment repairs depended on technical support beyond the facility. Todora worked through the District Health Officer and Gulu Regional Referral Hospital; Avogera received support from Hoima Regional Referral Hospital; Bundimulangya obtained a team through the District Health Officer. At Kyankaramata, the cost of major repairs constrained what the facility could do.",
+            "Each facility should keep a short list of items requiring action, the responsible person and the agreed completion date. District health and education offices should review unresolved repairs and arrange technical assistance. Completion should mean that the item has been checked and returned to safe use, or formally assigned another outcome."
+          ],
+          "source_ids": [
+            "O01",
+            "O02",
+            "O07",
+            "O14",
+            "O22",
+            "O23",
+            "O24",
+            "O25",
+            "O28"
+          ]
+        },
+        {
+          "heading": "7.5.3 Storage, installation and user skills",
+          "paragraphs": [
+            "Stored equipment needs a plan for use. Lungulu needed power, Got Apwoyo needed completed buildings, and Avogera needed repair support for items it could not restore locally. Kalemungole had unopened and wrapped equipment requiring a check of readiness for installation and use.",
+            "Training should accompany installation. Bubago Health Centre identified limited capacity to operate and maintain an oxygen concentrator, while Avogera asked for user orientation and technical skills. Equipment should be handed over with a practical demonstration to the staff who will use it and a clear route for technical support."
+          ],
+          "source_ids": [
+            "O13",
+            "O18",
+            "O22",
+            "O29",
+            "O30"
+          ]
+        },
+        {
+          "heading": "7.5.4 Priorities for follow-up",
+          "paragraphs": [
+            "The first priority is to make unsafe items and installations safe and restore equipment needed for care and teaching. The next is to complete works, provide utilities and install assets that can then be used. Marking, custody checks and routine servicing should form part of the same follow-up, with responsibility assigned to the institution and its supervising office.",
+            "Future delivery plans should confirm the room, power, water, storage and staff requirements before equipment arrives. Facility managers should take part in that planning, as recommended at Kyankaramata and Avogera. The action schedule sets out proposed owners, timing and evidence of completion."
+          ],
+          "source_ids": [
+            "O03",
+            "O11",
+            "O13",
+            "O16",
+            "O21",
+            "O22",
+            "O25",
+            "O29",
+            "O30"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "7.6 UgIFT support to service delivery",
+      "subsections": [
+        {
+          "heading": "7.6.1 Benefits described by facilities",
+          "paragraphs": [
+            "Staff at Lukale Health Centre III in Buvuma said women could give birth locally instead of crossing water and had greater privacy. Kagumba Health Centre III in Kamuli reported greater use of maternity and antenatal services. At Pamaka Health Centre III in Nebbi, staff described increased attendance and community confidence.",
+            "Schools also described practical gains. Musiitwa Seed Secondary School used the irrigation system for teaching and food production and provided secondary education closer to surrounding communities. Kigorobya Seed Secondary School used its classrooms, computer room and chemistry laboratory to support teaching."
+          ],
+          "source_ids": [
+            "O05",
+            "O06",
+            "O08",
+            "O17",
+            "O26",
+            "O27"
+          ]
+        },
+        {
+          "heading": "7.6.2 Constraints to the intended service",
+          "paragraphs": [
+            "Equipment could not deliver its intended benefit where buildings, utilities or user skills were not ready. Power restricted oxygen equipment at Pamaka and computer installation at Lungulu. At Rupa, teaching spaces served as dormitories and practical lessons depended on a hired generator.",
+            "Demand also brought pressure on staff and space. Kagumba identified needs for staff housing and supporting clinical facilities. Pamaka reported staffing pressure, and Kigorobya identified teaching staff and study-material constraints. Musiitwa's attendance concerns required attention alongside investment in buildings and equipment."
+          ],
+          "source_ids": [
+            "O05",
+            "O09",
+            "O13",
+            "O16",
+            "O17",
+            "O19",
+            "O26"
+          ]
+        },
+        {
+          "heading": "7.6.3 Actions to sustain the benefits",
+          "paragraphs": [
+            "Districts and sector ministries should direct the first round of follow-up to actions that restore or expand a service using assets already supplied. These include reliable electricity, completion of classrooms and laboratories, repair of maternity buildings, practical equipment training and return of damaged furniture to safe use.",
+            "Facility managers should report progress in terms of use: rooms opened, equipment installed and demonstrated, repairs completed and staff able to operate the equipment. Future investment should provide for staffing, operating funds and maintenance alongside buildings and equipment."
+          ],
+          "source_ids": [
+            "O03",
+            "O11",
+            "O13",
+            "O16",
+            "O22",
+            "O25",
+            "O29",
+            "O30",
+            "O31",
+            "O32"
+          ]
+        }
+      ]
+    }
+  ],
+  "recommendations_intro": "The following owners and times are proposed for follow-up after report approval. They are recommendations, rather than commitments already made by the institutions.",
+  "recommendations": [
+    {
+      "priority": "1. Immediate safety and essential service",
+      "action": "Withdraw damaged furniture that presents a safety concern, inspect the electrical concerns at Nyamarunda, and assess the failed solar and oxygen equipment arrangements at Pamaka.",
+      "owner": "Facility managers, district health and education officers, district engineers and regional medical equipment technical teams",
+      "timing": "Proposed: inspect within 30 days of report approval; complete minor corrective work within 60 days.",
+      "completion_evidence": "Unsafe items withdrawn; signed technical assessment; repair record and demonstration of safe operation.",
+      "source_ids": [
+        "O11",
+        "O16",
+        "O21"
+      ]
+    },
+    {
+      "priority": "2. Complete and commission facilities",
+      "action": "Agree completion plans for Got Apwoyo, Ndhew, Mamba and Butungama seed schools. Coordinate the remaining works, utilities, furniture and equipment installation; protect ongoing equipment use at Atego.",
+      "owner": "District Accounting Officers, district engineers, district education officers, contractors and Ministry of Education and Sports",
+      "timing": "Proposed: agree site-specific completion plans within 30 days; track progress monthly against the approved dates.",
+      "completion_evidence": "Outstanding-works schedule; approved completion dates; inspection and handover documents; classrooms or laboratories opened for their intended use.",
+      "source_ids": [
+        "O30",
+        "O31",
+        "O32",
+        "O33",
+        "O35"
+      ]
+    },
+    {
+      "priority": "3. Bring stored equipment into use",
+      "action": "Provide the power required at Lungulu, assess and install the boxed equipment at Kalemungole, and assess the repair needs of stored items at Avogera. Keep damaged and usable stored items on separate action lists.",
+      "owner": "District health and education officers, facility managers, electrical contractors and regional technical teams",
+      "timing": "Proposed: confirm readiness and actions within 30 days; complete installation within 90 days where rooms and utilities are ready.",
+      "completion_evidence": "Equipment location check; power and installation sign-off; named custodian; practical demonstration and date first used.",
+      "source_ids": [
+        "O13",
+        "O18",
+        "O22",
+        "O34"
+      ]
+    },
+    {
+      "priority": "4. Clear priority repairs",
+      "action": "Repair the roof, doors and solar system at Busaale, arrange the major repair support needed at Kyankaramata and assess damaged laptops at the Office of the Prime Minister.",
+      "owner": "Facility managers, district health officers, district engineers and the responsible national institution asset managers",
+      "timing": "Proposed: agree priority work within 30 days and complete funded repairs within 90 days.",
+      "completion_evidence": "Approved repair list; work orders; repairs checked and assets returned to use or assigned a formal disposal decision.",
+      "source_ids": [
+        "O03",
+        "O25",
+        "N02"
+      ]
+    },
+    {
+      "priority": "5. Strengthen user skills",
+      "action": "Provide practical operation and basic maintenance training for oxygen equipment users at Bubago and the staff requiring equipment orientation at Avogera.",
+      "owner": "District health officers, facility in-charges, suppliers and regional medical equipment technical teams",
+      "timing": "Proposed: complete initial training within 60 days and review use after a further 30 days.",
+      "completion_evidence": "Training attendance by role; practical demonstration of equipment use; named technical support contact.",
+      "source_ids": [
+        "O22",
+        "O29"
+      ]
+    },
+    {
+      "priority": "6. Mark assets and confirm custody",
+      "action": "Mark eligible unengraved assets, starting with the identified Lungulu holdings, and confirm the final allocation of transferred equipment at Todora, Paraa and Masafu.",
+      "owner": "Institution asset managers, facility managers and district finance, health and education offices",
+      "timing": "Proposed: confirm allocation within 30 days and complete priority marking and custody checks within 90 days.",
+      "completion_evidence": "Readable identification; item-to-custodian match; signed transfer or receipt and agreed final location.",
+      "source_ids": [
+        "O10",
+        "O15",
+        "O34",
+        "Q01"
+      ]
+    },
+    {
+      "priority": "7. Fund routine maintenance",
+      "action": "Retain the functioning local and regional repair arrangements and prepare annual maintenance plans that separate minor repairs from specialist work. Review unresolved faults each quarter.",
+      "owner": "Facility managers, school governing bodies, district health and education officers and national institution Accounting Officers",
+      "timing": "Proposed: prepare plans within 90 days, include costs in the next budget cycle and review quarterly.",
+      "completion_evidence": "Funded maintenance plan; fault list with responsible roles and due dates; service history and closed repair actions.",
+      "source_ids": [
+        "O01",
+        "O02",
+        "O04",
+        "O07",
+        "O12",
+        "O14",
+        "O20",
+        "O23",
+        "O24",
+        "O25",
+        "O28",
+        "N01"
+      ]
+    },
+    {
+      "priority": "8. Match service capacity to demand",
+      "action": "Review supporting clinical space and staffing at Kagumba and Pamaka, teaching staff and materials at Kigorobya, and attendance barriers at Musiitwa. Include operating needs in future asset planning.",
+      "owner": "District health and education officers, facility managers and the relevant sector ministries",
+      "timing": "Proposed: complete service-needs reviews within 90 days and include agreed measures in the next planning and budget cycle.",
+      "completion_evidence": "Agreed staffing and space priorities; service or teaching plan; funded actions and periodic review of use.",
+      "source_ids": [
+        "O05",
+        "O08",
+        "O09",
+        "O17",
+        "O26",
+        "O27"
+      ]
+    }
+  ],
+  "appendix_moves": [
+    {
+      "content": "Detailed valuation and depreciation methodology from former section 5.6",
+      "destination": "Appendix: classification and accounting basis",
+      "reason": "Retains actual comparator, useful-life, date and zero-floor rules without making accounting mechanics the field narrative."
+    },
+    {
+      "content": "Regional value and net book value chart and schedules",
+      "destination": "Appendix: recorded value schedules",
+      "reason": "All monetary figures belong outside executive and main findings."
+    },
+    {
+      "content": "National ministry value rankings, depreciation and net book value tables",
+      "destination": "Appendix: national institutional schedules",
+      "reason": "Main national prose describes assets and supported use, repair and custody findings."
+    },
+    {
+      "content": "Per-category and per-region financial columns",
+      "destination": "Detailed appendix tables",
+      "reason": "Main regional tables focus on facility coverage, asset types, use and priority action."
+    },
+    {
+      "content": "Detailed Functional/Faulty definitions, including default Functional and storage/non-use cases",
+      "destination": "Appendix: interpretation of condition and use measures",
+      "reason": "Classification is not a physical functioning rate. Never call 94.0% a physical test pass rate."
+    },
+    {
+      "content": "Procurement warranty examples",
+      "destination": "Appendix only where useful",
+      "reason": "Acquisition terms do not establish current warranty cover or maintenance."
+    },
+    {
+      "content": "Programme financing amounts and credit/grant split",
+      "destination": "Appendix if retained",
+      "reason": "No monetary figures in executive, background or main findings."
+    }
+  ],
+  "editorial_instructions": [
+    "Only prose, tables and case/action fields are report content. Keep source_index, source_ids, source_note, author_note and these instructions in private evidence material.",
+    "Do not print source filenames, paths, extraction locations or source IDs anywhere in the report, including appendices, captions and source lines. Keep precise provenance in JSON and sources.md.",
+    "Preserve the agreed section order and all required national institutions. Optional per-institution sentences must be omitted when no supported specific observation exists.",
+    "Case IDs O01 through O29 are all retained. O30 through O35 add specific construction and engraving evidence.",
+    "Positive practice and benefit cases have an empty gap. Do not manufacture a defect to fill a table column.",
+    "The counts 2,569 and 483 describe items recorded as out of use. The underlying account contains default Functional classifications, so neither 211,613 nor 94.0% is an independently physically assessed functioning total or rate.",
+    "Attribute service benefits to the facilities. Do not turn interview descriptions into independently measured causal impacts.",
+    "Describe incomplete construction and operational gaps directly. Do not confuse them with incompleteness of the source records.",
+    "All recommended timing is proposed and begins after report approval. Do not describe recommendations as undertakings already accepted by institutions.",
+    "Acquisition warranty claims were deliberately removed from main prose. Keep the supported MoWT servicing arrangement and OPM damaged-laptop example.",
+    "Do not replace concrete field examples with a repeated row-count/value/condition template.",
+    "Keep numbered tables and figures, but use their captions to explain the asset or finding rather than the data processing."
+  ],
+  "source_index": {
+    "O01": {
+      "file": "raw-data-grouped/team-18/Kayunga/Busaale-HC-III/BUSAALE HC III.docx",
+      "locator": "paragraph 41, answering interview table 3",
+      "lg": "Kayunga",
+      "facility": "Busaale Health Centre III",
+      "region": "Central"
+    },
+    "O02": {
+      "file": "raw-data-grouped/team-18/Kayunga/Busaale-HC-III/BUSAALE HC III.docx",
+      "locator": "paragraph 47",
+      "lg": "Kayunga",
+      "facility": "Busaale Health Centre III",
+      "region": "Central"
+    },
+    "O03": {
+      "file": "raw-data-grouped/team-18/Kayunga/Busaale-HC-III/BUSAALE HC III.docx",
+      "locator": "paragraphs 56 to 58",
+      "lg": "Kayunga",
+      "facility": "Busaale Health Centre III",
+      "region": "Central"
+    },
+    "O04": {
+      "file": "raw-data-grouped/team-18/Kayunga/Musiitwa-Seed-Secondary-School-Nazigo/MUSIITWA SEED SCHOOL.docx",
+      "locator": "paragraphs 7, 13 and 14",
+      "lg": "Kayunga",
+      "facility": "Musiitwa Seed Secondary School Nazigo",
+      "region": "Central"
+    },
+    "O05": {
+      "file": "raw-data-grouped/team-18/Kayunga/Musiitwa-Seed-Secondary-School-Nazigo/MUSIITWA SEED SCHOOL.docx",
+      "locator": "paragraphs 20 and 23 to 25",
+      "lg": "Kayunga",
+      "facility": "Musiitwa Seed Secondary School Nazigo",
+      "region": "Central"
+    },
+    "O06": {
+      "file": "raw-data-grouped/team-18/Kayunga/Musiitwa-Seed-Secondary-School-Nazigo/MUSIITWA SEED SCHOOL.docx",
+      "locator": "paragraph 61",
+      "lg": "Kayunga",
+      "facility": "Musiitwa Seed Secondary School Nazigo",
+      "region": "Central"
+    },
+    "O07": {
+      "file": "raw-data-grouped/team-18/Kamuli/Kagumba-HC-III/KAGUMBA HC III.docx",
+      "locator": "paragraph 47",
+      "lg": "Kamuli",
+      "facility": "Kagumba Health Centre III",
+      "region": "Eastern"
+    },
+    "O08": {
+      "file": "raw-data-grouped/team-18/Kamuli/Kagumba-HC-III/KAGUMBA HC III.docx",
+      "locator": "paragraphs 53 and 54",
+      "lg": "Kamuli",
+      "facility": "Kagumba Health Centre III",
+      "region": "Eastern"
+    },
+    "O09": {
+      "file": "raw-data-grouped/team-18/Kamuli/Kagumba-HC-III/KAGUMBA HC III.docx",
+      "locator": "paragraphs 57 to 59",
+      "lg": "Kamuli",
+      "facility": "Kagumba Health Centre III",
+      "region": "Eastern"
+    },
+    "O10": {
+      "file": "raw-data-grouped/team-13/Busia/_district-documents/Busia-local-government-report.docx",
+      "locator": "paragraph 13",
+      "lg": "Busia",
+      "facility": "Bumunji, Buwembe and Majanji health centres",
+      "region": "Eastern"
+    },
+    "O11": {
+      "file": "raw-data-grouped/team-13/Busia/_district-documents/Busia-local-government-report.docx",
+      "locator": "paragraph 20",
+      "lg": "Busia",
+      "facility": "Sikuda Seed Secondary School",
+      "region": "Eastern"
+    },
+    "O12": {
+      "file": "raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx",
+      "locator": "paragraphs 69 and 70",
+      "lg": "Nwoya",
+      "facility": "Lungulu Seed Secondary School",
+      "region": "Northern"
+    },
+    "O13": {
+      "file": "raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx",
+      "locator": "paragraphs 62 and 74",
+      "lg": "Nwoya",
+      "facility": "Lungulu Seed Secondary School",
+      "region": "Northern"
+    },
+    "O14": {
+      "file": "raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx",
+      "locator": "paragraphs 135 and 136",
+      "lg": "Nwoya",
+      "facility": "Todora Health Centre III",
+      "region": "Northern"
+    },
+    "O15": {
+      "file": "raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx",
+      "locator": "paragraphs 125, 145 and 146",
+      "lg": "Nwoya",
+      "facility": "Todora Health Centre III and Paraa Health Centre III",
+      "region": "Northern"
+    },
+    "O16": {
+      "file": "raw-data-grouped/team-01/Nebbi/_district-documents/UGIFT Assets Verification Nebbi District Report.docx",
+      "locator": "paragraphs 27 and 28",
+      "lg": "Nebbi",
+      "facility": "Pamaka Health Centre III",
+      "region": "Northern"
+    },
+    "O17": {
+      "file": "raw-data-grouped/team-01/Nebbi/_district-documents/UGIFT Assets Verification Nebbi District Report.docx",
+      "locator": "paragraphs 17 and 29",
+      "lg": "Nebbi",
+      "facility": "Pamaka Health Centre III",
+      "region": "Northern"
+    },
+    "O18": {
+      "file": "raw-data-grouped/team-10/Moroto/_district-documents/Moroto-local-government-report.docx",
+      "locator": "paragraph 14",
+      "lg": "Moroto",
+      "facility": "Kalemungole Health Centre III",
+      "region": "Northern"
+    },
+    "O19": {
+      "file": "raw-data-grouped/team-10/Moroto/_district-documents/Moroto-local-government-report.docx",
+      "locator": "paragraph 16",
+      "lg": "Moroto",
+      "facility": "Rupa Seed School",
+      "region": "Northern"
+    },
+    "O20": {
+      "file": "raw-data-grouped/team-30/Kibaale/Nyamarunda-HC-III/NYAMARUNDA HC III asset verification 24 Sep 2026.docx",
+      "locator": "table 2, rows 2 and 3",
+      "lg": "Kibaale",
+      "facility": "Nyamarunda Health Centre III",
+      "region": "Western"
+    },
+    "O21": {
+      "file": "raw-data-grouped/team-30/Kibaale/Nyamarunda-HC-III/NYAMARUNDA HC III asset verification 24 Sep 2026.docx",
+      "locator": "table 2, rows 4 and 5",
+      "lg": "Kibaale",
+      "facility": "Nyamarunda Health Centre III",
+      "region": "Western"
+    },
+    "O22": {
+      "file": "raw-data-grouped/team-25/Buliisa/Avogera-HC-III/AVOGERA HC III ASSET VERIFICATION AND RECORDING TOOL KIT 222.docx",
+      "locator": "paragraphs 40 to 42 and 50 to 58",
+      "lg": "Buliisa",
+      "facility": "Avogera Health Centre III",
+      "region": "Western"
+    },
+    "O23": {
+      "file": "raw-data-grouped/team-25/Buliisa/Ngwedo-Seed-Secondary-School/NGWEDO SEED SECONDARY SCHOOL ASSET VERIFICATION 24 Sep 2026.docx",
+      "locator": "table 2, rows 3 and 4",
+      "lg": "Buliisa",
+      "facility": "Ngwedo Seed Secondary School",
+      "region": "Western"
+    },
+    "O24": {
+      "file": "raw-data-grouped/team-26/Bundibugyo/Bundimulangya-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUNDIMULANGYA HEALTH CENTRE III AND BURONDO SEED SCHOOL (1).docx",
+      "locator": "paragraphs 41, 50 and 59",
+      "lg": "Bundibugyo",
+      "facility": "Bundimulangya Health Centre III",
+      "region": "Western"
+    },
+    "O25": {
+      "file": "raw-data-grouped/team-28/Kyenjojo/Kyankaramata-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222 kyankaramata hc iii.docx",
+      "locator": "paragraphs 41 and 62",
+      "lg": "Kyenjojo",
+      "facility": "Kyankaramata Health Centre III",
+      "region": "Western"
+    },
+    "O26": {
+      "file": "raw-data-grouped/team-25/Hoima/Kigorobya-Seed-Secondary-School/KIGOROBYA SEED SECONDARY SCHOOL ASSET VERIFICATION 24 Sep 2026.docx",
+      "locator": "table 2, rows 3 to 5",
+      "lg": "Hoima",
+      "facility": "Kigorobya Seed Secondary School",
+      "region": "Western"
+    },
+    "O27": {
+      "file": "raw-data-grouped/team-31/Buvuma/Lukale-HC-III/LUKALE H.C III (1).docx",
+      "locator": "paragraphs 59 and 61",
+      "lg": "Buvuma",
+      "facility": "Lukale Health Centre III",
+      "region": "Central"
+    },
+    "O28": {
+      "file": "raw-data-grouped/team-18/Kamuli/Kagumba-Seed-Secondary-School/Kagumba Seed school.docx",
+      "locator": "paragraph 7",
+      "lg": "Kamuli",
+      "facility": "Kagumba Seed Secondary School",
+      "region": "Eastern"
+    },
+    "O29": {
+      "file": "raw-data-grouped/team-18/Kamuli/Bubago-HC-III/Bubago HCII.docx",
+      "locator": "paragraphs 57 and 61",
+      "lg": "Kamuli",
+      "facility": "Bubago Health Centre",
+      "region": "Eastern"
+    },
+    "O30": {
+      "file": "raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx",
+      "locator": "paragraphs 10 to 14 and 25 to 29",
+      "lg": "Nwoya",
+      "facility": "Got Apwoyo Seed Secondary School",
+      "region": "Northern",
+      "evidence_note": "The school remained under construction and had not been commissioned. Delivered furniture was on site and computer equipment was held at district headquarters pending completion."
+    },
+    "O31": {
+      "file": "raw-data-grouped/team-01/Nebbi/_district-documents/UGIFT Assets Verification Nebbi District Report.docx",
+      "locator": "paragraphs 40 to 61",
+      "lg": "Nebbi",
+      "facility": "Ndhew Seed School",
+      "region": "Northern",
+      "evidence_note": "Buildings were incomplete. Computer and science equipment remained at district headquarters and furniture had not been installed."
+    },
+    "O32": {
+      "file": "raw-data-grouped/team-01/Nebbi/_district-documents/UGIFT Assets Verification Nebbi District Report.docx",
+      "locator": "paragraphs 129 to 153",
+      "lg": "Nebbi",
+      "facility": "Mamba Seed School",
+      "region": "Northern",
+      "evidence_note": "Construction and commissioning were incomplete. Computers were temporarily accommodated in older structures; science equipment remained at district headquarters and furniture had not been installed."
+    },
+    "O33": {
+      "file": "raw-data-grouped/team-01/Nebbi/_district-documents/UGIFT Assets Verification Nebbi District Report.docx",
+      "locator": "paragraphs 205 to 233",
+      "lg": "Nebbi",
+      "facility": "Atego Seed School",
+      "region": "Northern",
+      "evidence_note": "Construction and commissioning were incomplete, but computers were connected and functioning in older structures. Power surges were reported. Do not describe the school as wholly unused."
+    },
+    "O34": {
+      "file": "raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx",
+      "locator": "paragraph 58; stored equipment detail in paragraph 62",
+      "lg": "Nwoya",
+      "facility": "Lungulu Seed Secondary School",
+      "region": "Northern",
+      "evidence_note": "The assets were not engraved. Stored computer equipment included two defective desktop units; do not describe every stored item as good."
+    },
+    "O35": {
+      "file": "raw-data-grouped/team-26/Ntoroko/Butungama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUTUNGAMA HEALTH CENTRE III AND BUTUNGAMA SEED SCHOOL (1).docx",
+      "locator": "school section, paragraphs 97, 105, 107 and 111",
+      "lg": "Ntoroko",
+      "facility": "Butungama Seed School",
+      "region": "Western",
+      "evidence_note": "The school interview states that it was still under construction. This alone does not establish that teaching had not begun."
+    },
+    "N01": {
+      "file": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "locator": "MoWT row 4; REF Asset Register row 209567",
+      "evidence_note": "The Ministry of Finance undertakes repairs and servicing of the Ministry of Works and Transport Toyota Hilux."
+    },
+    "N02": {
+      "file": "raw-data-grouped/_multi-team/programme-documents/MDA status register.xlsx",
+      "locator": "OPM rows 7, 9 and 10; REF Asset Register rows 209828, 209830 and 209831",
+      "evidence_note": "Damaged HP laptops identified as not being used. Examples, not a complete damaged-item count."
+    },
+    "Q01": {
+      "file": "tmp/narrative-report/summary.json",
+      "locator": "overall and by_region, underlying REF filters in sources.md",
+      "evidence_note": "225133 entries;2569 not in use with damage wording;483 not in use with storage/new wording excluding conflicting negative condition;50211 engraved;21023programme marking;29188other marking."
+    },
+    "Q02": {
+      "file": "raw-data-grouped/facility-reconciliation.csv; raw-data-grouped/master-source-rows.csv; raw-data-grouped/supervisor-decisions.csv",
+      "locator": "Final master-list scopes and outcomes as implemented in reconciliation summary",
+      "evidence_note": "629 master entries,371health and258school.589 have verification materials/consolidated entries and40are separately reconciled. Do not relabel589as individually physically inspected."
+    },
+    "D01": {
+      "file": "outputs/report-templates/Verification report_ 24092026_Draft_ BB.docx",
+      "locator": "paragraphs 69 to 75",
+      "evidence_note": "Programme closure outputs differ from later verification scope.196/259schools complete,189operational;354/373health upgrades complete."
+    },
+    "O36": {
+      "region": "Western",
+      "lg": "Buliisa",
+      "facility": "Butiaba Health Centre III",
+      "file": "raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/BUTAIBA HEALTH CENTER.docx",
+      "locator": "table 5, row 1, interview question 4, Challenges",
+      "evidence_note": "The hydraulic delivery bed was not in use because staff lacked knowledge of its operation. National Medical Stores did not have strips for the supplied glucometers. This establishes an access-to-consumables gap; it does not establish that every glucometer was physically faulty.",
+      "exact_source_excerpt": "Lack of training on how to use the new supplied items; for example the Delivery hydralic bed is not use for lack of proper knowledege on how to operate it. NMS does not have the strips for the Glucometers that were supplied"
+    },
+    "O37": {
+      "region": "Western",
+      "lg": "Buliisa",
+      "facility": "Older Butiaba Health Centre facility",
+      "file": "raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/butaiba report.docx",
+      "locator": "paragraph 10",
+      "evidence_note": "The report explicitly links the older UgIFT-built facility and its equipment to flood damage. Describe the older facility, without implying that all current services or all current buildings are submerged.",
+      "exact_source_excerpt": "The old facility built by UGIFT was affected by floods and its equipment"
+    }
+  },
+  "national_institutions_visited": [
+    "Ministry of Works and Transport",
+    "Ministry of Education and Sports",
+    "Ministry of Agriculture, Animal Industry and Fisheries",
+    "Ministry of Health",
+    "Office of the Prime Minister",
+    "Ministry of Water and Environment",
+    "Ministry of Gender, Labour and Social Development",
+    "Local Government Finance Commission",
+    "National Environment Management Authority",
+    "Public Procurement and Disposal of Public Assets Authority",
+    "Office of the Auditor General",
+    "Ministry of Public Service",
+    "Ministry of Lands, Housing and Urban Development",
+    "Ministry of Local Government",
+    "Ministry of Finance, Planning and Economic Development"
+  ],
+  "national_institutions_visited_source": "Client draft paragraph146, retains15named institutions without conflicting13count.",
+  "revision_purpose": "Direct field report narrative focused on intended services, findings, gaps and action; no monetary figures or source filenames in report text.",
+  "photo_context_notes": [
+    {
+      "source_id": "O37",
+      "text": "The older UgIFT-built Butiaba facility and its equipment were affected by floods. A photograph should identify the older flood-affected facility, rather than imply that all current services are submerged."
+    }
+  ]
+}
+```
+
+
+## Revision evidence: reconciliation/revision_field_cases.json
+
+```json
+{
+  "purpose": "Report-ready field findings for the user-requested expectations/found/gaps/actions revision. Prose fields contain no raw file references; provenance fields are private source-log material.",
+  "overview_paragraphs": [
+    "The exercise accounted for all 629 entries on the verification master list: 258 schools and 371 health centres. Facility evidence or identifiable consolidated asset entries supported 589; documented explanations accounted for the remaining 40. Accounting for every entry does not mean that every facility or every asset was physically inspected.",
+    "The field findings show why construction, equipment delivery and operational readiness need to be considered separately. Some listed facilities were not constructed or were incorrectly named; others had been replaced or held their assets at another site. At several schools and health centres, unfinished works, delayed installation, defects or incomplete handover prevented the supplied assets from serving their intended purpose.",
+    "Reconciliation identified 10 entries reported nonexistent or not constructed, four replacements, 30 name corrections, three institutions outside UgIFT, three cases of relocated assets and five existing facilities without UgIFT assets. These 55 explanations are part of the master-list account and overlap the evidence-backed entries; they are not 55 additional facilities or a separate physical-verification total.",
+    "Returns also named 24 facilities outside the matched master list. This is a count of unmatched return identities, not proof of 24 additional physical facilities or completed projects. Rukoki General Hospital, Silumira Health Centre III and Bukuuku Community Seed Secondary School were expressly confirmed as additional beneficiaries. Other returns need their identities and programme scope resolved, and one expressly states that physical verification did not take place.",
+    "Engraving needs to identify the individual asset, not only the programme or institution. The teams found both unmarked equipment and programme-marked items without unique numbers. The follow-up should connect every durable mark to an inventory entry and a named custodian, while completing installation, handover and repair actions that bring the assets into use."
+  ],
+  "coverage_provenance": [
+    {
+      "source": "raw-data-grouped/README.md",
+      "locator": "Master-list coverage and verification-status sections",
+      "supports": "632 source rows, 629 distinct master identities; 548 facility material plus 41 consolidated entries; 40 reconciled explanations."
+    },
+    {
+      "source": "raw-data-grouped/facility-data-status.pdf",
+      "locator": "pages 1 and 5",
+      "supports": "Coverage counts and limitation that return completion is not physical-verification certification."
+    },
+    {
+      "source": "tmp/narrative-report/reconciliation/reconciliation_data.json",
+      "locator": "coverage; selected_reconciliation; ground_return_identities",
+      "supports": "Deterministic reconciliation extraction and exact record locators."
+    }
+  ],
+  "programme_closure_comparison": {
+    "reference_date": "Programme closure in December 2025; not the September 2026 verification date",
+    "schools": {
+      "programme_total": 259,
+      "reported_complete": 196,
+      "reported_operational": 189,
+      "outside_reported_complete_total_derived": 63,
+      "complete_but_not_reported_operational_derived": 7
+    },
+    "health_facility_works": {
+      "programme_total": 373,
+      "reported_complete": 354,
+      "outside_reported_complete_total_derived": 19
+    },
+    "verification_scope": {
+      "schools": 258,
+      "health_centres": 371,
+      "total": 629
+    },
+    "report_ready": "At programme closure in December 2025, 196 of 259 seed schools were reported complete and 189 were operational; 354 of 373 health-facility works were reported complete. This left 63 schools and 19 health works outside the reported completed totals, with seven completed schools not reported operational. Those closure figures describe an earlier programme scope. The subsequent verification used a separate list of 258 schools and 371 health centres; the two sets should not be treated as one denominator or as a September 2026 completion count.",
+    "expected": "The programme totals provide the closure-output baseline against which reported completion can be compared.",
+    "gap": "Construction completion had not reached the stated programme totals at closure, and completion did not always mean operation. There is no supplied item-level bridge between those totals and the later verification master.",
+    "action": "The sector ministries should reconcile the closure-output schedule to the current beneficiary list, confirm the status of each unfinished or non-operational project, and assign dated completion and operational-readiness actions.",
+    "arithmetic": [
+      "259 - 196 = 63",
+      "373 - 354 = 19",
+      "196 - 189 = 7"
+    ],
+    "provenance": [
+      {
+        "source": "outputs/report-templates/Verification report_ 24092026_Draft_ BB.docx",
+        "locator": "paragraph 13",
+        "supports": "Programme ended 31 December 2025."
+      },
+      {
+        "source": "outputs/report-templates/Verification report_ 24092026_Draft_ BB.docx",
+        "locator": "paragraphs 67 and 70–71",
+        "supports": "Introduces outputs accomplished at December 2025 closure and supplies 196/259, 189, and 354/373."
+      }
+    ],
+    "limits": [
+      "The supplied draft is the source for the closure summary; underlying completion certificates and a project-by-project bridge were not supplied in these extracts.",
+      "Use programme total or closure-output total rather than a contractual completion target unless the approved target instrument is separately cited.",
+      "The arithmetic is transparent, but the 63 and 19 are not independently reverified September 2026 counts.",
+      "Do not infer that all 63 schools or all 19 health works remained unfinished at the verification date.",
+      "Do not reconcile the 259/373 programme totals to 258/371 verification identities merely by subtracting names; scope and deduplication require an item-level bridge."
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "F01",
+      "theme": "Listed complete but not constructed",
+      "facility": "Olok Health Centre",
+      "lg": "Pader",
+      "record_ids": [
+        "H205"
+      ],
+      "expected": "Olok was listed as a completed health facility.",
+      "expectation_basis": "Documented programme schedule status: Complete.",
+      "found": "The district health officer confirmed to the verification team that Olok Health Centre had not been constructed and did not exist in the district.",
+      "gap": "A completed entry could not be matched to the intended health facility. This is a facility-delivery discrepancy, not simply a missing asset return.",
+      "action": "Pader District and the Ministry of Health should reconcile the approved project, construction and payment records, document the outcome, and correct the beneficiary schedule. They should decide how the intended service need will be met.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 74; id=H205",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Combined Olok HC / Latanya school report records the DHO saying Olok HC does not exist and was not constructed. Latanya school is separate. Field report says not constructed"
+        },
+        {
+          "source": "raw-data-grouped/team-04/Pader/Olok-HC-III/1 Olok HC -Latanya SSS - Pader District.docx",
+          "locator": "paragraphs 61–62; table 2, row 1",
+          "supports": "DHO reports that Olok does not exist and was not constructed."
+        }
+      ],
+      "interpretation_limit": "The source is a recorded DHO confirmation. It does not establish the reason for non-construction, expenditure irregularity, or a funding loss."
+    },
+    {
+      "case_id": "F02",
+      "theme": "Invalid facility identity",
+      "facility": "Busia Eastern Division health-centre entry",
+      "lg": "Busia Municipal Council",
+      "record_ids": [
+        "H070",
+        "X900"
+      ],
+      "expected": "Each beneficiary entry should identify a particular health facility.",
+      "expectation_basis": "Intended purpose of the facility schedule; H070 is a listed completed entry.",
+      "found": "Reconciliation confirmed that no health facility called Busia Eastern Division existed. A separate return identifies Sofia Health Centre III within Eastern Division.",
+      "gap": "The administrative division was used as a facility name. The evidence does not establish that Sofia is an alias or replacement for that entry.",
+      "action": "The municipality and Ministry of Health should resolve the beneficiary identity and retain Sofia separately until an approved link is documented.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 227; id=H070",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Does not exist. Sofia Health Centre III is a separately named field return in Eastern Division and is not treated as an alias for this invalid master label. Reported not to exist; programme data-management decision"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 23; id=CHAT19; 2026-09-23 02:39",
+          "supports": "The master list shows a health centre called Busia Eastern Division. No such facility exists. Audit: Sofia Health Centre III is a separately named field return in Eastern Division and is not treated as an alias for this invalid master label."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 645; id=X900",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return identifies Sofia Health Centre III in Eastern Division, Busia Municipal Council. It is distinct from the invalid master label Busia Eastern Division."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 23; id=CHAT19; 2026-09-23 02:39",
+          "supports": "The master list shows a health centre called Busia Eastern Division. No such facility exists. Audit: Sofia Health Centre III is a separately named field return in Eastern Division and is not treated as an alias for this invalid master label."
+        }
+      ],
+      "interpretation_limit": "Do not substitute Sofia for H070 merely because it lies in Eastern Division; do not describe Sofia as a newly constructed facility solely from this return."
+    },
+    {
+      "case_id": "F03",
+      "theme": "Other named facilities not found",
+      "facility": "Kishangara Seed Secondary School and Butoloogo Health Centre",
+      "lg": "Ibanda and Kasanda",
+      "record_ids": [
+        "S216",
+        "H010"
+      ],
+      "expected": "The two facilities were listed as completed programme beneficiaries.",
+      "expectation_basis": "Documented master schedule statuses: Complete.",
+      "found": "Programme reconciliation confirmed that Kishangara Seed Secondary School did not exist in Ibanda and that there was no health facility called Butoloogo in Kasanda.",
+      "gap": "Neither listed identity has a confirmed replacement in the supplied evidence.",
+      "action": "The responsible local governments and sector ministries should resolve the original project identities, retain the decisions in the closure record, and remove invalid names from the active beneficiary list.",
+      "priority": "supporting",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 386; id=S216",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; The programme data manager confirms that Kishangara Seed Secondary School does not exist in Ibanda. Preserve the master row for audit and do not infer a replacement facility. Reported not to exist; programme data-management decision"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 70; id=USER03; 2026-09-24 15:15",
+          "supports": "Kishangara Seed Secondary School does not exist in Ibanda. Audit: Direct programme data-management instruction. Preserve master entry S216 as an audit record, mark it reported absent, and do not create or infer a replacement facility."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 564; id=H010",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Depaul said on 24 September 2026 that there is no health facility called Butoloogo Health Centre III in Kasanda. No replacement is inferred. Not established"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 74; id=CHAT45D; 2026-09-24 17:51",
+          "supports": "There is no health facility called butoloogo health centre III in kasanda district Audit: Reported absent. No replacement facility is inferred."
+        }
+      ],
+      "interpretation_limit": "These are explicit reconciliation confirmations, not claims that the teams physically searched every possible location."
+    },
+    {
+      "case_id": "F04",
+      "theme": "Beneficiary replacements",
+      "facility": "Ngomoromo, Oweko, Musandama and Loinya health centres",
+      "lg": "Lamwo, Nebbi, Ntoroko and Maracha",
+      "record_ids": [
+        "H150",
+        "H218",
+        "H354",
+        "H213"
+      ],
+      "expected": "The programme schedule should identify the facilities that actually received the intended investment.",
+      "expectation_basis": "Intended purpose of the beneficiary schedule; original entries are retained for accountability.",
+      "found": "Supervisors confirmed that Pangira replaced Ngomoromo, Pamaka replaced Oweko, Butungama replaced Musandama, and Liko replaced Loinya. Liko was already included elsewhere on the master list.",
+      "gap": "The original and receiving names were not consistently linked, creating a risk of counting one investment twice or treating a replacement as an unexplained omission.",
+      "action": "Attach the approved replacement decisions to the beneficiary schedule, link each original entry to its recipient, and count the receiving facility once.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 69; id=H150",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Replaced. Chat spelling Ngoromoro matched to master Ngomoromo. Replacement decision does not itself prove physical verification."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 1; id=CHAT01; 2026-09-21 16:29",
+          "supports": "Ngoromoro HC in Lamwo was replaced by Pangira HC in Lamwo. Audit: Chat spelling Ngoromoro matched to master Ngomoromo. Replacement decision does not itself prove physical verification."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 2; id=H218",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Supervisor confirms that Oweko was replaced by Pamaka Health Centre III. The Pamaka return is retained as the receiving-facility evidence. Supervisor-confirmed asset relocation/replacement; field evidence is counted under the receiving facility"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 30; id=CHAT21D; 2026-09-23 09:36",
+          "supports": "Oweko was replaced by Pamaka HC Audit: Oweko was replaced by Pamaka Health Centre III. Count the evidence under Pamaka."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 495; id=H354",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Depaul says Musandama HC III was replaced by Butangama HC III in Ntoroko. The filed return spells the facility Butungama. That return is counted once, on the Musandama master row."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 31; id=CHAT22; 2026-09-23 11:31",
+          "supports": "Musandama HCIII was replaced with Butangama HCIII. This was in Ntoroko District Audit: Chat spelling Butangama; the filed return spells Butungama."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 30; id=H213",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Loinya was replaced by Liko, which already has master entry H212. Count Liko once. Already-listed replacement; no second verified facility"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 4; id=CHAT04; 2026-09-21 16:32",
+          "supports": "Loinya HC in Maracha District was replaced by Liko HC in Maracha District Audit: Liko HC II is already master row 212 and Loinya row 213. Do not count Liko twice or add it as off-master."
+        }
+      ],
+      "interpretation_limit": "Replacement confirmation does not by itself certify a physical inspection of the recipient."
+    },
+    {
+      "case_id": "F05",
+      "theme": "Assets moved to other facilities",
+      "facility": "Alangi, Ther-uru and Abanga",
+      "lg": "Zombo",
+      "record_ids": [
+        "H231",
+        "H233",
+        "S208"
+      ],
+      "expected": "The location and custodian of programme assets should agree with the receiving facility.",
+      "expectation_basis": "Asset-accountability expectation; relocation is documented by the supervisor.",
+      "found": "The supervisor confirmed that the three facilities existed, but Alangi assets had moved to Amwonyo Health Centre, Ther-uru assets to Atyak Health Centre, and Abanga school assets to Kango Seed Secondary School.",
+      "gap": "The original facility names no longer describe where these assets are held. This is a custody and location issue, not evidence that the assets disappeared.",
+      "action": "The district should reconcile the transfer approvals and signed receipts with both the sending and receiving inventories, record the current custodian, and confirm the service arrangements at the original sites.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 14; id=H231",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Supervisor confirms that Alangi exists, but its UgIFT assets were relocated to Amwonyo Health Centre III. Evidence is counted under Amwonyo. Supervisor-confirmed asset relocation/replacement; field evidence is counted under the receiving facility"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 27; id=CHAT21A; 2026-09-23 09:36",
+          "supports": "While Alangi HC, Ther-uru HC & Abanga SSS exist, their assets where relocated to Amwonyo HC, Atyak HC & Kango SSS respectively. Audit: Alangi exists, but its UgIFT assets were relocated to Amwonyo Health Centre III. Count the evidence under Amwonyo."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 16; id=H233",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Supervisor confirms that Ther-uru exists, but its UgIFT assets were relocated to Atyak Health Centre III. Evidence is counted under Atyak. Supervisor-confirmed asset relocation/replacement; field evidence is counted under the receiving facility"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 28; id=CHAT21B; 2026-09-23 09:36",
+          "supports": "While Alangi HC, Ther-uru HC & Abanga SSS exist, their assets where relocated to Amwonyo HC, Atyak HC & Kango SSS respectively. Audit: Ther-uru exists, but its UgIFT assets were relocated to Atyak Health Centre III. Count the evidence under Atyak."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 17; id=S208",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Supervisor confirms that Abanga Seed Secondary School exists, but its UgIFT assets were relocated to Kango Seed Secondary School. Evidence is counted under Kango. Supervisor-confirmed asset relocation/replacement; field evidence is counted under the receiving facility"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 29; id=CHAT21C; 2026-09-23 09:36",
+          "supports": "While Alangi HC, Ther-uru HC & Abanga SSS exist, their assets where relocated to Amwonyo HC, Atyak HC & Kango SSS respectively. Audit: Abanga exists, but its UgIFT assets were relocated to Kango Seed Secondary School. Count the evidence under Kango."
+        }
+      ],
+      "interpretation_limit": "The source confirms relocation but does not establish that transfers were unauthorized or that the original sites have no services."
+    },
+    {
+      "case_id": "F06",
+      "theme": "Facilities outside programme scope",
+      "facility": "Alira Health Centre and Kiziranfumbi Seed Secondary School",
+      "lg": "Oyam and Kikuube",
+      "record_ids": [
+        "H193",
+        "S237"
+      ],
+      "expected": "The UgIFT beneficiary schedule should include institutions supported by the programme.",
+      "expectation_basis": "Documented programme scope reconciliation.",
+      "found": "The later Oyam clarification confirmed that Alira existed but was not among the facilities upgraded under UgIFT. Kiziranfumbi Seed Secondary School was also confirmed to be outside UgIFT.",
+      "gap": "Programme scope was confused with the existence of the institutions. Alira must not be described as a nonexistent facility.",
+      "action": "Remove the two institutions from the active UgIFT beneficiary scope while preserving the original entries and the approved corrections for audit.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 100; id=H193",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; The revised Oyam decision confirms that Alira exists, but it is outside the facilities upgraded under UgIFT. Facility exists but is outside the upgraded UgIFT set"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 21; id=CHAT17; 2026-09-22 17:04",
+          "supports": "However on ground the following health centres were upgraded and received UgiFT assets: Ajaga, Icheme (Okwir), Abela, Atura, Loro and Icheme. Whereas Alira HC III exists, it is not part of those that were upgraded to Ugift. Audit: This later clarification supersedes the earlier claim that Alira did not exist. Acimi, Acokara and Ariba remain reported absent; Alira exists but is outside the upgraded UgIFT set. Abeja is corrected to the master-listed Abela."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 472; id=S237",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Depaul said on 24 September 2026 that Kiziranfumbi Seed Secondary School is not under UgIFT and should be excluded. No replacement school is inferred. Not established"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 72; id=CHAT45B; 2026-09-24 16:15",
+          "supports": "Kiziranfumbi seed secondary school is not under ugift and so should be excluded from the list Audit: Excluded from the UgIFT list. No replacement school is inferred."
+        }
+      ],
+      "interpretation_limit": "The later Alira clarification supersedes the earlier statement that it did not exist. Do not infer a replacement school for Kiziranfumbi."
+    },
+    {
+      "case_id": "F07",
+      "theme": "Existing facilities without UgIFT assets",
+      "facility": "Pandwong Health Centre; Bumbaire, Kyamuhunga and Kashenshero schools; Rwamujojo Health Centre",
+      "lg": "Kitgum Municipal Council, Bushenyi, Mitooma and Sheema Municipal Council",
+      "record_ids": [
+        "H149",
+        "S214",
+        "S215",
+        "S221",
+        "H282"
+      ],
+      "expected": "A listed beneficiary should have a supported account of the programme assistance it received.",
+      "expectation_basis": "Beneficiary-accountability expectation; all five appear on the master schedule.",
+      "found": "Supervisors confirmed that these five institutions existed but had not benefited from UgIFT assets.",
+      "gap": "Their presence on the list did not establish asset delivery. The evidence does not show that assets were received and later lost.",
+      "action": "The local governments and sector ministries should confirm beneficiary eligibility and delivery records, then either correct the list or document any approved outstanding delivery.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 67; id=H149",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; The supervisor confirms that Pandwong exists but did not receive UgIFT assets. It is therefore excluded from the missing-return count. Facility exists; supervisor reports no UgIFT assets"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 2; id=CHAT02; 2026-09-21 16:29",
+          "supports": "Pandwongo HC in Kitgum exists but did not benefit from Ugift assets. Audit: Master identifies Kitgum Mc, chat says Kitgum. Not an absent facility and not verified merely from this message."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 345; id=S214",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Johnson Gumisiriza says Bumbaire SSS did not benefit from UgIFT. The wording is from the 24 September 2026 13:36 screenshot; it is not in the earlier chat export. Facility exists; supervisor reports no UgIFT assets"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 65; id=CHAT44A; 2026-09-24 13:32",
+          "supports": "Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HCIII are did not benefit from Ugift Audit: Johnson Gumisiriza says Bumbaire SSS did not benefit from UgIFT. The wording is from the 24 September 2026 13:36 screenshot; it is not in the earlier chat export."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 346; id=S215",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Johnson Gumisiriza says Kyamuhunga SSS did not benefit from UgIFT. The wording is from the 24 September 2026 13:36 screenshot; it is not in the earlier chat export. Facility exists; supervisor reports no UgIFT assets"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 66; id=CHAT44B; 2026-09-24 13:32",
+          "supports": "Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HCIII are did not benefit from Ugift Audit: Johnson Gumisiriza says Kyamuhunga SSS did not benefit from UgIFT. The wording is from the 24 September 2026 13:36 screenshot; it is not in the earlier chat export."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 351; id=S221",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Johnson Gumisiriza says Kashenshero SSS did not benefit from UgIFT. The wording is from the 24 September 2026 13:36 screenshot; it is not in the earlier chat export. Facility exists; supervisor reports no UgIFT assets"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 67; id=CHAT44C; 2026-09-24 13:32",
+          "supports": "Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HCIII are did not benefit from Ugift Audit: Johnson Gumisiriza says Kashenshero SSS did not benefit from UgIFT. The wording is from the 24 September 2026 13:36 screenshot; it is not in the earlier chat export."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 361; id=H282",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Johnson Gumisiriza says Rwamujojo HC III did not benefit from UgIFT. The wording is from the 24 September 2026 13:36 screenshot; it is not in the earlier chat export. Facility exists; supervisor reports no UgIFT assets"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 68; id=CHAT44D; 2026-09-24 13:32",
+          "supports": "Bumbaire SSS, Kyamuhunga SSS, Kashenshero SSS and Rwamujojo HCIII are did not benefit from Ugift Audit: Johnson Gumisiriza says Rwamujojo HC III did not benefit from UgIFT. The wording is from the 24 September 2026 13:36 screenshot; it is not in the earlier chat export."
+        }
+      ],
+      "interpretation_limit": "Report non-receipt of programme benefits as confirmed; do not describe theft, missing delivered assets, or a quantified asset shortfall without delivery evidence."
+    },
+    {
+      "case_id": "F08",
+      "theme": "Names and aliases",
+      "facility": "Bussi/Zinga and Dabani/Buwumba",
+      "lg": "Wakiso and Busia",
+      "record_ids": [
+        "H054",
+        "H065"
+      ],
+      "expected": "One physical facility should have one stable identity, with former or local names linked to it.",
+      "expectation_basis": "Identity-control expectation supported by final reconciliation.",
+      "found": "Bussi was confirmed to be the village name for the already-listed Zinga Health Centre. The Buwumba return was reconciled to the master entry named Dabani.",
+      "gap": "Different names could be mistaken for additional facilities. These corrections explain identity differences; they do not establish additional construction or service-delivery failures.",
+      "action": "Use the confirmed operating name, retain the old name as an alias, and link all asset and project records to one facility identifier.",
+      "priority": "supporting",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 602; id=H054",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Direct programme data-management instruction. Bussi is the village; its health centre is Zinga Health Centre III, master entry H052, whose return is filed in team-32/Wakiso/Zinga-HC-III. Keep master entry H054 as an audit record and count the Zinga return once, on H052. No separate Bussi facility is created. Village name for already-listed Zinga Health Centre III (H052); no second facility"
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 91; id=USER04; 2026-09-26",
+          "supports": "The master lists indicates: \"Bussi Health Centre III\" but Bussi is the village and the health centre is Zinga Health Centre III whose information is already provided in raw-data-grouped/team-32/Wakiso/Zinga-HC-III Audit: Direct programme data-management instruction. Bussi is the village; its health centre is Zinga Health Centre III, master entry H052, whose return is filed in team-32/Wakiso/Zinga-HC-III. Keep master entry H054 as an audit record and count the Zinga return once, on H052. No separate Bussi facility is created."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 223; id=H065",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; Name corrected. Reconcile the existing Buwumba field return to master entry H065 and do not retain a second off-master Buwumba facility."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 22; id=CHAT18; 2026-09-23 02:31",
+          "supports": "Dabani HCIII which is recorded as (Dabani) on the facilities' master list, exists as Buwumba HC III on ground. Audit: Reconcile the existing Buwumba field return to master entry H065 and do not retain a second off-master Buwumba facility."
+        }
+      ],
+      "interpretation_limit": "The older consolidated field statement that Buwumba was off-list is superseded by the Dabani/Buwumba reconciliation. Zinga must be counted once."
+    },
+    {
+      "case_id": "F09",
+      "theme": "Incomplete school and equipment awaiting use",
+      "facility": "Got Apwoyo Seed Secondary School",
+      "lg": "Nwoya",
+      "record_ids": [
+        "S035"
+      ],
+      "expected": "The school buildings and supplied ICT equipment were intended to support secondary education at Got Apwoyo.",
+      "expectation_basis": "Intended service use; the master schedule already described the works as Ongoing, so this is not a contradiction of a recorded Complete status.",
+      "found": "The team found the school under construction and not commissioned. Its ICT package remained in the education department stores at Nwoya District headquarters awaiting completion; delivered furniture and structures had not been brought into use.",
+      "gap": "Delivered equipment was not yet supporting teaching at the intended school, and custody remained split between the district and the site.",
+      "action": "Nwoya District and the Ministry of Education should agree a dated completion and handover plan, maintain a checked district-store inventory, and arrange installation, testing and signed transfer to the school when it is ready.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 10; id=S035",
+          "supports": "Master/return identity, LG, recorded project status (Ongoing), final reconciliation outcome; team-01 / Nwoya / Got-Apwoyo-Seed-Secondary-School"
+        },
+        {
+          "source": "raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx",
+          "locator": "paragraphs 10, 13 and 28",
+          "supports": "Under construction and uncommissioned; ICT held at district headquarters; recommendation to expedite civil works."
+        },
+        {
+          "source": "raw-data-grouped/team-01/Nwoya/Got-Apwoyo-Seed-Secondary-School/NWOYA GOT APWOYO SEED.docx",
+          "locator": "paragraph 91; table 13, rows 2–13",
+          "supports": "Facility and major civil structures still under construction."
+        }
+      ],
+      "interpretation_limit": "The supplied evidence does not provide a contractual completion deadline, so do not quantify lateness."
+    },
+    {
+      "case_id": "F10",
+      "theme": "Construction damage and displaced service delivery",
+      "facility": "Bukibologoto Health Centre",
+      "lg": "Bulambuli",
+      "record_ids": [
+        "H112"
+      ],
+      "expected": "Bukibologoto was listed as complete and was intended to provide health services from the constructed facility.",
+      "expectation_basis": "Documented master schedule Complete status plus intended use.",
+      "found": "The field team found that mudslides had damaged the works before completion. Ground had fallen away below a corner of the block and a wall was cracked. The catchment was receiving care at the Simu subcounty offices, while the supplied equipment remained in district stores.",
+      "gap": "The planned facility was not available for its intended use. The alternative service location and stored equipment require a clear, sustainable arrangement.",
+      "action": "The district and Ministry of Health should commission an engineering assessment, decide on repair or relocation, secure and inventory the equipment, and document how services will continue while the permanent facility is resolved.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 251; id=H112",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; team-14 / Bulambuli / Bukibologoto-HC-II"
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx",
+          "locator": "paragraphs 552–553 and 736",
+          "supports": "Works damaged by mudslides before completion; care at subcounty offices; equipment unlisted in district stores; decision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "F11",
+      "theme": "Incomplete works and site readiness",
+      "facility": "Kyangwali Seed Secondary School",
+      "lg": "Kikuube",
+      "record_ids": [
+        "S050"
+      ],
+      "expected": "The completed school should be ready to receive and safely use its equipment.",
+      "expectation_basis": "Intended service use; master status is ongoing, not complete.",
+      "found": "The team recorded continuing construction. The school also reported a lack of electricity and an incomplete perimeter fence, and handover had not taken place.",
+      "gap": "Building completion alone will not make the assets ready for use unless power, security and handover are resolved.",
+      "action": "The district, education ministry and contractor should close the remaining works, electricity and security requirements in one readiness plan, followed by joint testing, handover and allocation of operating responsibilities.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 473; id=S050",
+          "supports": "Master/return identity, LG, recorded project status (ongoing), final reconciliation outcome; The Team 25 archive contains the Kyangwali Seed Secondary School toolkit and photographs. The return says the facility had not yet been handed over because construction was continuing."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 55; id=CHAT35M; 2026-09-23 15:09",
+          "supports": "Kyangwali SSS Audit: Kyangwali Seed Secondary School, Kikuube."
+        },
+        {
+          "source": "raw-data-grouped/team-25/Kikuube/Kyangwali-Seed-Secondary-School/KYANGWALI  SEED S.S REPORT.docx",
+          "locator": "paragraphs 4 and 17",
+          "supports": "Construction continuing; lack of electricity and complete fence; assets not safe."
+        }
+      ],
+      "interpretation_limit": "No contractual due date is supplied; no quantified loss should be inferred from the security concern."
+    },
+    {
+      "case_id": "F12",
+      "theme": "Incomplete works and unopened equipment",
+      "facility": "Sidok Seed Secondary School",
+      "lg": "Kaabong",
+      "record_ids": [
+        "S019"
+      ],
+      "expected": "Completed buildings and checked equipment were intended to support school operations.",
+      "expectation_basis": "Intended use; master schedule status is Ongoing.",
+      "found": "The team found blocks, a kitchen and toilets still under construction, with termite workings on the plaster of two blocks. The school consignment remained unopened and its contents had not been counted against the delivery information.",
+      "gap": "The works were unfinished and the condition and completeness of the packaged equipment had not been established by opening it.",
+      "action": "The district should secure completion and treatment of the affected works, then arrange a witnessed opening, count, condition check and asset registration before equipment is issued.",
+      "priority": "supporting",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 199; id=S019",
+          "supports": "Master/return identity, LG, recorded project status (Ongoing), final reconciliation outcome; team-11 / Kaabong / Sidok-Seed-Secondary-School"
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx",
+          "locator": "paragraphs 197–198, 729 and 735",
+          "supports": "Incomplete works, termite workings and unopened consignment; recommended unpacking and defect correction."
+        }
+      ],
+      "interpretation_limit": "Delivery-note identifiers are not evidence that the team read the serial numbers from the equipment."
+    },
+    {
+      "case_id": "F13",
+      "theme": "Additional return and unfinished school",
+      "facility": "Lokori Seed Secondary School",
+      "lg": "Karenga",
+      "record_ids": [
+        "X022"
+      ],
+      "expected": "The school needs completed accommodation and secure storage before its equipment can be used on site.",
+      "expectation_basis": "Intended service use; the return has no confirmed master-list match.",
+      "found": "The team found Lokori under construction, with about one block built and no store of its own. Its assets were being held at Kapedo Seed Secondary School and remained unopened.",
+      "gap": "School readiness and custody of its equipment were unresolved. The return also requires confirmation against the approved beneficiary scope.",
+      "action": "The district should confirm the programme identity, complete the required works and secure storage, reconcile the equipment held at Kapedo, and arrange a signed transfer when Lokori is ready.",
+      "priority": "supporting",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 644; id=X022",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx",
+          "locator": "paragraphs 211–212",
+          "supports": "School under construction; no store; equipment at Kapedo unopened."
+        }
+      ],
+      "interpretation_limit": "A submitted return and a direct site observation do not by themselves establish a newly approved additional UgIFT beneficiary."
+    },
+    {
+      "case_id": "F14",
+      "theme": "Installation and commissioning outstanding",
+      "facility": "Buwagogo Seed Secondary School",
+      "lg": "Manafwa",
+      "record_ids": [
+        "S134"
+      ],
+      "expected": "Supplied ICT equipment was intended to be installed and used for teaching.",
+      "expectation_basis": "Intended use; the master schedule lists the facility as Complete, but that status does not separately certify equipment commissioning.",
+      "found": "The team found the March 2024 ICT consignment still boxed in the store, with contractor installation pending and commissioning delayed.",
+      "gap": "Delivery had not translated into operational ICT capacity at the school.",
+      "action": "The district and Ministry of Education should require an installation and commissioning date, reconcile the stored equipment against delivery records, test it, and assign responsibility for its operation and maintenance.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 230; id=S134",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; team-13 / Manafwa / Buwagogo-Seed-School"
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx",
+          "locator": "paragraphs 411–412",
+          "supports": "March 2024 ICT consignment boxed; installation pending; commissioning delayed."
+        }
+      ],
+      "interpretation_limit": "The same paragraph reports an earlier computer theft through a school letter; the present case focuses on installation and does not combine theft allegations with the stored consignment."
+    },
+    {
+      "case_id": "F15",
+      "theme": "Inspection of packaged equipment incomplete",
+      "facility": "Kapedo Seed Secondary School",
+      "lg": "Karenga",
+      "record_ids": [
+        "S146"
+      ],
+      "expected": "Delivered equipment should be opened, counted and matched to its identifiers before the school accepts it into accountable custody and use.",
+      "expectation_basis": "Recommended receiving and asset-control practice, not a cited breach of a particular contractual clause.",
+      "found": "The team saw sealed cartons of computers, network equipment, air conditioners and fittings. The store could not be opened on the visit, so the contents were not counted or checked against the delivery note.",
+      "gap": "The presence of cartons did not establish the quantity, identity or working condition of the equipment inside.",
+      "action": "Arrange access with the custodian and conduct a witnessed opening, count, serial-number check and functional test; update the school inventory and document any delivery differences.",
+      "priority": "supporting",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 201; id=S146",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; team-11 / Karenga / Kapedo-Seed-Secondary-School"
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx",
+          "locator": "paragraphs 205–206 and 729",
+          "supports": "Cartons sealed; keys unavailable; nothing inside opened, counted or read against delivery note."
+        }
+      ],
+      "interpretation_limit": "Do not include this consignment in a claimed count of individually physically verified or function-tested equipment."
+    },
+    {
+      "case_id": "F16",
+      "theme": "Confirmed beneficiary omitted from the master list; handover pending",
+      "facility": "Bukuuku Community Seed Secondary School",
+      "lg": "Fort Portal City",
+      "record_ids": [
+        "X030"
+      ],
+      "expected": "All confirmed programme beneficiaries should appear on the approved beneficiary schedule, and completed assets should be handed over for full use.",
+      "expectation_basis": "Programme scope confirmation and intended handover/accountability practice.",
+      "found": "Bukuuku was confirmed as an additional seed school outside the master list. The team recorded improved science and computer teaching following laboratory construction, while handover of some assets remained pending.",
+      "gap": "The programme list omitted a confirmed beneficiary, and incomplete handover limited full accountability and use of the assets.",
+      "action": "The city and Ministry of Education should regularise the beneficiary entry and complete a joint handover covering the outstanding items, defects, inventories and operating responsibilities.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 660; id=X030",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Depaul confirmed on 25 September 2026 that Bukuuku is not on the master list but is an additional seed secondary school in Fort Portal City. The existing return is kept. No master row is added."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 88; id=CHAT46J; 2026-09-25 13:24",
+          "supports": "Bukuuku is not on master list ,but additional seed secondary school done in fort portal city Audit: Confirms the existing unmatched Bukuuku return. Do not add a master row."
+        },
+        {
+          "source": "raw-data-grouped/team-28/Fort-Portal City/Bukuuku-Community-Secondary-School/GAYAZA AND BUKUUKU.docx",
+          "locator": "paragraphs 130, 132 and 136; table 11, row 14",
+          "supports": "Benefits to teaching; contractor urged to hand over; administration-block tables unfinished/work in progress."
+        }
+      ],
+      "interpretation_limit": "Do not say the entire school was non-operational: the same source describes teaching benefits from its laboratories."
+    },
+    {
+      "case_id": "F17",
+      "theme": "Confirmed beneficiaries omitted from the master list",
+      "facility": "Rukoki General Hospital and Silumira Health Centre III",
+      "lg": "Kasese Municipality and Kakumiro",
+      "record_ids": [
+        "X007",
+        "X010"
+      ],
+      "expected": "Confirmed UgIFT beneficiaries should be included in the authoritative programme account.",
+      "expectation_basis": "Explicit supervisor confirmation of programme beneficiary status outside the master list.",
+      "found": "The supervisor confirmed that Rukoki General Hospital was a UgIFT beneficiary in Kasese Municipality and that Silumira Health Centre III was an additional beneficiary in Kakumiro. Neither appeared on the master list used for verification.",
+      "gap": "The programme scope omitted confirmed recipients. Their submitted asset information must be linked to approved beneficiary decisions without silently changing the original verification denominator.",
+      "action": "The sector ministry and local governments should approve the additions, assign stable facility identifiers, and connect the beneficiary decisions to their asset schedules.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 659; id=X007",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Depaul confirmed on 25 September 2026 that Rukoki General Hospital is not on the master list but is a UgIFT beneficiary in Kasese Municipality. The existing register return is kept. No master row is added."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 86; id=CHAT46H; 2026-09-25 13:14",
+          "supports": "Rukoki general hospital is not on the master list but a beneficiary of UgIFT, in kasese Municipality Audit: Confirms the existing unmatched Rukoki return. Do not add a master row."
+        },
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 662; id=X010",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Depaul confirmed on 25 September 2026 that Silumira HC III is not on the master list but was done in Kakumiro. The existing register return is kept. No master row is added."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 87; id=CHAT46I; 2026-09-25 13:23",
+          "supports": "Silumira HCIII not on master list but was done in kakumiro district Audit: Confirms the existing unmatched Silumira return. Do not add a master row."
+        }
+      ],
+      "interpretation_limit": "Their evidence is held in consolidated returns. Confirmation of beneficiary status is not a certificate of physical inspection or construction completion."
+    },
+    {
+      "case_id": "F18",
+      "theme": "Assets without engraved identifiers",
+      "facility": "Bulaago Health Centre",
+      "lg": "Bulambuli",
+      "record_ids": [
+        "H114"
+      ],
+      "expected": "Equipment should carry durable identifiers that can be matched to the facility inventory.",
+      "expectation_basis": "Recommended asset-control practice; consolidated field report paragraphs 724–725 call for a common unique marking system.",
+      "found": "The team found that Bulaago equipment had no engraved or serialised identifiers.",
+      "gap": "Identical items could not be reliably distinguished during movement, maintenance or later verification.",
+      "action": "The district should assign unique numbers, mark suitable items durably, link each number to the inventory, and record responsibility for completing and checking the work.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 252; id=H114",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; team-14 / Bulambuli / Bulaago-HC-III"
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx",
+          "locator": "paragraphs 528–529 and 724–725",
+          "supports": "No equipment engraved or serialised; recommended common unique marking system."
+        }
+      ]
+    },
+    {
+      "case_id": "F19",
+      "theme": "Programme marks without unique asset numbers",
+      "facility": "Bumugibole Health Centre",
+      "lg": "Bulambuli",
+      "record_ids": [
+        "H111"
+      ],
+      "expected": "An asset mark should distinguish the individual item as well as its programme and facility.",
+      "expectation_basis": "Recommended identification standard; the source explicitly distinguishes programme marking from item numbering.",
+      "found": "The team found programme and financial-year marks on items that could take an engraving, but the marks did not include individual asset numbers.",
+      "gap": "Visible programme branding did not provide a unique link between each item and its inventory entry.",
+      "action": "Retain the existing programme mark and add a unique asset number linked to the district inventory and the responsible custodian.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 253; id=H111",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; team-14 / Bulambuli / Bumugibole-HC-III"
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx",
+          "locator": "paragraphs 546–547 and 724",
+          "supports": "BUMU/2020-2021/UGIFT marks without asset number; common unique-number recommendation."
+        }
+      ],
+      "interpretation_limit": "Do not classify all existing programme marks as absent engraving; this is a quality-of-identification gap."
+    },
+    {
+      "case_id": "F20",
+      "theme": "Defects affecting intended use",
+      "facility": "Bumugibole Health Centre staff house and water tanks",
+      "lg": "Bulambuli",
+      "record_ids": [
+        "H111"
+      ],
+      "expected": "Staff accommodation and water assets were intended to remain safe and usable for health-service delivery.",
+      "expectation_basis": "Intended asset use; not a structural-engineering certification.",
+      "found": "The team recorded deep cracks in the staff house. Medical staff had left it because they considered it unsafe, and only one of three water tanks was reported to be working.",
+      "gap": "The staff house was not serving its intended occupants, and water-storage capacity was reduced.",
+      "action": "The district should arrange a qualified structural assessment, safeguard occupants, pursue applicable defect remedies, and restore the non-working water tanks after a technical assessment.",
+      "priority": "high",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 253; id=H111",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; team-14 / Bulambuli / Bumugibole-HC-III"
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx",
+          "locator": "paragraphs 546–547 and 735",
+          "supports": "Cracked staff house, medical staff moved out, one of three tanks working; recommendation to pursue defect remedies."
+        }
+      ],
+      "interpretation_limit": "Do not present the verification team as certifying structural safety or assume that contractor defect liability remains open; confirm the contract dates."
+    }
+  ],
+  "incomplete_facilities": [
+    {
+      "case_id": "F09",
+      "facility": "Got Apwoyo Seed Secondary School",
+      "lg": "Nwoya",
+      "record_ids": [
+        "S035"
+      ],
+      "expected": "The school buildings and supplied ICT equipment were intended to support secondary education at Got Apwoyo.",
+      "expectation_basis": "Intended service use; the master schedule already described the works as Ongoing, so this is not a contradiction of a recorded Complete status.",
+      "found": "The team found the school under construction and not commissioned. Its ICT package remained in the education department stores at Nwoya District headquarters awaiting completion; delivered furniture and structures had not been brought into use.",
+      "gap": "Delivered equipment was not yet supporting teaching at the intended school, and custody remained split between the district and the site.",
+      "action": "Nwoya District and the Ministry of Education should agree a dated completion and handover plan, maintain a checked district-store inventory, and arrange installation, testing and signed transfer to the school when it is ready.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 10; id=S035",
+          "supports": "Master/return identity, LG, recorded project status (Ongoing), final reconciliation outcome; team-01 / Nwoya / Got-Apwoyo-Seed-Secondary-School"
+        },
+        {
+          "source": "raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx",
+          "locator": "paragraphs 10, 13 and 28",
+          "supports": "Under construction and uncommissioned; ICT held at district headquarters; recommendation to expedite civil works."
+        },
+        {
+          "source": "raw-data-grouped/team-01/Nwoya/Got-Apwoyo-Seed-Secondary-School/NWOYA GOT APWOYO SEED.docx",
+          "locator": "paragraph 91; table 13, rows 2–13",
+          "supports": "Facility and major civil structures still under construction."
+        }
+      ]
+    },
+    {
+      "case_id": "F10",
+      "facility": "Bukibologoto Health Centre",
+      "lg": "Bulambuli",
+      "record_ids": [
+        "H112"
+      ],
+      "expected": "Bukibologoto was listed as complete and was intended to provide health services from the constructed facility.",
+      "expectation_basis": "Documented master schedule Complete status plus intended use.",
+      "found": "The field team found that mudslides had damaged the works before completion. Ground had fallen away below a corner of the block and a wall was cracked. The catchment was receiving care at the Simu subcounty offices, while the supplied equipment remained in district stores.",
+      "gap": "The planned facility was not available for its intended use. The alternative service location and stored equipment require a clear, sustainable arrangement.",
+      "action": "The district and Ministry of Health should commission an engineering assessment, decide on repair or relocation, secure and inventory the equipment, and document how services will continue while the permanent facility is resolved.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 251; id=H112",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; team-14 / Bulambuli / Bukibologoto-HC-II"
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx",
+          "locator": "paragraphs 552–553 and 736",
+          "supports": "Works damaged by mudslides before completion; care at subcounty offices; equipment unlisted in district stores; decision needed."
+        }
+      ]
+    },
+    {
+      "case_id": "F11",
+      "facility": "Kyangwali Seed Secondary School",
+      "lg": "Kikuube",
+      "record_ids": [
+        "S050"
+      ],
+      "expected": "The completed school should be ready to receive and safely use its equipment.",
+      "expectation_basis": "Intended service use; master status is ongoing, not complete.",
+      "found": "The team recorded continuing construction. The school also reported a lack of electricity and an incomplete perimeter fence, and handover had not taken place.",
+      "gap": "Building completion alone will not make the assets ready for use unless power, security and handover are resolved.",
+      "action": "The district, education ministry and contractor should close the remaining works, electricity and security requirements in one readiness plan, followed by joint testing, handover and allocation of operating responsibilities.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 473; id=S050",
+          "supports": "Master/return identity, LG, recorded project status (ongoing), final reconciliation outcome; The Team 25 archive contains the Kyangwali Seed Secondary School toolkit and photographs. The return says the facility had not yet been handed over because construction was continuing."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 55; id=CHAT35M; 2026-09-23 15:09",
+          "supports": "Kyangwali SSS Audit: Kyangwali Seed Secondary School, Kikuube."
+        },
+        {
+          "source": "raw-data-grouped/team-25/Kikuube/Kyangwali-Seed-Secondary-School/KYANGWALI  SEED S.S REPORT.docx",
+          "locator": "paragraphs 4 and 17",
+          "supports": "Construction continuing; lack of electricity and complete fence; assets not safe."
+        }
+      ]
+    },
+    {
+      "case_id": "F12",
+      "facility": "Sidok Seed Secondary School",
+      "lg": "Kaabong",
+      "record_ids": [
+        "S019"
+      ],
+      "expected": "Completed buildings and checked equipment were intended to support school operations.",
+      "expectation_basis": "Intended use; master schedule status is Ongoing.",
+      "found": "The team found blocks, a kitchen and toilets still under construction, with termite workings on the plaster of two blocks. The school consignment remained unopened and its contents had not been counted against the delivery information.",
+      "gap": "The works were unfinished and the condition and completeness of the packaged equipment had not been established by opening it.",
+      "action": "The district should secure completion and treatment of the affected works, then arrange a witnessed opening, count, condition check and asset registration before equipment is issued.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 199; id=S019",
+          "supports": "Master/return identity, LG, recorded project status (Ongoing), final reconciliation outcome; team-11 / Kaabong / Sidok-Seed-Secondary-School"
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx",
+          "locator": "paragraphs 197–198, 729 and 735",
+          "supports": "Incomplete works, termite workings and unopened consignment; recommended unpacking and defect correction."
+        }
+      ]
+    },
+    {
+      "case_id": "F13",
+      "facility": "Lokori Seed Secondary School",
+      "lg": "Karenga",
+      "record_ids": [
+        "X022"
+      ],
+      "expected": "The school needs completed accommodation and secure storage before its equipment can be used on site.",
+      "expectation_basis": "Intended service use; the return has no confirmed master-list match.",
+      "found": "The team found Lokori under construction, with about one block built and no store of its own. Its assets were being held at Kapedo Seed Secondary School and remained unopened.",
+      "gap": "School readiness and custody of its equipment were unresolved. The return also requires confirmation against the approved beneficiary scope.",
+      "action": "The district should confirm the programme identity, complete the required works and secure storage, reconcile the equipment held at Kapedo, and arrange a signed transfer when Lokori is ready.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 644; id=X022",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx",
+          "locator": "paragraphs 211–212",
+          "supports": "School under construction; no store; equipment at Kapedo unopened."
+        }
+      ]
+    },
+    {
+      "case_id": "F14",
+      "facility": "Buwagogo Seed Secondary School",
+      "lg": "Manafwa",
+      "record_ids": [
+        "S134"
+      ],
+      "expected": "Supplied ICT equipment was intended to be installed and used for teaching.",
+      "expectation_basis": "Intended use; the master schedule lists the facility as Complete, but that status does not separately certify equipment commissioning.",
+      "found": "The team found the March 2024 ICT consignment still boxed in the store, with contractor installation pending and commissioning delayed.",
+      "gap": "Delivery had not translated into operational ICT capacity at the school.",
+      "action": "The district and Ministry of Education should require an installation and commissioning date, reconcile the stored equipment against delivery records, test it, and assign responsibility for its operation and maintenance.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 230; id=S134",
+          "supports": "Master/return identity, LG, recorded project status (Complete), final reconciliation outcome; team-13 / Manafwa / Buwagogo-Seed-School"
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx",
+          "locator": "paragraphs 411–412",
+          "supports": "March 2024 ICT consignment boxed; installation pending; commissioning delayed."
+        }
+      ]
+    },
+    {
+      "case_id": "F16",
+      "facility": "Bukuuku Community Seed Secondary School",
+      "lg": "Fort Portal City",
+      "record_ids": [
+        "X030"
+      ],
+      "expected": "All confirmed programme beneficiaries should appear on the approved beneficiary schedule, and completed assets should be handed over for full use.",
+      "expectation_basis": "Programme scope confirmation and intended handover/accountability practice.",
+      "found": "Bukuuku was confirmed as an additional seed school outside the master list. The team recorded improved science and computer teaching following laboratory construction, while handover of some assets remained pending.",
+      "gap": "The programme list omitted a confirmed beneficiary, and incomplete handover limited full accountability and use of the assets.",
+      "action": "The city and Ministry of Education should regularise the beneficiary entry and complete a joint handover covering the outstanding items, defects, inventories and operating responsibilities.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 660; id=X030",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Depaul confirmed on 25 September 2026 that Bukuuku is not on the master list but is an additional seed secondary school in Fort Portal City. The existing return is kept. No master row is added."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 88; id=CHAT46J; 2026-09-25 13:24",
+          "supports": "Bukuuku is not on master list ,but additional seed secondary school done in fort portal city Audit: Confirms the existing unmatched Bukuuku return. Do not add a master row."
+        },
+        {
+          "source": "raw-data-grouped/team-28/Fort-Portal City/Bukuuku-Community-Secondary-School/GAYAZA AND BUKUUKU.docx",
+          "locator": "paragraphs 130, 132 and 136; table 11, row 14",
+          "supports": "Benefits to teaching; contractor urged to hand over; administration-block tables unfinished/work in progress."
+        }
+      ]
+    }
+  ],
+  "ground_only_examples": [
+    {
+      "id": "X901",
+      "facility": "Ekaligo Health Centre III",
+      "lg": "Yumbe",
+      "evidence_class": "Independent facility confirmed; no separate asset schedule identified",
+      "finding": "The programme data manager confirms that Ekaligo and Amanyiri are independent facilities. The combined file names Ekaligo in the interview, while the asset schedule separately names Amanyiri.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 636; id=X901",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; The programme data manager confirms that Ekaligo and Amanyiri are independent facilities. The combined file names Ekaligo in the interview, while the asset schedule separately names Amanyiri."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 26; id=USER02; 2026-09-23",
+          "supports": "For team 2, use the facility names on file over the ones in the master list. Amanyiri Health Centre III, Ekaligo, Liko, Lodonga Seed Secondary School all exist independently. Audit: Treat the combined returns as evidence for the names written in their sections. Amanyiri and Lodonga retain their explicitly named asset schedules. Ekaligo and Liko remain separate ground facilities; no replacement or alias relationship is inferred."
+        },
+        {
+          "source": "raw-data-grouped/team-02/Yumbe/Amanyiri-HC-III/1 AMANYIRI HCIII.docx",
+          "locator": "Health-centre interview: Name of Health EKALIGO HCIII",
+          "supports": "Facility named in submitted return; no separate Ekaligo asset schedule identified"
+        }
+      ]
+    },
+    {
+      "id": "X902",
+      "facility": "Liko Health Centre III",
+      "lg": "Yumbe",
+      "evidence_class": "Independent facility confirmed; no separate asset schedule identified",
+      "finding": "The programme data manager confirms that Liko and Lodonga Seed Secondary School are independent facilities. The combined file names Liko in the health-centre interview and Lodonga in the school asset schedules.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 637; id=X902",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; The programme data manager confirms that Liko and Lodonga Seed Secondary School are independent facilities. The combined file names Liko in the health-centre interview and Lodonga in the school asset schedules."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 26; id=USER02; 2026-09-23",
+          "supports": "For team 2, use the facility names on file over the ones in the master list. Amanyiri Health Centre III, Ekaligo, Liko, Lodonga Seed Secondary School all exist independently. Audit: Treat the combined returns as evidence for the names written in their sections. Amanyiri and Lodonga retain their explicitly named asset schedules. Ekaligo and Liko remain separate ground facilities; no replacement or alias relationship is inferred."
+        },
+        {
+          "source": "raw-data-grouped/team-02/Yumbe/Lodonga-Seed-Secondary-School/LODONGA SEED SS (2).docx",
+          "locator": "Health-centre interview: Name of Health Centre Liko Health center iii",
+          "supports": "Facility named in submitted return; no separate Liko asset schedule identified"
+        }
+      ]
+    },
+    {
+      "id": "X019",
+      "facility": "Onywako Health Centre III",
+      "lg": "Lira",
+      "evidence_class": "Physical verification explicitly not performed",
+      "finding": "Form states that assets were reported by the in-charge and were not physically verified. Chat names Onywako on ground, but gives no one-to-one replacement for Alik.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 640; id=X019",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Form states that assets were reported by the in-charge and were not physically verified. Chat names Onywako on ground, but gives no one-to-one replacement for Alik."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 11; id=CHAT11; 2026-09-21 16:56",
+          "supports": "In Lira Lg - Alik HC 111 does not exist. The Lg has two facilities namely \n1.Barlonyo Hc111\n2.Onywako HC 111. Audit: No explicit one-to-one Alik-to-Onywako replacement. Master additionally contains Punuluru; omission from this list alone is not an explicit nonexistence decision. Onywako form explicitly excludes physical verification."
+        },
+        {
+          "source": "raw-data-grouped/team-05/Lira/Onywako-HC-III/ONYWAKO HEALTH CENTRE 3.docx",
+          "locator": "Facility-specific return",
+          "supports": "Physical verification explicitly not performed"
+        }
+      ]
+    },
+    {
+      "id": "X022",
+      "facility": "Lokori Seed Secondary School",
+      "lg": "Karenga",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 644; id=X022",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-11/Karenga/Lokori-Seed-Secondary-School/Asset-Verification-Toolkit.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X900",
+      "facility": "Sofia Health Centre III",
+      "lg": "Busia MC",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return identifies Sofia Health Centre III in Eastern Division, Busia Municipal Council. It is distinct from the invalid master label Busia Eastern Division.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 645; id=X900",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return identifies Sofia Health Centre III in Eastern Division, Busia Municipal Council. It is distinct from the invalid master label Busia Eastern Division."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 23; id=CHAT19; 2026-09-23 02:39",
+          "supports": "The master list shows a health centre called Busia Eastern Division. No such facility exists. Audit: Sofia Health Centre III is a separately named field return in Eastern Division and is not treated as an alias for this invalid master label."
+        },
+        {
+          "source": "raw-data-grouped/team-13/Busia MC/Sofia-Health-Centre-III/Sofia health centre 111 eastern division busia MC.pdf",
+          "locator": "Pages 1-20",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X007",
+      "facility": "Rukoki General Hospital",
+      "lg": "Kasese",
+      "evidence_class": "Explicitly confirmed additional programme beneficiary",
+      "finding": "Depaul confirmed on 25 September 2026 that Rukoki General Hospital is not on the master list but is a UgIFT beneficiary in Kasese Municipality. The existing register return is kept. No master row is added.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 659; id=X007",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Depaul confirmed on 25 September 2026 that Rukoki General Hospital is not on the master list but is a UgIFT beneficiary in Kasese Municipality. The existing register return is kept. No master row is added."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 86; id=CHAT46H; 2026-09-25 13:14",
+          "supports": "Rukoki general hospital is not on the master list but a beneficiary of UgIFT, in kasese Municipality Audit: Confirms the existing unmatched Rukoki return. Do not add a master row."
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT.xls",
+          "locator": "UGIFT HEALTH!row 4737",
+          "supports": "Completed from consolidated register; physical inspection not certified"
+        }
+      ]
+    },
+    {
+      "id": "X030",
+      "facility": "Bukuuku Community Seed Secondary School",
+      "lg": "Fort-Portal City",
+      "evidence_class": "Explicitly confirmed additional programme beneficiary",
+      "finding": "Depaul confirmed on 25 September 2026 that Bukuuku is not on the master list but is an additional seed secondary school in Fort Portal City. The existing return is kept. No master row is added.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 660; id=X030",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Depaul confirmed on 25 September 2026 that Bukuuku is not on the master list but is an additional seed secondary school in Fort Portal City. The existing return is kept. No master row is added."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 88; id=CHAT46J; 2026-09-25 13:24",
+          "supports": "Bukuuku is not on master list ,but additional seed secondary school done in fort portal city Audit: Confirms the existing unmatched Bukuuku return. Do not add a master row."
+        },
+        {
+          "source": "raw-data-grouped/team-28/Fort-Portal City/Bukuuku-Community-Secondary-School/GAYAZA AND BUKUUKU.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X010",
+      "facility": "Silumira Health Centre III",
+      "lg": "Kakumiro",
+      "evidence_class": "Explicitly confirmed additional programme beneficiary",
+      "finding": "Depaul confirmed on 25 September 2026 that Silumira HC III is not on the master list but was done in Kakumiro. The existing register return is kept. No master row is added.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 662; id=X010",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Depaul confirmed on 25 September 2026 that Silumira HC III is not on the master list but was done in Kakumiro. The existing register return is kept. No master row is added."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 87; id=CHAT46I; 2026-09-25 13:23",
+          "supports": "Silumira HCIII not on master list but was done in kakumiro district Audit: Confirms the existing unmatched Silumira return. Do not add a master row."
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT.xls",
+          "locator": "UGIFT HEALTH 2!row 966",
+          "supports": "Completed from consolidated register; physical inspection not certified"
+        }
+      ]
+    }
+  ],
+  "ground_only_all_24": [
+    {
+      "id": "X013",
+      "facility": "Amei Seed Secondary School",
+      "lg": "Zombo",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 631; id=X013",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-01/Zombo/Amei-Seed-Secondary-School/ZOMBO - GOT APWOYO HC & AMEI SEED ZOMBO 2.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X016",
+      "facility": "Odupiri Health Centre III",
+      "lg": "Maracha",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 635; id=X016",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-02/Maracha/Odupiri-HC-III/1 ODUPIRI HC - Kololo SSS MARACHA  district.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X901",
+      "facility": "Ekaligo Health Centre III",
+      "lg": "Yumbe",
+      "evidence_class": "Independent facility confirmed; no separate asset schedule identified",
+      "finding": "The programme data manager confirms that Ekaligo and Amanyiri are independent facilities. The combined file names Ekaligo in the interview, while the asset schedule separately names Amanyiri.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 636; id=X901",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; The programme data manager confirms that Ekaligo and Amanyiri are independent facilities. The combined file names Ekaligo in the interview, while the asset schedule separately names Amanyiri."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 26; id=USER02; 2026-09-23",
+          "supports": "For team 2, use the facility names on file over the ones in the master list. Amanyiri Health Centre III, Ekaligo, Liko, Lodonga Seed Secondary School all exist independently. Audit: Treat the combined returns as evidence for the names written in their sections. Amanyiri and Lodonga retain their explicitly named asset schedules. Ekaligo and Liko remain separate ground facilities; no replacement or alias relationship is inferred."
+        },
+        {
+          "source": "raw-data-grouped/team-02/Yumbe/Amanyiri-HC-III/1 AMANYIRI HCIII.docx",
+          "locator": "Health-centre interview: Name of Health EKALIGO HCIII",
+          "supports": "Facility named in submitted return; no separate Ekaligo asset schedule identified"
+        }
+      ]
+    },
+    {
+      "id": "X902",
+      "facility": "Liko Health Centre III",
+      "lg": "Yumbe",
+      "evidence_class": "Independent facility confirmed; no separate asset schedule identified",
+      "finding": "The programme data manager confirms that Liko and Lodonga Seed Secondary School are independent facilities. The combined file names Liko in the health-centre interview and Lodonga in the school asset schedules.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 637; id=X902",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; The programme data manager confirms that Liko and Lodonga Seed Secondary School are independent facilities. The combined file names Liko in the health-centre interview and Lodonga in the school asset schedules."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 26; id=USER02; 2026-09-23",
+          "supports": "For team 2, use the facility names on file over the ones in the master list. Amanyiri Health Centre III, Ekaligo, Liko, Lodonga Seed Secondary School all exist independently. Audit: Treat the combined returns as evidence for the names written in their sections. Amanyiri and Lodonga retain their explicitly named asset schedules. Ekaligo and Liko remain separate ground facilities; no replacement or alias relationship is inferred."
+        },
+        {
+          "source": "raw-data-grouped/team-02/Yumbe/Lodonga-Seed-Secondary-School/LODONGA SEED SS (2).docx",
+          "locator": "Health-centre interview: Name of Health Centre Liko Health center iii",
+          "supports": "Facility named in submitted return; no separate Liko asset schedule identified"
+        }
+      ]
+    },
+    {
+      "id": "X017",
+      "facility": "Lobe Health Centre III",
+      "lg": "Yumbe",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 638; id=X017",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-02/Yumbe/Lobe-HC-III/LOBE HC[YUMBE]ASSET VERIFICATION AND RECORDING TOOL KIT 222(3)(1).docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X018",
+      "facility": "Nyori Health Centre III",
+      "lg": "Yumbe",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 639; id=X018",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-02/Yumbe/Nyori-HC-III/NYORI HCIII.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X019",
+      "facility": "Onywako Health Centre III",
+      "lg": "Lira",
+      "evidence_class": "Physical verification explicitly not performed",
+      "finding": "Form states that assets were reported by the in-charge and were not physically verified. Chat names Onywako on ground, but gives no one-to-one replacement for Alik.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 640; id=X019",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Form states that assets were reported by the in-charge and were not physically verified. Chat names Onywako on ground, but gives no one-to-one replacement for Alik."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 11; id=CHAT11; 2026-09-21 16:56",
+          "supports": "In Lira Lg - Alik HC 111 does not exist. The Lg has two facilities namely \n1.Barlonyo Hc111\n2.Onywako HC 111. Audit: No explicit one-to-one Alik-to-Onywako replacement. Master additionally contains Punuluru; omission from this list alone is not an explicit nonexistence decision. Onywako form explicitly excludes physical verification."
+        },
+        {
+          "source": "raw-data-grouped/team-05/Lira/Onywako-HC-III/ONYWAKO HEALTH CENTRE 3.docx",
+          "locator": "Facility-specific return",
+          "supports": "Physical verification explicitly not performed"
+        }
+      ]
+    },
+    {
+      "id": "X020",
+      "facility": "Arocha Health Centre III",
+      "lg": "Apac",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 641; id=X020",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-06/Apac/Arocha-HC-III/ARONCHA HC III.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X021",
+      "facility": "Rupa Seed Secondary School",
+      "lg": "Moroto",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 643; id=X021",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-10/Moroto/Rupa-Seed-Secondary-School/_supporting-documents/IMG_20260922_0002.pdf",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X022",
+      "facility": "Lokori Seed Secondary School",
+      "lg": "Karenga",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 644; id=X022",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-11/Karenga/Lokori-Seed-Secondary-School/Asset-Verification-Toolkit.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X900",
+      "facility": "Sofia Health Centre III",
+      "lg": "Busia MC",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return identifies Sofia Health Centre III in Eastern Division, Busia Municipal Council. It is distinct from the invalid master label Busia Eastern Division.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 645; id=X900",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return identifies Sofia Health Centre III in Eastern Division, Busia Municipal Council. It is distinct from the invalid master label Busia Eastern Division."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 23; id=CHAT19; 2026-09-23 02:39",
+          "supports": "The master list shows a health centre called Busia Eastern Division. No such facility exists. Audit: Sofia Health Centre III is a separately named field return in Eastern Division and is not treated as an alias for this invalid master label."
+        },
+        {
+          "source": "raw-data-grouped/team-13/Busia MC/Sofia-Health-Centre-III/Sofia health centre 111 eastern division busia MC.pdf",
+          "locator": "Pages 1-20",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X024",
+      "facility": "Simu Pondo Health Centre III",
+      "lg": "Sironko",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 646; id=X024",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-14/Sironko/Simu-Pondo-HC-III/Asset-Verification-Toolkit.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X003",
+      "facility": "Kabushaho Seed Secondary School",
+      "lg": "Bushenyi",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Workbook is filed under Mitooma, but its facility heading explicitly says Bushenyi. No exact master-list school match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 647; id=X003",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Workbook is filed under Mitooma, but its facility heading explicitly says Bushenyi. No exact master-list school match."
+        },
+        {
+          "source": "raw-data-grouped/team-19/Mitooma/_district-documents/MITOOMA DISTRICT  SEED SCHS.xlsx",
+          "locator": "Sheet1!row 1",
+          "supports": "Completed from consolidated register; physical inspection not certified"
+        }
+      ]
+    },
+    {
+      "id": "X004",
+      "facility": "Kitojo Seed Secondary School",
+      "lg": "Mitooma",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Named in submitted register; no confirmed master match. Asset section: Name of LG:  MITOOMA DISTRICT  Name of SCHOOL: KITOJO SEED SCHOOL",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 648; id=X004",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Named in submitted register; no confirmed master match. Asset section: Name of LG:  MITOOMA DISTRICT  Name of SCHOOL: KITOJO SEED SCHOOL"
+        },
+        {
+          "source": "raw-data-grouped/team-19/Mitooma/_district-documents/MITOOMA DISTRICT  SEED SCHS.xlsx",
+          "locator": "Sheet1!row 129",
+          "supports": "Completed from consolidated register; physical inspection not certified"
+        }
+      ]
+    },
+    {
+      "id": "X005",
+      "facility": "Migina Health Centre III",
+      "lg": "Sheema",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Named in submitted register; no confirmed master match. Asset section: MIGINA HCIII,   SHEEMA DC",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 649; id=X005",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Named in submitted register; no confirmed master match. Asset section: MIGINA HCIII,   SHEEMA DC"
+        },
+        {
+          "source": "raw-data-grouped/team-19/Sheema/_district-documents/SHEEMA DC    HCIIIs.xlsx",
+          "locator": "Sheet1!row 2",
+          "supports": "Completed from consolidated register; physical inspection not certified"
+        }
+      ]
+    },
+    {
+      "id": "X025",
+      "facility": "Kibuzigye Seed Secondary School",
+      "lg": "Rubanda",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 651; id=X025",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-22/Rubanda/Kibuzigye-Secondary-School/RUBANDA -LG FIELD TEMPLATE  MPUNGUHCIII,Nyamweru ss,Ruija ss, and Kibuzigye ss2.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X026",
+      "facility": "Bushogye Seed Secondary School",
+      "lg": "Kanungu",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 652; id=X026",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-23/Kanungu/Bushogye-Seed-Secondary-School/KINAABA HCIII and BUSHOGYE Seed School Kanungu LG.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X027",
+      "facility": "Bikurungu Seed Secondary School",
+      "lg": "Rukungiri",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 653; id=X027",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-23/Rukungiri/Bikurungu-Seed-Secondary-School/KITIMBA HCIII and BIKURUNGU SEED SCHOOL RUKUNGIRI LG.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X007",
+      "facility": "Rukoki General Hospital",
+      "lg": "Kasese",
+      "evidence_class": "Explicitly confirmed additional programme beneficiary",
+      "finding": "Depaul confirmed on 25 September 2026 that Rukoki General Hospital is not on the master list but is a UgIFT beneficiary in Kasese Municipality. The existing register return is kept. No master row is added.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 659; id=X007",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Depaul confirmed on 25 September 2026 that Rukoki General Hospital is not on the master list but is a UgIFT beneficiary in Kasese Municipality. The existing register return is kept. No master row is added."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 86; id=CHAT46H; 2026-09-25 13:14",
+          "supports": "Rukoki general hospital is not on the master list but a beneficiary of UgIFT, in kasese Municipality Audit: Confirms the existing unmatched Rukoki return. Do not add a master row."
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT.xls",
+          "locator": "UGIFT HEALTH!row 4737",
+          "supports": "Completed from consolidated register; physical inspection not certified"
+        }
+      ]
+    },
+    {
+      "id": "X030",
+      "facility": "Bukuuku Community Seed Secondary School",
+      "lg": "Fort-Portal City",
+      "evidence_class": "Explicitly confirmed additional programme beneficiary",
+      "finding": "Depaul confirmed on 25 September 2026 that Bukuuku is not on the master list but is an additional seed secondary school in Fort Portal City. The existing return is kept. No master row is added.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 660; id=X030",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Depaul confirmed on 25 September 2026 that Bukuuku is not on the master list but is an additional seed secondary school in Fort Portal City. The existing return is kept. No master row is added."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 88; id=CHAT46J; 2026-09-25 13:24",
+          "supports": "Bukuuku is not on master list ,but additional seed secondary school done in fort portal city Audit: Confirms the existing unmatched Bukuuku return. Do not add a master row."
+        },
+        {
+          "source": "raw-data-grouped/team-28/Fort-Portal City/Bukuuku-Community-Secondary-School/GAYAZA AND BUKUUKU.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X010",
+      "facility": "Silumira Health Centre III",
+      "lg": "Kakumiro",
+      "evidence_class": "Explicitly confirmed additional programme beneficiary",
+      "finding": "Depaul confirmed on 25 September 2026 that Silumira HC III is not on the master list but was done in Kakumiro. The existing register return is kept. No master row is added.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 662; id=X010",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Depaul confirmed on 25 September 2026 that Silumira HC III is not on the master list but was done in Kakumiro. The existing register return is kept. No master row is added."
+        },
+        {
+          "source": "raw-data-grouped/supervisor-decisions.csv",
+          "locator": "CSV data record 87; id=CHAT46I; 2026-09-25 13:23",
+          "supports": "Silumira HCIII not on master list but was done in kakumiro district Audit: Confirms the existing unmatched Silumira return. Do not add a master row."
+        },
+        {
+          "source": "raw-data-grouped/_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT.xls",
+          "locator": "UGIFT HEALTH 2!row 966",
+          "supports": "Completed from consolidated register; physical inspection not certified"
+        }
+      ]
+    },
+    {
+      "id": "X032",
+      "facility": "Buvuma Health Centre III",
+      "lg": "Buvuma",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 665; id=X032",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-31/Buvuma/Buvuma-HC-III/BUVUMA HC III ASSET VERIFICATION AND RECORDING TOOL KIT 222.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X903",
+      "facility": "Buloba Health Centre III",
+      "lg": "Wakiso",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "The 26 September photographs show two Buloba HC III equipment lists with quantities and costs, one stamped by the Wakiso District Health Office. Buloba is not on the Wakiso master list and no message links it to a master facility, so it stays a separate return.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 666; id=X903",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; The 26 September photographs show two Buloba HC III equipment lists with quantities and costs, one stamped by the Wakiso District Health Office. Buloba is not on the Wakiso master list and no message links it to a master facility, so it stays a separate return."
+        },
+        {
+          "source": "raw-data-grouped/team-32/Wakiso/Buloba-HC-III/Buloba HC III asset verification.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    },
+    {
+      "id": "X033",
+      "facility": "Lwengenyi Health Centre III",
+      "lg": "Lwengo",
+      "evidence_class": "Separate return identity without a confirmed master match",
+      "finding": "Facility-specific return received; no confirmed master match.",
+      "provenance": [
+        {
+          "source": "raw-data-grouped/facility-reconciliation.csv",
+          "locator": "CSV data record 667; id=X033",
+          "supports": "Master/return identity, LG, recorded project status (not supplied), final reconciliation outcome; Facility-specific return received; no confirmed master match."
+        },
+        {
+          "source": "raw-data-grouped/team-33/Lwengo/Lwengenyi-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1) LWENGENYI HEALTH CENTRE III& KATOVU SEED SECONDARY SCHOOL.docx",
+          "locator": "Facility-specific return",
+          "supports": "Verification records received; physical completion not certified"
+        }
+      ]
+    }
+  ],
+  "ground_only_count_interpretation": {
+    "return_identities": 24,
+    "explicit_additional_programme_beneficiaries": 3,
+    "independent_facilities_but_no_separate_asset_schedule": 2,
+    "explicitly_not_physically_verified": 1,
+    "other_unmatched_return_identities": 18,
+    "explanation": "The four groups are disjoint evidence descriptions and sum to 24. Three is a conservative count of expressly confirmed additional programme beneficiaries in the reconciliation messages, not a claim that only three of the 24 are real or eligible facilities. Known aliases such as Dabani/Buwumba and Bussi/Zinga are already reconciled to master entries and must not be added to the 24. Eleven linked receiving records are a separate reconciliation group, not extra ground-only facilities."
+  },
+  "source_native_reason_counts": [
+    {
+      "reason": "Does not exist or was not constructed under the programme",
+      "count": 10
+    },
+    {
+      "reason": "Replaced by another facility",
+      "count": 4
+    },
+    {
+      "reason": "Operates under another name",
+      "count": 30
+    },
+    {
+      "reason": "Not a UgIFT beneficiary",
+      "count": 3
+    },
+    {
+      "reason": "Assets relocated to another facility or held at district",
+      "count": 3
+    },
+    {
+      "reason": "Exists with no UgIFT assets",
+      "count": 5
+    }
+  ],
+  "editorial_guidance": [
+    "Use teams found for observations explicitly recorded as field observations. Use the DHO confirmed or the supervisor confirmed for interview/reconciliation evidence. Do not turn message confirmation into a physical inspection.",
+    "Expectations based on intended use or recommended controls are explicitly labelled; do not turn them into an undocumented procurement specification or contractual deadline.",
+    "Priority high cases can support the main findings. Supporting cases may be placed in an annex to control length.",
+    "Do not call every name correction a service-delivery gap; some are identity clean-up with no evidence of failed service delivery.",
+    "The 629 accountability total counts master facility identities, not necessarily 629 unique physical sites. Do not add replacements, receiving records, aliases or 24 unmatched returns to it without a reconciled scope decision.",
+    "The 589 evidence-backed count is not a physical-verification numerator; the 40 explanations include telephone information, access limitations and storage/commissioning explanations beyond the six selected substantive reasons.",
+    "Avoid generic file-led prose in the report. Keep exact paths, chat references, CSV record numbers and extraction details in sources.md only.",
+    "Master Complete/Ongoing labels are recorded programme statuses, not independent certificates of condition at the visit.",
+    "Additional construction and handover cases are examples, not an exhaustive or statistically representative total of incomplete facilities."
+  ],
+  "compact_ready": {
+    "overview_paragraphs": [
+      "The exercise accounted for 629 entries on the verification master list: 258 schools and 371 health centres. Follow-up established which facilities retained their original names, which had replacements or relocated assets, and which listed institutions had not received programme support. These distinctions matter because a name on the list does not, by itself, demonstrate that the intended facility and its assets are available for service.",
+      "The findings identified 10 entries reported nonexistent or not constructed, four replacements, 30 name corrections, three institutions outside UgIFT, three cases of relocated assets and five existing facilities without UgIFT assets. The cases below explain the differences and the action needed. Identity corrections should be settled alongside decisions on incomplete works, custody, handover and operational readiness so that the programme account reflects where services and assets are actually located."
+    ],
+    "cases": [
+      {
+        "case_id": "F01",
+        "theme": "Listed complete but not constructed",
+        "facility": "Olok Health Centre",
+        "lg": "Pader",
+        "expected": "Olok was listed as a completed health facility intended to serve its catchment in Pader.",
+        "found": "The district health officer confirmed to the verification team that Olok Health Centre had not been constructed and did not exist in the district.",
+        "gap": "The completed entry could not be matched to the intended facility. The reason for non-construction requires a documented resolution.",
+        "action": "Pader District and the Ministry of Health should reconcile the approved project, construction and payment records, correct the beneficiary schedule and decide how the intended health-service need will be met."
+      },
+      {
+        "case_id": "F02",
+        "theme": "Invalid facility identity",
+        "facility": "Busia Eastern Division health-centre entry",
+        "lg": "Busia Municipal Council",
+        "expected": "The beneficiary schedule should identify the particular health facility supported in Busia Municipality.",
+        "found": "Reconciliation confirmed that no health facility called Busia Eastern Division existed. A separate return identified Sofia Health Centre III within Eastern Division.",
+        "gap": "An administrative division had been used as a facility name. The available confirmation did not identify Sofia as its replacement or establish that the two names referred to the same beneficiary.",
+        "action": "The municipality and Ministry of Health should resolve the original beneficiary identity and document the programme status of Sofia before linking or changing the two entries."
+      },
+      {
+        "case_id": "F04",
+        "theme": "Beneficiary replacements",
+        "facility": "Ngomoromo, Oweko, Musandama and Loinya health centres",
+        "lg": "Lamwo, Nebbi, Ntoroko and Maracha",
+        "expected": "The beneficiary schedule should name the facility that received each planned investment.",
+        "found": "Supervisors confirmed that Pangira replaced Ngomoromo in Lamwo, Pamaka replaced Oweko in Nebbi, Butungama replaced Musandama in Ntoroko, and Liko replaced Loinya in Maracha. Liko was already listed separately.",
+        "gap": "The original and replacement names were not consistently linked. Leaving both active could count one investment twice or leave its location unclear.",
+        "action": "The districts and Ministry of Health should attach the replacement decisions, link the original projects to their recipients and retain one active facility identity for each recipient."
+      },
+      {
+        "case_id": "F05",
+        "theme": "Assets moved to other facilities",
+        "facility": "Alangi, Ther-uru and Abanga",
+        "lg": "Zombo",
+        "expected": "Asset locations and custodians should agree with the facilities holding and using the equipment.",
+        "found": "The supervisor confirmed that Alangi, Ther-uru and Abanga existed, but their UgIFT assets had moved respectively to Amwonyo Health Centre, Atyak Health Centre and Kango Seed Secondary School.",
+        "gap": "The original beneficiary names no longer described where the assets were held. Custody, location and the service arrangements at the original sites needed to be made clear.",
+        "action": "Zombo District should reconcile transfer approvals and signed receipts with both sets of inventories, name the current custodians and confirm how the original catchments are served."
+      },
+      {
+        "case_id": "F06",
+        "theme": "Facilities outside programme scope",
+        "facility": "Alira Health Centre and Kiziranfumbi Seed Secondary School",
+        "lg": "Oyam and Kikuube",
+        "expected": "The programme beneficiary schedule should include institutions supported under UgIFT.",
+        "found": "The later Oyam clarification confirmed that Alira Health Centre existed but was not among the facilities upgraded under UgIFT. The supervisor also confirmed that Kiziranfumbi Seed Secondary School in Kikuube was outside the programme.",
+        "gap": "The list confused the existence of an institution with its eligibility as a UgIFT beneficiary. Alira had initially been reported absent, but that account was corrected.",
+        "action": "The local governments and sector ministries should approve the scope corrections, remove the institutions from the active UgIFT schedule and preserve the reasons for the changes."
+      },
+      {
+        "case_id": "F07",
+        "theme": "Existing facilities without UgIFT assets",
+        "facility": "Pandwong Health Centre; Bumbaire, Kyamuhunga and Kashenshero schools; Rwamujojo Health Centre",
+        "lg": "Kitgum Municipal Council, Bushenyi, Mitooma and Sheema Municipal Council",
+        "expected": "Each listed beneficiary should have a supported account of the programme assistance it received.",
+        "found": "Supervisors confirmed that Pandwong Health Centre, Bumbaire and Kyamuhunga schools, Kashenshero school and Rwamujojo Health Centre existed but had not benefited from UgIFT assets.",
+        "gap": "Their appearance on the beneficiary list did not establish delivery. The cause of the difference between the list and the reported benefits needs to be resolved.",
+        "action": "The responsible districts, municipalities and sector ministries should check beneficiary approvals and delivery records, then correct the schedule or record an approved outstanding delivery with an accountable officer and follow-up date."
+      },
+      {
+        "case_id": "F08",
+        "theme": "Names and aliases",
+        "facility": "Bussi/Zinga and Dabani/Buwumba",
+        "lg": "Wakiso and Busia",
+        "expected": "Each facility should have one stable identity, with local and former names linked to it.",
+        "found": "Bussi was confirmed to be the village name for the already-listed Zinga Health Centre in Wakiso. In Busia, the Buwumba return was reconciled to the master entry named Dabani.",
+        "gap": "Different names could make one facility appear to be two, distort coverage and separate its asset history from the correct institution.",
+        "action": "The districts should adopt the confirmed operating names, retain the old names as aliases and link the beneficiary, project and asset information to one facility identifier. Zinga should be counted once."
+      }
+    ],
+    "incomplete_facilities": [
+      {
+        "case_id": "F09",
+        "theme": "Incomplete school and equipment awaiting use",
+        "facility": "Got Apwoyo Seed Secondary School",
+        "lg": "Nwoya",
+        "expected": "Got Apwoyo was intended to provide secondary education with completed buildings and installed ICT equipment.",
+        "found": "The team found construction continuing and the school uncommissioned. Its ICT package remained at Nwoya District headquarters, while delivered furniture and structures had not been brought into use.",
+        "gap": "The assets were not yet supporting teaching at the intended school, and custody was divided between the district and the site.",
+        "action": "Nwoya District and the Ministry of Education should set a completion and handover plan, check the stored equipment, and arrange installation, testing and signed transfer when the school is ready."
+      },
+      {
+        "case_id": "F10",
+        "theme": "Construction damage and displaced service delivery",
+        "facility": "Bukibologoto Health Centre",
+        "lg": "Bulambuli",
+        "expected": "Bukibologoto was listed as complete and was intended to provide care from the constructed health facility.",
+        "found": "The team found that mudslides had damaged the works before completion. A corner was undermined and a wall cracked. Care was being provided at Simu subcounty offices, with equipment held in district stores.",
+        "gap": "The planned facility was unavailable for its intended use, and the temporary service and storage arrangements needed a lasting solution.",
+        "action": "Bulambuli District and the Ministry of Health should obtain an engineering assessment, decide on repair or relocation, inventory the equipment and provide for continuing care."
+      },
+      {
+        "case_id": "F11",
+        "theme": "Incomplete works and site readiness",
+        "facility": "Kyangwali Seed Secondary School",
+        "lg": "Kikuube",
+        "expected": "Kyangwali school needed completed works, electricity, security and handover to use its assets fully.",
+        "found": "The team recorded continuing construction. The school reported a lack of electricity and an incomplete perimeter fence, and the facility had not been handed over.",
+        "gap": "Finishing the buildings alone would not make the school ready: power, security and responsibility for the assets also remained unresolved.",
+        "action": "Kikuube District, the Ministry of Education and the contractor should close these requirements through one readiness plan, followed by joint testing and handover. The plan should name who will operate, safeguard and maintain the assets."
+      },
+      {
+        "case_id": "F12",
+        "theme": "Incomplete works and unopened equipment",
+        "facility": "Sidok Seed Secondary School",
+        "lg": "Kaabong",
+        "expected": "Sidok school needed completed buildings and checked equipment before the investment could support full operations.",
+        "found": "The team found blocks, a kitchen and toilets under construction, with termite workings on the plaster of two blocks. The school consignment remained unopened and its contents had not been counted.",
+        "gap": "Both unfinished works and unchecked equipment prevented a complete assessment of readiness for use.",
+        "action": "Kaabong District should secure completion and treatment of the affected works, then arrange a witnessed opening, count and condition check of the equipment. Accepted items should be recorded, assigned to custodians and issued for use."
+      },
+      {
+        "case_id": "F14",
+        "theme": "Installation and commissioning outstanding",
+        "facility": "Buwagogo Seed Secondary School",
+        "lg": "Manafwa",
+        "expected": "Buwagogo school was intended to use its supplied ICT equipment for teaching.",
+        "found": "The team found the March 2024 ICT consignment still boxed in the store, with contractor installation pending and commissioning delayed.",
+        "gap": "Delivery had not translated into operational ICT capacity. Equipment continued to require secure custody while installation remained outstanding.",
+        "action": "Manafwa District and the Ministry of Education should agree an installation and commissioning date with the contractor, reconcile the stored equipment against delivery records and test it before acceptance. The handover should assign responsibility for operation, maintenance and reporting of faults."
+      }
+    ],
+    "ground_only_paragraphs": [
+      "Teams submitted information under 24 facility names that had no confirmed match to the verification master list. Follow-up expressly confirmed Rukoki General Hospital, Silumira Health Centre III and Bukuuku Community Seed Secondary School as additional programme beneficiaries. Their inclusion in the approved programme account should be regularised.",
+      "The remaining names should be resolved through the same checks of facility identity, programme approval and asset custody. Some entries came from combined returns, and Onywako was expressly reported without a physical inspection. All 24 return names are shown separately from the 629 master-list entries while the outstanding identity and scope decisions are completed."
+    ],
+    "ground_only_examples": [
+      {
+        "case_id": "F17",
+        "facility": "Rukoki General Hospital",
+        "lg": "Kasese Municipality",
+        "expected": "Confirmed beneficiaries should be included in the programme account.",
+        "found": "The supervisor confirmed that Rukoki General Hospital was a UgIFT beneficiary in Kasese Municipality, although it was absent from the master list used for verification.",
+        "gap": "The programme list omitted a confirmed recipient.",
+        "action": "The Ministry of Health and municipality should approve the beneficiary entry and link its asset information to a stable facility identifier."
+      },
+      {
+        "case_id": "F17",
+        "facility": "Silumira Health Centre III",
+        "lg": "Kakumiro",
+        "expected": "The beneficiary schedule should include supported health facilities.",
+        "found": "The supervisor confirmed that Silumira Health Centre III had benefited in Kakumiro but was not on the master list.",
+        "gap": "The facility was missing from the list used to plan and account for verification.",
+        "action": "Kakumiro District and the Ministry of Health should approve the addition and connect the beneficiary decision to the facility asset inventory."
+      },
+      {
+        "case_id": "F16",
+        "facility": "Bukuuku Community Seed Secondary School",
+        "lg": "Fort Portal City",
+        "expected": "Confirmed seed-school beneficiaries should appear in the programme account, with assets handed over for full use.",
+        "found": "Bukuuku was confirmed as an additional beneficiary. The team recorded improved science and computer teaching following laboratory construction, while some asset handover remained pending.",
+        "gap": "The school was omitted from the master list and handover was incomplete.",
+        "action": "The city and Ministry of Education should regularise the beneficiary entry and complete joint handover of the outstanding assets."
+      }
+    ]
+  }
+}
+```
+
+
+## Revision evidence: reconciliation/stored_explicit_good.json
 
 ```json
 {
@@ -4136,9 +7447,8 @@ The 483 reported rows require REF AU IN_USE_FLAG = NO and affirmative good/new/s
 }
 ```
 
-## National operations and maintenance evidence
 
-Acquisition warranty clauses describe the terms recorded at purchase, not present warranty coverage. Each observation below gives the REF worksheet row and its underlying source location.
+## Revision evidence: narrative/national_maintenance.json
 
 ```json
 {
@@ -4357,9 +7667,8 @@ Acquisition warranty clauses describe the terms recorded at purchase, not presen
 }
 ```
 
-## Final geography cross-check
 
-All NWOYA BK local holdings are assigned to Acholi; hospital rows retain national treatment. The Northern sub-region totals used in the report and chart include this placement.
+## Revision evidence: geography_final_check.json
 
 ```json
 {
@@ -4385,3 +7694,235 @@ All NWOYA BK local holdings are assigned to Acholi; hospital rows retain nationa
   }
 }
 ```
+
+
+# Supplemental report photographs
+
+Source files remain unchanged. Each full source photograph was visually inspected; copies use only rotation, cropping and resizing, with JPEG output at at most 1600 pixels on the long side. No retouching was applied. User authorized additional photographs beyond the original maximum.
+
+National source review: central-government programme documents contained distribution records, spreadsheets and correspondence rather than an attributable asset photograph. No national photograph was added.
+
+## P11: Unfinished school block at Got Apwoyo Seed Secondary School, Nwoya District (Acholi).
+- Copy: `outputs/narrative-report/figures/photo_11_got_apwoyo_construction.jpg`
+- Source: `raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx`
+- Locator: word/media/image1.jpeg; body block 31.
+- Context: Nwoya district report body block 7 identifies Got Apwoyo Seed Secondary School. Blocks 10 to 14 describe ongoing construction, no commissioning, and ICT held at the district. Field photographs begin at block 30; image1.jpeg occurs at block 31.
+- Field point: Construction and commissioning were pending; ICT was held by the district education department.
+- Theme: construction; dimensions: 1008 x 636 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P12: Building works at a seed secondary school, Kiboga District (Buganda).
+- Copy: `outputs/narrative-report/figures/photo_12_lwamata_construction.jpg`
+- Source: `raw-data-grouped/team-29/Kiboga/Lwamata-Town-Council-Seed-Secondary-School/UGIFT ASSET VERIFICATION LWAMATA T.C.C SEED SEC SCH.docx`
+- Locator: word/media/image6.jpeg; body block 79.
+- Context: Lwamata school return body block 11 identifies the school, block 33 states that some buildings remain under construction and laboratory equipment was expected after structures were completed. Image6.jpeg is at block 79 after PICTURES OF ASSETS VISITED AND VERIFIED.
+- Field point: Construction remained in progress; the ICT and chemistry laboratories had furniture while equipment delivery was expected after construction.
+- Theme: construction; dimensions: 472 x 476 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P13: School block awaiting completion at Butungama Seed Secondary School, Ntoroko District (Tooro).
+- Copy: `outputs/narrative-report/figures/photo_13_butungama_construction.jpg`
+- Source: `raw-data-grouped/team-26/_team-documents/Butungama Seed School.pdf`
+- Locator: PDF page 7, image 1; body block not applicable.
+- Context: Photographic PDF page 7; the school sign appears on page 3. The paired return raw-data-grouped/team-26/Ntoroko/Butungama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUTUNGAMA HEALTH CENTRE III AND BUTUNGAMA SEED SCHOOL (1).docx, body blocks 113, 119 and 178 identify the school and ongoing construction.
+- Field point: The return records buildings under construction, with school equipment still stored.
+- Theme: construction; dimensions: 810 x 518 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P14: Cracked health centre block above collapsed ground, Bulambuli District (Bugisu).
+- Copy: `outputs/narrative-report/figures/photo_14_bulambuli_structural_damage.jpg`
+- Source: `raw-data-grouped/team-14/Bulambuli/Bukibologoto-HC-II/08_block-over-collapsed-ground-wide_ref20260911-0005.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 08_block-over-collapsed-ground-wide_ref20260911-0005.jpg. Facility and local government are established by its Bukibologoto-HC-II/Bulambuli source folders.
+- Field point: Visible cracking and ground loss beneath a health centre building illustrate structural and site-maintenance risks; no engineering cause is inferred.
+- Theme: damage; dimensions: 940 x 550 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P15: Stained and peeling ceiling at a health centre, Sironko District (Bugisu).
+- Copy: `outputs/narrative-report/figures/photo_15_sironko_damaged_ceiling.jpg`
+- Source: `raw-data-grouped/team-14/Sironko/Bundege-HC-III/15_water-damaged-ceiling_ref20260829-0569.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 15_water-damaged-ceiling_ref20260829-0569.jpg under Bundege-HC-III/Sironko.
+- Field point: The visible ceiling damage illustrates a need for building maintenance. The source image is labelled water-damaged ceiling.
+- Theme: damage; dimensions: 1080 x 729 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P16: Water tank on a cracked base at a seed secondary school, Kibuku District (Bukedi).
+- Copy: `outputs/narrative-report/figures/photo_16_kibuku_cracked_tank_base.jpg`
+- Source: `raw-data-grouped/team-12/Kibuku/Kasasira-Seed-Secondary-School/39_water-tank-on-cracked-base_ref0332.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 39_water-tank-on-cracked-base_ref0332.jpg under Kasasira-Seed-Secondary-School/Kibuku.
+- Field point: Visible cracking in the tank support illustrates a utility-asset maintenance concern; cause and structural safety are not inferred.
+- Theme: damage; dimensions: 912 x 999 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P17: Boxed desktop computers at a seed secondary school, Karenga District (Karamoja).
+- Copy: `outputs/narrative-report/figures/photo_17_karenga_boxed_computers.jpg`
+- Source: `raw-data-grouped/team-11/Karenga/Kapedo-Seed-Secondary-School/08_boxed-desktop-computers-stacked_ref20260829-0159.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 08_boxed-desktop-computers-stacked_ref20260829-0159.jpg under Kapedo-Seed-Secondary-School/Karenga.
+- Field point: Computer cartons are stacked at the school. The image supports boxed storage but does not establish the reason or duration.
+- Theme: storage; dimensions: 787 x 1600 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P18: Stacked desks, chairs and stools at a seed secondary school, Napak District (Karamoja).
+- Copy: `outputs/narrative-report/figures/photo_18_napak_stacked_furniture.jpg`
+- Source: `raw-data-grouped/team-10/Napak/Napak-Seed-Secondary-School/25_furniture-some-broken-none-engraved_ref20260827-0417.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 25_furniture-some-broken-none-engraved_ref20260827-0417.jpg under Napak-Seed-Secondary-School/Napak.
+- Field point: The source describes some furniture as broken and none engraved. The caption confines itself to the visible stacked school furniture.
+- Theme: storage; dimensions: 563 x 690 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P19: Clinical equipment packed among cartons at a health centre, Hoima City (Bunyoro).
+- Copy: `outputs/narrative-report/figures/photo_19_hoima_stored_clinical_equipment.jpg`
+- Source: `raw-data-grouped/_multi-team/programme-documents/data-management-chat/unpacked/TEAM 25 HEALTH CENTHERA/TEAM 25 HEALTH CENTHERA/KIHUUKYA HEALTH CENTER III/kihuukya photos/stored equipement nort in use.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph in the KIHUUKYA HEALTH CENTER III/kihuukya photos folder. It is byte-identical (SHA256 a76c46aa7f6ab2856ac601a320125dfdf7cb174a6ec0c29eec25dab06232de97) to the team-25/_team-documents copy. The KIHUUKYA HEALTHCENTER III. Edited.docx return, block 29, identifies Hoima City and Bunyoro; block 38 names the facility.
+- Field point: The source file identifies stored equipment not in use. Cropping removes manufacturer contact details at the left edge.
+- Theme: storage; dimensions: 526 x 983 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P20: Laboratory stools and other school furniture in storage, Ntoroko District (Tooro).
+- Copy: `outputs/narrative-report/figures/photo_20_butungama_stored_furniture.jpg`
+- Source: `raw-data-grouped/team-26/_team-documents/Butungama Seed School.pdf`
+- Locator: PDF page 12, image 1; body block not applicable.
+- Context: Photographic PDF page 12. The paired return raw-data-grouped/team-26/Ntoroko/Butungama-Seed-Secondary-School/ASSET VERIFICATION AND RECORDING TOOL KIT 222 BUTUNGAMA HEALTH CENTRE III AND BUTUNGAMA SEED SCHOOL (1).docx, body block 162, records laboratory stools, desks, office chairs and tables in good condition but not in use, still stored. Blocks 119 and 178 describe ongoing construction.
+- Field point: Good furniture had been delivered but remained stored while the school was under construction.
+- Theme: storage; dimensions: 810 x 907 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P21: Boxed pulse oximeters at a health centre, Makindye-Ssabagabo Municipal Council (Buganda).
+- Copy: `outputs/narrative-report/figures/photo_21_kibiri_boxed_oximeters.jpg`
+- Source: `raw-data-grouped/team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/KIBIRI HC III report.docx`
+- Locator: word/media/image17.jpeg; body block 77.
+- Context: Kibiri Health Centre III report image17.jpeg, body block 77. Blocks 1 and 5 identify Kibiri; the packaging explicitly identifies Handheld Pulse Oximeter.
+- Field point: The photographed clinical equipment remained in packaging at the time of the photograph. The image alone does not establish functionality or duration of storage.
+- Theme: storage; dimensions: 963 x 729 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P22: UgIFT engraving on a health centre bench, Bududa District (Bugisu).
+- Copy: `outputs/narrative-report/figures/photo_22_bududa_bench_engraving.jpg`
+- Source: `raw-data-grouped/team-14/Bududa/Bududa-HC-III/09_bench-engraved-gou-moh-ugift-project_ref20260827-0187.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 09_bench-engraved-gou-moh-ugift-project_ref20260827-0187.jpg under Bududa-HC-III/Bududa. Visible institutional marking reads GOU/MOH-UGIFT PROJECT and F/Y 2023/2024.
+- Field point: A close view documents programme identification on furniture; engraving does not establish current functionality.
+- Theme: engraving; dimensions: 1000 x 435 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P23: Building works and construction materials at Ndhew Seed Secondary School, Nebbi District (West Nile).
+- Copy: `outputs/narrative-report/figures/photo_23_ndhew_construction.jpg`
+- Source: `raw-data-grouped/team-01/Nebbi/_district-documents/UGIFT Assets Verification Nebbi District Report.docx`
+- Locator: word/media/image17.jpeg; body block 89.
+- Context: Nebbi district report image17.jpeg at body block 89, within the Ndhew school section beginning at block 40 and field photographs beginning at block 63. Block 42 records ongoing construction and ICT/science equipment at district headquarters; block 59 links construction delay with equipment installation delay.
+- Field point: Unfinished construction prevented equipment installation, with ICT and science equipment held at district headquarters.
+- Theme: construction; dimensions: 1280 x 691 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P24: Unfinished brickwork at a seed secondary school, Karenga District (Karamoja).
+- Copy: `outputs/narrative-report/figures/photo_24_lokori_brickwork.jpg`
+- Source: `raw-data-grouped/team-11/Karenga/Lokori-Seed-Secondary-School/01_brickwork-under-construction_ref20260829-0980.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 01_brickwork-under-construction_ref20260829-0980.jpg under Lokori-Seed-Secondary-School/Karenga.
+- Field point: Exposed brickwork and foundation courses show the stage of building works photographed; the image does not establish the completion timetable.
+- Theme: construction; dimensions: 1600 x 1200 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P25: Damaged drip stand at a health centre, Moroto District (Karamoja).
+- Copy: `outputs/narrative-report/figures/photo_25_moroto_broken_drip_stand.jpg`
+- Source: `raw-data-grouped/team-10/Moroto/Kalemungole-HC-III/124_broken-drip-stand_ref20260827-0349.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 124_broken-drip-stand_ref20260827-0349.jpg under Kalemungole-HC-III/Moroto. The stand lacks its supporting base. Crop retains the stand and a gloved hand; no face or identifier is present.
+- Field point: A broken clinical support item illustrates the maintenance needs of health equipment.
+- Theme: damage; dimensions: 365 x 972 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P26: Unfinished laboratory building at a health centre, Sironko District (Bugisu).
+- Copy: `outputs/narrative-report/figures/photo_26_sironko_unfinished_health_lab.jpg`
+- Source: `raw-data-grouped/team-14/Sironko/Simu-Pondo-HC-III/06_unfinished-laboratory-building_ref20260829-0541.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 06_unfinished-laboratory-building_ref20260829-0541.jpg under Simu-Pondo-HC-III/Sironko.
+- Field point: The laboratory shell was photographed before roofing and finishing.
+- Theme: construction; dimensions: 1080 x 672 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P27: Broken desk frame at a seed secondary school, Namisindwa District (Bugisu).
+- Copy: `outputs/narrative-report/figures/photo_27_namisindwa_broken_desk.jpg`
+- Source: `raw-data-grouped/team-13/Namisindwa/Namboko/032_broken-desk_ref20260902-0126.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 032_broken-desk_ref20260902-0126.jpg under Namboko/Namisindwa.
+- Field point: The bent and detached desk frame documents damaged school furniture.
+- Theme: damage; dimensions: 1228 x 648 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P28: Cracked desk surface bearing a school marking, Tororo District (Bukedi).
+- Copy: `outputs/narrative-report/figures/photo_28_tororo_cracked_desktop.jpg`
+- Source: `raw-data-grouped/team-13/Tororo/Iyolwa/107_desk-marked-iyolwa-seed-ss-cracked-corner_ref20260830-0799.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 107_desk-marked-iyolwa-seed-ss-cracked-corner_ref20260830-0799.jpg under Iyolwa/Tororo. The institutional school name appears on the wood; no personal name is present.
+- Field point: Identification and physical condition are separate concerns: the desk is marked and its wooden surface is cracked.
+- Theme: damage; dimensions: 590 x 1088 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P29: Damaged chair back joint at a seed secondary school, Budaka District (Bukedi).
+- Copy: `outputs/narrative-report/figures/photo_29_budaka_damaged_chair.jpg`
+- Source: `raw-data-grouped/team-12/Budaka/Nansanga-Seed-Secondary-School/086_chair-back-rail-broken-at-the-joint_ref0700.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 086_chair-back-rail-broken-at-the-joint_ref0700.jpg under Nansanga-Seed-Secondary-School/Budaka.
+- Field point: The photograph documents damage at the chair back joint.
+- Theme: damage; dimensions: 591 x 998 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P30: Hospital beds and screens stacked in storage at a health centre, Kagadi District (Bunyoro).
+- Copy: `outputs/narrative-report/figures/photo_30_kagadi_beds_in_storage.jpg`
+- Source: `raw-data-grouped/team-25/Kagadi/Kyabasara-HC-III/BEDS IN STORAGE .jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph BEDS IN STORAGE .jpg under Kyabasara-HC-III/Kagadi. The source filename and visible stacking identify storage.
+- Field point: Beds and privacy screens occupied a storage area; the photograph alone does not establish the reason for storage.
+- Theme: storage; dimensions: 705 x 1015 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P31: Biology laboratory under construction at a seed secondary school, Buliisa District (Bunyoro).
+- Copy: `outputs/narrative-report/figures/photo_31_buliisa_laboratory_works.jpg`
+- Source: `raw-data-grouped/team-25/Buliisa/Kihungya-Seed-Secondary-School/boilogy lab under construction.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph boilogy lab under construction.jpg under Kihungya-Seed-Secondary-School/Buliisa. kihungya seed school.docx body block 107 identifies the science block as not in use and under construction; block 63 states that most structures were not ready and there was no electricity for ICT sessions or water for sanitation.
+- Field point: Construction and utility provision affected readiness of teaching facilities; the science block was recorded as not in use.
+- Theme: construction; dimensions: 1040 x 780 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P32: Flood-affected older health facility at Butiaba, Buliisa District (Bunyoro).
+- Copy: `outputs/narrative-report/figures/photo_32_buliisa_flood_affected_old_facility.jpg`
+- Source: `raw-data-grouped/team-25/Buliisa/Butiaba-HC-III/butaiba submurged facility.jpeg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph butaiba submurged facility.jpeg under Butiaba-HC-III/Buliisa. The paired butaiba report.docx body block 11 (paragraph 10) explicitly states that the old facility built by UgIFT and its equipment were affected by floods.
+- Field point: The older UgIFT health facility was affected by flooding. The photograph does not imply that all current facilities or services are submerged.
+- Theme: damage; dimensions: 1242 x 557 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P33: School buildings and courtyard at a seed secondary school, Buvuma District (Buganda).
+- Copy: `outputs/narrative-report/figures/photo_33_buvuma_school_blocks.jpg`
+- Source: `raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.23 (3).jpeg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph WhatsApp Image 2026-09-12 at 13.47.23 (3).jpeg under Bweema-Seed-Secondary-School/Buvuma. The same source photo collection includes a school sign identifying Bweema and Buvuma.
+- Field point: The school photographs document the physical facilities provided. The caption does not infer occupation or current service status.
+- Theme: service delivery; dimensions: 1280 x 596 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P34: Raised water storage tank at a seed secondary school, Buvuma District (Buganda).
+- Copy: `outputs/narrative-report/figures/photo_34_buvuma_raised_water_tank.jpg`
+- Source: `raw-data-grouped/team-31/Buvuma/Bweema-Seed-Secondary-School/WhatsApp Image 2026-09-12 at 13.47.25.jpeg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph WhatsApp Image 2026-09-12 at 13.47.25.jpeg under Bweema-Seed-Secondary-School/Buvuma.
+- Field point: The elevated tank and support frame document water-storage infrastructure. Supply availability and functionality are not inferred from the photograph.
+- Theme: service delivery; dimensions: 624 x 1280 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
+
+## P35: Empty computer laboratory at a seed secondary school, Kween District (Sebei).
+- Copy: `outputs/narrative-report/figures/photo_35_kween_empty_computer_laboratory.jpg`
+- Source: `raw-data-grouped/team-15/Kween/Kaptum-Seed-Secondary-School/09_computer-lab-no-power-supply_ref0537.jpg`
+- Locator: Loose photograph; body block not applicable.
+- Context: Loose photograph 09_computer-lab-no-power-supply_ref0537.jpg under Kaptum-Seed-Secondary-School/Kween. The source filename identifies the computer laboratory and no power supply.
+- Field point: The photograph documents an empty computer laboratory. The no-power finding comes from the supplied source label, rather than being inferred visually.
+- Theme: service delivery; dimensions: 1280 x 816 pixels.
+- Privacy: Full source image inspected. Selected crop excludes identifiable faces, personal names, signatures, name badges, personal documents, telephone numbers and email addresses.
