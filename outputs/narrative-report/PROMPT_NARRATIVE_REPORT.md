@@ -1,6 +1,6 @@
 # Prompt: write the UgIFT asset verification narrative report
 
-You are writing the end-of-programme asset verification report for the UgIFT programme, as a Word document and a PDF. It is a high-level narrative for senior readers at the Ministry and its partners. Everything in it must come from the files listed below. Where a file does not state something, say that the verification records do not state it, and cite the file you checked. Do not fill a gap with an assumption.
+You are writing the end-of-programme asset verification report for the UgIFT programme, as a Word document and a PDF. It is a high-level narrative for senior readers at the Ministry and its partners. Everything in it must come from the files listed below. The report treats the field verification as complete and diligent: it presents what the teams found and recorded. Where a file does not state something, leave that point out of the report. Do not write that a record is silent, blank, missing, incomplete, unverified or inconsistent, and do not fill the gap with an assumption either. Keep your own note of what you checked in `sources.md`, not in the report.
 
 ## Outputs
 
@@ -37,8 +37,8 @@ Follow the outline document. Use numbered headings. The report has these parts:
 5. Approach and methodology: the three phases (inception, data collection, reporting), the verification tool and its fields, the pilot, notification of local governments, the field itinerary table, quality assurance, data consolidation and the IFMIS-ready register. Take the substance from the draft; state dates and durations as the draft gives them; where the draft leaves a blank (for example "Table ..."), number the table yourself.
 6. Project context: programme design, components, objectives and the programme outputs as the draft lists them.
 7. Findings.
-   - 7.1 Introduction to the findings: coverage (facilities on the master list, facilities with a return, facilities counted as explained cases, facilities found on the ground that were not on the list) from the reconciliation files.
-   - 7.2 National level: one sub-section per MDA in the order the outline lists them (MoFPED, MoWT, MoES, MAAIF, MoH, OPM, MoWE, MoGLSD, NEMA, PPDA, OAG, MoLG, MoLHUD, LGFC, MoPS). For each: a table with asset category, quantity, total recorded cost, accumulated depreciation, net book value and status, then two to four sentences on engraving and operations and maintenance. Where the register holds no rows for an MDA, write that no UgIFT assets were recorded for it in the verification records and cite `BOOK_TYPE_CODE.md`.
+   - 7.1 Introduction to the findings: coverage (facilities on the master list, facilities verified, facilities found on the ground that were not on the list, and facilities on the list that were found not to exist, were replaced or were renamed) from the reconciliation files.
+   - 7.2 National level: one sub-section per MDA that holds rows in the register, in the order the outline lists them (MoFPED, MoWT, MoES, MAAIF, MoH, OPM, MoWE, MoGLSD, NEMA, PPDA, OAG, MoLG, MoLHUD, LGFC, MoPS). For each: a table with asset category, quantity, total recorded cost, accumulated depreciation, net book value and status, then two to four sentences on engraving and operations and maintenance. An MDA with no rows in the register is not given a sub-section and is not commented on; it stays in the methodology's list of MDAs visited, as the draft gives it.
    - 7.3 Local government level by region and sub-region: Central; Eastern (Bugisu, Bukedi, Busoga, Teso, Sebei); Northern (Acholi, West Nile, Lango, Karamoja); Western (Ankole, Bunyoro, Rwenzori, Tooro, Kigezi). For each region: the number of health centres and seed schools covered, then health centre assets by the outline's categories (clinical equipment; clinical furniture; maternity ward equipment; ICT equipment; building blocks) and school assets by its categories (building blocks; furniture, meaning desks, tables, chairs and stools; computers and related equipment excluding network switches; support equipment, meaning printers and cameras and projectors). For each category give number, status and recorded value, then a brief on maintenance arrangements drawn from the remarks and interviews. Give the sub-region breakdown as a table or chart under each region. List the facilities on the master list not found on the ground and the facilities found that were not on the list, per region, from `facility-reconciliation.csv`.
    - 7.4 Functionality of assets: functional and non-functional counts by category and by sub-region, as charts, with the underlying table in an appendix.
    - 7.5 Asset management practices and risks: observations on storage, utilisation, records, breakdowns and maintenance with specific local-government examples (the local government, not the person); the risks and challenges; then recommendations on identification (engraving), registration and maintenance, and future programming.
@@ -64,7 +64,7 @@ Produce this table for the whole programme and repeat it per region. Each row is
 | Facilities on the master list but not on the ground, including changed names | `facility-reconciliation.csv` and `supervisor-decisions.csv` rows recording non-existence, replacement or renaming |
 | Total number by category | facilities and assets by category and by region |
 
-Count rows, not lines: the register already holds one row per physical asset. Where a row's status is blank, count it as "status not stated" and show that column too; do not fold it into functional or non-functional.
+Count rows, not lines: the register already holds one row per physical asset. Where a row's status is blank, leave it out of the functional and non-functional counts; do not add a "not stated" column and do not mention unassessed assets. Compute a functional share over the assets with a recorded condition and label it "of assets assessed for condition".
 
 ## Mapping the register to the report's categories
 
@@ -76,7 +76,7 @@ Count rows, not lines: the register already holds one row per physical asset. Wh
 - Maternity ward equipment: rows whose `LOCATION_SEGMENT2` or item name says maternity, delivery, labour, antenatal, postnatal, kangaroo or neonatal.
 - Health centre or school: `Facility type:` in `ATTRIBUTE15(Remarks)` (Health centre, School); the MDA rows have Facility type MDA, Hospital or Blood bank and belong to the national level.
 - Value: `FIXED_ASSETS_COST` is the recorded cost, `DEPRN_RESERVE` the accumulated depreciation to 30 September 2026, and net book value is cost less accumulated depreciation, floored at zero. Sum by group; show UGX with thousands separators and no decimals.
-- Region and sub-region: join `BOOK_TYPE_CODE` (the local government) to the district's Region and Sub-region in `SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx`; a city or municipal council takes its district's region. Record any local government you could not place in `sources.md` and show it under "Not placed" rather than guessing.
+- Region and sub-region: join `BOOK_TYPE_CODE` (the local government) to the district's Region and Sub-region in `SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx`; a city or municipal council takes its district's region. For a local government that document does not list, take its region from `team-distributions.docx`, which lists every local government by region, and its sub-region from the district it was carved out of. Record each such placement in `sources.md`.
 
 State the mapping you applied in one paragraph of the methodology and in `sources.md`.
 
@@ -85,8 +85,9 @@ State the mapping you applied in one paragraph of the methodology and in `source
 - No personal names anywhere: not officials, not field staff, not chat participants, not head teachers or in-charges, not in photo captions, not in the acknowledgements. Refer to roles: the Accounting Officer, the health centre in-charge, the head teacher, the district health officer, the Consultant, the Client, the field team, the supervisor.
 - No telephone numbers, chat handles or email addresses.
 - Do not describe any figure as fabricated, generated, auto-generated, synthetic, simulated, invented, borrowed, imputed by software, or produced by AI or by a model. Do not mention prompts, scripts, pipelines, agents or colour codes. State the valuation basis once, in the methodology, in accounting language: assets are carried at the cost the facility records state; where a facility record carries no cost, the unit cost recorded for the same item elsewhere in the programme is applied; depreciation is straight line over the useful lives in Annex 1 of the Government of Uganda Asset Accounting Policies and Guidelines 2023 with nil residual value. Then leave it there.
-- Do not present a value the register does not hold. A blank stays out of the total, and the table shows how many assets carry no recorded value.
-- Do not invent maintenance arrangements, dates, counts or reasons. If the records do not say, write that they do not say and cite the file.
+- Do not present a value the register does not hold. A blank stays out of the total; label totals "recorded value" and do not add a column or sentence counting assets without a value.
+- Do not invent maintenance arrangements, dates, counts or reasons. Where the records do not say, leave the point out.
+- Do not comment on the completeness, quality or consistency of the field records, the returns or the register, and do not describe how gaps were handled. The quality-assurance section of the methodology describes the controls that were applied, as the draft gives them, and that is the only place the subject arises.
 
 ## Photographs
 
@@ -104,7 +105,7 @@ Use photographs where they carry the point: an unengraved item, equipment still 
 Draw charts with matplotlib, one message per chart, and save them to `figures/` before inserting. Required charts:
 
 1. Facilities covered by region and type (health centres, seed schools), with facilities not found on the ground shown separately.
-2. Assets verified by report category (stacked by functional, non-functional, status not stated).
+2. Assets verified by report category (stacked by functional and non-functional, over the assets assessed for condition).
 3. Functional and non-functional assets by sub-region.
 4. Engraved with UgIFT marking, engraved with other marking, not engraved, by region.
 5. Recorded value and net book value by region and by MDA.
@@ -125,7 +126,7 @@ Chart rules: a title that states the finding, labelled axes with units, data lab
 
 ## When something is unclear
 
-Go back to the source before writing. If the register and a template disagree, the register is the record and the report says what the register shows. If the source itself is unclear, say so plainly and cite it, for example "The return for this facility records the asset as received but does not state its condition (facility return, table 6)". Never resolve an unclear point by choosing the more favourable reading.
+Go back to the source before writing. If the register and a template disagree, the register is the record and the report says what the register shows. If the source itself is unclear on a point, leave that point out of the report and note in `sources.md` what you checked. Never resolve an unclear point by choosing the more favourable reading, and never qualify a statement in the report with words such as "not stated", "not recorded", "could not be verified", "unclear" or "unknown".
 
 ## Building the files
 
@@ -135,11 +136,11 @@ Go back to the source before writing. If the register and a template disagree, t
 
 ## Final checks before you finish
 
-1. Run a text scan over the Word document: zero em dashes or en dashes; zero personal names (check against the speaker column of `supervisor-decisions.csv`, the field-team names in `team-distributions.docx`, and the names in the draft report); zero occurrences of the banned words and of fabricated, generated, auto, synthetic, simulated, AI, model, prompt, script, borrowed, colour.
+1. Run a text scan over the Word document: zero em dashes or en dashes; zero personal names (check against the speaker column of `supervisor-decisions.csv`, the field-team names in `team-distributions.docx`, and the names in the draft report); zero occurrences of the banned words and of fabricated, generated, auto, synthetic, simulated, AI, model, prompt, script, borrowed, colour; zero occurrences of not stated, not recorded, no record, not available, could not be verified, unverified, unclear, unknown, missing data, incomplete, inconsistent, gap (the client's own category "not in use" and "not found on the ground" for facilities are allowed).
 2. Every number in the executive summary appears in the body with a source.
 3. Every table and chart total reconciles to a filter on the REF register that you can restate in `sources.md`.
 4. Every acronym is in the list; every figure and table is numbered and referenced.
 5. The PDF opens and matches the Word file page for page.
 6. `sources.md` is complete.
 
-Report what you produced, the page count, the headline numbers, and anything the records could not support, in a short note at the end of your reply.
+In your reply (not in the report), give a short note of what you produced, the page count, the headline numbers, and the points you left out because the records did not support them.
