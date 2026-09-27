@@ -101,7 +101,8 @@ CONSUMABLE = re.compile(
     r"chalk(?!\s*boards?)|exercise books?|text ?books?|papers?(?!\s*(?:shredders?|cutters?|trimmers?))|"
     r"tubings?|visking|labels?|droppers?|petri dish(?:es)?|bulbs?|fl[ou]{1,2}rescent tubes?|test tubes?|test tube (?:racks?|holders?)|corks?|bungs?|rubber bungs?|"
     r"crocodile clips?|litmus|indicator paper|reels?|rolls?|\bboxe?s? of\b|wires?(?!\s*gauze)|boiling tube brushes|"
-    r"cannulas?|canulars?|canular|nasal cannulas?|ticker tape|wire ga[u]?ges?|catheters?|swabs?|needles?(?!\s*(?:holders?|destroyers?|cutters?))|plasters?)\b",
+    r"cannulas?|canulars?|canular|nasal cannulas?|ticker tape|wire ga[u]?ges?|catheters?|swabs?|needles?(?!\s*(?:holders?|destroyers?|cutters?))|plasters?|"
+    r"instruction manuals?|manuals?|goggles?|assorted tyres|tyres?|iron fil+ings|petri ?dish(?:es)?)\b",
     re.I,
 )
 NATURAL = re.compile(r"\b(natural resources?|mineral rights?|wildlife|forests?|wetlands?|rivers?|lakes?)\b", re.I)
@@ -633,6 +634,19 @@ EXTRA_CLASSES = (
      (MACHINERY, OTHER, "FURNITURE AND FITTINGS", 60, True)),
     (re.compile(r"(?i)\b(megaphones?|public\s*address(?:\s*systems?)?|pa\s*systems?|loud\s*hailers?|hand\s*sets?|desk\s*phones?|telephone\s*sets?)\b"),
      (MACHINERY, "ICT EQUIPMENT", "OTHER ICT EQUIPMENT", 60, True)),
+    # Field spellings of laboratory and medical apparatus.
+    (re.compile(r"(?i)\b(hollo\s*ware|holloware|retr?ort\s*stands?|con?u?nting\s*chambers?|ph\s*meters?|g[\s\-]?clamps?|(?:concave|convex|concavex)\s*mirrors?|"
+                r"cell\s*washers?|(?:blood\s*)?(?:coagulation|congulation)\s*an[a]?l?y[sz]ers?|an[a]?l?y[sz]ers?|cool\s*boxes|cold\s*boxes|vaccine\s*carriers?|instrument\s*trays?|"
+                r"(?:^|\s)p\.?\s*machine,?\s*digital|examinat\s*ion\s*(?:couch|bed|light)?|heat\s*sources?|bunsen\s*burners?|spirit\s*lamps?|tripods?)\b"),
+     (MACHINERY, OTHER, "MED LAB RESEARCH APPLIANCES", 60, True)),
+    (re.compile(r"(?i)\b(notices?\s*boards?|din\s*boards?|pin\s*boards?|glass\s*lights?|lock\s*ups?|hairs)\b"),
+     (MACHINERY, OTHER, "FURNITURE AND FITTINGS", 60, True)),
+    (re.compile(r"(?i)\b(lap\s*tops?|systems?\s*units?|cable\s*locks?)\b"),
+     (MACHINERY, "ICT EQUIPMENT", "LIGHT ICT HARDWARE", 60, True)),
+    (re.compile(r"(?i)\b(solar(?:\s*systems?|\s*panels?|\s*power|\s*batter(?:y|ies))?|air\s*conditions?|air\s*conditioners?|power\s*cables?|extension\s*cables?)\b"),
+     (MACHINERY, OTHER, "ELECTRICAL MACHINERY", 60, True)),
+    (re.compile(r"(?i)\b(tanks?|water\s*tanks?|h?ash\s*pits?|hashpits?|placenta\s*pits?|blockplacenta\s*pits?|tents?|fences?|gates?)\b"),
+     ("BUILDINGS AND STRUCTURES", "STRUCTURES", "OTHER STRUCTURES", 240, True)),
     (re.compile(r"(?i)\b(staff\s*qua[rt]+ers?|teachers?['’]?\s*qua[rt]+ers?|staff\s*houses?)\b(?!.*\b(latrine|latrin|toilet|kitchen)\b)"),
      ("BUILDINGS AND STRUCTURES", "DWELLINGS", "RESIDENTIAL BUILDINGS", 600, True)),
     (re.compile(r"(?i)\b(wheel\s*chairs?|stop\s*watch(?:es)?|bowl,?\s*kick|kick\s*bowls?|balances?|volumetric flasks?|flasks?|"
@@ -1171,7 +1185,7 @@ def sanitize(value, header: str):
         return value
     if isinstance(value, (int, float, date, datetime)):
         return value
-    if header == "LOCATION_SEGMENT4" or (header in ("LOCATION_SEGMENT2", "LOCATION_SEGMENT3") and clean(value).upper() == "UNSPECIFIED"):
+    if header == "LOCATION_SEGMENT4" or (header in ("LOCATION_SEGMENT2", "LOCATION_SEGMENT3", ATTRIBUTE[2]) and clean(value).upper() == "UNSPECIFIED"):
         # UNSPECIFIED is the location master's own value here, not a placeholder.
         return clean(value) or None
     if header == ATTRIBUTE[15] and isinstance(value, str) and "Source file: " in value:

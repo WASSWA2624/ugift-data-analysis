@@ -6,7 +6,7 @@
 |---:|---|---:|
 | 1 | ABIM BK | 502 |
 | 2 | ADJUMANI BK | 1,716 |
-| 3 | AGAGO BK | 2,002 |
+| 3 | AGAGO BK | 2,004 |
 | 4 | ALEBTONG BK | 2,192 |
 | 5 | AMOLATAR BK | 4,347 |
 | 6 | AMUDAT BK | 899 |
