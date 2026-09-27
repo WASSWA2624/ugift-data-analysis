@@ -80,10 +80,20 @@ KIND_DEPARTMENT = {
 # Centre III suffix): central-government rows and the few local-government offices.
 CENTRAL_KINDS = {"MDA", "Hospital", "Blood bank", "Local government office", "Health facility"}
 # Section 3.3.3: small office equipment and loose tools are expensed on 221012.
+# Section 3.3.3: small office equipment and loose tools, "kettles, spoons, forks,
+# calculators, stapling machines, pen-holders, punches, paper trays, pin and staple
+# holders, type writer etc.", and items of the same nature the returns list: small
+# office and kitchen ware, hand tools and cleaning items, computer accessories that are
+# no asset on their own, and single-patient or measuring aids.
 LOOSE = re.compile(
-    r"\b(kettles?|spoons?|(?<!tuning )forks?(?!\s?lift)|cutlery|calculators?|stap+lers?|stap+ling machines?|pen-?holders?|"
-    r"punches|punch|punching machines?|paper punch(?:es|ers)?|paper trays?|(?:office|file|document|letter|desk|in|out) trays?|"
-    r"pin-?holders?|staple holders?|drawing pins?|office pins?|pins?(?!\s*boards?)\b|type\s?writers?)\b|^\s*trays?\s*$",
+    r"\b(kettles?|spoons?|(?<!tuning )forks?(?!\s?lift)|cutlery|knives|plates|cups|mugs|jugs|flasks?(?!\s*(?:volumetric|conical|erlenmeyer|round))|thermos(?:es)?|"
+    r"calculators?|stap+lers?|stap+ling machines?|pen-?holders?|punches|punch|punching machines?|paper punch(?:es|ers)?|paper trays?|"
+    r"(?:office|file|document|letter|desk|in|out) trays?|pin-?holders?|staple holders?|drawing pins?|office pins?|pins?(?!\s*boards?)\b|type\s?writers?|"
+    r"wall clocks?|clocks?|stop ?watch(?:es)?|timers?|scissors?|cord scissors?|spatulas?|rulers?|dusters?|files?(?:\s+and\s+folders?)?\b(?!\s*(?:cabinet|server))|folders?|"
+    r"(?:mid[- ]upper[- ]arm|muac|measuring|tape) ?measures?|(?:mid[- ]upper[- ]arm|muac) tapes?|tape measures?|"
+    r"buckets?|disinfection buckets?|basins?(?!\s*(?:stand|unit))|bins?|waste bins?|dust ?bins?|pedal bins?|mops?|brooms?|brushes|torch(?:es)?|padlocks?|hammers?|spanners?|screw ?drivers?|pliers|wrench(?:es)?|"
+    r"keyboards?|mouses?|mice|computer mice|cables?|power cables?|extension cables?|chargers?|adapt[eo]rs?|flash disks?|usb sticks?|memory cards?|surge protectors?|power surge protectors?|"
+    r"penguin suckers?|bulb suckers?|tongue depressors?)\b|^\s*trays?\s*$",
     re.I,
 )
 # A service or subscription is not a controlled tangible resource with service
@@ -1426,8 +1436,10 @@ def readme(stats: Counter, borrowed: bool, filled: Counter, headers: list[str]):
             + f" A building the source says is still under construction is work in progress: ASSET_TYPE CIP at the cost the source states ({stats['cip']:,} rows), not depreciated (5.5, 5.14), "
             "with no placed-in-service date or price borrowed for it. A service or subscription (internet connectivity for a period, engraving, testing and commissioning, installation as a line of its own) "
             "is not a controlled resource with service potential beyond a year (3.2.1.2): it carries no class, no cost borrowing and no ASSET_TYPE, and Remarks say so.",
-            "Kettles, spoons, forks, cutlery, calculators, staplers, pen-holders, punches, paper and office trays, pins and pin holders, staple holders and typewriters (section 3.3.3) are not capitalized; "
-            "their expense account is 221012 and they carry no class, life or depreciation (a life the source typed stays in ATTRIBUTE5 on the MF workbook). Single-use packs, graph paper and other consumables are not capitalized. Natural resources are not capitalized (3.2.1.4).",
+            "The guidelines set no capitalization threshold (3.2.2.1): every non-current asset is capitalized whatever its value, and similar low-value units acquired in one transaction (desks, laboratory stools, surgical instruments, computers in a laboratory) are a group asset (3.3.5) whose subsidiary records are the unit rows of this register, each marked CAPITALIZED. "
+            "Small office equipment and loose tools (3.3.3: kettles, spoons, forks, calculators, staplers, pen-holders, punches, paper trays, pin and staple holders, typewriters, and items of the same nature: clocks and stop watches, scissors, spatulas, rulers, measuring and MUAC tapes, buckets, bins, mops, hand tools, "
+            "keyboards, mice, cables, chargers, surge protectors, penguin suckers) are not capitalized whatever their value; their expense account is 221012 and they carry no class, life or depreciation (a life the source typed stays in ATTRIBUTE5 on the MF workbook). "
+            "Single-use packs, graph paper and other consumables are not capitalized. Natural resources are not capitalized (3.2.1.4). A unit price far below the price of the same item elsewhere (a line total divided, or a slip) is not a low-value asset: the REF workbook borrows the unit price for it.",
             "ASSET_CATEGORY_MAJOR, MINOR1 and MINOR2 are the Annex 1 classes read from the asset name. ASSET_CATEGORY_MINOR3 is the item name, the item-master level below Annex 1 "
             "(Annex 1 footnote 5), written as the sample row writes it (Laptop for HP Laptop silver). Generic names (equipment, item, set, machine), totals, counts and consumable packs "
             "carry no class; no class is taken from the facility type. A row with a generic name is not capitalized either: its service potential beyond one year cannot be read from the source.",

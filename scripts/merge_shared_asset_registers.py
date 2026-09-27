@@ -2105,7 +2105,7 @@ def stated_count(asset: Asset) -> tuple[str, list[tuple[int, str | None]]] | Non
     return None
 
 
-def decide_groups(asset: Asset, alone: bool, repeats: int = 1, per_unit_block: bool = False) -> tuple[str, list[tuple[int, str | None]]]:
+def decide_groups(asset: Asset, alone: bool, repeats: int = 1, per_unit_block: bool = False, same_quantity: bool = True) -> tuple[str, list[tuple[int, str | None]]]:
     """Choose how many asset rows a source line represents.
 
     A stated quantity is taken from a quantity column, a number in brackets, a
@@ -2113,7 +2113,9 @@ def decide_groups(asset: Asset, alone: bool, repeats: int = 1, per_unit_block: b
     the item, tag blank), a count in the description, or a count in the status or
     remarks. The same line typed once per unit is one asset per row: when the
     rows repeating this line number at least the stated count, or the block lists
-    its items once per unit, the count is a group total and is not applied.
+    its items once per unit, the count is a group total and is not applied. Lines
+    from a quantity column that repeat an item with differing quantities (doors per
+    building block) each state their own count and are applied.
     """
     asset.extras["alone"] = alone
     if asset.extras.get("has_unit_rows"):
@@ -2124,7 +2126,8 @@ def decide_groups(asset: Asset, alone: bool, repeats: int = 1, per_unit_block: b
         return asset.item, [(1, None)]
     name, groups = found
     total = sum(count for count, _ in groups)
-    if repeats >= total or (per_unit_block and not asset.explicit_qty):
+    group_total_repeated = repeats >= total and (not asset.extras.get("qty_column") or same_quantity)
+    if group_total_repeated or (per_unit_block and not asset.explicit_qty):
         return name, [(1, None)]
     return name, groups
 
@@ -2150,6 +2153,9 @@ def exact_key(asset: Asset) -> tuple[str, ...]:
 def explode(assets: list[Asset]) -> list[Asset]:
     presence = Counter(presence_key(asset) for asset in assets)
     exact = Counter(exact_key(asset) for asset in assets)
+    quantities: dict[tuple, set] = defaultdict(set)
+    for asset in assets:
+        quantities[exact_key(asset)].add(asset.explicit_qty)
     # A block that lists its items once per unit (most rows repeat an item text)
     # states no group counts on the item names.
     block_rows: Counter = Counter()
@@ -2165,7 +2171,8 @@ def explode(assets: list[Asset]) -> list[Asset]:
     exploded: list[Asset] = []
     for asset in assets:
         alone = presence[presence_key(asset)] == 1
-        item, groups = decide_groups(asset, alone, exact[exact_key(asset)], per_unit[presence_key(asset)[:3]])
+        key = exact_key(asset)
+        item, groups = decide_groups(asset, alone, exact[key], per_unit[presence_key(asset)[:3]], len(quantities[key]) <= 1)
         total = sum(count for count, _ in groups)
         running = 0
         for count, status in groups:
