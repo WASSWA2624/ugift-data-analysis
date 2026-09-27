@@ -23,7 +23,7 @@ Do not change any file under `raw-data-grouped/`, `outputs/asset-register-2026-0
 - `raw-data-grouped/README.md`, `raw-data-grouped/facility-data-status.pdf`, `raw-data-grouped/facility-reconciliation.csv`, `raw-data-grouped/master-source-rows.csv`, `raw-data-grouped/supervisor-decisions.csv`: facility coverage, facilities on the master list that were not found or were renamed, facilities found on the ground that were not on the list, and the decisions taken on them.
 - `SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx` (columns Region, Sub-region, District, School or sub-county, Phase, Status) and `team-distributions.docx` (Region, Local Government, numbers of schools and health facilities): the region and sub-region of every local government, and the number of facilities per local government.
 - `GOU Asset Accounting Policies and Guidelines 2023.pdf`, sections 3.2.1, 3.3.3, 5.5 and 5.7 and Annex 1: the recognition, useful-life and depreciation basis the register applied. Cite the section when the report explains a valuation.
-- Photographs: `raw-data-grouped/team-NN/<Local government>/<Facility>/*.jpg|jpeg|png` and `raw-data-grouped/team-NN/_team-documents/`. Their folder names give the local government and facility.
+- Photographs: loose image files under `raw-data-grouped/team-NN/<Local government>/<Facility>/` and `raw-data-grouped/team-NN/_team-documents/` (their folder names give the local government and facility), and the photographs embedded in the documents the teams produced: 671 of the Word returns under `raw-data-grouped/` carry embedded images (about 10,900 in all), the district reports under `team-NN/<Local government>/_district-documents/` carry 50 to 140 each, `_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-verification-photographic-gallery.docx` holds about 5,400 and `UGiFT-consolidated-field-report.docx` about 670, and 322 PDF scans hold photographed forms and assets. See "Photographs" for how to extract them.
 - `raw-data-grouped/_multi-team/programme-documents/data-management-chat/` and the `Remarks`, `Equipment status` and interview tables in the facility returns: the operations, maintenance and asset-management observations. Quote the substance, never the speaker.
 
 ## Structure
@@ -91,14 +91,17 @@ State the mapping you applied in one paragraph of the methodology and in `source
 
 ## Photographs
 
-Use photographs where they carry the point: an unengraved item, equipment still in its box in a store, a damaged desk, a completed and occupied block, a well-kept register at a facility. Rules:
+Use photographs where they carry the point: an unengraved item, equipment still in its box in a store, a damaged desk, a completed and occupied block, a well-kept register at a facility. Take them from the loose image files and from the documents the teams generated:
 
-- Choose sharp, well-lit, straight images where the asset fills the frame. Skip blurred, dark or cluttered photographs.
+- Word returns and district reports: extract the embedded images from `word/media/` (open the `.docx` as a zip, or use python-docx `document.part.related_parts` to keep the order in which they appear). Read the paragraph or table cell next to each image for its caption, item name and facility, since the file name inside the document is only `image12.jpeg`. The district reports in `_district-documents/` and the Karamoja photographic gallery are the richest sources for well-composed photographs of buildings, furniture and equipment; the facility returns give close-ups of tags, engraving and condition.
+- PDF scans: extract page images with PyMuPDF (`page.get_images` and `Document.extract_image`) or render the page at 200 dpi where the photograph is part of a scanned page; crop to the photograph.
+- Loose files: use as they are.
+- Choose sharp, well-lit, straight images where the asset fills the frame. Skip blurred, dark or cluttered photographs, screenshots of chats, and photographs of filled forms or registers that show names or signatures.
 - Prefer photographs without people. Never use a photograph that shows an identifiable face, a name badge, a signature or a document with personal names. Crop when needed.
 - Caption each photograph with what it shows, the facility type, the local government and the sub-region, for example "Figure 4: Delivery bed in use, maternity ward, health centre, Busia District (Bukedi)". No facility-level names are needed in the caption unless the point depends on it.
 - Resize to at most 1600 pixels on the long side and save a copy in `figures/`; keep the Word file under 30 MB.
-- Record the source path of every photograph in `sources.md`.
-- Use between eight and sixteen photographs across the report; one or two per region and per theme is enough.
+- Record the source of every photograph in `sources.md`: the file path, and for an embedded image the document path with the image's position (for example `image12`, table 6, the caption text beside it) so it can be found again.
+- Use between eight and sixteen photographs across the report; one or two per region and per theme is enough. Spread them across regions and across both facility types, and include at least one from a national-level MDA where the documents provide it.
 
 ## Charts
 
