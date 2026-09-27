@@ -14,17 +14,19 @@ import argparse
 import csv
 import re
 import sys
+import textwrap
 from collections import Counter
 from datetime import date, datetime
 from pathlib import Path
 
 from openpyxl import Workbook, load_workbook
 from openpyxl.cell import WriteOnlyCell
-from openpyxl.styles import Font, PatternFill
+from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fill_borrowed_costs import (
+    GENERIC as GENERIC_BORROW_NAMES,
     add_donor,
     common_life,
     groups_for,
@@ -106,7 +108,8 @@ SERVICE = re.compile(
     r"(?:transport(?:ation)?|delivery|freight|shipping)\s+(?:costs?|charges?|fees?)|labou?r\s+(?:costs?|charges?))"
 )
 CONSUMABLE = re.compile(
-    r"\b(pack of|packs?\b|pkts?|single[- ]use|surgic\w* packs?|graph paper|filter paper|cover slips?|slides?,? pack|microscope slides?|"
+    r"\b(glassware|(?:volumetric|conical|erlenmeyer|round[- ]bottom|flat[- ]bottom) flasks?|beakers?|pipettes?|burettes?|"
+    r"pack of|packs?\b|pkts?|single[- ]use|surgic\w* packs?|graph paper|filter paper|cover slips?|slides?,? pack|microscope slides?|"
     r"gloves|syringes?(?!\s*pumps?)|cotton wool|bandages?|reagents?|test strips?|toner|cartridges?|stationery|"
     r"chalk(?!\s*boards?)|exercise books?|text ?books?|papers?(?!\s*(?:shredders?|cutters?|trimmers?))|"
     r"tubings?|visking|labels?|droppers?|petri dish(?:es)?|bulbs?|fl[ou]{1,2}rescent tubes?|test tubes?|test tube (?:racks?|holders?)|corks?|bungs?|rubber bungs?|"
@@ -418,6 +421,30 @@ def majority_status(text: str) -> str:
     return ""
 
 
+def denies_asset(text: str, item: str, description: str = "") -> bool:
+    """A whole-row absence, excluding a partial group or another named item."""
+    text = status_words(text)
+    if not NOT_EXISTING.search(text):
+        return False
+    positive = FUNCTIONAL.search(NEGATED_CLAUSE.sub(" ", text))
+    subset = re.search(r"(?i)\b(some|others?|except|the rest|remaining|a few|partly|partially)\b", text)
+    if MIXED.search(text) and (positive or subset):
+        return False
+    subject = re.search(
+        r"(?i)\b((?:[a-z]+\s+){0,3}[a-z]+)\s+(?:was|were|is|are|has|have)\s+"
+        r"(?:not|never)\s+(?:been\s+)?(?:delivered|supplied|received)\b", text,
+    )
+    if subject:
+        words = {word for word in norm_name(subject.group(1)).split()
+                 if len(word) > 3 and word not in {
+                     "item", "items", "asset", "assets", "equipment", "this", "that",
+                     "they", "these", "those", "were", "which",
+                 }}
+        if words and not words & set(norm_name(f"{item} {description}").split()):
+            return False
+    return True
+
+
 def clean_description(text: str) -> str:
     """The item description as field wording: trimmed, one space, no stray
     punctuation, a capital first letter; nothing when the cell held only a count, a
@@ -457,7 +484,7 @@ def plausible(values: list, name: str) -> list:
     if centre is None or centre <= 0:
         return values
     kept = [value for value in values if centre / PRICE_BAND <= value <= centre * PRICE_BAND]
-    return kept or values
+    return kept
 
 
 def month_index(value: date) -> int:
@@ -546,6 +573,7 @@ GENERIC_NAMES = {
     "structure", "structures", "block", "blocks", "equipments", "tools", "materials", "furniture and fittings", "ict",
     "ict equipment", "electrical", "electricals", "machinery", "machine", "items", "item", "set", "sets", "kit", "kits",
 }
+GENERIC_NAMES.update(GENERIC_BORROW_NAMES)
 
 
 def display_item(name: str) -> str:
@@ -788,7 +816,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
         # remark decides where it states one; a count majority decides a split group;
         # an asset the team recorded without a condition is taken as functional.
         inferred = condition(remarks_source)[0] if remarks_source else ""
-        if NOT_EXISTING.search(status_text) or NOT_EXISTING.search(remarks_source):
+        if denies_asset(status_text, bare, description) or denies_asset(remarks_source, bare, description):
             status_label = "Faulty"
         elif inferred:
             status_label = inferred
@@ -840,7 +868,6 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     class_depreciates = False
     if classified:
         major, minor1, minor2, class_life, class_depreciates = classified
-        stats["class"] += 1
     if major == "BUILDINGS AND STRUCTURES" and (NON_DEPR.search(remarks_source) or NON_DEPR.search(status_text)):
         # Section 5.5: a building still under construction is work in progress.
         non_depr = True
@@ -866,6 +893,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
         # ATTRIBUTE5 on the MF workbook.
         life = None
         life_source = False
+        major = minor1 = minor2 = ""
     elif life is None:
         # Annex 1 gives every class a life (land 600 months, though it does not
         # depreciate); an asset Annex 1 does not class takes the guidelines' general
@@ -873,6 +901,8 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
         life = class_life or FALLBACK_LIFE
         if class_life is None:
             stats["life_default"] += 1
+    if minor2:
+        stats["class"] += 1
     # Section 5.5: straight line where a life applies.
     depreciates = bool(life) and not is_land and not non_depr and not non_asset
     if classified and not class_depreciates and not life_source:
@@ -896,7 +926,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     lg_key = lg.key if lg else ""
     specific = (bool(classified) or usable_name(asset_name)) and asset_name not in GENERIC_NAMES and not GENERIC_HEAD.match(bare) \
         and not total_line and not repair and not service
-    if borrow and cost is not None:
+    if borrow and cost is not None and not non_depr:
         # A recorded cost twenty times above or below the median for the name (or,
         # where the name has fewer than three prices, fifty times off its class median)
         # is a block total typed on one unit, a divided line total, or a slip: the unit
@@ -915,7 +945,8 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     # purchase), else the first month of the year or financial year the row states.
     # Work in progress is not yet available for use (5.14): no date is derived or
     # borrowed for it, and no completed asset's price is borrowed for it.
-    placed = placed_source
+    construction = non_depr and major == "BUILDINGS AND STRUCTURES"
+    placed = None if construction else placed_source
     if borrow and placed is None and not non_depr:
         if purchase_value:
             placed = purchase_value
@@ -940,9 +971,10 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
             if found:
                 method, groups = found
                 values = plausible([value for _, _, bucket in groups for value in bucket], asset_name)
-                cost = shillings(median(values))
-                cost_fill = FILLS[method]
-                stats[f"cost_{method}"] += 1
+                if values:
+                    cost = shillings(median(values))
+                    cost_fill = FILLS[method]
+                    stats[f"cost_{method}"] += 1
         if life is None and status_label != "Faulty":
             found = choose(lives, asset_name, lg_key, years, minor_key)
             if found:
@@ -953,17 +985,13 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
                 stats[f"life_{method}"] += 1
                 depreciates = not is_land and not natural and not non_depr
     if borrow:
-        if cost is None and not non_asset and not non_depr and minor_key:
+        if cost is None and specific and not costs.get(asset_name) and not non_asset and not non_depr and minor_key:
             # Step 4: no priced asset of the same name anywhere, so the Annex 1 class
             # supplies the price, same government first, then other governments.
             found = choose(CLASS_COSTS, minor_key, lg_key, years, "")
             if found:
                 method, groups = found
                 values = [value for _, _, bucket in groups for value in bucket]
-                centre = CLASS_MEDIAN.get(minor_key)
-                if centre:
-                    kept = [value for value in values if centre / PRICE_BAND <= value <= centre * PRICE_BAND]
-                    values = kept or values
                 cost = shillings(median(values))
                 cost_fill = FILLS[method]
                 stats[f"cost_class_{method}"] += 1
@@ -978,6 +1006,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
             # An immaterial unit cost is carried at nil and is not capitalized.
             cost = 0
             cost_fill = None
+            depreciates = False
             stats["cost_small"] += 1
         if placed is None and not non_depr:
             # The month the other assets of the same facility were placed in service,
@@ -999,22 +1028,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     # blank or negative itself (a remark about part of a group is not the row's fate).
     # A remark that the line was not delivered, was stolen or is lost denies the row
     # unless it splits the group ("18 were stolen, 10 in use").
-    remark_denies = bool(NOT_EXISTING.search(remarks_source)) and not MIXED.search(remarks_source)
-    if remark_denies:
-        # "The server computer was not delivered" on a desktop row speaks of another
-        # item: a denial whose subject shares no word with the item name is not this
-        # row's fate.
-        subject = re.search(r"(?i)\b((?:[a-z]+\s+){0,3}[a-z]+)\s+(?:was|were|is|are|has|have)\s+(?:not|never)\s+(?:been\s+)?(?:delivered|supplied|received)\b", remarks_source)
-        if subject:
-            words = {word for word in norm_name(subject.group(1)).split() if len(word) > 3 and word not in {"item", "items", "asset", "assets", "equipment", "this", "that", "they", "these", "those", "were", "which"}}
-            if words and not words & set(norm_name(f"{bare} {description}").split()):
-                remark_denies = False
-    if status_label == "Functional":
-        exists = not NOT_EXISTING.search(status_text) and not remark_denies
-    elif status_text:
-        exists = not NOT_EXISTING.search(status_text) and not remark_denies
-    else:
-        exists = not remark_denies
+    exists = not denies_asset(status_text, bare, description) and not denies_asset(remarks_source, bare, description)
     service_potential = bool(classified) or specific or (life_source and life and life >= 12)
     capitalized = bool(cost) and exists and not loose and not consumable and not natural and not total_line and not repair and not service \
         and not non_depr and service_potential
@@ -1059,7 +1073,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
                 remaining = max(0.0, float(cost) - float(salvage) - float(reserve))
                 ytd = shillings(min(current, remaining))
                 stats["ytd"] += 1
-    if borrow and reserve is None and (cost is not None or not depreciates or not exists):
+    if borrow and reserve is None:
         # Nothing to charge: no depreciation, no cost, or an asset that does not exist.
         reserve = 0
         stats["reserve_nil"] += 1
@@ -1110,7 +1124,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     # Words typed into an amount column ("133 functional 43 non-functional" under Ytd
     # Deprn) are no amount; they are kept as remarks under the column's name.
     worded_amounts = []
-    for column in ("Acc Dep Cost", "Net Book Value", "Ytd Deprn"):
+    for column in ("Recoverable cost", "Cost", "Acc Dep Cost", "Net Book Value", "Ytd Deprn"):
         raw = plain(source.get(column))
         if raw and as_number(raw) is None:
             worded_amounts.append(f"{column}: {raw}")
@@ -1167,7 +1181,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
         "ASSET_EXP_ACCT_FUND": FUND_SEGMENT,
         "ASSET_EXP_ACCT_ACCOUNT": expense_account,
         "ASSET_CLR_ACCT_ACCOUNT": clearing_account,
-        "DATE_PLACED_IN_SERVICE": (placed, date_fill) if borrow and placed else placed_source,
+        "DATE_PLACED_IN_SERVICE": None if construction else ((placed, date_fill) if borrow and placed else placed_source),
         "DEPRECIATE_FLAG": "YES" if depreciates else "NO",
         "DEPRN_METHOD_CODE": "STL" if depreciates else None,
         "LIFE_IN_MONTHS": life_cell,
@@ -1193,7 +1207,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
         ATTRIBUTE[5]: life_cell if borrow else source_life,
         ATTRIBUTE[6]: tag,
         ATTRIBUTE[7]: purchase_cell,
-        ATTRIBUTE[8]: ((placed, date_fill) if placed else None) if borrow else placed_source,
+        ATTRIBUTE[8]: None if construction else (((placed, date_fill) if placed else None) if borrow else placed_source),
         ATTRIBUTE[9]: recoverable_value,
         ATTRIBUTE[10]: ((cost, cost_fill) if cost is not None else None) if borrow else cost_source,
         ATTRIBUTE[11]: reserve if borrow else reserve_source,
@@ -1349,6 +1363,35 @@ def index_fallbacks(rows_iter, registers: Registers) -> None:
     CLASS_MEDIAN.update({minor: median(values) for minor, values in class_prices.items() if len(values) >= 3})
 
 
+def finalize_cost_donors(costs: dict) -> None:
+    """Remove wrongly priced donors before government/year priority is applied.
+
+    Otherwise an outlier that is the only local price prevents the search from
+    continuing to valid prices in other votes. Empty buckets must also disappear.
+    """
+    for index, by_class in ((costs, False), (CLASS_COSTS, True)):
+        for name, governments in list(index.items()):
+            for government, minors in list(governments.items()):
+                for minor, yearly in list(minors.items()):
+                    centre = CLASS_MEDIAN.get(name) if by_class else PRICE_MEDIAN.get(name)
+                    band = CLASS_BAND if by_class else PRICE_BAND
+                    if centre is None and not by_class:
+                        centre, band = CLASS_MEDIAN.get(minor), CLASS_BAND
+                    if centre:
+                        for years, values in list(yearly.items()):
+                            valid = [value for value in values if centre / band <= value <= centre * band]
+                            if valid:
+                                yearly[years] = valid
+                            else:
+                                del yearly[years]
+                    if not yearly:
+                        del minors[minor]
+                if not minors:
+                    del governments[government]
+            if not governments:
+                del index[name]
+
+
 # ------------------------------------------------------------------- writing
 
 def write_book(path: Path, header: list[str], rows, readme_lines) -> int:
@@ -1359,11 +1402,13 @@ def write_book(path: Path, header: list[str], rows, readme_lines) -> int:
               "ASSET_CATEGORY_MINOR2": 30, "ASSET_CATEGORY_MINOR3": 30, "TAG_NUMBER": 24, ATTRIBUTE[1]: 34, ATTRIBUTE[4]: 44, ATTRIBUTE[6]: 24, ATTRIBUTE[15]: 70}
     for position, name in enumerate(header, 1):
         sheet.column_dimensions[get_column_letter(position)].width = widths.get(name, 18 if name.startswith("ATTRIBUTE") else 16)
+    sheet.row_dimensions[1].height = 75
     header_cells = []
     for value in header:
         cell = WriteOnlyCell(sheet, value=value)
         cell.font = Font(bold=True, color="FFFFFF")
         cell.fill = PatternFill("solid", fgColor="1F4E79")
+        cell.alignment = Alignment(wrap_text=True, vertical="center")
         header_cells.append(cell)
     sheet.append(header_cells)
     count = 0
@@ -1385,8 +1430,16 @@ def write_book(path: Path, header: list[str], rows, readme_lines) -> int:
             print(f"{path.name} {count:,}", flush=True)
     sheet.auto_filter.ref = f"A1:{get_column_letter(len(header))}{count + 1}"
     notes = workbook.create_sheet("Read Me")
-    for line in readme_lines(count):
-        notes.append([line])
+    notes.column_dimensions["A"].width = 140
+    for number, line in enumerate(readme_lines(count), 1):
+        cell = WriteOnlyCell(notes, value=line)
+        cell.alignment = Alignment(wrap_text=True, vertical="top")
+        if number == 1:
+            cell.font = Font(bold=True, size=14, color="1F4E79")
+        # Set dimensions before appending because write-only rows stream directly.
+        wrapped_lines = max(1, len(textwrap.wrap(str(line), width=130)))
+        notes.row_dimensions[number].height = max(24, 15 * wrapped_lines + 8)
+        notes.append([cell])
     path.parent.mkdir(parents=True, exist_ok=True)
     workbook.save(path)
     print(f"wrote {count:,} rows to {path}", flush=True)
@@ -1454,11 +1507,11 @@ def readme(stats: Counter, borrowed: bool, filled: Counter, headers: list[str]):
             + (" or borrowed on this workbook." if borrowed else ". Rows without a cost stay blank; the REF workbook fills them after borrowing.")
             + f" A building the source says is still under construction is work in progress: ASSET_TYPE CIP at the cost the source states ({stats['cip']:,} rows), not depreciated (5.5, 5.14), "
             "with no placed-in-service date or price borrowed for it. A service or subscription (internet connectivity for a period, engraving, testing and commissioning, installation as a line of its own) "
-            "is not a controlled resource with service potential beyond a year (3.2.1.2): it carries no class, no cost borrowing and no ASSET_TYPE, and Remarks say so.",
+            "is not a controlled resource with service potential beyond a year (3.2.1.2): it carries no class, no cost borrowing and no ASSET_TYPE.",
             "The guidelines set no capitalization threshold (3.2.2.1): every non-current asset is capitalized whatever its value, and similar low-value units acquired in one transaction (desks, laboratory stools, surgical instruments, computers in a laboratory) are a group asset (3.3.5) whose subsidiary records are the unit rows of this register, each marked CAPITALIZED. "
             "Small office equipment and loose tools (3.3.3: kettles, spoons, forks, calculators, staplers, pen-holders, punches, paper trays, pin and staple holders, typewriters, and items of the same nature: clocks and stop watches, scissors, spatulas, rulers, measuring and MUAC tapes, buckets, bins, mops, hand tools, "
             "keyboards, mice, cables, chargers, surge protectors, penguin suckers) are not capitalized whatever their value; their expense account is 221012 and they carry no class, life or depreciation (a life the source typed stays in ATTRIBUTE5 on the MF workbook). "
-            "Single-use packs, graph paper and other consumables are not capitalized. Natural resources are not capitalized (3.2.1.4). A unit price far below the price of the same item elsewhere (a line total divided, or a slip) is not a low-value asset: the REF workbook borrows the unit price for it.",
+            "Single-use packs, graph paper, laboratory glassware and other consumables are not capitalized. Natural resources are not capitalized (3.2.1.4). A unit price far below the price of the same item elsewhere (a line total divided, or a slip) is not a low-value asset: the REF workbook borrows the unit price for it.",
             "ASSET_CATEGORY_MAJOR, MINOR1 and MINOR2 are the Annex 1 classes read from the asset name. ASSET_CATEGORY_MINOR3 is the item name, the item-master level below Annex 1 "
             "(Annex 1 footnote 5), written as the sample row writes it (Laptop for HP Laptop silver). Generic names (equipment, item, set, machine), totals, counts and consumable packs "
             "carry no class; no class is taken from the facility type. A row with a generic name is not capitalized either: its service potential beyond one year cannot be read from the source.",
@@ -1476,7 +1529,7 @@ def readme(stats: Counter, borrowed: bool, filled: Counter, headers: list[str]):
             "BOOK_TYPE_CODE is the local government in upper case without District, Local Government or DLG wording, hyphens as spaces, MC or CITY kept, and BK appended (HOIMA BK, MADI OKOLLO BK, KIIRA MC BK). "
             "LOCATION_SEGMENT1 is the same government in vote form as Location(3)2.xlsx spells it, so the row loads in IFMS (MADI\\-OKOLLO DLG, BUSIA MC, HOIMA CC; the master's BULISA DLG, LUWERO DLG, KASANDA DLG, NTUNGUMO DLG, NAKAPIRIPIRI DLG and KIRA MC are kept where they differ from the gazetted spelling in BOOK_TYPE_CODE). "
             "LOCATION_SEGMENT2 is the department in upper case in one spelling (counts and facility or category words typed in the department cell are not departments); where the source left the department empty it is the department of the vote "
-            f"that a facility of that kind belongs to (HEALTH for a health centre, EDUCATION for a seed school, HOSPITAL SERVICES for a hospital, UNSPECIFIED for a ministry; {stats['department_kind']:,} rows), while ATTRIBUTE2(Department) keeps the source value. "
+            f"that a facility of that kind belongs to (HEALTH for a health centre, EDUCATION for a seed school, HOSPITAL SERVICES for a hospital, UNSPECIFIED for a ministry; {stats['department_kind']:,} rows), and ATTRIBUTE2(Department) carries that same department. "
             "LOCATION_SEGMENT3 is the facility, ending in Seed Secondary School or Health Centre III; a hospital, blood bank, ministry site or local government office keeps its own name. LOCATION_SEGMENT4 is UNSPECIFIED, the fourth segment of every location combination in Location(3)2.xlsx and of the sample row.",
             "Central government: ministries, agencies and referral hospitals keep their UgIFT assets on their own votes and stay on the register. Their BOOK_TYPE_CODE is the vote code Location(3)2.xlsx spells plus BK (MOFPED BK, MOH BK, MOES BK, MOLG BK, MOLHUD BK, MGLSD BK, MAAIF BK, MOWE BK, MOWT BK, NEMA BK, PPDA BK, OAG BK, OPM BK, KCCA BK, UBTS BK for the regional blood banks, ARUA RRH BK and the other referral hospitals), "
             "LOCATION_SEGMENT1 that same code, LOCATION_SEGMENT2 the department the source states (else UNSPECIFIED, or HOSPITAL SERVICES for a hospital) and LOCATION_SEGMENT3 the site the source names (Finance Building, Embassy House, a district inspectorate, a blood bank) or UNSPECIFIED. "
@@ -1491,7 +1544,7 @@ def readme(stats: Counter, borrowed: bool, filled: Counter, headers: list[str]):
             "Date Of Purchase, Date Placed In Service, Recoverable cost, Cost, Acc Dep Cost, Net Book Value, Ytd Deprn, Equipment status, Remarks. "
             + ("On this REF workbook ATTRIBUTE5(Life in Months), ATTRIBUTE8(Date Placed In Service), ATTRIBUTE10(Cost), ATTRIBUTE11(Acc Dep Cost), ATTRIBUTE12(Net Book Value) and ATTRIBUTE13(Ytd Deprn) "
                "show the finished value, the same as LIFE_IN_MONTHS, DATE_PLACED_IN_SERVICE, FIXED_ASSETS_COST, DEPRN_RESERVE and YTD_DEPRN, with the same cell colour (white where the source stated it); "
-               "ATTRIBUTE12 is the source net book value where stated, otherwise cost less DEPRN_RESERVE, not below SALVAGE_VALUE. Only where no date could be finished does ATTRIBUTE8 keep the source's wording."
+               "ATTRIBUTE12 is the source net book value where stated, otherwise cost less DEPRN_RESERVE, not below SALVAGE_VALUE. ATTRIBUTE8 holds a date only and remains empty for work in progress."
                if borrowed else
                "On this MF workbook every ATTRIBUTE column carries the source value as sanitized; nothing is borrowed or calculated here."),
             "ATTRIBUTE15(Remarks) holds only what the field recorded: the source Remarks, the status wording moved out of Equipment status ('Source status'), words typed into an amount column under that column's name, wording in the tag cell ('Engraving'), "
@@ -1569,6 +1622,7 @@ def main() -> None:
     costs, lives, dates = index_sources(source_rows(), registers)
     print("indexing class prices and placed-in-service months", flush=True)
     index_fallbacks(source_rows(), registers)
+    finalize_cost_donors(costs)
     if args.only != "ref":
         print("writing MF", flush=True)
         stats: Counter = Counter()
