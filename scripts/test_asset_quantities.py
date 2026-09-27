@@ -163,7 +163,7 @@ class PhysicalAssetQuantityTests(unittest.TestCase):
         self.assertEqual(len(explode([asset(item="BP machine", asset_number="120", tag="BP/1")])), 1)
 
     def test_negative_and_fractional_counts_are_not_partial_integers(self):
-        for value in ("-120 units", "-2 functional and -3 damaged", "1.5 functional and 2.5 damaged", "Quantity: -120", "Quantity: 1.5"):
+        for value in ("-120 units", "-2 functional and -3 damaged", "1.5 functional and 2.5 damaged", "Quantity: -120", "Quantity: 1.5", "⁹", "m²"):
             self.assertEqual(len(explode([asset(item="BP machine", description=value, status=value)])), 1, value)
 
     def test_sheet_capacity_guard_and_conflict_audit(self):

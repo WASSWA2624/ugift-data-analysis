@@ -166,7 +166,7 @@ def squash(value: object) -> str:
 
 def as_count(token: str) -> int | None:
     token = clean(token).casefold().replace(",", "")
-    if token.isdigit():
+    if token.isdecimal():
         return int(token)
     total = current = 0
     for word in re.split(r"[ -]+", token):
