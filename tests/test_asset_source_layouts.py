@@ -7,8 +7,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from asset_source_layouts import NSHWERE_SOURCE, repair_nshwere_furniture
-from merge_shared_asset_registers import Asset, explode, read_workbook
+from asset_source_layouts import (
+    NSHWERE_CONSOLIDATED_SOURCE, NSHWERE_SOURCE, NYAMARWA_SOURCE,
+    repair_nshwere_furniture, repair_nyamarwa_air_conditioner,
+)
+from merge_shared_asset_registers import explode, read_workbook, union_facility_submissions
 
 
 class NshwereFurnitureTests(unittest.TestCase):
@@ -57,6 +60,69 @@ class NshwereFurnitureTests(unittest.TestCase):
         self.assertTrue(all(a.source_file == NSHWERE_SOURCE for a in recovered))
         recovered[0].extras["source_cells"].append("isolated test edit")
         self.assertNotIn("isolated test edit", recovered[1].extras["source_cells"])
+
+    def test_consolidated_mirror_reconciles_to_one_physical_return(self):
+        from copy import deepcopy
+
+        consolidated = read_workbook(Path(__file__).resolve().parents[1] / "raw-data-grouped" / NSHWERE_CONSOLIDATED_SOURCE)
+        untouched = deepcopy([a for a in consolidated if a.source_location not in {
+            f"Sheet4 row {row}" for row in (496, 497, 498, 499, 501, 502, 504, 505, 506, 507, 508)
+        }])
+        assets = deepcopy(self.original) + consolidated
+        audit = repair_nshwere_furniture(assets)
+        self.assertEqual([a["physical_assets"] for a in audit], [472, 472])
+        recovered = [a for a in assets if a.extras.get("nshwere_furniture_recovered")]
+        self.assertEqual(len(recovered), 64)
+        mirror = [a for a in recovered if a.source_file == NSHWERE_CONSOLIDATED_SOURCE]
+        self.assertEqual(len(mirror), 32)
+        self.assertEqual(sum(a.explicit_qty for a in mirror), 472)
+        laboratory = [a for a in mirror if a.source_location.startswith("Sheet4 row 501 (")]
+        self.assertEqual(len(laboratory), 5)
+        for asset in laboratory:
+            self.assertEqual(asset.tag, "")
+            self.assertEqual(asset.extras["source_layout_original"]["tag"],
+                             "Tables 14,stools 64,stools 64,chairs 2,tables 13")
+            self.assertEqual(asset.extras["source_layout_original"]["source_location"], "Sheet4 row 501")
+            self.assertEqual(asset.extras["source_group_locations"], ["Sheet4 row 501"])
+        self.assertEqual({a.extras["source_group_locations"][0] for a in mirror if a.item == "Water tank"},
+                         {"Sheet4 row 508", "Sheet4 row 509", "Sheet4 row 510"})
+        self.assertEqual(untouched, [a for a in assets if a.source_file == NSHWERE_CONSOLIDATED_SOURCE
+                                    and not a.extras.get("nshwere_furniture_recovered")])
+        self.assertEqual(repair_nshwere_furniture(assets), [])
+        combined, notes = union_facility_submissions(recovered)
+        self.assertTrue(notes)
+        self.assertEqual(len(combined), 32)
+        units = explode(combined)
+        self.assertEqual(len(units), 472)
+        self.assertEqual(Counter(a.item for a in units),
+                         {"Desk": 116, "Chair": 154, "Stool": 150, "Table": 49, "Water tank": 3})
+        self.assertEqual(sum("broken" in a.status.casefold() for a in units), 5)
+
+
+class NyamarwaLayoutTests(unittest.TestCase):
+    def test_air_conditioner_quantity_continuation_keeps_its_asset_name(self):
+        assets = read_workbook(Path(__file__).resolve().parents[1] / "raw-data-grouped" / NYAMARWA_SOURCE)
+        recorder = next(a for a in assets if a.source_location == "Table 12 row 21")
+        original_rows = len(assets)
+        recorder.cost = 120000  # A recorder's amount must not transfer to the adjacent asset.
+        audit = repair_nyamarwa_air_conditioner(assets)
+        self.assertEqual(audit[0]["physical_assets"], 1)
+        self.assertEqual(len(assets), original_rows + 1)
+        recovered = next(a for a in assets if a.extras.get("nyamarwa_air_conditioner_recovered"))
+        self.assertEqual(recovered.item, "Air conditioner")
+        self.assertEqual(recovered.description, "AIR CONDITONER")
+        self.assertEqual(recovered.explicit_qty, 1)
+        self.assertEqual(recovered.source_location, "Table 12 rows 24-25")
+        self.assertEqual(recovered.extras["source_group_locations"], ["Table 12 row 24", "Table 12 row 25"])
+        self.assertEqual(recovered.extras["source_cells"], ["AIR CONDITONER", "1 SET"])
+        self.assertEqual(recovered.facility, recorder.facility)
+        self.assertEqual(recovered.remarks, "")
+        self.assertIsNone(recovered.cost)
+        self.assertEqual(recorder.cost, 120000)
+        self.assertEqual(recorder.description, "")
+        self.assertFalse(any(a.item == "1 SET" for a in assets))
+        self.assertEqual(len(explode([recovered])), 1)
+        self.assertEqual(repair_nyamarwa_air_conditioner(assets), [])
 
 
 if __name__ == "__main__":

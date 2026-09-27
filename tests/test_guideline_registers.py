@@ -38,6 +38,41 @@ class GuidelineRegisterTests(unittest.TestCase):
         self.assertEqual(row["DEPRECIATE_FLAG"], "NO")
         self.assertIsNone(row["ASSET_TYPE"])
 
+    def test_recorded_zero_cost_is_not_an_unpriced_blank(self):
+        source = {**self.source, "Equipment/Item": "VLS", "Cost": 0}
+        row = self.row(source)
+        self.assertEqual(row["FIXED_ASSETS_COST"], 0)
+        self.assertEqual(row[register.ATTRIBUTE[10]], 0)
+        self.assertEqual(row["DEPRECIATE_FLAG"], "NO")
+        self.assertIsNone(row["ASSET_TYPE"])
+        self.assertEqual(row["DEPRN_RESERVE"], 0)
+        self.assertEqual(row["YTD_DEPRN"], 0)
+        for amount in (0, 12345):
+            with self.subTest(recorded_amount=amount):
+                row = self.row({**source, "Acc Dep Cost": amount, "Ytd Deprn": amount, "Net Book Value": amount})
+                self.assertEqual(row["DEPRN_RESERVE"], amount)
+                self.assertEqual(row["YTD_DEPRN"], amount)
+                self.assertEqual(row[register.ATTRIBUTE[12]], amount)
+
+    def test_explicit_software_uses_annex_software_account(self):
+        for item in (
+            "Software Licences for the computers: Basic office suite, antivirus/antimalware, utilities",
+            "Computer Software",
+        ):
+            with self.subTest(item=item):
+                row = self.row({**self.source, "Equipment/Item": item})
+                self.assertEqual(row["ASSET_CATEGORY_MINOR2"], "COMPUTER SOFTWARE")
+                self.assertEqual(row["ASSET_EXP_ACCT_ACCOUNT"], "231423")
+                self.assertEqual(row["LIFE_IN_MONTHS"], 60)
+        hardware = self.row({**self.source, "Equipment/Item": "Desktop computer with bundled software"})
+        self.assertEqual(hardware["ASSET_CATEGORY_MINOR2"], "LIGHT ICT HARDWARE")
+        for item in ("Annual software licence", "Computer software subscription"):
+            with self.subTest(item=item):
+                row = self.row({**self.source, "Equipment/Item": item})
+                self.assertIsNone(row["ASSET_TYPE"])
+                self.assertIsNone(row["ASSET_CATEGORY_MINOR2"])
+                self.assertEqual(row["LIFE_IN_MONTHS"], 0)
+
     def test_generic_land_never_borrows_a_class_price(self):
         register.add_donor(register.CLASS_COSTS, {}, "land", "hoima", (2026,), "", 1000000, "Hoima")
         row = self.row({**self.source, "Equipment/Item": "Land", "Cost": None})

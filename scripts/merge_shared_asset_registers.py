@@ -31,7 +31,7 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from asset_source_layouts import repair_nshwere_furniture
+from asset_source_layouts import repair_nshwere_furniture, repair_nyamarwa_air_conditioner
 from ugift_places import (
     LocalGovernment,
     _edit_distance,
@@ -2344,6 +2344,37 @@ def exact_key(asset: Asset) -> tuple[str, ...]:
     )
 
 
+def exclude_reviewed_zero_rows(parsed: dict[str, list[Asset]]) -> list[dict[str, object]]:
+    """Honor six reviewed zero inventories, retaining the source contradictions."""
+    reviewed = {
+        "team-14/Sironko/Buyobo-HC-III/Asset-Verification-Toolkit.docx": {
+            "Table 6 row 202", "Table 6 row 229", "Table 6 row 233",
+        },
+        "team-14/Bududa/Nakatsi-Seed-Secondary-School/Asset-Verification-Toolkit.docx": {
+            "Table 11 row 23", "Table 11 row 26", "Table 11 row 28",
+        },
+    }
+    audit: list[dict[str, object]] = []
+    for source, locations in reviewed.items():
+        assets = parsed.get(source, [])
+        remove = set()
+        for asset in assets:
+            if asset.source_location not in locations or not re.search(r"\(\s*0+\s*\)\s*$", asset.item):
+                continue
+            reason = "The original source explicitly records zero and states 'Recorded as none held'; no physical asset is recorded."
+            if "Nakatsi-Seed" in source:
+                reason = (
+                    "Source count conflict: the item explicitly records zero while the generic condition says "
+                    "available and serialised. Original cells and related returns provide no tag, serial, "
+                    "unit identity or positive quantity. Retained zero; the separate Human ear model (1) stays."
+                )
+            audit.append({"source_file": source, "source_location": asset.source_location,
+                          "item": asset.item, "quantity": 0, "status": "zero_count_omitted", "reason": reason})
+            remove.add(id(asset))
+        assets[:] = [asset for asset in assets if id(asset) not in remove]
+    return audit
+
+
 def propagate_count_fragment_repairs(
     parsed: dict[str, list[Asset]], corrections: list[tuple[Asset, str, str, str]],
 ) -> list[dict[str, object]]:
@@ -2444,6 +2475,27 @@ def recover_standalone_count_rows(parsed: dict[str, list[Asset]]) -> list[dict[s
                 if len(filled) != 1 or filled[0][0] != mapping.get("item"):
                     continue
                 item = filled[0][1]
+                if (source == "team-05/Lira City/Anyomorem-HC-III/Anyomorem HC III_ASSET VERIFICATION AND RECORDING TOOL KIT 222.docx"
+                        and location == "Table 6 row 2" and norm(item) == "gas 01"):
+                    # The original page break splits "Stove," (Table 5 row 17)
+                    # from "Gas 01"; the retained stove already records one unit.
+                    continue
+                previous = [asset for asset in anchors
+                            if (row_match := re.search(r" row (\d+)$", asset.source_location))
+                            and int(row_match.group(1)) < index - offset]
+                previous.sort(key=lambda asset: int(asset.source_location.rsplit(" row ", 1)[1]), reverse=True)
+                if re.fullmatch(r"(?i)\s*\d+\s*(?:sets?|units?|pieces?|pcs|items?)\s*", item):
+                    continue  # A count/unit label does not independently name an asset.
+                receipt_words = {"received", "recieved", "receieved", "receuvef", "eeceived"}
+                words = set(re.findall(r"[a-z]+", item.casefold()))
+                if words & receipt_words:
+                    named_words = words - receipt_words - {"was", "were", "they", "are", "all"} - set(WORD_COUNTS)
+                    parent_words = set(re.findall(r"[a-z]+", previous[0].item.casefold())) if previous else set()
+                    if not named_words or named_words <= parent_words:
+                        continue  # Receipt evidence belongs to the named parent row.
+                if (source == "team-20/Buhweju/Kiyanja-HC-III/KIYANJA HC 3.docx"
+                        and location == "Table 11 row 25" and norm(item) == "1 administ"):
+                    continue  # One administrative building is part of the recorded eight.
                 department_label = DEPARTMENT_WORD.fullmatch(item) and not re.search(
                     r"(?i)\b(?:blocks?|buildings?|houses?|halls?|library|kitchen)\b", item
                 )
@@ -2461,11 +2513,18 @@ def recover_standalone_count_rows(parsed: dict[str, list[Asset]]) -> list[dict[s
                 if MODEL_FAMILY.search(item):
                     continue
                 raw = take_asset(values, mapping, source, location)
+                component_set = bool(re.search(
+                    r"(?i)\bset\s+of\s+\d+\s*$|\b(?:kit|set)\b.*\(\s*\d+\s+pieces?\s*\)\s*$", item
+                ))
+                if not match and not component_set and quantity_specification(item):
+                    continue
                 count = as_count(match.group(1)) if match else None
-                if count is None:
+                if component_set:
+                    count = 1
+                elif count is None:
                     stated = stated_count(raw)
                     count = sum(quantity for quantity, _ in stated[1]) if stated else None
-                if count is None:
+                if count is None or count <= 0:
                     continue
                 entry = {"source_file": source, "source_location": location, "item": raw.item, "quantity": count}
                 if len(places) != 1:
@@ -2477,14 +2536,17 @@ def recover_standalone_count_rows(parsed: dict[str, list[Asset]]) -> list[dict[s
                 raw.extras.update({key: anchor.extras[key] for key in ("lg_key", "facility_key", "central") if key in anchor.extras})
                 raw.extras["recorded_group_total"] = count
                 raw.extras["quantity_layout_evidence"] = "A separate original table row contains this asset name and its explicit quantity."
+                if component_set:
+                    raw.extras["proven_unit_row"] = True
+                    raw.extras["quantity_layout_evidence"] = (
+                        f"The independently named source asset '{item}' is one kit/set; its number describes "
+                        "the contents, not multiple kits or sets. Original wording is retained in the description."
+                    )
+                    raw.description = item
                 raw.extras["source_group_locations"] = [location]
                 raw.extras["source_layout_recovered"] = True
                 # Preserve all original amounts/dates on the previous row and
                 # remove only text which the parser appended from this exact row.
-                previous = [asset for asset in anchors
-                            if (row_match := re.search(r" row (\d+)$", asset.source_location))
-                            and int(row_match.group(1)) < index - offset]
-                previous.sort(key=lambda asset: int(asset.source_location.rsplit(" row ", 1)[1]), reverse=True)
                 for prior in previous:
                     if raw.item in prior.description:
                         original_index = int(prior.source_location.rsplit(" row ", 1)[1]) + offset - 1
@@ -2495,6 +2557,8 @@ def recover_standalone_count_rows(parsed: dict[str, list[Asset]]) -> list[dict[s
                             prior.extras.setdefault("separated_source_rows", []).append(location)
                             corrections.append((prior, old_description, prior.description, raw.item))
                         break
+                if component_set:
+                    raw.item = clean(re.sub(r"(?i)\s+of\s+\d+\s*$|\s*\(\s*\d+\s+pieces?\s*\)\s*$", "", item))
                 recovered.append(raw)
                 locations[location] = raw
                 audit.append({**entry, "status": "recovered", "reason": raw.extras["quantity_layout_evidence"]})
@@ -2920,14 +2984,20 @@ def copy_fact(target: Asset, field_name: str, stated: list[tuple[str, object, st
 def fill_from_folded_lines(winners: list[Asset], losers: list[Asset]) -> None:
     """The kept line takes a fact the folded statement of the same line recorded.
     A money figure is taken only from a statement that counted the same units."""
+    # Counts describe the original statements, before any missing fact is filled.
+    # A large repeated-item bucket must not reparse every loser's count for each
+    # monetary field of every winner.
+    loser_groups: dict[int, list[Asset]] = defaultdict(list)
+    for source in losers:
+        loser_groups[represented_count(source)].append(source)
+    winner_counts = {id(target): represented_count(target) for target in winners}
     for target in winners:
         for field_name in FILL_FIELDS:
             if not blank_fact(getattr(target, field_name)):
                 continue
             pool = losers
             if field_name in MONEY_FIELDS:
-                count = represented_count(target)
-                pool = [asset for asset in losers if represented_count(asset) == count]
+                pool = loser_groups.get(winner_counts[id(target)], [])
             copy_fact(target, field_name, stated_values(pool, field_name))
 
 
@@ -3751,32 +3821,39 @@ def main() -> None:
     files = candidate_files()
     parsed, source_audit = parse_sources(files, args.parsed_cache)
     write_audit(OUTPUT.with_suffix(".source-audit.csv"), source_audit)
-    layout_audit = recover_standalone_count_rows(parsed)
-    layout_summaries = []
+    print(f"Raw sources ready: {sum(len(rows) for rows in parsed.values()):,} rows in {len(parsed):,} returns", flush=True)
+    zero_audit = exclude_reviewed_zero_rows(parsed)
+    layout_audit = zero_audit + recover_standalone_count_rows(parsed)
+    layout_summaries = [f"Reviewed zero quantity: {row['item']}, {row['source_file']} ({row['source_location']}). {row['reason']}"
+                        for row in zero_audit]
     for source_assets in parsed.values():
-        for summary in repair_nshwere_furniture(source_assets):
+        for summary in [*repair_nshwere_furniture(source_assets), *repair_nyamarwa_air_conditioner(source_assets)]:
             layout_summaries.append(
-                f"Reviewed mixed-asset source: {summary['source_file']} ({summary['source_location']}): "
+                f"Reviewed source layout: {summary['source_file']} ({summary['source_location']}): "
                 f"{summary['source_records']} parsed records restored as {summary['named_groups']} named groups "
                 f"and {summary['physical_assets']} physical assets. {summary['reason']}"
             )
             layout_audit.append({
                 "source_file": summary["source_file"], "source_location": summary["source_location"],
-                "item": "Room-labelled school furniture and tanks", "quantity": summary["physical_assets"],
-                "status": "mixed_assets_recovered",
+                "item": ", ".join(summary["counts_by_item"]), "quantity": summary["physical_assets"],
+                "status": "mixed_assets_recovered" if summary["named_groups"] > 1 else "source_layout_repaired",
                 "reason": summary["reason"] + "; counts: " + json.dumps(summary["counts_by_item"]),
             })
     write_audit(OUTPUT.with_suffix(".source-layout-audit.csv"), layout_audit)
+    print(f"Source layout review complete: {len(layout_audit):,} audit entries", flush=True)
     # Source layout proof must be settled before counts enter duplicate signatures.
     for source_assets in parsed.values():
         mark_unit_records(source_assets)
+    print("Source unit-record proofs complete; comparing duplicate returns", flush=True)
     duplicate_notes = drop_near_duplicates(parsed)
     for note in duplicate_notes:
         print("near duplicate:", note, flush=True)
+    print(f"Duplicate-return review complete: {len(parsed):,} returns retained", flush=True)
     collected: list[Asset] = [asset for assets in parsed.values() for asset in assets]
     used: list[str] = [f"{relative} ({len(assets):,} source rows)" for relative, assets in parsed.items()]
     mark_unit_records(collected)
     collected, overlap_notes = union_facility_submissions(collected)
+    print(f"Return reconciliation complete: {len(collected):,} source rows retained", flush=True)
     collected, unnamed_notes = settle_unnamed_lines(collected)
     overlap_notes = list(overlap_notes) + unnamed_notes + [f"Near-duplicate workbook left out: {note}" for note in duplicate_notes]
     overlap_notes.extend(layout_summaries)
@@ -3826,6 +3903,7 @@ def main() -> None:
         )
     audit_path = OUTPUT.with_suffix(".quantity-audit.csv")
     exploded = explode(collected, audit_path=audit_path)
+    print(f"Quantity expansion complete: {len(exploded):,} physical asset rows", flush=True)
     quantity_audit = list(QUANTITY_AUDIT)
     for row in quantity_audit:
         evidence = json.loads(row["quantity_evidence"])

@@ -102,7 +102,9 @@ LOOSE = re.compile(
 # potential beyond a year (section 3.2.1.2): internet connectivity for a period,
 # engraving, testing and commissioning, installation as a line of its own.
 SERVICE = re.compile(
-    r"(?i)^\s*(?:(?:internet|wifi|wi-fi|data|network)\s*(?:connection|connectivity|subscription|bundle|services?)\b|"
+    r"(?i)^\s*(?:(?:computer\s+)?software\b[^;]*\bsubscriptions?\b|"
+    r"(?:annual|monthly|yearly)\s+(?:computer\s+)?software\b|"
+    r"(?:internet|wifi|wi-fi|data|network)\s*(?:connection|connectivity|subscription|bundle|services?)\b|"
     r"engrav(?:ing|ement)s?\b|testing and commissioning|installation(?:\s+(?:of|services?|works?))?\s*$|training\b|"
     r"(?:annual|monthly|yearly)\s+(?:licen[cs]e|subscription|fee)|warranty\b|maintenance\s*(?:services?|contract)?\s*$|"
     r"(?:transport(?:ation)?|delivery|freight|shipping)\s+(?:costs?|charges?|fees?)|labou?r\s+(?:costs?|charges?))"
@@ -669,6 +671,11 @@ class Registers:
 MACHINERY = "MACHINERY AND EQUIPMENT"
 OTHER = "OTHER MACHINERY AND EQUIPMENT"
 EXTRA_CLASSES = (
+    # The registered asset is explicitly software, even when its name states
+    # that the licences are for computers. Hardware bundled with software keeps
+    # its hardware class because this rule requires a software-led item name.
+    (re.compile(r"(?i)^\s*(?:computer\s+)?software\b"),
+     ("OTHER FIXED ASSETS", "INTELLECTUAL PROPERTY PRODUCTS", "COMPUTER SOFTWARE", 60, True)),
     # Spellings the source uses that the shared classifier misses; the Annex 1 row
     # then supplies life and method.
     (re.compile(r"(?i)\b(sterili[sz](?:ation|ing|er)?\s*drums?|dressing\s*drums?|instrument\s*drums?|b\.?\s*p\.?\s*cuffs?|blood\s*pressure\s*cuffs?|delivery\s*(?:sets?|kits?)|"
@@ -909,8 +916,10 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
         depreciates = False
 
     cost_source = as_number(source.get("Cost"))
-    # A nil cost is no measured price (3.2.1.3 condition 4): it is filled like a blank.
-    cost = cost_source if cost_source else None
+    # Numeric zero is a recorded immaterial cost, distinct from an absent price.
+    # Preserve it; only missing prices or demonstrated positive-price outliers
+    # can be replaced by a comparable amount.
+    cost = cost_source
     cost_fill = None
     cost_outlier = False
     life_fill = None
@@ -926,7 +935,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     lg_key = lg.key if lg else ""
     specific = (bool(classified) or usable_name(asset_name)) and asset_name not in GENERIC_NAMES and not GENERIC_HEAD.match(bare) \
         and not total_line and not repair and not service
-    if borrow and cost is not None and not non_depr:
+    if borrow and cost is not None and cost > 0 and not non_depr:
         # A recorded cost twenty times above or below the median for the name (or,
         # where the name has fewer than three prices, fifty times off its class median)
         # is a block total typed on one unit, a divided line total, or a slip: the unit
@@ -1002,7 +1011,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
             stats["cost_nil"] += 1
         elif cost is None:
             stats["cost_unpriced"] += 1
-        if cost is not None and 0 < cost < MIN_COST:
+        if cost is not None and 0 <= cost < MIN_COST:
             # An immaterial unit cost is carried at nil and is not capitalized.
             cost = 0
             cost_fill = None

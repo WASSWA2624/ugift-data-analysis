@@ -214,6 +214,20 @@ class PhysicalAssetQuantityTests(unittest.TestCase):
                 self.assertEqual([row["status"] for row in audit], ["error", "no_asset_rows"])
                 self.assertIn("damaged file", audit[0]["error"])
 
+    def test_folded_money_uses_matching_source_counts_once_per_record(self):
+        winners = [asset(item="BP machine", explicit_qty=120), asset(item="BP machine", explicit_qty=2)]
+        losers = [asset(item="BP machine", explicit_qty=120, cost=600, nbv=300),
+                  asset(item="BP machine", explicit_qty=2, cost=30, nbv=10),
+                  asset(item="BP machine", explicit_qty=3, cost=900, nbv=700)]
+        with patch.object(registers, "represented_count", wraps=registers.represented_count) as count:
+            registers.fill_from_folded_lines(winners, losers)
+            self.assertEqual(count.call_count, len(winners) + len(losers))
+        self.assertEqual([(row.cost, row.nbv) for row in winners], [(600, 300), (30, 10)])
+        conflicting = asset(item="BP machine", explicit_qty=120)
+        registers.fill_from_folded_lines([conflicting], [losers[0], asset(item="BP machine", explicit_qty=120, cost=700, nbv=300)])
+        self.assertIsNone(conflicting.cost)
+        self.assertEqual(conflicting.nbv, 300)
+
     def test_existing_examples(self):
         check_examples()
 
