@@ -40,6 +40,7 @@ from ugift_places import (
     lg_from_text,
     lg_of_known_facility,
     resolve_lg,
+    resolve_mda,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -70,6 +71,13 @@ HEADERS = [
     "Source file",
     "Source location",
 ]
+
+# The SK column each Asset field is written to (for the Read Me fill counts).
+HEADER_OF_FIELD = {
+    "life": "Life in Months", "purchase": "Date Of Purchase", "service": "Date Placed In Service",
+    "recoverable": "Recoverable cost", "cost": "Cost", "acc_dep": "Acc Dep Cost", "nbv": "Net Book Value",
+    "ytd": "Ytd Deprn", "department": "Department", "description": "Item Description",
+}
 
 MAX_QUANTITY = 500
 BULK_ITEM = re.compile(
@@ -543,7 +551,7 @@ def classify_header(row: list[object]) -> dict[str, int] | None:
             field_name = "model"
         elif key in {"cost", "initialcost", "costugx"} or key.startswith("cost"):
             field_name = "cost"
-        elif "localgov" in key or key in {"district", "localgovernment", "localgovt"}:
+        elif "localgov" in key or key in {"district", "localgovernment", "localgovt", "mda"}:
             field_name = "lg"
         elif any(token in key for token in ("healthcentre", "healthcenter", "hospital", "school", "location", "facility")):
             field_name = "facility"
@@ -1516,6 +1524,30 @@ def reconciliation_sources() -> dict[str, list[tuple[str, str, str]]]:
 
 RECONCILED: dict[str, list[tuple[str, str, str]]] = {}
 PLACE_NOTES: Counter = Counter()
+SUPERVISOR_DECISIONS = GROUPED / "supervisor-decisions.csv"
+_DISTRICT_CORRECTIONS: dict[str, LocalGovernment] | None = None
+
+
+def district_corrections() -> dict[str, LocalGovernment]:
+    """Facility key -> the vote the supervisor corrected it to, from the 'District
+    corrected' and 'Local government corrected' decisions in supervisor-decisions.csv."""
+    global _DISTRICT_CORRECTIONS
+    if _DISTRICT_CORRECTIONS is None:
+        found: dict[str, LocalGovernment] = {}
+        if SUPERVISOR_DECISIONS.exists():
+            with SUPERVISOR_DECISIONS.open(encoding="utf-8-sig", newline="") as handle:
+                for row in csv.DictReader(handle):
+                    if not re.search(r"(?i)\b(?:district|local government) corrected\b", row.get("decision") or ""):
+                        continue
+                    lg = resolve_lg(row.get("lg") or "")
+                    if lg is None:
+                        continue
+                    for name in re.split(r"\s*;\s*", f"{row.get('ground_names') or ''};{row.get('master_names') or ''}"):
+                        name = name.strip()
+                        if name and facility_kind(name):
+                            found[facility_key(name, facility_kind(name))] = lg
+        _DISTRICT_CORRECTIONS = found
+    return _DISTRICT_CORRECTIONS
 
 
 def only_of_kind(places, kind: str):
@@ -1610,18 +1642,13 @@ def resolve_places(asset: Asset, contexts: list[tuple[str, str]], relative: str)
         # facility the reconciliation places in another local government.
         bucket = known_facilities().get(lg.key, {})
         if facility_key(facility_text, kind) not in bucket:
-            # The district and its municipality share a name (Sheema, Sheema MC): a
-            # facility the sibling vote lists, even misspelt, belongs there before a
-            # namesake in a distant district.
-            owner = None
-            for sibling in known_local_governments().values():
-                if sibling.key != lg.key and norm(sibling.base) == norm(lg.base):
-                    display, _found = canonical_facility(facility_text, sibling, kind)
-                    if facility_key(display, kind) in known_facilities().get(sibling.key, {}):
-                        owner = sibling
-                        break
-            owner = owner or lg_of_known_facility(facility_text, kind) or fuzzy_owner(facility_text, kind)
-            if owner is not None and owner.key != lg.key:
+            # A facility the reconciliation lists, by its exact name, under one other
+            # government is a district carried onto the wrong block of a consolidation
+            # sheet. The vote the source states stands when only a fuzzy name match
+            # points elsewhere (Kaukura is not Kakure), or when the other vote is the
+            # sibling of the same name (Lira City is not folded into Lira).
+            owner = lg_of_known_facility(facility_text, kind)
+            if owner is not None and owner.key != lg.key and norm(owner.base) != norm(lg.base):
                 PLACE_NOTES[f"{relative}: '{facility_text}' moved from {lg.display} to {owner.display}"] += 1
                 lg = owner
     elif facility_text and lg is not None and folder_lg is not None and folder_lg.key != lg.key:
@@ -1631,6 +1658,13 @@ def resolve_places(asset: Asset, contexts: list[tuple[str, str]], relative: str)
         if key in known_facilities().get(folder_lg.key, {}) and key not in known_facilities().get(lg.key, {}):
             PLACE_NOTES[f"{relative}: '{facility_text}' moved from {lg.display} to {folder_lg.display} (filed there)"] += 1
             lg = folder_lg
+    if facility_text and not is_placeholder(facility_text) and lg is not None:
+        # A supervisor's ruling on the facility's government ("Muggi HCIII is in
+        # Mayuge district not kagadi district") decides over the label on the return.
+        corrected = district_corrections().get(facility_key(facility_text, kind or facility_kind(facility_text)))
+        if corrected is not None and corrected.key != lg.key:
+            PLACE_NOTES[f"{relative}: '{facility_text}' moved from {lg.display} to {corrected.display} (supervisor decision)"] += 1
+            lg = corrected
     asset.extras["facility_raw"] = facility_text
     if facility_text and not is_placeholder(facility_text):
         display, found_kind = canonical_facility(facility_text, lg, kind)
@@ -2144,6 +2178,11 @@ def explode(assets: list[Asset]) -> list[Asset]:
                     "source_file", "source_location",
                 )})
                 copy.item = canonical_item(item)
+                for key in ("lg_key", "facility_key"):
+                    if asset.extras.get(key):
+                        copy.extras[key] = asset.extras[key]
+                if asset.extras.get("filled_from"):
+                    copy.extras["filled_from"] = set(asset.extras["filled_from"])
                 if status:
                     copy.status = status
                 if total > 1:
@@ -2247,6 +2286,520 @@ def represented_count(asset: Asset) -> int:
     return sum(count for count, _ in groups)
 
 
+# Stage 1, "Empty or unclear fields": a fact that another statement of the same
+# line, or another row of the same item at the same facility, states fills a cell
+# the kept line left empty. Nothing is guessed: a value is copied only when every
+# statement of it agrees, and a money figure only when it is a unit figure.
+FILL_FIELDS = ("life", "purchase", "service", "recoverable", "cost", "acc_dep", "nbv", "ytd", "department", "description")
+MONEY_FIELDS = {"recoverable", "cost", "acc_dep", "nbv", "ytd"}
+FILL_NOTES: Counter = Counter()
+# The two template workbooks named by the prompt. raw-data-grouped holds byte-identical
+# copies; they supply a fact for a facility already on the register, never a new row.
+TEMPLATE_DONORS = (
+    "_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/registers-by-facility/updated-asset-registers/"
+    "new-templates-to-follow/Health Center Updated Asset Register.xlsx",
+    "_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/registers-by-facility/updated-asset-registers/"
+    "new-templates-to-follow/Seed School Updated Asset Register.xlsx",
+)
+TEMPLATE_FOLDER = ROOT / "new-templates-to-follow"
+
+
+def blank_fact(value: object) -> bool:
+    if value is None or value == "":
+        return True
+    if isinstance(value, (int, float, date, datetime)):
+        return False
+    return is_placeholder(value)
+
+
+def fact_key(value: object) -> str:
+    if isinstance(value, datetime):
+        return value.date().isoformat()
+    if isinstance(value, date):
+        return value.isoformat()
+    if isinstance(value, (int, float)):
+        return repr(float(value))
+    return norm(value)
+
+
+def stated_values(rows: list[Asset], field_name: str) -> list[tuple[str, object, str]]:
+    return [
+        (fact_key(getattr(row, field_name)), getattr(row, field_name), row.source_file)
+        for row in rows if not blank_fact(getattr(row, field_name))
+    ]
+
+
+def copy_fact(target: Asset, field_name: str, stated: list[tuple[str, object, str]]) -> bool:
+    """Write the one value the statements agree on; disagreement leaves the cell empty."""
+    if not stated or len({key for key, _, _ in stated}) != 1:
+        return False
+    setattr(target, field_name, stated[0][1])
+    FILL_NOTES[field_name] += 1
+    for _, _, source in stated:
+        if source != target.source_file:
+            target.extras.setdefault("filled_from", set()).add(source)
+    return True
+
+
+def fill_from_folded_lines(winners: list[Asset], losers: list[Asset]) -> None:
+    """The kept line takes a fact the folded statement of the same line recorded.
+    A money figure is taken only from a statement that counted the same units."""
+    for target in winners:
+        for field_name in FILL_FIELDS:
+            if not blank_fact(getattr(target, field_name)):
+                continue
+            pool = losers
+            if field_name in MONEY_FIELDS:
+                count = represented_count(target)
+                pool = [asset for asset in losers if represented_count(asset) == count]
+            copy_fact(target, field_name, stated_values(pool, field_name))
+
+
+def facility_item_key(asset: Asset) -> tuple[str, str, str]:
+    return (
+        asset.extras.get("lg_key") or norm(asset.lg),
+        asset.extras.get("facility_key") or norm(asset.facility),
+        norm(identity_item(asset.item)),
+    )
+
+
+def fill_within_facility(assets: list[Asset], donors: list[Asset]) -> None:
+    """After the quantity split, the rows of one item at one facility share a fact
+    that some of them left empty, and the template workbooks state a fact for a
+    facility already on the register. A money figure is copied only from a return
+    that priced every unit of that item, or at least two of them, so one line total
+    is never spread over the units of another line."""
+    groups: dict[tuple[str, str, str], list[Asset]] = defaultdict(list)
+    for asset in assets:
+        if asset.facility and asset.item:
+            groups[facility_item_key(asset)].append(asset)
+    extra: dict[tuple[str, str, str], list[Asset]] = defaultdict(list)
+    for asset in donors:
+        if asset.facility and asset.item:
+            extra[facility_item_key(asset)].append(asset)
+    for group_key, rows in groups.items():
+        donors_here = extra.get(group_key, [])
+        for field_name in FILL_FIELDS:
+            blanks = [row for row in rows if blank_fact(getattr(row, field_name))]
+            if not blanks:
+                continue
+            stated = stated_values(rows, field_name) or stated_values(donors_here, field_name)
+            if not stated:
+                continue
+            if field_name in MONEY_FIELDS:
+                totals = Counter(row.source_file for row in rows + donors_here)
+                counted = Counter(source for _, _, source in stated)
+                stated = [entry for entry in stated if counted[entry[2]] >= 2 or counted[entry[2]] == totals[entry[2]]]
+                if not stated:
+                    continue
+            for row in blanks:
+                copy_fact(row, field_name, stated)
+
+
+def template_donors() -> tuple[list[Asset], list[str]]:
+    """Rows of the two template workbooks, used only to fill a fact."""
+    donors: list[Asset] = []
+    notes: list[str] = []
+    for relative in TEMPLATE_DONORS:
+        path = GROUPED / relative
+        original = TEMPLATE_FOLDER / path.name
+        if not path.exists():
+            notes.append(f"Template workbook not found under raw-data-grouped: {relative}.")
+            continue
+        same = original.exists() and file_hash(path) == file_hash(original)
+        try:
+            rows = read_workbook(path)
+        except Exception as error:  # noqa: BLE001 - a template that cannot be read fills nothing
+            notes.append(f"Template workbook not read: {relative} ({error}).")
+            continue
+        donors.extend(rows)
+        notes.append(
+            f"new-templates-to-follow/{path.name}: {len(rows):,} lines read as a source of facts only"
+            + (" (byte-identical copy filed at " + relative + ")." if same else f" (read from {relative}; new-templates-to-follow copy differs).")
+        )
+    return explode(donors), notes
+
+
+NUMERIC_ITEM = re.compile(r"^[\(\[]?-?0*\d{1,4}(?:\.0)?[\)\]]?$")
+
+
+def settle_unnamed_lines(assets: list[Asset]) -> tuple[list[Asset], list[str]]:
+    """A line whose item cell holds only a number or a placeholder names no asset.
+
+    Where the description names the asset, it becomes the item name: a line number
+    or a count sat in the item column. A count there (2 to 500) beside a blank tag is
+    the line's quantity, as a count in Asset Number is. Where nothing else on the
+    line is stated, the line is a count or an unedited template line and is left out.
+    """
+    kept: list[Asset] = []
+    dropped = 0
+    renamed = 0
+    counted = 0
+    for asset in assets:
+        item = clean(asset.item)
+        if item and not NUMERIC_ITEM.match(item) and not is_placeholder(item):
+            kept.append(asset)
+            continue
+        description = clean(asset.description)
+        if description and not NUMERIC_ITEM.match(description) and not is_placeholder(description) and bare_count(description) is None:
+            count = bare_count(item) if item else None
+            if count is not None and blank_tag(asset.tag) and asset.explicit_qty is None:
+                asset.explicit_qty = count
+                counted += 1
+            asset.item = description
+            asset.description = ""
+            renamed += 1
+            kept.append(asset)
+            continue
+        dropped += 1
+    notes = [
+        f"{dropped:,} lines whose item cell held only a number or a placeholder, and whose description named nothing, were left out: "
+        f"a count or an unedited template line names no asset. On {renamed:,} such lines the description named the asset and became the item name; "
+        f"on {counted:,} of them the number in the item cell, beside a blank tag, was read as the line's quantity."
+    ]
+    return kept, notes
+
+
+# ------------------------------------------------------- central government (MDAs)
+#
+# Ministries, agencies and referral hospitals keep their UgIFT assets on their own
+# votes. Their returns sit in folders this register otherwise leaves out, so they are
+# read by name: the ministries' verification returns (one sheet per MDA), the
+# programme's own fixed-asset registers, the two regional blood-bank inventories, and
+# the hospital and inspectorate rows of the consolidated MDA status register.
+PROGRAMME_FOLDER = "_multi-team/programme-documents/All WIP Ugift/All WIP Ugift"
+MDA_STATUS_REGISTER = "_multi-team/programme-documents/MDA status register.xlsx"
+PROGRAMME_REGISTERS = (
+    f"{PROGRAMME_FOLDER}/fwdugiftassets/UGIFT .ASSETS REGISTER-BPED.xls",
+    f"{PROGRAMME_FOLDER}/fwdugiftassets/UGIFT FIXED ASSETS REGISTER FOR FY2022.2023..xls",
+    f"{PROGRAMME_FOLDER}/fwdugiftassets/UGIFT ASSETS REGISTER FOR FY2023.2024 FOR AUDITORS.xls",
+    f"{PROGRAMME_FOLDER}/fwdugiftassets/UGIFT ASSETS REGISTER FOR FY2024.2025..xls",
+    f"{PROGRAMME_FOLDER}/fwdugiftassets/UGIFT CONSOLIDATED FIXED ASSETS REGISTER FOR FY2020.2021. 2021.2022.2023.2024 AND 2024.2025.xls",
+)
+INVENTORIES = (
+    (f"{PROGRAMME_FOLDER}/Ugift  Inventory collection HOIMA blood bank.xlsx", "Hoima Regional Blood Bank"),
+    (f"{PROGRAMME_FOLDER}/Ugift Arua bb chemmart inventory.xlsx", "Arua Regional Blood Bank"),
+)
+MDA_CONSOLIDATION = "_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-WIP-consolidated-MDA-status-register.xlsx"
+CENTRAL_NOTES: Counter = Counter()
+HOSPITAL_WORD = re.compile(r"(?i)\b(?:gh|general hospital|hospital|rrh|nrh|nrmh|cufh|isolation cent(?:re|er)|blood bank)\b")
+
+
+def place_central(asset: Asset, vote: LocalGovernment, facility: str, kind: str) -> None:
+    """Settle a central-government row: the vote, the site as written, and the keys
+    the union, quantity and fill steps group on."""
+    asset.lg = vote.display
+    asset.facility = clean(facility)
+    asset.facility_type = kind
+    asset.extras["lg_key"] = vote.key
+    asset.extras["facility_key"] = facility_key(asset.facility or vote.display, kind) or f"{norm(vote.display)}|"
+    asset.extras["central"] = True
+    CENTRAL_NOTES[vote.display] += 1
+
+
+def hospital_name(text: str) -> str:
+    name = clean(text)
+    name = re.sub(r"(?i)\bGH\b", "General Hospital", name)
+    name = re.sub(r"(?i)\bRRH\b", "Regional Referral Hospital", name)
+    name = re.sub(r"(?i)\bNRH\b", "National Referral Hospital", name)
+    return re.sub(r"\s+", " ", name).strip()
+
+
+def read_mda_status_register(path: Path) -> list[Asset]:
+    """The ministries' verification returns: one toolkit-layout sheet per MDA."""
+    relative = path.relative_to(GROUPED).as_posix()
+    assets: list[Asset] = []
+    for name, rows in sheet_rows(path):
+        sheet_vote = resolve_mda(name)
+        parsed = parse_template_sheet(name, rows, relative, path.name, sheet_vote.display if sheet_vote else "")
+        for asset in parsed:
+            vote = (resolve_lg(asset.lg) if asset.lg else None) or sheet_vote
+            if vote is None:
+                continue
+            if vote.kind == "MDA":
+                place_central(asset, vote, "", "MDA")
+            else:
+                # A vehicle the ministry handed to a district: the district's asset,
+                # kept at its headquarters.
+                place_central(asset, vote, f"{vote.display} District Headquarters", "Local government office")
+            assets.append(asset)
+    return assets
+
+
+def _column_index(keys: list[str], *names: str) -> int | None:
+    for wanted in names:
+        for index, key in enumerate(keys):
+            if key.startswith(wanted):
+                return index
+    return None
+
+
+def read_programme_register(path: Path) -> list[Asset]:
+    """The programme's fixed-asset registers (vehicles, motorcycles, ICT, furniture,
+    software). The vote is the ministry the Location column names, else the section
+    label, else the register's owner (MoFPED). A row located at a local government
+    office is that government's asset and outside this register."""
+    relative = path.relative_to(GROUPED).as_posix()
+    owner = resolve_mda("MOFPED")
+    assets: list[Asset] = []
+    for name, rows in sheet_rows(path):
+        if re.search(r"(?i)total", name):
+            continue
+        header_at = None
+        for index, row in enumerate(rows[:15]):
+            keys = [squash(value) for value in row]
+            if any(key.startswith("description") for key in keys) and any(
+                key.startswith(("makemodel", "identification", "category")) or "serialno" in key for key in keys
+            ):
+                header_at = index
+                break
+        if header_at is None:
+            continue
+        keys = [squash(value) for value in rows[header_at]]
+        col = {
+            "category": _column_index(keys, "category"), "qty": _column_index(keys, "qty"), "description": _column_index(keys, "description"),
+            "make": _column_index(keys, "makemodel"), "reg": _column_index(keys, "regno", "registrationnumber"), "colour": _column_index(keys, "colour"),
+            "engine": _column_index(keys, "engineno", "enginenumber"), "chassis": _column_index(keys, "chassisno", "chassisnumber"),
+            "capacity": _column_index(keys, "engcapacity", "enginecapacity"), "condition": _column_index(keys, "workingcond", "wcond", "functionality"),
+            "year": _column_index(keys, "yearofman"), "acquired": _column_index(keys, "dateofacquisition"),
+            "ident": _column_index(keys, "identificationno", "identification"), "serial": _column_index(keys, "serialno"),
+            "location": _column_index(keys, "location"), "room": _column_index(keys, "room"), "user": _column_index(keys, "username"),
+            "title": _column_index(keys, "usertitle", "title"), "department": _column_index(keys, "userdepartment", "userdept", "component"),
+            "cost": _column_index(keys, "costsinugx", "costinugx", "costinugandacurency", "cost"), "life": _column_index(keys, "expectedusefullife"),
+            "warranty": _column_index(keys, "warrantyexp", "warrenty"), "supplier": _column_index(keys, "supplier"),
+        }
+
+        def get(row: list[object], field: str) -> object:
+            index = col.get(field)
+            return row[index] if index is not None and index < len(row) else None
+
+        section_vote = None
+        previous_date: object = None
+        for number, row in enumerate(rows[header_at + 1:], header_at + 2):
+            filled = [value for value in row if value not in (None, "")]
+            if not filled:
+                continue
+            description = clean(get(row, "description"))
+            category = clean(get(row, "category")) if col["category"] is not None else ""
+            identity = clean(get(row, "ident")) or clean(get(row, "reg"))
+            if len([value for value in filled if isinstance(value, str)]) <= 1 and not identity and not clean(get(row, "serial")):
+                # A section label ("Ministry of Water and Evir..", "VEHICLES PROCURED
+                # UNDER UGIFT", a subtotal): it names the section's vote or nothing.
+                label = next((clean(value) for value in filled if isinstance(value, str)), "")
+                vote = resolve_lg(label) or lg_from_text(label)
+                if vote is not None and vote.kind == "MDA":
+                    section_vote = vote
+                continue
+            if re.match(r"(?i)^(?:assets? register|consolidated|vehicles? (?:procured|under)|furniture|total|summary)", description) and not identity:
+                vote = lg_from_text(description)
+                if vote is not None and vote.kind == "MDA":
+                    section_vote = vote
+                continue
+            if not description and not category:
+                continue
+            if squash(description) in {"description", "makemodel"} or squash(category) == "category":
+                continue
+            acquired = get(row, "acquired")
+            if isinstance(acquired, str) and acquired.strip() in {'"', "''", "〃"}:
+                acquired = previous_date
+            elif acquired not in (None, ""):
+                previous_date = acquired
+            details = [
+                description if category else "",
+                f"Model {clean(get(row, 'make'))}" if clean(get(row, "make")) else "",
+                f"Serial number {clean(get(row, 'serial'))}" if clean(get(row, "serial")) and not is_placeholder(get(row, "serial")) else "",
+                f"Engine No. {clean(get(row, 'engine'))}" if clean(get(row, "engine")) else "",
+                f"Chassis No. {clean(get(row, 'chassis'))}" if clean(get(row, "chassis")) else "",
+                f"Engine capacity {clean(get(row, 'capacity'))}" if clean(get(row, "capacity")) else "",
+                f"Colour {clean(get(row, 'colour'))}" if clean(get(row, "colour")) else "",
+                f"Year of manufacture {clean(get(row, 'year')).replace('.0', '')}" if clean(get(row, "year")) else "",
+            ]
+            remarks = [
+                f"Room {clean(get(row, 'room'))}" if clean(get(row, "room")) else "",
+                f"User {clean(get(row, 'user'))}" if clean(get(row, "user")) else "",
+                f"User title {clean(get(row, 'title'))}" if clean(get(row, "title")) else "",
+                f"Supplier {clean(get(row, 'supplier'))}" if clean(get(row, "supplier")) else "",
+                f"Warranty {clean(get(row, 'warranty'))}" if clean(get(row, "warranty")) else "",
+            ]
+            quantity = clean(get(row, "qty"))
+            count = re.match(r"^0*([1-9]\d{0,2})\b", quantity) if quantity else None
+            condition = clean(get(row, "condition"))
+            asset = Asset(
+                item=category or description,
+                department=clean(get(row, "department")),
+                description="; ".join(part for part in details if part),
+                life=number_or_text(get(row, "life")),
+                tag=identity,
+                purchase=excel_date(acquired),
+                cost=number_or_text(get(row, "cost")),
+                status="" if squash(condition) in {"workingcond", "wcond", "functionality"} else condition,
+                remarks="; ".join(part for part in remarks if part),
+                explicit_qty=int(count.group(1)) if count and 1 < int(count.group(1)) <= MAX_QUANTITY else None,
+                source_file=relative,
+                source_location=f"{name.strip()} row {number}",
+            )
+            if re.fullmatch(r"(?i)\d+(?:\.\d+)?\s*(?:years?|yrs?|months?)", asset.department or ""):
+                # The FY2024/25 motorcycle sheet heads its useful-life column "User Department".
+                asset.life, asset.department = asset.department, ""
+            location = clean(get(row, "location"))
+            vote = (resolve_lg(location) or lg_from_text(location)) if location else None
+            if vote is not None and vote.kind != "MDA":
+                CENTRAL_NOTES["(local government offices, left out)"] += 1
+                continue
+            vote = vote or section_vote or owner
+            site = location if location and resolve_mda(location) is not None and resolve_mda(location).code == "MOFPED" and norm(location) not in {"mofped", "ugift secretariat"} else ""
+            place_central(asset, vote, site, "MDA")
+            assets.append(asset)
+    return assets
+
+
+def read_inventory(path: Path, facility: str) -> list[Asset]:
+    """A blood-bank equipment inventory: equipment, model, serial, engraved number,
+    condition grade, department and room."""
+    relative = path.relative_to(GROUPED).as_posix()
+    vote = resolve_mda(facility)
+    assets: list[Asset] = []
+    for name, rows in sheet_rows(path):
+        header_at = next((index for index, row in enumerate(rows[:10]) if any("serialno" in squash(value) for value in row)), None)
+        if header_at is None or vote is None:
+            continue
+        keys = [squash(value) for value in rows[header_at]]
+        col = {
+            "item": _column_index(keys, "equipmentname"), "model_name": _column_index(keys, "modelname"), "type": _column_index(keys, "type"),
+            "model": _column_index(keys, "modelno"), "serial": _column_index(keys, "serialno"), "tag": _column_index(keys, "engravedno"),
+            "condition": _column_index(keys, "condition"), "department": _column_index(keys, "department"), "room": _column_index(keys, "room"),
+        }
+
+        def get(row: list[object], field: str) -> str:
+            index = col.get(field)
+            return clean(row[index]) if index is not None and index < len(row) else ""
+
+        for number, row in enumerate(rows[header_at + 1:], header_at + 2):
+            item = get(row, "item") or get(row, "model_name")
+            if not item or not any(value not in (None, "") for value in row):
+                continue
+            details = [
+                f"Model {get(row, 'model_name')} {get(row, 'model')}".strip() if col["item"] is not None and (get(row, "model_name") or get(row, "model")) else (f"Model {get(row, 'model')}" if get(row, "model") else ""),
+                f"Serial number {get(row, 'serial')}" if get(row, "serial") and not is_placeholder(get(row, "serial")) else "",
+            ]
+            asset = Asset(
+                item=item,
+                department=get(row, "department"),
+                description="; ".join(part for part in details if part),
+                tag=get(row, "tag"),
+                status=f"Condition {get(row, 'condition')}" if get(row, "condition") else "",
+                remarks=f"Room {get(row, 'room')}" if get(row, "room") else "",
+                source_file=relative,
+                source_location=f"{name.strip()} row {number}",
+            )
+            place_central(asset, vote, facility, "Blood bank")
+            assets.append(asset)
+    return assets
+
+
+def read_mda_consolidation(path: Path) -> list[Asset]:
+    """Hospital and inspectorate rows of the consolidated MDA status register: MoH
+    supplies to referral, national and general hospitals, and the MoES inspection
+    tablets held at district inspectorates. Local-government facility rows (field
+    returns read from the team folders, and programme supply lists) and the
+    ministries' ICT rows (read from their own registers) are left to those sources."""
+    relative = path.relative_to(GROUPED).as_posix()
+    assets: list[Asset] = []
+    for name, rows in sheet_rows(path):
+        header_at = next((index for index, row in enumerate(rows[:10]) if any(squash(value).startswith("equipmentitem") for value in row)), None)
+        if header_at is None:
+            continue
+        header = rows[header_at]
+        mapping = classify_header(header)
+        if not mapping:
+            continue
+        category_at = next((index for index, value in enumerate(header) if squash(value) == "category"), None)
+        group = ""
+        for number, row in enumerate(rows[header_at + 1:], header_at + 2):
+            filled = [value for value in row if value not in (None, "")]
+            if not filled:
+                continue
+            lg_text = clean(cell(row, mapping, "lg"))
+            facility_text = clean(cell(row, mapping, "facility"))
+            if len(filled) == 1 and lg_text:
+                group = lg_text
+                continue
+            if not clean(cell(row, mapping, "item")):
+                continue
+            category = clean(row[category_at]) if category_at is not None and category_at < len(row) else ""
+            remarks = clean(cell(row, mapping, "remarks"))
+            if TOTAL_ITEM.match(lg_text) or TOTAL_ITEM.match(facility_text) or TOTAL_ITEM.match(group):
+                continue
+            if re.search(r"(?i)mda ict register", remarks):
+                # The ministries' own registers are read directly.
+                continue
+            vote = resolve_mda(facility_text) or resolve_mda(lg_text) or resolve_mda(group)
+            kind = ""
+            facility = ""
+            if vote is not None and vote.code != "KCCA" and not re.search(r"hospital", vote.display, re.I) and resolve_mda(facility_text) is None \
+                    and re.search(r"(?i)health\s*cent|\bhc\s*(?:ii|iii|iv|2|3|4)\b|\bh/?c\b|seed|school|\bs\.?s\.?s?\b", facility_text):
+                # A ministry's supply to a local-government facility: that facility's
+                # field return is the record, read from the team folders.
+                CENTRAL_NOTES["(ministry supplies to local-government facilities, left out)"] += 1
+                continue
+            if vote is not None:
+                kind = "Hospital" if re.search(r"hospital", vote.display, re.I) else "MDA"
+                if category.casefold() == "mda" and re.search(r"(?i)inspection", facility_text):
+                    lg = resolve_lg(lg_text) or lg_from_text(lg_text)
+                    if lg is not None and lg.kind != "MDA":
+                        facility = f"{lg.display} District Inspectorate"
+                    elif re.search(r"(?i)^(?:western|eastern|northern|central|karamoja|west nile|busoga|bukedi|bugisu|teso|sebei|acholi|lango|ankole|bunyoro|tooro|rwenzori|kigezi)\b", lg_text):
+                        facility = f"{clean(lg_text).title()} Region Inspectorate"
+                    else:
+                        # Tablets the ministry had not yet allocated to a district.
+                        facility = ""
+                elif facility_text and resolve_mda(facility_text) is None:
+                    # A site of the vote: "Kisenyi Health Centre IV" under KCCA.
+                    facility = hospital_name(facility_text)
+                elif facility_text and kind == "Hospital" and re.search(r"(?i)\b(?:upper|lower|isolation|annex|unit|wing|cent(?:re|er)|blood bank)\b", facility_text):
+                    # A site inside the hospital vote ("Upper Mulago NRH", "Mulago Isolation Center").
+                    facility = hospital_name(facility_text)
+            elif facility_text and HOSPITAL_WORD.search(facility_text) and not re.search(r"(?i)health\s*cent|\bhc\b|\bh/?c\b", facility_text):
+                # A general hospital under its district: the district's asset.
+                lg = resolve_lg(lg_text) or lg_from_text(lg_text) or lg_from_text(group) or resolve_lg(re.sub(r"(?i)\b(?:gh|general hospital|hospital)\b.*$", "", facility_text))
+                if lg is None or lg.kind == "MDA":
+                    CENTRAL_NOTES["(hospital rows with no vote, left out)"] += 1
+                    continue
+                vote, kind, facility = lg, "Hospital", hospital_name(facility_text)
+            elif resolve_mda(lg_text) is None and resolve_mda(group) is None and lg_text and (resolve_lg(lg_text) or lg_from_text(lg_text)) and re.search(r"(?i)health cent(?:re|er)\s*iv|\bhc\s*iv\b", facility_text):
+                continue
+            else:
+                continue
+            asset = take_asset(row, mapping, relative, f"{name.strip()} row {number}")
+            place_central(asset, vote, facility, kind)
+            assets.append(asset)
+    return assets
+
+
+def read_central_sources() -> dict[str, list[Asset]]:
+    """Every central-government source, keyed by its path under raw-data-grouped."""
+    found: dict[str, list[Asset]] = {}
+    readers = [(MDA_STATUS_REGISTER, read_mda_status_register)]
+    readers += [(relative, read_programme_register) for relative in PROGRAMME_REGISTERS]
+    readers += [(relative, (lambda path, facility=facility: read_inventory(path, facility))) for relative, facility in INVENTORIES]
+    readers.append((MDA_CONSOLIDATION, read_mda_consolidation))
+    for relative, reader in readers:
+        path = GROUPED / relative
+        if not path.exists():
+            CENTRAL_NOTES[f"(missing source: {relative})"] += 1
+            continue
+        assets = reader(path)
+        if assets:
+            found[relative] = assets
+    return found
+
+
+def source_files(asset: Asset) -> str:
+    """The row's file, then any file another fact on the row was taken from."""
+    extra = sorted(set(asset.extras.get("filled_from", ())) - {asset.source_file})
+    return asset.source_file if not extra else "; ".join([asset.source_file, *extra])
+
+
 def union_facility_submissions(assets: list[Asset]) -> tuple[list[Asset], list[str]]:
     """Keep every distinct item when a facility was submitted more than once.
 
@@ -2282,12 +2835,15 @@ def union_facility_submissions(assets: list[Asset]) -> tuple[list[Asset], list[s
                     len(by_file[name]),
                 ),
             )
+            losers: list[Asset] = []
             for name, file_rows in by_file.items():
                 if name == winner:
                     continue
                 folded += len(file_rows)
+                losers.extend(file_rows)
                 for asset in file_rows:
                     drop.add(id(asset))
+            fill_from_folded_lines(by_file[winner], losers)
         if folded:
             sample = next(iter(next(iter(sources.values()))))
             notes.append(
@@ -2385,7 +2941,7 @@ def write_workbook(assets: list[Asset], sources: list[str], notes: list[str]) ->
             asset.tag, display(asset.purchase), display(asset.service), asset.recoverable, asset.cost,
             asset.acc_dep, asset.nbv, asset.ytd, asset.status, asset.remarks,
             asset.lg, asset.facility, asset.facility_type, asset.extras.get("unit", ""),
-            asset.source_file, asset.source_location,
+            source_files(asset), asset.source_location,
         ])
     sheet.auto_filter.ref = f"A1:{get_column_letter(len(HEADERS))}{sheet.max_row}"
     sheet.freeze_panes = "A2"
@@ -2449,6 +3005,10 @@ def drop_near_duplicates(parsed: dict[str, list[Asset]]) -> list[str]:
     folder is the one kept. Returns notes."""
     notes: list[str] = []
     signatures = {relative: Counter(row_signature(asset) for asset in assets) for relative, assets in parsed.items()}
+    # A team-level copy of a return may have resolved its rows to another facility
+    # than the copy filed under the facility folder (a template banner left in the
+    # document), so such a copy is compared on its lines alone.
+    lines_only = {relative: Counter(row_signature(asset)[:5] for asset in assets) for relative, assets in parsed.items()}
     # Candidates share at least one distinctive line, so compare only within groups.
     by_line: dict[tuple[str, ...], set[str]] = defaultdict(set)
     for relative, counter in signatures.items():
@@ -2473,6 +3033,18 @@ def drop_near_duplicates(parsed: dict[str, list[Asset]]) -> list[str]:
         return None
 
     dropped: set[str] = set()
+    # The same file name filed under a facility folder and again at team level is
+    # one return saved twice; the copy filed under the facility is the one read.
+    by_stem: dict[str, list[str]] = defaultdict(list)
+    for relative in parsed:
+        by_stem[norm(Path(relative).stem)].append(relative)
+    for copies in by_stem.values():
+        filed = [relative for relative in copies if folder_key(relative)]
+        loose = [relative for relative in copies if not folder_key(relative) and "/_team-documents/" in relative]
+        if filed and loose:
+            for relative in loose:
+                dropped.add(relative)
+                notes.append(f"{relative}: {len(parsed[relative]):,} lines, the same file name is filed under {filed[0]}; that copy is read.")
     for smaller in sorted(parsed, key=rank):
         if smaller in dropped or len(parsed[smaller]) < 20:
             continue
@@ -2482,7 +3054,8 @@ def drop_near_duplicates(parsed: dict[str, list[Asset]]) -> list[str]:
             if folder_key(smaller) and folder_key(larger) and folder_key(smaller) != folder_key(larger):
                 # The same lines filed under two facilities are two returns; both are kept.
                 continue
-            shared = sum(min(count, signatures[larger].get(signature, 0)) for signature, count in signatures[smaller].items())
+            table = signatures if folder_key(smaller) else lines_only
+            shared = sum(min(count, table[larger].get(signature, 0)) for signature, count in table[smaller].items())
             if shared >= 0.98 * len(parsed[smaller]):
                 dropped.add(smaller)
                 notes.append(f"{smaller}: {len(parsed[smaller]):,} lines, {shared:,} already in {larger}; read once.")
@@ -2510,13 +3083,27 @@ def main() -> None:
             continue
         parsed[relative] = assets
         print(f"{len(assets):6,}  {relative}", flush=True)
+    for relative, assets in read_central_sources().items():
+        parsed[relative] = assets
+        print(f"{len(assets):6,}  {relative}  (central government)", flush=True)
     duplicate_notes = drop_near_duplicates(parsed)
     for note in duplicate_notes:
         print("near duplicate:", note, flush=True)
     collected: list[Asset] = [asset for assets in parsed.values() for asset in assets]
     used: list[str] = [f"{relative} ({len(assets):,} source rows)" for relative, assets in parsed.items()]
     collected, overlap_notes = union_facility_submissions(collected)
-    overlap_notes = list(overlap_notes) + [f"Near-duplicate workbook left out: {note}" for note in duplicate_notes]
+    collected, unnamed_notes = settle_unnamed_lines(collected)
+    overlap_notes = list(overlap_notes) + unnamed_notes + [f"Near-duplicate workbook left out: {note}" for note in duplicate_notes]
+    central = sorted(((vote, count) for vote, count in CENTRAL_NOTES.items() if not vote.startswith("(")), key=lambda item: -item[1])
+    overlap_notes.append(
+        "Central government: ministries, agencies and referral hospitals keep their UgIFT assets on their own votes and stay on the register. "
+        "Their rows come from the ministries' verification returns (_multi-team/programme-documents/MDA status register.xlsx, one sheet per MDA), the programme's "
+        "fixed-asset registers (fwdugiftassets/*.xls; a row located at a local government office is that government's asset and is left out: "
+        f"{CENTRAL_NOTES['(local government offices, left out)']:,} lines), the Hoima and Arua regional blood-bank inventories (Uganda Blood Transfusion Services), "
+        "and the hospital and district-inspectorate rows of UGiFT-WIP-consolidated-MDA-status-register.xlsx (MoH supplies to referral, national and general hospitals; "
+        "MoES inspection tablets). The rest of that consolidation (local-government facility rows, programme supply lists, the ministries' ICT rows) is read from the team "
+        f"folders and the ministries' own registers instead. Source lines by vote: " + "; ".join(f"{vote} {count:,}" for vote, count in central) + "."
+    )
     overlap_notes += [f"Left out: {relative}. {reason}" for relative, reason in EXCLUDED_SOURCES.items()]
     overlap_notes += [f"Left out folder: {folder}/. {reason}" for folder, reason in EXCLUDED_FOLDERS.items()]
     if PLACE_NOTES:
@@ -2531,6 +3118,14 @@ def main() -> None:
             "(district offices, sub-counties, primary schools, water schemes) and were left out."
         )
     exploded = explode(collected)
+    donors, donor_notes = template_donors()
+    fill_within_facility(exploded, donors)
+    overlap_notes += donor_notes
+    overlap_notes.append(
+        "Cells filled from another statement of the same fact (same facility, same item, every statement agreeing): "
+        + ", ".join(f"{HEADER_OF_FIELD[name]} {count:,}" for name, count in sorted(FILL_NOTES.items(), key=lambda item: -item[1]))
+        if FILL_NOTES else "No empty cell had another statement of the same fact to fill it."
+    )
     multi = sum(1 for asset in exploded if asset.extras.get("unit"))
     print(f"source rows kept {len(collected):,}; output rows {len(exploded):,}; rows from a quantity split {multi:,}")
     largest = Counter(

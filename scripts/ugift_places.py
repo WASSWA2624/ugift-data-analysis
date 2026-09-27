@@ -104,8 +104,13 @@ def is_placeholder(value: object) -> bool:
 
 @dataclass(frozen=True)
 class LocalGovernment:
+    """A vote that keeps an asset register: a local government, or a central
+    government ministry, agency or hospital (kind MDA, with the vote code the IFMS
+    location master spells it)."""
+
     base: str            # display spelling of the name, e.g. "Madi-Okollo", "Fort Portal"
-    kind: str            # DLG, MC, CITY or TC
+    kind: str            # DLG, MC, CITY, TC or MDA
+    code: str = ""       # MDA only: the vote as Location(3)2.xlsx spells it, e.g. "MOFPED"
 
     @property
     def key(self) -> str:
@@ -113,7 +118,7 @@ class LocalGovernment:
 
     @property
     def display(self) -> str:
-        if self.kind == "DLG":
+        if self.kind in ("DLG", "MDA"):
             return self.base
         if self.kind == "MC":
             return f"{self.base} MC"
@@ -123,6 +128,8 @@ class LocalGovernment:
 
     @property
     def book_type_code(self) -> str:
+        if self.kind == "MDA":
+            return f"{self.code} BK"
         name = re.sub(r"[\\\-]+", " ", self.base).upper()
         name = re.sub(r"[^A-Z0-9 ]", "", name)
         name = re.sub(r"\s+", " ", name).strip()
@@ -131,11 +138,73 @@ class LocalGovernment:
 
     @property
     def location_segment1(self) -> str:
+        if self.kind == "MDA":
+            return self.code
+        spelled = MASTER_SEGMENT1.get(self.key)
+        if spelled:
+            # Written as Location(3)2.xlsx spells the vote, so the row loads in IFMS
+            # (BULISA DLG, LUWERO DLG, KIRA MC), even where the gazetted spelling differs.
+            return spelled
         name = self.base.upper()
         name = re.sub(r"\s*-\s*", r"\\-", name)
         name = re.sub(r"[^A-Z0-9 \\\-]", "", name)
         name = re.sub(r"\s+", " ", name).strip()
         return f"{name} {self.kind}"
+
+
+# Central-government votes that hold UgIFT assets: (vote code as Location(3)2.xlsx
+# spells it, display name, the wordings the sources use, matched whole on the
+# normalised text). Regional and national referral hospitals are their own votes.
+MDA_VOTES: tuple[tuple[str, str, str], ...] = (
+    ("MOFPED", "Ministry of Finance, Planning and Economic Development",
+     r"mofped|mo fped|ministry of finance(?: planning and economic development)?|finance building|embassy house|data cent(?:re|er)|"
+     r"bped|budget policy and evaluation(?: dep t)?(?: ugift)?|treasury operations|ugift secretariat"),
+    ("MOH", "Ministry of Health", r"moh|mo h|moh ugift|ministry of health"),
+    ("MOES", "Ministry of Education and Sports", r"moes|mo es|moe s|moe s ugift|ministry of education(?: and sports)?|district inspection moes"),
+    ("MOLG", "Ministry of Local Government", r"molg|mo lg|molg ugift|ministry of local government"),
+    ("MOLHUD", "Ministry of Lands, Housing and Urban Development", r"molhud|ministry of lands(?: housing and urban development)?"),
+    ("MGLSD", "Ministry of Gender, Labour and Social Development", r"mglsd|moglsd|ministry of gender(?: labour and social development)?"),
+    ("MAAIF", "Ministry of Agriculture, Animal Industry and Fisheries", r"maaif|ministry of agriculture(?: animal industry and fisheries)?"),
+    ("MOWE", "Ministry of Water and Environment", r"mowe|mwe|ministry of water(?: and (?:environment|evir\w*))?"),
+    ("MOWT", "Ministry of Works and Transport", r"mowt|mow t|mo wt|mow t ugift|ministry of works(?: and transport)?"),
+    ("NEMA", "National Environment Management Authority", r"nema|national environment management authority"),
+    ("PPDA", "Public Procurement and Disposal of Public Assets Authority", r"ppda|public procurement and disposal of public assets(?: authority)?"),
+    ("OAG", "Office of the Auditor General", r"oag|office of the audito[rt] general"),
+    ("OPM", "Office of the Prime Minister", r"opm|office of the prime minister|lgmsd|lgmsd ugift"),
+    ("KCCA", "Kampala Capital City Authority", r"kcca|k c c a|k c c a ugift|kampala capital city authority|kampala city council authority"),
+    ("UBTS", "Uganda Blood Transfusion Services", r"ubts|uganda blood transfusion services?|\w+ regional blood bank|\w+ reg blood bank|\w+ rbb"),
+    ("MODV", "Ministry of Defence and Veteran Affairs", r"modva?|ministry of defence(?: and veteran affairs)?|bombo mgh|bombo (?:general )?military (?:general )?hospital"),
+    ("MULAGO NRH", "Mulago National Referral Hospital",
+     r"mulago(?: nrh| national referral hospital| hospital)?|upper mulago(?: nrh)?|mulago isolation cent(?:re|er)|oxygen plant mulago"),
+    ("KAWEMPE RH", "Kawempe National Referral Hospital", r"kawempe (?:nrh|rh|national referral hospital|hospital)"),
+    ("KIRUDDU RH", "Kiruddu National Referral Hospital", r"kiruddu (?:nrh|rh|national referral hospital|hospital)"),
+    ("BUTABIKA NRMH", "Butabika National Referral Mental Hospital", r"butabika(?: nrh| nrmh| national referral(?: mental)? hospital| hospital)?"),
+    ("NAGURU RH", "China-Uganda Friendship Hospital Naguru", r"cufh naguru|naguru(?: rh| hospital)?|china uganda friendship hospital(?: naguru)?"),
+    ("ENTEBBE RH", "Entebbe Regional Referral Hospital", r"entebbe (?:rrh|rh|regional referral hospital|grade b hospital|hospital)"),
+    *[
+        (f"{name.upper()} RRH", f"{name} Regional Referral Hospital", rf"{name.casefold()} (?:rrh|regional referral hospital|reg referral hospital|region referral hospital|hospital)")
+        for name in ("Arua", "Fort Portal", "Gulu", "Hoima", "Jinja", "Kabale", "Kayunga", "Lira", "Masaka", "Mbale", "Mbarara", "Moroto", "Mubende", "Soroti", "Yumbe")
+    ],
+)
+_MDA_PATTERNS = [(re.compile(rf"^(?:{pattern})$"), LocalGovernment(display, "MDA", code)) for code, display, pattern in MDA_VOTES]
+_MDA_TAIL = re.compile(r"\s*\b(?:district local government|mda|health facility|school|ugift)\b\s*$")
+
+
+def resolve_mda(text: object) -> LocalGovernment | None:
+    """The central-government vote a cell names, whole, or None."""
+    raw = clean_text(text)
+    if not raw or is_placeholder(raw):
+        return None
+    folded = norm(raw)
+    folded = re.sub(r"^(?:date\s*)?name\s+of\s+(?:the\s+)?mda\s*", "", folded).strip()
+    for _ in range(2):
+        folded = _MDA_TAIL.sub("", folded).strip()
+    if not folded:
+        return None
+    for pattern, vote in _MDA_PATTERNS:
+        if pattern.match(folded):
+            return vote
+    return None
 
 
 def _title(text: str) -> str:
@@ -215,13 +284,41 @@ def known_local_governments() -> dict[str, LocalGovernment]:
             for (value,) in workbook.active.iter_rows(min_row=2, max_col=1, values_only=True):
                 if not value:
                     continue
-                segment = re.split(r"(?<!\\)-", str(value))[0]
+                segment = re.split(r"(?<!\\)-", str(value))[0].strip()
                 if re.search(r"(?i)\b(dlg|district|mc|municipal|city|cc|council|gov)", segment):
                     add(segment)
+                    split = split_lg(segment)
+                    if split:
+                        base, kind = split
+                        lg = LocalGovernment(spellings.get(ALIASES.get(base, base), _title(base)), kind)
+                        # The master's own short vote form (ABIM DLG, KIRA MC, HOIMA CITY,
+                        # else HOIMA CC) is the one IFMS loads.
+                        rank = 0 if re.search(r"\b(DLG|MC|CITY|TC)$", segment) else 1 if re.search(r"\bCC$", segment) else 2
+                        current = MASTER_SEGMENT1_RANK.get(lg.key)
+                        if current is None or rank < current:
+                            MASTER_SEGMENT1[lg.key] = segment
+                            MASTER_SEGMENT1_RANK[lg.key] = rank
             workbook.close()
         except Exception:
             pass
+    # A vote the master spells one or two letters differently (NTUNGUMO for Ntungamo,
+    # KIRA MC for Kiira MC) still names the same vote: that spelling is the one to load.
+    for key, lg in found.items():
+        if key in MASTER_SEGMENT1 or len(lg.base) < 5:
+            continue
+        candidates = [
+            other for other in MASTER_SEGMENT1
+            if other.endswith(f" {lg.kind.casefold()}") and other[0] == key[0]
+            and _edit_distance(other.rsplit(" ", 1)[0], norm(lg.base)) <= 2
+            and other not in found
+        ]
+        if len(candidates) == 1:
+            MASTER_SEGMENT1[key] = MASTER_SEGMENT1[candidates[0]]
     return found
+
+
+MASTER_SEGMENT1: dict[str, str] = {}
+MASTER_SEGMENT1_RANK: dict[str, int] = {}
 
 
 @lru_cache(maxsize=1)
@@ -234,7 +331,11 @@ def _base_index() -> dict[str, list[LocalGovernment]]:
 
 @lru_cache(maxsize=4096)
 def resolve_lg(text: object, fuzzy: bool = True) -> LocalGovernment | None:
-    """Match free text to a known local government, or None when it names none."""
+    """Match free text to a known local government or central-government vote, or
+    None when it names none."""
+    mda = resolve_mda(text)
+    if mda is not None:
+        return mda
     split = split_lg(text)
     if not split:
         return None
@@ -289,6 +390,15 @@ def lg_from_text(text: object) -> LocalGovernment | None:
     direct = resolve_lg(raw)
     if direct:
         return direct
+    named = re.search(
+        r"(?i)\b(ministry of [a-z]+(?:[ ,]+(?:and\s+)?[a-z]+){0,5}|office of the (?:auditor general|prime minister)|"
+        r"kampala capital city authority|uganda blood transfusion services?|\w+ regional (?:referral hospital|blood bank))\b",
+        raw,
+    )
+    if named:
+        candidate = resolve_mda(re.sub(r"(?i)\s+(?:and|ugift|mda|department.*)$", "", named.group(1)))
+        if candidate:
+            return candidate
     match = re.search(
         r"(?i)([A-Za-z][A-Za-z' \-]{2,40}?)\s+(district\s+local\s+gov(?:ernment|'?t)|district|"
         r"municipal(?:ity)?\s+council|municipality|city\s+council|city|dlg|d\.?c\.?|mc|lg)\b",
@@ -311,6 +421,9 @@ def lg_from_text(text: object) -> LocalGovernment | None:
 def facility_kind(*texts: object) -> str:
     """'School', 'Health centre', or '' when the words do not say."""
     blob = " ".join(clean_text(text) for text in texts)
+    if re.search(r"(?i)\bministry\b|\bauthority\b|office of the (?:auditor|prime)|ugift secretariat", blob):
+        # A ministry, agency or office is a vote of its own, not a school or health centre.
+        return ""
     if re.search(r"(?i)\bhealth\b|\bh\s*[./]?\s*c\s*(?:i{1,3}|1{1,3}|2|3|4)?\b|\bhc\s*(?:i{1,3}|1{1,3}|2|3|4)?\b|hospital|\bclinics?\b|dispensary|blood\s*bank", blob):
         return "Health centre"
     if re.search(r"(?i)school|\bsss\b|\bss\b|\bs\.s\.s\b|\bs\.s\b|\bseed\b|secondary|\bsec\b|\bsch\b", blob):
@@ -568,7 +681,11 @@ def check_examples() -> None:
     assert resolve_lg("2 at staff house") is None
     assert resolve_lg("Functional") is None
     assert resolve_lg("Education") is None
-    assert resolve_lg("Ministry of Water and Environment") is None
+    assert resolve_lg("Ministry of Water and Environment").book_type_code == "MOWE BK"
+    assert resolve_lg("Finance Building District Local Government").code == "MOFPED"
+    assert resolve_lg("Arua RRH").location_segment1 == "ARUA RRH"
+    assert resolve_lg("Hoima Regional Blood Bank").code == "UBTS"
+    assert resolve_lg("Kisenyi Health Centre IV") is None
     assert lg_from_text("NAME OF LG: DOKOLO DISTRICT LOCAL GOVERNMENT").display == "Dokolo"
     assert lg_from_text("BITSYA HCIII, BUHWEJU DC").display == "Buhweju"
     assert facility_display("OGUR SEED SCHOOL") == "Ogur Seed Secondary School"

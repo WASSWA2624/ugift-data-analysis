@@ -32,6 +32,7 @@ def main() -> None:
         counts[cell_text(value)] += 1
     for value in NUMBER.findall(sheet):
         counts[cell_text(value)] += 1
+    counts.pop("BOOK_TYPE_CODE", None)  # the header cell A1 is not a code
     lines = [
         "# BOOK_TYPE_CODE",
         "",
