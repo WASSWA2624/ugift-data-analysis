@@ -389,6 +389,13 @@ ALL_MONTHS: Counter = Counter()
 # The guidelines' general life for equipment (3.2.2 illustration; most Annex 1
 # machinery classes): applied to an asset whose name Annex 1 does not class.
 FALLBACK_LIFE = 60
+# A unit cost under this amount is immaterial and is carried at nil (shown as "-").
+MIN_COST = 10_000
+# Plausibility band of a price against its Annex 1 class median, used where the
+# name has fewer than three stated prices; wider than the name band because a class
+# spans stools and cupboards alike.
+CLASS_BAND = 50.0
+MONEY_FORMAT = '#,##0.##;-#,##0.##;"-"'
 # Every row of the sample header carries fund 01 (the Consolidated Fund).
 FUND_SEGMENT = "01"
 NOT_ENGRAVED = "Not engraved"
@@ -564,7 +571,7 @@ def styled_cell(sheet, header: str, value, fill=None) -> WriteOnlyCell:
         value = int(value)
     cell = WriteOnlyCell(sheet, value=value)
     if header in MONEY and isinstance(value, (int, float)):
-        cell.number_format = "#,##0.##"
+        cell.number_format = MONEY_FORMAT
     elif isinstance(value, (date, datetime)):
         cell.number_format = DATE_FORMAT
     if fill is not None:
@@ -889,13 +896,20 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     lg_key = lg.key if lg else ""
     specific = (bool(classified) or usable_name(asset_name)) and asset_name not in GENERIC_NAMES and not GENERIC_HEAD.match(bare) \
         and not total_line and not repair and not service
-    if borrow and cost is not None and asset_name in PRICE_MEDIAN and not (PRICE_MEDIAN[asset_name] / PRICE_BAND <= cost <= PRICE_MEDIAN[asset_name] * PRICE_BAND):
-        # A recorded cost twenty times above or below the median for the name is a
-        # block total typed on one unit, or a slip: the unit price is borrowed instead
-        # and the recorded figure stays in ATTRIBUTE10 on the MF workbook.
-        cost = None
-        cost_outlier = True
-        stats["cost_outlier"] += 1
+    if borrow and cost is not None:
+        # A recorded cost twenty times above or below the median for the name (or,
+        # where the name has fewer than three prices, fifty times off its class median)
+        # is a block total typed on one unit, a divided line total, or a slip: the unit
+        # price is borrowed instead and the recorded figure stays in ATTRIBUTE10 on the
+        # MF workbook.
+        centre = PRICE_MEDIAN.get(asset_name)
+        band = PRICE_BAND
+        if centre is None and minor_key in CLASS_MEDIAN:
+            centre, band = CLASS_MEDIAN[minor_key], CLASS_BAND
+        if centre and not (centre / band <= cost <= centre * band):
+            cost = None
+            cost_outlier = True
+            stats["cost_outlier"] += 1
     # Stage 3, the date first: the placed-in-service date the source states, else the
     # purchase date on the same row (the asset was available for use from its
     # purchase), else the first month of the year or financial year the row states.
@@ -960,6 +974,11 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
             stats["cost_nil"] += 1
         elif cost is None:
             stats["cost_unpriced"] += 1
+        if cost is not None and 0 < cost < MIN_COST:
+            # An immaterial unit cost is carried at nil and is not capitalized.
+            cost = 0
+            cost_fill = None
+            stats["cost_small"] += 1
         if placed is None and not non_depr:
             # The month the other assets of the same facility were placed in service,
             # else of the same government, else of the whole workbook.
@@ -1481,7 +1500,7 @@ def readme(stats: Counter, borrowed: bool, filled: Counter, headers: list[str]):
             "ATTRIBUTE9(Recoverable cost) is the amount the source states" + ("; where the source states none it is the carrying amount (cost less DEPRN_RESERVE), since no impairment was recorded (recoverable amount as the impairment test, not salvage value)." if borrowed else ".")
             + " Dates are written yyyy-mm-dd; ATTRIBUTE7(Date Of Purchase) keeps a year or financial year the source wrote and is empty where the wording could not be read as a date"
             + ("; ATTRIBUTE8 is the finished placed-in-service date." if borrowed else "; ATTRIBUTE8 is the placed-in-service date the source states, empty where it wrote words."),
-            "Every filled cell was sanitized: trimmed, single spaces, no line breaks, placeholders (N/A, nil, none, -) cleared, one spelling per fact. Amounts are shown with thousands separators (#,##0.##) and were not recalculated while cleaning.",
+            "Every filled cell was sanitized: trimmed, single spaces, no line breaks, placeholders (N/A, nil, none, -) cleared, one spelling per fact. Amounts are shown with thousands separators and a nil amount as '-' (format #,##0.##;-#,##0.##;\"-\"); they were not recalculated while cleaning.",
             "Columns left blank and why:",
         ]
         for header in headers:
@@ -1501,6 +1520,8 @@ def readme(stats: Counter, borrowed: bool, filled: Counter, headers: list[str]):
                 f"and a recorded cost outside that band is treated the same way on this workbook: the unit price is borrowed and coloured, and the recorded figure stays in ATTRIBUTE10(Cost) on the MF workbook ({stats['cost_outlier']:,} rows). "
                 f"Where no asset of the same name carries a price, the Annex 1 class supplies it (same government blue {stats['cost_class_1']:,}; other governments orange {stats['cost_class_2']:,}). "
                 f"A line that is no asset, and works with no cost stated, carry 0 ({stats['cost_nil']:,} rows); {stats['cost_unpriced']:,} assets with neither a priced namesake nor a priced class remain without a cost. "
+                f"A unit cost under UGX 10,000, stated or borrowed, is immaterial and is carried at 0 ({stats['cost_small']:,} rows), which the amount format shows as '-'; such a row is not capitalized and carries no depreciation. "
+                "Where a name has fewer than three stated prices, a recorded cost fifty times above or below the median of its Annex 1 class is treated as wrongly priced in the same way. "
                 "Generic names (equipment, furniture, medical equipment, item, set, machine, buildings, land) borrow nothing. The cell colour is the only marker; Remarks never say a cost or life was borrowed.",
                 "Borrowed useful lives follow the same order and colours: the most common life of assets with the same name, only where life is at least 12 months and the asset is not marked out of use. A life already on the row stays white.",
                 "Straight-line depreciation is calculated to 30 September 2026 on every row that exists and has a cost, nil residual (5.7), a life in months and a placed-in-service month, whether in use or not (an idle asset still consumes its life): "
