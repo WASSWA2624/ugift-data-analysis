@@ -10,11 +10,27 @@ The report refers to physical items and their counts as "assets", including wher
 
 ## Closing sections: recommendations and conclusion
 
-At the user's request, sections 9 Recommendations and 10 Conclusion are placed after section 8 Appendices, with the conclusion last. The earlier section 7.7 is titled Summary of findings. These closing sections synthesise the existing report evidence and introduce no new counts, valuations or claim of completed follow-up.
+The report has unnumbered cover and front matter, including Executive summary. The main chapters are 1 Introduction and background, 2 Approach and methodology, 3 Project context, 4 Findings, 5 Recommendations and 6 Conclusion. Each main chapter begins on a new page. Recommendations and Conclusion close the main narrative, followed by unnumbered Appendices and lettered appendices A to H. This corrects the earlier interpretation that counted front matter as chapters and placed closing chapters after the appendices. Section 4.7 is titled Summary of findings; Priority action plan is a supporting Heading 4 within section 4.5.4. The closing chapters synthesise existing evidence and introduce no new counts, valuations or claim of completed follow-up.
 
-The recommendations draw on sections 7.4 (condition and use), 7.5 (identification, custody, maintenance, storage, installation and user skills), 7.6 (service benefits and operating constraints), and Table 17, Priority actions to protect assets and restore service. Safety and repair recommendations retain the distinction between damaged assets and usable stored assets. Completion and installation recommendations draw on the existing school completion cases and power, room and equipment-readiness findings. Custody recommendations retain the documented Todora/Paraa and Masafu transfers. Training, maintenance and service-readiness recommendations summarise the existing facility and district responsibilities.
+The recommendations draw on sections 4.4 (condition and use), 4.5 (identification, custody, maintenance, storage, installation and user skills), 4.6 (service benefits and operating constraints), and Table 17, Priority actions to protect assets and restore service. Safety and repair recommendations retain the distinction between damaged assets and usable stored assets. Completion and installation recommendations draw on the existing school completion cases and power, room and equipment-readiness findings. Custody recommendations retain the documented Todora/Paraa and Masafu transfers. Training, maintenance and service-readiness recommendations summarise the existing facility and district responsibilities.
 
-Responsibilities and any proposed timing are taken from Table 17. They are proposals for action after report approval, not independently verified contractual deadlines or assertions that the work is funded or complete. The conclusion summarises the benefits and constraints already described in sections 7.4 to 7.7. The technical source locators and field evidence elsewhere in this log remain the basis for these summaries; register filenames and spreadsheet locators do not appear in the publishable closing prose.
+Responsibilities and any proposed timing are taken from Table 17. They are proposals for action after report approval, not independently verified contractual deadlines or assertions that the work is funded or complete. The conclusion summarises the benefits and constraints already described in sections 4.4 to 4.7. The technical source locators and field evidence elsewhere in this log remain the basis for these summaries; register filenames and spreadsheet locators do not appear in the publishable closing prose.
+
+## Chapter and appendix references
+
+Current chapter numbering follows the report hierarchy described above. Cover, contents, lists and Executive summary carry no chapter number. The appendix titles are:
+
+- Appendix A: Full summary count schedule.
+- Appendix B: Asset totals by report category and register class.
+- Appendix C: Condition tables behind the charts.
+- Appendix D: Recorded value and net book value schedules.
+- Appendix E: Use and asset identification schedules.
+- Appendix F: Master-list reconciliation and ground-return identities.
+- Appendix G: Asset information for institutional handover.
+- Appendix H: Evidence supporting the findings.
+
+Historical editorial notes and quoted source locators remain unchanged where they explicitly describe a former structure or a source document. They do not govern the current report's numbering. The contents, appendix references and internal links are regenerated from the current heading order.
+
 
 ## Register scope and counting basis
 
@@ -37,7 +53,7 @@ National level: the union of Facility type MDA, Hospital or Blood bank and rows 
 
 [
   {
-    "section": "3 Executive summary",
+    "section": "Executive summary",
     "filter": "All REF Asset Register data rows 2:225134, plus facility reconciliation and direct field observations identified in revision_narrative.json.",
     "values": {
       "assets": 225133,
@@ -139,7 +155,7 @@ REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE_REVISED.xlsx, Asset Register, rows 2 to
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE_REVISED.xlsx, Asset Register, rows 2 to 225,134; count filters and reviewed transfer evidence in sources.md; reconciliation tables by scope and final outcome.
 
 ### Table 19: Asset rows by report category and region
-REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE_REVISED.xlsx, Asset Register, rows 2 to 225,134; mutually exclusive report category mapping in section 5.6.
+REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE_REVISED.xlsx, Asset Register, rows 2 to 225,134; mutually exclusive report category mapping in section 2.6.
 
 ### Table 20: Asset rows by register class and region
 REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE_REVISED.xlsx, Asset Register, rows 2 to 225,134; ASSET_CATEGORY_MINOR2 grouped by region. Other recorded items retain rows outside the listed classes.
@@ -683,21 +699,21 @@ Source: REF Asset Register, IN_USE_FLAG; SK condition and remarks for non-use re
 
 ## Narrative sources
 
-- 4.1 Introduction: Client draft, paragraphs 10, 13 and 35 to 48
-- 4.2 Background to the verification: Client draft, paragraph 13
-- 4.3 Justification: Client draft, paragraphs 13, 35 to 41 and 43 to 49
-- 4.4 Objectives of the assignment: Client draft, paragraphs 35 to 41
-- 4.5 Scope of work: Client draft, paragraphs 43 to 49 and 161; Government of Uganda Asset Accounting Policies and Guidelines 2023, section 3.3.3, printed page 48, PDF page 60
-- 5.1 Inception and preparation: Client draft, paragraphs 95 to 109, 132 and 136 to 137
-- 5.2 Verification instruments: Client draft, paragraphs 111 to 129 and 134
-- 5.3 Data collection and field itinerary: Client draft, paragraphs 140 to 164; itinerary table 1, rows 2 to 7
-- 5.4 Quality assurance: Client draft, paragraphs 197 to 206
-- 5.5 Consolidation and reporting: Client draft, paragraphs 172 to 195
-- 5.6 Classification and accounting basis: Government of Uganda Asset Accounting Policies and Guidelines 2023, sections 3.2.1, 3.3.3, 5.5 and 5.7 and Annex 1; REF register, Read Me rows 14, 40 to 43
-- 6.1 Programme background and design: Client draft, paragraphs 52 and 54
-- 6.2 Programme components: Client draft, paragraphs 56 to 67 and 77 to 78
-- 6.3 Programme objectives: Client draft, paragraphs 86 to 91
-- 6.4 Programme outputs: Client draft, paragraphs 69 to 75
+- 1.1 Introduction: Client draft, paragraphs 10, 13 and 35 to 48
+- 1.2 Background to the verification: Client draft, paragraph 13
+- 1.3 Justification: Client draft, paragraphs 13, 35 to 41 and 43 to 49
+- 1.4 Objectives of the assignment: Client draft, paragraphs 35 to 41
+- 1.5 Scope of work: Client draft, paragraphs 43 to 49 and 161; Government of Uganda Asset Accounting Policies and Guidelines 2023, section 3.3.3, printed page 48, PDF page 60
+- 2.1 Preparation: Client draft, paragraphs 95 to 109, 132 and 136 to 137
+- 2.2 What teams checked: Client draft, paragraphs 111 to 129 and 134
+- 2.3 Fieldwork and itinerary: Client draft, paragraphs 140 to 164; itinerary table 1, rows 2 to 7
+- 2.4 Quality assurance: Client draft, paragraphs 197 to 206
+- 2.5 Bringing the findings together: Client draft, paragraphs 172 to 195
+- 2.6 How the findings are presented; Appendix B accounting basis: Government of Uganda Asset Accounting Policies and Guidelines 2023, sections 3.2.1, 3.3.3, 5.5 and 5.7 and Annex 1; REF register, Read Me rows 14, 40 to 43
+- 3.1 Programme background and design: Client draft, paragraphs 52 and 54
+- 3.2 Programme components: Client draft, paragraphs 56 to 67 and 77 to 78
+- 3.3 Programme objectives: Client draft, paragraphs 86 to 91
+- 3.4 Delivery position at programme closure: Client draft, paragraphs 69 to 75
 
 ## Field observation evidence
 
@@ -1505,7 +1521,7 @@ Every selected image was visually inspected. Photographs were copied from the li
 - Source: `raw-data-grouped/team-31/Kalangala/Gyagenda-Memorial-Seed-Secondary-School/Gyagenda memorial seed secondary school pictures.docx`
 - Embedded position: word/media/image9.jpeg; body block 35; table not applicable.
 - Source context: Body block 35: 5. Science laboratory tables and stools. Facility and local government from the containing folder.
-- Suggested section: 7.3 Central
+- Suggested section: 4.3 Central
 - Image size: 855 x 549 pixels.
 
 ## P02: Infant radiant warmer at a health centre, Makindye-Ssabagabo Municipal Council (Buganda).
@@ -1513,7 +1529,7 @@ Every selected image was visually inspected. Photographs were copied from the li
 - Source: `raw-data-grouped/team-32/Makindye-Ssabagabo MC/Kibiri-HC-III/KIBIRI HC III report.docx`
 - Embedded position: word/media/image22.jpeg; body block 77; table not applicable.
 - Source context: Body block 77, image22.jpeg, following the Kibiri Health Centre III report; document paragraphs 1, 5 and 6 identify the facility and location.
-- Suggested section: 7.3 Central
+- Suggested section: 4.3 Central
 - Image size: 963 x 1280 pixels.
 
 ## P03: Desktop computers and classroom furniture at a seed secondary school, Busia District (Bukedi).
@@ -1521,7 +1537,7 @@ Every selected image was visually inspected. Photographs were copied from the li
 - Source: `raw-data-grouped/team-13/Busia/Sikuda-Seed-Secondary-School/43_ict-room-desktop-computers_ref0257.jpg`
 - Embedded position: Loose image; body block not applicable; table not applicable.
 - Source context: Loose photograph; source filename identifies ICT room desktop computers; facility and district from source folders.
-- Suggested section: 7.3 Eastern
+- Suggested section: 4.3 Eastern
 - Image size: 1080 x 573 pixels.
 
 ## P04: Delivery bed with a torn mattress cover at a health centre, Busia District (Bukedi).
@@ -1529,7 +1545,7 @@ Every selected image was visually inspected. Photographs were copied from the li
 - Source: `raw-data-grouped/team-13/Busia/Majanji-HC-III/050_delivery-bed-with-torn-cover_ref20260827-0646.jpg`
 - Embedded position: Loose image; body block not applicable; table not applicable.
 - Source context: Loose photograph; source filename identifies delivery bed with torn cover; facility and district from source folders. Caption describes visible condition only.
-- Suggested section: 7.5 Asset management practices and risks
+- Suggested section: 4.5 Asset management practices and risks
 - Image size: 1600 x 1200 pixels.
 
 ## P05: Buildings at a seed secondary school, Nwoya District (Acholi).
@@ -1537,7 +1553,7 @@ Every selected image was visually inspected. Photographs were copied from the li
 - Source: `raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx`
 - Embedded position: word/media/image14.jpeg; body block 107; table not applicable.
 - Source context: Body block 107, image14.jpeg, under LUNGULU SEED SECONDARY SCHOOL NWOYA DISTRICT LOCAL GOVERNMENT (block 55), with field photographs following block 82. The section runs until Todora HC heading at block 117.
-- Suggested section: 7.3 Northern
+- Suggested section: 4.3 Northern
 - Image size: 1040 x 406 pixels.
 
 ## P06: Health centre building, Nwoya District (Acholi).
@@ -1545,7 +1561,7 @@ Every selected image was visually inspected. Photographs were copied from the li
 - Source: `raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx`
 - Embedded position: word/media/image37.jpeg; body block 308; table not applicable.
 - Source context: Body block 308, image37.jpeg, under GOT APWOYO HEALTH CENTRE III | NWOYA DISTRICT LOCAL GOVERNMENT heading at block 269.
-- Suggested section: 7.3 Northern
+- Suggested section: 4.3 Northern
 - Image size: 948 x 567 pixels.
 
 ## P07: Boxed computers and related equipment in a seed school store, Nwoya District (Acholi).
@@ -1553,7 +1569,7 @@ Every selected image was visually inspected. Photographs were copied from the li
 - Source: `raw-data-grouped/team-01/Nwoya/_district-documents/UGIFT_Asset_Verification_Nwoya Report.docx`
 - Embedded position: word/media/image9.jpeg; body block 83; table not applicable.
 - Source context: Body block 83, image9.jpeg, after Field photos block 82 within Lungulu school section. Block 62 states that desktop computers, surge protectors, printer and UPS units are stored in the school store awaiting power connection.
-- Suggested section: 7.5 Asset management practices and risks
+- Suggested section: 4.5 Asset management practices and risks
 - Image size: 853 x 663 pixels.
 
 ## P08: Classroom desks at a seed secondary school, Ntoroko District (Tooro).
@@ -1561,7 +1577,7 @@ Every selected image was visually inspected. Photographs were copied from the li
 - Source: `raw-data-grouped/team-26/Ntoroko/Nombe-Seed-Secondary-School/NTOROKO ASSET NOMBE SEED SECONDARY SCHOOL VERIFICATION AND RECORDING TOOL KIT 222.docx`
 - Embedded position: word/media/image4.jpeg; body block 110; table not applicable.
 - Source context: Body block 110, image4.jpeg, after building inventory table at block 109. Caption at block 111: Main gate, Desks, Classroom. School interview block 54 identifies Nombe school; verification details table at block 29 identifies Western, Tooro, Ntoroko.
-- Suggested section: 7.3 Western
+- Suggested section: 4.3 Western
 - Image size: 607 x 508 pixels.
 
 ## P09: Delivery bed and clinical furniture at a health centre, Kabarole District (Tooro).
@@ -1569,7 +1585,7 @@ Every selected image was visually inspected. Photographs were copied from the li
 - Source: `raw-data-grouped/team-26/Kabarole/Iruhura-HC-III/KABAROLE DISTRICT   IRUHURA HC III ASSET VERIFICATION AND RECORDING TOOL KIT 222 (1).docx`
 - Embedded position: word/media/image10.jpeg; body block 96; table not applicable.
 - Source context: Body block 96, image10.jpeg; photograph group captions at blocks 100 to 101 include Delivery bed. Verification details table at block 29 identifies Western, Tooro, Kabarole; facility heading at block 38 and checklist heading at block 75 identify Iruhura HC III.
-- Suggested section: 7.3 Western
+- Suggested section: 4.3 Western
 - Image size: 577 x 594 pixels.
 
 ## P10: UgIFT identification on a desk at a seed school, Tororo District (Bukedi).
@@ -1577,7 +1593,7 @@ Every selected image was visually inspected. Photographs were copied from the li
 - Source: `raw-data-grouped/team-13/Tororo/Malaba-Seed-School/049_desk-engraving-gou-moh-ugift_ref20260829-0338.jpg`
 - Embedded position: Loose image; body block not applicable; table not applicable.
 - Source context: Loose photograph; source filename identifies desk engraving GOU MOH UGIFT; facility and district from source folders. The visible marking reads GOU/MOH-UGIFT PROJECT, F/Y 2023/2024.
-- Suggested section: 7.5 Asset management practices and risks
+- Suggested section: 4.5 Asset management practices and risks
 - Image size: 922 x 518 pixels.
 
 ## Independent final-image review
@@ -1598,7 +1614,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
 - The draft describes 13 MDAs in paragraph 140 but lists 15 in paragraph 146. The report preserves the complete visited list from paragraph 146 and does not repeat the conflicting 13 count.
 - The draft itinerary has an empty eighth row, which has no activity and was not reproduced.
 - The water and environment outputs sentence in draft paragraph 72 ends with 'in' and provides no geographic qualifier. Only its fully stated numeric outputs were retained.
-- The programme output counts in section 6 describe the draft programme context, not the scope or totals of the September asset register. They must not substitute for register or reconciliation totals.
+- The programme output counts in section 3 describe the draft programme context, not the scope or totals of the September asset register. They must not substitute for register or reconciliation totals.
 - The draft gives a general two day LG itinerary as well as a 10 working day collection period and the full 24 August to 7 September 2026 field window. These have different meanings and are retained with their stated labels.
 - The draft describes six supervisory regions for field management; the report's statistical presentation uses four geographic regions required by the outline.
 - The firm name in the draft includes personal names and is replaced by 'the Consultant'. Individual names, phone numbers and supervisor handles are excluded from all report prose.
@@ -4655,7 +4671,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
 {
   "executive_paragraphs": [
     "The verification found that UgIFT buildings and equipment were supporting local services, while unfinished works, power constraints, damage and delayed installation prevented some assets from serving their intended purpose. Health staff described improved access to maternity and antenatal care. Schools described better teaching facilities and wider access to secondary education. The main follow-up is to put unused assets into service and sustain those already working.",
-    "The verification and reconciliation accounted for 629 master-list entries: 371 health centres and 258 schools. Outcomes included operating names, replacement facilities, relocated assets and sites not constructed. Section 7.1 explains how the institutions were accounted for.",
+    "The verification and reconciliation accounted for 629 master-list entries: 371 health centres and 258 schools. Outcomes included operating names, replacement facilities, relocated assets and sites not constructed. Section 4.1 explains how the institutions were accounted for.",
     "Construction and service readiness need attention together. Got Apwoyo Seed Secondary School in Nwoya had not been commissioned and its computer equipment remained at district headquarters. At Ndhew and Mamba seed schools in Nebbi, unfinished buildings delayed installation. At Atego in the same district, computers were already working in older rooms while construction continued.",
     "Power and repairs were immediate constraints. Lungulu Seed Secondary School in Nwoya held computers in storage pending a suitable power connection. Pamaka Health Centre III in Nebbi could not use oxygen equipment because of power constraints, and Busaale Health Centre III in Kayunga needed roof, door and solar repairs. Among assets recorded as out of use, 2,569 had damage, fault or repair remarks, while 483 were stored and described as good or new.",
     "Asset identification also needs follow-up. Of 225,133 asset entries, 50,211 carried markings, including 21,023 with UgIFT marking. The findings at Lungulu included unengraved assets. Districts should combine marking with decisions on custody and allocation, particularly where equipment has moved between facilities.",
@@ -4663,56 +4679,56 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
   ],
   "background_sections": [
     {
-      "heading": "4.1 Introduction",
+      "heading": "1.1 Introduction",
       "paragraphs": [
         "UgIFT invested in facilities and equipment to bring education and health services closer to communities and strengthen the institutions that support them. This verification examined where those assets were, how they were being used and what was needed to keep them working. The findings focus on facilities, equipment, custody, maintenance and the services available to the public."
       ],
       "source_note": "Client draft, paragraphs 10, 13 and 35 to 48"
     },
     {
-      "heading": "4.2 Background to the verification",
+      "heading": "1.2 Background to the verification",
       "paragraphs": [
         "The programme ended on 31 December 2025. The Ministry of Finance, Planning and Economic Development commissioned the verification to support closure and the continued use of programme assets. The exercise covered national institutions, government seed secondary schools and health facilities upgraded from Health Centre II to Health Centre III."
       ],
       "source_note": "Client draft, paragraph 13"
     },
     {
-      "heading": "4.3 Justification",
+      "heading": "1.3 Justification",
       "paragraphs": [
         "Buildings and equipment need staff, utilities, maintenance and clear responsibility for their care. The verification provided a basis for handover and identified practical actions to bring unused assets into service, repair damaged items and protect assets already in use."
       ],
       "source_note": "Client draft, paragraphs 13, 35 to 41 and 43 to 49"
     },
     {
-      "heading": "4.4 Objectives of the assignment",
+      "heading": "1.4 Objectives of the assignment",
       "paragraphs": [
         "The assignment was to identify and locate programme assets, check their condition and use, assess how institutions cared for them and recommend action where assets were damaged or unserviceable. It also prepared asset information for government reporting and the Integrated Financial Management Information System (IFMIS)."
       ],
       "source_note": "Client draft, paragraphs 35 to 41"
     },
     {
-      "heading": "4.5 Scope of work",
+      "heading": "1.5 Scope of work",
       "paragraphs": [
         "Teams reviewed institutional asset information, inspected facilities and equipment, and spoke with the officers responsible for their use and care. The scope included buildings, furniture, medical equipment, computers, vehicles and motorcycles. Small office items such as staplers and punches and disposable school laboratory items were excluded from physical inspection."
       ],
       "source_note": "Client draft, paragraphs 43 to 49 and 161; Government of Uganda Asset Accounting Policies and Guidelines 2023, section 3.3.3, printed page 48, PDF page 60"
     },
     {
-      "heading": "5.1 Preparation",
+      "heading": "2.1 Preparation",
       "paragraphs": [
         "The entry meeting on 29 May 2026 agreed the scope, approach and work plan. A pilot at Buloba Health Centre III and Sumbwe Seed School in Wakiso District tested the tools and visit arrangements. Teams planned visits with Accounting Officers, district health and education officers, finance staff, head teachers and health centre in-charges."
       ],
       "source_note": "Client draft, paragraphs 95 to 109, 132 and 136 to 137"
     },
     {
-      "heading": "5.2 What teams checked",
+      "heading": "2.2 What teams checked",
       "paragraphs": [
         "At each institution, the team checked the assets present, their location, identification markings, condition and use. Interviews covered repairs, servicing, breakdowns, storage, operating constraints and service benefits. Photographs documented selected assets and facilities."
       ],
       "source_note": "Client draft, paragraphs 111 to 129 and 134"
     },
     {
-      "heading": "5.3 Fieldwork and itinerary",
+      "heading": "2.3 Fieldwork and itinerary",
       "paragraphs": [
         "National verification began on 24 July 2026 and included 10 working days of collection and repeat visits. Training for the local government teams took place on 20 and 21 August 2026. Local government fieldwork ran from 24 August to 7 September 2026, with 10 working days of collection.",
         "The Consultant deployed 33 teams of 2 to 3 people, comprising 80 research assistants, supported by 6 supervisors and a team leader, across 176 local governments. Teams first met the local government leadership, reviewed the planned investments, visited the facilities and discussed the findings with the responsible officers."
@@ -4747,21 +4763,21 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
       ]
     },
     {
-      "heading": "5.4 Quality assurance",
+      "heading": "2.4 Quality assurance",
       "paragraphs": [
         "Regional supervisors checked daily field activity and reviewed the completed tools. The central technical team carried out spot checks and helped resolve operational questions. Teams compared institutional asset information with the items and explanations provided during visits, while supervisors referred matters requiring clarification to the team leader and field coordinator."
       ],
       "source_note": "Client draft, paragraphs 197 to 206"
     },
     {
-      "heading": "5.5 Bringing the findings together",
+      "heading": "2.5 Bringing the findings together",
       "paragraphs": [
-        "The analysis brought the facility findings, interviews and asset counts together by region, institution and type of asset. Master-list names were reconciled with operating names, replacements and receiving facilities. Section 7.1 explains those outcomes, while the later sections examine use, condition, marking, maintenance and service delivery."
+        "The analysis brought the facility findings, interviews and asset counts together by region, institution and type of asset. Master-list names were reconciled with operating names, replacements and receiving facilities. Section 4.1 explains those outcomes, while the later sections examine use, condition, marking, maintenance and service delivery."
       ],
       "source_note": "Client draft, paragraphs 172 to 195"
     },
     {
-      "heading": "5.6 Reading the asset measures",
+      "heading": "2.6 How the findings are presented",
       "paragraphs": [
         "Asset counts refer to individual entries, while facility counts refer to the master-list institutions and their reconciled identities. Health centre and school assets are grouped separately, with national institutional holdings shown under the responsible ministry or agency. Buildings, furniture, transport, computers and medical equipment are grouped by their purpose and location; maternity equipment is identified by its description or ward.",
         "The condition tables use the classifications assigned to the assets. The discussion of equipment in use, in storage or awaiting repair draws on the stated use and condition of each item and the facility findings. The detailed classification and accounting basis is given in the appendices."
@@ -4769,14 +4785,14 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
       "source_note": "Government of Uganda Asset Accounting Policies and Guidelines 2023, sections 3.2.1, 3.3.3, 5.5 and 5.7 and Annex 1; REF register, Read Me rows 14, 40 to 43"
     },
     {
-      "heading": "6.1 Programme background and design",
+      "heading": "3.1 Programme background and design",
       "paragraphs": [
         "UgIFT began in financial year 2017/18 to improve the financing and delivery of local government services. Initial support focused on education and health. Later support extended the programme to water and environment and agricultural micro scale irrigation, including services for refugees and host communities."
       ],
       "source_note": "Client draft, paragraphs 52 and 54"
     },
     {
-      "heading": "6.2 Programme components",
+      "heading": "3.2 Programme components",
       "paragraphs": [
         "The programme supported a fairer system of grants to local governments, new secondary schools in underserved subcounties, and construction and upgrading of health facilities. School investments included classrooms, laboratories, administration blocks, sanitation and teachers' housing. Health investments included buildings, equipment, staff accommodation and sanitation.",
         "It also supported local government planning, budgeting, procurement and infrastructure management, together with performance assessment and technical support. National institutions received equipment and transport to support programme administration and oversight."
@@ -4784,16 +4800,16 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
       "source_note": "Client draft, paragraphs 56 to 67 and 77 to 78"
     },
     {
-      "heading": "6.3 Programme objectives",
+      "heading": "3.3 Programme objectives",
       "paragraphs": [
         "The programme sought more adequate and predictable support, fairer allocation of resources and stronger oversight of local services. Its intended result was wider access to education, health, water and irrigation services and better management of the facilities and resources used to provide them."
       ],
       "source_note": "Client draft, paragraphs 86 to 91"
     },
     {
-      "heading": "6.4 Delivery position at programme closure",
+      "heading": "3.4 Delivery position at programme closure",
       "paragraphs": [
-        "At closure, 196 of the 259 seed schools in the programme output account were complete and 189 were operational. The health output account showed 354 of 373 upgrades and new constructions complete. These closure figures show the delivery position before the later verification visits; section 7 describes the facilities and assets found during those visits."
+        "At closure, 196 of the 259 seed schools in the programme output account were complete and 189 were operational. The health output account showed 354 of 373 upgrades and new constructions complete. These closure figures show the delivery position before the later verification visits; section 4 describes the facilities and assets found during those visits."
       ],
       "source_ids": [
         "D01"
@@ -5209,7 +5225,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     }
   },
   "national_findings": {
-    "heading": "7.2 National institutions",
+    "heading": "4.2 National institutions",
     "paragraphs": [
       "National support provided computers, office equipment, furniture and transport for programme administration and oversight. National institutions, hospitals and blood banks held 15,793 recorded assets. The practical follow-up is to keep usable equipment assigned, serviced and marked, and decide what to do with damaged items.",
       "The Ministry of Works and Transport identified an established servicing arrangement for its Toyota Hilux pickup: the Ministry of Finance, Planning and Economic Development undertook repairs and servicing. The Office of the Prime Minister identified damaged laptops that were no longer in use. Those laptops require technical assessment and a decision on repair, replacement or disposal.",
@@ -5249,10 +5265,10 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
   },
   "thematic_sections": [
     {
-      "heading": "7.4 Condition and use of assets",
+      "heading": "4.4 Condition and use of assets",
       "subsections": [
         {
-          "heading": "7.4.1 Equipment in use and items awaiting action",
+          "heading": "4.4.1 Equipment in use and items awaiting action",
           "paragraphs": [
             "The visits showed why availability, condition and use need to be considered together. At Lungulu Seed Secondary School, a power connection was needed before stored computers could be installed. At Kalemungole Health Centre III, equipment remained boxed or wrapped. At Sikuda Seed Secondary School, a damaged stool was still being used.",
             "Among assets recorded as out of use, 2,569 had damage, fault or repair remarks, while 483 were stored and described as good or new. These groups require different action: damaged items need technical assessment, while usable stored items need the conditions for safe installation and use."
@@ -5265,7 +5281,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
           ]
         },
         {
-          "heading": "7.4.2 Complete the setting in which equipment will work",
+          "heading": "4.4.2 Complete the setting in which equipment will work",
           "paragraphs": [
             "At Got Apwoyo, Ndhew and Mamba seed schools, unfinished buildings delayed the use or installation of equipment. At Rupa Seed School, the library and computer laboratory block had been put to another use. Completion plans should bring buildings, electricity, furniture, equipment and staffing together so that handover leads to an operating service.",
             "At Atego Seed School, equipment was already working in older rooms while construction continued. Completion should protect this use while the planned facilities are finished and the power supply is stabilised."
@@ -5281,10 +5297,10 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
       ]
     },
     {
-      "heading": "7.5 Asset management practices, gaps and actions",
+      "heading": "4.5 Asset management practices, gaps and actions",
       "subsections": [
         {
-          "heading": "7.5.1 Identification and custody",
+          "heading": "4.5.1 Identification and custody",
           "paragraphs": [
             "Across the programme, 50,211 assets carried identification markings, representing 22.3% of the 225,133 entries. Of these, 21,023 had UgIFT marking and 29,188 had other markings. Lungulu Seed Secondary School provided a specific example of assets requiring engraving.",
             "Marking should identify the asset and the institution responsible for it. Where assets have moved, custody needs to move with them: equipment from three Busia health centres had gone to Masafu Hospital, while equipment intended for Todora in Nwoya had gone to Paraa during construction. The district should confirm the continuing allocation and retain signed handover or transfer documentation."
@@ -5297,7 +5313,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
           ]
         },
         {
-          "heading": "7.5.2 Maintenance and repairs",
+          "heading": "4.5.2 Maintenance and repairs",
           "paragraphs": [
             "Facilities used several practical arrangements. Busaale Health Centre III reviewed condition quarterly and used Primary Health Care funds for repairs. Kagumba Health Centre III kept a condition book, and Kagumba Seed Secondary School had repaired broken furniture during the second term. Ngwedo Seed Secondary School used a monthly caretaker visit and specialist furniture repair support.",
             "Major medical equipment repairs depended on technical support beyond the facility. Todora worked through the District Health Officer and Gulu Regional Referral Hospital; Avogera received support from Hoima Regional Referral Hospital; Bundimulangya obtained a team through the District Health Officer. At Kyankaramata, the cost of major repairs constrained what the facility could do.",
@@ -5316,7 +5332,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
           ]
         },
         {
-          "heading": "7.5.3 Storage, installation and user skills",
+          "heading": "4.5.3 Storage, installation and user skills",
           "paragraphs": [
             "Stored equipment needs a plan for use. Lungulu needed power, Got Apwoyo needed completed buildings, and Avogera needed repair support for items it could not restore locally. Kalemungole had unopened and wrapped equipment requiring a check of readiness for installation and use.",
             "Training should accompany installation. Bubago Health Centre identified limited capacity to operate and maintain an oxygen concentrator, while Avogera asked for user orientation and technical skills. Equipment should be handed over with a practical demonstration to the staff who will use it and a clear route for technical support."
@@ -5330,7 +5346,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
           ]
         },
         {
-          "heading": "7.5.4 Priorities for follow-up",
+          "heading": "4.5.4 Priorities for follow-up",
           "paragraphs": [
             "The first priority is to make unsafe items and installations safe and restore equipment needed for care and teaching. The next is to complete works, provide utilities and install assets that can then be used. Marking, custody checks and routine servicing should form part of the same follow-up, with responsibility assigned to the institution and its supervising office.",
             "Future delivery plans should confirm the room, power, water, storage and staff requirements before equipment arrives. Facility managers should take part in that planning, as recommended at Kyankaramata and Avogera. The action schedule sets out proposed owners, timing and evidence of completion."
@@ -5350,10 +5366,10 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
       ]
     },
     {
-      "heading": "7.6 UgIFT support to service delivery",
+      "heading": "4.6 UgIFT support to service delivery",
       "subsections": [
         {
-          "heading": "7.6.1 Benefits described by facilities",
+          "heading": "4.6.1 Benefits described by facilities",
           "paragraphs": [
             "Staff at Lukale Health Centre III in Buvuma said women could give birth locally instead of crossing water and had greater privacy. Kagumba Health Centre III in Kamuli reported greater use of maternity and antenatal services. At Pamaka Health Centre III in Nebbi, staff described increased attendance and community confidence.",
             "Schools also described practical gains. Musiitwa Seed Secondary School used the irrigation system for teaching and food production and provided secondary education closer to surrounding communities. Kigorobya Seed Secondary School used its classrooms, computer room and chemistry laboratory to support teaching."
@@ -5368,7 +5384,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
           ]
         },
         {
-          "heading": "7.6.2 Constraints to the intended service",
+          "heading": "4.6.2 Constraints to the intended service",
           "paragraphs": [
             "Equipment could not deliver its intended benefit where buildings, utilities or user skills were not ready. Power restricted oxygen equipment at Pamaka and computer installation at Lungulu. At Rupa, teaching spaces served as dormitories and practical lessons depended on a hired generator.",
             "Demand also brought pressure on staff and space. Kagumba identified needs for staff housing and supporting clinical facilities. Pamaka reported staffing pressure, and Kigorobya identified teaching staff and study-material constraints. Musiitwa's attendance concerns required attention alongside investment in buildings and equipment."
@@ -5384,7 +5400,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
           ]
         },
         {
-          "heading": "7.6.3 Actions to sustain the benefits",
+          "heading": "4.6.3 Actions to sustain the benefits",
           "paragraphs": [
             "Districts and sector ministries should direct the first round of follow-up to actions that restore or expand a service using assets already supplied. These include reliable electricity, completion of classrooms and laboratories, repair of maternity buildings, practical equipment training and return of damaged furniture to safe use.",
             "Facility managers should report progress in terms of use: rooms opened, equipment installed and demonstrated, repairs completed and staff able to operate the equipment. Future investment should provide for staffing, operating funds and maintenance alongside buildings and equipment."
