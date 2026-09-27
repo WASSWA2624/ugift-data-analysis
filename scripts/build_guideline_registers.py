@@ -94,8 +94,8 @@ LOOSE = re.compile(
     r"wall clocks?|clocks?|stop ?watch(?:es)?|timers?|scissors?|cord scissors?|spatulas?|rulers?|dusters?|files?(?:\s+and\s+folders?)?\b(?!\s*(?:cabinet|server))|folders?|"
     r"(?:mid[- ]upper[- ]arm|muac|measuring|tape) ?measures?|(?:mid[- ]upper[- ]arm|muac) tapes?|tape measures?|"
     r"buckets?|disinfection buckets?|basins?(?!\s*(?:stand|unit))|bins?|waste bins?|dust ?bins?|pedal bins?|mops?|brooms?|brushes|torch(?:es)?|padlocks?|hammers?|spanners?|screw ?drivers?|pliers|wrench(?:es)?|"
-    r"keyboards?|mouses?|mice|computer mice|cables?|power cables?|extension cables?|chargers?|adapt[eo]rs?|flash disks?|usb sticks?|memory cards?|surge protectors?|power surge protectors?|"
-    r"penguin suckers?|bulb suckers?|tongue depressors?)\b|^\s*trays?\s*$",
+    r"keyboards?|k+ieyboards?|mouses?|mice|computer mice|cables?|power cables?|extension cables?|chargers?|adapt[eo]rs?|flash disks?|usb sticks?|memory cards?|surge protectors?|power surge protectors?|serge protectors?|"
+    r"penguin suckers?|bulb suckers?|tongue depressors?|waste containers?)\b|^\s*trays?\s*$|^\s*bowls?\s*$|^\s*shallow trays?\s*$",
     re.I,
 )
 # A service or subscription is not a controlled tangible resource with service
@@ -114,10 +114,11 @@ CONSUMABLE = re.compile(
     r"pack of|packs?\b|pkts?|single[- ]use|surgic\w* packs?|graph paper|filter paper|cover slips?|slides?,? pack|microscope slides?|"
     r"gloves|syringes?(?!\s*pumps?)|cotton wool|bandages?|reagents?|test strips?|toner|cartridges?|stationery|"
     r"chalk(?!\s*boards?)|exercise books?|text ?books?|papers?(?!\s*(?:shredders?|cutters?|trimmers?))|"
-    r"tubings?|visking|labels?|droppers?|petri dish(?:es)?|bulbs?|fl[ou]{1,2}rescent tubes?|test tubes?|test tube (?:racks?|holders?)|corks?|bungs?|rubber bungs?|"
+    r"tubings?|visking|labels?|droppers?|petri dish(?:es)?|bulbs?|fl[ou]{1,2}rescent tubes?|test[- ]?tubes?|test[- ]?tube (?:racks?|holders?|cleaners?|rackers?)|corks?|bungs?|rubber bungs?|"
     r"crocodile clips?|litmus|indicator paper|reels?|rolls?|\bboxe?s? of\b|wires?(?!\s*gauze)|boiling tube brushes|"
     r"cannulas?|canulars?|canular|nasal cannulas?|ticker tape|wire ga[u]?ges?|catheters?|swabs?|needles?(?!\s*(?:holders?|destroyers?|cutters?))|plasters?|"
-    r"instruction manuals?|manuals?|goggles?|assorted tyres|tyres?|iron fil+ings|petri ?dish(?:es)?)\b",
+    r"(?:instruction|laboratory|teacher'?s?|user|service|training|science)\s+manuals?|\bmanuals\b|goggles?|assorted tyres|tyres?|iron fil+ings|petri ?dish(?:es)?|"
+    r"crucibles?|evaporating dish(?:es)?|separating funnels?|stoppers?)\b",
     re.I,
 )
 NATURAL = re.compile(r"\b(natural resources?|mineral rights?|wildlife|forests?|wetlands?|rivers?|lakes?)\b", re.I)
@@ -695,6 +696,28 @@ class Registers:
 
 MACHINERY = "MACHINERY AND EQUIPMENT"
 OTHER = "OTHER MACHINERY AND EQUIPMENT"
+MEDICAL = (MACHINERY, OTHER, "MED LAB RESEARCH APPLIANCES", 60, True)
+ICT_LIGHT = (MACHINERY, "ICT EQUIPMENT", "LIGHT ICT HARDWARE", 60, True)
+ELECTRICAL = (MACHINERY, OTHER, "ELECTRICAL MACHINERY", 60, True)
+FURNITURE = (MACHINERY, OTHER, "FURNITURE AND FITTINGS", 60, True)
+PLANT = (MACHINERY, OTHER, "PLANT MACHINERY", 120, True)
+OPTICAL = (MACHINERY, OTHER, "PRECISION OPTICAL INSTRUMENTS", 60, True)
+STRUCTURE = ("BUILDINGS AND STRUCTURES", "STRUCTURES", "OTHER STRUCTURES", 240, True)
+# Field spellings Annex 1 already names. These are read before the broader patterns.
+SPELLING_CLASSES = (
+    (re.compile(r"(?i)\b(?:delivery|hospital|patient|examination|maternity|theatre|operating|icu|hydraulic)\b.{0,40}\bbeds?\b|\bbeds?\b.{0,40}\b(?:delivery|hospital|patient|examination|maternity|hydraulic)\b"), MEDICAL),
+    (re.compile(r"(?i)\b(resuscitators?|defibrillators?|donor couches?|gas cylinders?|venturi masks?|crash carts?|patient monitoring|tube welders?|tube sealers?|glucom+eters?|oxgyen|thermomet[eo]rs?|barometers?|calorimeters?|plotting compass(?:es)?|screw jacks?|tourniquets?|flow splitters?|auto\s*claves?|sunction)\b"), MEDICAL),
+    (re.compile(r"(?i)\bdiagno[a-z]{1,3}tic\b"), MEDICAL),
+    (re.compile(r"(?i)\b(?:slotted\s+mass(?:es)?|mass\s+hang[ae]rs?|mass\s+hungers?|jockeys?|pulleys?|pully\s+systems?|potentiometers?|spiral springs?|mortars?\s*\(biology\)|motors?\s*\(physics\))\b"), MEDICAL),
+    (re.compile(r"(?i)\bmagnets?\b"), MEDICAL),
+    (re.compile(r"(?i)\b(?:pro\s*books?|think\s*pads?|elite\s*books?|latitudes?|think\s*visions?|cd readers?|patch pann?els?|projecte?rs?|inter\s*servers?)\b|^\s*pc\s*$|^\s*upcs\s*$|^\s*\d+\s*va\s*$"), ICT_LIGHT),
+    (re.compile(r"(?i)\b(?:rtk\b|real\s+time\s+kinematic|gps machines?)\b"), ICT_LIGHT),
+    (re.compile(r"(?i)\b(?:(?:lightning|lightening)\s+(?:arrest[eo]rs?|conductors?)|portable burners?)\b"), ELECTRICAL),
+    (re.compile(r"(?i)\bextinguishers?\b"), PLANT),
+    (re.compile(r"(?i)\b(?:concavex|hand lens(?:es)?|prisims?|glass\s*blocks?)\b"), OPTICAL),
+    (re.compile(r"(?i)\b(?:manhole covers?|vent pipes?|(?:school|games?|play)\s+pitch(?:es)?|plasenta pits?|bore\s*holes?)\b"), STRUCTURE),
+    (re.compile(r"(?i)\b(?:pigeon holes?|urinals?|cartens?|reading tops?)\b"), FURNITURE),
+)
 EXTRA_CLASSES = (
     # The registered asset is explicitly software, even when its name states
     # that the licences are for computers. Hardware bundled with software keeps
@@ -732,7 +755,7 @@ EXTRA_CLASSES = (
                 r"forceps|autoclaves?|sterili[sz]ers?|oxygen cylinders?|patient beds?|hospital beds?|delivery beds?|examination couch(?:es)?|"
                 r"weighing scales?|drip stands?|patient screens?|blood pressure machines?|bp machines?|syringe pumps?|tuning forks?)\b"),
      (MACHINERY, OTHER, "MED LAB RESEARCH APPLIANCES", 60, True)),
-    (re.compile(r"(?i)\b(?:convex|concave|converging|diverging|plane)\b.*\b(?:lens(?:es)?|mirrors?)\b|\b(?:lens(?:es)?|mirrors?)\b.*\b(?:convex|concave|converging|diverging)\b|\bmagnifying glass(?:es)?\b"),
+    (re.compile(r"(?i)\b(?:convex|concave|concavex|converging|diverging|plane)\b.*\b(?:lens(?:es)?|mirrors?)\b|\b(?:lens(?:es)?|mirrors?)\b.*\b(?:convex|concave|concavex|converging|diverging)\b|\bmagnifying glass(?:es)?\b"),
      (MACHINERY, OTHER, "PRECISION OPTICAL INSTRUMENTS", 60, True)),
     # A building named after what it houses ("Library and computer block", "Main hall",
     # "2-stance VIP latrin") is a building, so these come before the equipment words.
@@ -779,7 +802,7 @@ EXTRA_CLASSES = (
 
 def extra_classify(bare: str):
     text = bare.casefold()
-    for pattern, result in EXTRA_CLASSES:
+    for pattern, result in SPELLING_CLASSES + EXTRA_CLASSES:
         if pattern.search(text):
             if result[2] in {"RESIDENTIAL BUILDINGS", "NON RESIDENTIAL BUILDINGS"} and re.search(r"(?i)\b(bed|couch|chair|desk|table|stool|cupboard|shelf|shelves|locker)\b", text):
                 # "Shelve (Class room)" is furniture in a classroom, not the classroom.

@@ -97,6 +97,25 @@ class GuidelineRegisterTests(unittest.TestCase):
         self.assertIsNone(row["DATE_PLACED_IN_SERVICE"])
         self.assertIsNone(row[register.ATTRIBUTE[8]])
 
+    def test_field_spellings_keep_devices_out_of_consumables(self):
+        medical = "MED LAB RESEARCH APPLIANCES"
+        cases = {
+            "Resuscitator manual, infant, with all mask sizes": medical,
+            "Delivery bed, hydraulic manual": medical,
+            "Defibrillator": medical,
+            "Glucommeter": medical,
+            "Pulley double": medical,
+            "HP ProBook 430 8GB": "LIGHT ICT HARDWARE",
+            "Fire extinguisher": "PLANT MACHINERY",
+            "Chemistry laboratory instruction manual (science teachers initiatives)": None,
+            "Test-tube holders": None,
+            "Evaporating dish": None,
+        }
+        for name, minor in cases.items():
+            with self.subTest(name=name):
+                found = self.registers.classify(name)
+                self.assertEqual(None if found is None else found[2], minor)
+
     def test_laboratory_glassware_is_consumable(self):
         for name in ("Volumetric flask", "Conical flask", "Laboratory glassware"):
             with self.subTest(name=name):

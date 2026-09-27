@@ -36,6 +36,10 @@ The rules are documented in [the register population instructions](../PROMPT_POP
 
 ## Revision history
 
+### 27 September 2026 — partial-column gap fill
+
+Blank cells were filled only in columns that already had values, where the 2023 guidelines or the source register state the value. 2,869 rows gained an Annex 1 class from a field spelling (for example a manual resuscitator or a hydraulic delivery bed). 2,176 missing costs were borrowed from the same asset name or, where the name had no price, from its class (203 in the same local government, 1,235 in other local governments, 738 from the class). 445 lines that are not assets were carried at nil. 259 placed-in-service dates were borrowed for rows that are not work in progress. 2,776 rows were then capitalized, 3,068 expense or loose-tool accounts were filled, and straight-line depreciation to 30 September 2026 was calculated on 2,543 rows. Borrowed costs and dates are marked only by the cell colour. Generic names with no comparable price, work in progress, source serials and purchase dates that were not stated, and account segments the guidelines do not use, stay blank.
+
 ### 27 September 2026 — revision before consolidation
 
 The earlier revision was saved as `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE_REVISED.xlsx` because the original REF workbook was open in Excel and could not be replaced. It contained 225,133 asset rows. Cost entries were completed on 668 rows, together with their related classification, account and depreciation fields. Focused checks passed all 668 cost and amount mirrors, including cost less accumulated depreciation equalling net book value.
