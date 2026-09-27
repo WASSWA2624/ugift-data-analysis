@@ -8,6 +8,14 @@ This file is the internal audit log. Its asset-register filenames, paths, worksh
 
 The report refers to physical items and their counts as "assets", including where earlier wording called them spreadsheet rows, records, entries or lines. Technical row references below identify source locations and remain unchanged. References to records in a description of recordkeeping, and to table rows as layout, retain their ordinary meaning. This presentation change does not alter the asset population, classifications, monetary amounts or historical calculation basis documented below.
 
+## Closing sections: recommendations and conclusion
+
+At the user's request, sections 9 Recommendations and 10 Conclusion are placed after section 8 Appendices, with the conclusion last. The earlier section 7.7 is titled Summary of findings. These closing sections synthesise the existing report evidence and introduce no new counts, valuations or claim of completed follow-up.
+
+The recommendations draw on sections 7.4 (condition and use), 7.5 (identification, custody, maintenance, storage, installation and user skills), 7.6 (service benefits and operating constraints), and Table 17, Priority actions to protect assets and restore service. Safety and repair recommendations retain the distinction between damaged assets and usable stored assets. Completion and installation recommendations draw on the existing school completion cases and power, room and equipment-readiness findings. Custody recommendations retain the documented Todora/Paraa and Masafu transfers. Training, maintenance and service-readiness recommendations summarise the existing facility and district responsibilities.
+
+Responsibilities and any proposed timing are taken from Table 17. They are proposals for action after report approval, not independently verified contractual deadlines or assertions that the work is funded or complete. The conclusion summarises the benefits and constraints already described in sections 7.4 to 7.7. The technical source locators and field evidence elsewhere in this log remain the basis for these summaries; register filenames and spreadsheet locators do not appear in the publishable closing prose.
+
 ## Register scope and counting basis
 
 Historical basis (27 September 2026): this report was calculated from the revision then named `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE_REVISED.xlsx`. The current canonical workbook is listed below. The report figures remain a record of that revision and have not been recertified against the subsequent consolidation.
