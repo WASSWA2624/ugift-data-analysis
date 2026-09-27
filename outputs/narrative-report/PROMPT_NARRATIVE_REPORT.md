@@ -11,9 +11,15 @@ Write into `outputs/narrative-report/`:
 1. `UgIFT Asset Verification Report.docx`
 2. `UgIFT Asset Verification Report.pdf` (converted from the Word file; open the PDF and confirm every page rendered, tables did not split badly, and every figure and photo is visible)
 3. `figures/` holding every chart as a PNG at 200 dpi and every photograph used, as copied and resized
-4. `sources.md` listing, for every table, chart, photograph and headline number in the report: the file, sheet or table, and the row range or filter used
+4. `sources.md` listing, for every table, chart, photograph and headline number in the report: the file, sheet or table, and the row range or filter used. This is an internal audit log, not an appendix to reproduce in the Word or PDF report.
 
 Do not change any file under `raw-data-grouped/`, `outputs/asset-register/` or `outputs/report-templates/`.
+
+## Report terminology and source presentation
+
+The files under `outputs/asset-register/` are repositories of asset records used for analysis. Do not directly reference these files in the Word or PDF report, including the body, tables, chart labels, captions, footnotes, headers, footers, appendices, source lists or hyperlinks. Keep their filenames, paths, workbook abbreviations (REF, MF and SK), worksheet names, column codes and row locators in this working prompt and `sources.md` only. Describe the evidence in the report as "UgIFT asset verification records" or the relevant field records, and cite the underlying policy or field evidence where appropriate.
+
+Refer to the physical items and their counts as "assets", not spreadsheet "rows", "records", "entries" or "lines". For example, write "225,133 assets" and "assets with a recorded condition". A description of the recordkeeping process may still use "records", and "row" may still describe the layout of a table; neither term should replace "asset" when discussing the items being counted. Retain exact worksheet rows, columns and filters in `sources.md` so every reported asset count remains reproducible.
 
 ## Read these before writing
 
@@ -40,12 +46,12 @@ Follow the outline document. Use numbered headings. The report has these parts:
 6. Project context: programme design, components, objectives and the programme outputs as the draft lists them.
 7. Findings.
    - 7.1 Introduction to the findings: coverage and reconciliation of the master list. State the number of facilities on the master list and the number verified on the ground, then present the reconciliation statement: every master-list facility not verified on the ground is accounted for by a reason the supervisor's reconciliation records. Group them by reason and give the count and the facilities for each: the facility does not exist or was not constructed under the programme; the facility was replaced by another facility (name the receiving facility, which was verified); the facility operates under another name (give both names); the facility is not a UgIFT beneficiary; the assets were relocated to another facility or are held at the district pending completion; the facility exists but holds no UgIFT assets. Then list the facilities found on the ground that were not on the master list, with their local government. Take every reason from the `decision` and `note` columns of `supervisor-decisions.csv` and the `status`, `verification` and `note` columns of `facility-reconciliation.csv`, and take the coverage totals from `raw-data-grouped/README.md`. Write each item as the reconciled outcome ("the master-list entry X was confirmed on the ground as Y Seed Secondary School"), never as a failure to verify. Do not list a facility as unverified where those files record no reason, and do not state or imply a rate of facilities that could not be verified; the closing sentence of the section is that every master-list facility was verified or accounted for through reconciliation.
-   - 7.2 National level: one sub-section per MDA that holds rows in the register, in the order the outline lists them (MoFPED, MoWT, MoES, MAAIF, MoH, OPM, MoWE, MoGLSD, NEMA, PPDA, OAG, MoLG, MoLHUD, LGFC, MoPS). For each: a table with asset category, quantity, total recorded cost, accumulated depreciation, net book value and status, then two to four sentences on engraving and operations and maintenance. An MDA with no rows in the register is not given a sub-section and is not commented on; it stays in the methodology's list of MDAs visited, as the draft gives it.
+   - 7.2 National level: one sub-section per MDA that holds assets in the records, in the order the outline lists them (MoFPED, MoWT, MoES, MAAIF, MoH, OPM, MoWE, MoGLSD, NEMA, PPDA, OAG, MoLG, MoLHUD, LGFC, MoPS). For each: a table with asset category, quantity, total recorded cost, accumulated depreciation, net book value and status, then two to four sentences on engraving and operations and maintenance. An MDA with no assets in the records is not given a sub-section and is not commented on; it stays in the methodology's list of MDAs visited, as the draft gives it.
    - 7.3 Local government level by region and sub-region: Central; Eastern (Bugisu, Bukedi, Busoga, Teso, Sebei); Northern (Acholi, West Nile, Lango, Karamoja); Western (Ankole, Bunyoro, Rwenzori, Tooro, Kigezi). For each region: the number of health centres and seed schools covered, then health centre assets by the outline's categories (clinical equipment; clinical furniture; maternity ward equipment; ICT equipment; building blocks) and school assets by its categories (building blocks; furniture, meaning desks, tables, chairs and stools; computers and related equipment excluding network switches; support equipment, meaning printers and cameras and projectors). For each category give number, status and recorded value, then a brief on maintenance arrangements drawn from the remarks and interviews. Give the sub-region breakdown as a table or chart under each region. List the facilities on the master list not found on the ground and the facilities found that were not on the list, per region, from `facility-reconciliation.csv`.
    - 7.4 Functionality of assets: functional and non-functional counts by category and by sub-region, as charts, with the underlying table in an appendix.
    - 7.5 Asset management practices and risks: observations on storage, utilisation, records, breakdowns and maintenance with specific local-government examples (the local government, not the person); the risks and challenges; then recommendations on identification (engraving), registration and maintenance, and future programming.
    - 7.6 UgIFT support to service delivery: issues, challenges and recommendations, from the interview and remark records.
-8. Appendices: the summary count table in full; the functionality tables behind the charts; the master-list reconciliation table (each facility accounted for through reconciliation, with its master-list entry, its local government, the reconciled outcome and the reconciliation record it rests on) and the list of facilities found that were not on the list; a note on the IFMIS-ready registers (file names, row counts, columns) that the client receives with this report; the sources list.
+8. Appendices: the summary count table in full; the functionality tables behind the charts; the master-list reconciliation table (each facility accounted for through reconciliation, with its master-list entry, its local government, the reconciled outcome and the reconciliation record it rests on) and the list of facilities found that were not on the list; a brief note on the asset records prepared for IFMIS, describing the assets covered and the recordkeeping purpose without naming register files or presenting spreadsheet row counts or column codes; a sources list describing the field evidence and policies used. Keep the technical register inventory and detailed calculation locators in `sources.md` only.
 
 ## Required summary counts
 
@@ -60,13 +66,13 @@ Produce this table for the whole programme and repeat it per region. Each row is
 | Assets not in use due to damage | `IN_USE_FLAG` = `NO` and `ATTRIBUTE15(Remarks)` or the SK `Equipment status` wording says damaged, broken, faulty, not working or needs repair |
 | Assets not in use but in good condition (stored, in box) | `IN_USE_FLAG` = `NO` and the wording says in store, stored, in box, not yet installed, not yet in use, new |
 | Assets in good condition (functional) | `ATTRIBUTE14(Equipment status)` = `Functional` |
-| Total assets verified by category | count of rows by `ASSET_CATEGORY_MINOR2`, and by the report categories above |
+| Total assets verified by category | count of assets by `ASSET_CATEGORY_MINOR2`, and by the report categories above |
 | Facilities which had shared assets out with others | facilities whose remarks say an asset was shared with, lent to, moved to or kept at another facility or the district |
 | Facilities not on the master list but found in the local governments | `facility-reconciliation.csv` rows whose scope is a ground return only (X ids) |
 | Facilities on the master list accounted for through reconciliation, by reason (does not exist; replaced; operates under another name; not a UgIFT beneficiary; assets relocated or held at the district; exists with no UgIFT assets) | `supervisor-decisions.csv` decisions such as Does not exist, Replaced, Renamed, Name corrected, Location name corrected, Assets relocated, Exists no UgIFT assets, Not UgIFT, and the matching `facility-reconciliation.csv` rows; count each facility once under its final outcome |
 | Total number by category | facilities and assets by category and by region |
 
-Count rows, not lines: the register already holds one row per physical asset. Where a row's status is blank, leave it out of the functional and non-functional counts; do not add a "not stated" column and do not mention unassessed assets. Compute a functional share over the assets with a recorded condition and label it "of assets assessed for condition".
+Count each physical asset once; the underlying register holds one worksheet row per asset. Use "assets" for these counts throughout the report. Where an asset's status is blank, leave it out of the functional and non-functional counts; do not add a "not stated" column and do not mention unassessed assets. Compute a functional share over the assets with a recorded condition and label it "of assets assessed for condition".
 
 ## Mapping the register to the report's categories
 
@@ -117,7 +123,7 @@ Draw charts with matplotlib, one message per chart, and save them to `figures/` 
 5. Recorded value and net book value by region and by MDA.
 6. Assets in use, not in use due to damage, and not in use but in good condition, by category.
 
-Chart rules: a title that states the finding, labelled axes with units, data labels on bars, a legend only when there is more than one series, one consistent colour palette with the same colour for the same status on every chart, no 3D, no pie charts with more than four slices, and a source line under each chart naming the register and the filter. Put the table behind every chart in the appendix.
+Chart rules: a title that states the finding, labelled axes with units, data labels on bars, a legend only when there is more than one series, one consistent colour palette with the same colour for the same status on every chart, no 3D, no pie charts with more than four slices, and a source line under each chart describing the evidence in plain language, such as "Source: UgIFT asset verification records." Explain any scope or denominator in asset terms. Keep the workbook name and exact filter in `sources.md`. Put the table behind every chart in the appendix.
 
 ## Style
 
@@ -126,7 +132,7 @@ Chart rules: a title that states the finding, labelled axes with units, data lab
 - Do not use these words and phrases: delve, robust, leverage, seamless, holistic, cutting-edge, comprehensive overview, in conclusion, it is important to note, it is worth noting, moreover, furthermore, additionally, as previously mentioned, in today's world, a testament to, tapestry, landscape (except a physical one), navigate, unlock, harness, elevate, journey, crucial, vital, pivotal, game-changer.
 - Do not open paragraphs with "Overall", "Notably", "Importantly" or "Interestingly". Do not end sections with a summary sentence that restates the section.
 - Use numerals for counts and money, with thousands separators; write UGX before the amount (UGX 3,500,000). Percentages to one decimal place. Dates as 24 August 2026.
-- Number tables and figures (Table 1, Figure 1) and refer to them by number in the text. Every table has a caption above and a source line below.
+- Number tables and figures (Table 1, Figure 1) and refer to them by number in the text. Every table has a caption above and a source line below, using the source-presentation rules above.
 - Spell each acronym out at first use and list it in the acronyms table.
 - Be complete and concise: every section of the outline is present and says what the records support, and nothing is padded. Aim for 35 to 55 pages including appendices, with the executive summary at most two pages.
 
@@ -147,6 +153,7 @@ Go back to the source before writing. If the register and a template disagree, t
 3. Every table and chart total reconciles to a filter on the REF register that you can restate in `sources.md`.
 4. Every acronym is in the list; every figure and table is numbered and referenced.
 5. The PDF opens and matches the Word file page for page.
-6. `sources.md` is complete.
+6. `sources.md` is complete and retains exact filenames, worksheet ranges and filters for internal traceability.
+7. Scan the Word document and PDF text, tables, captions, notes, appendices and hyperlink targets for direct references to files under `outputs/asset-register/`, including register filenames, paths and REF/MF/SK workbook labels. Remove these from the report while retaining their provenance in `sources.md`. Review uses of "row", "record", "entry" and "line" and use "asset" wherever they refer to a physical item or its count. Confirm that these wording changes leave all asset counts and monetary amounts unchanged.
 
 In your reply (not in the report), give a short note of what you produced, the page count, the headline numbers, and the points you left out because the records did not support them.

@@ -2,6 +2,12 @@
 
 Final report: `outputs/narrative-report/UgIFT Asset Verification Report.docx`.
 
+## Internal provenance and report presentation
+
+This file is the internal audit log. Its asset-register filenames, paths, worksheet names, column codes, row ranges and filters are retained to reproduce the analysis; they must not be copied into the Word or PDF report or its source list, captions, notes, appendices or hyperlinks. The workbooks under `outputs/asset-register/` hold the asset records and are not directly named or linked in the report. Report source labels describe the evidence, for example "UgIFT asset verification records", with the technical locator retained here.
+
+The report refers to physical items and their counts as "assets", including where earlier wording called them spreadsheet rows, records, entries or lines. Technical row references below identify source locations and remain unchanged. References to records in a description of recordkeeping, and to table rows as layout, retain their ordinary meaning. This presentation change does not alter the asset population, classifications, monetary amounts or historical calculation basis documented below.
+
 ## Register scope and counting basis
 
 Historical basis (27 September 2026): this report was calculated from the revision then named `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE_REVISED.xlsx`. The current canonical workbook is listed below. The report figures remain a record of that revision and have not been recertified against the subsequent consolidation.
