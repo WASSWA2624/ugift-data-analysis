@@ -2214,7 +2214,10 @@ def blank_tag(value: str) -> bool:
     if not text or is_placeholder(value):
         return True
     # "Not engraved (2)" or "N/A 2" is still no tag.
-    text = re.sub(r"\s*\(?\d{1,3}\)?$", "", text).strip() if re.match(r"(not|n a|na|none|nil|no tag)", text) else text
+    text = re.sub(r"\s*\(?\d{1,3}\)?$", "", text).strip() if re.match(r"(not|nor|n a|na|none|nil|no tag)", text) else text
+    # "Nor engraved", "Not engrved", "Notengraved": a slip of up to two letters in "not engraved".
+    if not re.search(r"\d", text) and _edit_distance(re.sub(r"\s+", "", text), "notengraved") <= 2:
+        return True
     if re.search(r"\d", text):
         return False
     if re.search(

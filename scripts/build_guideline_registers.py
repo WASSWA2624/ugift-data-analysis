@@ -363,11 +363,55 @@ def year_only_date(text: str) -> date | None:
     return None
 
 
-PLURAL_TAIL = re.compile(r"(?<=[a-z]{3})(?:ches|shes|xes|sses)$|(?<=[a-z]{3})ies$|(?<=[a-z]{3})s$")
 # Median stated price per asset name over the whole workbook, filled by index_sources;
 # a donor price twenty times above or below it is a line total or a typing slip.
 PRICE_MEDIAN: dict[str, float] = {}
 PRICE_BAND = 20.0
+# Donors for a row whose name has no priced match: the Annex 1 class (same government,
+# then other governments), and for the placed-in-service month the other assets of
+# the same facility, then of the same government, then of the whole workbook.
+CLASS_COSTS: dict = {}
+CLASS_MEDIAN: dict[str, float] = {}
+FACILITY_MONTHS: dict[tuple[str, str], Counter] = {}
+LG_MONTHS: dict[str, Counter] = {}
+ALL_MONTHS: Counter = Counter()
+# The guidelines' general life for equipment (3.2.2 illustration; most Annex 1
+# machinery classes): applied to an asset whose name Annex 1 does not class.
+FALLBACK_LIFE = 60
+# Every row of the sample header carries fund 01 (the Consolidated Fund).
+FUND_SEGMENT = "01"
+NOT_ENGRAVED = "Not engraved"
+COUNT_NEGATIVE = re.compile(
+    r"(?i)(\d+)\s*(?:[a-z]+\s+){0,3}?(?:non[\s\-]*function\w*|not\s+(?:function\w*|working|in\s+use|good)|broken|damaged|faulty|spoilt?|dead|obsolete|missing|lost|stolen|unserviceable)"
+)
+COUNT_POSITIVE = re.compile(r"(?i)(\d+)\s*(?:[a-z]+\s+){0,3}?(?:function\w*|working|good|in\s+use|operational|verified)")
+
+
+def majority_status(text: str) -> str:
+    """'133 functional 43 non-functional': the larger stated count decides the group's
+    units; '' when the wording gives no counts or they tie."""
+    negative = sum(int(match.group(1)) for match in COUNT_NEGATIVE.finditer(text))
+    stripped = COUNT_NEGATIVE.sub(" ", text)
+    positive = sum(int(match.group(1)) for match in COUNT_POSITIVE.finditer(stripped))
+    if positive > negative:
+        return "Functional"
+    if negative > positive:
+        return "Faulty"
+    return ""
+
+
+def clean_description(text: str) -> str:
+    """The item description as field wording: trimmed, one space, no stray
+    punctuation, a capital first letter; nothing when the cell held only a count, a
+    unit word or a placeholder."""
+    value = plain(text)
+    value = re.sub(r"\s*[;,]\s*$", "", value).strip(" .-_/")
+    value = re.sub(r"\s+([,;:.])", r"\1", value)
+    if not value or re.fullmatch(r"(?i)[\d\s.,/()-]+|pcs?|pieces?|units?|nos?\.?|set|sets|item|items|same|ditto|as above|\"|''", value):
+        return ""
+    if len(value) < 2:
+        return ""
+    return value[:1].upper() + value[1:]
 
 
 def borrow_key(bare: str) -> str:
@@ -581,6 +625,16 @@ OTHER = "OTHER MACHINERY AND EQUIPMENT"
 EXTRA_CLASSES = (
     # Spellings the source uses that the shared classifier misses; the Annex 1 row
     # then supplies life and method.
+    (re.compile(r"(?i)\b(sterili[sz](?:ation|ing|er)?\s*drums?|dressing\s*drums?|instrument\s*drums?|b\.?\s*p\.?\s*cuffs?|blood\s*pressure\s*cuffs?|delivery\s*(?:sets?|kits?)|"
+                r"suture\s*(?:sets?|kits?)|dressing\s*(?:sets?|kits?)|instrument\s*(?:sets?|kits?)|hollow\s*ware|penguin\s*suckers?|kidney\s*dish(?:es)?|gallipots?|galipots?)\b"),
+     (MACHINERY, OTHER, "MED LAB RESEARCH APPLIANCES", 60, True)),
+    (re.compile(r"(?i)\b(cap\s*boards?|cup\s*boards?|cubboards?|cardboards?\s+(?:cupboard|wardrobe)|double\s*basins?|wash\s*(?:hand\s*)?basins?|sinks?|inbuilt\s*shelves|"
+                r"soft\s*boards?|display\s*boards?|book\s*shelves|book\s*shelf|reading\s*tables?)\b"),
+     (MACHINERY, OTHER, "FURNITURE AND FITTINGS", 60, True)),
+    (re.compile(r"(?i)\b(megaphones?|public\s*address(?:\s*systems?)?|pa\s*systems?|loud\s*hailers?|hand\s*sets?|desk\s*phones?|telephone\s*sets?)\b"),
+     (MACHINERY, "ICT EQUIPMENT", "OTHER ICT EQUIPMENT", 60, True)),
+    (re.compile(r"(?i)\b(staff\s*qua[rt]+ers?|teachers?['’]?\s*qua[rt]+ers?|staff\s*houses?)\b(?!.*\b(latrine|latrin|toilet|kitchen)\b)"),
+     ("BUILDINGS AND STRUCTURES", "DWELLINGS", "RESIDENTIAL BUILDINGS", 600, True)),
     (re.compile(r"(?i)\b(wheel\s*chairs?|stop\s*watch(?:es)?|bowl,?\s*kick|kick\s*bowls?|balances?|volumetric flasks?|flasks?|"
                 r"micrometer(?: screw)? gauges?|vernier|mortars? and pestles?|retort stands?|dissecting (?:kits?|sets?)|ammeters?|"
                 r"voltmeters?|galvanometers?|spatulas?|wash bottles?|glass blocks?|tripod stands?|thermometers?|microscopes?|"
@@ -698,6 +752,20 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     remarks_source = plain(source.get("Remarks"))
     status_text = plain(source.get("Equipment status"))
     status_label, longer_status = condition(status_text)
+    if not status_label:
+        # No condition in the status cell, or wording that splits the group: the
+        # remark decides where it states one; a count majority decides a split group;
+        # an asset the team recorded without a condition is taken as functional.
+        inferred = condition(remarks_source)[0] if remarks_source else ""
+        if NOT_EXISTING.search(status_text) or NOT_EXISTING.search(remarks_source):
+            status_label = "Faulty"
+        elif inferred:
+            status_label = inferred
+            stats["status_from_remark"] += 1
+        else:
+            status_label = majority_status(f"{status_text} {remarks_source}") or "Functional"
+            stats["status_default"] += 1
+        longer_status = status_text
 
     # Place: one spelling per fact.
     lg_text = plain(source.get("Local Government"))
@@ -759,13 +827,23 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     if life is None and class_life and class_depreciates:
         life = class_life
     is_land = major == "LAND"
-    if loose or service:
-        # Section 3.3.3: expensed on 221012, so no life or depreciation; the stated
-        # life stays in ATTRIBUTE5 on the MF workbook.
+    # A line that is not a non-current asset: a total, a repair, a service, a
+    # consumable, a loose tool (3.3.3) or a natural resource (3.2.1.4).
+    non_asset = total_line or repair or service or consumable or loose or natural
+    if non_asset:
+        # Expensed or not recognised: no life or depreciation; a stated life stays in
+        # ATTRIBUTE5 on the MF workbook.
         life = None
         life_source = False
+    elif life is None:
+        # Annex 1 gives every class a life (land 600 months, though it does not
+        # depreciate); an asset Annex 1 does not class takes the guidelines' general
+        # equipment life of 60 months.
+        life = class_life or FALLBACK_LIFE
+        if class_life is None:
+            stats["life_default"] += 1
     # Section 5.5: straight line where a life applies.
-    depreciates = bool(life) and not is_land and not natural and not non_depr and not consumable
+    depreciates = bool(life) and not is_land and not non_depr and not non_asset
     if classified and not class_depreciates and not life_source:
         depreciates = False
 
@@ -773,6 +851,7 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     # A nil cost is no measured price (3.2.1.3 condition 4): it is filled like a blank.
     cost = cost_source if cost_source else None
     cost_fill = None
+    cost_outlier = False
     life_fill = None
     date_fill = None
     # A date the source states is written one way (ISO); wording stays as written.
@@ -786,6 +865,13 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     lg_key = lg.key if lg else ""
     specific = (bool(classified) or usable_name(asset_name)) and asset_name not in GENERIC_NAMES and not GENERIC_HEAD.match(bare) \
         and not total_line and not repair and not service
+    if borrow and cost is not None and asset_name in PRICE_MEDIAN and not (PRICE_MEDIAN[asset_name] / PRICE_BAND <= cost <= PRICE_MEDIAN[asset_name] * PRICE_BAND):
+        # A recorded cost twenty times above or below the median for the name is a
+        # block total typed on one unit, or a slip: the unit price is borrowed instead
+        # and the recorded figure stays in ATTRIBUTE10 on the MF workbook.
+        cost = None
+        cost_outlier = True
+        stats["cost_outlier"] += 1
     # Stage 3, the date first: the placed-in-service date the source states, else the
     # purchase date on the same row (the asset was available for use from its
     # purchase), else the first month of the year or financial year the row states.
@@ -828,6 +914,42 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
                 life_fill = FILLS[method]
                 stats[f"life_{method}"] += 1
                 depreciates = not is_land and not natural and not non_depr
+    if borrow:
+        if cost is None and not non_asset and not non_depr and minor_key:
+            # Step 4: no priced asset of the same name anywhere, so the Annex 1 class
+            # supplies the price, same government first, then other governments.
+            found = choose(CLASS_COSTS, minor_key, lg_key, years, "")
+            if found:
+                method, groups = found
+                values = [value for _, _, bucket in groups for value in bucket]
+                centre = CLASS_MEDIAN.get(minor_key)
+                if centre:
+                    kept = [value for value in values if centre / PRICE_BAND <= value <= centre * PRICE_BAND]
+                    values = kept or values
+                cost = shillings(median(values))
+                cost_fill = FILLS[method]
+                stats[f"cost_class_{method}"] += 1
+        if cost is None and (non_asset or non_depr):
+            # A line that is not recognised as an asset, or works with no cost stated,
+            # carries no value.
+            cost = 0
+            stats["cost_nil"] += 1
+        elif cost is None:
+            stats["cost_unpriced"] += 1
+        if placed is None and not non_depr:
+            # The month the other assets of the same facility were placed in service,
+            # else of the same government, else of the whole workbook.
+            pool = FACILITY_MONTHS.get((lg_key, norm_name(facility_text)))
+            method = 1
+            if not pool:
+                pool = LG_MONTHS.get(lg_key)
+            if not pool and ALL_MONTHS:
+                pool = ALL_MONTHS
+                method = 3
+            if pool:
+                placed = month_date(pool.most_common(1)[0][0])
+                date_fill = FILLS[method]
+                stats[f"date_place_{method}"] += 1
 
     # Section 3.2.1: controlled, service potential beyond a year, exists, measurable.
     # The status column decides existence; a remark counts only when the status is
@@ -870,13 +992,14 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     nbv_source = as_number(source.get("Net Book Value"))
     reserve = reserve_source
     ytd = ytd_source
-    salvage = 0 if depreciates and life else None
+    # Section 5.7: no residual value, on every row.
+    salvage = 0
     computed_nbv = None
-    # Straight line to 30 September 2026 on a row that exists, is not marked out of
-    # use (Functional, or a status the source left blank), and whose cost, nil
-    # residual, life and placed-in-service month are known. A figure the source
-    # recorded stays; the blank one beside it is calculated.
-    if borrow and depreciates and exists and status_label != "Faulty" and cost is not None and life and placed and salvage is not None:
+    # Straight line to 30 September 2026 on a row that exists and whose cost, nil
+    # residual, life and placed-in-service month are known; an asset out of use still
+    # consumes its life (IPSAS 17). A figure the source recorded stays; the blank one
+    # beside it is calculated.
+    if borrow and depreciates and exists and cost is not None and life and placed:
         figures = depreciation(float(cost), float(salvage), int(life), placed)
         if figures:
             accumulated, current = figures
@@ -893,13 +1016,23 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
                 remaining = max(0.0, float(cost) - float(salvage) - float(reserve))
                 ytd = shillings(min(current, remaining))
                 stats["ytd"] += 1
+    if borrow and reserve is None and (cost is not None or not depreciates or not exists):
+        # Nothing to charge: no depreciation, no cost, or an asset that does not exist.
+        reserve = 0
+        stats["reserve_nil"] += 1
+    if borrow and ytd is None and reserve is not None:
+        ytd = 0
     if cost is not None and reserve is not None:
         # Net book value is the check: cost less accumulated depreciation, never below
         # the residual value.
         computed_nbv = shillings(max(float(salvage or 0), float(cost) - float(reserve)))
 
     tag_raw = plain(source.get("Tag Number (engrave no.)"))
-    tag = "Not Engraved" if blank_tag(tag_raw) else tag_raw
+    tag = NOT_ENGRAVED if blank_tag(tag_raw) else tag_raw
+    # Wording in the tag cell beyond a placeholder ("All not engraved yet", "engraved
+    # but not numbered") is field information and goes to Remarks.
+    engraving_note = tag_raw if tag == NOT_ENGRAVED and tag_raw and not is_placeholder(tag_raw) \
+        and not re.fullmatch(r"(?i)(?:not|nor|non)\s*(?:yet\s*)?engra\w*|engraved|not|none|nil|n/?a", tag_raw) else ""
     # Only the description states these (the prompt's rule); the remarks do not.
     serial = explicit_serial(description)
     manufacturer = explicit_manufacturer(description)
@@ -910,9 +1043,16 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
         total = re.search(r"of (\d+)\]?$", unit)
         if total and re.fullmatch(r"\d+", asset_number) and int(asset_number) == int(total.group(1)):
             asset_number = ""  # that cell was the quantity
+    if not asset_number and source.get("_row"):
+        # The register's own reference for a row the source did not number.
+        asset_number = f"UGIFT-{int(source['_row']):06d}"
+        stats["asset_number_reference"] += 1
 
     recoverable = as_number(source.get("Recoverable cost"))
     recoverable_value = recoverable if recoverable is not None else (plain(source.get("Recoverable cost")) or None)
+    if borrow and recoverable is None:
+        # No impairment was recorded, so the recoverable amount is the carrying amount.
+        recoverable_value = computed_nbv if computed_nbv is not None else (0 if cost == 0 else None)
     department = department_text(source.get("Department"))
     # The department of the vote a facility of this kind belongs to, when the source
     # left the cell empty or named no department; ATTRIBUTE2 keeps the source value.
@@ -933,14 +1073,14 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
             worded_amounts.append(f"{column}: {raw}")
     # Remarks: the source Remarks, the status wording moved out of Equipment status,
     # and every SK field with no column of its own, each labelled with its column name.
+    # Remarks carry only what the field recorded: the remark, the status wording, words
+    # typed into amount cells, wording in the tag cell, and the SK fields with no
+    # column of their own.
     remarks = remark_bundle([
         remarks_source,
-        f"Source status: {longer_status}" if longer_status else "",
+        f"Source status: {longer_status}" if longer_status and longer_status.casefold() != status_label.casefold() else "",
         *worded_amounts,
-        "Repair or spare part (section 3.2.3): not a new asset" if repair else "",
-        "Total line: not an asset" if total_line else "",
-        "Service or subscription, not an asset (section 3.2.1.2)" if service else "",
-        "Work in progress (sections 5.5, 5.14): not yet available for use" if non_depr and major == "BUILDINGS AND STRUCTURES" else "",
+        f"Engraving: {engraving_note}" if engraving_note else "",
         f"Facility type: {kind}" if kind else "",
     ])
     trail = "; ".join(part for part in (f"Source file: {source_file}" if source_file else "", f"Source location: {source_location}" if source_location else "") if part)
@@ -958,7 +1098,9 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
         acquisition = ANNEX2_BY_MINOR2.get(norm_name(minor2)) if minor2 else None
         expense_account = "231" + acquisition[3:] if acquisition else None
         clearing_account = "513001"
-    life_cell = (life, life_fill) if life and (depreciates or (life_source and not consumable and not non_depr)) else None
+    # Every row states a life: the Annex 1 or general life, 0 on a line that is no asset.
+    life_cell = (life, life_fill) if life else 0
+    purchase_cell = purchase_value or (purchase_text if year_only_date(purchase_text) else None)
 
     values = {
         "BOOK_TYPE_CODE": book_code,
@@ -977,16 +1119,19 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
         # Every location combination in Location(3)2.xlsx closes with UNSPECIFIED, as
         # the sample row does.
         "LOCATION_SEGMENT4": "UNSPECIFIED",
-        "FIXED_ASSETS_COST": (cost, cost_fill) if cost is not None else None,
+        "FIXED_ASSETS_COST": ((cost, cost_fill) if cost is not None else None) if borrow else cost_source,
+        # The fund segment every row of the sample header carries.
+        "ASSET_EXP_ACCT_FUND": FUND_SEGMENT,
         "ASSET_EXP_ACCT_ACCOUNT": expense_account,
         "ASSET_CLR_ACCT_ACCOUNT": clearing_account,
         "DATE_PLACED_IN_SERVICE": (placed, date_fill) if borrow and placed else placed_source,
-        "DEPRECIATE_FLAG": "NO" if (is_land or non_depr) and not total_line else "YES" if depreciates else None,
+        "DEPRECIATE_FLAG": "YES" if depreciates else "NO",
         "DEPRN_METHOD_CODE": "STL" if depreciates else None,
         "LIFE_IN_MONTHS": life_cell,
         # Section 3.3.5.2: depreciation begins on the first day of the month the asset
-        # is available for use; the sample row codes that convention GOU PRO CO.
-        "PRORATE_CONVENTION_CODE": "GOU PRO CO" if depreciates else None,
+        # is available for use; the sample row codes that convention GOU PRO CO, and the
+        # book applies one convention to every row.
+        "PRORATE_CONVENTION_CODE": "GOU PRO CO",
         "DEPRN_RESERVE": reserve,
         "YTD_DEPRN": ytd,
         "SALVAGE_VALUE": salvage,
@@ -995,23 +1140,23 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
         "SERIAL_NUMBER": serial or None,
         "MANUFACTURER_NAME": manufacturer or None,
         "MODEL_NUMBER": model or None,
-        "IN_USE_FLAG": "YES" if status_label == "Functional" else "NO" if status_label == "Faulty" else None,
+        "IN_USE_FLAG": "YES" if status_label == "Functional" else "NO",
         # The SK columns in order. MF carries the source values; REF carries the values
         # after borrowing and calculation, with the same cell colours as the main columns.
-        ATTRIBUTE[1]: item_name or None,
-        ATTRIBUTE[2]: department or None,
+        ATTRIBUTE[1]: item_name or bare or None,
+        ATTRIBUTE[2]: segment2 or None,
         ATTRIBUTE[3]: asset_number or None,
-        ATTRIBUTE[4]: description or None,
+        ATTRIBUTE[4]: clean_description(description) or None,
         ATTRIBUTE[5]: life_cell if borrow else source_life,
         ATTRIBUTE[6]: tag,
-        ATTRIBUTE[7]: purchase_value or (purchase_text or None),
-        ATTRIBUTE[8]: ((placed, date_fill) if placed else (placed_text or None)) if borrow else (placed_source or (placed_text or None)),
+        ATTRIBUTE[7]: purchase_cell,
+        ATTRIBUTE[8]: ((placed, date_fill) if placed else None) if borrow else placed_source,
         ATTRIBUTE[9]: recoverable_value,
         ATTRIBUTE[10]: ((cost, cost_fill) if cost is not None else None) if borrow else cost_source,
         ATTRIBUTE[11]: reserve if borrow else reserve_source,
         ATTRIBUTE[12]: (nbv_source if nbv_source is not None else computed_nbv) if borrow else nbv_source,
         ATTRIBUTE[13]: ytd if borrow else ytd_source,
-        ATTRIBUTE[14]: status_label or None,
+        ATTRIBUTE[14]: status_label,
         ATTRIBUTE[15]: remarks or None,
     }
     return [sanitize(values.get(header), header) for header in registers.headers]
@@ -1038,8 +1183,8 @@ def sanitize(value, header: str):
     text = plain(value)
     if not text:
         return None
-    if header == "TAG_NUMBER" and blank_tag(text):
-        return "Not Engraved"
+    if header in ("TAG_NUMBER", ATTRIBUTE[6]) and blank_tag(text):
+        return NOT_ENGRAVED
     return text
 
 
@@ -1125,6 +1270,42 @@ def index_sources(rows_iter, registers: Registers) -> tuple[dict, dict, dict]:
     return costs, lives, dates
 
 
+def index_fallbacks(rows_iter, registers: Registers) -> None:
+    """Class-level prices and facility-, government- and workbook-level placed-in-
+    service months, for rows whose name has no priced or dated match."""
+    CLASS_COSTS.clear()
+    CLASS_MEDIAN.clear()
+    FACILITY_MONTHS.clear()
+    LG_MONTHS.clear()
+    ALL_MONTHS.clear()
+    class_prices: dict[str, list] = {}
+    displays: dict = {}
+    for source in rows_iter:
+        bare = display_item(canonical_item(UNIT.sub("", plain(source.get("Equipment/Item")) or plain(source.get("Item Description"))).strip()))
+        if TOTAL_LINE.search(bare) or REPAIR.search(bare) or CONSUMABLE.search(bare) or LOOSE.search(bare) or SERVICE.search(bare):
+            continue
+        lg_text = plain(source.get("Local Government"))
+        lg = resolve_lg(lg_text) or lg_from_text(lg_text) if lg_text else None
+        government = lg.key if lg else ""
+        years = row_years(as_date_text(source.get("Date Of Purchase")), as_date_text(source.get("Date Placed In Service")))
+        classified = registers.classify(bare)
+        cost = as_number(source.get("Cost"))
+        if classified and isinstance(cost, (int, float)) and cost > 0:
+            minor = norm_name(classified[2])
+            name = borrow_key(bare)
+            centre = PRICE_MEDIAN.get(name)
+            if centre is None or centre / PRICE_BAND <= cost <= centre * PRICE_BAND:
+                add_donor(CLASS_COSTS, displays, minor, government, years, "", shillings(cost), lg_text)
+                class_prices.setdefault(minor, []).append(shillings(cost))
+        placed = as_date(source.get("Date Placed In Service")) or as_date(source.get("Date Of Purchase"))
+        if placed and date(1990, 1, 1) <= placed <= AS_OF:
+            index = month_index(placed)
+            FACILITY_MONTHS.setdefault((government, norm_name(plain(source.get("Facility")))), Counter())[index] += 1
+            LG_MONTHS.setdefault(government, Counter())[index] += 1
+            ALL_MONTHS[index] += 1
+    CLASS_MEDIAN.update({minor: median(values) for minor, values in class_prices.items() if len(values) >= 3})
+
+
 # ------------------------------------------------------------------- writing
 
 def write_book(path: Path, header: list[str], rows, readme_lines) -> int:
@@ -1180,12 +1361,13 @@ def source_rows(limit: int | None = None):
             break
         if not any(value not in (None, "") for value in row):
             continue
-        yield {name: row[position] if position < len(row) else None for name, position in index.items()}
+        record = {name: row[position] if position < len(row) else None for name, position in index.items()}
+        record["_row"] = number + 2  # the row's number in the SK workbook
+        yield record
     workbook.close()
 
 
 BLANK_REASONS = {
-    "ASSET_EXP_ACCT_FUND": "The guidelines do not state this account segment for these assets.",
     "ASSET_EXP_ACCT_FUND_SOURCE": "The guidelines do not state this account segment for these assets.",
     "ASSET_EXP_ACCT_PROGRAMME": "The guidelines do not state this account segment for these assets.",
     "ASSET_EXP_ACCT_COST_CENTER": "The guidelines do not state this account segment for these assets.",
@@ -1236,13 +1418,16 @@ def readme(stats: Counter, borrowed: bool, filled: Counter, headers: list[str]):
             "(Annex 1 footnote 5), written as the sample row writes it (Laptop for HP Laptop silver). Generic names (equipment, item, set, machine), totals, counts and consumable packs "
             "carry no class; no class is taken from the facility type. A row with a generic name is not capitalized either: its service potential beyond one year cannot be read from the source.",
             "DESCRIPTION is the equipment name in one spelling: the toolkit's spelling for its standard items, and title case for names the source typed in capitals; a counted line carries [item 1 of 100].",
-            "LIFE_IN_MONTHS is the source life where stated ('7 yrs' read as 84 months), otherwise the Annex 1 life of the class (ICT and other equipment 60 months). "
+            "LIFE_IN_MONTHS is the source life where stated ('7 yrs' read as 84 months), otherwise the Annex 1 life of the class (ICT and other equipment 60 months; land 600 months although it does not depreciate), "
+            f"and for an asset whose name Annex 1 does not class the guidelines' general equipment life of 60 months ({stats['life_default']:,} rows). A line that is no non-current asset (a total, a repair, a service, a consumable, a loose tool) carries 0. "
             f"A stated life under 12 months ({stats['life_short']:,} rows, mostly '3' or '2') is unclear wording, since a non-current asset serves beyond one year (3.2.1.2): the class life applies and the stated figure stays in ATTRIBUTE5(Life in Months) on the MF workbook. "
-            "DEPRECIATE_FLAG is YES with DEPRN_METHOD_CODE STL where a life applies (section 5.5); NO for land (5.14), work in progress and operating leases (5.5). SALVAGE_VALUE is 0 on depreciable rows (5.7); the source recorded no residual values.",
+            "DEPRECIATE_FLAG is YES with DEPRN_METHOD_CODE STL where a life applies (section 5.5) and NO on every other row: land (5.14), work in progress and operating leases (5.5), and lines that are no asset. "
+            "SALVAGE_VALUE is 0 on every row (5.7, nil residual value); the source recorded no residual values. PRORATE_CONVENTION_CODE is GOU PRO CO on every row, the book's one convention (3.3.5.2 and the sample row).",
+            "ASSET_EXP_ACCT_FUND is 01, the Consolidated Fund, the fund segment the sample row carries, on every row. "
             "ASSET_EXP_ACCT_ACCOUNT is 221012 for small office equipment and loose tools (3.3.3), and for a capitalized asset the Annex 2 depreciation expense account of its class (2312xx, e.g. 231221 Light ICT hardware, 231235 Furniture and Fittings, 231233 Medical and Laboratory appliances), the account the sample row uses. "
             "ASSET_CLR_ACCT_ACCOUNT is 513001 (net assets/accumulated funds), the account the guidelines credit when an asset is brought into the register (3.2.2 illustration) and the sample row's clearing account, on every CAPITALIZED or CIP row; "
             "a capitalized row whose name Annex 1 does not class carries the clearing account only, since its expense account follows the class. No other account segment is stated by the guidelines.",
-            "PRORATE_CONVENTION_CODE is GOU PRO CO on depreciable rows: section 3.3.5.2 states that depreciation begins on the first day of the month the asset is available for use, and the sample row codes that convention GOU PRO CO.",
+            f"ASSET_NUMBER and ATTRIBUTE3(Asset Number) carry the number the source states; where the source stated none, the register's own reference UGIFT-<SK row number> ({stats['asset_number_reference']:,} rows), so every row can be cited; it is not an IFMS asset number.",
             "BOOK_TYPE_CODE is the local government in upper case without District, Local Government or DLG wording, hyphens as spaces, MC or CITY kept, and BK appended (HOIMA BK, MADI OKOLLO BK, KIIRA MC BK). "
             "LOCATION_SEGMENT1 is the same government in vote form as Location(3)2.xlsx spells it, so the row loads in IFMS (MADI\\-OKOLLO DLG, BUSIA MC, HOIMA CC; the master's BULISA DLG, LUWERO DLG, KASANDA DLG, NTUNGUMO DLG, NAKAPIRIPIRI DLG and KIRA MC are kept where they differ from the gazetted spelling in BOOK_TYPE_CODE). "
             "LOCATION_SEGMENT2 is the department in upper case in one spelling (counts and facility or category words typed in the department cell are not departments); where the source left the department empty it is the department of the vote "
@@ -1251,9 +1436,11 @@ def readme(stats: Counter, borrowed: bool, filled: Counter, headers: list[str]):
             "Central government: ministries, agencies and referral hospitals keep their UgIFT assets on their own votes and stay on the register. Their BOOK_TYPE_CODE is the vote code Location(3)2.xlsx spells plus BK (MOFPED BK, MOH BK, MOES BK, MOLG BK, MOLHUD BK, MGLSD BK, MAAIF BK, MOWE BK, MOWT BK, NEMA BK, PPDA BK, OAG BK, OPM BK, KCCA BK, UBTS BK for the regional blood banks, ARUA RRH BK and the other referral hospitals), "
             "LOCATION_SEGMENT1 that same code, LOCATION_SEGMENT2 the department the source states (else UNSPECIFIED, or HOSPITAL SERVICES for a hospital) and LOCATION_SEGMENT3 the site the source names (Finance Building, Embassy House, a district inspectorate, a blood bank) or UNSPECIFIED. "
             "Their rows come from the ministries' verification returns, the programme's fixed-asset registers, the two blood-bank inventories and the hospital rows of the consolidated MDA status register, as the SK Read Me records.",
-            "Equipment status is written as Functional or Faulty only, in ATTRIBUTE14(Equipment status); IN_USE_FLAG is YES for Functional and NO for Faulty and blank where the source did not say or the wording splits the group (some working, some not). "
+            "Equipment status is written as Functional or Faulty on every row, in ATTRIBUTE14(Equipment status); IN_USE_FLAG is YES for Functional and NO for Faulty. "
             "Functional covers in use (also 'in use but in poor condition'), functional, functioning, working, available, verified, good condition and new; Faulty covers damaged, broken, not functioning, not in use, in store (not in use), not received, not seen, obsolete, unserviceable, disposed, lost and missing. "
-            "Words run together or dashed in the source (goodandfunctional, non - functional) were read as the words they spell. Longer status wording is in ATTRIBUTE15(Remarks) as 'Source status'. A blank or placeholder tag is Not Engraved; a real engraved number is kept as written.",
+            f"Where the status cell was empty the Remarks decided ({stats['status_from_remark']:,} rows); where the wording split the group the larger stated count decided; an asset the team recorded with no condition anywhere is taken as Functional ({stats['status_default']:,} rows). "
+            "Words run together or dashed in the source (goodandfunctional, non - functional) were read as the words they spell. Longer status wording is in ATTRIBUTE15(Remarks) as 'Source status'. "
+            "A blank tag, or a placeholder for one (Not engraved, Nor engraved, Not, N/A and any wording within two letters of 'not engraved'), is written Not engraved; a real engraved number is kept as written; any other wording in the tag cell is in Remarks as 'Engraving'.",
             "SERIAL_NUMBER, MANUFACTURER_NAME and MODEL_NUMBER are filled only where the description states them explicitly (serial, s/n, model, made by).",
             "ATTRIBUTE1(Equipment/ Item) to ATTRIBUTE15(Remarks) are the SK columns in order, headed with the field template's spelling of each column (Equipment/ Item as the health-centre template writes it): Equipment/ Item, Department, Asset Number, Item Description, Life in Months, Tag Number (engrave no.), "
             "Date Of Purchase, Date Placed In Service, Recoverable cost, Cost, Acc Dep Cost, Net Book Value, Ytd Deprn, Equipment status, Remarks. "
@@ -1262,9 +1449,12 @@ def readme(stats: Counter, borrowed: bool, filled: Counter, headers: list[str]):
                "ATTRIBUTE12 is the source net book value where stated, otherwise cost less DEPRN_RESERVE, not below SALVAGE_VALUE. Only where no date could be finished does ATTRIBUTE8 keep the source's wording."
                if borrowed else
                "On this MF workbook every ATTRIBUTE column carries the source value as sanitized; nothing is borrowed or calculated here."),
-            "ATTRIBUTE15(Remarks) holds the source Remarks, the status wording moved out of Equipment status ('Source status'), words typed into an amount column under that column's name, a note where a line is a repair or spare part (3.2.3), a total, a service or work in progress, "
-            "and the SK fields with no column in A-BL, each labelled with its source column name (Facility type, Source file, Source location; the file path keeps its spelling on disk). Recoverable cost is in ATTRIBUTE9 and is not written as SALVAGE_VALUE. "
-            "Dates are written yyyy-mm-dd; a date the source wrote as words, as a year alone or in a form that could not be read stays as written in ATTRIBUTE7" + (" (and in ATTRIBUTE8 on the MF workbook)." if not borrowed else "."),
+            "ATTRIBUTE15(Remarks) holds only what the field recorded: the source Remarks, the status wording moved out of Equipment status ('Source status'), words typed into an amount column under that column's name, wording in the tag cell ('Engraving'), "
+            "and the SK fields with no column in A-BL, each labelled with its source column name (Facility type, Source file, Source location; the file path keeps its spelling on disk). Nothing in it is written by the register itself. "
+            "ATTRIBUTE4(Item Description) is the field description trimmed to one spacing with a capital first letter; a cell that held only a count, a unit word or a placeholder is left empty. "
+            "ATTRIBUTE9(Recoverable cost) is the amount the source states" + ("; where the source states none it is the carrying amount (cost less DEPRN_RESERVE), since no impairment was recorded (recoverable amount as the impairment test, not salvage value)." if borrowed else ".")
+            + " Dates are written yyyy-mm-dd; ATTRIBUTE7(Date Of Purchase) keeps a year or financial year the source wrote and is empty where the wording could not be read as a date"
+            + ("; ATTRIBUTE8 is the finished placed-in-service date." if borrowed else "; ATTRIBUTE8 is the placed-in-service date the source states, empty where it wrote words."),
             "Every filled cell was sanitized: trimmed, single spaces, no line breaks, placeholders (N/A, nil, none, -) cleared, one spelling per fact. Amounts are shown with thousands separators (#,##0.##) and were not recalculated while cleaning.",
             "Columns left blank and why:",
         ]
@@ -1277,16 +1467,21 @@ def readme(stats: Counter, borrowed: bool, filled: Counter, headers: list[str]):
                 "DATE_PLACED_IN_SERVICE was finished first, an empty date treated like an empty cost: the placed-in-service date the source states (white); else the purchase date on the same row "
                 f"({stats['date_purchase']:,} rows, white); else the first month of the year, or 1 July of the financial year, the row states ({stats['date_year']:,} rows, white); "
                 "else the most common placed-in-service month of assets with the same name, borrowed in the same order and colours as a cost (blue same government, orange other governments, green whole workbook). "
-                "The cell colour is the only marker of a borrowed date; Remarks never describe it.",
+                f"Where no asset of the same name carries a date, the month the other assets of the same facility were placed in service is taken (blue, {stats['date_place_1']:,} rows including the same government), else the whole workbook's most common month (green, {stats['date_place_3']:,} rows). "
+                "Work in progress keeps no placed-in-service date. The cell colour is the only marker of a borrowed date; Remarks never describe it.",
                 "Borrowed purchase costs: a white cost cell is a price stated on the source. Blue (#9DC3E6): median price of assets with the same name in the same local government, same purchase year or the closest year. "
                 "Orange (#F4B183): other local governments, same year or the nearest period. Green (#C6EFCE): the whole workbook, used only when steps 1 and 2 found no price. Where both rows have an asset class, the class matches. "
-                "Names are matched in the singular (Desks borrow from Desk). A stated price more than twenty times above or below the median stated price of that name across the workbook (a line total typed on one unit, or a slip) is left out of the donors where three or more prices exist. "
+                "Names are matched in the singular (Desks borrow from Desk). A stated price more than twenty times above or below the median stated price of that name across the workbook (a line total typed on one unit, or a slip) is left out of the donors where three or more prices exist, "
+                f"and a recorded cost outside that band is treated the same way on this workbook: the unit price is borrowed and coloured, and the recorded figure stays in ATTRIBUTE10(Cost) on the MF workbook ({stats['cost_outlier']:,} rows). "
+                f"Where no asset of the same name carries a price, the Annex 1 class supplies it (same government blue {stats['cost_class_1']:,}; other governments orange {stats['cost_class_2']:,}). "
+                f"A line that is no asset, and works with no cost stated, carry 0 ({stats['cost_nil']:,} rows); {stats['cost_unpriced']:,} assets with neither a priced namesake nor a priced class remain without a cost. "
                 "Generic names (equipment, furniture, medical equipment, item, set, machine, buildings, land) borrow nothing. The cell colour is the only marker; Remarks never say a cost or life was borrowed.",
                 "Borrowed useful lives follow the same order and colours: the most common life of assets with the same name, only where life is at least 12 months and the asset is not marked out of use. A life already on the row stays white.",
-                "Straight-line depreciation is calculated to 30 September 2026 on every row that exists, is not marked Faulty (Functional, or a status the source left blank) and has a cost, nil residual (5.7), a life in months and a placed-in-service month: "
+                "Straight-line depreciation is calculated to 30 September 2026 on every row that exists and has a cost, nil residual (5.7), a life in months and a placed-in-service month, whether in use or not (an idle asset still consumes its life): "
                 "monthly charge = (cost - residual) / life; DEPRN_RESERVE runs from the placed-in-service month through September 2026 and stops at the end of the useful life; YTD_DEPRN is the July-September 2026 portion and cannot exceed the depreciation still to be charged. "
                 "A depreciation figure the source recorded stays as written and only the blank figure beside it is calculated. Net book value (cost less DEPRN_RESERVE, not below SALVAGE_VALUE) is written in ATTRIBUTE12(Net Book Value); the sample header has no NBV column. "
-                f"On {stats['reserve_over_cost']:,} rows the accumulated depreciation the source recorded exceeds the cost on the row (mostly a borrowed price beside a source figure): both are kept as recorded and the net book value is shown at the residual value.",
+                f"On {stats['reserve_over_cost']:,} rows the accumulated depreciation the source recorded exceeds the cost on the row (mostly a borrowed price beside a source figure): both are kept as recorded and the net book value is shown at the residual value. "
+                f"DEPRN_RESERVE and YTD_DEPRN are 0 where there is nothing to charge: no depreciation, no cost, or an asset that does not exist ({stats['reserve_nil']:,} rows).",
                 "After borrowing, ASSET_TYPE is CAPITALIZED where the section 3.2.1 tests are met and the row is not small office equipment, a loose tool or a consumable.",
                 f"Borrowed costs: same government {stats['cost_1']:,}; other governments {stats['cost_2']:,}; whole workbook {stats['cost_3']:,}. "
                 f"Borrowed lives: same government {stats['life_1']:,}; other governments {stats['life_2']:,}; whole workbook {stats['life_3']:,}. "
@@ -1325,6 +1520,8 @@ def main() -> None:
     registers = Registers(read_headers())
     print("indexing source prices, lives and dates", flush=True)
     costs, lives, dates = index_sources(source_rows(), registers)
+    print("indexing class prices and placed-in-service months", flush=True)
+    index_fallbacks(source_rows(), registers)
     if args.only != "ref":
         print("writing MF", flush=True)
         stats: Counter = Counter()
