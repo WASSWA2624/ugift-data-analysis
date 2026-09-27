@@ -166,6 +166,18 @@ class PhysicalAssetQuantityTests(unittest.TestCase):
         for value in ("-120 units", "-2 functional and -3 damaged", "1.5 functional and 2.5 damaged", "Quantity: -120", "Quantity: 1.5", "⁹", "m²"):
             self.assertEqual(len(explode([asset(item="BP machine", description=value, status=value)])), 1, value)
 
+    def test_anyomorem_flattened_columns_restore_three_benches(self):
+        row = Asset(item="Not in use", description="Bench 2025 Good condition", explicit_qty=1,
+                    department="Reception room Maternity", facility="Anyomorem Health Centre III",
+                    source_file="team-05/_team-documents/team five hospitals.xlsx", source_location="Sheet1 row 1380")
+        registers.repair_anyomorem_column_fragments([row])
+        registers.repair_anyomorem_column_fragments([row])
+        self.assertEqual(row.item, "Bench")
+        self.assertEqual(row.source_location, "Sheet1 rows 1440-1444")
+        self.assertEqual(len(explode([row])), 3)
+        self.assertIn("2025", row.extras["source_layout_original"]["description"])
+        self.assertIn("source_layout_original", row.extras)
+
     def test_sheet_capacity_guard_and_conflict_audit(self):
         with tempfile.TemporaryDirectory() as folder:
             audit_path = Path(folder) / "quantity-audit.csv"

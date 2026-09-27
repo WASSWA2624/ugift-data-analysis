@@ -17,6 +17,7 @@ import pickle
 import re
 import sys
 import zipfile
+from xml.etree import ElementTree
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, date
@@ -30,6 +31,7 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from asset_source_layouts import repair_nshwere_furniture
 from ugift_places import (
     LocalGovernment,
     _edit_distance,
@@ -1806,6 +1808,32 @@ def stem_places(path: Path) -> tuple[str, str]:
     return (lg.display if lg else ""), ""
 
 
+def facility_from_description(asset: Asset) -> str:
+    """An IFMS row may put only its facility name in Description, with no site column.
+
+    Recover that row-level location without treating a payment mentioning a school
+    as another physical asset. District scope is still checked by in_scope().
+    """
+    description = clean(asset.description)
+    if asset.facility or not description or not looks_like_facility(description):
+        return ""
+    if re.search(r"\b(?:water\s*(?:works|supply|schemes?)|payments?|expenses?|insurance|services)\b", norm(asset.item)):
+        return ""
+    lg = resolve_lg(asset.lg) if asset.lg else None
+    kind = facility_kind(description)
+    key = facility_key(description, kind)
+    if (lg is not None and key in known_facilities().get(lg.key, {})) or known_anywhere(key):
+        return description
+    # A seed school explicitly named as such is in scope even when the master
+    # has no entry. Transaction prose ('payment ... for ... school') is not a name.
+    if kind == "School" and re.search(r"(?i)\bseed\b", description) and not re.search(
+        r"(?i)\b(?:payments?|construction|works|for|to|at|supply|services|insurance|retention|"
+        r"water|extension|installation|cost|maintenance|rehabilitation)\b", description,
+    ):
+        return description
+    return ""
+
+
 def read_workbook(path: Path) -> list[Asset]:
     relative = path.relative_to(GROUPED).as_posix()
     contexts = CONTEXTS.get(path) or [context for context in [path_context(path)] if context[0]]
@@ -1896,6 +1924,10 @@ def read_workbook(path: Path) -> list[Asset]:
                 )
         assets.extend(parsed)
     for asset in assets:
+        if "/_district-documents/" in relative and (description_facility := facility_from_description(asset)):
+            asset.facility = description_facility
+            asset.facility_type = facility_kind(description_facility)
+            asset.extras["description_facility"] = True
         if not asset.facility_type:
             asset.facility_type = facility_type_for(asset.facility, asset.department, "", path.name)
         if weak_context and not (asset.facility and looks_like_facility(asset.facility)):
@@ -2045,22 +2077,110 @@ def parenthetical_quantity(item: str) -> tuple[str, int] | None:
     return None
 
 
-def condition_groups(status: str, remarks: str, *additional: str) -> list[tuple[int, str | None]] | None:
+QUANTITY_IDENTIFIER_CONTEXT = re.compile(
+    r"(?i)\b(?:s\s*[/.-]?\s*n|lot|cat\.?\s*no|number|type|"
+    r"ushs?|ugshs?|btu|jan|feb|mar|apr|jun|jul|aug|sep|sept|oct|nov|dec)\b"
+)
+QUANTITY_MODEL_CONTEXT = re.compile(
+    r"(?i)\b(?:office\s+jet|dvr|catalyst|ram|rom|memory|processor|core\s+i[3579]|"
+    r"intel|ryzen|celeron|pentium|xeon|i[3579]|ssd|hdd|frequency|resolution)\b"
+)
+QUANTITY_COMPONENT = re.compile(
+    r"(?i)^(?:(?:spare|pvc|bed|silver|white|black|blue|red|grey|gray|stainless(?:\s+steel)?|metallic|big|large|small)\s+)*"
+    r"(?:bedrooms?|(?:sitting|dining)\s+rooms?|sections?|jars?|wheels?|wheelers?|handles?|shel(?:f|ves)|stands?|legs?|locks?|folds?|sided|burners?|"
+    r"bottles?|tub(?:e|es|ing)|rooms?|roomed|doors?|drawers?|ports?|seaters?|va|cc|btu)\b"
+)
+
+
+def quantity_specification(text: str) -> bool:
+    """Reject weak counts in identifier/specification prose after raw parsing."""
+    raw = clean(text)
+    return bool(
+        NUMBER_CONTEXT.search(raw) or QUANTITY_IDENTIFIER_CONTEXT.search(raw)
+        or MODEL_FAMILY.search(raw) or QUANTITY_MODEL_CONTEXT.search(raw)
+        or re.search(r"(?i)\b(?:ups\s*\d+|ce\s*\d+|\d+\s*(?:va|cc))\b", raw)
+        or re.search(r"\b(?=\S*[A-Za-z])(?=\S*\d)[A-Za-z0-9/-]+\s+\d+\s*$", raw)
+    )
+
+
+def component_quantity(tail: str, item: str) -> bool:
+    match = QUANTITY_COMPONENT.match(clean(tail))
+    if not match:
+        return False
+    component = match.group().casefold()
+    # Shelves/bottles can themselves be the registered asset, but are parts of
+    # a cupboard/suction machine. Ratings and room counts are never unit counts.
+    if re.search(r"\b(?:va|cc|btu|rooms?|bedrooms?|sections?|roomed|ports?|seaters?|sided|folds?|burners?|wheelers?)\b", component):
+        return True
+    component_words = {word.rstrip("s") for word in re.findall(r"[a-z]+", component)}
+    item_words = {word.rstrip("s") for word in re.findall(r"[a-z]+", item.casefold())}
+    return not bool(component_words & item_words)
+
+
+def asset_quantity_phrase(text: str, item: str = "") -> int | None:
+    """Explicit units/count phrases, excluding parts of the named asset."""
+    raw = clean(text)
+    patterns = (
+        rf"(?i)\b(?:qty|quantity|no\.?\s*of\s+(?:assets|items|pieces|units)|number\s+of\s+(?:assets|items|pieces|units))\s*[:=]?\s*{COUNT_START}({COUNT_WORD}){COUNT_END}",
+        rf"(?i){COUNT_START}({COUNT_WORD})(?![\d.,])\s*(?:pcs|pieces|units|assets?|items?)\b",
+        rf"(?i){COUNT_START}({COUNT_WORD}){COUNT_END}\s*(?:desks?|chairs?|bench(?:es)?|stools?|tables?|beds?|shel(?:f|ves)|machines?|microscopes?|computers?|laptops?)\b",
+        rf"(?i)\b(?:they\s+are|there\s+are|received|recieved|delivered)\s+{COUNT_START}({COUNT_WORD}){COUNT_END}\s+[a-z]",
+    )
+    found = []
+    for index, pattern in enumerate(patterns):
+        for match in re.finditer(pattern, raw):
+            prefix = re.split(r"[;\n]", raw[:match.start()])[-1]
+            if index and re.search(r"(?i)\b(?:has|have|with|contains?|compris\w*)\s*$", prefix):
+                continue
+            if index == 1 and component_quantity(raw[match.end():], item):
+                continue
+            if index == 2:
+                if quantity_specification(prefix) or re.search(r"(?i)\b(?:gen|generation|series)\b", prefix):
+                    continue
+                noun_tail = raw[match.end(1):].lstrip()
+                if component_quantity(noun_tail, item) or re.match(r"(?i)bed\s+rooms?\b", noun_tail):
+                    continue
+            if (count := as_count(match.group(1))) and count > 0:
+                found.append(count)
+    return max(found) if found else None
+
+
+def condition_groups(status: str, remarks: str, *additional: str, asset_item: str = "") -> list[tuple[int, str | None]] | None:
     """Add subsets within a statement, reconcile totals across separate cells."""
     statements = list(dict.fromkeys(clean(value) for value in (status, remarks, *additional) if clean(value)))
     alternatives = []
     for text in statements:
+        def subset_of_total(match: re.Match) -> str:
+            total = as_count(match.group(2))
+            if total:
+                alternatives.append([(total, None)])
+            return match.group(1)
+        text = re.sub(rf"(?i){COUNT_START}({COUNT_WORD}){COUNT_END}\s+out\s+of\s+({COUNT_WORD}){COUNT_END}", subset_of_total, text)
         matches = list(re.finditer(
-            rf"(?i){COUNT_START}({COUNT_WORD}){COUNT_END}\s+(?:are\s+|were\s+|is\s+|was\s+)?"
+            rf"(?i){COUNT_START}({COUNT_WORD}){COUNT_END}\s+(?:are\s+|were\s+|is\s+|was\s+)?(?:still\s+)?"
             r"(verified\s+and\s+in\s+good\s+use|verified\s+as\s+good|good|(?:not\s+)?in\s+(?:active\s+)?use|"
-            r"functional|functioning|working|kept\s+in\s+(?:the\s+)?store|in\s+(?:the\s+)?store|boxed|"
+            r"functional|functioning|working|usable|kept\s+in\s+(?:the\s+)?store|in\s+(?:the\s+)?store|boxed|"
             r"broken|damaged|faulty|spoilt|stolen|missing|lost|not\s+functional|non[- ]functional|not\s+working)\b",
             text,
         ))
-        groups = [(as_count(match.group(1)), match.group(2).capitalize()) for match in matches]
+        positioned = [(match.start(), match.end(), as_count(match.group(1)), match.group(2).capitalize()) for match in matches]
+        # Departmental subsets are also written "In use (04)" / "In store 4".
+        reverse_positions = []
+        for match in re.finditer(
+            rf"(?i)\b((?:not\s+)?in\s+(?:active\s+)?use|in\s+(?:the\s+)?store|"
+            rf"not\s+functional|functional|not\s+working|working|damaged|broken|stolen|missing)"
+            rf"\s*[:=-]?\s*\(\s*({COUNT_WORD}){COUNT_END}\s*\)?", text,
+        ):
+            reverse_positions.append((match.start(), match.end(), as_count(match.group(2)), match.group(1).capitalize()))
+        # An unclosed parenthesis is common in source cells: "In use (04 In
+        # store (04)" must not also parse the first 04 as "04 In store".
+        positioned = [value for value in positioned if not any(start <= value[0] < end for start, end, _, _ in reverse_positions)]
+        positioned.extend(reverse_positions)
+        positioned.sort(key=lambda value: value[0])
+        groups = [(count, label) for _, _, count, label in positioned]
         groups = [(count, phrase) for count, phrase in groups if count]
         if groups:
-            if len(groups) > 1 and re.search(r"(?i)\b(?:but|except|including|of\s+which)\b", text[matches[0].end():matches[1].start()]):
+            if len(groups) > 1 and re.search(r"(?i)\b(?:but|except|including|of\s+which)\b", text[positioned[0][1]:positioned[1][0]]):
                 # "120 verified, of which 4 broken" states 120 total. The first
                 # condition applies to the remaining 116, not another 120 units.
                 remaining = groups[0][0] - sum(count for count, _ in groups[1:])
@@ -2076,7 +2196,7 @@ def condition_groups(status: str, remarks: str, *additional: str) -> list[tuple[
             alternatives.append([(max(verified), None)])
         elif received:
             alternatives.append([(max(received), None)])
-        elif count := embedded_quantity(text):
+        elif count := asset_quantity_phrase(text, asset_item):
             alternatives.append([(count, None)])
     if not alternatives:
         return None
@@ -2120,41 +2240,68 @@ def stated_count(asset: Asset) -> tuple[str, list[tuple[int, str | None]]] | Non
     name = asset.item
     if asset.explicit_qty:
         candidates.append((asset.explicit_qty, "quantity column"))
-    hardware_spec = re.compile(r"(?i)\b(?:ram|rom|memory|processor|core\s+i[3579]|intel|ryzen|celeron|pentium|xeon|i[3579]|ssd|hdd|frequency|resolution)\b")
-    item_count = None if hardware_spec.search(asset.item) else parenthetical_quantity(asset.item) or trailing_quantity(asset.item)
+    if asset.extras.get("recorded_group_total"):
+        provenance = "; ".join(asset.extras.get("source_group_locations", [asset.source_location]))
+        candidates.append((asset.extras["recorded_group_total"], f"recorded group total; {provenance}; {asset.extras.get('quantity_layout_evidence', '')}"))
+    item_count = None if QUANTITY_MODEL_CONTEXT.search(asset.item) else parenthetical_quantity(asset.item) or trailing_quantity(asset.item)
     if item_count:
         name, count = item_count
         candidates.append((count, "item"))
     elif found := phrase_count(asset.item):
-        name = found[1]
-        candidates.append((found[0], "item"))
-    from_asset_number = blank_tag(asset.tag) and not asset.extras.get("serial_asset_number") and not asset.extras.get("qty_column")
-    if from_asset_number and asset.extras.get("alone") and (count := bare_count(asset.asset_number)):
-        candidates.append((count, "asset number"))
-    if from_asset_number and (found := phrase_count(asset.asset_number)):
-        candidates.append((found[0], "asset number"))
-    if count := bare_count(asset.description):
-        candidates.append((count, "description"))
+        if not component_quantity(found[1], asset.item):
+            name = found[1]
+            candidates.append((found[0], "item"))
+    description_is_model_label = (
+        asset.source_file.endswith("/Sikuda-HC-III/Asset-Verification-Toolkit.docx")
+        and asset.source_location == "Table 6 row 73"
+        and re.search(r"(?i)78\s+green.*79\s+maroon", asset.description)
+        and re.search(r"(?i)all\s+three\s+are\s+functional", asset.remarks)
+    )
+    if description_is_model_label:
+        candidates.append((3, "source row states one green and two maroon stoves, all three functional; 78/79 describe models"))
+    elif count := bare_count(asset.description):
+        if not (re.match(r"^0\d", asset.description) and not blank_tag(asset.tag)):
+            candidates.append((count, "description"))
     elif found := phrase_count(asset.description):
-        candidates.append((found[0], "description"))
-    elif not hardware_spec.search(asset.description):
+        if not component_quantity(found[1], asset.item) and not re.match(r"(?=\S*[A-Za-z])(?=\S*\d)\S+", found[1]):
+            candidates.append((found[0], "description"))
+    elif not quantity_specification(asset.description):
         if found := parenthetical_quantity(asset.description) or trailing_quantity(asset.description):
             candidates.append((found[1], "description"))
     # Raw cells retain facts from arbitrary/unknown columns and original strings
     # converted to dates or monetary values by the mapped fields.
+    non_quantity_dates = {clean(value) for value in (asset.purchase, asset.service)
+                          if clean(value) and not asset_quantity_phrase(clean(value), asset.item)}
+    source_texts = [value for value in asset.extras.get("source_cells", ()) if clean(value) not in non_quantity_dates]
     texts = list(dict.fromkeys([
         asset.item, asset.description, asset.status, asset.remarks, asset.department,
-        asset.asset_number, asset.tag, *asset.extras.get("source_cells", ()),
+        asset.asset_number, asset.tag, *source_texts,
     ]))
-    conditions = condition_groups(asset.status, asset.remarks, *texts)
+    conditions = condition_groups(asset.status, asset.remarks, *texts, asset_item=asset.item)
     for text in texts:
-        if count := embedded_quantity(text):
+        if count := asset_quantity_phrase(text, asset.item):
             candidates.append((count, text))
     if conditions:
         candidates.append((sum(count for count, _ in conditions), "condition subsets"))
+    # A bare number under "Asset Number" is ambiguous. Use it as a count only
+    # when independent item/description/quantity evidence is absent; a serial
+    # cannot outvote a stated count of 1, 3 or 120.
+    from_asset_number = blank_tag(asset.tag) and not asset.extras.get("serial_asset_number") and not asset.extras.get("qty_column")
+    if not candidates and from_asset_number and not quantity_specification(asset.asset_number):
+        if asset.extras.get("alone") and (count := bare_count(asset.asset_number)):
+            candidates.append((count, "asset number"))
+        elif found := phrase_count(asset.asset_number):
+            if not component_quantity(found[1], asset.item) and not re.match(r"(?=\S*[A-Za-z])(?=\S*\d)\S+", found[1]):
+                candidates.append((found[0], "asset number"))
     if not candidates:
         return None
     total = max(count for count, _ in candidates)
+    if asset.extras.get("recorded_group_total") and total != asset.extras["recorded_group_total"]:
+        candidates.append((total, "source count conflict: distinct stated condition subsets exceed the recorded group total; preserve the physical subsets"))
+    elif conditions and total == sum(count for count, _ in conditions):
+        smaller_totals = sorted({count for count, label in candidates if label in {"item", "description", "quantity column"} and count < total})
+        if smaller_totals:
+            candidates.append((total, f"source count conflict: explicit condition subsets total {total}, against other recorded counts {smaller_totals}; preserve the physical subsets"))
     asset.extras["quantity_evidence"] = candidates
     if conditions and sum(count for count, _ in conditions) == total:
         return name, conditions
@@ -2197,8 +2344,340 @@ def exact_key(asset: Asset) -> tuple[str, ...]:
     )
 
 
+def propagate_count_fragment_repairs(
+    parsed: dict[str, list[Asset]], corrections: list[tuple[Asset, str, str, str]],
+) -> list[dict[str, object]]:
+    """Apply source-proven fragment fixes to matching statements in other returns.
+
+    No rows are added or removed. The independently recovered original group
+    already supplies its assets; this only prevents a malformed mirror anchor
+    from surviving reconciliation as a second, miscounted asset group.
+    """
+    def identity(asset: Asset) -> tuple[str, ...]:
+        return (
+            asset.extras.get("lg_key") or norm(asset.lg),
+            asset.extras.get("facility_key") or norm(asset.facility),
+            norm(asset.item), norm(asset.department), norm(asset.status),
+            "" if blank_tag(asset.tag) else norm(asset.tag),
+        )
+
+    by_identity: dict[tuple[str, ...], list[Asset]] = defaultdict(list)
+    for assets in parsed.values():
+        for asset in assets:
+            by_identity[identity(asset)].append(asset)
+    audit: list[dict[str, object]] = []
+    for primary, old_description, new_description, fragment in corrections:
+        for mirror in by_identity[identity(primary)]:
+            if mirror.source_file == primary.source_file or norm(mirror.description) != norm(old_description):
+                continue
+            source_cells = mirror.extras.get("source_cells")
+            if not source_cells or any(norm(fragment) in norm(value) for value in source_cells):
+                # If the raw row itself contains the item list, it is a genuine
+                # mixed source statement and needs its own layout review.
+                continue
+            original = mirror.description
+            mirror.description = new_description
+            proof = (
+                f"Removed parser-appended fragment '{fragment}' from this matching return: "
+                f"the raw source cells do not contain it, and {primary.source_file} "
+                f"({primary.source_location}) supplies the independently verified anchor and separate asset row."
+            )
+            mirror.extras.setdefault("mirrored_fragment_repairs", []).append({
+                "old_description": original, "new_description": new_description,
+                "fragment": fragment, "primary_source": primary.source_file,
+                "primary_location": primary.source_location,
+            })
+            mirror.extras["quantity_layout_evidence"] = join_text(
+                mirror.extras.get("quantity_layout_evidence", ""), proof
+            )
+            audit.append({
+                "source_file": mirror.source_file, "source_location": mirror.source_location,
+                "item": mirror.item, "quantity": represented_count(mirror),
+                "status": "mirror_fragment_repaired", "reason": proof,
+            })
+    return audit
+
+
+def recover_standalone_count_rows(parsed: dict[str, list[Asset]]) -> list[dict[str, object]]:
+    """Recover explicit named/count rows mistaken for empty toolkit placeholders.
+
+    Read only the XML table grid, without loading a DOCX's embedded media. A
+    table must have one resolved facility among its retained rows. Existing
+    source rows keep their recorded facts; only an exact appended item fragment
+    belonging to a recovered, separate source row is removed.
+    """
+    audit: list[dict[str, object]] = []
+    corrections: list[tuple[Asset, str, str, str]] = []
+    counted_name = re.compile(r"(?i)\((\d[\d,]*)\)\s*$")
+    reviewed_sources = 0
+    for source, assets in parsed.items():
+        if not source.lower().endswith(".docx") or not assets:
+            continue
+        reviewed_sources += 1
+        if reviewed_sources % 50 == 0:
+            print(f"Source count-layout review: {reviewed_sources} DOCX files", flush=True)
+        locations = {asset.source_location: asset for asset in assets}
+        with zipfile.ZipFile(GROUPED / source) as archive:
+            document = ElementTree.fromstring(archive.read("word/document.xml"))
+        body = document.find(f"{W_NS}body")
+        if body is None:
+            continue
+        recovered: list[Asset] = []
+        for table_number, table in enumerate(body.findall(f"{W_NS}tbl"), 1):
+            table_name = f"Table {table_number}"
+            rows = docx_grid_rows(table)
+            mapping = next((found for row in rows[:40] if (found := classify_header(row))), None)
+            if not mapping:
+                continue
+            # read_workbook subtracts all one-cell rows, including any in the
+            # table itself, from its prefixed banner/table numbering.
+            offset = sum(len(row) == 1 for row in rows)
+            anchors = [asset for asset in assets if asset.source_location.startswith(f"{table_name} row ")]
+            places = {(asset.lg, asset.facility, asset.facility_type) for asset in anchors}
+            for index, values in enumerate(rows, 1):
+                location = f"{table_name} row {index - offset}"
+                if location in locations:
+                    continue
+                filled = [(column, clean(value)) for column, value in enumerate(values)
+                          if clean(value) and not is_placeholder(clean(value))
+                          and not re.fullmatch(r"[\-–—.…_/ ]+", clean(value))]
+                if len(filled) != 1 or filled[0][0] != mapping.get("item"):
+                    continue
+                item = filled[0][1]
+                department_label = DEPARTMENT_WORD.fullmatch(item) and not re.search(
+                    r"(?i)\b(?:blocks?|buildings?|houses?|halls?|library|kitchen)\b", item
+                )
+                status_label = re.fullmatch(
+                    r"(?i)(?:all\s+)?(?:not\s+in\s+use|in\s+use|functional|faulty|broken|damaged|good(?:\s+condition)?)",
+                    clean(re.sub(r"[\d(),.\-]+", " ", item)),
+                )
+                if not re.search(r"[A-Za-z]", item) or department_label or status_label or NOT_RECEIVED.match(item):
+                    continue
+                match = counted_name.search(item)
+                # Use the same guarded count grammar as filled source rows for
+                # prefixes, suffixes, compact units and written-out quantities.
+                # A plain terminal parenthesized count also covers models that
+                # are themselves assets (for example a human anatomy model).
+                if MODEL_FAMILY.search(item):
+                    continue
+                raw = take_asset(values, mapping, source, location)
+                count = as_count(match.group(1)) if match else None
+                if count is None:
+                    stated = stated_count(raw)
+                    count = sum(quantity for quantity, _ in stated[1]) if stated else None
+                if count is None:
+                    continue
+                entry = {"source_file": source, "source_location": location, "item": raw.item, "quantity": count}
+                if len(places) != 1:
+                    audit.append({**entry, "status": "skipped", "reason": "No unambiguous resolved facility in the same table"})
+                    continue
+                anchor = anchors[0]
+                raw.lg, raw.facility, raw.facility_type = next(iter(places))
+                raw.explicit_qty = count
+                raw.extras.update({key: anchor.extras[key] for key in ("lg_key", "facility_key", "central") if key in anchor.extras})
+                raw.extras["recorded_group_total"] = count
+                raw.extras["quantity_layout_evidence"] = "A separate original table row contains this asset name and its explicit quantity."
+                raw.extras["source_group_locations"] = [location]
+                raw.extras["source_layout_recovered"] = True
+                # Preserve all original amounts/dates on the previous row and
+                # remove only text which the parser appended from this exact row.
+                previous = [asset for asset in anchors
+                            if (row_match := re.search(r" row (\d+)$", asset.source_location))
+                            and int(row_match.group(1)) < index - offset]
+                previous.sort(key=lambda asset: int(asset.source_location.rsplit(" row ", 1)[1]), reverse=True)
+                for prior in previous:
+                    if raw.item in prior.description:
+                        original_index = int(prior.source_location.rsplit(" row ", 1)[1]) + offset - 1
+                        original_description = clean(cell(rows[original_index], mapping, "description"))
+                        if raw.item not in original_description:
+                            old_description = prior.description
+                            prior.description = clean(prior.description.replace(raw.item, "", 1))
+                            prior.extras.setdefault("separated_source_rows", []).append(location)
+                            corrections.append((prior, old_description, prior.description, raw.item))
+                        break
+                recovered.append(raw)
+                locations[location] = raw
+                audit.append({**entry, "status": "recovered", "reason": raw.extras["quantity_layout_evidence"]})
+        if recovered:
+            assets.extend(recovered)
+            # Keep physical table order so layout and continuation proof remains
+            # deterministic and generated quantity audit blocks are easy to trace.
+            def source_order(asset: Asset) -> tuple[int, int]:
+                match = re.fullmatch(r"Table (\d+) row (-?\d+)", asset.source_location)
+                return tuple(map(int, match.groups())) if match else (10**9, 10**9)
+            assets.sort(key=source_order)
+    audit.extend(propagate_count_fragment_repairs(parsed, corrections))
+    return audit
+
+
+def repair_anyomorem_column_fragments(assets: list[Asset]) -> None:
+    """Restore the bench group from its verified, flattened source columns."""
+    for asset in assets:
+        if (asset.source_file != "team-05/_team-documents/team five hospitals.xlsx"
+                or asset.source_location != "Sheet1 row 1380"
+                or norm(asset.item) != "not in use"
+                or norm(asset.description) != "bench 2025 good condition"):
+            continue
+        asset.extras["source_layout_original"] = {
+            "item": asset.item, "description": asset.description,
+            "source_location": asset.source_location,
+        }
+        asset.item = "Bench"
+        asset.description = "Bench"
+        asset.department = "Reception room Maternity"
+        asset.status = "Good condition"
+        asset.remarks = "All in use (3)"
+        asset.explicit_qty = 3
+        asset.source_location = "Sheet1 rows 1440-1444"
+        asset.extras["source_cells"] = ["Bench", "Reception room Maternity", "Good condition", "All in use (3)"]
+        asset.extras["recorded_group_total"] = 3
+        asset.extras["quantity_layout_evidence"] = (
+            "Original Anyomorem HC III toolkit paragraphs before Table 11 and shared "
+            "Sheet1 rows 1440-1444 state Bench, Reception room Maternity, Good condition, "
+            "All in use (3). Flattened columns had joined the preceding Not in use label "
+            "and its (1) to this bench record. The separate 2025 entry is a year."
+        )
+        asset.extras["source_group_locations"] = [asset.source_location]
+
+
+def repair_kungu_unit_fragments(assets: list[Asset]) -> None:
+    """Preserve Kungu's complete unit records and distinguish a wrapped fragment."""
+    locations = {
+        "team-06/_team-documents/TEAM SIX HOSPITALS DTB1.xlsx": ("Sheet1", 1821, 1822, (1827, 1831, 1832), 1844),
+        "team-06/Apac/Kungu-HC-III/KUNGU HCIII.docx": ("Table 6", 39, 40, (44, 45, 46), 55),
+    }
+    indexed = {(asset.source_file, asset.source_location): asset for asset in assets if asset.source_file in locations}
+    removed = set()
+    for source, (table, last_couch, fragment, glucometers, lens_row) in locations.items():
+        couch = indexed.get((source, f"{table} row {last_couch}"))
+        continuation = indexed.get((source, f"{table} row {fragment}"))
+        if couch and continuation and couch.tag.endswith("/EC/2021-04") and not any((continuation.tag, continuation.status, continuation.remarks, continuation.service, continuation.purchase)):
+            merge_continuation(couch, continuation)
+            couch.extras["source_group_locations"] = [couch.source_location, continuation.source_location]
+            couch.extras["quantity_layout_evidence"] = "Four complete EC01-04 couch records; following department/colour/life-only line is a wrapped fragment, not a fifth asset."
+            removed.add(id(continuation))
+        for number in glucometers:
+            asset = indexed.get((source, f"{table} row {number}"))
+            if asset and norm(identity_item(asset.item)) == "glucometer":
+                asset.extras["proven_unit_row"] = True
+                asset.extras["quantity_layout_evidence"] = "Source count conflict: header reports 1 glucometer, but the table contains two distinct GLU01/02 tags and a third complete dated functional record; preserve all three physical records."
+                asset.extras["source_group_locations"] = [f"{table} row {value}" for value in glucometers]
+        lens = indexed.get((source, f"{table} row {lens_row}"))
+        if lens and lens.tag.endswith("/ML/2021-01") and "low resolution power lens" in lens.remarks.casefold():
+            lens.extras.setdefault("original_source_identity", lens.item)
+            lens.item = "Low resolution power lens"
+            lens.extras["unit_item"] = lens.item
+            lens.extras["proven_unit_row"] = True
+            lens.extras["quantity_layout_evidence"] = "Identity uncertainty: original item cell is blank after four TR01-04 trolley records; ML01 and 'Low resolution power lens' identify a separate device. Retain that source wording without inferring a microscope identity."
+            lens.extras["source_group_locations"] = [lens.source_location]
+    if removed:
+        assets[:] = [asset for asset in assets if id(asset) not in removed]
+
+
+def repair_building_property_fragments(assets: list[Asset]) -> None:
+    """Rejoin Busaale's residential-building details split in its consolidation."""
+    source = "_multi-team/busoga-and-part-of-central/Health Center Updated Asset Register  222.xlsx"
+    rows = {asset.source_location: asset for asset in assets if asset.source_file == source}
+    building = rows.get("Health Center row 4550")
+    if building is None or norm(building.item) != "residential buildings":
+        return
+    fragments = [rows[f"Health Center row {number}"] for number in range(4551, 4557)
+                 if f"Health Center row {number}" in rows]
+    if not fragments:
+        return
+    # The primary BUSAALE HC III.docx Table 6 row 259 places every following
+    # room/kitchen/bathroom detail in one description: "1 Block; 2 Units".
+    building.extras["source_group_locations"] = [building.source_location, *(asset.source_location for asset in fragments)]
+    for asset in fragments:
+        merge_continuation(building, asset)
+    building.extras["recorded_group_total"] = 2
+    building.extras["quantity_layout_evidence"] = "Primary BUSAALE HC III.docx Table 6 row 259 records one residential block with two units; consolidation rows 4551-4556 split its room, kitchen and bathroom description and are not additional assets."
+    removed = {id(asset) for asset in fragments}
+    assets[:] = [asset for asset in assets if id(asset) not in removed]
+
+
+def repair_wrapped_quantity_blocks(assets: list[Asset]) -> None:
+    """A wrapped group description is not a list of individually recorded units."""
+    removed = set()
+    for index, first in enumerate(assets):
+        if not first.extras.get("has_unit_rows"):
+            continue
+        rows = [first]
+        for offset in range(index + 1, len(assets)):
+            following = assets[offset]
+            if not following.extras.get("unit_row") or presence_key(following) != presence_key(first):
+                break
+            rows.append(following)
+        counts = [row.explicit_qty for row in rows if row.explicit_qty]
+        identifiers = [norm(row.tag) for row in rows if not blank_tag(row.tag)]
+        # The original tables put a total below multiple departmental/capacity
+        # descriptions. A larger stated total cannot be represented by those
+        # few untagged description lines. Full tagged unit lists stay intact.
+        if len(rows) < 2 or len(counts) != 1 or counts[0] <= len(rows):
+            continue
+        if len(identifiers) > 1 and len(set(identifiers)) == len(identifiers):
+            continue
+        first.explicit_qty = counts[0]
+        first.extras["recorded_group_total"] = counts[0]
+        first.extras["quantity_layout_evidence"] = "Wrapped departmental/capacity descriptions share one recorded group total."
+        first.extras["source_group_locations"] = [row.source_location for row in rows]
+        first.extras.pop("has_unit_rows", None)
+        for row in rows[1:]:
+            merge_continuation(first, row)
+            removed.add(id(row))
+    if removed:
+        assets[:] = [asset for asset in assets if id(asset) not in removed]
+
+
+def repair_burondo_numbered_layout(assets: list[Asset]) -> None:
+    """Restore the numbered UPS list and wrapped records verified in Table 12."""
+    source = "team-26/Bundibugyo/Burondo-HC-III/ASSET VERIFICATION AND RECORDING TOOL KIT BURONDO HEALTH CENTRE III AND KISUBA SEED SCHOOL.docx"
+    rows = {int(asset.source_location.rsplit(" row ", 1)[1]): asset for asset in assets
+            if asset.source_file == source and asset.source_location.startswith("Table 12 row ")}
+    header = rows.get(2)
+    if not header or header.extras.get("source_layout_repaired"):
+        return
+    removed = set()
+    unit_numbers = (4, 10, 14, 17, 20)
+    if all(number in rows for number in unit_numbers):
+        for number in unit_numbers:
+            asset = rows[number]
+            asset.description = join_text(asset.item, asset.description)
+            asset.item = "UPS"
+            asset.department = header.department
+            asset.status = asset.status or header.status
+            asset.remarks = asset.remarks or header.remarks
+            asset.explicit_qty = 1
+            asset.extras["proven_unit_row"] = True
+            asset.extras["quantity_layout_evidence"] = "Source Table 12 numbers five UPS units (01)-(05), each with a separate serial."
+        removed.add(id(header))
+    for first_number, continuation_numbers in ((23, (24,)), (39, (40, 41, 50)), (60, (61,))):
+        first = rows.get(first_number)
+        if first is None:
+            continue
+        for number in continuation_numbers:
+            if number in rows:
+                merge_continuation(first, rows[number])
+                removed.add(id(rows[number]))
+        first.extras.pop("has_unit_rows", None)
+        first.extras.pop("unit_row", None)
+        first.extras["source_layout_repaired"] = True
+        first.extras["quantity_layout_evidence"] = "Wrapped description, condition and serial lines in source Table 12."
+        if first_number == 39:
+            first.item = "Desktop computer"
+            first.explicit_qty = 23
+            first.extras["recorded_group_total"] = 23
+            first.extras["quantity_layout_evidence"] += " Remarks state 15 working and 8 not working."
+    assets[:] = [asset for asset in assets if id(asset) not in removed]
+
+
 def mark_unit_records(assets: list[Asset]) -> None:
     """Confirm repeated group labels against distinct unit tags/serials."""
+    repair_anyomorem_column_fragments(assets)
+    repair_kungu_unit_fragments(assets)
+    repair_building_property_fragments(assets)
+    repair_burondo_numbered_layout(assets)
+    repair_wrapped_quantity_blocks(assets)
     grouped: dict[tuple, list[Asset]] = defaultdict(list)
     for asset in assets:
         grouped[presence_key(asset) + (asset.source_location.rsplit(" row ", 1)[0],)].append(asset)
@@ -2246,6 +2725,8 @@ def explode(assets: list[Asset], audit_path: Path | None = None) -> list[Asset]:
             "source_file": asset.source_file, "source_location": asset.source_location,
             "facility": asset.facility, "item": asset.item, "output_rows": total,
             "quantity_evidence": json.dumps(asset.extras.get("quantity_evidence", []), ensure_ascii=False),
+            "quantity_layout_evidence": asset.extras.get("quantity_layout_evidence", ""),
+            "source_group_locations": json.dumps(asset.extras.get("source_group_locations", [asset.source_location]), ensure_ascii=False),
             "conflicting_counts": len({count for count, _ in asset.extras.get("quantity_evidence", [])}) > 1,
             "unit_record_proven": bool(any(asset.extras.get(key) for key in ("has_unit_rows", "unit_row", "proven_unit_row"))),
             "line_cost": asset.cost, "unit_cost": bool(asset.extras.get("unit_cost")),
@@ -3120,7 +3601,12 @@ def drop_near_duplicates(parsed: dict[str, list[Asset]]) -> list[str]:
     # A team-level copy of a return may have resolved its rows to another facility
     # than the copy filed under the facility folder (a template banner left in the
     # document), so such a copy is compared on its lines alone.
-    lines_only = {relative: Counter(row_signature(asset)[:6] for asset in assets) for relative, assets in parsed.items()}
+    lines_only: dict[str, Counter] = {}
+    for relative, signature_counts in signatures.items():
+        line_counts: Counter = Counter()
+        for signature, count in signature_counts.items():
+            line_counts[signature[:6]] += count
+        lines_only[relative] = line_counts
     # Candidates share at least one distinctive line, so compare only within groups.
     by_line: dict[tuple[str, ...], set[str]] = defaultdict(set)
     for relative, counter in signatures.items():
@@ -3179,7 +3665,7 @@ def drop_near_duplicates(parsed: dict[str, list[Asset]]) -> list[str]:
 
 # Bump when source parsing/place resolution changes. Quantity reconciliation and
 # workbook formatting changes do not invalidate the retained raw source rows.
-PARSER_CACHE_VERSION = 1
+PARSER_CACHE_VERSION = 2
 
 
 def parsed_fingerprint(files: list[Path]) -> dict:
@@ -3265,6 +3751,25 @@ def main() -> None:
     files = candidate_files()
     parsed, source_audit = parse_sources(files, args.parsed_cache)
     write_audit(OUTPUT.with_suffix(".source-audit.csv"), source_audit)
+    layout_audit = recover_standalone_count_rows(parsed)
+    layout_summaries = []
+    for source_assets in parsed.values():
+        for summary in repair_nshwere_furniture(source_assets):
+            layout_summaries.append(
+                f"Reviewed mixed-asset source: {summary['source_file']} ({summary['source_location']}): "
+                f"{summary['source_records']} parsed records restored as {summary['named_groups']} named groups "
+                f"and {summary['physical_assets']} physical assets. {summary['reason']}"
+            )
+            layout_audit.append({
+                "source_file": summary["source_file"], "source_location": summary["source_location"],
+                "item": "Room-labelled school furniture and tanks", "quantity": summary["physical_assets"],
+                "status": "mixed_assets_recovered",
+                "reason": summary["reason"] + "; counts: " + json.dumps(summary["counts_by_item"]),
+            })
+    write_audit(OUTPUT.with_suffix(".source-layout-audit.csv"), layout_audit)
+    # Source layout proof must be settled before counts enter duplicate signatures.
+    for source_assets in parsed.values():
+        mark_unit_records(source_assets)
     duplicate_notes = drop_near_duplicates(parsed)
     for note in duplicate_notes:
         print("near duplicate:", note, flush=True)
@@ -3274,6 +3779,20 @@ def main() -> None:
     collected, overlap_notes = union_facility_submissions(collected)
     collected, unnamed_notes = settle_unnamed_lines(collected)
     overlap_notes = list(overlap_notes) + unnamed_notes + [f"Near-duplicate workbook left out: {note}" for note in duplicate_notes]
+    overlap_notes.extend(layout_summaries)
+    overlap_notes.append(
+        f"Original DOCX table review recovered {sum(row['status'] == 'recovered' for row in layout_audit):,} "
+        f"standalone named/count rows; {sum(row['status'] == 'skipped' for row in layout_audit):,} rows require "
+        f"facility-context review. Evidence is in {OUTPUT.with_suffix('.source-layout-audit.csv').name}."
+    )
+    mirror_repairs = {(row['source_file'], row['source_location']) for row in layout_audit
+                      if row['status'] == 'mirror_fragment_repaired'}
+    if mirror_repairs:
+        overlap_notes.append(
+            f"Source-proven fragment corrections were also applied to {len(mirror_repairs):,} matching rows "
+            "in other returns before reconciliation. Their raw source cells confirm the text was appended "
+            "by parsing; no physical rows were added or removed from those returns."
+        )
     source_errors = [row for row in source_audit if row["status"] in {"error", "missing"}]
     overlap_notes += [f"SOURCE {row['status'].upper()}: {row['source_file']}: {row['error']}" for row in source_errors]
     overlap_notes.append(
@@ -3308,6 +3827,23 @@ def main() -> None:
     audit_path = OUTPUT.with_suffix(".quantity-audit.csv")
     exploded = explode(collected, audit_path=audit_path)
     quantity_audit = list(QUANTITY_AUDIT)
+    for row in quantity_audit:
+        evidence = json.loads(row["quantity_evidence"])
+        decisions = [text for _, text in evidence if text.startswith("source count conflict:")]
+        if decisions:
+            totals = ", ".join(str(count) for count in sorted({count for count, _ in evidence}))
+            overlap_notes.append(
+                f"Reviewed source quantity conflict: {row['facility']}, {row['item']}, "
+                f"{row['source_file']} ({row['source_location']}) states counts {totals}; "
+                f"retained {row['output_rows']} physical assets. " + "; ".join(decisions)
+            )
+    layout_decisions = sorted({
+        (row["facility"], row["source_file"], row["quantity_layout_evidence"])
+        for row in quantity_audit if any(word in row["quantity_layout_evidence"].lower()
+                                        for word in ("conflict", "identity uncertainty"))
+    })
+    overlap_notes.extend(f"Reviewed source layout conflict: {facility}, {source}. {evidence}"
+                         for facility, source, evidence in layout_decisions)
     overlap_notes.append(
         f"Quantity reconciliation: {len(collected):,} retained source lines produced {len(exploded):,} asset rows; "
         f"the sum of per-line quantities is {sum(row['output_rows'] for row in quantity_audit):,}. "
