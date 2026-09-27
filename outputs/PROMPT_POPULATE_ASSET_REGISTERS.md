@@ -2,6 +2,8 @@
 
 You are populating three workbooks. Do the stages in order. Read `GOU Asset Accounting Policies and Guidelines 2023.pdf` from start to finish before filling the MF or REF workbook, including the recognition, measurement, depreciation and small-asset sections and Annex 1. You are the accountant for this register. You already know how each calculated column on `outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` is derived. Calculate those columns on every REF row. Do not leave a calculated amount blank when its inputs can be read or borrowed.
 
+Every physical asset must have its own row in SK, MF and REF. Expand a stated quantity of N assets into exactly N rows, even when the resulting entries are otherwise identical. This applies wherever the quantity is stated: the description, item name, quantity column, or any other column.
+
 For every other column in the sample header, fill it when the guidelines or a source state the value. If a value is unclear, or a field is empty, go back to the source and read it again before you leave the cell blank. Scan every file and every folder that can state that fact. Start in `raw-data-grouped/`, which holds the union of `raw-data-ungrouped/` and `new-raw-data-221092026-1114/` (see `raw-data-grouped/README.md`), so no separate file scan of those two folders is needed. Use `new-templates-to-follow/` for the column layout and as a source of facts for a facility already on the register. Leave a non-calculated cell blank only when that full scan and the guidelines still do not apply. A class, an Annex 1 life, a nil residual, straight-line depreciation, `CAPITALIZED`, and `Not engraved` are guideline values. Do not guess a code, life, or class the guidelines do not state.
 
 ## How the registers are reproduced
@@ -79,29 +81,34 @@ A facility may have been submitted more than once. Treat two returns as the same
 
 Keep every distinct item. When the same line appears in more than one return, keep it once, from the return with the larger stated count. A line that appears in only one return is kept. Identity is the engraved tag plus item name when a real tag exists. Otherwise identity is item name, description, status, and department. Ignore a tag that is blank, `N/A`, `none`, `nil`, or `not engraved`. Ignore a trailing count or a quantity in brackets when comparing item names (`Desks 120` and `Desks` are the same item).
 
+These matching rules reconcile repeated submissions of the same assets; they do not make each item name or combination of field values a single asset. Preserve the full number of physical units from the kept return, including identical source rows, and expand every retained grouped line by its quantity. Never deduplicate the resulting unit rows in SK, MF or REF.
+
 ### One row per physical asset
 
-This is the rule already used in `outputs/asset-register-2026-09-22`. Each source quantity becomes that many rows. `Unit` is `item 1 of 100`, `item 2 of 100`, and so on. A line that is already one item stays one row. Each asset has its own row even where rows look alike: identical units listed one per row are one row each, and rows are never merged within a return. That is the only way the assets can be counted.
+Each retained source line representing N physical assets must produce exactly N rows, with one asset on each row. `Unit` is `item 1 of N`, `item 2 of N`, and so on through `item N of N`. A line that is already one item stays one row. Identical units listed one per row are one row each, and rows are never merged within a return. Duplicate-looking entries are required when they represent separate physical assets; do not remove them because their names, descriptions, tags, costs, departments or other values match.
 
-Read a quantity only from a stated count:
+For example, a single source row for a BP machine with a quantity of 120 must become **120 separate asset rows** in each register, even if all 120 rows share the same source details. This applies to `Quantity: 120`, `BP machines (120)`, `BP machines 120`, `120 BP machines`, or `120 units` in the description or any other column. Set `Unit` from `item 1 of 120` through `item 120 of 120`; `FIXED_ASSETS_UNITS` is 1 on every MF and REF row.
 
-- a quantity column, when the number is from 2 to 500
+Read the entire source row for a stated count, regardless of the column heading. Accept any explicitly stated positive whole-number quantity, with no upper limit and no restriction to particular asset types. Sources of a count include:
+
+- a quantity column
 - a number in brackets on the item name, such as `B.P. Machine, Digital(2)`
 - a trailing count on the item name, such as `Examination Couch 2` or `School desks 120`
 - a bare integer in Asset Number, when that is the only line for that item and the tag is blank or not engraved, such as 286 office chairs
 - a bare integer, or a leading count, in the description or Asset Number, such as `2 microscopes, white`
 - a bare count in the item cell beside a blank tag when the description names the asset (`10 | Bed, Adult Patient with Mattress`)
 - a count written in status or remarks, such as `116 verified as good then 4 damaged`, `39 desks were supplied`, or `2 functional and one in the store`
+- an explicit count in any other column, including a count written in words
+
+Count the same quantity stated in several cells only once. Add counts for separate subsets of the same group, such as 116 good plus 4 damaged = 120 assets, without adding a separately stated group total again. If the counts conflict or a number's meaning is unclear, reread the source and related facility files before deciding; do not silently reduce a stated quantity to one row.
 
 Do not treat these as quantities:
 
-- model numbers: LaserJet 1320, Laptop 840, EliteBook, ProBook, Latitude, and a trailing number whose last word is laserjet, laptop, printer, monitor, cpu, inch, gen, or core
+- model numbers, such as LaserJet 1320 or Laptop 840, or model references for EliteBook, ProBook or Latitude; distinguish a model number from an explicitly stated count
 - a measure: `15 inch`, `20 liters`, `24 port`, `3 seater`, `2 stance`
-- a calendar year from 1990 to 2035
-- a number above 500
-- a trailing count above 40 unless the item is a bulk item (desk, chair, stool, table, shelf, bench, bed, cupboard, couch, cylinder)
-- an Asset Number that sits on a row which already has a real engraved tag
-- the same item text repeated on many rows that are already one asset each: when the rows repeating a line number at least its stated count (`Laboratory stools (192)` on 193 rows), or the block lists its items once per unit, the count is the group total and is not applied. Lines from a quantity column that repeat an item with differing quantities (`Solid flush doors` 14, 7 and 6 per building block) each state their own count and are applied.
+- a calendar year, date, monetary amount, serial number or asset identifier; a number's size alone does not make it a year, identifier or invalid quantity
+- a bare Asset Number on a row with a real engraved tag, unless the source explicitly identifies that value as a quantity
+- a group total repeated on rows that the source already lists one per physical unit. Do not expand an already expanded group a second time. Confirm this from the source layout or unit-level records; matching text or the number of repeated rows alone is not enough to discard a line's stated quantity. Repeated grouped lines each retain their own quantity, even when their descriptions and quantities are identical. For example, `Solid flush doors` 14, 7 and 6 per building block produce 27 rows in total.
 
 When Asset Number or the description was only the count, clear that field on the exploded rows. When a phrase such as `2 microscopes, white` was the count, keep `microscopes, white` as the description. Where the grouped line has one numeric cost, recoverable cost, accumulated depreciation, net book value, or year-to-date depreciation, treat it as the line total and divide it by the quantity so each row holds its share. A unit price is not divided.
 
@@ -168,6 +175,8 @@ Land is capitalized and is not depreciated. Natural resources are not capitalize
 
 Sanitize `ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` after Stage 2. Copy that sanitized workbook to `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`, then apply the same rules again so a borrowed-cost edit cannot put raw source wording back. Do not change a recorded cost, life, or depreciation figure while sanitizing. Keep the `[item 1 of 100]` suffix.
 
+Preserve every individual asset row during mapping, sanitizing, borrowing and calculation. Never group, merge or remove rows because their cleaned values are identical. Each SK asset row must remain one MF row and one REF row.
+
 **Every column.** Sanitize every filled cell in MF and again in REF. Trim text, collapse repeated spaces, and remove line breaks (a file path after `Source file:` keeps its spelling on disk). Use one spelling for the same fact on every row. Clear a cell whose whole value is a placeholder (`N/A`, `NA`, `nil`, `nill`, `none`, `null`, `-`, `not applicable`); `UNSPECIFIED` in a location segment is the master's own value, not a placeholder. Do not clear a real engraved tag. Do not change a recorded amount while cleaning text.
 
 **BOOK_TYPE_CODE.** This column is cleaned on every row. One local government has one code. Uppercase. Remove `District`, `Local Government`, `DLG`, and backslashes. Turn a hyphen into a space. Keep `MC` or `CITY` where that is the vote. Append ` BK`. Examples: `Hoima District` becomes `HOIMA BK`; `Madi-Okollo` becomes `MADI OKOLLO BK`; `Kiira Municipal Council` becomes `KIIRA MC BK`. Drop a number that sits immediately before `BK`: `AGAGO 2 BK` becomes `AGAGO BK`. Do not leave a raw district name in this column. `LOCATION_SEGMENT1` is the same government in the vote form `Location(3)2.xlsx` spells, such as `MADI\-OKOLLO DLG`.
@@ -222,5 +231,7 @@ After a borrowed cost makes measurement possible, set ASSET_TYPE to `CAPITALIZED
 These columns hold a value on every REF row, the derivation being the rule named: `FIXED_ASSETS_COST` (stated, borrowed, or 0; except an asset with no comparable at all), `ASSET_EXP_ACCT_FUND` (01), `DATE_PLACED_IN_SERVICE` (except work in progress), `DEPRECIATE_FLAG`, `LIFE_IN_MONTHS`, `PRORATE_CONVENTION_CODE`, `DEPRN_RESERVE`, `YTD_DEPRN`, `SALVAGE_VALUE`, `TAG_NUMBER`, `IN_USE_FLAG`, `ATTRIBUTE1(Equipment/ Item)`, `ATTRIBUTE2(Department)`, `ATTRIBUTE3(Asset Number)`, `ATTRIBUTE9(Recoverable cost)` (the amount the source states, else the carrying amount, cost less `DEPRN_RESERVE`, since no impairment was recorded), `ATTRIBUTE10(Cost)`, `ATTRIBUTE11(Acc Dep Cost)`, `ATTRIBUTE12(Net Book Value)`, `ATTRIBUTE13(Ytd Deprn)`, `ATTRIBUTE14(Equipment status)`, `ATTRIBUTE15(Remarks)`. On the REF workbook `ATTRIBUTE5`, `ATTRIBUTE8`, `ATTRIBUTE10`, `ATTRIBUTE11`, `ATTRIBUTE12` and `ATTRIBUTE13` show the finished value, the same as the main column, with the same cell colour. `ATTRIBUTE4(Item Description)`, `ATTRIBUTE7(Date Of Purchase)` and, on the MF workbook, `ATTRIBUTE8` stay blank where the field gave nothing readable.
 
 ## Checks before the registers are final
+
+Reconcile each retained source line's physical-asset count to its generated rows. A BP-machine line with a stated quantity of 120 must have exactly 120 rows in SK, MF and REF, with `Unit` covering `item 1 of 120` through `item 120 of 120` and `FIXED_ASSETS_UNITS` equal to 1 on every MF and REF row. Verify quantities found outside the quantity column, quantities above 500, repeated identical grouped lines and existing one-per-unit rows. Confirm that duplicate-looking unit rows survive every stage, no group is expanded twice, and the per-unit amounts sum to the original line totals after expansion. Record these checks on the Read Me.
 
 Run a rule check over the full MF and REF workbooks and record the outcome on the Read Me: 64 headers in sample order; a frozen header row and filter; every `BOOK_TYPE_CODE` a real vote spelt one way; `LOCATION_SEGMENT3` names ending as the facility rule requires; `ATTRIBUTE14` only Functional or Faulty, matching `IN_USE_FLAG`; no placeholder or double-spaced text; every depreciable row with method, prorate convention and salvage; depreciation recomputed on a sample; borrowed cells coloured and never described in Remarks; the not-blank columns filled; the row count equal in SK, MF and REF. Then have independent reviewers read the workbooks against this prompt and the guidelines, and refute each finding before acting on it.
