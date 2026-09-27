@@ -1,6 +1,6 @@
 # Prompt: build the UgIFT asset registers
 
-You are populating three workbooks. Do the stages in order. Read `GOU Asset Accounting Policies and Guidelines 2023.pdf` from start to finish before filling the MF or REF workbook, including the recognition, measurement, depreciation and small-asset sections and Annex 1. You are the accountant for this register. You already know how each calculated column on `outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` is derived. Calculate those columns on every REF row. Do not leave a calculated amount blank when its inputs can be read or borrowed.
+You are populating three workbooks. Do the stages in order. Read `GOU Asset Accounting Policies and Guidelines 2023.pdf` from start to finish before filling the MF or REF workbook, including the recognition, measurement, depreciation and small-asset sections and Annex 1. You are the accountant for this register. You already know how each calculated column on `outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` is derived. Calculate those columns on every REF row. Do not leave a calculated amount blank when its inputs can be read or borrowed.
 
 Every physical asset must have its own row in SK, MF and REF. Expand a stated quantity of N assets into exactly N rows, even when the resulting entries are otherwise identical. This applies wherever the quantity is stated: the description, item name, quantity column, or any other column.
 
@@ -16,7 +16,7 @@ python scripts/build_guideline_registers.py
 python scripts/list_book_codes.py
 ```
 
-The first script is Stage 1 (about an hour), the second is Stages 2 and 3 (it reads the whole SK workbook twice to index donors, then writes MF and REF; about forty minutes), the third rewrites `BOOK_TYPE_CODE.md`. Close any of the output workbooks in Excel before running; a `~$` lock file in the output folder makes the save fail. `python scripts/build_guideline_registers.py --limit 6000 --sk <copy of the SK> --out <folder>` runs a sample against a copy. When a rule in this prompt changes, change the script that implements it, then rebuild.
+The first script is Stage 1 (about an hour), the second is Stages 2 and 3 (it reads the whole SK workbook twice to index donors, then writes MF and REF; about forty minutes), the third rewrites the `BOOK_TYPE_CODE` section of `outputs/asset-register/README.md`. Close any of the output workbooks in Excel before running; a `~$` lock file in the output folder makes the save fail. `python scripts/build_guideline_registers.py --limit 6000 --sk <copy of the SK> --out <folder>` runs a sample against a copy. When a rule in this prompt changes, change the script that implements it, then rebuild.
 
 Read these before writing any row:
 
@@ -25,14 +25,14 @@ Read these before writing any row:
 - `GOU Asset Accounting Policies and Guidelines 2023.pdf` (April 2023), especially sections 3.2.1, 3.2.2, 3.2.3, 3.3.3, 3.3.5, 5.5, 5.7 and 5.14, and Annex 1 and Annex 2
 - `Sample Header of Asset Register..xlsx` (the 64 headers and one example row)
 - `Location(3)2.xlsx`, the IFMS location master: the vote codes and departments IFMS accepts
-- `outputs/asset-register-2026-09-22/UgIFT Asset Register Data Dictionary.xlsx` for the one-row-per-asset rule already used on existing assets
+- `outputs/asset-register-baseline/UgIFT Asset Register Data Dictionary.xlsx` for the one-row-per-asset rule already used on existing assets
 
 Outputs:
 
-1. `outputs/asset-register-2026-09-23/ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx`
-2. `outputs/asset-register-2026-09-23/ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` filled from the SK workbook
-3. `outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`, a sanitized copy of the MF workbook with missing purchase costs, dates and lives filled by the borrowing rules below, every calculated column computed, and every column of the not-blank list filled
-4. `outputs/asset-register-2026-09-23/BOOK_TYPE_CODE.md`, every distinct `BOOK_TYPE_CODE` in the REF workbook with its row count (the header cell is not a code)
+1. `outputs/asset-register/ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx`
+2. `outputs/asset-register/ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` filled from the SK workbook
+3. `outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`, a sanitized copy of the MF workbook with missing purchase costs, dates and lives filled by the borrowing rules below, every calculated column computed, and every column of the not-blank list filled
+4. `outputs/asset-register/README.md#book_type_code`, every distinct `BOOK_TYPE_CODE` in the REF workbook with its row count (the header cell is not a code)
 
 Health centres, seed schools, ministries and hospitals are rows in one workbook, not separate files. Keep header filters, a frozen header row and column widths. On the Read Me sheet, record the guideline sections used, every derivation rule applied with the number of rows it touched, and, for any sample-header column left blank on every row, the reason it did not apply.
 

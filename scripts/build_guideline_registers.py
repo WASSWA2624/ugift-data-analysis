@@ -50,7 +50,7 @@ from ugift_places import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "outputs" / "asset-register-2026-09-23"
+OUT = ROOT / "outputs" / "asset-register"
 SK = OUT / "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx"
 MF = OUT / "ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx"
 REF = OUT / "REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx"

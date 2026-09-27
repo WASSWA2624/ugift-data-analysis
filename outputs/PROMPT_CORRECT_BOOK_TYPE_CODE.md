@@ -1,6 +1,6 @@
 # Prompt: correct supplied BOOK_TYPE_CODE values
 
-Correct `BOOK_TYPE_CODE` in `outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` for the codes supplied in the request. A supplied code is the exact cell text, including spaces. `outputs/asset-register-2026-09-23/BOOK_TYPE_CODE.md` is only an index of those texts. Do not correct a code that was not supplied.
+Correct `BOOK_TYPE_CODE` in `outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` for the codes supplied in the request. A supplied code is the exact cell text, including spaces. `outputs/asset-register/README.md#book_type_code` is only an index of those texts. Do not correct a code that was not supplied.
 
 Read these before changing a cell:
 

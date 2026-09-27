@@ -3,12 +3,12 @@
 import unittest
 import math
 import tempfile
-import csv
 from unittest.mock import patch
 from pathlib import Path
 
 import merge_shared_asset_registers as registers
 from openpyxl import load_workbook
+from register_audits import AUDIT_FILENAME, read_audit_rows
 
 from merge_shared_asset_registers import (
     Asset, QUANTITY_AUDIT, decide_groups, explode, take_asset,
@@ -202,11 +202,10 @@ class PhysicalAssetQuantityTests(unittest.TestCase):
 
     def test_sheet_capacity_guard_and_conflict_audit(self):
         with tempfile.TemporaryDirectory() as folder:
-            audit_path = Path(folder) / "quantity-audit.csv"
+            audit_path = Path(folder) / AUDIT_FILENAME
             with self.assertRaisesRegex(ValueError, "exceeding Excel"):
                 explode([asset(item="BP machine", explicit_qty=1048576)], audit_path=audit_path)
-            with audit_path.open(encoding="utf-8-sig", newline="") as handle:
-                self.assertEqual(next(csv.DictReader(handle))["output_rows"], "1048576")
+            self.assertEqual(next(read_audit_rows(audit_path, "quantity"))["output_rows"], "1048576")
         source = asset(item="BP machine", explicit_qty=120, description="130 units")
         self.assertEqual(len(explode([source])), 130)
         self.assertTrue(QUANTITY_AUDIT[0]["conflicting_counts"])

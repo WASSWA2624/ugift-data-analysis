@@ -9,7 +9,7 @@ import re
 import zipfile
 from pathlib import Path
 
-PATH = Path(__file__).resolve().parents[1] / "outputs" / "asset-register-2026-09-23" / "REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx"
+PATH = Path(__file__).resolve().parents[1] / "outputs" / "asset-register" / "REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx"
 CELL = re.compile(
     br'(<c r="A\d+"[^>]*><is><t>)([A-Z][A-Z ]*(?:MC|CITY)?)(?:\s+\d{1,3})( BK</t>)'
 )

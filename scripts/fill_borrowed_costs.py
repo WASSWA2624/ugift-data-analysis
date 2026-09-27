@@ -12,7 +12,7 @@ from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
 PATH = Path(
-    r"D:\coding\ugift-data-analysis\outputs\asset-register-2026-09-23"
+    r"D:\coding\ugift-data-analysis\outputs\asset-register"
     r"\REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx"
 )
 ROW = re.compile(rb'<row r="(\d+)"([^>]*)>(.*?)</row>', re.S)

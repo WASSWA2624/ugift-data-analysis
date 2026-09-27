@@ -16,6 +16,7 @@ import os
 import pickle
 import re
 import sys
+import uuid
 import zipfile
 from xml.etree import ElementTree
 from collections import Counter, defaultdict
@@ -36,6 +37,7 @@ from asset_source_layouts import (
     repair_nyamarwa_air_conditioner,
     repair_reviewed_unit_blocks,
 )
+from register_audits import AUDIT_FILENAME, publish_audit_archive, write_audit_table
 from ugift_places import (
     LocalGovernment,
     _edit_distance,
@@ -56,7 +58,7 @@ from ugift_places import (
 ROOT = Path(__file__).resolve().parents[1]
 GROUPED = ROOT / "raw-data-grouped"
 RECONCILIATION = GROUPED / "facility-reconciliation.csv"
-OUTPUT = ROOT / "outputs" / "asset-register-2026-09-23" / "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx"
+OUTPUT = ROOT / "outputs" / "asset-register" / "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx"
 
 HEADERS = [
     "Equipment/Item",
@@ -2810,15 +2812,9 @@ def mark_unit_records(assets: list[Asset]) -> None:
 QUANTITY_AUDIT: list[dict] = []
 
 
-def write_audit(path: Path, rows: list[dict]) -> None:
+def write_audit(path: Path, rows: list[dict], section: str) -> None:
     """Persist source evidence before any expansion or workbook write can fail."""
-    if not rows:
-        return
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
-        writer.writeheader()
-        writer.writerows(rows)
+    write_audit_table(path, section, rows)
 
 
 def explode(assets: list[Asset], audit_path: Path | None = None) -> list[Asset]:
@@ -2845,7 +2841,7 @@ def explode(assets: list[Asset], audit_path: Path | None = None) -> list[Asset]:
             "line_nbv": asset.nbv, "line_ytd": asset.ytd,
         })
     if audit_path is not None:
-        write_audit(audit_path, QUANTITY_AUDIT)
+        write_audit(audit_path, QUANTITY_AUDIT, "quantity")
     if output_count > 1_048_575:
         largest = sorted(QUANTITY_AUDIT, key=lambda row: row["output_rows"], reverse=True)[:5]
         raise ValueError(f"The source quantities require {output_count:,} rows, exceeding Excel's 1,048,575 asset rows. Review the source counts or authorize multiple sheets. Largest splits: {largest}")
@@ -3858,7 +3854,7 @@ def parse_sources(files: list[Path], cache_path: Path | None = None) -> tuple[di
 def main() -> None:
     global OUTPUT
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--out", type=Path, help="Output directory (defaults to outputs/asset-register-2026-09-23)")
+    parser.add_argument("--out", type=Path, help="Output directory (defaults to outputs/asset-register)")
     parser.add_argument("--parsed-cache", type=Path, help="Save/reuse this trusted local raw-parse checkpoint; source metadata and parser version must match")
     args = parser.parse_args()
     if args.out is not None:
@@ -3867,7 +3863,11 @@ def main() -> None:
     RECONCILED.update(reconciliation_sources())
     files = candidate_files()
     parsed, source_audit = parse_sources(files, args.parsed_cache)
-    write_audit(OUTPUT.with_suffix(".source-audit.csv"), source_audit)
+    audit_path = OUTPUT.parent / AUDIT_FILENAME
+    # Keep prior build evidence intact until both this workbook and all audits
+    # are complete. An interrupted build retains its own diagnostic archive.
+    audit_build_path = audit_path.with_name(f".asset-register-audits.{uuid.uuid4().hex}.in-progress.json.gz")
+    write_audit(audit_build_path, source_audit, "source")
     print(f"Raw sources ready: {sum(len(rows) for rows in parsed.values()):,} rows in {len(parsed):,} returns", flush=True)
     zero_audit = exclude_reviewed_zero_rows(parsed)
     layout_audit = zero_audit + recover_standalone_count_rows(parsed)
@@ -3891,7 +3891,7 @@ def main() -> None:
             "status": "reviewed_unit_records" if summary.get("status") == "reviewed_unit_records" else status,
             "reason": summary["reason"] + "; counts: " + json.dumps(summary["counts_by_item"]),
         })
-    write_audit(OUTPUT.with_suffix(".source-layout-audit.csv"), layout_audit)
+    write_audit(audit_build_path, layout_audit, "source_layout")
     print(f"Source layout review complete: {len(layout_audit):,} audit entries", flush=True)
     # Source layout proof must be settled before counts enter duplicate signatures.
     for source_assets in parsed.values():
@@ -3912,7 +3912,7 @@ def main() -> None:
     overlap_notes.append(
         f"Original DOCX table review recovered {sum(row['status'] == 'recovered' for row in layout_audit):,} "
         f"standalone named/count rows; {sum(row['status'] == 'skipped' for row in layout_audit):,} rows require "
-        f"facility-context review. Evidence is in {OUTPUT.with_suffix('.source-layout-audit.csv').name}."
+        f"facility-context review. Evidence is in {audit_path.name}, source_layout section."
     )
     mirror_repairs = {(row['source_file'], row['source_location']) for row in layout_audit
                       if row['status'] == 'mirror_fragment_repaired'}
@@ -3928,7 +3928,7 @@ def main() -> None:
         f"Source coverage: {len(source_audit):,} selected files inspected; "
         f"{sum(row['status'] == 'parsed' for row in source_audit):,} supplied asset rows; "
         f"{sum(row['status'] == 'no_asset_rows' for row in source_audit):,} had no in-scope asset rows; "
-        f"{len(source_errors):,} were missing or failed to parse. File-level outcomes are in {OUTPUT.with_suffix('.source-audit.csv').name}."
+        f"{len(source_errors):,} were missing or failed to parse. File-level outcomes are in {audit_path.name}, source section."
     )
     central = sorted(((vote, count) for vote, count in CENTRAL_NOTES.items() if not vote.startswith("(")), key=lambda item: -item[1])
     overlap_notes.append(
@@ -3953,8 +3953,7 @@ def main() -> None:
             f"Out of scope: {relative}: {dropped:,} of {total:,} lines name no UgIFT health centre or seed school "
             "(district offices, sub-counties, primary schools, water schemes) and were left out."
         )
-    audit_path = OUTPUT.with_suffix(".quantity-audit.csv")
-    exploded = explode(collected, audit_path=audit_path)
+    exploded = explode(collected, audit_path=audit_build_path)
     print(f"Quantity expansion complete: {len(exploded):,} physical asset rows", flush=True)
     quantity_audit = list(QUANTITY_AUDIT)
     for row in quantity_audit:
@@ -3979,7 +3978,7 @@ def main() -> None:
         f"the sum of per-line quantities is {sum(row['output_rows'] for row in quantity_audit):,}. "
         f"{sum(row['output_rows'] > 1 for row in quantity_audit):,} lines were expanded and "
         f"{sum(row['unit_record_proven'] for row in quantity_audit):,} source unit records retained one row. "
-        f"Per-line count evidence, source file/location and price basis are in {audit_path.name}."
+        f"Per-line count evidence, source file/location and price basis are in {audit_path.name}, quantity section."
     )
     donors, donor_notes = template_donors()
     fill_within_facility(exploded, donors)
@@ -4004,6 +4003,7 @@ def main() -> None:
         seen.add(key)
         print(f"  {total:>4}  {item}  {location}")
     write_workbook(exploded, used, overlap_notes)
+    publish_audit_archive(audit_build_path, audit_path)
     print(f"wrote {OUTPUT}")
     print(f"sources with no in-scope asset rows: {sum(row['status'] == 'no_asset_rows' for row in source_audit)}; source errors/missing: {len(source_errors)}")
 

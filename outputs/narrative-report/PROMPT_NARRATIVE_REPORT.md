@@ -13,15 +13,15 @@ Write into `outputs/narrative-report/`:
 3. `figures/` holding every chart as a PNG at 200 dpi and every photograph used, as copied and resized
 4. `sources.md` listing, for every table, chart, photograph and headline number in the report: the file, sheet or table, and the row range or filter used
 
-Do not change any file under `raw-data-grouped/`, `outputs/asset-register-2026-09-23/` or `outputs/report-templates/`.
+Do not change any file under `raw-data-grouped/`, `outputs/asset-register/` or `outputs/report-templates/`.
 
 ## Read these before writing
 
 - `outputs/report-templates/Report outline _ BB input.docx`: the agreed structure. Follow its sections and order.
 - `outputs/report-templates/Verification report_ 24092026_Draft_ BB.docx`: the client's draft. Reuse its background, objectives, scope, project context and methodology content, rewritten in the style rules below and with every personal name removed.
 - `outputs/report-templates/WhatsApp Image 2026-09-25 at 15.07.09.jpeg`: a handwritten list of the counts the client wants. Every item on it becomes a row of the summary table in the findings (see "Required summary counts").
-- `outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`: the register the numbers come from (sheet `Asset Register`, one row per physical asset, 64 columns; the `Read Me` sheet explains every column). Use `ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx` when you need the wording the field team wrote, and `BOOK_TYPE_CODE.md` for the list of votes.
-- `outputs/asset-register-2026-09-23/ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`: the same rows with only the values the field records state. Use it when the report must say what was recorded on the ground rather than valued.
+- `outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`: the register the numbers come from (sheet `Asset Register`, one row per physical asset, 64 columns; the `Read Me` sheet explains every column). Use `ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx` when you need the wording the field team wrote, and the `BOOK_TYPE_CODE` section of `outputs/asset-register/README.md` for the list of votes.
+- `outputs/asset-register/ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`: the same rows with only the values the field records state. Use it when the report must say what was recorded on the ground rather than valued.
 - `raw-data-grouped/README.md`, `raw-data-grouped/facility-data-status.pdf`, `raw-data-grouped/facility-reconciliation.csv`, `raw-data-grouped/master-source-rows.csv`, `raw-data-grouped/supervisor-decisions.csv`: facility coverage, facilities on the master list that were not found or were renamed, facilities found on the ground that were not on the list, and the decisions taken on them.
 - `SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx` (columns Region, Sub-region, District, School or sub-county, Phase, Status) and `team-distributions.docx` (Region, Local Government, numbers of schools and health facilities): the region and sub-region of every local government, and the number of facilities per local government.
 - `GOU Asset Accounting Policies and Guidelines 2023.pdf`, sections 3.2.1, 3.3.3, 5.5 and 5.7 and Annex 1: the recognition, useful-life and depreciation basis the register applied. Cite the section when the report explains a valuation.

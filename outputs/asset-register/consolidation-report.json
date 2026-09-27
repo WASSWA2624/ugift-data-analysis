@@ -1,0 +1,530 @@
+{
+  "generated_utc": "2026-09-27T15:41:39.405963+00:00",
+  "status": "complete",
+  "canonical_workbook": "REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+  "asset_rows": 225133,
+  "merge": {
+    "revised_asset_rows_changed": 668,
+    "blank_cells_filled": 4918,
+    "existing_cells_revised": 3206,
+    "nonblank_values_cleared": 0,
+    "physical_rows_added_or_removed": 0,
+    "rule": "Revised values retained with their associated cost/classification/depreciation fields; original values remain in revision_changes and external backup."
+  },
+  "additional_source_fills": {
+    "cells": 2764,
+    "columns": {
+      "AR": 2627,
+      "AS": 2,
+      "BD": 26,
+      "AQ": 109
+    },
+    "method": "Unique exact original file, worksheet row and physical unit ordinal/count; no cross-asset or ambiguous identifiers."
+  },
+  "partial_columns": [
+    {
+      "column": "C",
+      "header": "ASSET_CATEGORY_MAJOR",
+      "blank_before_merge": 23154,
+      "blank_after_revision_merge": 23092,
+      "additional_source_fills": 0,
+      "blank_remaining": 23092,
+      "reason": "Not applicable under existing asset-recognition rules, or insufficient classification evidence."
+    },
+    {
+      "column": "D",
+      "header": "ASSET_CATEGORY_MINOR1",
+      "blank_before_merge": 23154,
+      "blank_after_revision_merge": 23092,
+      "additional_source_fills": 0,
+      "blank_remaining": 23092,
+      "reason": "Not applicable under existing asset-recognition rules, or insufficient classification evidence."
+    },
+    {
+      "column": "E",
+      "header": "ASSET_CATEGORY_MINOR2",
+      "blank_before_merge": 23154,
+      "blank_after_revision_merge": 23092,
+      "additional_source_fills": 0,
+      "blank_remaining": 23092,
+      "reason": "Not applicable under existing asset-recognition rules, or insufficient classification evidence."
+    },
+    {
+      "column": "F",
+      "header": "ASSET_CATEGORY_MINOR3",
+      "blank_before_merge": 23154,
+      "blank_after_revision_merge": 23092,
+      "additional_source_fills": 0,
+      "blank_remaining": 23092,
+      "reason": "Not applicable under existing asset-recognition rules, or insufficient classification evidence."
+    },
+    {
+      "column": "G",
+      "header": "ASSET_TYPE",
+      "blank_before_merge": 31577,
+      "blank_after_revision_merge": 30909,
+      "additional_source_fills": 0,
+      "blank_remaining": 30909,
+      "reason": "Not applicable under existing asset-recognition rules, or insufficient classification evidence."
+    },
+    {
+      "column": "M",
+      "header": "FIXED_ASSETS_COST",
+      "blank_before_merge": 4514,
+      "blank_after_revision_merge": 3846,
+      "additional_source_fills": 0,
+      "blank_remaining": 3846,
+      "reason": "No supported cost or carrying value available; missing amounts are not zero."
+    },
+    {
+      "column": "V",
+      "header": "ASSET_EXP_ACCT_ACCOUNT",
+      "blank_before_merge": 23305,
+      "blank_after_revision_merge": 22639,
+      "additional_source_fills": 0,
+      "blank_remaining": 22639,
+      "reason": "Not applicable under existing asset-recognition rules, or insufficient classification evidence."
+    },
+    {
+      "column": "AE",
+      "header": "ASSET_CLR_ACCT_ACCOUNT",
+      "blank_before_merge": 31577,
+      "blank_after_revision_merge": 30909,
+      "additional_source_fills": 0,
+      "blank_remaining": 30909,
+      "reason": "Not applicable under existing asset-recognition rules, or insufficient classification evidence."
+    },
+    {
+      "column": "AF",
+      "header": "DATE_PLACED_IN_SERVICE",
+      "blank_before_merge": 573,
+      "blank_after_revision_merge": 573,
+      "additional_source_fills": 0,
+      "blank_remaining": 573,
+      "reason": "Service date unavailable or the item is incomplete/work in progress; no date invented."
+    },
+    {
+      "column": "AH",
+      "header": "DEPRN_METHOD_CODE",
+      "blank_before_merge": 24535,
+      "blank_after_revision_merge": 24535,
+      "additional_source_fills": 0,
+      "blank_remaining": 24535,
+      "reason": "Depreciation method is intentionally blank where the asset does not depreciate."
+    },
+    {
+      "column": "AS",
+      "header": "MODEL_NUMBER",
+      "blank_before_merge": 224510,
+      "blank_after_revision_merge": 224510,
+      "additional_source_fills": 2,
+      "blank_remaining": 224508,
+      "reason": "No unambiguous explicit identifier or manufacturer matched to this physical asset."
+    },
+    {
+      "column": "BA",
+      "header": "ATTRIBUTE4(Item Description)",
+      "blank_before_merge": 50981,
+      "blank_after_revision_merge": 50981,
+      "additional_source_fills": 0,
+      "blank_remaining": 50981,
+      "reason": "No additional source description; the item name is not substituted for missing detail."
+    },
+    {
+      "column": "BE",
+      "header": "ATTRIBUTE8(Date Placed In Service)",
+      "blank_before_merge": 573,
+      "blank_after_revision_merge": 573,
+      "additional_source_fills": 0,
+      "blank_remaining": 573,
+      "reason": "Service date unavailable or the item is incomplete/work in progress; no date invented."
+    },
+    {
+      "column": "BF",
+      "header": "ATTRIBUTE9(Recoverable cost)",
+      "blank_before_merge": 4510,
+      "blank_after_revision_merge": 3844,
+      "additional_source_fills": 0,
+      "blank_remaining": 3844,
+      "reason": "No supported cost or carrying value available; missing amounts are not zero."
+    },
+    {
+      "column": "BG",
+      "header": "ATTRIBUTE10(Cost)",
+      "blank_before_merge": 4514,
+      "blank_after_revision_merge": 3846,
+      "additional_source_fills": 0,
+      "blank_remaining": 3846,
+      "reason": "No supported cost or carrying value available; missing amounts are not zero."
+    },
+    {
+      "column": "BI",
+      "header": "ATTRIBUTE12(Net Book Value)",
+      "blank_before_merge": 4511,
+      "blank_after_revision_merge": 3845,
+      "additional_source_fills": 0,
+      "blank_remaining": 3845,
+      "reason": "No supported cost or carrying value available; missing amounts are not zero."
+    },
+    {
+      "column": "AQ",
+      "header": "SERIAL_NUMBER",
+      "blank_before_merge": 218965,
+      "blank_after_revision_merge": 218965,
+      "additional_source_fills": 109,
+      "blank_remaining": 218856,
+      "reason": "No unambiguous explicit identifier or manufacturer matched to this physical asset."
+    },
+    {
+      "column": "BD",
+      "header": "ATTRIBUTE7(Date Of Purchase)",
+      "blank_before_merge": 171614,
+      "blank_after_revision_merge": 171614,
+      "additional_source_fills": 26,
+      "blank_remaining": 171588,
+      "reason": "No reliable purchase date matched to the asset; service dates are not substituted."
+    },
+    {
+      "column": "AR",
+      "header": "MANUFACTURER_NAME",
+      "blank_before_merge": 224934,
+      "blank_after_revision_merge": 224934,
+      "additional_source_fills": 2627,
+      "blank_remaining": 222307,
+      "reason": "No unambiguous explicit identifier or manufacturer matched to this physical asset."
+    }
+  ],
+  "fully_empty_template_columns": [
+    "ASSET_EXP_ACCT_FUND_SOURCE",
+    "ASSET_EXP_ACCT_PROGRAMME",
+    "ASSET_EXP_ACCT_COST_CENTER",
+    "ASSET_EXP_ACCT_PROJECT",
+    "ASSET_EXP_ACCT_BUDGET_OUTPUTS",
+    "ASSET_EXP_ACCT_SPARE",
+    "ASSET_EXP_ACCT_GEO_LOCATION",
+    "ASSET_CLR_ACCT_FUND",
+    "ASSET_CLR_ACCT_FUND_SOURCE",
+    "ASSET_CLR_ACCT_PROGRAMME",
+    "ASSET_CLR_ACCT_COST_CENTER",
+    "ASSET_CLR_ACCT_PROJECT",
+    "ASSET_CLR_ACCT_BUDGET_OUTPUTS",
+    "ASSET_CLR_ACCT_SPARE",
+    "ASSET_CLR_ACCT_GEO_LOCATION",
+    "ASSET_KEY_SEGMENT1",
+    "EMPLOYEE_NUMBER",
+    "AMORTIZATION_START_DATE",
+    "AMORTIZE_NBV_FLAG"
+  ],
+  "audit_migration": {
+    "source": {
+      "rows": 910,
+      "columns": 4,
+      "original_file": "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.source-audit.csv"
+    },
+    "source_layout": {
+      "rows": 227,
+      "columns": 6,
+      "original_file": "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.source-layout-audit.csv"
+    },
+    "quantity": {
+      "rows": 82952,
+      "columns": 16,
+      "original_file": "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.quantity-audit.csv"
+    }
+  },
+  "preservation": {
+    "passed": true,
+    "asset_rows": 225133,
+    "filled_cells": 2764,
+    "changed_rows": 2655,
+    "readme_cells_updated": 1,
+    "all_untargeted_cells_and_worksheet_metadata_byte_identical": true,
+    "target_row_heights_adjusted_only_for_readability": 1,
+    "preserved_package_parts": [
+      "docProps/app.xml",
+      "docProps/core.xml",
+      "xl/theme/theme1.xml",
+      "xl/styles.xml",
+      "_rels/.rels",
+      "xl/workbook.xml",
+      "xl/_rels/workbook.xml.rels",
+      "[Content_Types].xml"
+    ],
+    "sha256": {
+      "revised_input": "d6c442e48982f648863724933537b9525cdcd2df3b2421367f4da2d1f4de380a",
+      "final": "a6eaae9338b06213c8fc3b0b49625f9eb4240525282683c2278aefc1c3642802"
+    },
+    "scope": "All rows/package parts checked; every additional fill checked against its authored value and blank-cell precondition. No populated value or physical asset row removed."
+  },
+  "baseline_matching": {
+    "baseline_source_rows": 49079,
+    "source_rows_without_exact_worksheet_locator": 12091,
+    "baseline_asset_rows": 168223,
+    "rejected_incomplete_or_invalid_source_dates": 26831,
+    "baseline_unique_provenance_keys": 143543,
+    "ambiguous_baseline_keys": 0,
+    "ref_asset_rows": 225133,
+    "ref_exact_key_without_baseline_donor": 139231,
+    "ref_exact_unique_baseline_matches": 85423,
+    "ref_without_exact_worksheet_locator": 479,
+    "existing_value_disagrees_AQ": 2,
+    "existing_value_disagrees_AS": 12,
+    "ambiguous_ref_provenance_keys": 0
+  },
+  "recovery_backup": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27",
+  "removed_repository_files": [
+    {
+      "relative_path": "tmp/reconciliation/chat_attachments/ASSET VERIFICATION AND RECORDING TOOL KIT 222 (3).docx",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_attachments\\ASSET VERIFICATION AND RECORDING TOOL KIT 222 (3).docx",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_attachments\\ASSET VERIFICATION AND RECORDING TOOL KIT 222 (3).docx",
+      "bytes": 235251,
+      "sha256": "36173465B72F84B25047A3E23FCE61D4EBE6D4E1A65D5258B8B9AB6101176045",
+      "retained_duplicate": "D:\\coding\\ugift-data-analysis\\raw-data-grouped\\team-18\\Kamuli MC\\Busota-HC-III\\ASSET VERIFICATION AND RECORDING TOOL KIT 222 (3).docx",
+      "reason": "Exact duplicate retained in raw-data-grouped",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_attachments/Icheme HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_attachments\\Icheme HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_attachments\\Icheme HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx",
+      "bytes": 183359,
+      "sha256": "5896160D46EC836812E27DF84745B7F545636EF0579085293137A1664F19C724",
+      "retained_duplicate": "D:\\coding\\ugift-data-analysis\\raw-data-grouped\\team-05\\Oyam\\Iceme-HC-III\\Icheme HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx",
+      "reason": "Exact duplicate retained in raw-data-grouped",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_attachments/Onywako HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_attachments\\Onywako HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_attachments\\Onywako HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx",
+      "bytes": 188129,
+      "sha256": "ABA55E8D06F39BA312237169D73548873099467476A9CE109896BFC9175B6A8D",
+      "retained_duplicate": "D:\\coding\\ugift-data-analysis\\raw-data-grouped\\team-05\\Lira\\Onywako-HC-III\\Onywako HC IIII_ASSET VERIFICATION AND RECORDING TOOL KIT.docx",
+      "reason": "Exact duplicate retained in raw-data-grouped",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_attachments/WhatsApp Chat with DATA MANAGEMENT UGIFT.txt",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_attachments\\WhatsApp Chat with DATA MANAGEMENT UGIFT.txt",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_attachments\\WhatsApp Chat with DATA MANAGEMENT UGIFT.txt",
+      "bytes": 3785,
+      "sha256": "CE5940CDD752D9E9E38AD4EB0C24A9702F152ED79511F14C2512F9473A5A8D03",
+      "retained_duplicate": "D:\\coding\\ugift-data-analysis\\raw-data-grouped\\_multi-team\\programme-documents\\data-management-chat\\WhatsApp Chat with DATA MANAGEMENT UGIFT.txt",
+      "reason": "Exact duplicate retained in raw-data-grouped",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_attachments/data updates - western.xls",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_attachments\\data updates - western.xls",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_attachments\\data updates - western.xls",
+      "bytes": 119808,
+      "sha256": "2B81C0B00A0033B06C5D57DD27A1F4EFE885D41B65AA2A5514322ACD2B26A739",
+      "retained_duplicate": "D:\\coding\\ugift-data-analysis\\raw-data-grouped\\_multi-team\\teams-19-21\\data updates - western.xls",
+      "reason": "Exact duplicate retained in raw-data-grouped",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/bin/runxlrd.py",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\bin\\runxlrd.py",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\bin\\runxlrd.py",
+      "bytes": 16152,
+      "sha256": "BB0AD9E30AC8C4623DD07C63D5C0B8D2A0253FADE3E725DDF7DBE70B9EE307EF",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd-2.0.2.dist-info/INSTALLER",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\INSTALLER",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\INSTALLER",
+      "bytes": 4,
+      "sha256": "CEEBAE7B8927A3227E5303CF5E0F1F7B34BB542AD7250AC03FBCDE36EC2F1508",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd-2.0.2.dist-info/LICENSE",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\LICENSE",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\LICENSE",
+      "bytes": 3771,
+      "sha256": "B5A5DBCE60265E305A815A6CB83ED07F24519D8BA644F2A307994488BCED8815",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd-2.0.2.dist-info/METADATA",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\METADATA",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\METADATA",
+      "bytes": 3513,
+      "sha256": "AE263DBA4D616210BB2D709CD091BA453984314F79F8F50F44AF864352656DEC",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd-2.0.2.dist-info/RECORD",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\RECORD",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\RECORD",
+      "bytes": 1843,
+      "sha256": "374405EEA461BFBFEB356BC7DEB53A70C332156AB488346C21CB01763DAE1D28",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd-2.0.2.dist-info/REQUESTED",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\REQUESTED",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\REQUESTED",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd-2.0.2.dist-info/WHEEL",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\WHEEL",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\WHEEL",
+      "bytes": 110,
+      "sha256": "5B367C7308E1F25D23B542CD8D8AB51E9AFE582A824603EBFBE4D7E0FE48D56A",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd-2.0.2.dist-info/top_level.txt",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\top_level.txt",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd-2.0.2.dist-info\\top_level.txt",
+      "bytes": 5,
+      "sha256": "9D9FADDD273F0AA36C72D4B72FE577EAA5F00B90EE005BE40758A7240A45FEF3",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd/__init__.py",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd\\__init__.py",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd\\__init__.py",
+      "bytes": 7320,
+      "sha256": "926B88133F1CBAD6AD1A38D6DC499A0294C481C1E672C628D027161FFB61D8FD",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd/biffh.py",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd\\biffh.py",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd\\biffh.py",
+      "bytes": 16651,
+      "sha256": "1A3B41A08F4F34811D6D99864EF7C343C1EE85988B25DDA87DDA36AA6BA7CE60",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd/book.py",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd\\book.py",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd\\book.py",
+      "bytes": 57527,
+      "sha256": "D4B1F1C9631BE74641230525642E14B4815E9B9CBCA3C337CC00DC74F085FFCE",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd/compdoc.py",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd\\compdoc.py",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd\\compdoc.py",
+      "bytes": 21091,
+      "sha256": "DF191FB896CB44644C74F899541B160201A4B70EC99DAFB0DE9FE5713093E984",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd/formatting.py",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd\\formatting.py",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd\\formatting.py",
+      "bytes": 45573,
+      "sha256": "E8C87A18E33B1594E3D1C2781474A5D02568FBC227603BF6288653332704C3A4",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd/formula.py",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd\\formula.py",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd\\formula.py",
+      "bytes": 94460,
+      "sha256": "72011735609A6152B3219C1AEC85B4B43702D485F352F86A25750E2FBE57A1AC",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd/info.py",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd\\info.py",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd\\info.py",
+      "bytes": 36,
+      "sha256": "030B2F2F9ED9FA598A0C368205F515A24C0CC0FBC92E7F638C6B6A3FD81EBCEC",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd/sheet.py",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd\\sheet.py",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd\\sheet.py",
+      "bytes": 106806,
+      "sha256": "9A1C04A84B5E508418F632B90B25FCEECB6E9363265D444E35FF3A91940C858D",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd/timemachine.py",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd\\timemachine.py",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd\\timemachine.py",
+      "bytes": 1757,
+      "sha256": "EC2B54EC563A9905BB1D23F91633352BDA487CD7B1542B7F3C95C6D8CDC51007",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    },
+    {
+      "relative_path": "tmp/reconciliation/chat_pydeps/xlrd/xldate.py",
+      "source_path": "D:\\coding\\ugift-data-analysis\\tmp\\reconciliation\\chat_pydeps\\xlrd\\xldate.py",
+      "backup_path": "D:\\coding\\ugift-data-analysis-backups\\cleanup-2026-09-27\\repo-cleanup\\tmp\\reconciliation\\chat_pydeps\\xlrd\\xldate.py",
+      "bytes": 7934,
+      "sha256": "4BEB9468B5FC91AB86CB64A45FF33E4BE141AAA43A1FD11F4C0569BF914C5F42",
+      "retained_duplicate": null,
+      "reason": "Unused tracked vendored xlrd package; scripts/tests use installed xlrd",
+      "removed": true
+    }
+  ],
+  "pipeline_validation": "See validation-report.json; its scan used the revised workbook before metadata-only additions. The preservation check establishes that all other cells remain unchanged.",
+  "completed_utc": "2026-09-27T15:42:41.012761+00:00",
+  "package_directory": "D:\\coding\\ugift-data-analysis\\outputs\\asset-register",
+  "total_blank_asset_cells_filled": 7682,
+  "preserved_original_audit_rows": {
+    "source": 910,
+    "source_layout": 227,
+    "quantity": 82952
+  },
+  "validation_findings": 2924,
+  "validation_warnings": 3260,
+  "renamed_folders": {
+    "outputs/asset-register-2026-09-22": "outputs/asset-register-baseline",
+    "outputs/asset-register-2026-09-23": "outputs/asset-register"
+  },
+  "final_file_sha256": {
+    "ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx": "b4f0ea22c9aed77085d587bc4b142c00bf9a472f42ed1b31bc3113c8a2014e3c",
+    "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx": "7ba6d88cf2eb60871224bf0c25834ac6c333f1f8ff0c1752995f88d7968a67d4",
+    "asset-register-audits.json.gz": "4a5d7db392572fb1c8d73417b8ac16578ce550c9f4711cb8658f708f1b31fc1e",
+    "README.md": "3349ea01adb69f6009d6aa9045ef77525ba98579f3773eb345a1503fe80f58d1",
+    "REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx": "a6eaae9338b06213c8fc3b0b49625f9eb4240525282683c2278aefc1c3642802",
+    "validation-report.json": "454ca0c51f6d9ca7aad6f412411c2279779e459d114fce97586b0c7917346832"
+  }
+}

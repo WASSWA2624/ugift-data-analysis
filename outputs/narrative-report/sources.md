@@ -4,8 +4,10 @@ Final report: `outputs/narrative-report/UgIFT Asset Verification Report.docx`.
 
 ## Register scope and counting basis
 
-REF workbook: `outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE_REVISED.xlsx`; worksheet `Asset Register`, data rows 2 through 225134, columns A:BL (64). All 225133 rows are counted once. The REF values were refreshed for this report; MF and SK retain the source account.
-MF workbook: `outputs/asset-register-2026-09-23/ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`; Asset Register rows 2:225134, A:BL. SK workbook: `outputs/asset-register-2026-09-23/ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx`; Asset Register rows 2:225134, A:U (21). Row identities and row counts checked across the three workbooks.
+Historical basis (27 September 2026): this report was calculated from the revision then named `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE_REVISED.xlsx`. The current canonical workbook is listed below. The report figures remain a record of that revision and have not been recertified against the subsequent consolidation.
+
+REF workbook: `outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`; worksheet `Asset Register`, data rows 2 through 225134, columns A:BL (64). All 225133 rows are counted once. The REF values were refreshed for this report; MF and SK retain the source account.
+MF workbook: `outputs/asset-register/ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`; Asset Register rows 2:225134, A:BL. SK workbook: `outputs/asset-register/ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx`; Asset Register rows 2:225134, A:U (21). Row identities and row counts checked across the three workbooks.
 
 Money uses M FIXED_ASSETS_COST and AK DEPRN_RESERVE. NBV is max(cost less reserve, 0) on each row, then summed; absent cost stays outside the value total. Whole-shilling figures are rounded only after summing the source numeric values. Thus the rounded group amounts may differ by UGX 1 from the rounded programme amount. The zero floor means programme NBV need not equal aggregate cost minus aggregate depreciation.
 
@@ -1603,7 +1605,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
 - `APAC BK`: Northern / Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 184: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 172: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 173: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 174: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 175: Northern, Lango
 - `APAC MC BK`: Northern / Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 185: Northern, Lango
 - `ARUA BK`: Northern / West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 31: Northern, West Nile
-- `ARUA RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `ARUA RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `BUDAKA BK`: Eastern / Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 6: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 7: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 95: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 96: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 61: Eastern, Bukedi
 - `BUDUDA BK`: Eastern / Bugisu; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 8: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 9: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 62: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 63: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 64: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 65: Eastern, Bukedi; raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx, table 2 row 20, Region group
 - `BUGIRI BK`: Eastern / Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 108: Eastern, Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 241: Eastern, Busoga
@@ -1620,33 +1622,33 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
 - `BUNYANGABU BK`: Western / Rwenzori and Tooro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 57: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 58: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 252: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 325: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 326: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 327: Western, Toro; team-distributions.docx, table 1 rows 137 to 147: Rwenzori / Tooro
 - `BUSHENYI BK`: Western / Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 215: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 216: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 240: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 241: Western, Ankole
 - `BUSIA BK`: Eastern / Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 97: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 66: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 67: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 68: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 69: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 70: Eastern, Bukedi
-- `BUTABIKA NRMH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `BUTABIKA NRMH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `BUTALEJA BK`: Eastern / Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 10: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 98: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 72: Eastern, Bukedi
 - `BUTAMBALA BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 46: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 229: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 2: Central, Buganda
 - `BUTEBO BK`: Eastern / Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 99: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 59: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 60: Eastern, Bukedi
 - `BUVUMA BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 65: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 3: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 4: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 5: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 6: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 7: Central, Buganda
 - `BUYENDE BK`: Eastern / Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 110: Eastern, Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 84: Eastern, Busoga
 - `DOKOLO BK`: Northern / Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 186: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 187: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 176: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 177: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 178: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 179: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 180: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 181: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 182: Northern, Lango
-- `ENTEBBE RH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `ENTEBBE RH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `FORT PORTAL BK`: Western / Rwenzori and Tooro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 59: Western, Toro; team-distributions.docx, table 1 rows 137 to 147: Rwenzori / Tooro
 - `FORT PORTAL CITY BK`: Western / Rwenzori and Tooro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 328: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 329: Western, Toro; team-distributions.docx, table 1 rows 137 to 147: Rwenzori / Tooro
-- `FORT PORTAL RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `FORT PORTAL RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `GOMBA BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 66: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 8: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 9: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 10: Central, Buganda
 - `GULU BK`: Northern / Acholi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 26: Northern, Acholi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 175: Northern, Acholi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 149: Northern, Acholi
-- `GULU RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `GULU RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `HOIMA BK`: Western / Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 231: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 232: Western, Bunyoro
 - `HOIMA CITY BK`: Western / Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 231: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 232: Western, Bunyoro
-- `HOIMA RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `HOIMA RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `IBANDA BK`: Western / Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 39: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 217: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 242: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 243: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 244: Western, Ankole
 - `IGANGA BK`: Eastern / Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 111: Eastern, Busoga
 - `ISINGIRO BK`: Western / Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 218: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 245: Western, Ankole
 - `JINJA BK`: Eastern / Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 112: Eastern, Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 113: Eastern, Busoga
 - `JINJA CITY BK`: Eastern / Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 13: Eastern, Busoga
-- `JINJA RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `JINJA RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `KAABONG BK`: Northern / Karamoja; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 20: Northern, Karamoja
 - `KABALE BK`: Western / Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 242: Western, Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 304: Western, Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 305: Western, Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 306: Western, Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 307: Western, Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 308: Western, Kigezi
 - `KABALE MC BK`: Western / Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 309: Western, Kigezi
-- `KABALE RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `KABALE RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `KABAROLE BK`: Western / Rwenzori and Tooro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 60: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 253: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 330: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 331: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 332: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 333: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 334: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 335: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 336: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 373: Western, Toro; team-distributions.docx, table 1 rows 137 to 147: Rwenzori / Tooro
 - `KABERAMAIDO BK`: Eastern / Teso; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 160: Eastern, Teso
 - `KAGADI BK`: Western / Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 48: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 49: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 50: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 233: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 288: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 289: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 290: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 291: Western, Bunyoro
@@ -1666,9 +1668,9 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
 - `KASESE BK`: Western / Rwenzori and Tooro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 61: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 340: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 341: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 342: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 343: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 344: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 374: Western, Toro; team-distributions.docx, table 1 rows 137 to 147: Rwenzori / Tooro
 - `KASSANDA BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 70: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 71: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 11: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 12: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 13: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 14: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 15: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 16: Central, Buganda
 - `KATAKWI BK`: Eastern / Teso; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 163: Eastern, Teso; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 164: Eastern, Teso; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 131: Eastern, Teso; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 132: Eastern, Teso; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 133: Eastern, Teso
-- `KAWEMPE RH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `KAWEMPE RH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `KAYUNGA BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 72: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 17: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 18: Central, Buganda
-- `KAYUNGA RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `KAYUNGA RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `KAZO BK`: Western / Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 40: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 246: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 247: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 248: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 249: Western, Ankole
 - `KCCA BK`: National / National; REF workbook Read Me row13 central-government vote list; REF register remarks Facility type MDA
 - `KIBAALE BK`: Western / Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 236: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 237: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 300: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 301: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 302: Western, Bunyoro
@@ -1676,7 +1678,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
 - `KIBUKU BK`: Eastern / Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 100: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 101: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 102: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 73: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 74: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 75: Eastern, Bukedi
 - `KIIRA MC BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 359: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 360: Central, Buganda
 - `KIKUUBE BK`: Western / Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 51: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 238: Western, Bunyoro
-- `KIRUDDU RH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `KIRUDDU RH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `KIRUHURA BK`: Western / Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 41: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 42: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 219: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 250: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 251: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 252: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 253: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 254: Western, Ankole
 - `KIRYANDONGO BK`: Western / Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 52: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 239: Western, Bunyoro
 - `KISORO BK`: Western / Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 54: Western, Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 244: Western, Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 313: Western, Kigezi
@@ -1697,50 +1699,50 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
 - `LAMWO BK`: Northern / Acholi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 27: Northern, Acholi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 178: Northern, Acholi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 151: Northern, Acholi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 152: Northern, Acholi
 - `LIRA BK`: Northern / Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 191: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 192: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 189: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 190: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 191: Northern, Lango
 - `LIRA CITY BK`: Northern / Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 366: Northern, Lango
-- `LIRA RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `LIRA RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `LUUKA BK`: Eastern / Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 119: Eastern, Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 120: Eastern, Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 94: Eastern, Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 95: Eastern, Busoga
 - `LUWEERO BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 78: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 79: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 27: Central, Buganda
 - `LWENGO BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 80: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 81: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 28: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 29: Central, Buganda
 - `LYANTONDE BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 3: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 82: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 30: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 31: Central, Buganda
-- `MAAIF BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `MAAIF BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `MADI OKOLLO BK`: Northern / West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 211: Northern, West Nile
 - `MAKINDYE SSABAGABO MC BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 51: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 357: Central, Buganda
 - `MANAFWA BK`: Eastern / Bugisu; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 16: Eastern, Elgon; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 17: Eastern, Elgon; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 135: Eastern, Elgon; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 136: Eastern, Elgon; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 137: Eastern, Elgon; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 119: Eastern, Elgon; raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx, table 2 row 19, Region group
 - `MARACHA BK`: Northern / West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 33: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 200: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 212: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 213: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 214: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 215: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 216: Northern, West Nile
 - `MASAKA BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 83: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 32: Central, Buganda
 - `MASAKA CITY BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 83: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 32: Central, Buganda
-- `MASAKA RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `MASAKA RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `MASINDI BK`: Western / Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 53: Western, Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 240: Western, Bunyoro
 - `MASINDI MC BK`: Western / Bunyoro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 303: Western, Bunyoro
 - `MAYUGE BK`: Eastern / Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 121: Eastern, Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 122: Eastern, Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 96: Eastern, Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 97: Eastern, Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 98: Eastern, Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 99: Eastern, Busoga; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 100: Eastern, Busoga
 - `MBALE BK`: Eastern / Bugisu; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 18: Eastern, Elgon; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 138: Eastern, Elgon; raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx, table 2 row 17, Region group
-- `MBALE RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `MBALE RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `MBARARA BK`: Western / Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 220: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 221: Western, Ankole
 - `MBARARA CITY BK`: Western / Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 220: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 221: Western, Ankole
-- `MBARARA RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
-- `MGLSD BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `MBARARA RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
+- `MGLSD BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `MITOOMA BK`: Western / Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 222: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 223: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 256: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 257: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 258: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 259: Western, Ankole
 - `MITYANA BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 84: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 34: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 35: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 36: Central, Buganda
-- `MODV BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
-- `MOES BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
-- `MOFPED BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
-- `MOH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
-- `MOLG BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
-- `MOLHUD BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `MODV BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
+- `MOES BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
+- `MOFPED BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
+- `MOH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
+- `MOLG BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
+- `MOLHUD BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `MOROTO BK`: Northern / Karamoja; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 151: Northern, Karamoja; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 152: Northern, Karamoja; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 160: Northern, Karamoja
-- `MOROTO RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
-- `MOWE BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
-- `MOWT BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `MOROTO RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
+- `MOWE BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
+- `MOWT BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `MOYO BK`: Northern / West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 201: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 217: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 218: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 367: Northern, West Nile
 - `MPIGI BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 85: Central, Buganda
 - `MUBENDE BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 4: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 86: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 37: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 38: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 39: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 40: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 41: Central, Buganda
 - `MUBENDE MC BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 42: Central, Buganda
-- `MUBENDE RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `MUBENDE RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `MUKONO BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 87: Central, Buganda
 - `MUKONO MC BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 43: Central, Buganda
-- `MULAGO NRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `MULAGO NRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `NABILATUK BK`: Northern / Karamoja; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 153: Northern, Karamoja
-- `NAGURU RH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `NAGURU RH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `NAKAPIRIPIRIT BK`: Northern / Karamoja; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 21: Northern, Karamoja; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 154: Northern, Karamoja
 - `NAKASEKE BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 5: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 88: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 89: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 44: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 45: Central, Buganda
 - `NAKASONGOLA BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 90: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 46: Central, Buganda
@@ -1750,22 +1752,22 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
 - `NANSANA MC BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 356: Central, Buganda
 - `NAPAK BK`: Northern / Karamoja; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 155: Northern, Karamoja; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 156: Northern, Karamoja; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 157: Northern, Karamoja
 - `NEBBI BK`: Northern / West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 34: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 35: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 202: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 219: Northern, West Nile
-- `NEMA BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `NEMA BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `NGORA BK`: Eastern / Teso; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 167: Eastern, Teso
 - `NTOROKO BK`: Western / Rwenzori and Tooro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 63: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 64: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 260: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 354: Western, Toro; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 355: Western, Toro; team-distributions.docx, table 1 rows 137 to 147: Rwenzori / Tooro
 - `NTUNGAMO BK`: Western / Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 43: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 44: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 224: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 260: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 261: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 262: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 263: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 264: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 265: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 266: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 267: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 268: Western, Ankole
 - `NTUNGAMO MC BK`: Western / Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 269: Western, Ankole
 - `NWOYA BK`: Northern / Acholi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 36: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 203: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 220: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 221: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 222: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 223: Northern, West Nile; raw-data-grouped/_multi-team/programme-documents/All WIP Ugift/All WIP Ugift/WEMIS DISTRICT EQUIPMENT.rar :: WEMIS DISTRICT EQUIPMENT/RC1/ACHOLI/Nwoya/doc00036920260811110821.pdf, original archive hierarchy ACHOLI/Nwoya; enclosed three-page record identifies Nwoya District
-- `OAG BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `OAG BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `OBONGI BK`: Northern / West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 204: Northern, West Nile
 - `OMORO BK`: Northern / Acholi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 205: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 224: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 225: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 226: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 368: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 369: Northern, West Nile; raw-data-grouped/team-05/Omoro/Abwoch-HC-III/Abwoch HC III_ASSET VERIFICATION AND RECORDING TOOL KIT 222.docx, table 1 row 3: SUB-REGION ACHOLI
-- `OPM BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `OPM BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `OTUKE BK`: Northern / Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 29: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 194: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 192: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 193: Northern, Lango
 - `OYAM BK`: Northern / Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 30: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 195: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 194: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 195: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 196: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 197: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 198: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 199: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 200: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 201: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 202: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 203: Northern, Lango
 - `PADER BK`: Northern / Acholi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 179: Northern, Acholi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 196: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 204: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 205: Northern, Lango; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 206: Northern, Lango; raw-data-grouped/team-04/Pader/Lapul-Ocwida-HC-III/1 Lapulocwida HC - Pader District.docx, table 1 row 3: SUB-REGION ACHOLI
 - `PAKWACH BK`: Northern / West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 206: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 207: Northern, West Nile
 - `PALLISA BK`: Eastern / Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 103: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 104: Eastern, Bukedi
-- `PPDA BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `PPDA BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `RAKAI BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 91: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 92: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 47: Central, Buganda
 - `RUBANDA BK`: Western / Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 245: Western, Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 246: Western, Kigezi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 315: Western, Kigezi
 - `RUBIRIZI BK`: Western / Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 45: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 225: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 270: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 271: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 272: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 273: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 274: Western, Ankole
@@ -1779,14 +1781,14 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
 - `SHEEMA MC BK`: Western / Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 281: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 282: Western, Ankole; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 283: Western, Ankole
 - `SIRONKO BK`: Eastern / Bugisu; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 140: Eastern, Elgon; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 141: Eastern, Elgon; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 120: Eastern, Elgon; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 121: Eastern, Elgon; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 122: Eastern, Elgon; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 123: Eastern, Elgon; raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UGiFT-consolidated-field-report.docx, table 2 row 21, Region group
 - `SOROTI BK`: Eastern / Teso; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 170: Eastern, Teso; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 171: Eastern, Teso
-- `SOROTI RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `SOROTI RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `TEREGO BK`: Northern / West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 227: Northern, West Nile
 - `TORORO BK`: Eastern / Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 105: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 106: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 107: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 76: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 77: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 79: Eastern, Bukedi
 - `TORORO MC BK`: Eastern / Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 11: Eastern, Bukedi; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 78: Eastern, Bukedi
-- `UBTS BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `UBTS BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `WAKISO BK`: Central / Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 94: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 52: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 53: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 54: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 55: Central, Buganda; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 358: Central, Buganda
 - `YUMBE BK`: Northern / West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 37: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 38: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 208: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 228: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 229: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 230: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 231: Northern, West Nile
-- `YUMBE RRH BK`: National / National; BOOK_TYPE_CODE.md; MDA / Hospital / Blood bank status governs national presentation
+- `YUMBE RRH BK`: National / National; outputs/asset-register/README.md#book_type_code; MDA / Hospital / Blood bank status governs national presentation
 - `ZOMBO BK`: Northern / West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 209: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 210: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 1, row 211: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 232: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 233: Northern, West Nile; SCHOOLS BY DISTRICT AND HEALTH CENTRES.docx table 2, row 234: Northern, West Nile
 
 ## Sharing and custody count evidence
@@ -9740,7 +9742,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "MOFPED BK": [
       {
         "prose": "The acquisition records for desktop computers specify a 1 year warranty.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 210447,
         "item": "Lenovo Desktop Computer",
@@ -9750,7 +9752,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
       },
       {
         "prose": "The procurement entry for a heavy duty photocopier also specifies a 1 year warranty and describes it as in good working condition.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 210503,
         "item": "Heavy Duty Photocopier",
@@ -9762,7 +9764,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "MOWT BK": [
       {
         "prose": "The MoWT vehicle return states that MoFPED undertakes repairs and servicing of the Toyota Hilux pickup.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 209567,
         "item": "Toyota Hilux Double Cabin Pickup",
@@ -9772,7 +9774,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
       },
       {
         "prose": "The acquisition record for a heavy duty photocopier specifies a 1 year warranty.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 214883,
         "item": "Heavy Duty Photocopier",
@@ -9784,7 +9786,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "MOES BK": [
       {
         "prose": "The acquisition records for laptops specify a 1 year warranty and describe the equipment as in good working condition.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 210553,
         "item": "Lenovo ThinkBook Laptop",
@@ -9796,7 +9798,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "MAAIF BK": [
       {
         "prose": "The tablet acquisition records specify a 1 year warranty.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 210942,
         "item": "Computer Tablet",
@@ -9806,7 +9808,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
       },
       {
         "prose": "The printer entry specifies a 3 year warranty and describes the equipment as in good working condition.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 215269,
         "item": "HP Laserjet Pro MFP 4103fdw",
@@ -9818,7 +9820,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "MOH BK": [
       {
         "prose": "The acquisition records for laptops specify a 1 year warranty and describe the equipment as in good working condition.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 214539,
         "item": "Lenovo LOQ 16IRH8-i7 Laptop",
@@ -9828,7 +9830,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
       },
       {
         "prose": "The motorcycle procurement entry also specifies a 1 year warranty.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 214596,
         "item": "Yamaha Xtz",
@@ -9840,7 +9842,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "OPM BK": [
       {
         "prose": "The equipment return identifies damaged laptops that are not in use.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 209828,
         "item": "HP Laptop Envy i3",
@@ -9852,7 +9854,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "MOWE BK": [
       {
         "prose": "The tablet acquisition records specify a 1 year warranty and describe the equipment as in good working condition.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 212164,
         "item": "Euron MT8765A Tablets",
@@ -9864,7 +9866,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "MGLSD BK": [
       {
         "prose": "The acquisition records for laptops specify a 1 year warranty and describe the equipment as in good working condition.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 214994,
         "item": "Lenovo ThinkBook Laptop",
@@ -9876,7 +9878,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "NEMA BK": [
       {
         "prose": "The acquisition record for a heavy duty photocopier specifies a 1 year warranty and describes the equipment as in good working condition.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 214919,
         "item": "Heavy Duty Photocopier",
@@ -9889,7 +9891,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "OAG BK": [
       {
         "prose": "The laptop acquisition records specify a 1 year warranty and describe the equipment as in good working condition.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 214536,
         "item": "Dell XPS 15 I7 Laptop",
@@ -9901,7 +9903,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "MOLG BK": [
       {
         "prose": "The acquisition record for a heavy duty photocopier specifies a 1 year warranty and describes the equipment as in good working condition.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 214920,
         "item": "Heavy Duty Photocopier",
@@ -9913,7 +9915,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "MOLHUD BK": [
       {
         "prose": "The motorcycle acquisition records specify a 1 year warranty.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 214604,
         "item": "Motorcycles Honda XL125 LEX",
@@ -9925,7 +9927,7 @@ All 10 final JPEG files were reopened at their original pixel sizes. No readable
     "KCCA BK": [
       {
         "prose": "The phone acquisition records specify a 1 year warranty.",
-        "register": "outputs/asset-register-2026-09-23/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+        "register": "outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
         "sheet": "Asset Register",
         "row": 214618,
         "item": "SamSung Phone",

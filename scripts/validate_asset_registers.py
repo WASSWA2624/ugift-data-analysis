@@ -15,7 +15,6 @@ complete source groups, footer filters or the book-code index.
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import math
 import posixpath
@@ -32,8 +31,11 @@ from pathlib import Path
 from zipfile import ZipFile
 from xml.sax.saxutils import escape
 
+from register_audits import read_audit_rows
+from list_book_codes import book_code_index_counts
+
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUT = ROOT / "outputs" / "asset-register-2026-09-23"
+DEFAULT_OUT = ROOT / "outputs" / "asset-register"
 NAMES = {
     "SK": "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx",
     "MF": "ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
@@ -276,7 +278,7 @@ class QuantityAudit:
 
     def __init__(self, path: Path, stack: ExitStack, errors: Findings, warnings: Findings, metrics: Counter):
         self.path, self.errors, self.warnings, self.metrics = path, errors, warnings, metrics
-        self.reader = iter(csv.DictReader(stack.enter_context(path.open(encoding="utf-8-sig", newline=""))))
+        self.reader = read_audit_rows(path, "quantity")
         self.current = None
         self.line_number = 1
         self.count = 0
@@ -284,10 +286,32 @@ class QuantityAudit:
         self.sums = Counter()
         self.filled = Counter()
 
+    def next_source(self, row: int | None) -> dict | None:
+        """Advance past excluded zero-output evidence without consuming an SK row."""
+        for entry in self.reader:
+            self.line_number += 1
+            self.metrics["quantity_audit_source_lines_inspected"] += 1
+            try:
+                total = int(entry.get("output_rows", ""))
+            except (TypeError, ValueError):
+                total = -1
+            if total < 0:
+                self.metrics["quantity_audit_invalid_source_lines"] += 1
+                self.errors.add("quantity_audit_invalid_quantity", "SK", row, {
+                    "audit_line": self.line_number, "source": entry.get("source_file"),
+                    "location": entry.get("source_location"), "output_rows": entry.get("output_rows"),
+                    "reason": "Expected a nonnegative integer physical row count",
+                })
+                continue
+            if total == 0:
+                self.metrics["audited_zero_output_source_lines"] += 1
+                continue
+            return entry
+        return None
+
     def take(self, sk: dict, row: int):
         if self.current is None:
-            self.current = next(self.reader, None)
-            self.line_number += 1
+            self.current = self.next_source(row)
             self.count, self.first_row, self.sums, self.filled = 0, row, Counter(), Counter()
             if self.current is None:
                 self.errors.add("quantity_audit_exhausted", "SK", row, "No retained-source line accounts for this asset")
@@ -346,10 +370,13 @@ class QuantityAudit:
             return
         if self.current is not None:
             self.errors.add("source_line_quantity_incomplete", "SK", self.first_row, {"audit_line": self.line_number, "expected": self.current["output_rows"], "actual": self.count})
-        remaining = list(self.reader)
-        if remaining:
+        remaining_lines = remaining_rows = 0
+        while (entry := self.next_source(None)) is not None:
+            remaining_lines += 1
+            remaining_rows += int(entry["output_rows"])
+        if remaining_lines:
             self.errors.add("quantity_audit_unexported_sources", "SK", None, {
-                "source_lines": len(remaining), "physical_rows": sum(int(entry["output_rows"]) for entry in remaining),
+                "source_lines": remaining_lines, "physical_rows": remaining_rows,
             })
 
 
@@ -566,16 +593,17 @@ def validate(args) -> dict:
                         if not filled_columns[key][name] and name not in notes:
                             errors.add("all_blank_column_reason", key, None, name)
         if not limit_reached:
-            index_path = args.out / "BOOK_TYPE_CODE.md"
+            index_path = args.out / "README.md"
             if index_path.exists():
-                index_counts = Counter()
-                for line in index_path.read_text(encoding="utf-8").splitlines():
-                    if match := re.fullmatch(r"\|\s*\d+\s*\|\s*(.*?)\s*\|\s*([\d,]+)\s*\|", line):
-                        index_counts[match.group(1)] += int(match.group(2).replace(",", ""))
-                if index_counts != code_counts:
-                    errors.add("book_code_index", "ALL", None, {"missing_or_wrong": dict(code_counts - index_counts), "extra_or_wrong": dict(index_counts - code_counts)})
+                try:
+                    index_counts = book_code_index_counts(index_path.read_text(encoding="utf-8"))
+                except ValueError as error:
+                    errors.add("book_code_index", "ALL", None, str(error))
+                else:
+                    if index_counts != code_counts:
+                        errors.add("book_code_index", "ALL", None, {"missing_or_wrong": dict(code_counts - index_counts), "extra_or_wrong": dict(index_counts - code_counts)})
             else:
-                errors.add("book_code_index", "ALL", None, "Missing BOOK_TYPE_CODE.md")
+                errors.add("book_code_index", "ALL", None, "Missing README.md book-code index")
     return {
         "generated_utc": datetime.now(timezone.utc).isoformat(), "directory": str(args.out.resolve()),
         "scope": "limited smoke check" if limit_reached else "full workbook scan",
@@ -647,8 +675,8 @@ def record_read_me(directory: Path, result: dict, report_path: Path):
         "Checks run: sample headers/order; one unit per MF/REF row; source provenance and row identity across stages; "
         "complete SK Unit sequences; vote mapping; facility suffixes; condition/use flags; tags; required values; "
         "text sanitation; amount formats; borrowed-cell colors; MF/REF mirrors; frozen header and column widths. "
-        + ("Full-scan checks also covered row totals, filters and BOOK_TYPE_CODE.md." if result["scope"] == "full workbook scan" else
-           "This was a limited smoke check; complete row totals, unfinished quantity groups, filters and BOOK_TYPE_CODE.md are not certified."),
+        + ("Full-scan checks also covered row totals, filters and the README.md book-code index." if result["scope"] == "full workbook scan" else
+           "This was a limited smoke check; complete row totals, unfinished quantity groups, filters and the README.md book-code index are not certified."),
         f"Expanded source groups inspected: {metrics.get('expanded_source_groups', 0):,}; "
         f"unit rows: {metrics.get('expanded_unit_rows', 0):,}; groups above 500: {metrics.get('source_groups_above_500', 0):,}; "
         f"largest stated Unit group: {metrics.get('largest_source_quantity', 0):,}. "
@@ -670,6 +698,7 @@ def record_read_me(directory: Path, result: dict, report_path: Path):
     if result.get("quantity_audit"):
         outcomes.append(
             f"Quantity audit reconciled against SK before borrowing: {metrics.get('audited_retained_source_lines', 0):,} retained source lines; "
+            f"{metrics.get('audited_zero_output_source_lines', 0):,} excluded zero-output evidence lines; "
             f"{metrics.get('audited_physical_rows', 0):,} physical rows; {metrics.get('audited_existing_unit_records', 0):,} existing unit records; "
             f"{metrics.get('audited_groups_with_quantity_outside_quantity_column', 0):,} groups with count evidence outside the quantity column. "
             "Monetary checks: " + "; ".join(f"{key.removeprefix('source_line_').removesuffix('_conservation_checks')} {count:,}"
@@ -740,7 +769,7 @@ def main():
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT, help="Directory containing all three workbooks")
     parser.add_argument("--report", type=Path, help="JSON destination; default: <out>/validation-report.json")
     parser.add_argument("--limit", type=int, help="Smoke-check this many aligned rows; not final validation")
-    parser.add_argument("--quantity-audit", type=Path, help="Stage 1 retained-source .quantity-audit.csv, for row and pre-borrow monetary reconciliation")
+    parser.add_argument("--quantity-audit", type=Path, help="Stage 1 asset-register-audits.json.gz (or legacy quantity-audit CSV), for row and pre-borrow monetary reconciliation")
     parser.add_argument("--record-read-me", action="store_true", help="Record actual check outcomes on each Read Me after validation")
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:

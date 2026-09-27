@@ -17,9 +17,9 @@ from fill_gou_template import book_code, location_segment1
 
 ROOT = Path(__file__).resolve().parents[1]
 TARGETS = [
-    ROOT / "outputs" / "asset-register-2026-09-23" / "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx",
-    ROOT / "outputs" / "asset-register-2026-09-23" / "ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
-    ROOT / "outputs" / "asset-register-2026-09-23" / "REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+    ROOT / "outputs" / "asset-register" / "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx",
+    ROOT / "outputs" / "asset-register" / "ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
+    ROOT / "outputs" / "asset-register" / "REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
 ]
 LEADER = re.compile(r"^(?:&#8230;|\u2026|\.{3,})+")
 GENERIC_LG = re.compile(r"(?i)^district(\s+lo+c+a+l+\s+government)?$")

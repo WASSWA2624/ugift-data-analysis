@@ -41,10 +41,11 @@ from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.table import TableColumn
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_PATH = ROOT / "outputs" / "asset-register-2026-09-22" / "UgIFT Asset Register.xlsx"
+DEFAULT_PATH = ROOT / "outputs" / "asset-register-baseline" / "UgIFT Asset Register.xlsx"
 RECONCILIATION_PATH = ROOT / "raw-data-grouped" / "facility-reconciliation.csv"
 LOCATION_MASTER_PATH = ROOT / "Location(3)2.xlsx"
-GIT_WORKBOOK_PATH = "outputs/asset-register-2026-09-22/UgIFT Asset Register.xlsx"
+GIT_WORKBOOK_PATH = "outputs/asset-register-baseline/UgIFT Asset Register.xlsx"
+LEGACY_GIT_WORKBOOK_PATH = "outputs/asset-register-2026-09-22/UgIFT Asset Register.xlsx"
 ORIGINAL_REGISTER_ASSET_ROWS = 226_705
 INVALID_FACILITY_STATUSES = {"Reported absent", "No UgIFT assets", "Outside UgIFT", "Replaced"}
 LATEST_ROOT = ROOT / "new-raw-data-221092026-1114" / "new-raw-data-22092026-1556"
@@ -1645,8 +1646,15 @@ def latest_source_totals(ws) -> tuple[int, int]:
 def load_input(path: Path, from_git_head: bool):
     if not from_git_head:
         return load_workbook(path)
+    git_path = GIT_WORKBOOK_PATH
+    # Until the folder rename is committed, HEAD still stores the dated path.
+    if subprocess.run(
+        ["git", "cat-file", "-e", f"HEAD:{git_path}"], cwd=ROOT,
+        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False,
+    ).returncode:
+        git_path = LEGACY_GIT_WORKBOOK_PATH
     workbook_bytes = subprocess.check_output(
-        ["git", "show", f"HEAD:{GIT_WORKBOOK_PATH}"], cwd=ROOT
+        ["git", "show", f"HEAD:{git_path}"], cwd=ROOT
     )
     return load_workbook(io.BytesIO(workbook_bytes))
 
