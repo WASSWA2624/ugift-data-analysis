@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-09-27T15:41:39.405963+00:00",
-  "status": "complete",
+  "generated_utc": "2026-09-28T09:58:31.312894+00:00",
+  "status": "updated_with_review_items",
   "canonical_workbook": "REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
-  "asset_rows": 225133,
+  "asset_rows": 234613,
   "merge": {
     "revised_asset_rows_changed": 668,
     "blank_cells_filled": 4918,
@@ -526,5 +526,53 @@
     "README.md": "3349ea01adb69f6009d6aa9045ef77525ba98579f3773eb345a1503fe80f58d1",
     "REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx": "a6eaae9338b06213c8fc3b0b49625f9eb4240525282683c2278aefc1c3642802",
     "validation-report.json": "454ca0c51f6d9ca7aad6f412411c2279779e459d114fce97586b0c7917346832"
+  },
+  "baseline_generated_utc": "2026-09-27T15:41:39.405963+00:00",
+  "previous_statistics_scope": "The merge, additional_source_fills, partial_columns and other pre-existing statistics describe the preserved 27 September baseline. See ifmis_update for current changes.",
+  "ifmis_update": {
+    "generated_utc": "2026-09-28T09:58:31.312894+00:00",
+    "source": "raw-data-grouped/mda/IFMIS register.xlsx",
+    "source_sha256": "89c06afe2fd98f9742588d944153ef187f86400b595c35cd6f1e463a94f14ced",
+    "source_asset_rows": 12237,
+    "source_decisions": {
+      "review_multiple_existing_matches": 165,
+      "matched_existing": 2087,
+      "add_new": 9481,
+      "review_item_identity": 147,
+      "review_no_unique_identifier": 306,
+      "non_asset_heading": 15,
+      "duplicate_source_identifier": 14,
+      "review_possible_unnumbered_overlap": 1,
+      "review_serial_conflict": 36
+    },
+    "rows_before": 225133,
+    "rows_added": 9481,
+    "proven_duplicate_rows_removed": 1,
+    "rows_after": 234613,
+    "existing_assets_enriched": 2087,
+    "changed_cells": {
+      "SK": 7037,
+      "MF": 7851,
+      "REF": 12615
+    },
+    "unresolved_source_rows": 655,
+    "conflicting_recorded_facts_preserved": 73,
+    "tela": {
+      "source_handsets": 9323,
+      "new_handsets": 9322,
+      "matched_handsets": 1,
+      "second_imei_duplicate_removed": 1,
+      "classification": "MDA",
+      "owner": "Ministry of Education and Sports",
+      "facility_assignment": "None; UNSPECIFIED in MF and REF",
+      "pre_existing_unidentified_TELA_asset_reclassified": 1
+    },
+    "identity_check": {
+      "existing_rows_scanned": 225133,
+      "collisions": []
+    },
+    "quantity_audit_total": 234613,
+    "review_file": "ifmis-review.csv",
+    "backup": "tmp/ifmis-update-20260928/before"
   }
 }

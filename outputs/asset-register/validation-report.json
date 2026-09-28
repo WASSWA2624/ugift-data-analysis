@@ -1,670 +1,472 @@
 {
-  "generated_utc": "2026-09-27T15:27:25.800181+00:00",
-  "directory": "C:\\Users\\WASSWA WILSON\\.codex\\tmp\\ugift-cleanup-20260927\\validation-stage",
-  "scope": "full workbook scan",
-  "quantity_audit": "C:\\Users\\WASSWA WILSON\\.codex\\tmp\\ugift-cleanup-20260927\\validation-stage\\asset-register-audits.json.gz",
+  "generated_utc": "2026-09-28T09:58:31.312894+00:00",
+  "directory": "outputs/asset-register",
+  "scope": "Full row-count/order and package-preservation checks; every IFMIS changed cell and new asset; all baseline identifiers compared with proposed new identifiers. Historical unrelated validation findings have not been rerun.",
   "passed": false,
-  "duration_seconds": 544.5,
+  "ifmis_update_passed": true,
   "row_counts": {
-    "SK": 225133,
-    "MF": 225133,
-    "REF": 225133
+    "SK": 234613,
+    "MF": 234613,
+    "REF": 234613
   },
-  "metrics": {
-    "audited_retained_source_lines": 82950,
-    "audited_physical_rows": 225133,
-    "quantity_audit_expected_rows": 225133,
-    "audited_existing_unit_records": 7190,
-    "borrowed_FIXED_ASSETS_COST_F4B183": 138980,
-    "independent_NBV_checks": 2212,
-    "independent_reserve_checks": 1898,
-    "independent_YTD_checks": 1899,
-    "adjacent_identical_SK_assets_ignoring_Unit_and_provenance": 164033,
-    "borrowed_FIXED_ASSETS_COST_9DC3E6": 28772,
-    "borrowed_DATE_PLACED_IN_SERVICE_9DC3E6": 42338,
-    "depreciation_samples_skipped_ambiguous_existence": 4,
-    "expanded_unit_rows": 156372,
-    "SK_MF_recorded_amount_checks": 69507,
-    "audited_groups_with_quantity_outside_quantity_column": 11249,
-    "source_line_Cost_conservation_checks": 19484,
-    "borrowed_DATE_PLACED_IN_SERVICE_F4B183": 67147,
-    "WIP_blank_date_exceptions": 396,
-    "source_line_Net Book Value_conservation_checks": 293,
-    "MF_REF_recorded_amount_checks": 4613,
-    "borrowed_DATE_PLACED_IN_SERVICE_C6EFCE": 12304,
-    "source_line_Recoverable cost_conservation_checks": 515,
-    "expanded_source_groups": 14189,
-    "source_groups_above_500": 2,
-    "largest_source_quantity": 900,
-    "quantity_audit_source_lines_inspected": 82952,
-    "audited_zero_output_source_lines": 2,
-    "source_line_Acc Dep Cost_conservation_checks": 343,
-    "source_line_Ytd Deprn_conservation_checks": 258
-  },
-  "errors": {
-    "MF.facility_suffix": {
-      "count": 536,
-      "examples": [
-        {
-          "row": 2332,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2333,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2334,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2335,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2336,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2337,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2338,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2339,
-          "detail": "Rukoki General Hospital"
-        }
-      ]
-    },
-    "MF.source_provenance_preserved": {
-      "count": 806,
-      "examples": [
-        {
-          "row": 100535,
-          "detail": "Source location"
-        },
-        {
-          "row": 100536,
-          "detail": "Source location"
-        },
-        {
-          "row": 100537,
-          "detail": "Source location"
-        },
-        {
-          "row": 100538,
-          "detail": "Source location"
-        },
-        {
-          "row": 100539,
-          "detail": "Source location"
-        },
-        {
-          "row": 100540,
-          "detail": "Source location"
-        },
-        {
-          "row": 100541,
-          "detail": "Source location"
-        },
-        {
-          "row": 100542,
-          "detail": "Source location"
-        }
-      ]
-    },
-    "REF.facility_suffix": {
-      "count": 536,
-      "examples": [
-        {
-          "row": 2332,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2333,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2334,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2335,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2336,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2337,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2338,
-          "detail": "Rukoki General Hospital"
-        },
-        {
-          "row": 2339,
-          "detail": "Rukoki General Hospital"
-        }
-      ]
-    },
-    "REF.required_date": {
-      "count": 177,
-      "examples": [
-        {
-          "row": 5940,
-          "detail": "Inbuilt shelves [item 1 of 6]"
-        },
-        {
-          "row": 5941,
-          "detail": "Inbuilt shelves [item 2 of 6]"
-        },
-        {
-          "row": 5942,
-          "detail": "Inbuilt shelves [item 3 of 6]"
-        },
-        {
-          "row": 5943,
-          "detail": "Inbuilt shelves [item 4 of 6]"
-        },
-        {
-          "row": 5944,
-          "detail": "Inbuilt shelves [item 5 of 6]"
-        },
-        {
-          "row": 5945,
-          "detail": "Inbuilt shelves [item 6 of 6]"
-        },
-        {
-          "row": 5946,
-          "detail": "Open shelves [item 1 of 14]"
-        },
-        {
-          "row": 5947,
-          "detail": "Open shelves [item 2 of 14]"
-        }
-      ]
-    },
-    "REF.source_provenance_preserved": {
-      "count": 806,
-      "examples": [
-        {
-          "row": 100535,
-          "detail": "Source location"
-        },
-        {
-          "row": 100536,
-          "detail": "Source location"
-        },
-        {
-          "row": 100537,
-          "detail": "Source location"
-        },
-        {
-          "row": 100538,
-          "detail": "Source location"
-        },
-        {
-          "row": 100539,
-          "detail": "Source location"
-        },
-        {
-          "row": 100540,
-          "detail": "Source location"
-        },
-        {
-          "row": 100541,
-          "detail": "Source location"
-        },
-        {
-          "row": 100542,
-          "detail": "Source location"
-        }
-      ]
-    },
-    "SK.stated_quantity_reduced": {
-      "count": 63,
-      "examples": [
-        {
-          "row": 87418,
-          "detail": {
-            "audit_line": 46166,
-            "evidence": [
-              [
-                3,
-                "asset number"
-              ]
-            ],
-            "actual": 1
-          }
-        },
-        {
-          "row": 87419,
-          "detail": {
-            "audit_line": 46167,
-            "evidence": [
-              [
-                3,
-                "asset number"
-              ]
-            ],
-            "actual": 1
-          }
-        },
-        {
-          "row": 87420,
-          "detail": {
-            "audit_line": 46168,
-            "evidence": [
-              [
-                3,
-                "asset number"
-              ]
-            ],
-            "actual": 1
-          }
-        },
-        {
-          "row": 87431,
-          "detail": {
-            "audit_line": 46173,
-            "evidence": [
-              [
-                2,
-                "asset number"
-              ]
-            ],
-            "actual": 1
-          }
-        },
-        {
-          "row": 87432,
-          "detail": {
-            "audit_line": 46174,
-            "evidence": [
-              [
-                2,
-                "asset number"
-              ]
-            ],
-            "actual": 1
-          }
-        },
-        {
-          "row": 87437,
-          "detail": {
-            "audit_line": 46176,
-            "evidence": [
-              [
-                3,
-                "asset number"
-              ]
-            ],
-            "actual": 1
-          }
-        },
-        {
-          "row": 87438,
-          "detail": {
-            "audit_line": 46177,
-            "evidence": [
-              [
-                3,
-                "asset number"
-              ]
-            ],
-            "actual": 1
-          }
-        },
-        {
-          "row": 87439,
-          "detail": {
-            "audit_line": 46178,
-            "evidence": [
-              [
-                3,
-                "asset number"
-              ]
-            ],
-            "actual": 1
-          }
-        }
-      ]
-    }
-  },
-  "review_notes": {
-    "MF.read_me_rule_checks": {
-      "count": 1,
-      "examples": [
-        {
-          "row": null,
-          "detail": "No validation/check statement found"
-        }
-      ]
-    },
-    "REF.missing_cost_dependent_value": {
-      "count": 11535,
-      "examples": [
-        {
-          "row": 502,
-          "detail": "ATTRIBUTE12(Net Book Value)"
-        },
-        {
-          "row": 502,
-          "detail": "ATTRIBUTE10(Cost)"
-        },
-        {
-          "row": 502,
-          "detail": "ATTRIBUTE9(Recoverable cost)"
-        },
-        {
-          "row": 665,
-          "detail": "ATTRIBUTE12(Net Book Value)"
-        },
-        {
-          "row": 665,
-          "detail": "ATTRIBUTE10(Cost)"
-        },
-        {
-          "row": 665,
-          "detail": "ATTRIBUTE9(Recoverable cost)"
-        },
-        {
-          "row": 855,
-          "detail": "ATTRIBUTE12(Net Book Value)"
-        },
-        {
-          "row": 855,
-          "detail": "ATTRIBUTE10(Cost)"
-        }
-      ]
-    },
-    "REF.no_comparable_cost_exception": {
-      "count": 3846,
-      "examples": [
-        {
-          "row": 502,
-          "detail": "Audio Visual Equipment"
-        },
-        {
-          "row": 665,
-          "detail": "Audio Visual Equipment"
-        },
-        {
-          "row": 855,
-          "detail": "Audio Visual Equipment"
-        },
-        {
-          "row": 1013,
-          "detail": "Audio Visual Equipment"
-        },
-        {
-          "row": 1142,
-          "detail": "Audio Visual Equipment"
-        },
-        {
-          "row": 1233,
-          "detail": "Audio Visual Equipment"
-        },
-        {
-          "row": 1317,
-          "detail": "Audio Visual Equipment"
-        },
-        {
-          "row": 1428,
-          "detail": "Audio Visual Equipment"
-        }
-      ]
-    },
-    "REF.read_me_rule_checks": {
-      "count": 1,
-      "examples": [
-        {
-          "row": null,
-          "detail": "No validation/check statement found"
-        }
-      ]
-    },
-    "SK.conflicting_source_counts": {
-      "count": 118,
-      "examples": [
-        {
-          "row": 214,
-          "detail": {
-            "audit_line": 214,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 331",
-            "evidence": "[[1, \"description\"], [5, \"The facility received 5 drip stands\"], [5, \"condition subsets\"], [5, \"source count conflict: explicit condition subsets total 5, against other recorded counts [1]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 262,
-          "detail": {
-            "audit_line": 262,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 404",
-            "evidence": "[[1, \"description\"], [2, \"2 Items in the store\"], [2, \"condition subsets\"], [2, \"source count conflict: explicit condition subsets total 2, against other recorded counts [1]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 419,
-          "detail": {
-            "audit_line": 419,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 626",
-            "evidence": "[[1, \"description\"], [15, \"The facility received 15 Ambu bag neonatal\"], [15, \"condition subsets\"], [15, \"source count conflict: explicit condition subsets total 15, against other recorded counts [1]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 461,
-          "detail": {
-            "audit_line": 461,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 694",
-            "evidence": "[[11, \"description\"], [20, \"In addition, there are 20 drip stands that are attached to the beds i.e. 2 per bed\"], [20, \"condition subsets\"], [20, \"source count conflict: explicit condition subsets total 20, against other recorded counts [11]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 462,
-          "detail": {
-            "audit_line": 462,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 696",
-            "evidence": "[[1, \"description\"], [5, \"Facility received 5 movable drip stands that are in the store\"], [5, \"condition subsets\"], [5, \"source count conflict: explicit condition subsets total 5, against other recorded counts [1]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 553,
-          "detail": {
-            "audit_line": 553,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 838",
-            "evidence": "[[1, \"description\"], [4, \"All the 4 benches were in use in the maternity wing\"], [4, \"condition subsets\"], [4, \"source count conflict: explicit condition subsets total 4, against other recorded counts [1]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 909,
-          "detail": {
-            "audit_line": 909,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 1435",
-            "evidence": "[[1, \"description\"], [4, \"All the 4 benches were in use in the maternity wing\"], [4, \"condition subsets\"], [4, \"source count conflict: explicit condition subsets total 4, against other recorded counts [1]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 1674,
-          "detail": {
-            "audit_line": 1493,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 3324",
-            "evidence": "[[1, \"2 received 1 functional 1 not functional\"], [2, \"condition subsets\"]]"
-          }
-        }
-      ]
-    }
-  },
-  "limitations": [
-    "A complete Unit sequence proves the exported group is intact, not that an unexpanded raw quantity was interpreted correctly.",
-    "Retained-source quantities and original monetary totals were reconciled to ordered SK blocks using the quantity audit; source interpretation, retained-return choice and donor selection still need source review.",
-    "Missing costs and dependent carrying amounts are review notes only because the prompt permits assets with no comparable price.",
-    "Depreciation checks use independently recomputed deterministic samples, including measured uncapitalized rows with unambiguous source existence; ambiguous existence is counted as skipped. Recorded source reserve, YTD and NBV are checked for preservation on every row.",
-    "Vote spelling uses the shared reference-name resolver; visual layout and ambiguous source remarks need independent review."
-  ],
-  "warnings": {
-    "SK.conflicting_source_counts": {
-      "count": 3260,
-      "examples": [
-        {
-          "row": 214,
-          "detail": {
-            "audit_line": 214,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 331",
-            "evidence": "[[1, \"description\"], [5, \"The facility received 5 drip stands\"], [5, \"condition subsets\"], [5, \"source count conflict: explicit condition subsets total 5, against other recorded counts [1]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 262,
-          "detail": {
-            "audit_line": 262,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 404",
-            "evidence": "[[1, \"description\"], [2, \"2 Items in the store\"], [2, \"condition subsets\"], [2, \"source count conflict: explicit condition subsets total 2, against other recorded counts [1]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 419,
-          "detail": {
-            "audit_line": 419,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 626",
-            "evidence": "[[1, \"description\"], [15, \"The facility received 15 Ambu bag neonatal\"], [15, \"condition subsets\"], [15, \"source count conflict: explicit condition subsets total 15, against other recorded counts [1]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 461,
-          "detail": {
-            "audit_line": 461,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 694",
-            "evidence": "[[11, \"description\"], [20, \"In addition, there are 20 drip stands that are attached to the beds i.e. 2 per bed\"], [20, \"condition subsets\"], [20, \"source count conflict: explicit condition subsets total 20, against other recorded counts [11]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 462,
-          "detail": {
-            "audit_line": 462,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 696",
-            "evidence": "[[1, \"description\"], [5, \"Facility received 5 movable drip stands that are in the store\"], [5, \"condition subsets\"], [5, \"source count conflict: explicit condition subsets total 5, against other recorded counts [1]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 553,
-          "detail": {
-            "audit_line": 553,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 838",
-            "evidence": "[[1, \"description\"], [4, \"All the 4 benches were in use in the maternity wing\"], [4, \"condition subsets\"], [4, \"source count conflict: explicit condition subsets total 4, against other recorded counts [1]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 909,
-          "detail": {
-            "audit_line": 909,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 1435",
-            "evidence": "[[1, \"description\"], [4, \"All the 4 benches were in use in the maternity wing\"], [4, \"condition subsets\"], [4, \"source count conflict: explicit condition subsets total 4, against other recorded counts [1]; preserve the physical subsets\"]]"
-          }
-        },
-        {
-          "row": 1674,
-          "detail": {
-            "audit_line": 1493,
-            "source": "_multi-team/bunyoro-tooro-greater-mityana/DEPAUL - BUNYORO, TOORO AND GREATER MITYANA -CURRENT (2).xls",
-            "location": "UGIFT HEALTH row 3324",
-            "evidence": "[[1, \"2 received 1 functional 1 not functional\"], [2, \"condition subsets\"]]"
-          }
-        }
-      ]
-    }
-  },
-  "verification_method": "Full 225,133-row SK/MF/REF scan plus complete SK quantity reconciliation after correcting zero-output audit entries. The scan used the revised REF snapshot before 2,764 source metadata fills. A subsequent whole-package byte/content comparison verifies every added value, preserves all other cells, and confirms that no physical asset rows were removed. The original validation findings remain open; metadata additions do not constitute a new full business-rule validation.",
-  "validation_phases": [
-    {
-      "scope": "Full workbook scan",
-      "generated_utc": "2026-09-27T15:20:10.053298+00:00",
-      "duration_seconds": 499.66,
-      "source_report": "validation-current.json",
-      "snapshot_directory": "C:\\Users\\WASSWA WILSON\\.codex\\tmp\\ugift-cleanup-20260927\\validation-stage",
-      "row_counts": {
-        "SK": 225133,
-        "MF": 225133,
-        "REF": 225133
+  "ifmis_checks": {
+    "SK": {
+      "asset_rows": 234613,
+      "checks": {
+        "verified_changed_cells": 7037,
+        "verified_new_asset_rows": 9481
+      },
+      "book_counts": {},
+      "sha256": "4e21f42641927c4b821fbfa8c971199827e18893a8f748501cf06435bf8eaa6a",
+      "unchanged_package_parts_preserved": true,
+      "passed": true,
+      "format_checks": {
+        "readme_addresses_verified": true,
+        "cells_formatted": 28442
       }
     },
-    {
-      "scope": "Corrected full-SK quantity reconciliation",
-      "generated_utc": "2026-09-27T15:27:25.794182+00:00",
-      "duration_seconds": 44.84,
-      "source_report": "quantity-validator-current.json",
-      "row_count": 225133,
-      "zero_output_rule": "Audit entries stating zero output rows contribute no SK asset rows; evidence remains retained.",
-      "passed": false
+    "MF": {
+      "asset_rows": 234613,
+      "checks": {
+        "verified_changed_cells": 7851,
+        "verified_new_asset_rows": 9481,
+        "TELA_MDA_rows": 9322
+      },
+      "book_counts": {
+        "MUBENDE BK": 1853,
+        "KYEGEGWA BK": 881,
+        "KYENJOJO BK": 2357,
+        "KAMWENGE BK": 642,
+        "BUNYANGABU BK": 628,
+        "KASESE BK": 981,
+        "BULIISA BK": 1714,
+        "HOIMA CITY BK": 354,
+        "KASSANDA BK": 1819,
+        "MAYUGE BK": 4547,
+        "KIBAALE BK": 1194,
+        "KAKUMIRO BK": 2600,
+        "KYANKWANZI BK": 3554,
+        "KIBOGA BK": 890,
+        "KITAGWENDA BK": 61,
+        "BUGIRI MC BK": 313,
+        "JINJA BK": 1285,
+        "KALIRO BK": 2970,
+        "NAMAYINGO BK": 2063,
+        "KAMULI BK": 3895,
+        "BUYENDE BK": 1832,
+        "BUIKWE BK": 1774,
+        "NAMUTUMBA BK": 1823,
+        "LUUKA BK": 2680,
+        "BUGWERI BK": 2700,
+        "KAYUNGA BK": 775,
+        "MUKONO MC BK": 464,
+        "BUGIRI BK": 1082,
+        "IGANGA BK": 766,
+        "MUKONO BK": 1929,
+        "MADI OKOLLO BK": 247,
+        "AGAGO BK": 1998,
+        "LAMWO BK": 1495,
+        "PADER BK": 1171,
+        "MARACHA BK": 3013,
+        "YUMBE BK": 3858,
+        "BUHWEJU BK": 2224,
+        "MITOOMA BK": 1943,
+        "MBARARA BK": 1662,
+        "NEBBI BK": 1251,
+        "NWOYA BK": 793,
+        "ZOMBO BK": 2296,
+        "PAKWACH BK": 1559,
+        "ARUA BK": 455,
+        "KOBOKO MC BK": 326,
+        "KOBOKO BK": 1320,
+        "TEREGO BK": 183,
+        "ADJUMANI BK": 1706,
+        "AMURU BK": 1303,
+        "GULU BK": 323,
+        "MOYO BK": 1113,
+        "OBONGI BK": 700,
+        "KITGUM BK": 1084,
+        "KOLE BK": 1488,
+        "LIRA CITY BK": 1115,
+        "LIRA BK": 542,
+        "OMORO BK": 1094,
+        "OYAM BK": 1528,
+        "APAC BK": 2585,
+        "KWANIA BK": 1782,
+        "AMOLATAR BK": 4328,
+        "APAC MC BK": 427,
+        "DOKOLO BK": 2806,
+        "OTUKE BK": 1006,
+        "ALEBTONG BK": 1985,
+        "SERERE BK": 2418,
+        "KAPELEBYONG BK": 823,
+        "KATAKWI BK": 2324,
+        "AMURIA BK": 1764,
+        "SOROTI BK": 1930,
+        "BUKEDEA BK": 2666,
+        "BUTEBO BK": 1023,
+        "KABERAMAIDO BK": 1818,
+        "KALAKI BK": 3192,
+        "KUMI BK": 2732,
+        "NGORA BK": 1110,
+        "PALLISA BK": 6030,
+        "AMUDAT BK": 870,
+        "MOES BK": 10783,
+        "MOROTO BK": 927,
+        "NABILATUK BK": 248,
+        "NAKAPIRIPIRIT BK": 454,
+        "NAPAK BK": 3021,
+        "ABIM BK": 502,
+        "KAABONG BK": 66,
+        "KARENGA BK": 20,
+        "KOTIDO BK": 49,
+        "BUDAKA BK": 2383,
+        "BUTALEJA BK": 1640,
+        "KIBUKU BK": 1286,
+        "MBALE BK": 564,
+        "BUSIA BK": 1739,
+        "MANAFWA BK": 1637,
+        "NAMISINDWA BK": 1292,
+        "MOH BK": 264,
+        "TORORO MC BK": 1012,
+        "TORORO BK": 9823,
+        "BUDUDA BK": 2413,
+        "BULAMBULI BK": 1544,
+        "SIRONKO BK": 1711,
+        "BUKWO BK": 2068,
+        "KAPCHORWA MC BK": 165,
+        "KAPCHORWA BK": 1038,
+        "KWEEN BK": 1038,
+        "JINJA CITY BK": 154,
+        "KAMULI MC BK": 234,
+        "BUSHENYI BK": 266,
+        "SHEEMA MC BK": 278,
+        "SHEEMA BK": 670,
+        "IBANDA BK": 424,
+        "KAZO BK": 909,
+        "KIRUHURA BK": 1473,
+        "ISINGIRO BK": 1202,
+        "RUBIRIZI BK": 1780,
+        "RWAMPARA BK": 204,
+        "MBARARA CITY BK": 171,
+        "KISORO MC BK": 79,
+        "KISORO BK": 1964,
+        "RUBANDA BK": 4381,
+        "KABALE MC BK": 71,
+        "KABALE BK": 664,
+        "RUKIGA BK": 833,
+        "KANUNGU BK": 374,
+        "NTUNGAMO MC BK": 76,
+        "NTUNGAMO BK": 730,
+        "RUKUNGIRI MC BK": 75,
+        "RUKUNGIRI BK": 143,
+        "KIRYANDONGO BK": 2985,
+        "LUWEERO BK": 3110,
+        "MASINDI MC BK": 149,
+        "MASINDI BK": 1072,
+        "HOIMA BK": 974,
+        "KAGADI BK": 753,
+        "KIKUUBE BK": 494,
+        "BUNDIBUGYO BK": 2170,
+        "NTOROKO BK": 341,
+        "KABAROLE BK": 1380,
+        "FORT PORTAL CITY BK": 521,
+        "MUBENDE MC BK": 189,
+        "MITYANA BK": 936,
+        "BUVUMA BK": 423,
+        "KALANGALA BK": 2752,
+        "BUTAMBALA BK": 232,
+        "GOMBA BK": 534,
+        "KIIRA MC BK": 231,
+        "MAKINDYE SSABAGABO MC BK": 315,
+        "MPIGI BK": 317,
+        "NANSANA MC BK": 288,
+        "WAKISO BK": 1596,
+        "KALUNGU BK": 918,
+        "KYOTERA BK": 292,
+        "LWENGO BK": 1475,
+        "LYANTONDE BK": 835,
+        "MASAKA CITY BK": 89,
+        "MASAKA BK": 35,
+        "RAKAI BK": 611,
+        "SEMBABULE BK": 454,
+        "BUKOMANSIMBI BK": 1,
+        "MAAIF BK": 2045,
+        "MOWT BK": 88,
+        "MOFPED BK": 458,
+        "OPM BK": 10,
+        "MGLSD BK": 10,
+        "MOLG BK": 13,
+        "NEMA BK": 6,
+        "PPDA BK": 5,
+        "OAG BK": 20,
+        "MOWE BK": 2939,
+        "MOLHUD BK": 27,
+        "KCCA BK": 51,
+        "UBTS BK": 273,
+        "MOROTO RRH BK": 368,
+        "MBALE RRH BK": 229,
+        "NAKASEKE BK": 60,
+        "MUBENDE RRH BK": 220,
+        "KAYUNGA RRH BK": 172,
+        "NAKASONGOLA BK": 60,
+        "ENTEBBE RH BK": 269,
+        "MODV BK": 183,
+        "JINJA RRH BK": 305,
+        "SOROTI RRH BK": 214,
+        "MASAKA RRH BK": 363,
+        "MBARARA RRH BK": 271,
+        "HOIMA RRH BK": 223,
+        "KABALE RRH BK": 347,
+        "LIRA RRH BK": 214,
+        "ARUA RRH BK": 251,
+        "BUTABIKA NRMH BK": 288,
+        "NAGURU RH BK": 248,
+        "KAWEMPE RH BK": 196,
+        "KIRUDDU RH BK": 283,
+        "MULAGO NRH BK": 138,
+        "GULU RRH BK": 301,
+        "FORT PORTAL RRH BK": 203,
+        "YUMBE RRH BK": 112,
+        "FORT PORTAL BK": 1
+      },
+      "sha256": "dd7c30f8275425c5da671440682aa7ad2ebae1c036d64cb368534b7ad8ff0da7",
+      "unchanged_package_parts_preserved": true,
+      "passed": true,
+      "format_checks": {
+        "readme_addresses_verified": true,
+        "cells_formatted": 78695
+      }
+    },
+    "REF": {
+      "asset_rows": 234613,
+      "checks": {
+        "verified_changed_cells": 12615,
+        "verified_new_asset_rows": 9481,
+        "new_NBV_checks": 9479,
+        "TELA_MDA_rows": 9322
+      },
+      "book_counts": {
+        "MUBENDE BK": 1853,
+        "KYEGEGWA BK": 881,
+        "KYENJOJO BK": 2357,
+        "KAMWENGE BK": 642,
+        "BUNYANGABU BK": 628,
+        "KASESE BK": 981,
+        "BULIISA BK": 1714,
+        "HOIMA CITY BK": 354,
+        "KASSANDA BK": 1819,
+        "MAYUGE BK": 4547,
+        "KIBAALE BK": 1194,
+        "KAKUMIRO BK": 2600,
+        "KYANKWANZI BK": 3554,
+        "KIBOGA BK": 890,
+        "KITAGWENDA BK": 61,
+        "BUGIRI MC BK": 313,
+        "JINJA BK": 1285,
+        "KALIRO BK": 2970,
+        "NAMAYINGO BK": 2063,
+        "KAMULI BK": 3895,
+        "BUYENDE BK": 1832,
+        "BUIKWE BK": 1774,
+        "NAMUTUMBA BK": 1823,
+        "LUUKA BK": 2680,
+        "BUGWERI BK": 2700,
+        "KAYUNGA BK": 775,
+        "MUKONO MC BK": 464,
+        "BUGIRI BK": 1082,
+        "IGANGA BK": 766,
+        "MUKONO BK": 1929,
+        "MADI OKOLLO BK": 247,
+        "AGAGO BK": 1998,
+        "LAMWO BK": 1495,
+        "PADER BK": 1171,
+        "MARACHA BK": 3013,
+        "YUMBE BK": 3858,
+        "BUHWEJU BK": 2224,
+        "MITOOMA BK": 1943,
+        "MBARARA BK": 1662,
+        "NEBBI BK": 1251,
+        "NWOYA BK": 793,
+        "ZOMBO BK": 2296,
+        "PAKWACH BK": 1559,
+        "ARUA BK": 455,
+        "KOBOKO MC BK": 326,
+        "KOBOKO BK": 1320,
+        "TEREGO BK": 183,
+        "ADJUMANI BK": 1706,
+        "AMURU BK": 1303,
+        "GULU BK": 323,
+        "MOYO BK": 1113,
+        "OBONGI BK": 700,
+        "KITGUM BK": 1084,
+        "KOLE BK": 1488,
+        "LIRA CITY BK": 1115,
+        "LIRA BK": 542,
+        "OMORO BK": 1094,
+        "OYAM BK": 1528,
+        "APAC BK": 2585,
+        "KWANIA BK": 1782,
+        "AMOLATAR BK": 4328,
+        "APAC MC BK": 427,
+        "DOKOLO BK": 2806,
+        "OTUKE BK": 1006,
+        "ALEBTONG BK": 1985,
+        "SERERE BK": 2418,
+        "KAPELEBYONG BK": 823,
+        "KATAKWI BK": 2324,
+        "AMURIA BK": 1764,
+        "SOROTI BK": 1930,
+        "BUKEDEA BK": 2666,
+        "BUTEBO BK": 1023,
+        "KABERAMAIDO BK": 1818,
+        "KALAKI BK": 3192,
+        "KUMI BK": 2732,
+        "NGORA BK": 1110,
+        "PALLISA BK": 6030,
+        "AMUDAT BK": 870,
+        "MOES BK": 10783,
+        "MOROTO BK": 927,
+        "NABILATUK BK": 248,
+        "NAKAPIRIPIRIT BK": 454,
+        "NAPAK BK": 3021,
+        "ABIM BK": 502,
+        "KAABONG BK": 66,
+        "KARENGA BK": 20,
+        "KOTIDO BK": 49,
+        "BUDAKA BK": 2383,
+        "BUTALEJA BK": 1640,
+        "KIBUKU BK": 1286,
+        "MBALE BK": 564,
+        "BUSIA BK": 1739,
+        "MANAFWA BK": 1637,
+        "NAMISINDWA BK": 1292,
+        "MOH BK": 264,
+        "TORORO MC BK": 1012,
+        "TORORO BK": 9823,
+        "BUDUDA BK": 2413,
+        "BULAMBULI BK": 1544,
+        "SIRONKO BK": 1711,
+        "BUKWO BK": 2068,
+        "KAPCHORWA MC BK": 165,
+        "KAPCHORWA BK": 1038,
+        "KWEEN BK": 1038,
+        "JINJA CITY BK": 154,
+        "KAMULI MC BK": 234,
+        "BUSHENYI BK": 266,
+        "SHEEMA MC BK": 278,
+        "SHEEMA BK": 670,
+        "IBANDA BK": 424,
+        "KAZO BK": 909,
+        "KIRUHURA BK": 1473,
+        "ISINGIRO BK": 1202,
+        "RUBIRIZI BK": 1780,
+        "RWAMPARA BK": 204,
+        "MBARARA CITY BK": 171,
+        "KISORO MC BK": 79,
+        "KISORO BK": 1964,
+        "RUBANDA BK": 4381,
+        "KABALE MC BK": 71,
+        "KABALE BK": 664,
+        "RUKIGA BK": 833,
+        "KANUNGU BK": 374,
+        "NTUNGAMO MC BK": 76,
+        "NTUNGAMO BK": 730,
+        "RUKUNGIRI MC BK": 75,
+        "RUKUNGIRI BK": 143,
+        "KIRYANDONGO BK": 2985,
+        "LUWEERO BK": 3110,
+        "MASINDI MC BK": 149,
+        "MASINDI BK": 1072,
+        "HOIMA BK": 974,
+        "KAGADI BK": 753,
+        "KIKUUBE BK": 494,
+        "BUNDIBUGYO BK": 2170,
+        "NTOROKO BK": 341,
+        "KABAROLE BK": 1380,
+        "FORT PORTAL CITY BK": 521,
+        "MUBENDE MC BK": 189,
+        "MITYANA BK": 936,
+        "BUVUMA BK": 423,
+        "KALANGALA BK": 2752,
+        "BUTAMBALA BK": 232,
+        "GOMBA BK": 534,
+        "KIIRA MC BK": 231,
+        "MAKINDYE SSABAGABO MC BK": 315,
+        "MPIGI BK": 317,
+        "NANSANA MC BK": 288,
+        "WAKISO BK": 1596,
+        "KALUNGU BK": 918,
+        "KYOTERA BK": 292,
+        "LWENGO BK": 1475,
+        "LYANTONDE BK": 835,
+        "MASAKA CITY BK": 89,
+        "MASAKA BK": 35,
+        "RAKAI BK": 611,
+        "SEMBABULE BK": 454,
+        "BUKOMANSIMBI BK": 1,
+        "MAAIF BK": 2045,
+        "MOWT BK": 88,
+        "MOFPED BK": 458,
+        "OPM BK": 10,
+        "MGLSD BK": 10,
+        "MOLG BK": 13,
+        "NEMA BK": 6,
+        "PPDA BK": 5,
+        "OAG BK": 20,
+        "MOWE BK": 2939,
+        "MOLHUD BK": 27,
+        "KCCA BK": 51,
+        "UBTS BK": 273,
+        "MOROTO RRH BK": 368,
+        "MBALE RRH BK": 229,
+        "NAKASEKE BK": 60,
+        "MUBENDE RRH BK": 220,
+        "KAYUNGA RRH BK": 172,
+        "NAKASONGOLA BK": 60,
+        "ENTEBBE RH BK": 269,
+        "MODV BK": 183,
+        "JINJA RRH BK": 305,
+        "SOROTI RRH BK": 214,
+        "MASAKA RRH BK": 363,
+        "MBARARA RRH BK": 271,
+        "HOIMA RRH BK": 223,
+        "KABALE RRH BK": 347,
+        "LIRA RRH BK": 214,
+        "ARUA RRH BK": 251,
+        "BUTABIKA NRMH BK": 288,
+        "NAGURU RH BK": 248,
+        "KAWEMPE RH BK": 196,
+        "KIRUDDU RH BK": 283,
+        "MULAGO NRH BK": 138,
+        "GULU RRH BK": 301,
+        "FORT PORTAL RRH BK": 203,
+        "YUMBE RRH BK": 112,
+        "FORT PORTAL BK": 1
+      },
+      "sha256": "599e4e6430ee6e736805f772391fc51eea70efb40030dbcfb40e510f353a2b9a",
+      "unchanged_package_parts_preserved": true,
+      "passed": true,
+      "format_checks": {
+        "readme_addresses_verified": true,
+        "cells_formatted": 162163
+      }
     }
-  ],
-  "quantity_validation_correction": {
-    "reason": "The original QuantityAudit consumed an SK row for a zero-output audit entry and never advanced from that entry because positive observed count could not equal zero.",
-    "replaced_findings": {
-      "SK.quantity_audit_unexported_sources": 1,
-      "SK.source_line_audit_identity": 556699,
-      "SK.source_line_quantity_incomplete": 1,
-      "SK.source_line_quantity_sequence": 142670
-    },
-    "reconciled_against_unchanged_audit_archive": true,
-    "independent_diagnostic": "quantity-alignment-diagnostic.json"
   },
-  "snapshot_sha256": {
-    "ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx": "b4f0ea22c9aed77085d587bc4b142c00bf9a472f42ed1b31bc3113c8a2014e3c",
-    "ALL_UGIFT_ASSET_REGISTER_SK_TEMPLATE.xlsx": "7ba6d88cf2eb60871224bf0c25834ac6c333f1f8ff0c1752995f88d7968a67d4",
-    "asset-register-audits.json.gz": "ce05a0e9f89f2dae38b7a183a046a59779fee7536b485ef2c400844fcda279f5",
-    "REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx": "d6c442e48982f648863724933537b9525cdcd2df3b2421367f4da2d1f4de380a"
+  "new_identifier_collisions": 0,
+  "quantity_audit_expected_rows": 234613,
+  "source_review_rows": 655,
+  "source_fact_conflicts": 73,
+  "baseline_full_validation": {
+    "generated_utc": "2026-09-27T15:27:25.800181+00:00",
+    "passed": false,
+    "findings_count": 2924,
+    "warnings_count": 3260,
+    "preserved_in": "asset-register-audits.json.gz / pre_ifmis_validation"
   },
-  "validated_package": "D:\\coding\\ugift-data-analysis\\outputs\\asset-register",
-  "post_consolidation_preservation": {
-    "passed": true,
-    "asset_rows": 225133,
-    "filled_cells": 2764,
-    "changed_rows": 2655,
-    "readme_cells_updated": 1,
-    "all_untargeted_cells_and_worksheet_metadata_byte_identical": true,
-    "target_row_heights_adjusted_only_for_readability": 1,
-    "preserved_package_parts": [
-      "docProps/app.xml",
-      "docProps/core.xml",
-      "xl/theme/theme1.xml",
-      "xl/styles.xml",
-      "_rels/.rels",
-      "xl/workbook.xml",
-      "xl/_rels/workbook.xml.rels",
-      "[Content_Types].xml"
-    ],
-    "sha256": {
-      "revised_input": "d6c442e48982f648863724933537b9525cdcd2df3b2421367f4da2d1f4de380a",
-      "final": "a6eaae9338b06213c8fc3b0b49625f9eb4240525282683c2278aefc1c3642802"
-    },
-    "scope": "All rows/package parts checked; every additional fill checked against its authored value and blank-cell precondition. No populated value or physical asset row removed."
-  },
-  "findings_count": 2924,
-  "warnings_count": 3260,
-  "retained_phase_reports": {
-    "validation-current.json": "asset-register-audits.json.gz:validation_history:validation-current.json",
-    "quantity-validator-current.json": "asset-register-audits.json.gz:validation_history:quantity-validator-current.json",
-    "quantity-alignment-diagnostic.json": "asset-register-audits.json.gz:validation_history:quantity-alignment-diagnostic.json"
-  }
+  "limitations": [
+    "655 source rows with ambiguous or conflicting identities were retained in the review log, not added as uncertain duplicates.",
+    "Previously recorded source facts prevail over conflicting IFMIS values.",
+    "Pre-existing multiple matches remain unresolved; the package is not certified free of every historical duplicate."
+  ]
 }

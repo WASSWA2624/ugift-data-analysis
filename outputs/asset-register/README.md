@@ -1,6 +1,6 @@
 # UgIFT asset registers
 
-Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF register. It contains 225,133 asset rows. The package retains three stages so recorded source facts remain distinguishable from mapped and completed values.
+Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF register. It contains 234,613 asset rows following the IFMIS update of 28 September 2026. The package retains three stages so recorded source facts remain distinguishable from mapped and completed values.
 
 | File | Purpose |
 |---|---|
@@ -10,9 +10,24 @@ Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF registe
 | `README.md` | Package status, revision history, rebuild instructions and book-code index. |
 | `asset-register-audits.json.gz` | Lossless preservation of the three original audit tables, plus revision changes, field fills, documentation changes, validation history and raw-source verification. |
 | `consolidation-report.json` | Merge and preservation results, completed fields, and explanations for remaining unsupported or nonapplicable blanks by column. |
-| `validation-report.json` | Full validation results, including findings and warnings requiring review. |
+| `validation-report.json` | Current IFMIS checks and preserved historical validation findings. |
+| `ifmis-review.csv` | Unresolved IFMIS identities and conflicting recorded facts. |
 
-## Consolidation and validation
+## IFMIS update — 28 September 2026
+
+All three registers now contain **234,613 physical assets**. The update added **9,481** identified assets, enriched **2,087** existing records, and removed **one proven duplicate** where the two IMEIs of a TELA handset had been recorded as separate assets. Existing rows were preserved except for documented cell updates, that duplicate removal and resulting row-number shifts.
+
+The IFMIS source contains **9,323 TELA handsets**: 9,322 were added and one matched an existing asset. All are **MDA assets under the Ministry of Education and Sports**, with no assignment to existing facilities. A previously recorded TELA asset without an identifier was also reclassified as MDA and remains separately recorded because no exact handset match was available. All ministry-owned additions use the MDA classification. The TELA distribution list supports IMEI reconciliation only; it does not assign the handsets to facilities in this update. DES inspection tablets retain Ministry of Education ownership.
+
+Exact serials, engraved tags and inspection-asset identifiers were compared before insertion. A full scan of all 225,133 baseline REF rows found **zero identifier collisions with the 9,481 proposed additions**. Added records also have no repeated serials or real tags. Fourteen repeated IFMIS identifiers were recorded once. Existing ambiguous matches were not collapsed by item name or description.
+
+**655 source rows require review**, including repeated untagged GNSS component lists, conflicting serial/tag identities and multiple existing matches. They were not inserted as uncertain duplicates. **73 conflicting recorded facts** were preserved rather than overwritten. See `ifmis-review.csv` for these cases and `asset-register-audits.json.gz` for every IFMIS source row, its decision, before/after cell values and duplicate-removal evidence. Historical multiple matches still require review; this update does not certify the entire legacy register as duplicate-free.
+
+New source facts fill gaps and replace identified borrowed values where supported. Related REF depreciation and net book values were refreshed using the existing 30 September 2026 convention. All changed cells, added rows, row sequences and package preservation checks passed. The previous full validator's unrelated findings remain preserved and have not been rerun; `validation-report.json` distinguishes the passing IFMIS checks from that historical result.
+
+The pre-update files are retained in `tmp/ifmis-update-20260928/before/`. The archive also preserves the previous quantity, consolidation and validation records. The standard full rebuild commands below do not replay this incremental IFMIS reconciliation: retain the reviewed update and its audit before regenerating the package.
+
+## Consolidation and validation (27 September baseline)
 
 The original and revised REF workbooks were consolidated under the canonical REF filename. The revised workbook contributed changes on 668 asset rows: 4,918 previously blank cells were filled and 3,206 existing values were revised. A further 2,764 missing fields were recovered through exact source provenance: 2,627 manufacturers, 109 serial numbers, 2 models and 26 purchase dates. In total, 7,682 blank cells were filled.
 
@@ -62,7 +77,7 @@ The dated output folders were replaced with descriptive names: `outputs/asset-re
 | 3 | AGAGO BK | 1,998 |
 | 4 | ALEBTONG BK | 1,985 |
 | 5 | AMOLATAR BK | 4,328 |
-| 6 | AMUDAT BK | 871 |
+| 6 | AMUDAT BK | 870 |
 | 7 | AMURIA BK | 1,764 |
 | 8 | AMURU BK | 1,303 |
 | 9 | APAC BK | 2,585 |
@@ -83,7 +98,7 @@ The dated output folders were replaced with descriptive names: `outputs/asset-re
 | 24 | BULIISA BK | 1,714 |
 | 25 | BUNDIBUGYO BK | 2,170 |
 | 26 | BUNYANGABU BK | 628 |
-| 27 | BUSHENYI BK | 268 |
+| 27 | BUSHENYI BK | 266 |
 | 28 | BUSIA BK | 1,739 |
 | 29 | BUTABIKA NRMH BK | 288 |
 | 30 | BUTALEJA BK | 1,640 |
@@ -167,7 +182,7 @@ The dated output folders were replaced with descriptive names: `outputs/asset-re
 | 108 | LUWEERO BK | 3,110 |
 | 109 | LWENGO BK | 1,475 |
 | 110 | LYANTONDE BK | 835 |
-| 111 | MAAIF BK | 1,975 |
+| 111 | MAAIF BK | 2,045 |
 | 112 | MADI OKOLLO BK | 247 |
 | 113 | MAKINDYE SSABAGABO MC BK | 315 |
 | 114 | MANAFWA BK | 1,637 |
@@ -187,11 +202,11 @@ The dated output folders were replaced with descriptive names: `outputs/asset-re
 | 128 | MITOOMA BK | 1,943 |
 | 129 | MITYANA BK | 936 |
 | 130 | MODV BK | 183 |
-| 131 | MOES BK | 1,371 |
+| 131 | MOES BK | 10,783 |
 | 132 | MOFPED BK | 458 |
 | 133 | MOH BK | 264 |
 | 134 | MOLG BK | 13 |
-| 135 | MOLHUD BK | 26 |
+| 135 | MOLHUD BK | 27 |
 | 136 | MOROTO BK | 927 |
 | 137 | MOROTO RRH BK | 368 |
 | 138 | MOWE BK | 2,939 |
