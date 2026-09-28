@@ -58,3 +58,8 @@ Still in Figure 114, what is the reason for the items not being utilised?. Why a
 
 25). Report at national level
 
+26). Let bloodbanks stand out separately.
+
+27). Photos must be arranged in a way that they span the horizontal widith. If their widith can't fit(as in less than the available horizontal widith, add more photos), ensure the widith fully utilized.
+28). You should explicitly state that accessories and consummables were not included during this activity. 
+
