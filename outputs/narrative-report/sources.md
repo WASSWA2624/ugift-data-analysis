@@ -189,6 +189,56 @@ The three accompanying workbook Asset Register and Read Me worksheets; data rows
 
 ## Charts and photographs
 
+Section 4.2 blood bank photographs added 29 September 2026. Figure numbers are from the rebuilt report. Six Arua frames are from `raw-data-grouped/blood-banks/Arua Blood Bank Photos.docx`. Six Hoima frames are from `raw-data-grouped/blood-banks/hoima-blood-bank-photos`. The Hoima donor-room frame is cropped at the top to remove a framed certificate. The Arua UPS frame is rotated 90 degrees counter-clockwise. P128 shows the mark UBTS/UGIFT/VCH/001; the Hoima field return engraving count is unchanged.
+
+### Figure 1: Completed blood bank building at Arua Regional Blood Bank, Arua City (West Nile)
+Output file: `outputs/narrative-report/figures/photo_124_arua_regional_blood_bank_building.jpg`.
+UgIFT field photograph P124; raw-data-grouped/blood-banks/Arua Blood Bank Photos.docx; {"embedded_image": "word/media/image4.jpeg", "body_block": 2, "table": null, "adjacent_text": "Arua Regional Blood Bank Photos, Arua Central Division, Arua City."}
+
+### Figure 2: Donor couches in the donor room at Arua Regional Blood Bank, Arua City (West Nile)
+Output file: `outputs/narrative-report/figures/photo_125_arua_regional_blood_bank_donor_couches.jpg`.
+UgIFT field photograph P125; raw-data-grouped/blood-banks/Arua Blood Bank Photos.docx; {"embedded_image": "word/media/image6.jpeg", "body_block": 3, "table": null, "adjacent_text": "Arua Regional Blood Bank Photos, Arua Central Division, Arua City."}
+
+### Figure 3: Markings PEP II/UBTS/COMP/11/016 and UBTS/UGIFT/ARBB/UPS/001 on uninterruptible power supplies at Arua Regional Blood Bank, Arua City (West Nile)
+Output file: `outputs/narrative-report/figures/photo_126_arua_regional_blood_bank_ups_markings.jpg`.
+UgIFT field photograph P126; raw-data-grouped/blood-banks/Arua Blood Bank Photos.docx; {"embedded_image": "word/media/image12.jpeg", "body_block": 3, "table": null, "adjacent_text": "Arua Regional Blood Bank Photos, Arua Central Division, Arua City."}
+
+### Figure 4: Blood bank refrigerator at Arua Regional Blood Bank, Arua City (West Nile)
+Output file: `outputs/narrative-report/figures/photo_130_arua_regional_blood_bank_refrigerator.jpg`.
+UgIFT field photograph P130; raw-data-grouped/blood-banks/Arua Blood Bank Photos.docx; {"embedded_image": "word/media/image8.jpg", "body_block": 3, "table": null, "adjacent_text": "Arua Regional Blood Bank Photos, Arua Central Division, Arua City."}
+
+### Figure 5: Platelet agitator at Arua Regional Blood Bank, Arua City (West Nile)
+Output file: `outputs/narrative-report/figures/photo_131_arua_regional_blood_bank_platelet_agitator.jpg`.
+UgIFT field photograph P131; raw-data-grouped/blood-banks/Arua Blood Bank Photos.docx; {"embedded_image": "word/media/image7.jpg", "body_block": 3, "table": null, "adjacent_text": "Arua Regional Blood Bank Photos, Arua Central Division, Arua City."}
+
+### Figure 6: Chest freezer at Arua Regional Blood Bank, Arua City (West Nile)
+Output file: `outputs/narrative-report/figures/photo_132_arua_regional_blood_bank_chest_freezer.jpg`.
+UgIFT field photograph P132; raw-data-grouped/blood-banks/Arua Blood Bank Photos.docx; {"embedded_image": "word/media/image13.jpeg", "body_block": 3, "table": null, "adjacent_text": "Arua Regional Blood Bank Photos, Arua Central Division, Arua City."}
+
+### Figure 7: Donor couches in the donor room at Hoima Regional Blood Bank, Hoima City (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_127_hoima_regional_blood_bank_donor_room.jpg`.
+UgIFT field photograph P127; raw-data-grouped/blood-banks/hoima-blood-bank-photos/WhatsApp Image 2026-09-28 at 18.36.00.jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph. Top of the frame cropped to remove a framed certificate on the wall."}
+
+### Figure 8: Engraving reading UBTS/UGIFT/VCH/001 on equipment at Hoima Regional Blood Bank, Hoima City (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_128_hoima_regional_blood_bank_ugift_mark.jpg`.
+UgIFT field photograph P128; raw-data-grouped/blood-banks/hoima-blood-bank-photos/WhatsApp Image 2026-09-28 at 18.36.02 (2).jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph in the Hoima blood bank photograph folder."}
+
+### Figure 9: Blood collection balance at Hoima Regional Blood Bank, Hoima City (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_133_hoima_regional_blood_bank_collection_balance.jpg`.
+UgIFT field photograph P133; raw-data-grouped/blood-banks/hoima-blood-bank-photos/WhatsApp Image 2026-09-28 at 18.36.01.jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph in the Hoima blood bank photograph folder."}
+
+### Figure 10: Benchtop centrifuge at Hoima Regional Blood Bank, Hoima City (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_129_hoima_regional_blood_bank_centrifuge.jpg`.
+UgIFT field photograph P129; raw-data-grouped/blood-banks/hoima-blood-bank-photos/WhatsApp Image 2026-09-28 at 18.36.08 (1).jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph in the Hoima blood bank photograph folder."}
+
+### Figure 11: Water fire extinguisher at Hoima Regional Blood Bank, Hoima City (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_134_hoima_regional_blood_bank_fire_extinguisher.jpg`.
+UgIFT field photograph P134; raw-data-grouped/blood-banks/hoima-blood-bank-photos/WhatsApp Image 2026-09-28 at 18.36.05.jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph in the Hoima blood bank photograph folder."}
+
+### Figure 12: Generator in an outdoor enclosure at Hoima Regional Blood Bank, Hoima City (Bunyoro)
+Output file: `outputs/narrative-report/figures/photo_135_hoima_regional_blood_bank_generator.jpg`.
+UgIFT field photograph P135; raw-data-grouped/blood-banks/hoima-blood-bank-photos/WhatsApp Image 2026-09-28 at 18.36.07 (1).jpeg; {"embedded_image": null, "body_block": null, "table": null, "adjacent_text": "Loose photograph in the Hoima blood bank photograph folder."}
+
 ### Figure 1: All 629 master-list entries were accounted for
 Output file: `outputs/narrative-report/figures/chart_01_coverage.png`.
 facility-reconciliation.csv, Master list scope; master_by_region_type counts; README accountability coverage definition.
