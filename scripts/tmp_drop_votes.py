@@ -279,13 +279,23 @@ def update_readme() -> None:
         lines.append(f"| {number} | {name} | {count:,} |")
     index = "<!-- book-type-code:start -->\n" + "\n".join(lines) + "\n<!-- book-type-code:end -->\n"
     text = text[:start] + index + text[end + len("<!-- book-type-code:end -->") :].lstrip("\r\n")
-    old = "234,613"
-    if text.count(old) != 2:
-        raise RuntimeError(f"expected two current totals, found {text.count(old)}")
-    text = text.replace(old, "234,379")
+    opening = "It contains 234,613 asset rows following the IFMIS update of 28 September 2026."
+    later = "All three registers now contain **234,613 physical assets**."
+    if opening not in text or later not in text:
+        raise RuntimeError("current total sentences were not found")
+    text = text.replace(
+        opening,
+        "It contains 234,379 asset rows. The IFMIS update of 28 September 2026 had brought the registers to 234,613 asset rows; KCCA and MoDVA were removed on 29 September 2026.",
+        1,
+    )
+    text = text.replace(
+        later,
+        "The IFMIS update left all three registers with **234,613 physical assets**.",
+        1,
+    )
     note = (
         "### 29 September 2026 — KCCA and MoDVA removed\n\n"
-        "51 Kampala Capital City Authority rows and 183 Ministry of Defence and Veteran Affairs rows were removed from the SK, MF and REF registers.\n\n"
+        "51 Kampala Capital City Authority rows and 183 Ministry of Defence and Veteran Affairs rows were removed from the SK, MF and REF registers. The registers now contain 234,379 asset rows.\n\n"
     )
     marker = "## Revision history\n\n"
     if marker not in text:

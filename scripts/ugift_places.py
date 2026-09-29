@@ -171,6 +171,8 @@ MDA_VOTES: tuple[tuple[str, str, str], ...] = (
     ("PPDA", "Public Procurement and Disposal of Public Assets Authority", r"ppda|public procurement and disposal of public assets(?: authority)?"),
     ("OAG", "Office of the Auditor General", r"oag|office of the audito[rt] general"),
     ("OPM", "Office of the Prime Minister", r"opm|office of the prime minister|lgmsd|lgmsd ugift"),
+    # KCCA and MODV stay recognisable so source rows can be identified and then left out.
+    # merge_shared_asset_registers.OMITTED_VOTE_CODES drops both votes from the registers.
     ("KCCA", "Kampala Capital City Authority", r"kcca|k c c a|k c c a ugift|kampala capital city authority|kampala city council authority"),
     ("UBTS", "Uganda Blood Transfusion Services", r"ubts|uganda blood transfusion services?|\w+ regional blood bank|\w+ reg blood bank|\w+ rbb"),
     ("MODV", "Ministry of Defence and Veteran Affairs", r"modva?|ministry of defence(?: and veteran affairs)?|bombo mgh|bombo (?:general )?military (?:general )?hospital"),

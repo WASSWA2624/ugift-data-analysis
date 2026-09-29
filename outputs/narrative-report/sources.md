@@ -1,3 +1,18 @@
+# Revision of 29 September 2026
+
+This revision supersedes conflicting totals in the sections below.
+
+Population: classified extract of the 28 September 2026 REF register (`classified.pkl`, worksheet rows as stored), excluding `group == Hospital` and `book` in `KCCA BK`, `MODV BK`. Those two votes were also removed from the SK, MF and REF workbooks on 29 September 2026 (51 and 183 assets). Hospital assets remain in the workbooks and are outside this report. District-office vehicles (4) stay in the programme total.
+
+Counts: assets 226,280; in use 212,760; in store 3,119; good condition 215,879; broken 3,392; other 7,009; movable 216,736; engraved 49,457; UgIFT marking 23,434; recorded value 971,615,425,138; depreciation 163,008,105,313; net book value 808,621,845,836.
+
+Condition partition, mutually exclusive: in use = `in_use == YES`; broken = not in use and utilisation `report_cat` in damaged or obsolete; in store = not in use, `f_in_storage`, and not broken; other = the remainder. Good condition = in use + in store.
+
+Categories: health centres use clinical equipment, clinical furniture, maternity ward equipment, ICT equipment and health centre buildings (residential and non-residential), plus other health centre assets. Schools use school buildings (residential and non-residential), water facilities (tanks, pumps and similar installations, taken out of buildings), school furniture (desks, tables, chairs, stools, other furniture), computers and related equipment, ICT equipment (printers, cameras and other non-computer ICT), plus other school assets. Water names match water, tank, borehole, hand washing or rain water, and exclude latrines, toilets and septic tanks. Residential names match residential, staff house, staff quarter, dormitory or hostel, and exclude non-residential.
+
+Charts written under `outputs/narrative-report/figures/chart_2909_*.png`, plus redrawn `chart_2809_engraving_group.png`, `chart_2809_value_group.png`, `chart_2809_value_mda.png` and `chart_2809_not_in_use_reasons.png`. The computer working-status table was removed. Each new findings table has a chart immediately after it.
+
+
 # UgIFT narrative report source log
 
 Final report: `outputs/narrative-report/UgIFT Asset Verification Report.docx`.
