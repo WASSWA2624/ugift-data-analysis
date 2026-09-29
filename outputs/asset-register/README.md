@@ -1,6 +1,6 @@
 # UgIFT asset registers
 
-Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF register. It contains 234,613 asset rows following the IFMIS update of 28 September 2026. The package retains three stages so recorded source facts remain distinguishable from mapped and completed values.
+Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF register. It contains 234,379 asset rows. The IFMIS update of 28 September 2026 had brought the registers to 234,613 asset rows; KCCA and MoDVA were removed on 29 September 2026. The package retains three stages so recorded source facts remain distinguishable from mapped and completed values.
 
 | File | Purpose |
 |---|---|
@@ -15,7 +15,7 @@ Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF registe
 
 ## IFMIS update — 28 September 2026
 
-All three registers now contain **234,613 physical assets**. The update added **9,481** identified assets, enriched **2,087** existing records, and removed **one proven duplicate** where the two IMEIs of a TELA handset had been recorded as separate assets. Existing rows were preserved except for documented cell updates, that duplicate removal and resulting row-number shifts.
+The IFMIS update left all three registers with **234,613 physical assets**. The update added **9,481** identified assets, enriched **2,087** existing records, and removed **one proven duplicate** where the two IMEIs of a TELA handset had been recorded as separate assets. Existing rows were preserved except for documented cell updates, that duplicate removal and resulting row-number shifts.
 
 The IFMIS source contains **9,323 TELA handsets**: 9,322 were added and one matched an existing asset. All are **MDA assets under the Ministry of Education and Sports**, with no assignment to existing facilities. A previously recorded TELA asset without an identifier was also reclassified as MDA and remains separately recorded because no exact handset match was available. All ministry-owned additions use the MDA classification. The TELA distribution list supports IMEI reconciliation only; it does not assign the handsets to facilities in this update. DES inspection tablets retain Ministry of Education ownership.
 
@@ -51,6 +51,10 @@ The rules are documented in [the register population instructions](../PROMPT_POP
 
 ## Revision history
 
+### 29 September 2026 — KCCA and MoDVA removed
+
+51 Kampala Capital City Authority rows and 183 Ministry of Defence and Veteran Affairs rows were removed from the SK, MF and REF registers. The registers now contain 234,379 asset rows.
+
 ### 27 September 2026 — partial-column gap fill
 
 Blank cells were filled only in columns that already had values, where the 2023 guidelines or the source register state the value. 2,869 rows gained an Annex 1 class from a field spelling (for example a manual resuscitator or a hydraulic delivery bed). 2,176 missing costs were borrowed from the same asset name or, where the name had no price, from its class (203 in the same local government, 1,235 in other local governments, 738 from the class). 445 lines that are not assets were carried at nil. 259 placed-in-service dates were borrowed for rows that are not work in progress. 2,776 rows were then capitalized, 3,068 expense or loose-tool accounts were filled, and straight-line depreciation to 30 September 2026 was calculated on 2,543 rows. Borrowed costs and dates are marked only by the cell colour. Generic names with no comparable price, work in progress, source serials and purchase dates that were not stated, and account segments the guidelines do not use, stay blank.
@@ -68,7 +72,7 @@ The dated output folders were replaced with descriptive names: `outputs/asset-re
 <!-- book-type-code:start -->
 ## BOOK_TYPE_CODE
 
-196 unique values in `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`.
+194 unique values in `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`.
 
 | No. | Book code | Rows |
 |---:|---|---:|
@@ -150,122 +154,120 @@ The dated output folders were replaced with descriptive names: `outputs/asset-re
 | 76 | KAYUNGA BK | 775 |
 | 77 | KAYUNGA RRH BK | 172 |
 | 78 | KAZO BK | 909 |
-| 79 | KCCA BK | 51 |
-| 80 | KIBAALE BK | 1,194 |
-| 81 | KIBOGA BK | 890 |
-| 82 | KIBUKU BK | 1,286 |
-| 83 | KIIRA MC BK | 231 |
-| 84 | KIKUUBE BK | 494 |
-| 85 | KIRUDDU RH BK | 283 |
-| 86 | KIRUHURA BK | 1,473 |
-| 87 | KIRYANDONGO BK | 2,985 |
-| 88 | KISORO BK | 1,964 |
-| 89 | KISORO MC BK | 79 |
-| 90 | KITAGWENDA BK | 61 |
-| 91 | KITGUM BK | 1,084 |
-| 92 | KOBOKO BK | 1,320 |
-| 93 | KOBOKO MC BK | 326 |
-| 94 | KOLE BK | 1,488 |
-| 95 | KOTIDO BK | 49 |
-| 96 | KUMI BK | 2,732 |
-| 97 | KWANIA BK | 1,782 |
-| 98 | KWEEN BK | 1,038 |
-| 99 | KYANKWANZI BK | 3,554 |
-| 100 | KYEGEGWA BK | 881 |
-| 101 | KYENJOJO BK | 2,357 |
-| 102 | KYOTERA BK | 292 |
-| 103 | LAMWO BK | 1,495 |
-| 104 | LIRA BK | 542 |
-| 105 | LIRA CITY BK | 1,115 |
-| 106 | LIRA RRH BK | 214 |
-| 107 | LUUKA BK | 2,680 |
-| 108 | LUWEERO BK | 3,110 |
-| 109 | LWENGO BK | 1,475 |
-| 110 | LYANTONDE BK | 835 |
-| 111 | MAAIF BK | 2,045 |
-| 112 | MADI OKOLLO BK | 247 |
-| 113 | MAKINDYE SSABAGABO MC BK | 315 |
-| 114 | MANAFWA BK | 1,637 |
-| 115 | MARACHA BK | 3,013 |
-| 116 | MASAKA BK | 35 |
-| 117 | MASAKA CITY BK | 89 |
-| 118 | MASAKA RRH BK | 363 |
-| 119 | MASINDI BK | 1,072 |
-| 120 | MASINDI MC BK | 149 |
-| 121 | MAYUGE BK | 4,547 |
-| 122 | MBALE BK | 564 |
-| 123 | MBALE RRH BK | 229 |
-| 124 | MBARARA BK | 1,662 |
-| 125 | MBARARA CITY BK | 171 |
-| 126 | MBARARA RRH BK | 271 |
-| 127 | MGLSD BK | 10 |
-| 128 | MITOOMA BK | 1,943 |
-| 129 | MITYANA BK | 936 |
-| 130 | MODV BK | 183 |
-| 131 | MOES BK | 10,783 |
-| 132 | MOFPED BK | 458 |
-| 133 | MOH BK | 264 |
-| 134 | MOLG BK | 13 |
-| 135 | MOLHUD BK | 27 |
-| 136 | MOROTO BK | 927 |
-| 137 | MOROTO RRH BK | 368 |
-| 138 | MOWE BK | 2,939 |
-| 139 | MOWT BK | 88 |
-| 140 | MOYO BK | 1,113 |
-| 141 | MPIGI BK | 317 |
-| 142 | MUBENDE BK | 1,853 |
-| 143 | MUBENDE MC BK | 189 |
-| 144 | MUBENDE RRH BK | 220 |
-| 145 | MUKONO BK | 1,929 |
-| 146 | MUKONO MC BK | 464 |
-| 147 | MULAGO NRH BK | 138 |
-| 148 | NABILATUK BK | 248 |
-| 149 | NAGURU RH BK | 248 |
-| 150 | NAKAPIRIPIRIT BK | 454 |
-| 151 | NAKASEKE BK | 60 |
-| 152 | NAKASONGOLA BK | 60 |
-| 153 | NAMAYINGO BK | 2,063 |
-| 154 | NAMISINDWA BK | 1,292 |
-| 155 | NAMUTUMBA BK | 1,823 |
-| 156 | NANSANA MC BK | 288 |
-| 157 | NAPAK BK | 3,021 |
-| 158 | NEBBI BK | 1,251 |
-| 159 | NEMA BK | 6 |
-| 160 | NGORA BK | 1,110 |
-| 161 | NTOROKO BK | 341 |
-| 162 | NTUNGAMO BK | 730 |
-| 163 | NTUNGAMO MC BK | 76 |
-| 164 | NWOYA BK | 793 |
-| 165 | OAG BK | 20 |
-| 166 | OBONGI BK | 700 |
-| 167 | OMORO BK | 1,094 |
-| 168 | OPM BK | 10 |
-| 169 | OTUKE BK | 1,006 |
-| 170 | OYAM BK | 1,528 |
-| 171 | PADER BK | 1,171 |
-| 172 | PAKWACH BK | 1,559 |
-| 173 | PALLISA BK | 6,030 |
-| 174 | PPDA BK | 5 |
-| 175 | RAKAI BK | 611 |
-| 176 | RUBANDA BK | 4,381 |
-| 177 | RUBIRIZI BK | 1,780 |
-| 178 | RUKIGA BK | 833 |
-| 179 | RUKUNGIRI BK | 143 |
-| 180 | RUKUNGIRI MC BK | 75 |
-| 181 | RWAMPARA BK | 204 |
-| 182 | SEMBABULE BK | 454 |
-| 183 | SERERE BK | 2,418 |
-| 184 | SHEEMA BK | 670 |
-| 185 | SHEEMA MC BK | 278 |
-| 186 | SIRONKO BK | 1,711 |
-| 187 | SOROTI BK | 1,930 |
-| 188 | SOROTI RRH BK | 214 |
-| 189 | TEREGO BK | 183 |
-| 190 | TORORO BK | 9,823 |
-| 191 | TORORO MC BK | 1,012 |
-| 192 | UBTS BK | 273 |
-| 193 | WAKISO BK | 1,596 |
-| 194 | YUMBE BK | 3,858 |
-| 195 | YUMBE RRH BK | 112 |
-| 196 | ZOMBO BK | 2,296 |
+| 79 | KIBAALE BK | 1,194 |
+| 80 | KIBOGA BK | 890 |
+| 81 | KIBUKU BK | 1,286 |
+| 82 | KIIRA MC BK | 231 |
+| 83 | KIKUUBE BK | 494 |
+| 84 | KIRUDDU RH BK | 283 |
+| 85 | KIRUHURA BK | 1,473 |
+| 86 | KIRYANDONGO BK | 2,985 |
+| 87 | KISORO BK | 1,964 |
+| 88 | KISORO MC BK | 79 |
+| 89 | KITAGWENDA BK | 61 |
+| 90 | KITGUM BK | 1,084 |
+| 91 | KOBOKO BK | 1,320 |
+| 92 | KOBOKO MC BK | 326 |
+| 93 | KOLE BK | 1,488 |
+| 94 | KOTIDO BK | 49 |
+| 95 | KUMI BK | 2,732 |
+| 96 | KWANIA BK | 1,782 |
+| 97 | KWEEN BK | 1,038 |
+| 98 | KYANKWANZI BK | 3,554 |
+| 99 | KYEGEGWA BK | 881 |
+| 100 | KYENJOJO BK | 2,357 |
+| 101 | KYOTERA BK | 292 |
+| 102 | LAMWO BK | 1,495 |
+| 103 | LIRA BK | 542 |
+| 104 | LIRA CITY BK | 1,115 |
+| 105 | LIRA RRH BK | 214 |
+| 106 | LUUKA BK | 2,680 |
+| 107 | LUWEERO BK | 3,110 |
+| 108 | LWENGO BK | 1,475 |
+| 109 | LYANTONDE BK | 835 |
+| 110 | MAAIF BK | 2,045 |
+| 111 | MADI OKOLLO BK | 247 |
+| 112 | MAKINDYE SSABAGABO MC BK | 315 |
+| 113 | MANAFWA BK | 1,637 |
+| 114 | MARACHA BK | 3,013 |
+| 115 | MASAKA BK | 35 |
+| 116 | MASAKA CITY BK | 89 |
+| 117 | MASAKA RRH BK | 363 |
+| 118 | MASINDI BK | 1,072 |
+| 119 | MASINDI MC BK | 149 |
+| 120 | MAYUGE BK | 4,547 |
+| 121 | MBALE BK | 564 |
+| 122 | MBALE RRH BK | 229 |
+| 123 | MBARARA BK | 1,662 |
+| 124 | MBARARA CITY BK | 171 |
+| 125 | MBARARA RRH BK | 271 |
+| 126 | MGLSD BK | 10 |
+| 127 | MITOOMA BK | 1,943 |
+| 128 | MITYANA BK | 936 |
+| 129 | MOES BK | 10,783 |
+| 130 | MOFPED BK | 458 |
+| 131 | MOH BK | 264 |
+| 132 | MOLG BK | 13 |
+| 133 | MOLHUD BK | 27 |
+| 134 | MOROTO BK | 927 |
+| 135 | MOROTO RRH BK | 368 |
+| 136 | MOWE BK | 2,939 |
+| 137 | MOWT BK | 88 |
+| 138 | MOYO BK | 1,113 |
+| 139 | MPIGI BK | 317 |
+| 140 | MUBENDE BK | 1,853 |
+| 141 | MUBENDE MC BK | 189 |
+| 142 | MUBENDE RRH BK | 220 |
+| 143 | MUKONO BK | 1,929 |
+| 144 | MUKONO MC BK | 464 |
+| 145 | MULAGO NRH BK | 138 |
+| 146 | NABILATUK BK | 248 |
+| 147 | NAGURU RH BK | 248 |
+| 148 | NAKAPIRIPIRIT BK | 454 |
+| 149 | NAKASEKE BK | 60 |
+| 150 | NAKASONGOLA BK | 60 |
+| 151 | NAMAYINGO BK | 2,063 |
+| 152 | NAMISINDWA BK | 1,292 |
+| 153 | NAMUTUMBA BK | 1,823 |
+| 154 | NANSANA MC BK | 288 |
+| 155 | NAPAK BK | 3,021 |
+| 156 | NEBBI BK | 1,251 |
+| 157 | NEMA BK | 6 |
+| 158 | NGORA BK | 1,110 |
+| 159 | NTOROKO BK | 341 |
+| 160 | NTUNGAMO BK | 730 |
+| 161 | NTUNGAMO MC BK | 76 |
+| 162 | NWOYA BK | 793 |
+| 163 | OAG BK | 20 |
+| 164 | OBONGI BK | 700 |
+| 165 | OMORO BK | 1,094 |
+| 166 | OPM BK | 10 |
+| 167 | OTUKE BK | 1,006 |
+| 168 | OYAM BK | 1,528 |
+| 169 | PADER BK | 1,171 |
+| 170 | PAKWACH BK | 1,559 |
+| 171 | PALLISA BK | 6,030 |
+| 172 | PPDA BK | 5 |
+| 173 | RAKAI BK | 611 |
+| 174 | RUBANDA BK | 4,381 |
+| 175 | RUBIRIZI BK | 1,780 |
+| 176 | RUKIGA BK | 833 |
+| 177 | RUKUNGIRI BK | 143 |
+| 178 | RUKUNGIRI MC BK | 75 |
+| 179 | RWAMPARA BK | 204 |
+| 180 | SEMBABULE BK | 454 |
+| 181 | SERERE BK | 2,418 |
+| 182 | SHEEMA BK | 670 |
+| 183 | SHEEMA MC BK | 278 |
+| 184 | SIRONKO BK | 1,711 |
+| 185 | SOROTI BK | 1,930 |
+| 186 | SOROTI RRH BK | 214 |
+| 187 | TEREGO BK | 183 |
+| 188 | TORORO BK | 9,823 |
+| 189 | TORORO MC BK | 1,012 |
+| 190 | UBTS BK | 273 |
+| 191 | WAKISO BK | 1,596 |
+| 192 | YUMBE BK | 3,858 |
+| 193 | YUMBE RRH BK | 112 |
+| 194 | ZOMBO BK | 2,296 |
 <!-- book-type-code:end -->

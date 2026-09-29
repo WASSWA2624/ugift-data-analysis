@@ -5,19 +5,19 @@
   "passed": false,
   "ifmis_update_passed": true,
   "row_counts": {
-    "SK": 234613,
-    "MF": 234613,
-    "REF": 234613
+    "SK": 234379,
+    "MF": 234379,
+    "REF": 234379
   },
   "ifmis_checks": {
     "SK": {
-      "asset_rows": 234613,
+      "asset_rows": 234379,
       "checks": {
         "verified_changed_cells": 7037,
         "verified_new_asset_rows": 9481
       },
       "book_counts": {},
-      "sha256": "4e21f42641927c4b821fbfa8c971199827e18893a8f748501cf06435bf8eaa6a",
+      "sha256": "e63180d31ef337e204623d0b8c80cc59a6d579cb57f266d3b87a596e8235a12c",
       "unchanged_package_parts_preserved": true,
       "passed": true,
       "format_checks": {
@@ -26,7 +26,7 @@
       }
     },
     "MF": {
-      "asset_rows": 234613,
+      "asset_rows": 234379,
       "checks": {
         "verified_changed_cells": 7851,
         "verified_new_asset_rows": 9481,
@@ -202,7 +202,6 @@
         "OAG BK": 20,
         "MOWE BK": 2939,
         "MOLHUD BK": 27,
-        "KCCA BK": 51,
         "UBTS BK": 273,
         "MOROTO RRH BK": 368,
         "MBALE RRH BK": 229,
@@ -211,7 +210,6 @@
         "KAYUNGA RRH BK": 172,
         "NAKASONGOLA BK": 60,
         "ENTEBBE RH BK": 269,
-        "MODV BK": 183,
         "JINJA RRH BK": 305,
         "SOROTI RRH BK": 214,
         "MASAKA RRH BK": 363,
@@ -230,7 +228,7 @@
         "YUMBE RRH BK": 112,
         "FORT PORTAL BK": 1
       },
-      "sha256": "dd7c30f8275425c5da671440682aa7ad2ebae1c036d64cb368534b7ad8ff0da7",
+      "sha256": "07be85b8595d01ff39eff3613fd61f2bd4efde79f45158544317357869d3947e",
       "unchanged_package_parts_preserved": true,
       "passed": true,
       "format_checks": {
@@ -239,7 +237,7 @@
       }
     },
     "REF": {
-      "asset_rows": 234613,
+      "asset_rows": 234379,
       "checks": {
         "verified_changed_cells": 12615,
         "verified_new_asset_rows": 9481,
@@ -416,7 +414,6 @@
         "OAG BK": 20,
         "MOWE BK": 2939,
         "MOLHUD BK": 27,
-        "KCCA BK": 51,
         "UBTS BK": 273,
         "MOROTO RRH BK": 368,
         "MBALE RRH BK": 229,
@@ -425,7 +422,6 @@
         "KAYUNGA RRH BK": 172,
         "NAKASONGOLA BK": 60,
         "ENTEBBE RH BK": 269,
-        "MODV BK": 183,
         "JINJA RRH BK": 305,
         "SOROTI RRH BK": 214,
         "MASAKA RRH BK": 363,
@@ -444,7 +440,7 @@
         "YUMBE RRH BK": 112,
         "FORT PORTAL BK": 1
       },
-      "sha256": "599e4e6430ee6e736805f772391fc51eea70efb40030dbcfb40e510f353a2b9a",
+      "sha256": "ff5e5c8610a8ed0af94068ce015137f5c2d5cb2156888257edde165d267fb972",
       "unchanged_package_parts_preserved": true,
       "passed": true,
       "format_checks": {
@@ -454,7 +450,7 @@
     }
   },
   "new_identifier_collisions": 0,
-  "quantity_audit_expected_rows": 234613,
+  "quantity_audit_expected_rows": 234379,
   "source_review_rows": 655,
   "source_fact_conflicts": 73,
   "baseline_full_validation": {
