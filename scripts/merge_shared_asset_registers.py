@@ -3174,9 +3174,20 @@ CENTRAL_NOTES: Counter = Counter()
 HOSPITAL_WORD = re.compile(r"(?i)\b(?:gh|general hospital|hospital|rrh|nrh|nrmh|cufh|isolation cent(?:re|er)|blood bank)\b")
 
 
-def place_central(asset: Asset, vote: LocalGovernment, facility: str, kind: str) -> None:
+# Recognised as votes, then left out of this register.
+OMITTED_VOTE_CODES = frozenset({"KCCA", "MODV"})
+
+
+def omitted_vote(vote: LocalGovernment | None) -> bool:
+    return vote is not None and vote.code in OMITTED_VOTE_CODES
+
+
+def place_central(asset: Asset, vote: LocalGovernment, facility: str, kind: str) -> bool:
     """Settle a central-government row: the vote, the site as written, and the keys
-    the union, quantity and fill steps group on."""
+    the union, quantity and fill steps group on. Returns False when the vote is left out."""
+    if omitted_vote(vote):
+        CENTRAL_NOTES["(KCCA and MoDVA, left out)"] += 1
+        return False
     asset.lg = vote.display
     asset.facility = clean(facility)
     asset.facility_type = kind
@@ -3184,6 +3195,7 @@ def place_central(asset: Asset, vote: LocalGovernment, facility: str, kind: str)
     asset.extras["facility_key"] = facility_key(asset.facility or vote.display, kind) or f"{norm(vote.display)}|"
     asset.extras["central"] = True
     CENTRAL_NOTES[vote.display] += 1
+    return True
 
 
 def hospital_name(text: str) -> str:
@@ -3206,12 +3218,13 @@ def read_mda_status_register(path: Path) -> list[Asset]:
             if vote is None:
                 continue
             if vote.kind == "MDA":
-                place_central(asset, vote, "", "MDA")
+                placed = place_central(asset, vote, "", "MDA")
             else:
                 # A vehicle the ministry handed to a district: the district's asset,
                 # kept at its headquarters.
-                place_central(asset, vote, f"{vote.display} District Headquarters", "Local government office")
-            assets.append(asset)
+                placed = place_central(asset, vote, f"{vote.display} District Headquarters", "Local government office")
+            if placed:
+                assets.append(asset)
     return assets
 
 
@@ -3338,8 +3351,8 @@ def read_programme_register(path: Path) -> list[Asset]:
                 continue
             vote = vote or section_vote or owner
             site = location if location and resolve_mda(location) is not None and resolve_mda(location).code == "MOFPED" and norm(location) not in {"mofped", "ugift secretariat"} else ""
-            place_central(asset, vote, site, "MDA")
-            assets.append(asset)
+            if place_central(asset, vote, site, "MDA"):
+                assets.append(asset)
     return assets
 
 
@@ -3383,8 +3396,8 @@ def read_inventory(path: Path, facility: str) -> list[Asset]:
                 source_location=f"{name.strip()} row {number}",
             )
             asset.extras["source_cells"] = [clean(value) for value in row if isinstance(value, str) and clean(value)]
-            place_central(asset, vote, facility, "Blood bank")
-            assets.append(asset)
+            if place_central(asset, vote, facility, "Blood bank"):
+                assets.append(asset)
     return assets
 
 
@@ -3462,8 +3475,8 @@ def read_mda_consolidation(path: Path) -> list[Asset]:
             else:
                 continue
             asset = take_asset(row, mapping, relative, f"{name.strip()} row {number}")
-            place_central(asset, vote, facility, kind)
-            assets.append(asset)
+            if place_central(asset, vote, facility, kind):
+                assets.append(asset)
     return assets
 
 
@@ -3778,7 +3791,8 @@ def drop_near_duplicates(parsed: dict[str, list[Asset]]) -> list[str]:
 
 # Bump when source parsing/place resolution changes. Quantity reconciliation and
 # workbook formatting changes do not invalidate the retained raw source rows.
-PARSER_CACHE_VERSION = 2
+# Version 3 leaves out KCCA and the Ministry of Defence and Veteran Affairs.
+PARSER_CACHE_VERSION = 3
 
 
 def parsed_fingerprint(files: list[Path]) -> dict:
@@ -3901,7 +3915,10 @@ def main() -> None:
     for note in duplicate_notes:
         print("near duplicate:", note, flush=True)
     print(f"Duplicate-return review complete: {len(parsed):,} returns retained", flush=True)
-    collected: list[Asset] = [asset for assets in parsed.values() for asset in assets]
+    collected: list[Asset] = [
+        asset for assets in parsed.values() for asset in assets
+        if not omitted_vote(resolve_lg(asset.lg) if asset.lg else None)
+    ]
     used: list[str] = [f"{relative} ({len(assets):,} source rows)" for relative, assets in parsed.items()]
     mark_unit_records(collected)
     collected, overlap_notes = union_facility_submissions(collected)
@@ -3930,9 +3947,16 @@ def main() -> None:
         f"{sum(row['status'] == 'no_asset_rows' for row in source_audit):,} had no in-scope asset rows; "
         f"{len(source_errors):,} were missing or failed to parse. File-level outcomes are in {audit_path.name}, source section."
     )
-    central = sorted(((vote, count) for vote, count in CENTRAL_NOTES.items() if not vote.startswith("(")), key=lambda item: -item[1])
+    central = sorted(
+        (
+            (name, count) for name, count in CENTRAL_NOTES.items()
+            if not name.startswith("(") and not omitted_vote(resolve_lg(name))
+        ),
+        key=lambda item: -item[1],
+    )
     overlap_notes.append(
         "Central government: ministries, agencies and referral hospitals keep their UgIFT assets on their own votes and stay on the register. "
+        "Kampala Capital City Authority and the Ministry of Defence and Veteran Affairs are left out. "
         "Their rows come from the ministries' verification returns (_multi-team/programme-documents/MDA status register.xlsx, one sheet per MDA), the programme's "
         "fixed-asset registers (fwdugiftassets/*.xls; a row located at a local government office is that government's asset and is left out: "
         f"{CENTRAL_NOTES['(local government offices, left out)']:,} lines), the Hoima and Arua regional blood-bank inventories (Uganda Blood Transfusion Services), "

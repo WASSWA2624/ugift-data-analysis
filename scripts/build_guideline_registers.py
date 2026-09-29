@@ -1505,6 +1505,12 @@ def write_book(path: Path, header: list[str], rows, readme_lines) -> int:
     return count
 
 
+OMITTED_LOCAL_GOVERNMENTS = {
+    "kampala capital city authority",
+    "ministry of defence and veteran affairs",
+}
+
+
 def source_rows(limit: int | None = None):
     workbook = load_workbook(SK, read_only=True, data_only=True)
     sheet = workbook["Asset Register"]
@@ -1518,6 +1524,8 @@ def source_rows(limit: int | None = None):
             continue
         record = {name: row[position] if position < len(row) else None for name, position in index.items()}
         record["_row"] = number + 2  # the row's number in the SK workbook
+        if plain(record.get("Local Government")).casefold() in OMITTED_LOCAL_GOVERNMENTS:
+            continue
         yield record
     workbook.close()
 
@@ -1590,7 +1598,7 @@ def readme(stats: Counter, borrowed: bool, filled: Counter, headers: list[str]):
             "LOCATION_SEGMENT2 is the department in upper case in one spelling (counts and facility or category words typed in the department cell are not departments); where the source left the department empty it is the department of the vote "
             f"that a facility of that kind belongs to (HEALTH for a health centre, EDUCATION for a seed school, HOSPITAL SERVICES for a hospital, UNSPECIFIED for a ministry; {stats['department_kind']:,} rows), and ATTRIBUTE2(Department) carries that same department. "
             "LOCATION_SEGMENT3 is the facility, ending in Seed Secondary School or Health Centre III; a hospital, blood bank, ministry site or local government office keeps its own name. LOCATION_SEGMENT4 is UNSPECIFIED, the fourth segment of every location combination in Location(3)2.xlsx and of the sample row.",
-            "Central government: ministries, agencies and referral hospitals keep their UgIFT assets on their own votes and stay on the register. Their BOOK_TYPE_CODE is the vote code Location(3)2.xlsx spells plus BK (MOFPED BK, MOH BK, MOES BK, MOLG BK, MOLHUD BK, MGLSD BK, MAAIF BK, MOWE BK, MOWT BK, NEMA BK, PPDA BK, OAG BK, OPM BK, KCCA BK, UBTS BK for the regional blood banks, ARUA RRH BK and the other referral hospitals), "
+            "Central government: ministries, agencies and referral hospitals keep their UgIFT assets on their own votes and stay on the register. Kampala Capital City Authority and the Ministry of Defence and Veteran Affairs are left out. Their BOOK_TYPE_CODE is the vote code Location(3)2.xlsx spells plus BK (MOFPED BK, MOH BK, MOES BK, MOLG BK, MOLHUD BK, MGLSD BK, MAAIF BK, MOWE BK, MOWT BK, NEMA BK, PPDA BK, OAG BK, OPM BK, UBTS BK for the regional blood banks, ARUA RRH BK and the other referral hospitals), "
             "LOCATION_SEGMENT1 that same code, LOCATION_SEGMENT2 the department the source states (else UNSPECIFIED, or HOSPITAL SERVICES for a hospital) and LOCATION_SEGMENT3 the site the source names (Finance Building, Embassy House, a district inspectorate, a blood bank) or UNSPECIFIED. "
             "Their rows come from the ministries' verification returns, the programme's fixed-asset registers, the two blood-bank inventories and the hospital rows of the consolidated MDA status register, as the SK Read Me records.",
             "Equipment status is written as Functional or Faulty on every row, in ATTRIBUTE14(Equipment status); IN_USE_FLAG is YES for Functional and NO for Faulty. "
