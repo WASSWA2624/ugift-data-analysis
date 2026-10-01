@@ -464,5 +464,22 @@
     "655 source rows with ambiguous or conflicting identities were retained in the review log, not added as uncertain duplicates.",
     "Previously recorded source facts prevail over conflicting IFMIS values.",
     "Pre-existing multiple matches remain unresolved; the package is not certified free of every historical duplicate."
-  ]
+  ],
+  "gap_fill_review_20261001": {
+    "passed": true,
+    "scope": "All REF rows and all blank-cell fills; previous populated cells, package parts and worksheet controls preserved.",
+    "checks": {
+      "unchanged_package_parts": 9,
+      "rows_verified": 234352,
+      "unchanged_asset_rows": 230941,
+      "untouched_cells_on_changed_rows": 140133,
+      "verified_blank_fills": 3443,
+      "sheet_views_filters_widths_preserved": true,
+      "existing_readme_rows_preserved": 49,
+      "readme_review_notes_added": 1,
+      "prior_audit_tables_preserved": 18
+    },
+    "report": "gap-fill-report.json",
+    "existing_findings": "Previously recorded unrelated findings are retained. The general three-workbook validator has not been rerun against mismatched source/REF row positions."
+  }
 }

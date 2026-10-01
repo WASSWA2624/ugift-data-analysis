@@ -2,7 +2,7 @@
   "generated_utc": "2026-09-28T09:58:31.312894+00:00",
   "status": "updated_with_review_items",
   "canonical_workbook": "REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx",
-  "asset_rows": 234379,
+  "asset_rows": 234351,
   "merge": {
     "revised_asset_rows_changed": 668,
     "blank_cells_filled": 4918,
@@ -574,5 +574,61 @@
     "quantity_audit_total": 234613,
     "review_file": "ifmis-review.csv",
     "backup": "tmp/ifmis-update-20260928/before"
+  },
+  "gap_fill_review_20261001": {
+    "report": "gap-fill-report.json",
+    "cells_filled": 3443,
+    "asset_rows_enriched": 3410,
+    "fills_by_column": {
+      "MANUFACTURER_NAME": 3341,
+      "MODEL_NUMBER": 101,
+      "ATTRIBUTE15(Remarks)": 1
+    },
+    "current_blank_counts": {
+      "ASSET_EXP_ACCT_FUND_SOURCE": 234351,
+      "ASSET_EXP_ACCT_PROGRAMME": 234351,
+      "ASSET_EXP_ACCT_COST_CENTER": 234351,
+      "ASSET_EXP_ACCT_PROJECT": 234351,
+      "ASSET_EXP_ACCT_BUDGET_OUTPUTS": 234351,
+      "ASSET_EXP_ACCT_SPARE": 234351,
+      "ASSET_EXP_ACCT_GEO_LOCATION": 234351,
+      "ASSET_CLR_ACCT_FUND": 234351,
+      "ASSET_CLR_ACCT_FUND_SOURCE": 234351,
+      "ASSET_CLR_ACCT_PROGRAMME": 234351,
+      "ASSET_CLR_ACCT_COST_CENTER": 234351,
+      "ASSET_CLR_ACCT_PROJECT": 234351,
+      "ASSET_CLR_ACCT_BUDGET_OUTPUTS": 234351,
+      "ASSET_CLR_ACCT_SPARE": 234351,
+      "ASSET_CLR_ACCT_GEO_LOCATION": 234351,
+      "ASSET_KEY_SEGMENT1": 234351,
+      "SERIAL_NUMBER": 218624,
+      "MANUFACTURER_NAME": 228184,
+      "EMPLOYEE_NUMBER": 234351,
+      "AMORTIZATION_START_DATE": 234351,
+      "AMORTIZE_NBV_FLAG": 234351,
+      "ATTRIBUTE7(Date Of Purchase)": 170414,
+      "MODEL_NUMBER": 233623,
+      "ATTRIBUTE4(Item Description)": 50784,
+      "ASSET_CATEGORY_MAJOR": 20190,
+      "ASSET_CATEGORY_MINOR1": 20190,
+      "ASSET_CATEGORY_MINOR2": 20190,
+      "ASSET_CATEGORY_MINOR3": 20190,
+      "ASSET_TYPE": 28087,
+      "ASSET_CLR_ACCT_ACCOUNT": 28087,
+      "DEPRN_METHOD_CODE": 22685,
+      "ASSET_EXP_ACCT_ACCOUNT": 19531,
+      "FIXED_ASSETS_COST": 2690,
+      "ATTRIBUTE9(Recoverable cost)": 2688,
+      "ATTRIBUTE10(Cost)": 2690,
+      "ATTRIBUTE12(Net Book Value)": 2689,
+      "DATE_PLACED_IN_SERVICE": 315,
+      "ATTRIBUTE8(Date Placed In Service)": 315,
+      "ATTRIBUTE15(Remarks)": 0
+    },
+    "previously_populated_cells_preserved": true,
+    "source_register_row_counts": {
+      "SK": 234379,
+      "MF": 234379
+    }
   }
 }

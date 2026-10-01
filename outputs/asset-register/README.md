@@ -1,6 +1,6 @@
 # UgIFT asset registers
 
-Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF register. It contains 234,379 asset rows. The IFMIS update of 28 September 2026 had brought the registers to 234,613 asset rows; KCCA and MoDVA were removed on 29 September 2026. The package retains three stages so recorded source facts remain distinguishable from mapped and completed values.
+Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF register. It contains 234,351 asset rows. The IFMIS update of 28 September 2026 had brought the registers to 234,613 asset rows; KCCA and MoDVA were removed on 29 September 2026. The package retains three stages so recorded source facts remain distinguishable from mapped and completed values.
 
 | File | Purpose |
 |---|---|
@@ -12,6 +12,14 @@ Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF registe
 | `consolidation-report.json` | Merge and preservation results, completed fields, and explanations for remaining unsupported or nonapplicable blanks by column. |
 | `validation-report.json` | Current IFMIS checks and preserved historical validation findings. |
 | `ifmis-review.csv` | Unresolved IFMIS identities and conflicting recorded facts. |
+
+## Blank-field review — 1 October 2026
+
+Completed **3,443 blank cells on 3,410 existing assets**: 3,341 manufacturer names and 101 product models stated in recorded item descriptions. One missing source-reference note was recovered from the exact MF asset number and its description with the quantity removed. Source facts were checked through stable asset numbers, book codes, descriptions and exact file/row references. Mixed-brand descriptions, compatibility references, sizes and processor generations were excluded.
+
+Every previously populated asset cell, all 234,351 current REF assets, existing formatting and worksheet controls were preserved. Costs, dates and depreciation retain the existing 30 September 2026 convention. The SK and MF source workbooks retain 234,379 rows. This review preserves the existing REF row set; its 28-row difference from the source registers remains a separate reconciliation item.
+
+Unsupported identifiers and purchase facts, inapplicable fields, and financial fills that would require revising populated depreciation values remain for review. [gap-fill-report.json](gap-fill-report.json) gives the current blank counts and verification results. `asset-register-audits.json.gz` retains every fill and its evidence in `gap_fills_20261001`, alongside all prior audit tables.
 
 ## IFMIS update — 28 September 2026
 
