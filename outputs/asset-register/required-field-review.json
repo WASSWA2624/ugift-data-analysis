@@ -1,0 +1,498 @@
+{
+  "source_sha256": "99c7cb76c394d4ab2eeb873f2f769479c378c2338e48b218e7f86c515973a0f6",
+  "rows": 234351,
+  "changed_cells": 788587,
+  "statistics": {
+    "changed_rows": 220941,
+    "type:CAPITALIZED": 205268,
+    "type:EXPENSED": 18336,
+    "type:PENDING VALUATION": 1572,
+    "pending_cost": 1634,
+    "pending_depreciation": 3274,
+    "type:PENDING VERIFICATION": 1647,
+    "type:NOT CAPITALIZED": 6304,
+    "type:NOT RECOGNIZED": 859,
+    "estimated_cost_fills": 976,
+    "pending_classification": 1834,
+    "classified_from_specific_description": 1146,
+    "type:CIP": 298,
+    "not_yet_in_service": 298,
+    "type:PENDING REVIEW": 67
+  },
+  "columns": {
+    "J": 218901,
+    "AY": 218896,
+    "AL": 27084,
+    "BJ": 27084,
+    "BL": 85785,
+    "C": 21315,
+    "D": 21315,
+    "E": 21315,
+    "F": 20190,
+    "G": 30135,
+    "AH": 27328,
+    "V": 2507,
+    "AE": 3310,
+    "AG": 6544,
+    "AI": 2429,
+    "AK": 8338,
+    "BB": 2429,
+    "BF": 13009,
+    "BH": 8338,
+    "BI": 14585,
+    "M": 2690,
+    "BG": 2690,
+    "AF": 1185,
+    "BE": 1185
+  },
+  "unique_authored_values": 30842,
+  "exception_rows": 3786,
+  "as_of": "2026-09-30",
+  "fy_start": "2026-07-01",
+  "verification": {
+    "passed": true,
+    "asset_rows": 234351,
+    "verified_cell_changes": 788587,
+    "untouched_rows_exact": 13411,
+    "style_checks": 106254,
+    "unmodified_cells_preserved": true,
+    "other_package_parts_preserved": true,
+    "worksheet_controls_preserved": true,
+    "existing_readme_preserved": true,
+    "source_sha256": "99c7cb76c394d4ab2eeb873f2f769479c378c2338e48b218e7f86c515973a0f6",
+    "staged_sha256": "6c2c4e606c8136a104a84f698156b9a24d836d07a2018ac430d0038b0f980ca6"
+  },
+  "independent_financial_checks": {
+    "metrics": {
+      "rows": 234351,
+      "reserve_bound_checks": 231025,
+      "independent_schedule_checks": 205264
+    },
+    "errors": {},
+    "examples": {}
+  },
+  "mandatory_blank_counts": {
+    "ASSET_CATEGORY_MAJOR": 0,
+    "ASSET_CATEGORY_MINOR1": 0,
+    "ASSET_CATEGORY_MINOR2": 0,
+    "ASSET_CATEGORY_MINOR3": 0,
+    "ASSET_TYPE": 0,
+    "FIXED_ASSETS_COST": 0,
+    "DEPRN_METHOD_CODE": 0,
+    "DEPRN_RESERVE": 0,
+    "YTD_DEPRN": 0,
+    "ATTRIBUTE8(Date Placed In Service)": 0
+  },
+  "location_review": {
+    "changed_rows": 218901,
+    "rules": {
+      "health centre organizational department": 63945,
+      "secondary school organizational department": 145338,
+      "department unassigned; preserve source detail": 1337,
+      "explicit central department alias": 166,
+      "local government office department": 4,
+      "sole department in vote master": 12,
+      "hospital organizational department": 7477,
+      "specific hospital department not evidenced": 484,
+      "hospital medical department master alias": 138
+    },
+    "new_departments": {
+      "PRIMARY HEALTHCARE": 63945,
+      "SECONDARY EDUCATION": 145338,
+      "UNSPECIFIED": 1833,
+      "HEALTH INFRASTRUCTURE": 13,
+      "ADMINISTRATION AND MANAGEMENT": 4,
+      "PUBLIC STRUCTURES": 31,
+      "BUDGET POLICY AND EVALUATION": 84,
+      "M&E FOR LOCAL GOVERNMENTS": 10,
+      "FINANCE AND ADMINSTRATION": 5,
+      "YOUTH AND CHILDREN": 1,
+      "ENVIRONMENT COMPLIANCE": 3,
+      "LEGAL AND INVESTIGATIONS": 2,
+      "BLOOD DONATION": 17,
+      "HOSPITAL SERVICES": 7477,
+      "MEDICAL SERVICES": 138
+    },
+    "unresolved_master_combinations": [
+      {
+        "vote": "KYEGEGWA DLG",
+        "department": "PRIMARY HEALTHCARE",
+        "reason": "health centre organizational department",
+        "rows": 270
+      },
+      {
+        "vote": "BUHWEJU DLG",
+        "department": "SECONDARY EDUCATION",
+        "reason": "secondary school organizational department",
+        "rows": 1604
+      },
+      {
+        "vote": "MOES",
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 10783
+      },
+      {
+        "vote": "NAKAPIRIPIRIT DLG",
+        "department": "SECONDARY EDUCATION",
+        "reason": "secondary school organizational department",
+        "rows": 454
+      },
+      {
+        "vote": "MOH",
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 251
+      },
+      {
+        "vote": "ISINGIRO DLG",
+        "department": "PRIMARY HEALTHCARE",
+        "reason": "health centre organizational department",
+        "rows": 69
+      },
+      {
+        "vote": "RUBIRIZI DLG",
+        "department": "SECONDARY EDUCATION",
+        "reason": "secondary school organizational department",
+        "rows": 1255
+      },
+      {
+        "vote": "RUBANDA DLG",
+        "department": "PRIMARY HEALTHCARE",
+        "reason": "health centre organizational department",
+        "rows": 261
+      },
+      {
+        "vote": "KABALE MC",
+        "department": "PRIMARY HEALTHCARE",
+        "reason": "health centre organizational department",
+        "rows": 71
+      },
+      {
+        "vote": "NTUNGAMO DLG",
+        "department": "PRIMARY HEALTHCARE",
+        "reason": "health centre organizational department",
+        "rows": 566
+      },
+      {
+        "vote": "NTUNGAMO DLG",
+        "department": "SECONDARY EDUCATION",
+        "reason": "secondary school organizational department",
+        "rows": 104
+      },
+      {
+        "vote": "RUKUNGIRI DLG",
+        "department": "SECONDARY EDUCATION",
+        "reason": "secondary school organizational department",
+        "rows": 43
+      },
+      {
+        "vote": "BUTAMBALA DLG",
+        "department": "SECONDARY EDUCATION",
+        "reason": "secondary school organizational department",
+        "rows": 77
+      },
+      {
+        "vote": "BUTAMBALA DLG",
+        "department": "PRIMARY HEALTHCARE",
+        "reason": "health centre organizational department",
+        "rows": 94
+      },
+      {
+        "vote": "GOMBA DLG",
+        "department": "PRIMARY HEALTHCARE",
+        "reason": "health centre organizational department",
+        "rows": 412
+      },
+      {
+        "vote": "GOMBA DLG",
+        "department": "SECONDARY EDUCATION",
+        "reason": "secondary school organizational department",
+        "rows": 122
+      },
+      {
+        "vote": "KIIRA MC",
+        "department": "PRIMARY HEALTHCARE",
+        "reason": "health centre organizational department",
+        "rows": 231
+      },
+      {
+        "vote": "MAKINDYE\\-SSABAGABO MC",
+        "department": "PRIMARY HEALTHCARE",
+        "reason": "health centre organizational department",
+        "rows": 315
+      },
+      {
+        "vote": "MAAIF",
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 2045
+      },
+      {
+        "vote": "MOWT",
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 57
+      },
+      {
+        "vote": "MOFPED",
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 374
+      },
+      {
+        "vote": "NEMA",
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 3
+      },
+      {
+        "vote": "PPDA",
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 3
+      },
+      {
+        "vote": "OAG",
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 20
+      },
+      {
+        "vote": "MOWE",
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 2939
+      },
+      {
+        "vote": "MOLHUD",
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 27
+      },
+      {
+        "vote": "MGLSD",
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 4
+      },
+      {
+        "vote": "UBTS",
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 79
+      },
+      {
+        "vote": "NTUNGAMO DLG",
+        "department": "HOSPITAL SERVICES",
+        "reason": "hospital organizational department",
+        "rows": 60
+      },
+      {
+        "vote": "BUTABIKA NRMH",
+        "department": "UNSPECIFIED",
+        "reason": "specific hospital department not evidenced",
+        "rows": 288
+      },
+      {
+        "vote": "KAWEMPE RH",
+        "department": "UNSPECIFIED",
+        "reason": "specific hospital department not evidenced",
+        "rows": 196
+      },
+      {
+        "vote": "BUTAMBALA DLG",
+        "department": "HOSPITAL SERVICES",
+        "reason": "hospital organizational department",
+        "rows": 61
+      },
+      {
+        "vote": "FORT PORTAL DLG",
+        "department": "HOSPITAL SERVICES",
+        "reason": "hospital organizational department",
+        "rows": 1
+      }
+    ],
+    "totals": [
+      {
+        "department": "PRIMARY HEALTHCARE",
+        "reason": "health centre organizational department",
+        "rows": 63945
+      },
+      {
+        "department": "SECONDARY EDUCATION",
+        "reason": "secondary school organizational department",
+        "rows": 145338
+      },
+      {
+        "department": "UNSPECIFIED",
+        "reason": "department unassigned; preserve source detail",
+        "rows": 16585
+      },
+      {
+        "department": "HEALTH INFRASTRUCTURE",
+        "reason": "explicit central department alias",
+        "rows": 13
+      },
+      {
+        "department": "ADMINISTRATION AND MANAGEMENT",
+        "reason": "local government office department",
+        "rows": 4
+      },
+      {
+        "department": "PUBLIC STRUCTURES",
+        "reason": "explicit central department alias",
+        "rows": 31
+      },
+      {
+        "department": "BUDGET POLICY AND EVALUATION",
+        "reason": "explicit central department alias",
+        "rows": 84
+      },
+      {
+        "department": "M&E FOR LOCAL GOVERNMENTS",
+        "reason": "explicit central department alias",
+        "rows": 10
+      },
+      {
+        "department": "FINANCE AND ADMINSTRATION",
+        "reason": "explicit central department alias",
+        "rows": 5
+      },
+      {
+        "department": "YOUTH AND CHILDREN",
+        "reason": "explicit central department alias",
+        "rows": 1
+      },
+      {
+        "department": "UNSPECIFIED",
+        "reason": "sole department in vote master",
+        "rows": 12
+      },
+      {
+        "department": "ENVIRONMENT COMPLIANCE",
+        "reason": "explicit central department alias",
+        "rows": 3
+      },
+      {
+        "department": "LEGAL AND INVESTIGATIONS",
+        "reason": "explicit central department alias",
+        "rows": 2
+      },
+      {
+        "department": "UNSPECIFIED",
+        "reason": "existing exact master department",
+        "rows": 1
+      },
+      {
+        "department": "LABORATORY",
+        "reason": "existing exact master department",
+        "rows": 159
+      },
+      {
+        "department": "BLOOD DONATION",
+        "reason": "existing exact master department",
+        "rows": 18
+      },
+      {
+        "department": "BLOOD DONATION",
+        "reason": "explicit central department alias",
+        "rows": 17
+      },
+      {
+        "department": "HOSPITAL SERVICES",
+        "reason": "hospital organizational department",
+        "rows": 7477
+      },
+      {
+        "department": "UNSPECIFIED",
+        "reason": "specific hospital department not evidenced",
+        "rows": 484
+      },
+      {
+        "department": "MEDICAL SERVICES",
+        "reason": "hospital medical department master alias",
+        "rows": 138
+      },
+      {
+        "department": "ADMINISTRATION AND MANAGEMENT",
+        "reason": "existing exact master department",
+        "rows": 24
+      }
+    ]
+  },
+  "limitations": [
+    "Explicit pending and not-applicable review labels are not certified IFMIS import codes.",
+    "Cost estimates follow the existing register donor policy and are distinguished by colour and audit, not certified market valuations.",
+    "The existing source-register to REF difference of 28 rows remains outside this revision; every current REF row is retained.",
+    "Historical full-validator findings remain preserved; this revision verifies the requested columns and their dependent financial fields.",
+    "No blanket depreciation exemption is inferred from faulty, idle or stored equipment.",
+    "The existing nil treatment of sub-UGX10,000 source costs is a project convention, not a GoU capitalization threshold."
+  ],
+  "current_blank_counts": {
+    "BOOK_TYPE_CODE": 0,
+    "DESCRIPTION": 0,
+    "ASSET_CATEGORY_MAJOR": 0,
+    "ASSET_CATEGORY_MINOR1": 0,
+    "ASSET_CATEGORY_MINOR2": 0,
+    "ASSET_CATEGORY_MINOR3": 0,
+    "ASSET_TYPE": 0,
+    "FIXED_ASSETS_UNITS": 0,
+    "LOCATION_SEGMENT1": 0,
+    "LOCATION_SEGMENT2": 0,
+    "LOCATION_SEGMENT3": 0,
+    "LOCATION_SEGMENT4": 0,
+    "FIXED_ASSETS_COST": 0,
+    "ASSET_EXP_ACCT_FUND": 0,
+    "ASSET_EXP_ACCT_FUND_SOURCE": 234351,
+    "ASSET_EXP_ACCT_PROGRAMME": 234351,
+    "ASSET_EXP_ACCT_COST_CENTER": 234351,
+    "ASSET_EXP_ACCT_PROJECT": 234351,
+    "ASSET_EXP_ACCT_BUDGET_OUTPUTS": 234351,
+    "ASSET_EXP_ACCT_SPARE": 234351,
+    "ASSET_EXP_ACCT_GEO_LOCATION": 234351,
+    "ASSET_EXP_ACCT_ACCOUNT": 17288,
+    "ASSET_CLR_ACCT_FUND": 234351,
+    "ASSET_CLR_ACCT_FUND_SOURCE": 234351,
+    "ASSET_CLR_ACCT_PROGRAMME": 234351,
+    "ASSET_CLR_ACCT_COST_CENTER": 234351,
+    "ASSET_CLR_ACCT_PROJECT": 234351,
+    "ASSET_CLR_ACCT_BUDGET_OUTPUTS": 234351,
+    "ASSET_CLR_ACCT_SPARE": 234351,
+    "ASSET_CLR_ACCT_GEO_LOCATION": 234351,
+    "ASSET_CLR_ACCT_ACCOUNT": 28727,
+    "DATE_PLACED_IN_SERVICE": 0,
+    "DEPRECIATE_FLAG": 0,
+    "DEPRN_METHOD_CODE": 0,
+    "LIFE_IN_MONTHS": 0,
+    "PRORATE_CONVENTION_CODE": 0,
+    "DEPRN_RESERVE": 0,
+    "YTD_DEPRN": 0,
+    "SALVAGE_VALUE": 0,
+    "ASSET_NUMBER": 1921,
+    "ASSET_KEY_SEGMENT1": 234351,
+    "TAG_NUMBER": 0,
+    "SERIAL_NUMBER": 218624,
+    "MANUFACTURER_NAME": 228184,
+    "MODEL_NUMBER": 233623,
+    "EMPLOYEE_NUMBER": 234351,
+    "IN_USE_FLAG": 0,
+    "AMORTIZATION_START_DATE": 234351,
+    "AMORTIZE_NBV_FLAG": 234351,
+    "ATTRIBUTE1(Equipment/ Item)": 0,
+    "ATTRIBUTE2(Department)": 0,
+    "ATTRIBUTE3(Asset Number)": 1920,
+    "ATTRIBUTE4(Item Description)": 50784,
+    "ATTRIBUTE5(Life in Months)": 0,
+    "ATTRIBUTE6(Tag Number (engrave no.))": 0,
+    "ATTRIBUTE7(Date Of Purchase)": 170414,
+    "ATTRIBUTE8(Date Placed In Service)": 0,
+    "ATTRIBUTE9(Recoverable cost)": 0,
+    "ATTRIBUTE10(Cost)": 0,
+    "ATTRIBUTE11(Acc Dep Cost)": 0,
+    "ATTRIBUTE12(Net Book Value)": 0,
+    "ATTRIBUTE13(Ytd Deprn)": 0,
+    "ATTRIBUTE14(Equipment status)": 0,
+    "ATTRIBUTE15(Remarks)": 0
+  }
+}

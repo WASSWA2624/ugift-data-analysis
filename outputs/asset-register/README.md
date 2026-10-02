@@ -13,6 +13,14 @@ Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF registe
 | `validation-report.json` | Current IFMIS checks and preserved historical validation findings. |
 | `ifmis-review.csv` | Unresolved IFMIS identities and conflicting recorded facts. |
 
+## Required-column and accounting review — 2 October 2026
+
+Reviewed all **234,351** current REF rows and applied **788,587** cell changes, including dependent financial attributes. All ten requested mandatory columns are nonblank. Standardized **218,901** department entries, clarified Remarks, restored 489 source-confirmed item identities, and supplied **976** comparable cost estimates.
+
+Unresolved facts are explicit: **1,634** costs still require valuation evidence, **1,834** classifications need a clearer item identity, and **298** items have supported unfinished-work status. These review labels do not constitute valid IFMIS load codes. Depreciation is reconciled to **30 September 2026**, with YTD measured from 30 June 2026. Whole-shilling cumulative rounding is capped at the depreciable base; linked cost, life, service-date, depreciation and net-book-value attributes agree. Independent recoverable amounts are retained except demonstrated misplaced entries.
+
+[required-field-review.json](required-field-review.json) gives the exact changes, validation scope and limitations. [required-field-exceptions.csv](required-field-exceptions.csv) lists unresolved review rows. Original and revised cells, donor rows and source-identity evidence are retained in `asset-register-audits.json.gz`. All existing asset identities, unrelated cells, formatting and worksheet controls were preserved; the pre-review workbook is in `tmp/register-revision-20261002/before/`. Earlier dated reviews below are historical.
+
 ## Blank-field review — 1 October 2026
 
 Completed **3,443 blank cells on 3,410 existing assets**: 3,341 manufacturer names and 101 product models stated in recorded item descriptions. One missing source-reference note was recovered from the exact MF asset number and its description with the quantity removed. Source facts were checked through stable asset numbers, book codes, descriptions and exact file/row references. Mixed-brand descriptions, compatibility references, sizes and processor generations were excluded.

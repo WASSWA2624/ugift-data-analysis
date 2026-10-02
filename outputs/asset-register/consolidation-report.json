@@ -630,5 +630,15 @@
       "SK": 234379,
       "MF": 234379
     }
+  },
+  "required_field_revision_20261002": {
+    "report": "required-field-review.json",
+    "asset_rows": 234351,
+    "all_requested_fields_nonblank": true,
+    "independent_financial_checks_passed": true,
+    "pending_costs": 1634,
+    "pending_classifications": 1834,
+    "pending_depreciation": 3274,
+    "scope": "Requested required fields, departments, remarks and dependent financial attributes; historical checks above are retained as historical."
   }
 }
