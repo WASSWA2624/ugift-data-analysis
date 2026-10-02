@@ -244,5 +244,11 @@
     "pending_classifications": 1834,
     "pending_depreciation": 3274,
     "scope": "Requested required fields, departments, remarks and dependent financial attributes; historical checks above are retained as historical."
+  },
+  "cost_borrowing_followup_20261002": {
+    "report": "cost-borrowing-review.json",
+    "current_cost_blanks": 1540,
+    "pending_valuation_text_in_cost": 0,
+    "note": "Latest user instruction permits unresolved costs to remain blank; earlier nonblank-cost requirement is superseded. Dependent financials refreshed for filled costs."
   }
 }

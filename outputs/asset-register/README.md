@@ -13,6 +13,12 @@ Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF registe
 | `validation-report.json` | Current IFMIS checks and preserved historical validation findings. |
 | `ifmis-review.csv` | Unresolved IFMIS identities and conflicting recorded facts. |
 
+## Comparable-cost follow-up — 2 October 2026
+
+Filled **78** additional unit costs from matched recorded items and treated **16** identified expensed items at nil fixed-asset cost. Recalculated applicable depreciation, July–September YTD, net book value and linked attributes to **30 September 2026**. Remaining **1,540** costs are true blank cells, as requested; no `Pending valuation` text remains in `FIXED_ASSETS_COST` or its matching cost attribute. This supersedes the earlier nonblank-cost requirement. Unknown costs are not treated as zero in financial calculations.
+
+See [cost-borrowing-review.json](cost-borrowing-review.json) and [unpriced-costs.csv](unpriced-costs.csv). The audit archive preserves all before/after cells and donor evidence; prior priced costs and all asset rows remain unchanged.
+
 ## Required-column and accounting review — 2 October 2026
 
 Reviewed all **234,351** current REF rows and applied **788,587** cell changes, including dependent financial attributes. All ten requested mandatory columns are nonblank. Standardized **218,901** department entries, clarified Remarks, restored 489 source-confirmed item identities, and supplied **976** comparable cost estimates.

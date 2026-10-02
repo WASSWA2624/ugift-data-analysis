@@ -442,7 +442,7 @@
     "LOCATION_SEGMENT2": 0,
     "LOCATION_SEGMENT3": 0,
     "LOCATION_SEGMENT4": 0,
-    "FIXED_ASSETS_COST": 0,
+    "FIXED_ASSETS_COST": 1540,
     "ASSET_EXP_ACCT_FUND": 0,
     "ASSET_EXP_ACCT_FUND_SOURCE": 234351,
     "ASSET_EXP_ACCT_PROGRAMME": 234351,
@@ -451,7 +451,7 @@
     "ASSET_EXP_ACCT_BUDGET_OUTPUTS": 234351,
     "ASSET_EXP_ACCT_SPARE": 234351,
     "ASSET_EXP_ACCT_GEO_LOCATION": 234351,
-    "ASSET_EXP_ACCT_ACCOUNT": 17288,
+    "ASSET_EXP_ACCT_ACCOUNT": 17216,
     "ASSET_CLR_ACCT_FUND": 234351,
     "ASSET_CLR_ACCT_FUND_SOURCE": 234351,
     "ASSET_CLR_ACCT_PROGRAMME": 234351,
@@ -460,7 +460,7 @@
     "ASSET_CLR_ACCT_BUDGET_OUTPUTS": 234351,
     "ASSET_CLR_ACCT_SPARE": 234351,
     "ASSET_CLR_ACCT_GEO_LOCATION": 234351,
-    "ASSET_CLR_ACCT_ACCOUNT": 28727,
+    "ASSET_CLR_ACCT_ACCOUNT": 28655,
     "DATE_PLACED_IN_SERVICE": 0,
     "DEPRECIATE_FLAG": 0,
     "DEPRN_METHOD_CODE": 0,
@@ -488,11 +488,17 @@
     "ATTRIBUTE7(Date Of Purchase)": 170414,
     "ATTRIBUTE8(Date Placed In Service)": 0,
     "ATTRIBUTE9(Recoverable cost)": 0,
-    "ATTRIBUTE10(Cost)": 0,
+    "ATTRIBUTE10(Cost)": 1540,
     "ATTRIBUTE11(Acc Dep Cost)": 0,
     "ATTRIBUTE12(Net Book Value)": 0,
     "ATTRIBUTE13(Ytd Deprn)": 0,
     "ATTRIBUTE14(Equipment status)": 0,
     "ATTRIBUTE15(Remarks)": 0
+  },
+  "cost_borrowing_followup_20261002": {
+    "report": "cost-borrowing-review.json",
+    "current_cost_blanks": 1540,
+    "pending_valuation_text_in_cost": 0,
+    "note": "Latest user instruction permits unresolved costs to remain blank; earlier nonblank-cost requirement is superseded. Dependent financials refreshed for filled costs."
   }
 }
