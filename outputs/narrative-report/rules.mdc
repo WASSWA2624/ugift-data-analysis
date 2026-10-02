@@ -1,6 +1,7 @@
 ---
 alwaysApply: true
 ---
-Ensure that any updates are applied consistently to both the PDF and Word (DOCX) versions of the UgIFT asset verification reports in this folder.
-Write in a natural, reporting tone.
-Ensure that any changes made to the report are reflected in the Table of Contents (TOC).
+- Apply all updates consistently to both PDF and Word (DOCX) versions of the UgIFT asset verification reports in this directory.
+- Use clear, report-style language in your writing.
+- Ensure that any modifications to the report are also updated in the Table of Contents (TOC).
+- Before making any changes, confirm that you understand these requirements.
