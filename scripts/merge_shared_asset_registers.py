@@ -3151,11 +3151,14 @@ def settle_unnamed_lines(assets: list[Asset]) -> tuple[list[Asset], list[str]]:
 
 # ------------------------------------------------------- central government (MDAs)
 #
-# Ministries, agencies and referral hospitals keep their UgIFT assets on their own
-# votes. Their returns sit in folders this register otherwise leaves out, so they are
-# read by name: the ministries' verification returns (one sheet per MDA), the
-# programme's own fixed-asset registers, the two regional blood-bank inventories, and
-# the hospital and inspectorate rows of the consolidated MDA status register.
+# Ministries, agencies and Uganda Blood Transfusion Services keep their UgIFT assets
+# on their own votes. The Hoima, Arua and Soroti regional blood banks stay. Referral
+# hospitals are recognised and then left out, with KCCA and the Ministry of Defence.
+# A general hospital on a district vote stays. Central returns sit in folders this
+# register otherwise leaves out, so they are read by name: the ministries' verification
+# returns (one sheet per MDA), the programme's own fixed-asset registers, the two
+# regional blood-bank inventories, and the inspectorate rows of the consolidated MDA
+# status register.
 PROGRAMME_FOLDER = "_multi-team/programme-documents/All WIP Ugift/All WIP Ugift"
 MDA_STATUS_REGISTER = "_multi-team/programme-documents/MDA status register.xlsx"
 PROGRAMME_REGISTERS = (
@@ -3174,8 +3177,15 @@ CENTRAL_NOTES: Counter = Counter()
 HOSPITAL_WORD = re.compile(r"(?i)\b(?:gh|general hospital|hospital|rrh|nrh|nrmh|cufh|isolation cent(?:re|er)|blood bank)\b")
 
 
-# Recognised as votes, then left out of this register.
-OMITTED_VOTE_CODES = frozenset({"KCCA", "MODV"})
+# Recognised as votes, then left out of this register. General hospitals on a district
+# vote are not in this set.
+REFERRAL_VOTE_CODES = frozenset({
+    "MULAGO NRH", "KAWEMPE RH", "KIRUDDU RH", "BUTABIKA NRMH", "NAGURU RH", "ENTEBBE RH",
+    "ARUA RRH", "FORT PORTAL RRH", "GULU RRH", "HOIMA RRH", "JINJA RRH", "KABALE RRH",
+    "KAYUNGA RRH", "LIRA RRH", "MASAKA RRH", "MBALE RRH", "MBARARA RRH", "MOROTO RRH",
+    "MUBENDE RRH", "SOROTI RRH", "YUMBE RRH",
+})
+OMITTED_VOTE_CODES = frozenset({"KCCA", "MODV"}) | REFERRAL_VOTE_CODES
 
 
 def omitted_vote(vote: LocalGovernment | None) -> bool:
@@ -3186,7 +3196,10 @@ def place_central(asset: Asset, vote: LocalGovernment, facility: str, kind: str)
     """Settle a central-government row: the vote, the site as written, and the keys
     the union, quantity and fill steps group on. Returns False when the vote is left out."""
     if omitted_vote(vote):
-        CENTRAL_NOTES["(KCCA and MoDVA, left out)"] += 1
+        if vote.code in {"KCCA", "MODV"}:
+            CENTRAL_NOTES["(KCCA and MoDVA, left out)"] += 1
+        else:
+            CENTRAL_NOTES["(referral hospitals, left out)"] += 1
         return False
     asset.lg = vote.display
     asset.facility = clean(facility)
@@ -3402,11 +3415,11 @@ def read_inventory(path: Path, facility: str) -> list[Asset]:
 
 
 def read_mda_consolidation(path: Path) -> list[Asset]:
-    """Hospital and inspectorate rows of the consolidated MDA status register: MoH
-    supplies to referral, national and general hospitals, and the MoES inspection
-    tablets held at district inspectorates. Local-government facility rows (field
-    returns read from the team folders, and programme supply lists) and the
-    ministries' ICT rows (read from their own registers) are left to those sources."""
+    """District general hospitals, blood banks and MoES inspection tablets in the
+    consolidated MDA status register. Referral hospitals are left out with their votes.
+    Local-government facility rows (field returns read from the team folders, and
+    programme supply lists) and the ministries' ICT rows (read from their own
+    registers) are left to those sources."""
     relative = path.relative_to(GROUPED).as_posix()
     assets: list[Asset] = []
     for name, rows in sheet_rows(path):
@@ -3791,8 +3804,8 @@ def drop_near_duplicates(parsed: dict[str, list[Asset]]) -> list[str]:
 
 # Bump when source parsing/place resolution changes. Quantity reconciliation and
 # workbook formatting changes do not invalidate the retained raw source rows.
-# Version 3 leaves out KCCA and the Ministry of Defence and Veteran Affairs.
-PARSER_CACHE_VERSION = 3
+# Version 4 also leaves out referral hospitals. Uganda Blood Transfusion Services stays.
+PARSER_CACHE_VERSION = 4
 
 
 def parsed_fingerprint(files: list[Path]) -> dict:
@@ -3955,13 +3968,15 @@ def main() -> None:
         key=lambda item: -item[1],
     )
     overlap_notes.append(
-        "Central government: ministries, agencies and referral hospitals keep their UgIFT assets on their own votes and stay on the register. "
-        "Kampala Capital City Authority and the Ministry of Defence and Veteran Affairs are left out. "
-        "Their rows come from the ministries' verification returns (_multi-team/programme-documents/MDA status register.xlsx, one sheet per MDA), the programme's "
+        "Central government: ministries, agencies and Uganda Blood Transfusion Services keep their UgIFT assets on their own votes and stay on the register. "
+        "The Hoima, Arua and Soroti regional blood banks stay. "
+        "Kampala Capital City Authority, the Ministry of Defence and Veteran Affairs and the referral hospitals are left out. "
+        "A general hospital held on a district vote stays on that district's book. "
+        "Ministry, agency and blood-bank rows come from the ministries' verification returns (_multi-team/programme-documents/MDA status register.xlsx, one sheet per MDA), the programme's "
         "fixed-asset registers (fwdugiftassets/*.xls; a row located at a local government office is that government's asset and is left out: "
         f"{CENTRAL_NOTES['(local government offices, left out)']:,} lines), the Hoima and Arua regional blood-bank inventories (Uganda Blood Transfusion Services), "
-        "and the hospital and district-inspectorate rows of UGiFT-WIP-consolidated-MDA-status-register.xlsx (MoH supplies to referral, national and general hospitals; "
-        "MoES inspection tablets). The rest of that consolidation (local-government facility rows, programme supply lists, the ministries' ICT rows) is read from the team "
+        "and the district-inspectorate rows of UGiFT-WIP-consolidated-MDA-status-register.xlsx (MoES inspection tablets). Referral-hospital lines are left out. "
+        "The rest of that consolidation (local-government facility rows, programme supply lists, the ministries' ICT rows) is read from the team "
         f"folders and the ministries' own registers instead. Source lines by vote: " + "; ".join(f"{vote} {count:,}" for vote, count in central) + "."
     )
     overlap_notes += [f"Left out: {relative}. {reason}" for relative, reason in EXCLUDED_SOURCES.items()]
