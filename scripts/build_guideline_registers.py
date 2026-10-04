@@ -47,6 +47,7 @@ from ugift_places import (
     is_placeholder,
     lg_from_text,
     resolve_lg,
+    resolve_mda,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -886,6 +887,15 @@ def build_values(source: dict, registers: Registers, *, borrow: bool, costs: dic
     lg = resolve_lg(lg_text) or lg_from_text(lg_text) if lg_text else None
     kind = plain(source.get("Facility type"))
     facility_text = plain(source.get("Facility"))
+    bank = resolve_mda(facility_text) if facility_text else None
+    if bank is None and lg is not None and lg.code.endswith(" RBB"):
+        bank = lg
+    if bank is not None and bank.code.endswith(" RBB"):
+        # Hoima, Arua and Soroti each keep a blood-bank book, including a row whose
+        # local-government cell still names the district or the city.
+        lg = bank
+        kind = "Blood bank"
+        facility_text = facility_text or bank.display
     if kind in CENTRAL_KINDS or (lg is not None and lg.kind == "MDA" and not kind):
         # A ministry, agency or hospital row: the site is written as the source states
         # it, and a vote with no site named takes the location master's UNSPECIFIED.
@@ -1598,9 +1608,9 @@ def readme(stats: Counter, borrowed: bool, filled: Counter, headers: list[str]):
             "LOCATION_SEGMENT2 is the department in upper case in one spelling (counts and facility or category words typed in the department cell are not departments); where the source left the department empty it is the department of the vote "
             f"that a facility of that kind belongs to (HEALTH for a health centre, EDUCATION for a seed school, HOSPITAL SERVICES for a hospital, UNSPECIFIED for a ministry; {stats['department_kind']:,} rows), and ATTRIBUTE2(Department) carries that same department. "
             "LOCATION_SEGMENT3 is the facility, ending in Seed Secondary School or Health Centre III; a hospital, blood bank, ministry site or local government office keeps its own name. LOCATION_SEGMENT4 is UNSPECIFIED, the fourth segment of every location combination in Location(3)2.xlsx and of the sample row.",
-            "Central government: ministries, agencies and Uganda Blood Transfusion Services keep their UgIFT assets on their own votes and stay on the register. The Hoima, Arua and Soroti regional blood banks stay. Kampala Capital City Authority, the Ministry of Defence and Veteran Affairs and the referral hospitals are left out. A ministry, agency or blood-bank BOOK_TYPE_CODE is the vote code Location(3)2.xlsx spells plus BK (MOFPED BK, MOH BK, MOES BK, MOLG BK, MOLHUD BK, MGLSD BK, MAAIF BK, MOWE BK, MOWT BK, NEMA BK, PPDA BK, OAG BK, OPM BK, UBTS BK), "
+            "Central government: ministries, agencies and Uganda Blood Transfusion Services keep their UgIFT assets on their own votes and stay on the register. The Hoima, Arua and Soroti regional blood banks each have their own book (HOIMA RBB BK, ARUA RBB BK, SOROTI RBB BK). Kampala Capital City Authority, the Ministry of Defence and Veteran Affairs and the referral hospitals are left out. A ministry, agency or blood-bank BOOK_TYPE_CODE is the vote code Location(3)2.xlsx spells plus BK (MOFPED BK, MOH BK, MOES BK, MOLG BK, MOLHUD BK, MGLSD BK, MAAIF BK, MOWE BK, MOWT BK, NEMA BK, PPDA BK, OAG BK, OPM BK, HOIMA RBB BK, ARUA RBB BK, SOROTI RBB BK), "
             "LOCATION_SEGMENT1 that same code, LOCATION_SEGMENT2 the department the source states (else UNSPECIFIED) and LOCATION_SEGMENT3 the site the source names (Finance Building, Embassy House, a district inspectorate or a blood bank) or UNSPECIFIED. "
-            "Those rows come from the ministries' verification returns, the programme's fixed-asset registers and the Hoima and Arua blood-bank inventories, as the SK Read Me records. Soroti Regional Blood Bank stays on the Soroti vote. A general hospital held on a district vote stays on that district's book.",
+            "Those rows come from the ministries' verification returns, the programme's fixed-asset registers and the Hoima and Arua blood-bank inventories, as the SK Read Me records. A general hospital held on a district vote stays on that district's book.",
             "Equipment status is written as Functional or Faulty on every row, in ATTRIBUTE14(Equipment status); IN_USE_FLAG is YES for Functional and NO for Faulty. "
             "Functional covers in use (also 'in use but in poor condition'), functional, functioning, working, available, verified, good condition and new; Faulty covers damaged, broken, not functioning, not in use, in store (not in use), not received, not seen, obsolete, unserviceable, disposed, lost and missing. "
             f"Where the status cell was empty the Remarks decided ({stats['status_from_remark']:,} rows); where the wording split the group the larger stated count decided; an asset the team recorded with no condition anywhere is taken as Functional ({stats['status_default']:,} rows). "

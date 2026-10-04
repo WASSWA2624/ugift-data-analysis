@@ -175,6 +175,9 @@ MDA_VOTES: tuple[tuple[str, str, str], ...] = (
     # identified and then left out. Uganda Blood Transfusion Services stays.
     # merge_shared_asset_registers.OMITTED_VOTE_CODES drops the omitted votes.
     ("KCCA", "Kampala Capital City Authority", r"kcca|k c c a|k c c a ugift|kampala capital city authority|kampala city council authority"),
+    ("HOIMA RBB", "Hoima Regional Blood Bank", r"hoima regional blood bank|hoima reg blood bank|hoima rbb"),
+    ("ARUA RBB", "Arua Regional Blood Bank", r"arua regional blood bank|arua reg blood bank|arua rbb|arbb"),
+    ("SOROTI RBB", "Soroti Regional Blood Bank", r"soroti regional blood bank|soroti reg blood bank|soroti rbb"),
     ("UBTS", "Uganda Blood Transfusion Services", r"ubts|uganda blood transfusion services?|\w+ regional blood bank|\w+ reg blood bank|\w+ rbb"),
     ("MODV", "Ministry of Defence and Veteran Affairs", r"modva?|ministry of defence(?: and veteran affairs)?|bombo mgh|bombo (?:general )?military (?:general )?hospital"),
     ("MULAGO NRH", "Mulago National Referral Hospital",
@@ -687,7 +690,9 @@ def check_examples() -> None:
     assert resolve_lg("Ministry of Water and Environment").book_type_code == "MOWE BK"
     assert resolve_lg("Finance Building District Local Government").code == "MOFPED"
     assert resolve_lg("Arua RRH").location_segment1 == "ARUA RRH"
-    assert resolve_lg("Hoima Regional Blood Bank").code == "UBTS"
+    assert resolve_lg("Hoima Regional Blood Bank").code == "HOIMA RBB"
+    assert resolve_lg("Arua Regional Blood Bank").book_type_code == "ARUA RBB BK"
+    assert resolve_lg("Soroti Regional Blood Bank").location_segment1 == "SOROTI RBB"
     assert resolve_lg("Kisenyi Health Centre IV") is None
     assert lg_from_text("NAME OF LG: DOKOLO DISTRICT LOCAL GOVERNMENT").display == "Dokolo"
     assert lg_from_text("BITSYA HCIII, BUHWEJU DC").display == "Buhweju"

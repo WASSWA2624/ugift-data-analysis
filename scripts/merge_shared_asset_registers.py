@@ -1708,6 +1708,17 @@ def resolve_places(asset: Asset, contexts: list[tuple[str, str]], relative: str)
         if corrected is not None and corrected.key != lg.key:
             PLACE_NOTES[f"{relative}: '{facility_text}' moved from {lg.display} to {corrected.display} (supervisor decision)"] += 1
             lg = corrected
+    bank = resolve_mda(facility_text) if facility_text else None
+    if bank is not None and bank.code.endswith(" RBB"):
+        # The three regional blood banks are their own books, even when the return
+        # was filed under the district or the city.
+        asset.extras["facility_raw"] = facility_text
+        asset.facility = bank.display
+        asset.facility_type = "Blood bank"
+        asset.lg = bank.display
+        asset.extras["lg_key"] = bank.key
+        asset.extras["facility_key"] = facility_key(bank.display, "Blood bank") or f"{norm(bank.display)}|"
+        return
     asset.extras["facility_raw"] = facility_text
     if facility_text and not is_placeholder(facility_text):
         display, found_kind = canonical_facility(facility_text, lg, kind)
@@ -3152,8 +3163,9 @@ def settle_unnamed_lines(assets: list[Asset]) -> tuple[list[Asset], list[str]]:
 # ------------------------------------------------------- central government (MDAs)
 #
 # Ministries, agencies and Uganda Blood Transfusion Services keep their UgIFT assets
-# on their own votes. The Hoima, Arua and Soroti regional blood banks stay. Referral
-# hospitals are recognised and then left out, with KCCA and the Ministry of Defence.
+# on their own votes. Hoima, Arua and Soroti regional blood banks each have their own
+# book (HOIMA RBB BK, ARUA RBB BK, SOROTI RBB BK). Referral hospitals are recognised
+# and then left out, with KCCA and the Ministry of Defence.
 # A general hospital on a district vote stays. Central returns sit in folders this
 # register otherwise leaves out, so they are read by name: the ministries' verification
 # returns (one sheet per MDA), the programme's own fixed-asset registers, the two
@@ -3804,8 +3816,8 @@ def drop_near_duplicates(parsed: dict[str, list[Asset]]) -> list[str]:
 
 # Bump when source parsing/place resolution changes. Quantity reconciliation and
 # workbook formatting changes do not invalidate the retained raw source rows.
-# Version 4 also leaves out referral hospitals. Uganda Blood Transfusion Services stays.
-PARSER_CACHE_VERSION = 4
+# Version 5 gives Hoima, Arua and Soroti regional blood banks their own books.
+PARSER_CACHE_VERSION = 5
 
 
 def parsed_fingerprint(files: list[Path]) -> dict:
@@ -3969,7 +3981,7 @@ def main() -> None:
     )
     overlap_notes.append(
         "Central government: ministries, agencies and Uganda Blood Transfusion Services keep their UgIFT assets on their own votes and stay on the register. "
-        "The Hoima, Arua and Soroti regional blood banks stay. "
+        "The Hoima, Arua and Soroti regional blood banks each have their own book (HOIMA RBB BK, ARUA RBB BK, SOROTI RBB BK). "
         "Kampala Capital City Authority, the Ministry of Defence and Veteran Affairs and the referral hospitals are left out. "
         "A general hospital held on a district vote stays on that district's book. "
         "Ministry, agency and blood-bank rows come from the ministries' verification returns (_multi-team/programme-documents/MDA status register.xlsx, one sheet per MDA), the programme's "

@@ -1,6 +1,6 @@
 # UgIFT asset registers
 
-Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF register. It contains 229,032 asset rows. The IFMIS update of 28 September 2026 had brought the registers to 234,613 asset rows; KCCA and MoDVA were removed on 29 September 2026. Referral hospitals were removed on 4 October 2026. The Hoima, Arua and Soroti regional blood banks stay. The package retains three stages so recorded source facts remain distinguishable from mapped and completed values.
+Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF register. It contains 229,032 asset rows. The IFMIS update of 28 September 2026 had brought the registers to 234,613 asset rows; KCCA and MoDVA were removed on 29 September 2026. Referral hospitals were removed on 4 October 2026. The Hoima, Arua and Soroti regional blood banks each have their own book: HOIMA RBB BK, ARUA RBB BK and SOROTI RBB BK. The package retains three stages so recorded source facts remain distinguishable from mapped and completed values.
 
 | File | Purpose |
 |---|---|
@@ -13,9 +13,13 @@ Use `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` as the canonical REF registe
 | `validation-report.json` | Current IFMIS checks and preserved historical validation findings. |
 | `ifmis-review.csv` | Unresolved IFMIS identities and conflicting recorded facts. |
 
+## Blood banks separated — 4 October 2026
+
+Hoima, Arua and Soroti regional blood banks now have their own books: `HOIMA RBB BK`, `ARUA RBB BK` and `SOROTI RBB BK`. REF holds 170 Hoima rows, 338 Arua rows and 115 Soroti rows. Rows moved off `UBTS BK`, and the blood-bank rows moved off `HOIMA CITY BK`, `ARUA BK` and `SOROTI BK`. Other rows on those district and city books stayed.
+
 ## Referral hospitals removed — 4 October 2026
 
-Removed 5,215 referral-hospital rows from the SK, MF and REF registers. Uganda Blood Transfusion Services stays, including the Hoima and Arua regional blood banks on `UBTS BK`. Soroti Regional Blood Bank stays on `SOROTI BK`. General hospitals held on a district vote were kept. The REF register now contains 229,032 asset rows. The SK and MF registers now contain 229,164 asset rows.
+Removed 5,215 referral-hospital rows from the SK, MF and REF registers. Hoima, Arua and Soroti regional blood banks are on `HOIMA RBB BK`, `ARUA RBB BK` and `SOROTI RBB BK`. General hospitals held on a district vote were kept. The REF register now contains 229,032 asset rows. The SK and MF registers now contain 229,164 asset rows.
 
 ## Comparable-cost follow-up — 2 October 2026
 
@@ -102,7 +106,7 @@ The dated output folders were replaced with descriptive names: `outputs/asset-re
 <!-- book-type-code:start -->
 ## BOOK_TYPE_CODE
 
-173 unique values in `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`.
+175 unique values in `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`.
 
 | No. | Book code | Rows |
 |---:|---|---:|
@@ -116,167 +120,169 @@ The dated output folders were replaced with descriptive names: `outputs/asset-re
 | 8 | AMURU BK | 1,303 |
 | 9 | APAC BK | 2,585 |
 | 10 | APAC MC BK | 427 |
-| 11 | ARUA BK | 455 |
-| 12 | BUDAKA BK | 2,383 |
-| 13 | BUDUDA BK | 2,413 |
-| 14 | BUGIRI BK | 1,082 |
-| 15 | BUGIRI MC BK | 313 |
-| 16 | BUGWERI BK | 2,700 |
-| 17 | BUHWEJU BK | 2,224 |
-| 18 | BUIKWE BK | 1,774 |
-| 19 | BUKEDEA BK | 2,666 |
-| 20 | BUKOMANSIMBI BK | 1 |
-| 21 | BUKWO BK | 2,068 |
-| 22 | BULAMBULI BK | 1,544 |
-| 23 | BULIISA BK | 1,714 |
-| 24 | BUNDIBUGYO BK | 2,170 |
-| 25 | BUNYANGABU BK | 628 |
-| 26 | BUSHENYI BK | 266 |
-| 27 | BUSIA BK | 1,739 |
-| 28 | BUTALEJA BK | 1,640 |
-| 29 | BUTAMBALA BK | 232 |
-| 30 | BUTEBO BK | 1,023 |
-| 31 | BUVUMA BK | 423 |
-| 32 | BUYENDE BK | 1,832 |
-| 33 | DOKOLO BK | 2,806 |
-| 34 | FORT PORTAL BK | 1 |
-| 35 | FORT PORTAL CITY BK | 521 |
-| 36 | GOMBA BK | 534 |
-| 37 | GULU BK | 323 |
-| 38 | HOIMA BK | 974 |
-| 39 | HOIMA CITY BK | 354 |
-| 40 | IBANDA BK | 424 |
-| 41 | IGANGA BK | 766 |
-| 42 | ISINGIRO BK | 1,202 |
-| 43 | JINJA BK | 1,285 |
-| 44 | JINJA CITY BK | 154 |
-| 45 | KAABONG BK | 66 |
-| 46 | KABALE BK | 664 |
-| 47 | KABALE MC BK | 71 |
-| 48 | KABAROLE BK | 1,380 |
-| 49 | KABERAMAIDO BK | 1,818 |
-| 50 | KAGADI BK | 753 |
-| 51 | KAKUMIRO BK | 2,600 |
-| 52 | KALAKI BK | 3,192 |
-| 53 | KALANGALA BK | 2,752 |
-| 54 | KALIRO BK | 2,970 |
-| 55 | KALUNGU BK | 918 |
-| 56 | KAMULI BK | 3,895 |
-| 57 | KAMULI MC BK | 234 |
-| 58 | KAMWENGE BK | 614 |
-| 59 | KANUNGU BK | 374 |
-| 60 | KAPCHORWA BK | 1,038 |
-| 61 | KAPCHORWA MC BK | 165 |
-| 62 | KAPELEBYONG BK | 823 |
-| 63 | KARENGA BK | 20 |
-| 64 | KASESE BK | 981 |
-| 65 | KASSANDA BK | 1,819 |
-| 66 | KATAKWI BK | 2,324 |
-| 67 | KAYUNGA BK | 775 |
-| 68 | KAZO BK | 909 |
-| 69 | KIBAALE BK | 1,094 |
-| 70 | KIBOGA BK | 890 |
-| 71 | KIBUKU BK | 1,286 |
-| 72 | KIIRA MC BK | 231 |
-| 73 | KIKUUBE BK | 494 |
-| 74 | KIRUHURA BK | 1,473 |
-| 75 | KIRYANDONGO BK | 2,985 |
-| 76 | KISORO BK | 1,964 |
-| 77 | KISORO MC BK | 79 |
-| 78 | KITAGWENDA BK | 61 |
-| 79 | KITGUM BK | 1,084 |
-| 80 | KOBOKO BK | 1,320 |
-| 81 | KOBOKO MC BK | 326 |
-| 82 | KOLE BK | 1,488 |
-| 83 | KOTIDO BK | 49 |
-| 84 | KUMI BK | 2,732 |
-| 85 | KWANIA BK | 1,782 |
-| 86 | KWEEN BK | 1,038 |
-| 87 | KYANKWANZI BK | 3,554 |
-| 88 | KYEGEGWA BK | 881 |
-| 89 | KYENJOJO BK | 2,357 |
-| 90 | KYOTERA BK | 292 |
-| 91 | LAMWO BK | 1,495 |
-| 92 | LIRA BK | 542 |
-| 93 | LIRA CITY BK | 1,115 |
-| 94 | LUUKA BK | 2,680 |
-| 95 | LUWEERO BK | 3,110 |
-| 96 | LWENGO BK | 1,475 |
-| 97 | LYANTONDE BK | 835 |
-| 98 | MAAIF BK | 2,045 |
-| 99 | MADI OKOLLO BK | 247 |
-| 100 | MAKINDYE SSABAGABO MC BK | 315 |
-| 101 | MANAFWA BK | 1,637 |
-| 102 | MARACHA BK | 3,013 |
-| 103 | MASAKA BK | 35 |
-| 104 | MASAKA CITY BK | 89 |
-| 105 | MASINDI BK | 1,072 |
-| 106 | MASINDI MC BK | 149 |
-| 107 | MAYUGE BK | 4,547 |
-| 108 | MBALE BK | 564 |
-| 109 | MBARARA BK | 1,662 |
-| 110 | MBARARA CITY BK | 171 |
-| 111 | MGLSD BK | 10 |
-| 112 | MITOOMA BK | 1,943 |
-| 113 | MITYANA BK | 936 |
-| 114 | MOES BK | 10,783 |
-| 115 | MOFPED BK | 458 |
-| 116 | MOH BK | 264 |
-| 117 | MOLG BK | 13 |
-| 118 | MOLHUD BK | 27 |
-| 119 | MOROTO BK | 927 |
-| 120 | MOWE BK | 2,939 |
-| 121 | MOWT BK | 88 |
-| 122 | MOYO BK | 1,113 |
-| 123 | MPIGI BK | 317 |
-| 124 | MUBENDE BK | 1,853 |
-| 125 | MUBENDE MC BK | 189 |
-| 126 | MUKONO BK | 1,929 |
-| 127 | MUKONO MC BK | 464 |
-| 128 | NABILATUK BK | 248 |
-| 129 | NAKAPIRIPIRIT BK | 454 |
-| 130 | NAKASEKE BK | 60 |
-| 131 | NAKASONGOLA BK | 60 |
-| 132 | NAMAYINGO BK | 2,063 |
-| 133 | NAMISINDWA BK | 1,292 |
-| 134 | NAMUTUMBA BK | 1,823 |
-| 135 | NANSANA MC BK | 288 |
-| 136 | NAPAK BK | 3,021 |
-| 137 | NEBBI BK | 1,251 |
-| 138 | NEMA BK | 6 |
-| 139 | NGORA BK | 1,110 |
-| 140 | NTOROKO BK | 341 |
-| 141 | NTUNGAMO BK | 730 |
-| 142 | NTUNGAMO MC BK | 76 |
-| 143 | NWOYA BK | 793 |
-| 144 | OAG BK | 20 |
-| 145 | OBONGI BK | 700 |
-| 146 | OMORO BK | 1,094 |
-| 147 | OPM BK | 10 |
-| 148 | OTUKE BK | 1,006 |
-| 149 | OYAM BK | 1,528 |
-| 150 | PADER BK | 1,171 |
-| 151 | PAKWACH BK | 1,559 |
-| 152 | PALLISA BK | 6,029 |
-| 153 | PPDA BK | 5 |
-| 154 | RAKAI BK | 611 |
-| 155 | RUBANDA BK | 4,381 |
-| 156 | RUBIRIZI BK | 1,780 |
-| 157 | RUKIGA BK | 833 |
-| 158 | RUKUNGIRI BK | 143 |
-| 159 | RUKUNGIRI MC BK | 75 |
-| 160 | RWAMPARA BK | 204 |
-| 161 | SEMBABULE BK | 454 |
-| 162 | SERERE BK | 2,418 |
-| 163 | SHEEMA BK | 670 |
-| 164 | SHEEMA MC BK | 278 |
-| 165 | SIRONKO BK | 1,711 |
-| 166 | SOROTI BK | 1,930 |
-| 167 | TEREGO BK | 183 |
-| 168 | TORORO BK | 9,823 |
-| 169 | TORORO MC BK | 1,012 |
-| 170 | UBTS BK | 270 |
-| 171 | WAKISO BK | 1,596 |
-| 172 | YUMBE BK | 3,858 |
-| 173 | ZOMBO BK | 2,296 |
+| 11 | ARUA BK | 276 |
+| 12 | ARUA RBB BK | 338 |
+| 13 | BUDAKA BK | 2,383 |
+| 14 | BUDUDA BK | 2,413 |
+| 15 | BUGIRI BK | 1,082 |
+| 16 | BUGIRI MC BK | 313 |
+| 17 | BUGWERI BK | 2,700 |
+| 18 | BUHWEJU BK | 2,224 |
+| 19 | BUIKWE BK | 1,774 |
+| 20 | BUKEDEA BK | 2,666 |
+| 21 | BUKOMANSIMBI BK | 1 |
+| 22 | BUKWO BK | 2,068 |
+| 23 | BULAMBULI BK | 1,544 |
+| 24 | BULIISA BK | 1,714 |
+| 25 | BUNDIBUGYO BK | 2,170 |
+| 26 | BUNYANGABU BK | 628 |
+| 27 | BUSHENYI BK | 266 |
+| 28 | BUSIA BK | 1,739 |
+| 29 | BUTALEJA BK | 1,640 |
+| 30 | BUTAMBALA BK | 232 |
+| 31 | BUTEBO BK | 1,023 |
+| 32 | BUVUMA BK | 423 |
+| 33 | BUYENDE BK | 1,832 |
+| 34 | DOKOLO BK | 2,806 |
+| 35 | FORT PORTAL BK | 1 |
+| 36 | FORT PORTAL CITY BK | 521 |
+| 37 | GOMBA BK | 534 |
+| 38 | GULU BK | 323 |
+| 39 | HOIMA BK | 974 |
+| 40 | HOIMA CITY BK | 295 |
+| 41 | HOIMA RBB BK | 170 |
+| 42 | IBANDA BK | 424 |
+| 43 | IGANGA BK | 766 |
+| 44 | ISINGIRO BK | 1,202 |
+| 45 | JINJA BK | 1,285 |
+| 46 | JINJA CITY BK | 154 |
+| 47 | KAABONG BK | 66 |
+| 48 | KABALE BK | 664 |
+| 49 | KABALE MC BK | 71 |
+| 50 | KABAROLE BK | 1,380 |
+| 51 | KABERAMAIDO BK | 1,818 |
+| 52 | KAGADI BK | 753 |
+| 53 | KAKUMIRO BK | 2,600 |
+| 54 | KALAKI BK | 3,192 |
+| 55 | KALANGALA BK | 2,752 |
+| 56 | KALIRO BK | 2,970 |
+| 57 | KALUNGU BK | 918 |
+| 58 | KAMULI BK | 3,895 |
+| 59 | KAMULI MC BK | 234 |
+| 60 | KAMWENGE BK | 614 |
+| 61 | KANUNGU BK | 374 |
+| 62 | KAPCHORWA BK | 1,038 |
+| 63 | KAPCHORWA MC BK | 165 |
+| 64 | KAPELEBYONG BK | 823 |
+| 65 | KARENGA BK | 20 |
+| 66 | KASESE BK | 981 |
+| 67 | KASSANDA BK | 1,819 |
+| 68 | KATAKWI BK | 2,324 |
+| 69 | KAYUNGA BK | 775 |
+| 70 | KAZO BK | 909 |
+| 71 | KIBAALE BK | 1,094 |
+| 72 | KIBOGA BK | 890 |
+| 73 | KIBUKU BK | 1,286 |
+| 74 | KIIRA MC BK | 231 |
+| 75 | KIKUUBE BK | 494 |
+| 76 | KIRUHURA BK | 1,473 |
+| 77 | KIRYANDONGO BK | 2,985 |
+| 78 | KISORO BK | 1,964 |
+| 79 | KISORO MC BK | 79 |
+| 80 | KITAGWENDA BK | 61 |
+| 81 | KITGUM BK | 1,084 |
+| 82 | KOBOKO BK | 1,320 |
+| 83 | KOBOKO MC BK | 326 |
+| 84 | KOLE BK | 1,488 |
+| 85 | KOTIDO BK | 49 |
+| 86 | KUMI BK | 2,732 |
+| 87 | KWANIA BK | 1,782 |
+| 88 | KWEEN BK | 1,038 |
+| 89 | KYANKWANZI BK | 3,554 |
+| 90 | KYEGEGWA BK | 881 |
+| 91 | KYENJOJO BK | 2,357 |
+| 92 | KYOTERA BK | 292 |
+| 93 | LAMWO BK | 1,495 |
+| 94 | LIRA BK | 542 |
+| 95 | LIRA CITY BK | 1,115 |
+| 96 | LUUKA BK | 2,680 |
+| 97 | LUWEERO BK | 3,110 |
+| 98 | LWENGO BK | 1,475 |
+| 99 | LYANTONDE BK | 835 |
+| 100 | MAAIF BK | 2,045 |
+| 101 | MADI OKOLLO BK | 247 |
+| 102 | MAKINDYE SSABAGABO MC BK | 315 |
+| 103 | MANAFWA BK | 1,637 |
+| 104 | MARACHA BK | 3,013 |
+| 105 | MASAKA BK | 35 |
+| 106 | MASAKA CITY BK | 89 |
+| 107 | MASINDI BK | 1,072 |
+| 108 | MASINDI MC BK | 149 |
+| 109 | MAYUGE BK | 4,547 |
+| 110 | MBALE BK | 564 |
+| 111 | MBARARA BK | 1,662 |
+| 112 | MBARARA CITY BK | 171 |
+| 113 | MGLSD BK | 10 |
+| 114 | MITOOMA BK | 1,943 |
+| 115 | MITYANA BK | 936 |
+| 116 | MOES BK | 10,783 |
+| 117 | MOFPED BK | 458 |
+| 118 | MOH BK | 264 |
+| 119 | MOLG BK | 13 |
+| 120 | MOLHUD BK | 27 |
+| 121 | MOROTO BK | 927 |
+| 122 | MOWE BK | 2,939 |
+| 123 | MOWT BK | 88 |
+| 124 | MOYO BK | 1,113 |
+| 125 | MPIGI BK | 317 |
+| 126 | MUBENDE BK | 1,853 |
+| 127 | MUBENDE MC BK | 189 |
+| 128 | MUKONO BK | 1,929 |
+| 129 | MUKONO MC BK | 464 |
+| 130 | NABILATUK BK | 248 |
+| 131 | NAKAPIRIPIRIT BK | 454 |
+| 132 | NAKASEKE BK | 60 |
+| 133 | NAKASONGOLA BK | 60 |
+| 134 | NAMAYINGO BK | 2,063 |
+| 135 | NAMISINDWA BK | 1,292 |
+| 136 | NAMUTUMBA BK | 1,823 |
+| 137 | NANSANA MC BK | 288 |
+| 138 | NAPAK BK | 3,021 |
+| 139 | NEBBI BK | 1,251 |
+| 140 | NEMA BK | 6 |
+| 141 | NGORA BK | 1,110 |
+| 142 | NTOROKO BK | 341 |
+| 143 | NTUNGAMO BK | 730 |
+| 144 | NTUNGAMO MC BK | 76 |
+| 145 | NWOYA BK | 793 |
+| 146 | OAG BK | 20 |
+| 147 | OBONGI BK | 700 |
+| 148 | OMORO BK | 1,094 |
+| 149 | OPM BK | 10 |
+| 150 | OTUKE BK | 1,006 |
+| 151 | OYAM BK | 1,528 |
+| 152 | PADER BK | 1,171 |
+| 153 | PAKWACH BK | 1,559 |
+| 154 | PALLISA BK | 6,029 |
+| 155 | PPDA BK | 5 |
+| 156 | RAKAI BK | 611 |
+| 157 | RUBANDA BK | 4,381 |
+| 158 | RUBIRIZI BK | 1,780 |
+| 159 | RUKIGA BK | 833 |
+| 160 | RUKUNGIRI BK | 143 |
+| 161 | RUKUNGIRI MC BK | 75 |
+| 162 | RWAMPARA BK | 204 |
+| 163 | SEMBABULE BK | 454 |
+| 164 | SERERE BK | 2,418 |
+| 165 | SHEEMA BK | 670 |
+| 166 | SHEEMA MC BK | 278 |
+| 167 | SIRONKO BK | 1,711 |
+| 168 | SOROTI BK | 1,815 |
+| 169 | SOROTI RBB BK | 115 |
+| 170 | TEREGO BK | 183 |
+| 171 | TORORO BK | 9,823 |
+| 172 | TORORO MC BK | 1,012 |
+| 173 | WAKISO BK | 1,596 |
+| 174 | YUMBE BK | 3,858 |
+| 175 | ZOMBO BK | 2,296 |
 <!-- book-type-code:end -->
