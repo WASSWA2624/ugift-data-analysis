@@ -31,6 +31,17 @@ ALIASES = {
     "engineering": "HEALTH INFRASTRUCTURE",
     "district administration": "ADMINISTRATION AND MANAGEMENT",
 }
+# Official department names checked against the institution's own site, used when the
+# location master has no matching department. Sources: molg.go.ug (District Administration),
+# Ministry of Health strategic plan and the National RBF Unit (Planning, Financing and Policy),
+# ppda.go.ug (Strategy and Planning), nema.go.ug (Office of the Executive Director).
+OFFICIAL = {
+    ("MOLG", "district administration"): "DISTRICT ADMINISTRATION",
+    ("MOH", "rbf"): "PLANNING, FINANCING AND POLICY",
+    ("PPDA", "strategy planning"): "STRATEGY AND PLANNING",
+    ("NEMA", "exective directors office"): "OFFICE OF THE EXECUTIVE DIRECTOR",
+    ("NEMA", "executive directors office"): "OFFICE OF THE EXECUTIVE DIRECTOR",
+}
 
 
 def norm(text: str) -> str:
@@ -64,8 +75,14 @@ def departments_for(segment1: str, departments: dict[str, set[str]]) -> set[str]
     return set()
 
 
-def department_name(recorded: str, choices: set[str]) -> str:
-    if not recorded or not choices:
+def department_name(recorded: str, segment1: str, choices: set[str]) -> str:
+    if not recorded:
+        return ""
+    vote = segment1.replace("\\-", " ").split()[0].upper()
+    official = OFFICIAL.get((vote, norm(recorded)))
+    if official:
+        return official
+    if not choices:
         return ""
     folded = {norm(choice): choice for choice in choices}
     exact = folded.get(norm(recorded))
@@ -84,7 +101,7 @@ def updates_for(row_number: int, segment2: str, segment3: str, attribute: str, b
     elif segment3 == "UNSPECIFIED" and norm(recorded) == "finance building":
         changes.append(("K", "Finance Building"))
     if segment2 == "UNSPECIFIED":
-        department = department_name(recorded, departments_for(segment1, departments))
+        department = department_name(recorded, segment1, departments_for(segment1, departments))
         if department:
             changes.append(("J", department))
             if attribute == "UNSPECIFIED":
