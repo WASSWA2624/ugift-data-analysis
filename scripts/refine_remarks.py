@@ -28,6 +28,16 @@ STATUS_ONLY = re.compile(
     r"faulty|non[-\s]?functional|not functional|not functioning)\.?$"
 )
 PLACEHOLDER = re.compile(r"(?i)^(?:n/?a|nil|none|not stated|unknown|-+)$")
+RESIDUAL = re.compile(
+    r"(?i)(?:"
+    r"\b(?:ugx|ushs?|shs|shillings)\b|"
+    r"\b(?:unit cost|depreciat\w*|carrying value|cost left blank|comparable|fixed-asset cost|purchase price|valuation|expensed item)\b|"
+    r"\bytd covers\b|"
+    r"team-\d+|_multi-team[/\\]|source file|source location|additional source|"
+    r"\.(?:xls|xlsx|docx|pdf)\b|"
+    r"\btable \d+\b|\brow \d+\b"
+    r")"
+)
 
 
 def clauses(text: str) -> list[str]:
@@ -73,6 +83,28 @@ def remarkable(text: str, description: str) -> str:
     return sentence(cleaned)
 
 
+def clean_sentence(part: str) -> str:
+    """Drop a cost, team-toolkit, or source-document sentence, keeping any other fact in it."""
+    part = re.sub(r"(?i)\s*\(?\s*the team toolkit\b.*", "", part)
+    part = re.sub(r"(?i)\s*team toolkit\b.*", "", part)
+    part = re.sub(r"(?i)\s*cost (?:amount )?is for .*", "", part)
+    part = re.sub(r"(?i),\s*cost is for .*", "", part)
+    part = re.sub(r"(?i)\s+and the cost columns", " column", part)
+    part = re.sub(r"(?i)\s+and no cost(?= or status)", "", part)
+    part = part.strip(" ,;.")
+    if not part:
+        return ""
+    if re.search(
+        r"(?i)unit price|medical equipment list|no price is written|construction cost|"
+        r"\bcost column\b|doesn.?t indicate the|fixed-asset cost|depreciat|comparable-price|\bugx\b",
+        part,
+    ):
+        return ""
+    if part[-1] not in ".!?":
+        part += "."
+    return part[0].upper() + part[1:]
+
+
 def refine(remarks: str, in_use: str, description: str) -> str:
     status = ""
     extras: list[str] = []
@@ -92,7 +124,7 @@ def refine(remarks: str, in_use: str, description: str) -> str:
         if re.fullmatch(r"(?i)cost:\s*ugx", clause):
             continue
         phrase = remarkable(clause, description)
-        if phrase and phrase not in extras:
+        if phrase and phrase not in extras and not RESIDUAL.search(phrase):
             extras.append(phrase)
     if in_use == "YES":
         lead = "Functional."
@@ -111,7 +143,15 @@ def refine(remarks: str, in_use: str, description: str) -> str:
             continue
         parts = [part for part in parts if part.casefold().strip(".") not in folded]
         parts.append(extra)
-    return " ".join(part for part in parts if part).strip()
+    kept = []
+    for part in parts:
+        part = clean_sentence(part)
+        if not part or RESIDUAL.search(part):
+            continue
+        kept.append(part)
+    if not kept and (in_use == "YES" or in_use == "NO"):
+        kept = ["Functional." if in_use == "YES" else "Not functional."]
+    return " ".join(kept).strip()
 
 
 def main() -> None:
@@ -131,7 +171,7 @@ def main() -> None:
             revised = refine(current, column_value(row, b"AU", labels), column_value(row, b"B", labels))
             if not revised or revised == current:
                 continue
-            interesting = re.search(r"(?i)source status|warranty|supplier|boded|not on the list|engraving", current)
+            interesting = RESIDUAL.search(current)
             if interesting and shown < 6:
                 print("OLD", current[:320].replace("\n", " "))
                 print("NEW", revised[:320])
