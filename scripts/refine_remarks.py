@@ -105,6 +105,59 @@ def clean_sentence(part: str) -> str:
     return part[0].upper() + part[1:]
 
 
+def rewrite_count(part: str) -> str:
+    """Remove an asset-quantity tally. Keep a warranty period, room number, or date."""
+    raw = part.strip()
+    if not raw:
+        return ""
+    if re.search(r"(?i)warrant(?:y)?\s+\d+\s+years?|\broom\s+\d|\d{1,2}(?:st|nd|rd|th)?[/.-]\d{1,2}[/.-]\d{2,4}", raw) \
+            and not re.search(r"(?i)\d+\s+(?:in use|function|chairs|stools|units|desks|verified|received|broken)", raw):
+        return raw if raw[-1] in ".!?" else raw + "."
+    raw = re.sub(r"(?i)^all the \d+\s+(?:chairs|stools|units|desks|tables|beds)\s+", "", raw)
+    raw = re.sub(r"(?i)^(?:about|around|approximately)\s+\d+\s+of them\s+", "", raw)
+    raw = re.sub(r"(?i)\ba total of \d+\s+", "", raw)
+    raw = re.sub(r"(?i)\ball the \d+\s+", "All ", raw)
+    if re.search(r"(?i)contract quantity evidenced:\s*\d+|job card notes \d+", raw):
+        return ""
+    if re.fullmatch(r"(?i)\d[\d,]*\.?", raw):
+        return ""
+    if re.fullmatch(r"(?i)(?:number not stated|no number stated)\.?", raw):
+        return ""
+    if re.fullmatch(r"(?i)\d+\s+in use\.?|in use\s*\(\d+\)\.?", raw):
+        return "In use."
+    if re.search(r"(?i)\d+.*\b(?:function\w*|in use|broken|spoiled|non-?function\w*)\b.*\d+", raw) \
+            or re.search(r"(?i)\d+\s+non-?function", raw):
+        return ""
+    if re.search(r"(?i)^all\s+\d+\s+verified", raw):
+        return "All verified as in good condition and in use."
+    if re.search(r"(?i)^a total of\s+\d+", raw):
+        return ""
+    if re.search(r"(?i)\d+\s+(?:chairs|stools|units|desks|tables|beds)\s+(?:were|was)\s+(?:verified|received|found)", raw):
+        if re.search(r"(?i)good condition|fully functional", raw):
+            return "In good condition and fully functional."
+        return ""
+    if re.search(r"(?i)^around\s+\d+\s+of them\b", raw):
+        return ""
+    if re.search(r"(?i)^(?:at\s+[\d,]+\s+each|unit price\b)", raw):
+        return ""
+    if len(re.findall(r"(?i)\d+\s+in (?:store|use)", raw)) >= 1 and re.search(r"(?i)\d+\s+in (?:store|use).*\d+\s+in (?:store|use)|\d+\s+in store", raw):
+        return ""
+    if re.search(r"(?i)\b(?:had|have)\s+\d+\s+(?:steel\s+)?(?:cupboards|chairs|stools|desks|beds|tables)\b", raw):
+        return ""
+    if re.match(r"(?i)^\d+\s*", raw) and re.search(
+        r"(?i)\b(?:function\w*|in use|broken|spoiled|verified|received|store|units|chairs|stools|desks|tables|beds)\b",
+        raw,
+    ):
+        return ""
+    received = re.fullmatch(r"(?i)\d+\s+(received and in use|verified|units received)\.?", raw)
+    if received:
+        return sentence(received.group(1))
+    raw = re.sub(r"(?i)\s*number not stated\.?", "", raw).strip()
+    if not raw:
+        return ""
+    return raw if raw[-1] in ".!?" else raw + "."
+
+
 def refine(remarks: str, in_use: str, description: str) -> str:
     status = ""
     extras: list[str] = []
@@ -146,12 +199,30 @@ def refine(remarks: str, in_use: str, description: str) -> str:
     kept = []
     for part in parts:
         part = clean_sentence(part)
+        part = rewrite_count(part)
         if not part or RESIDUAL.search(part):
+            continue
+        if any(part.casefold().strip(".") == earlier.casefold().strip(".") for earlier in kept):
             continue
         kept.append(part)
     if not kept and (in_use == "YES" or in_use == "NO"):
         kept = ["Functional." if in_use == "YES" else "Not functional."]
     return " ".join(kept).strip()
+
+
+def strip_asset_counts(remarks: str) -> str:
+    """Remove quantity tallies from an already written remark. Keep warranty, room, and date numbers."""
+    kept = []
+    for part in re.split(r"(?<=[.!?])\s+", remarks.strip()):
+        cleaned = rewrite_count(part)
+        if not cleaned:
+            continue
+        if cleaned[0].islower():
+            cleaned = cleaned[0].upper() + cleaned[1:]
+        if any(cleaned.casefold() == earlier.casefold() for earlier in kept):
+            continue
+        kept.append(cleaned)
+    return " ".join(kept)
 
 
 def main() -> None:
@@ -168,10 +239,10 @@ def main() -> None:
             if rows == 1:
                 continue
             current = column_value(row, b"BL", labels)
-            revised = refine(current, column_value(row, b"AU", labels), column_value(row, b"B", labels))
+            revised = strip_asset_counts(current)
             if not revised or revised == current:
                 continue
-            interesting = RESIDUAL.search(current)
+            interesting = re.search(r"\d", current)
             if interesting and shown < 6:
                 print("OLD", current[:320].replace("\n", " "))
                 print("NEW", revised[:320])
