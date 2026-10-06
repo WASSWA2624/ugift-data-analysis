@@ -1,0 +1,26 @@
+{
+  "deleted_photo98": {
+    "baseline_body_index": 740,
+    "baseline_part": "word/media/image98.png",
+    "legacy_caption": "Soroti Blood bank",
+    "actual_identity": "Plasma snap freezer at Hoima Regional Blood Bank, Hoima City",
+    "source_path": "D:/coding/ugift-data-analysis/raw-data-grouped/blood-banks/hoima-blood-bank-photos/WhatsApp Image 2026-09-28 at 18.36.08.jpeg",
+    "source_sha256": "37fba6969c5de5b5329121fdec8d91ff2f36b980bbc1c12ed1bb6fddde855086",
+    "retained_current_part": "word/media/image42.jpeg",
+    "retained_current_body_index": 376,
+    "verification": "Viewed archived browser screenshot and original image; same freezer, room and pose, with UBTS-HRBB marking visible. Current JPEG hash matches original source byte-for-byte.",
+    "restoration_decision": "Already restored as original photograph at correct main-report location; preserve current image42.jpeg and correct Hoima caption. Do not duplicate misleading Soroti browser screenshot."
+  },
+  "deleted_photo99": {
+    "baseline_body_index": 742,
+    "baseline_part": "word/media/image99.png",
+    "legacy_caption": "Blood bank refrigerator Soroti Blood bank",
+    "actual_identity": "Blood-bank refrigerators and plasma snap freezer at Soroti Regional Blood Bank",
+    "source_path": "D:/coding/ugift-data-analysis/raw-data-grouped/blood-banks/soroti-blood-bank-photos/WhatsApp Image 2026-09-29 at 11.20.191.jpeg",
+    "source_sha256": "91933721348bb71c6400c9bd03daee75cb71ed037b618c92e394135102eca97e",
+    "retained_current_part": "word/media/image46.jpeg",
+    "retained_current_body_index": 376,
+    "verification": "Viewed archived browser screenshot and original image; identical fridge-bank scene. Current JPEG hash matches original source byte-for-byte.",
+    "restoration_decision": "Already restored as original photograph at correct main-report location; preserve current image46.jpeg and accurate Soroti caption. Do not duplicate browser screenshot."
+  }
+}

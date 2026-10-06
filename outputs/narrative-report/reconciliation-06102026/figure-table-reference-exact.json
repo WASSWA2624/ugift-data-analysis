@@ -1,0 +1,1186 @@
+{
+  "source_file": "D:\\coding\\ugift-data-analysis\\outputs\\narrative-report\\ugift-working-report-06102026-1344-reconciled.docx",
+  "source_sha256": "0e60324464482f931c0dc12d4358d17d2774d43d78438fc98da3ac2b1365058e",
+  "paragraph_corrections_by_exact_old_text": {
+    "The two photocopier entries share the identifier UGIFT-MOLG/PHC/23-01. Their identity requires reconciliation to establish whether they are two separate items. Computer components are counted separately in the figure.": {
+      "text": "The two photocopier entries share the identifier UGIFT-MOLG/PHC/23-01. Their identity requires reconciliation to establish whether they are two separate items. Computer components are counted separately in Figure 15.",
+      "rationale": "Replace generic graph reference with the MoLG figure number.",
+      "body_index_at_audit": 416,
+      "protected": false,
+      "preceding_exact_text": "Asset availability: The asset verification at the Ministry of Local Government (MoLG) found that the ministry kept a UgIFT asset register and had thirteen UgIFT assets: one double-cabin pickup and twelve ICT items. The ICT assets comprised six computer entries, four laptops and two photocopier entries, one described as heavy duty. Figure 15 presents the UgIFT assets recorded for MoLG."
+    },
+    "Financial value of assets: recorded costs total UGX 1,153,114,971 across 311 of 324 records. Accumulated depreciation totals UGX 472,399,460 and net book value totals UGX 557,315,511 at 30 September 2026. Net book value remains unavailable for 13 records. The table below gives the category breakdown and identifies any unavailable amounts.": {
+      "text": "Financial value of assets: recorded costs total UGX 1,153,114,971 across 311 of 324 records. Accumulated depreciation totals UGX 472,399,460 and net book value totals UGX 557,315,511 at 30 September 2026. Net book value remains unavailable for 13 records. Table 21 gives the category breakdown and identifies any unavailable amounts.",
+      "rationale": "Replace vague category-finance table reference with its existing number.",
+      "body_index_at_audit": 452,
+      "protected": false,
+      "preceding_exact_text": "Marking and identification: Twenty-six assets (8.0%) have identifiers containing UgIFT or UGFT, 48 (14.8%) have another identifier and 250 (77.2%) have no usable identifier. Physical engraving still requires confirmation."
+    },
+    "Financial value of assets: recorded costs total UGX 312,990,807 across 163 of 163 records. Accumulated depreciation totals UGX 48,560,694 and net book value totals UGX 264,430,113 at 30 September 2026. All records have a calculated net book value. The table below gives the category breakdown and identifies any unavailable amounts.": {
+      "text": "Financial value of assets: recorded costs total UGX 312,990,807 across 163 of 163 records. Accumulated depreciation totals UGX 48,560,694 and net book value totals UGX 264,430,113 at 30 September 2026. All records have a calculated net book value. Table 22 gives the category breakdown and identifies any unavailable amounts.",
+      "rationale": "Replace vague category-finance table reference with its existing number.",
+      "body_index_at_audit": 459,
+      "protected": false,
+      "preceding_exact_text": "Marking and identification: No asset has an identifier containing UgIFT or UGFT. Two assets (1.2%) have other identifiers and 161 (98.8%) have no usable identifier. Physical engraving still requires confirmation."
+    },
+    "Financial value of assets: recorded costs total UGX 37,615,148 across 115 of 115 records. Accumulated depreciation totals UGX 32,728,688 and net book value totals UGX 4,886,460 at 30 September 2026. All records have a calculated net book value. The table below gives the category breakdown and identifies any unavailable amounts.": {
+      "text": "Financial value of assets: recorded costs total UGX 37,615,148 across 115 of 115 records. Accumulated depreciation totals UGX 32,728,688 and net book value totals UGX 4,886,460 at 30 September 2026. All records have a calculated net book value. Table 23 gives the category breakdown and identifies any unavailable amounts.",
+      "rationale": "Replace vague category-finance table reference with its existing number.",
+      "body_index_at_audit": 466,
+      "protected": false,
+      "preceding_exact_text": "Marking and identification: None of the 115 assets has a usable identifier. Physical engraving still requires confirmation."
+    },
+    "Movable assets exclude buildings, structures and land. The table groups recorded tag text as UgIFT or UGFT, another identifier or no usable tag. Buildings, structures and land are identified through property and site records rather than engraving.": {
+      "text": "Movable assets exclude buildings, structures and land. Table 31 groups recorded tag text as UgIFT or UGFT, another identifier or no usable tag. Buildings, structures and land are identified through property and site records rather than engraving.",
+      "rationale": "Replace generic school identification table reference.",
+      "body_index_at_audit": 526,
+      "protected": false,
+      "preceding_exact_text": "Asset categoryRecordsUgIFT textOther identifierNo usable tagFurniture and fittings107,79212,98518,50376,304ICT equipment12,0363152,4269,295Outside fixed-asset classification9,08104528,629Buildings and structures7,505403917,074Medical, laboratory and research appliances5,6041212425,241Other classified assets2,71617962,603Unclassified500010490Land140212Transport equipment8017Total145,25613,47822,123109,655"
+    },
+    "The photos below show some of the facilities that are complete": {
+      "occurrences": [
+        {
+          "text": "The photographs in Figures 20 to 23 show some of the facilities that are complete",
+          "rationale": "Reference the health-centre photo group by its existing figure-number range.",
+          "body_index_at_audit": 502,
+          "protected": false,
+          "preceding_exact_text": "Recorded value is the cost in the verification records. For recognized assets with complete accounting figures, net book value is that cost less accumulated depreciation to 30 September 2026 and is not taken below zero. Available costs, depreciation and net book values cover different populations; the financial reconciliation appendix gives the matched accounting population."
+        },
+        {
+          "text": "The photographs in Figures 28 to 30 show some of the facilities that are complete",
+          "rationale": "Reference the completed-school figure group by number.",
+          "body_index_at_audit": 539,
+          "protected": false,
+          "preceding_exact_text": "Table 33 indicates that the programme list recorded 547 facilities as complete and 82 as ongoing before verification. The reviewed evidence identifies at least 70 facilities with incomplete works, comprising 57 schools and thirteen Health Centres, and another thirteen awaiting handover or commissioning, comprising eleven schools and two Health Centres. Some facilities were providing services while works remained incomplete. These findings and the programme-list completion labels describe different matters and must not be added together."
+        }
+      ]
+    },
+    "The photos below show some of the facilities that are Incomplete": {
+      "text": "The photographs in Figure 24 and Figures 25 to 27 show some of the facilities that are Incomplete",
+      "rationale": "Reference the incomplete-health-centre figures by their existing numbers.",
+      "body_index_at_audit": 504,
+      "protected": false,
+      "preceding_exact_text": "Figure 20: Health centre building at Kibiri HC III, Makindye-Ssabagabo Municipal Council (Buganda)Figure 21: Health centre buildings and covered walkway at Kihuukya HC III, Hoima City (Bunyoro)Figure 22: Binocular microscope at Kihuukya HC III, Hoima City (Bunyoro)Figure 23: Maternity block entrance and access ramp at Kamuli HC III, Tororo District (Bukedi)"
+    },
+    "The following three photographs show different views of Benet Health Centre III in Kween District. At the field visit on 27 August 2026, staff quarters were incomplete, another structure awaited completion and handover, and equipment was still in store.": {
+      "text": "Figures 25 to 27 show different views of Benet Health Centre III in Kween District. At the field visit on 27 August 2026, staff quarters were incomplete, another structure awaited completion and handover, and equipment was still in store.",
+      "rationale": "Reference the three Benet photographs by figure number.",
+      "body_index_at_audit": 507,
+      "protected": false,
+      "preceding_exact_text": "Figure 24: Unfinished laboratory building at a health centre, Sironko District (Bugisu)"
+    },
+    "The photos below show some of the facilities that are still under construction": {
+      "text": "The photographs in Figures 31 to 43 show some of the facilities that are still under construction",
+      "rationale": "Reference the unfinished-school figure group by number.",
+      "body_index_at_audit": 541,
+      "protected": false,
+      "preceding_exact_text": "Figure 28: Classroom furnished with desks and a whiteboard at Gyagenda Memorial Seed Secondary School, Kalangala District (Buganda)Figure 29: Books displayed on library shelves at Sibanga Seed School, Manafwa District (Bugisu)Figure 30: ICT laboratory block and entrance ramp at Sisiyi Seed Secondary School, Bulambuli District (Bugisu)"
+    },
+    "Annexures Appendices": {
+      "text": "Appendices",
+      "rationale": "Remove duplicate old Annexures heading left alongside its new title.",
+      "body_index_at_audit": 603,
+      "protected": false,
+      "preceding_exact_text": ""
+    },
+    "Financial Value of assets: The recorded value of the ministry's UgIFT assets is UGX 6,204,318,000. Accumulated depreciation is UGX 4,312,193,629 and net book value is UGX 1,785,677,771 at 30 September 2026. Net book value remains unavailable for 20 records; the figures sum only available amounts.": {
+      "text": "Financial Value of assets: The recorded value of the ministry's UgIFT assets is UGX 6,204,318,000. Accumulated depreciation is UGX 4,312,193,629 and net book value is UGX 1,785,677,771 at 30 September 2026. Net book value remains unavailable for 20 records; the figures sum only available amounts. Table 3 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 297,
+      "protected": false,
+      "preceding_exact_text": "Marking and identification: A total of 282 assets (61.6%) had usable identifiers and 176 (38.4%) had no usable tag recorded. Of all 458 assets, 247 (53.9%) had UgIFT or UGFT in the tag field and 35 (7.6%) carried another identifier. The 20 double-cabin pickups were identified by their registration numbers rather than UgIFT tag text. These tag-field counts do not confirm physical engraving."
+    },
+    "All the 10,783 assets (100.0%) are recorded as functional and in use. All the 456 laptops are recorded as functional and in use. Their identification status is shown in table 6.": {
+      "text": "All the 10,783 assets (100.0%) are recorded as functional and in use. All the 456 laptops are recorded as functional and in use. Their identification status is shown in table 6. Table 5 presents condition and use.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 315,
+      "protected": false,
+      "preceding_exact_text": "Figure 7: Assets verified at MoES"
+    },
+    "Financial Value of assets: The recorded value is UGX 14,925,128,359, the highest among the MDAs. Accumulated depreciation is UGX 10,607,476,704 and net book value is UGX 4,317,651,655 at 30 September 2026.": {
+      "text": "Financial Value of assets: The recorded value is UGX 14,925,128,359, the highest among the MDAs. Accumulated depreciation is UGX 10,607,476,704 and net book value is UGX 4,317,651,655 at 30 September 2026. Table 7 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 321,
+      "protected": false,
+      "preceding_exact_text": "IdentificationRecordsShare of all recordsTag contains UgIFT or UGFT4584.2%Other identifier00.0%No usable tag recorded10,32595.8%"
+    },
+    "All 2,045 assets (100.0%) are recorded as functional and in use. All 211 computers and 819 tablets are recorded as functional and in use. Identification is reported separately in table 9.": {
+      "text": "All 2,045 assets (100.0%) are recorded as functional and in use. All 211 computers and 819 tablets are recorded as functional and in use. Identification is reported separately in table 9. Table 8 presents condition and use.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 329,
+      "protected": false,
+      "preceding_exact_text": "Figure 8: Assets verified: MAAIF"
+    },
+    "Financial Value of assets: The recorded value was UGX 2,856,556,593. Accumulated depreciation is UGX 1,380,059,505 and net book value is UGX 1,403,429,899 at 30 September 2026. Net book value remains unavailable for 7 records; the figures sum only available amounts.": {
+      "text": "Financial Value of assets: The recorded value was UGX 2,856,556,593. Accumulated depreciation is UGX 1,380,059,505 and net book value is UGX 1,403,429,899 at 30 September 2026. Net book value remains unavailable for 7 records; the figures sum only available amounts. Table 10 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 335,
+      "protected": false,
+      "preceding_exact_text": "IdentificationRecordsShare of all recordsTag contains UgIFT or UGFT1,22860.0%Other identifier40.2%No usable tag recorded81339.8%"
+    },
+    "Financial Value of assets: The MoH assets had a recorded value of UGX 1,186,689,609. Accumulated depreciation is UGX 441,202,460 and net book value is UGX 384,551,313 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts.": {
+      "text": "Financial Value of assets: The MoH assets had a recorded value of UGX 1,186,689,609. Accumulated depreciation is UGX 441,202,460 and net book value is UGX 384,551,313 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts. Table 11 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 347,
+      "protected": false,
+      "preceding_exact_text": "Marking and Identification: Out of the 260 assets, 32 (12.3%) had usable identifiers while 228 (87.7%) had no usable tag recorded. There were fourteen (5.4%) assets with UgIFT or UGFT in the tag field and eighteen (6.9%) with other identifiers. These tag fields do not confirm physical engraving."
+    },
+    "Financial Value of assets: The recorded value of these computers in OPM was UGX 53,535,300. Accumulated depreciation is UGX 48,181,770 and net book value is UGX 5,353,530 at 30 September 2026.": {
+      "text": "Financial Value of assets: The recorded value of these computers in OPM was UGX 53,535,300. Accumulated depreciation is UGX 48,181,770 and net book value is UGX 5,353,530 at 30 September 2026. Table 12 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 358,
+      "protected": false,
+      "preceding_exact_text": "Marking and identification: All the ten laptops (100.0%) had UgIFT or UGFT in the tag field."
+    },
+    "Financial Value of the assets: The recorded value was UGX 5,029,981,561. Accumulated depreciation is UGX 2,092,642,121 and net book value is UGX 1,535,627,440 at 30 September 2026. Net book value remains unavailable for 43 records; the figures sum only available amounts.": {
+      "text": "Financial Value of the assets: The recorded value was UGX 5,029,981,561. Accumulated depreciation is UGX 2,092,642,121 and net book value is UGX 1,535,627,440 at 30 September 2026. Net book value remains unavailable for 43 records; the figures sum only available amounts. Table 13 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 367,
+      "protected": false,
+      "preceding_exact_text": "Marking and Identification: The ministry received a total of 2,939 assets, of which 2,897 (98.6%) had usable identifiers, 2,864 (97.4%) with UgIFT or UGFT in the tag field and 33 (1.1%) with another identifier; 42 (1.4%) had no usable tag recorded. These tag fields do not confirm physical engraving."
+    },
+    "Financial Value of the assets: The findings pointed out that the recorded value to be UGX 46,180,000. Accumulated depreciation is UGX 13,260,000 and net book value is UGX 14,860,000 at 30 September 2026. Net book value remains unavailable for 4 records; the figures sum only available amounts.": {
+      "text": "Financial Value of the assets: The findings pointed out that the recorded value to be UGX 46,180,000. Accumulated depreciation is UGX 13,260,000 and net book value is UGX 14,860,000 at 30 September 2026. Net book value remains unavailable for 4 records; the figures sum only available amounts. Table 14 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 375,
+      "protected": false,
+      "preceding_exact_text": "Marking and Identification: Eight Lenovo computers (80.0%) had UgIFT or UGFT in the tag field and the two Samsung tablets (20.0%) had no usable tag recorded."
+    },
+    "Financial value of Assets: The recorded value is UGX 46,824,409. Accumulated depreciation is UGX 32,841,273 and net book value is UGX 13,983,136 at 30 September 2026.": {
+      "text": "Financial value of Assets: The recorded value is UGX 46,824,409. Accumulated depreciation is UGX 32,841,273 and net book value is UGX 13,983,136 at 30 September 2026. Table 15 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 389,
+      "protected": false,
+      "preceding_exact_text": "One asset (16.7%), the heavy-duty photocopier, had UgIFT or UGFT in the tag field while the other five (83.3%) had no usable tag recorded."
+    },
+    "Financial Value of assets: The MF register states a recorded cost of UGX 30,153,500 for these assets. Accumulated depreciation is UGX 13,066,516 and net book value is UGX 17,086,984 at 30 September 2026.": {
+      "text": "Financial Value of assets: The MF register states a recorded cost of UGX 30,153,500 for these assets. Accumulated depreciation is UGX 13,066,516 and net book value is UGX 17,086,984 at 30 September 2026. Table 16 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 400,
+      "protected": false,
+      "preceding_exact_text": "Asset marking and identification: All five assets (laptops, a tablet and a printer) had UgIFT or UGFT in the tag field."
+    },
+    "Financial value of Assets: The assets were worth UGX 388,773,680. Accumulated depreciation is UGX 111,591,545 and net book value is UGX 277,182,135 at 30 September 2026.": {
+      "text": "Financial value of Assets: The assets were worth UGX 388,773,680. Accumulated depreciation is UGX 111,591,545 and net book value is UGX 277,182,135 at 30 September 2026. Table 17 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 410,
+      "protected": false,
+      "preceding_exact_text": "Figure 14: Assets verified at OAG"
+    },
+    "Financial Value of assets: The findings pointed out the recorded value to be UGX 343,320,450. Accumulated depreciation is UGX 284,670,827 and net book value is UGX 54,649,623 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts.": {
+      "text": "Financial Value of assets: The findings pointed out the recorded value to be UGX 343,320,450. Accumulated depreciation is UGX 284,670,827 and net book value is UGX 54,649,623 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts. Table 18 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 421,
+      "protected": false,
+      "preceding_exact_text": "Asset marking and identification: Out of the thirteen assets, eight (61.5%) had usable identifiers while five (38.5%) had no usable tag recorded. Of the eight identified assets, seven (53.8% of all assets) had UgIFT or UGFT in the tag field while one (7.7%) carried another identifier. These tag-field counts do not confirm physical engraving."
+    },
+    "Financial Value of assets: The findings further indicate the recorded value to be UGX 487,349,999. Accumulated depreciation is UGX 123,840,000 and net book value is UGX 340,559,999 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts.": {
+      "text": "Financial Value of assets: The findings further indicate the recorded value to be UGX 487,349,999. Accumulated depreciation is UGX 123,840,000 and net book value is UGX 340,559,999 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts. Table 19 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 432,
+      "protected": false,
+      "preceding_exact_text": "Asset marking and Identification: None of the 27 assets had UgIFT or UGFT in the tag field. Thirteen (48.1%) had other identifiers and fourteen (51.9%) had no usable tag recorded. The motorcycles' registration numbers are distinguished from UgIFT tag text."
+    },
+    "Available recorded value was UGX 1,503,720,926 and available net book value at 30 September 2026 was UGX 826,632,084. Available accumulated depreciation was UGX 553,688,842. Recorded cost is available for 589 of the 602 regional blood-bank records, and net book value is unavailable for thirteen. The available columns cover different populations; the financial reconciliation appendix gives the matched accounting population.": {
+      "text": "Available recorded value was UGX 1,503,720,926 and available net book value at 30 September 2026 was UGX 826,632,084. Available accumulated depreciation was UGX 553,688,842. Recorded cost is available for 589 of the 602 regional blood-bank records, and net book value is unavailable for thirteen. The available columns cover different populations; the financial reconciliation appendix gives the matched accounting population. Table 20 presents the blood-bank financial values.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 445,
+      "protected": false,
+      "preceding_exact_text": "Financial aspects"
+    },
+    "National Environment Management Authority (NEMA) had six ICT items: four computers, a printer and a heavy-duty photocopier.": {
+      "text": "National Environment Management Authority (NEMA) had six ICT items: four computers, a printer and a heavy-duty photocopier. Figure 12 presents the asset categories.",
+      "rationale": "Supply an explicit NEMA figure reference.",
+      "body_index_at_audit": 383,
+      "protected": false,
+      "preceding_exact_text": "Asset availability:"
+    },
+    "The financial reporting date is 30 September 2026. Year-to-date depreciation covers 1 July to 30 September 2026. Amounts below are in Uganda shillings, rounded to the nearest shilling after the totals are calculated. Only available amounts are added; blank cells and entries marked Pending calculation are not treated as zero. Each record has one unit, so no further quantity multiplier is applied.": {
+      "text": "The financial reporting date is 30 September 2026. Year-to-date depreciation covers 1 July to 30 September 2026. Amounts in Table 36 are in Uganda shillings, rounded to the nearest shilling after the totals are calculated. Only available amounts are added; blank cells and entries marked Pending calculation are not treated as zero. Each record has one unit, so no further quantity multiplier is applied.",
+      "rationale": "Remove a remaining unnumbered positional reference to financial amounts.",
+      "body_index_at_audit": 605,
+      "protected": false,
+      "preceding_exact_text": "Appendix A Financial reconciliation and valuation limitations"
+    },
+    "The cost, depreciation and net book value totals do not all cover the same records. A direct comparison is possible for 180,730 records classified CAPITALIZED or construction in progress (CIP), where all three amounts are available. Their recorded cost of UGX 760,986,784,838 less accumulated depreciation of UGX 165,185,197,307 gives net book value of UGX 595,801,587,531. For this group, net book value is 78.3% of cost. This is the share of recorded cost that has not been depreciated; it does not measure physical condition, service performance or market value.": {
+      "text": "The cost, depreciation and net book value totals do not all cover the same records. A direct comparison is possible for 180,730 records classified CAPITALIZED or construction in progress (CIP), where all three amounts are available. Their recorded cost of UGX 760,986,784,838 less accumulated depreciation of UGX 165,185,197,307 gives net book value of UGX 595,801,587,531. For this group, net book value is 78.3% of cost. This is the share of recorded cost that has not been depreciated; it does not measure physical condition, service performance or market value. Table 37 reconciles the available recorded cost to net book value.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 607,
+      "protected": false,
+      "preceding_exact_text": "Financial measureAvailable recordsUnavailable recordsAvailable total UGXRecorded cost227,9381,086996,812,628,890Accumulated depreciation206,01223,012165,185,197,307Year-to-date depreciation206,01223,01210,793,939,755Net book value206,00823,016595,801,587,531"
+    },
+    "Costs for 166,593 items were estimated by comparison with other assets, totalling UGX 821,736,918,304, or 82.44% of available recorded cost. These estimates require supporting valuation evidence. The other available costs also require acquisition or valuation records before they can be accepted as verified amounts. Costs remain missing for a further 1,086 items.": {
+      "text": "Costs for 166,593 items were estimated by comparison with other assets, totalling UGX 821,736,918,304, or 82.44% of available recorded cost. These estimates require supporting valuation evidence. The other available costs also require acquisition or valuation records before they can be accepted as verified amounts. Costs remain missing for a further 1,086 items. Table 38 presents the basis of recorded costs.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 612,
+      "protected": false,
+      "preceding_exact_text": "Basis of recorded costRecordsRecorded cost UGXComparable assets within the same government26,922122,474,661,776Comparable assets in other governments139,671699,262,256,528Other available costs61,345175,075,710,586Total available costs227,938996,812,628,890"
+    },
+    "Categories are mutually exclusive; rounded percentages may not total 100.0%.": {
+      "text": "Categories are mutually exclusive; rounded percentages may not total 100.0%. Table 39 presents mutually exclusive service-date categories; rounded percentages may not total 100.0%.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 619,
+      "protected": false,
+      "preceding_exact_text": "Service-date entryRecordsShareFull date from 27 June 2017 to 30 September 2026197,72186.3%Full date before 27 June 20173,3451.5%Month and year only2,9871.3%Year only7,7013.4%Year or financial-year period4550.2%Commissioning status or other text16,8157.3%Total asset records229,024100.0%"
+    },
+    "The interview analysis counts each programme-list facility once per topic. Multiple returns for a facility are reconciled before analysis. Answers about another institution, statements that do not answer the question and unclassifiable replies are excluded from the relevant denominator. The Mbirizi school response attributed to Kagganda Health Centre is excluded from health-centre analysis pending correction of the identity. Receiving-facility responses are linked to the appropriate programme entry.": {
+      "text": "The interview analysis counts each programme-list facility once per topic. Multiple returns for a facility are reconciled before analysis. Answers about another institution, statements that do not answer the question and unclassifiable replies are excluded from the relevant denominator. The Mbirizi school response attributed to Kagganda Health Centre is excluded from health-centre analysis pending correction of the identity. Receiving-facility responses are linked to the appropriate programme entry. Table 44 gives the interview denominators.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 647,
+      "protected": false,
+      "preceding_exact_text": "Appendix F Facility interview scope and denominators"
+    },
+    "The photographs illustrate facilities, equipment and outstanding works at the time of the visits. They should be read alongside the findings on condition, use and completion. A photograph alone does not establish that equipment was functional or that a facility was ready for handover.": {
+      "text": "The photographs illustrate facilities, equipment and outstanding works at the time of the visits. They should be read alongside the findings on condition, use and completion. A photograph alone does not establish that equipment was functional or that a facility was ready for handover. Table 46 provides the photographic schedule.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 654,
+      "protected": false,
+      "preceding_exact_text": "Appendix H Photographic schedule"
+    },
+    "Hospitals on local-government books: 3,067 records. These are included in the report total and shown separately from Health Centres and schools.": {
+      "text": "Hospitals on local-government books: 3,067 records. These are included in the report total and shown separately from Health Centres and schools. Table 48 presents the category financial values.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 661,
+      "protected": false,
+      "preceding_exact_text": "Appendix J Additional assets and classification checks"
+    },
+    "Other local-government or unassigned locations: 4 records. These are included in the report total and shown separately from Health Centres and schools.": {
+      "text": "Other local-government or unassigned locations: 4 records. These are included in the report total and shown separately from Health Centres and schools. Table 49 presents the category financial values.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 664,
+      "protected": false,
+      "preceding_exact_text": "Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable."
+    },
+    "The cases below illustrate service-date problems and the decisions required. They are examples rather than a complete list of all date exceptions. Asset references and facility names are provided to support follow-up.": {
+      "text": "The cases in Table 40 illustrate service-date problems and the decisions required. They are examples rather than a complete list of all date exceptions. Asset references and facility names are provided to support follow-up.",
+      "rationale": "Reference the service-date exception table after assigning its proposed number.",
+      "body_index_at_audit": 620,
+      "protected": false,
+      "preceding_exact_text": "Categories are mutually exclusive; rounded percentages may not total 100.0%."
+    },
+    "The definitions below explain how quantities, condition and financial values are presented. Unresolved receipt, ownership and classification matters are included in the relevant schedules for follow-up.": {
+      "text": "The definitions in Table 41 explain how quantities, condition and financial values are presented. Unresolved receipt, ownership and classification matters are included in the relevant schedules for follow-up.",
+      "rationale": "Reference the definitions table after assigning its proposed number.",
+      "body_index_at_audit": 631,
+      "protected": false,
+      "preceding_exact_text": "The condition descriptions in section 2.5 distinguish physically faulty assets from usable items in store or awaiting installation. The quantitative tables use the current register codes: 215,504 assets marked Functional and in use, and 13,520 marked Faulty and not in use. All entries marked not in use carry the Faulty code in these totals, including usable stored or uninstalled items; the 13,520 therefore does not represent a count of physically broken assets."
+    },
+    "The 39 entries below explain gaps or differences between the programme list and the available asset returns. Reported absence is not an independent finding that a facility does not exist. A receiving facility already on the list is counted once.": {
+      "text": "The 39 entries in Table 42 explain gaps or differences between the programme list and the available asset returns. Reported absence is not an independent finding that a facility does not exist. A receiving facility already on the list is counted once.",
+      "rationale": "Reference the exception roster after assigning its proposed number.",
+      "body_index_at_audit": 640,
+      "protected": false,
+      "preceding_exact_text": "Appendix D Programme list exception roster"
+    },
+    "This schedule lists the 70 facilities with documented incomplete works and the 13 additional facilities awaiting handover or commissioning. It is a minimum list of documented cases, not a certification of the remaining facilities. A facility may operate while a block or ancillary structure remains unfinished.": {
+      "text": "Table 43 lists the 70 facilities with documented incomplete works and the 13 additional facilities awaiting handover or commissioning. It is a minimum list of documented cases, not a certification of the remaining facilities. A facility may operate while a block or ancillary structure remains unfinished.",
+      "rationale": "Reference the outstanding-works schedule after assigning its proposed number.",
+      "body_index_at_audit": 643,
+      "protected": false,
+      "preceding_exact_text": "Appendix E Documented outstanding works and handover"
+    },
+    "The cases below require delivery, custody or condition checks. They do not provide a national total of losses or disposals. Where a report concerns a batch of equipment, the affected items still need to be identified.": {
+      "text": "The cases in Table 45 require delivery, custody or condition checks. They do not provide a national total of losses or disposals. Where a report concerns a batch of equipment, the affected items still need to be identified.",
+      "rationale": "Reference the reconciliation example table after assigning its proposed number.",
+      "body_index_at_audit": 651,
+      "protected": false,
+      "preceding_exact_text": "Appendix G Asset reconciliation examples"
+    },
+    "Eighteen entries are classified as land, including four at health centres. Ownership, area, tenure and valuation require supporting documents. The table lists these entries for follow-up by the responsible institutions.": {
+      "text": "Eighteen entries are classified as land, including four at health centres. Ownership, area, tenure and valuation require supporting documents. Table 47 lists these entries for follow-up by the responsible institutions.",
+      "rationale": "Reference the land schedule after assigning its proposed number.",
+      "body_index_at_audit": 657,
+      "protected": false,
+      "preceding_exact_text": "Appendix I Land records and ownership evidence"
+    },
+    "The following tables present financial values by asset type for each ministry, regional blood bank, Health Centres and schools. They separate laptops, printers, furniture, medical equipment and other items while retaining the full institution totals. Recorded costs, accumulated depreciation and net book values agree with the broader financial analysis in the report.": {
+      "text": "Tables 50 to 67 present financial values by asset type for each ministry, regional blood bank, Health Centres and schools. They separate laptops, printers, furniture, medical equipment and other items while retaining the full institution totals. Recorded costs, accumulated depreciation and net book values agree with the broader financial analysis in the report.",
+      "rationale": "Reference all eighteen asset-type financial tables by their proposed number range.",
+      "body_index_at_audit": 669,
+      "protected": false,
+      "preceding_exact_text": "Appendix K Financial analysis by asset type"
+    },
+    "The table below summarises the issues raised, the corresponding findings and any further action required.": {
+      "text": "Table 68 summarises the issues raised, the corresponding findings and any further action required.",
+      "rationale": "Reference the restored reviewer response table after assigning its proposed number.",
+      "body_index_at_audit": 727,
+      "protected": false,
+      "preceding_exact_text": "Appendix L Responses to reviewer comments"
+    },
+    "Financial value of assets: recorded costs total UGX 32,054,743,836 across 16,651 of 16,663 records. Accumulated depreciation totals UGX 19,787,511,232 and net book value totals UGX 10,265,924,979 at 30 September 2026. Net book value remains unavailable for 96 records. The table below gives the category breakdown and identifies any unavailable amounts.": {
+      "text": "Financial value of assets: recorded costs total UGX 32,054,743,836 across 16,651 of 16,663 records. Accumulated depreciation totals UGX 19,787,511,232 and net book value totals UGX 10,265,924,979 at 30 September 2026. Net book value remains unavailable for 96 records. Table 2 also identifies unavailable amounts.",
+      "rationale": "Metric-reconciliation reference correction only: Table2 flags available-only amounts and MDA NBV coverage; no aggregate category table follows this paragraph.",
+      "body_index_at_audit": 290,
+      "protected": true
+    }
+  },
+  "paragraph_corrections": [
+    {
+      "exact_old_text": "The two photocopier entries share the identifier UGIFT-MOLG/PHC/23-01. Their identity requires reconciliation to establish whether they are two separate items. Computer components are counted separately in the figure.",
+      "text": "The two photocopier entries share the identifier UGIFT-MOLG/PHC/23-01. Their identity requires reconciliation to establish whether they are two separate items. Computer components are counted separately in Figure 15.",
+      "rationale": "Replace generic graph reference with the MoLG figure number.",
+      "body_index_at_audit": 416,
+      "protected": false,
+      "preceding_exact_text": "Asset availability: The asset verification at the Ministry of Local Government (MoLG) found that the ministry kept a UgIFT asset register and had thirteen UgIFT assets: one double-cabin pickup and twelve ICT items. The ICT assets comprised six computer entries, four laptops and two photocopier entries, one described as heavy duty. Figure 15 presents the UgIFT assets recorded for MoLG."
+    },
+    {
+      "exact_old_text": "Financial value of assets: recorded costs total UGX 1,153,114,971 across 311 of 324 records. Accumulated depreciation totals UGX 472,399,460 and net book value totals UGX 557,315,511 at 30 September 2026. Net book value remains unavailable for 13 records. The table below gives the category breakdown and identifies any unavailable amounts.",
+      "text": "Financial value of assets: recorded costs total UGX 1,153,114,971 across 311 of 324 records. Accumulated depreciation totals UGX 472,399,460 and net book value totals UGX 557,315,511 at 30 September 2026. Net book value remains unavailable for 13 records. Table 21 gives the category breakdown and identifies any unavailable amounts.",
+      "rationale": "Replace vague category-finance table reference with its existing number.",
+      "body_index_at_audit": 452,
+      "protected": false,
+      "preceding_exact_text": "Marking and identification: Twenty-six assets (8.0%) have identifiers containing UgIFT or UGFT, 48 (14.8%) have another identifier and 250 (77.2%) have no usable identifier. Physical engraving still requires confirmation."
+    },
+    {
+      "exact_old_text": "Financial value of assets: recorded costs total UGX 312,990,807 across 163 of 163 records. Accumulated depreciation totals UGX 48,560,694 and net book value totals UGX 264,430,113 at 30 September 2026. All records have a calculated net book value. The table below gives the category breakdown and identifies any unavailable amounts.",
+      "text": "Financial value of assets: recorded costs total UGX 312,990,807 across 163 of 163 records. Accumulated depreciation totals UGX 48,560,694 and net book value totals UGX 264,430,113 at 30 September 2026. All records have a calculated net book value. Table 22 gives the category breakdown and identifies any unavailable amounts.",
+      "rationale": "Replace vague category-finance table reference with its existing number.",
+      "body_index_at_audit": 459,
+      "protected": false,
+      "preceding_exact_text": "Marking and identification: No asset has an identifier containing UgIFT or UGFT. Two assets (1.2%) have other identifiers and 161 (98.8%) have no usable identifier. Physical engraving still requires confirmation."
+    },
+    {
+      "exact_old_text": "Financial value of assets: recorded costs total UGX 37,615,148 across 115 of 115 records. Accumulated depreciation totals UGX 32,728,688 and net book value totals UGX 4,886,460 at 30 September 2026. All records have a calculated net book value. The table below gives the category breakdown and identifies any unavailable amounts.",
+      "text": "Financial value of assets: recorded costs total UGX 37,615,148 across 115 of 115 records. Accumulated depreciation totals UGX 32,728,688 and net book value totals UGX 4,886,460 at 30 September 2026. All records have a calculated net book value. Table 23 gives the category breakdown and identifies any unavailable amounts.",
+      "rationale": "Replace vague category-finance table reference with its existing number.",
+      "body_index_at_audit": 466,
+      "protected": false,
+      "preceding_exact_text": "Marking and identification: None of the 115 assets has a usable identifier. Physical engraving still requires confirmation."
+    },
+    {
+      "exact_old_text": "Movable assets exclude buildings, structures and land. The table groups recorded tag text as UgIFT or UGFT, another identifier or no usable tag. Buildings, structures and land are identified through property and site records rather than engraving.",
+      "text": "Movable assets exclude buildings, structures and land. Table 31 groups recorded tag text as UgIFT or UGFT, another identifier or no usable tag. Buildings, structures and land are identified through property and site records rather than engraving.",
+      "rationale": "Replace generic school identification table reference.",
+      "body_index_at_audit": 526,
+      "protected": false,
+      "preceding_exact_text": "Asset categoryRecordsUgIFT textOther identifierNo usable tagFurniture and fittings107,79212,98518,50376,304ICT equipment12,0363152,4269,295Outside fixed-asset classification9,08104528,629Buildings and structures7,505403917,074Medical, laboratory and research appliances5,6041212425,241Other classified assets2,71617962,603Unclassified500010490Land140212Transport equipment8017Total145,25613,47822,123109,655"
+    },
+    {
+      "exact_old_text": "The photos below show some of the facilities that are complete",
+      "text": "The photographs in Figures 20 to 23 show some of the facilities that are complete",
+      "rationale": "Reference the health-centre photo group by its existing figure-number range.",
+      "body_index_at_audit": 502,
+      "protected": false,
+      "preceding_exact_text": "Recorded value is the cost in the verification records. For recognized assets with complete accounting figures, net book value is that cost less accumulated depreciation to 30 September 2026 and is not taken below zero. Available costs, depreciation and net book values cover different populations; the financial reconciliation appendix gives the matched accounting population."
+    },
+    {
+      "exact_old_text": "The photos below show some of the facilities that are Incomplete",
+      "text": "The photographs in Figure 24 and Figures 25 to 27 show some of the facilities that are Incomplete",
+      "rationale": "Reference the incomplete-health-centre figures by their existing numbers.",
+      "body_index_at_audit": 504,
+      "protected": false,
+      "preceding_exact_text": "Figure 20: Health centre building at Kibiri HC III, Makindye-Ssabagabo Municipal Council (Buganda)Figure 21: Health centre buildings and covered walkway at Kihuukya HC III, Hoima City (Bunyoro)Figure 22: Binocular microscope at Kihuukya HC III, Hoima City (Bunyoro)Figure 23: Maternity block entrance and access ramp at Kamuli HC III, Tororo District (Bukedi)"
+    },
+    {
+      "exact_old_text": "The following three photographs show different views of Benet Health Centre III in Kween District. At the field visit on 27 August 2026, staff quarters were incomplete, another structure awaited completion and handover, and equipment was still in store.",
+      "text": "Figures 25 to 27 show different views of Benet Health Centre III in Kween District. At the field visit on 27 August 2026, staff quarters were incomplete, another structure awaited completion and handover, and equipment was still in store.",
+      "rationale": "Reference the three Benet photographs by figure number.",
+      "body_index_at_audit": 507,
+      "protected": false,
+      "preceding_exact_text": "Figure 24: Unfinished laboratory building at a health centre, Sironko District (Bugisu)"
+    },
+    {
+      "exact_old_text": "The photos below show some of the facilities that are complete",
+      "text": "The photographs in Figures 28 to 30 show some of the facilities that are complete",
+      "rationale": "Reference the completed-school figure group by number.",
+      "body_index_at_audit": 539,
+      "protected": false,
+      "preceding_exact_text": "Table 33 indicates that the programme list recorded 547 facilities as complete and 82 as ongoing before verification. The reviewed evidence identifies at least 70 facilities with incomplete works, comprising 57 schools and thirteen Health Centres, and another thirteen awaiting handover or commissioning, comprising eleven schools and two Health Centres. Some facilities were providing services while works remained incomplete. These findings and the programme-list completion labels describe different matters and must not be added together."
+    },
+    {
+      "exact_old_text": "The photos below show some of the facilities that are still under construction",
+      "text": "The photographs in Figures 31 to 43 show some of the facilities that are still under construction",
+      "rationale": "Reference the unfinished-school figure group by number.",
+      "body_index_at_audit": 541,
+      "protected": false,
+      "preceding_exact_text": "Figure 28: Classroom furnished with desks and a whiteboard at Gyagenda Memorial Seed Secondary School, Kalangala District (Buganda)Figure 29: Books displayed on library shelves at Sibanga Seed School, Manafwa District (Bugisu)Figure 30: ICT laboratory block and entrance ramp at Sisiyi Seed Secondary School, Bulambuli District (Bugisu)"
+    },
+    {
+      "exact_old_text": "Annexures Appendices",
+      "text": "Appendices",
+      "rationale": "Remove duplicate old Annexures heading left alongside its new title.",
+      "body_index_at_audit": 603,
+      "protected": false,
+      "preceding_exact_text": ""
+    },
+    {
+      "exact_old_text": "Financial Value of assets: The recorded value of the ministry's UgIFT assets is UGX 6,204,318,000. Accumulated depreciation is UGX 4,312,193,629 and net book value is UGX 1,785,677,771 at 30 September 2026. Net book value remains unavailable for 20 records; the figures sum only available amounts.",
+      "text": "Financial Value of assets: The recorded value of the ministry's UgIFT assets is UGX 6,204,318,000. Accumulated depreciation is UGX 4,312,193,629 and net book value is UGX 1,785,677,771 at 30 September 2026. Net book value remains unavailable for 20 records; the figures sum only available amounts. Table 3 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 297,
+      "protected": false,
+      "preceding_exact_text": "Marking and identification: A total of 282 assets (61.6%) had usable identifiers and 176 (38.4%) had no usable tag recorded. Of all 458 assets, 247 (53.9%) had UgIFT or UGFT in the tag field and 35 (7.6%) carried another identifier. The 20 double-cabin pickups were identified by their registration numbers rather than UgIFT tag text. These tag-field counts do not confirm physical engraving."
+    },
+    {
+      "exact_old_text": "All the 10,783 assets (100.0%) are recorded as functional and in use. All the 456 laptops are recorded as functional and in use. Their identification status is shown in table 6.",
+      "text": "All the 10,783 assets (100.0%) are recorded as functional and in use. All the 456 laptops are recorded as functional and in use. Their identification status is shown in table 6. Table 5 presents condition and use.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 315,
+      "protected": false,
+      "preceding_exact_text": "Figure 7: Assets verified at MoES"
+    },
+    {
+      "exact_old_text": "Financial Value of assets: The recorded value is UGX 14,925,128,359, the highest among the MDAs. Accumulated depreciation is UGX 10,607,476,704 and net book value is UGX 4,317,651,655 at 30 September 2026.",
+      "text": "Financial Value of assets: The recorded value is UGX 14,925,128,359, the highest among the MDAs. Accumulated depreciation is UGX 10,607,476,704 and net book value is UGX 4,317,651,655 at 30 September 2026. Table 7 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 321,
+      "protected": false,
+      "preceding_exact_text": "IdentificationRecordsShare of all recordsTag contains UgIFT or UGFT4584.2%Other identifier00.0%No usable tag recorded10,32595.8%"
+    },
+    {
+      "exact_old_text": "All 2,045 assets (100.0%) are recorded as functional and in use. All 211 computers and 819 tablets are recorded as functional and in use. Identification is reported separately in table 9.",
+      "text": "All 2,045 assets (100.0%) are recorded as functional and in use. All 211 computers and 819 tablets are recorded as functional and in use. Identification is reported separately in table 9. Table 8 presents condition and use.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 329,
+      "protected": false,
+      "preceding_exact_text": "Figure 8: Assets verified: MAAIF"
+    },
+    {
+      "exact_old_text": "Financial Value of assets: The recorded value was UGX 2,856,556,593. Accumulated depreciation is UGX 1,380,059,505 and net book value is UGX 1,403,429,899 at 30 September 2026. Net book value remains unavailable for 7 records; the figures sum only available amounts.",
+      "text": "Financial Value of assets: The recorded value was UGX 2,856,556,593. Accumulated depreciation is UGX 1,380,059,505 and net book value is UGX 1,403,429,899 at 30 September 2026. Net book value remains unavailable for 7 records; the figures sum only available amounts. Table 10 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 335,
+      "protected": false,
+      "preceding_exact_text": "IdentificationRecordsShare of all recordsTag contains UgIFT or UGFT1,22860.0%Other identifier40.2%No usable tag recorded81339.8%"
+    },
+    {
+      "exact_old_text": "Financial Value of assets: The MoH assets had a recorded value of UGX 1,186,689,609. Accumulated depreciation is UGX 441,202,460 and net book value is UGX 384,551,313 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts.",
+      "text": "Financial Value of assets: The MoH assets had a recorded value of UGX 1,186,689,609. Accumulated depreciation is UGX 441,202,460 and net book value is UGX 384,551,313 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts. Table 11 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 347,
+      "protected": false,
+      "preceding_exact_text": "Marking and Identification: Out of the 260 assets, 32 (12.3%) had usable identifiers while 228 (87.7%) had no usable tag recorded. There were fourteen (5.4%) assets with UgIFT or UGFT in the tag field and eighteen (6.9%) with other identifiers. These tag fields do not confirm physical engraving."
+    },
+    {
+      "exact_old_text": "Financial Value of assets: The recorded value of these computers in OPM was UGX 53,535,300. Accumulated depreciation is UGX 48,181,770 and net book value is UGX 5,353,530 at 30 September 2026.",
+      "text": "Financial Value of assets: The recorded value of these computers in OPM was UGX 53,535,300. Accumulated depreciation is UGX 48,181,770 and net book value is UGX 5,353,530 at 30 September 2026. Table 12 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 358,
+      "protected": false,
+      "preceding_exact_text": "Marking and identification: All the ten laptops (100.0%) had UgIFT or UGFT in the tag field."
+    },
+    {
+      "exact_old_text": "Financial Value of the assets: The recorded value was UGX 5,029,981,561. Accumulated depreciation is UGX 2,092,642,121 and net book value is UGX 1,535,627,440 at 30 September 2026. Net book value remains unavailable for 43 records; the figures sum only available amounts.",
+      "text": "Financial Value of the assets: The recorded value was UGX 5,029,981,561. Accumulated depreciation is UGX 2,092,642,121 and net book value is UGX 1,535,627,440 at 30 September 2026. Net book value remains unavailable for 43 records; the figures sum only available amounts. Table 13 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 367,
+      "protected": false,
+      "preceding_exact_text": "Marking and Identification: The ministry received a total of 2,939 assets, of which 2,897 (98.6%) had usable identifiers, 2,864 (97.4%) with UgIFT or UGFT in the tag field and 33 (1.1%) with another identifier; 42 (1.4%) had no usable tag recorded. These tag fields do not confirm physical engraving."
+    },
+    {
+      "exact_old_text": "Financial Value of the assets: The findings pointed out that the recorded value to be UGX 46,180,000. Accumulated depreciation is UGX 13,260,000 and net book value is UGX 14,860,000 at 30 September 2026. Net book value remains unavailable for 4 records; the figures sum only available amounts.",
+      "text": "Financial Value of the assets: The findings pointed out that the recorded value to be UGX 46,180,000. Accumulated depreciation is UGX 13,260,000 and net book value is UGX 14,860,000 at 30 September 2026. Net book value remains unavailable for 4 records; the figures sum only available amounts. Table 14 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 375,
+      "protected": false,
+      "preceding_exact_text": "Marking and Identification: Eight Lenovo computers (80.0%) had UgIFT or UGFT in the tag field and the two Samsung tablets (20.0%) had no usable tag recorded."
+    },
+    {
+      "exact_old_text": "Financial value of Assets: The recorded value is UGX 46,824,409. Accumulated depreciation is UGX 32,841,273 and net book value is UGX 13,983,136 at 30 September 2026.",
+      "text": "Financial value of Assets: The recorded value is UGX 46,824,409. Accumulated depreciation is UGX 32,841,273 and net book value is UGX 13,983,136 at 30 September 2026. Table 15 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 389,
+      "protected": false,
+      "preceding_exact_text": "One asset (16.7%), the heavy-duty photocopier, had UgIFT or UGFT in the tag field while the other five (83.3%) had no usable tag recorded."
+    },
+    {
+      "exact_old_text": "Financial Value of assets: The MF register states a recorded cost of UGX 30,153,500 for these assets. Accumulated depreciation is UGX 13,066,516 and net book value is UGX 17,086,984 at 30 September 2026.",
+      "text": "Financial Value of assets: The MF register states a recorded cost of UGX 30,153,500 for these assets. Accumulated depreciation is UGX 13,066,516 and net book value is UGX 17,086,984 at 30 September 2026. Table 16 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 400,
+      "protected": false,
+      "preceding_exact_text": "Asset marking and identification: All five assets (laptops, a tablet and a printer) had UgIFT or UGFT in the tag field."
+    },
+    {
+      "exact_old_text": "Financial value of Assets: The assets were worth UGX 388,773,680. Accumulated depreciation is UGX 111,591,545 and net book value is UGX 277,182,135 at 30 September 2026.",
+      "text": "Financial value of Assets: The assets were worth UGX 388,773,680. Accumulated depreciation is UGX 111,591,545 and net book value is UGX 277,182,135 at 30 September 2026. Table 17 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 410,
+      "protected": false,
+      "preceding_exact_text": "Figure 14: Assets verified at OAG"
+    },
+    {
+      "exact_old_text": "Financial Value of assets: The findings pointed out the recorded value to be UGX 343,320,450. Accumulated depreciation is UGX 284,670,827 and net book value is UGX 54,649,623 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts.",
+      "text": "Financial Value of assets: The findings pointed out the recorded value to be UGX 343,320,450. Accumulated depreciation is UGX 284,670,827 and net book value is UGX 54,649,623 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts. Table 18 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 421,
+      "protected": false,
+      "preceding_exact_text": "Asset marking and identification: Out of the thirteen assets, eight (61.5%) had usable identifiers while five (38.5%) had no usable tag recorded. Of the eight identified assets, seven (53.8% of all assets) had UgIFT or UGFT in the tag field while one (7.7%) carried another identifier. These tag-field counts do not confirm physical engraving."
+    },
+    {
+      "exact_old_text": "Financial Value of assets: The findings further indicate the recorded value to be UGX 487,349,999. Accumulated depreciation is UGX 123,840,000 and net book value is UGX 340,559,999 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts.",
+      "text": "Financial Value of assets: The findings further indicate the recorded value to be UGX 487,349,999. Accumulated depreciation is UGX 123,840,000 and net book value is UGX 340,559,999 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts. Table 19 presents the category breakdown.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 432,
+      "protected": false,
+      "preceding_exact_text": "Asset marking and Identification: None of the 27 assets had UgIFT or UGFT in the tag field. Thirteen (48.1%) had other identifiers and fourteen (51.9%) had no usable tag recorded. The motorcycles' registration numbers are distinguished from UgIFT tag text."
+    },
+    {
+      "exact_old_text": "Available recorded value was UGX 1,503,720,926 and available net book value at 30 September 2026 was UGX 826,632,084. Available accumulated depreciation was UGX 553,688,842. Recorded cost is available for 589 of the 602 regional blood-bank records, and net book value is unavailable for thirteen. The available columns cover different populations; the financial reconciliation appendix gives the matched accounting population.",
+      "text": "Available recorded value was UGX 1,503,720,926 and available net book value at 30 September 2026 was UGX 826,632,084. Available accumulated depreciation was UGX 553,688,842. Recorded cost is available for 589 of the 602 regional blood-bank records, and net book value is unavailable for thirteen. The available columns cover different populations; the financial reconciliation appendix gives the matched accounting population. Table 20 presents the blood-bank financial values.",
+      "rationale": "Supply an explicit prose reference to a numbered table that currently has only a caption.",
+      "body_index_at_audit": 445,
+      "protected": false,
+      "preceding_exact_text": "Financial aspects"
+    },
+    {
+      "exact_old_text": "National Environment Management Authority (NEMA) had six ICT items: four computers, a printer and a heavy-duty photocopier.",
+      "text": "National Environment Management Authority (NEMA) had six ICT items: four computers, a printer and a heavy-duty photocopier. Figure 12 presents the asset categories.",
+      "rationale": "Supply an explicit NEMA figure reference.",
+      "body_index_at_audit": 383,
+      "protected": false,
+      "preceding_exact_text": "Asset availability:"
+    },
+    {
+      "exact_old_text": "The financial reporting date is 30 September 2026. Year-to-date depreciation covers 1 July to 30 September 2026. Amounts below are in Uganda shillings, rounded to the nearest shilling after the totals are calculated. Only available amounts are added; blank cells and entries marked Pending calculation are not treated as zero. Each record has one unit, so no further quantity multiplier is applied.",
+      "text": "The financial reporting date is 30 September 2026. Year-to-date depreciation covers 1 July to 30 September 2026. Amounts in Table 36 are in Uganda shillings, rounded to the nearest shilling after the totals are calculated. Only available amounts are added; blank cells and entries marked Pending calculation are not treated as zero. Each record has one unit, so no further quantity multiplier is applied.",
+      "rationale": "Remove a remaining unnumbered positional reference to financial amounts.",
+      "body_index_at_audit": 605,
+      "protected": false,
+      "preceding_exact_text": "Appendix A Financial reconciliation and valuation limitations"
+    },
+    {
+      "exact_old_text": "The cost, depreciation and net book value totals do not all cover the same records. A direct comparison is possible for 180,730 records classified CAPITALIZED or construction in progress (CIP), where all three amounts are available. Their recorded cost of UGX 760,986,784,838 less accumulated depreciation of UGX 165,185,197,307 gives net book value of UGX 595,801,587,531. For this group, net book value is 78.3% of cost. This is the share of recorded cost that has not been depreciated; it does not measure physical condition, service performance or market value.",
+      "text": "The cost, depreciation and net book value totals do not all cover the same records. A direct comparison is possible for 180,730 records classified CAPITALIZED or construction in progress (CIP), where all three amounts are available. Their recorded cost of UGX 760,986,784,838 less accumulated depreciation of UGX 165,185,197,307 gives net book value of UGX 595,801,587,531. For this group, net book value is 78.3% of cost. This is the share of recorded cost that has not been depreciated; it does not measure physical condition, service performance or market value. Table 37 reconciles the available recorded cost to net book value.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 607,
+      "protected": false,
+      "preceding_exact_text": "Financial measureAvailable recordsUnavailable recordsAvailable total UGXRecorded cost227,9381,086996,812,628,890Accumulated depreciation206,01223,012165,185,197,307Year-to-date depreciation206,01223,01210,793,939,755Net book value206,00823,016595,801,587,531"
+    },
+    {
+      "exact_old_text": "Costs for 166,593 items were estimated by comparison with other assets, totalling UGX 821,736,918,304, or 82.44% of available recorded cost. These estimates require supporting valuation evidence. The other available costs also require acquisition or valuation records before they can be accepted as verified amounts. Costs remain missing for a further 1,086 items.",
+      "text": "Costs for 166,593 items were estimated by comparison with other assets, totalling UGX 821,736,918,304, or 82.44% of available recorded cost. These estimates require supporting valuation evidence. The other available costs also require acquisition or valuation records before they can be accepted as verified amounts. Costs remain missing for a further 1,086 items. Table 38 presents the basis of recorded costs.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 612,
+      "protected": false,
+      "preceding_exact_text": "Basis of recorded costRecordsRecorded cost UGXComparable assets within the same government26,922122,474,661,776Comparable assets in other governments139,671699,262,256,528Other available costs61,345175,075,710,586Total available costs227,938996,812,628,890"
+    },
+    {
+      "exact_old_text": "Categories are mutually exclusive; rounded percentages may not total 100.0%.",
+      "text": "Categories are mutually exclusive; rounded percentages may not total 100.0%. Table 39 presents mutually exclusive service-date categories; rounded percentages may not total 100.0%.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 619,
+      "protected": false,
+      "preceding_exact_text": "Service-date entryRecordsShareFull date from 27 June 2017 to 30 September 2026197,72186.3%Full date before 27 June 20173,3451.5%Month and year only2,9871.3%Year only7,7013.4%Year or financial-year period4550.2%Commissioning status or other text16,8157.3%Total asset records229,024100.0%"
+    },
+    {
+      "exact_old_text": "The interview analysis counts each programme-list facility once per topic. Multiple returns for a facility are reconciled before analysis. Answers about another institution, statements that do not answer the question and unclassifiable replies are excluded from the relevant denominator. The Mbirizi school response attributed to Kagganda Health Centre is excluded from health-centre analysis pending correction of the identity. Receiving-facility responses are linked to the appropriate programme entry.",
+      "text": "The interview analysis counts each programme-list facility once per topic. Multiple returns for a facility are reconciled before analysis. Answers about another institution, statements that do not answer the question and unclassifiable replies are excluded from the relevant denominator. The Mbirizi school response attributed to Kagganda Health Centre is excluded from health-centre analysis pending correction of the identity. Receiving-facility responses are linked to the appropriate programme entry. Table 44 gives the interview denominators.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 647,
+      "protected": false,
+      "preceding_exact_text": "Appendix F Facility interview scope and denominators"
+    },
+    {
+      "exact_old_text": "The photographs illustrate facilities, equipment and outstanding works at the time of the visits. They should be read alongside the findings on condition, use and completion. A photograph alone does not establish that equipment was functional or that a facility was ready for handover.",
+      "text": "The photographs illustrate facilities, equipment and outstanding works at the time of the visits. They should be read alongside the findings on condition, use and completion. A photograph alone does not establish that equipment was functional or that a facility was ready for handover. Table 46 provides the photographic schedule.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 654,
+      "protected": false,
+      "preceding_exact_text": "Appendix H Photographic schedule"
+    },
+    {
+      "exact_old_text": "Hospitals on local-government books: 3,067 records. These are included in the report total and shown separately from Health Centres and schools.",
+      "text": "Hospitals on local-government books: 3,067 records. These are included in the report total and shown separately from Health Centres and schools. Table 48 presents the category financial values.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 661,
+      "protected": false,
+      "preceding_exact_text": "Appendix J Additional assets and classification checks"
+    },
+    {
+      "exact_old_text": "Other local-government or unassigned locations: 4 records. These are included in the report total and shown separately from Health Centres and schools.",
+      "text": "Other local-government or unassigned locations: 4 records. These are included in the report total and shown separately from Health Centres and schools. Table 49 presents the category financial values.",
+      "rationale": "Add explicit reference after assigning the proposed new table number.",
+      "body_index_at_audit": 664,
+      "protected": false,
+      "preceding_exact_text": "Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable."
+    },
+    {
+      "exact_old_text": "The cases below illustrate service-date problems and the decisions required. They are examples rather than a complete list of all date exceptions. Asset references and facility names are provided to support follow-up.",
+      "text": "The cases in Table 40 illustrate service-date problems and the decisions required. They are examples rather than a complete list of all date exceptions. Asset references and facility names are provided to support follow-up.",
+      "rationale": "Reference the service-date exception table after assigning its proposed number.",
+      "body_index_at_audit": 620,
+      "protected": false,
+      "preceding_exact_text": "Categories are mutually exclusive; rounded percentages may not total 100.0%."
+    },
+    {
+      "exact_old_text": "The definitions below explain how quantities, condition and financial values are presented. Unresolved receipt, ownership and classification matters are included in the relevant schedules for follow-up.",
+      "text": "The definitions in Table 41 explain how quantities, condition and financial values are presented. Unresolved receipt, ownership and classification matters are included in the relevant schedules for follow-up.",
+      "rationale": "Reference the definitions table after assigning its proposed number.",
+      "body_index_at_audit": 631,
+      "protected": false,
+      "preceding_exact_text": "The condition descriptions in section 2.5 distinguish physically faulty assets from usable items in store or awaiting installation. The quantitative tables use the current register codes: 215,504 assets marked Functional and in use, and 13,520 marked Faulty and not in use. All entries marked not in use carry the Faulty code in these totals, including usable stored or uninstalled items; the 13,520 therefore does not represent a count of physically broken assets."
+    },
+    {
+      "exact_old_text": "The 39 entries below explain gaps or differences between the programme list and the available asset returns. Reported absence is not an independent finding that a facility does not exist. A receiving facility already on the list is counted once.",
+      "text": "The 39 entries in Table 42 explain gaps or differences between the programme list and the available asset returns. Reported absence is not an independent finding that a facility does not exist. A receiving facility already on the list is counted once.",
+      "rationale": "Reference the exception roster after assigning its proposed number.",
+      "body_index_at_audit": 640,
+      "protected": false,
+      "preceding_exact_text": "Appendix D Programme list exception roster"
+    },
+    {
+      "exact_old_text": "This schedule lists the 70 facilities with documented incomplete works and the 13 additional facilities awaiting handover or commissioning. It is a minimum list of documented cases, not a certification of the remaining facilities. A facility may operate while a block or ancillary structure remains unfinished.",
+      "text": "Table 43 lists the 70 facilities with documented incomplete works and the 13 additional facilities awaiting handover or commissioning. It is a minimum list of documented cases, not a certification of the remaining facilities. A facility may operate while a block or ancillary structure remains unfinished.",
+      "rationale": "Reference the outstanding-works schedule after assigning its proposed number.",
+      "body_index_at_audit": 643,
+      "protected": false,
+      "preceding_exact_text": "Appendix E Documented outstanding works and handover"
+    },
+    {
+      "exact_old_text": "The cases below require delivery, custody or condition checks. They do not provide a national total of losses or disposals. Where a report concerns a batch of equipment, the affected items still need to be identified.",
+      "text": "The cases in Table 45 require delivery, custody or condition checks. They do not provide a national total of losses or disposals. Where a report concerns a batch of equipment, the affected items still need to be identified.",
+      "rationale": "Reference the reconciliation example table after assigning its proposed number.",
+      "body_index_at_audit": 651,
+      "protected": false,
+      "preceding_exact_text": "Appendix G Asset reconciliation examples"
+    },
+    {
+      "exact_old_text": "Eighteen entries are classified as land, including four at health centres. Ownership, area, tenure and valuation require supporting documents. The table lists these entries for follow-up by the responsible institutions.",
+      "text": "Eighteen entries are classified as land, including four at health centres. Ownership, area, tenure and valuation require supporting documents. Table 47 lists these entries for follow-up by the responsible institutions.",
+      "rationale": "Reference the land schedule after assigning its proposed number.",
+      "body_index_at_audit": 657,
+      "protected": false,
+      "preceding_exact_text": "Appendix I Land records and ownership evidence"
+    },
+    {
+      "exact_old_text": "The following tables present financial values by asset type for each ministry, regional blood bank, Health Centres and schools. They separate laptops, printers, furniture, medical equipment and other items while retaining the full institution totals. Recorded costs, accumulated depreciation and net book values agree with the broader financial analysis in the report.",
+      "text": "Tables 50 to 67 present financial values by asset type for each ministry, regional blood bank, Health Centres and schools. They separate laptops, printers, furniture, medical equipment and other items while retaining the full institution totals. Recorded costs, accumulated depreciation and net book values agree with the broader financial analysis in the report.",
+      "rationale": "Reference all eighteen asset-type financial tables by their proposed number range.",
+      "body_index_at_audit": 669,
+      "protected": false,
+      "preceding_exact_text": "Appendix K Financial analysis by asset type"
+    },
+    {
+      "exact_old_text": "The table below summarises the issues raised, the corresponding findings and any further action required.",
+      "text": "Table 68 summarises the issues raised, the corresponding findings and any further action required.",
+      "rationale": "Reference the restored reviewer response table after assigning its proposed number.",
+      "body_index_at_audit": 727,
+      "protected": false,
+      "preceding_exact_text": "Appendix L Responses to reviewer comments"
+    },
+    {
+      "exact_old_text": "Financial value of assets: recorded costs total UGX 32,054,743,836 across 16,651 of 16,663 records. Accumulated depreciation totals UGX 19,787,511,232 and net book value totals UGX 10,265,924,979 at 30 September 2026. Net book value remains unavailable for 96 records. The table below gives the category breakdown and identifies any unavailable amounts.",
+      "text": "Financial value of assets: recorded costs total UGX 32,054,743,836 across 16,651 of 16,663 records. Accumulated depreciation totals UGX 19,787,511,232 and net book value totals UGX 10,265,924,979 at 30 September 2026. Net book value remains unavailable for 96 records. Table 2 also identifies unavailable amounts.",
+      "rationale": "Metric-reconciliation reference correction only: Table2 flags available-only amounts and MDA NBV coverage; no aggregate category table follows this paragraph.",
+      "body_index_at_audit": 290,
+      "protected": true
+    }
+  ],
+  "table_caption_insertions_by_exact_table_text": {
+    "GapResponsible officersActionEvidence of completionPowerLG engineers and facility managersAssess electrical loads and complete safe grid or suitable alternative supply before testing and issuing idle equipment.Connection and electrical test recordsStaffingDistrict service authorities and sector ministriesMatch staffing needs to operating rooms and equipment; deploy qualified staff through approved staffing and budget processes.Approved deployment and duty rostersSpaceLG engineers and sector departmentsInspect room suitability, identify overcrowded services and sequence building completion or adaptations around service needs.Room allocation and completion recordsSecurityAccounting Officers and facility governing bodiesPrioritise vulnerable stores and ICT rooms; provide secure storage, access controls and risk-based fencing.Security inspection and custodian logsMaintenanceFacility managers and district technical teamsSet funded maintenance schedules, record faults and escalate major repairs to the responsible workshop or supplier.Fault register and closed repair ordersStaff housingLG planners, engineers and sector departmentsIdentify housing constraints affecting attendance; complete contracted quarters and plan additional accommodation where justified.Occupancy and outstanding-work schedulesWaterDistrict water officers and facility managersRestore reliable water and test storage, supply and sanitation connections before putting dependent equipment into use.Water availability and system test recordsTrainingSector technical teams and suppliersDemonstrate operation, safety and basic care to named users; confirm competence and provide a support contact.Training attendance and competency sign-offWorksAccounting Officers, engineers and contractorsAgree site-specific defects and completion lists, milestones and handover requirements; verify each closure on site.Inspection certificates and signed handoverInstallation and deliveryProcurement units, suppliers and facility managersReconcile delivery notes, obtain missing parts, install equipment in ready rooms and complete acceptance tests.Delivery reconciliation and acceptance tests": {
+      "caption": "Table 35: Actions to address the reported service gaps",
+      "number": 35,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 601,
+      "headers": [
+        "Gap",
+        "Responsible officers",
+        "Action",
+        "Evidence of completion"
+      ],
+      "prior_paragraph_exact_text": "5.1 Actions to address the reported service gaps"
+    },
+    "Financial measureAvailable recordsUnavailable recordsAvailable total UGXRecorded cost227,9381,086996,812,628,890Accumulated depreciation206,01223,012165,185,197,307Year-to-date depreciation206,01223,01210,793,939,755Net book value206,00823,016595,801,587,531": {
+      "caption": "Table 36: Available financial amounts and accounting coverage",
+      "number": 36,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 606,
+      "headers": [
+        "Financial measure",
+        "Available records",
+        "Unavailable records",
+        "Available total UGX"
+      ],
+      "prior_paragraph_exact_text": "The financial reporting date is 30 September 2026. Year-to-date depreciation covers 1 July to 30 September 2026. Amounts below are in Uganda shillings, rounded to the nearest shilling after the totals are calculated. Only available amounts are added; blank cells and entries marked Pending calculation are not treated as zero. Each record has one unit, so no further quantity multiplier is applied."
+    },
+    "Reconciliation of available amountsUGXAvailable recorded cost, all accounting treatments996,812,628,890Less known costs on records whose NBV remains unavailable190,742,908,682Less positive recorded costs on expensed or non-recognized treatments45,082,935,370Recorded cost of the assets with complete accounting information760,986,784,838Less accumulated depreciation of those assets165,185,197,307Net book value of those assets595,801,587,531": {
+      "caption": "Table 37: Reconciliation of recorded cost and net book value",
+      "number": 37,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 608,
+      "headers": [
+        "Reconciliation of available amounts",
+        "UGX"
+      ],
+      "prior_paragraph_exact_text": "The cost, depreciation and net book value totals do not all cover the same records. A direct comparison is possible for 180,730 records classified CAPITALIZED or construction in progress (CIP), where all three amounts are available. Their recorded cost of UGX 760,986,784,838 less accumulated depreciation of UGX 165,185,197,307 gives net book value of UGX 595,801,587,531. For this group, net book value is 78.3% of cost. This is the share of recorded cost that has not been depreciated; it does not measure physical condition, service performance or market value."
+    },
+    "Basis of recorded costRecordsRecorded cost UGXComparable assets within the same government26,922122,474,661,776Comparable assets in other governments139,671699,262,256,528Other available costs61,345175,075,710,586Total available costs227,938996,812,628,890": {
+      "caption": "Table 38: Basis of recorded cost estimates",
+      "number": 38,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 611,
+      "headers": [
+        "Basis of recorded cost",
+        "Records",
+        "Recorded cost UGX"
+      ],
+      "prior_paragraph_exact_text": "Extent of existing cost estimates"
+    },
+    "Service-date entryRecordsShareFull date from 27 June 2017 to 30 September 2026197,72186.3%Full date before 27 June 20173,3451.5%Month and year only2,9871.3%Year only7,7013.4%Year or financial-year period4550.2%Commissioning status or other text16,8157.3%Total asset records229,024100.0%": {
+      "caption": "Table 39: Service-date entries across all assets",
+      "number": 39,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 618,
+      "headers": [
+        "Service-date entry",
+        "Records",
+        "Share"
+      ],
+      "prior_paragraph_exact_text": "Service-date entries across all assets"
+    },
+    "Asset referenceLocation and service dateFinding and actionUGIFT-217326UNSPECIFIED2009-08-20Source records purchase timing but leaves service date blank. Purchase does not establish commissioning.UGIFT-010050Nkokonjeru Health Centre III2012-03-01Service field absent or blank. No supported replacement date established.UGIFT-010342Bukatube Health Centre III2016-05-01Source records purchase timing but leaves service date blank. Purchase does not establish commissioning.UGIFT-044388Maaji Seed Secondary School2014-06-24Source records purchase timing but leaves service date blank. Purchase does not establish commissioning.UGIFT-050677Labongo Amida Seed Secondary School2014-01-01Service field absent or blank. No supported replacement date established.UGIFT-114049Sikuda Seed Secondary School2012-07-13Source states 13/7/2012 and Sikuda Primary School. Confirm legacy status, funding and school attribution.UGIFT-118560Kyamwinula Health Centre III2012-03-01Service field absent or blank. No supported replacement date established.UGIFT-179828Makokoto Seed Secondary School2014-01-01Service field absent or blank. No supported replacement date established.UGIFT-196249Nyamarwa Seed Secondary School2014-01-01Service field absent or blank. No supported replacement date established.UGIFT-197564Namungo Seed Secondary School2014-01-01Service field absent or blank. No supported replacement date established.": {
+      "caption": "Table 40: Service-date exception examples and supporting evidence",
+      "number": 40,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 621,
+      "headers": [
+        "Asset reference",
+        "Location and service date",
+        "Finding and action"
+      ],
+      "prior_paragraph_exact_text": "The cases below illustrate service-date problems and the decisions required. They are examples rather than a complete list of all date exceptions. Asset references and facility names are provided to support follow-up."
+    },
+    "TermMeaning in this reportAsset quantitiesEach entry represents one recorded unit. Totals include capitalized, expensed and unresolved entries; receipt and ownership exceptions require confirmation.Institution and locationAssets are grouped by the institution and beneficiary to which they are attributed. Transfers, substitutions and uncertain programme assignments require reconciliation.Asset categoriesThe categories describe the existing accounting classification. Known errors require correction before the categories can be treated as confirmed physical inventories.Recorded costThe available cost in Uganda shillings. Some amounts are estimates. A missing amount remains unresolved and is distinguished from a recorded zero.Service and purchase datesThe service date is when the asset became available for use. The purchase date is a separate event and does not establish the service date.Useful life and salvage valueUseful life is the period used for depreciation. Salvage value is the amount expected to remain at the end of that period. Neither determines when an asset physically fails.DepreciationAccumulated depreciation is the cost allocated over the asset’s accounting life to date. Year-to-date depreciation covers 1 July to 30 September 2026. Pending calculations remain unavailable.Net book valueRecorded cost less accumulated depreciation for assets recognized for accounting purposes. Comparisons use the same records with all required amounts available.Recoverable amountAn independently supported recoverable amount must be distinguished from a value based on net book value. The latter does not constitute an independent impairment valuation.Asset identificationAsset references, programme markings, serial numbers and vehicle registrations help establish identity. Shared identifiers and missing markings require physical and custody checks.Condition and useFunctional and Faulty are the two reported condition classes. Reasons for non-use are examined separately to determine whether installation, repair, replacement or disposal is appropriate.Complete accounting informationAssets classified CAPITALIZED or construction in progress, with cost, accumulated depreciation and net book value all available. These provide the basis for direct financial reconciliation.": {
+      "caption": "Table 41: Definitions used in the analysis",
+      "number": 41,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 632,
+      "headers": [
+        "Term",
+        "Meaning in this report"
+      ],
+      "prior_paragraph_exact_text": "The definitions below explain how quantities, condition and financial values are presented. Unresolved receipt, ownership and classification matters are included in the relevant schedules for follow-up."
+    },
+    "IDProgramme-list entry and LGOutcomeH205Olok HC IIPaderReported absent or not constructedH190Alik HCIILiraReported absent or not constructedH197Acimi HC IIOyamReported absent or not constructedH195Acokara HCIIOyamReported absent or not constructedH200Ariba HC IIOyamReported absent or not constructedH070Busia Eastern DivisionBusia MCReported absent or not constructedS010Eastern DivisionTororo MCReported absent or not constructedS012Central DivisionJinja CityReported absent or not constructedS216Kishangara seed schoolIbandaReported absent or not constructedH010Butoloogo HC IIKasandaReported absent or not constructedH193Alira HCIIOyamOutside UgIFT scopeH086Buyinda HC IIKaliroOutside UgIFT scopeS237Kiziranfumbi Seed SchoolKikuubeOutside UgIFT scopeH149Pandwong HC IIKitgum MCNo UgIFT assets reportedS214Bumbaire Seed SchoolBushenyiNo UgIFT assets reportedS215KyamuhungaBushenyiNo UgIFT assets reportedS221KashensheroMitoomaNo UgIFT assets reportedH282Rwamujojo HC IISheema MCNo UgIFT assets reportedH231AlangiZomboAssets relocatedH233Ther-uru HC IIZomboAssets relocatedS208AbangaZomboAssets relocatedH213Loinya HC IIMarachaAlready represented elsewhereH054Bussi HC IIWakisoAlready represented elsewhereH044Butalangu HC IINakasekeFollow-up without on-site returnH043Semuto HC IINakasekeFollow-up without on-site returnS087KikamuloNakasekeFollow-up without on-site returnS088Nakaseke Seed SchoolNakasekeFollow-up without on-site returnH045Kiralamba HC IINakasongolaFollow-up without on-site returnS089NakitomaNakasongolaFollow-up without on-site returnH370Kyondo HC IIBundibugyoFollow-up without on-site returnH373Kabingo HCIIKaseseFollow-up without on-site returnH048Kyera HCIISembabuleFollow-up without on-site returnH047Ntete HCIISembabuleFollow-up without on-site returnH031Kyabakuza HCIIMasakaFollow-up without on-site returnS059KichwambaKabaroleFollow-up without on-site returnS058Karago TCFort-Portal CityFollow-up without on-site returnS004NgomaNakasekeFollow-up without on-site returnS080Lwengo Seed SchoolLwengoFollow-up without on-site returnH227Lodonga TCYumbeFollow-up without on-site return": {
+      "caption": "Table 42: Programme-list exception roster",
+      "number": 42,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 641,
+      "headers": [
+        "ID",
+        "Programme-list entry and LG",
+        "Outcome"
+      ],
+      "prior_paragraph_exact_text": "The 39 entries below explain gaps or differences between the programme list and the available asset returns. Reported absence is not an independent finding that a facility does not exist. A receiving facility already on the list is counted once."
+    },
+    "IDFacility and LGOutstanding matterH145Omot Health Centre IIIAgagoIncomplete worksH112Bukibologoto Health Centre IIIBulambuliIncomplete worksH181Adagmon Health Centre IIIDokoloIncomplete worksH008Mamba Health Centre IIIGombaIncomplete ancillary worksH009Ngomamene Health Centre IIIGombaIncomplete ancillary worksH312Maregamo Health Centre IIIKisoroIncomplete worksH152Moyok Health Centre IIIKweenHandover or commissioningH155Kaptum Health Centre IIIKweenIncomplete worksH156Benet Health Centre IIIKweenIncomplete worksH356Mutungo Health Centre IIIMakindye-Ssabagabo MCIncomplete ancillary worksH366Lama Health Centre IIIMoyoIncomplete worksH355Matugga Health Centre IIINansana MCIncomplete ancillary worksH367Tekulu Health Centre IIIOmoroIncomplete worksH368Abwoch Health Centre IIIOmoroIncomplete worksH228Amanyiri Health Centre IIIYumbeHandover or commissioningS141Alerek Seed Secondary SchoolAbimHandover or commissioningS021Kotomor Seed Secondary SchoolAgagoIncomplete worksS022Lamiyo Seed Secondary SchoolAgagoIncomplete worksS027Akwon Seed Secondary SchoolAmolatarIncomplete worksS145Looro Seed Secondary SchoolAmudatIncomplete worksS157Asamuk Seed Secondary SchoolAmuriaIncomplete worksS024Amuru Town Seed Secondary SchoolAmuruHandover or commissioningS030St Peters Aroi Seed Secondary SchoolAruaIncomplete worksS005Kakule Seed Secondary SchoolBudakaHandover or commissioningS007Bushiribo Seed Secondary SchoolBududaIncomplete worksS011Mpiita Seed Secondary SchoolBugweriIncomplete worksS014Senendet Seed Secondary SchoolBukwoIncomplete worksS046Kihungya Seed Secondary SchoolBuliisaIncomplete worksS054Burondo Seed Secondary SchoolBundibugyoIncomplete worksS055Kabango Seed Secondary SchoolBundibugyoIncomplete worksS250Kisuba Seed Secondary SchoolBundibugyoIncomplete worksS056Katugunda Seed Secondary SchoolBunyangabuIncomplete worksS057Nsuura Seed Secondary SchoolBunyangabuIncomplete worksS096Sikuda Seed Secondary SchoolBusiaHandover or commissioningS009Muhula Seed Secondary SchoolButalejaIncomplete worksS025Patiko Seed Secondary SchoolGuluIncomplete worksS230Kidukuru Seed Secondary SchoolHoimaHandover or commissioningS019Sidok Seed Secondary SchoolKaabongIncomplete worksS159Aperikira Seed Secondary SchoolKaberamaidoIncomplete ancillary worksS047Burora Seed Secondary SchoolKagadiHandover or commissioningS048King Solomon Seed Secondary SchoolKagadiIncomplete worksS049Kitegwa Community Seed Secondary SchoolKagadiIncomplete worksS232St Catherine Kicucura Seed Secondary SchoolKagadiIncomplete worksS060Bwesumbu Seed Secondary SchoolKaseseIncomplete worksS001Lwamata Town Council Seed Secondary SchoolKibogaIncomplete worksS050Kyangwali Seed Secondary SchoolKikuubeHandover or commissioningS040Lake Mburo Seed Secondary SchoolKiruhuraIncomplete worksS051Kigumba Town Seed Secondary SchoolKiryandongoIncomplete worksS254Kanara Seed Secondary SchoolKitagwendaHandover or commissioningS149Rengen Seed Secondary SchoolKotidoIncomplete worksS164Kumi Seed Secondary SchoolKumiIncomplete ancillary worksS131Kaptum Seed Secondary SchoolKweenIncomplete worksS132Kitawoi Seed Secondary SchoolKweenIncomplete worksS133Moyok Seed Secondary SchoolKweenIncomplete worksS075Ntwetwe Seed Secondary SchoolKyankwanziIncomplete worksS256Rwentuha Seed Secondary SchoolKyegegwaIncomplete worksS061Kyarusozi Seed Secondary SchoolKyenjojoIncomplete worksS257Kigaraale Seed Secondary SchoolKyenjojoIncomplete worksS258Kyembogo Seed Secondary SchoolKyenjojoIncomplete worksS026Padibe Seed Secondary SchoolLamwoIncomplete worksS015Butta Seed Secondary SchoolManafwaIncomplete worksS016Sisuni Seed Secondary SchoolManafwaIncomplete worksS135Khabutoola Seed Secondary SchoolManafwaIncomplete worksS136Sibanga Seed Secondary SchoolManafwaHandover or commissioningS151Rupa Seed Secondary SchoolMorotoIncomplete ancillary worksS200Dufile Seed Secondary SchoolMoyoIncomplete worksS085Kigando Seed Secondary SchoolMubendeIncomplete worksS020Moruita Seed Secondary SchoolNakapiripiritIncomplete worksS153Nakapiripirit Seed Secondary SchoolNakapiripiritIncomplete worksS018Mukuto Seed Secondary SchoolNamisindwaIncomplete worksS154Iriiri Seed Secondary SchoolNapakHandover or commissioningS033Mamba Seed Secondary SchoolNebbiIncomplete worksS034Ndhew Seed Secondary SchoolNebbiIncomplete worksS201Atego Seed Secondary SchoolNebbiIncomplete worksS062Butungama Seed Secondary SchoolNtorokoIncomplete worksS063Kibuuku Seed Secondary SchoolNtorokoIncomplete ancillary worksS035Got Apwoyo Seed Secondary SchoolNwoyaIncomplete worksS028Okum Seed Secondary SchoolOtukeIncomplete worksS102Olok Seed Secondary SchoolPallisaIncomplete ancillary worksS170Kamuda Seed Secondary SchoolSorotiIncomplete worksS105Malaba Seed Secondary SchoolTororoHandover or commissioningS209Atyak Seed Secondary SchoolZomboIncomplete worksS210Kango Seed Secondary SchoolZomboIncomplete ancillary works": {
+      "caption": "Table 43: Documented outstanding works and handover",
+      "number": 43,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 644,
+      "headers": [
+        "ID",
+        "Facility and LG",
+        "Outstanding matter"
+      ],
+      "prior_paragraph_exact_text": "This schedule lists the 70 facilities with documented incomplete works and the 13 additional facilities awaiting handover or commissioning. It is a minimum list of documented cases, not a certification of the remaining facilities. A facility may operate while a block or ancillary structure remains unfinished."
+    },
+    "MeasureHealth centresSchoolsTotalService benefits and challenges284193477Maintenance arrangements278191469Maintenance or condition-check frequency294200494Classified functionality or breakdown records282181463Classified records of assets received281197478": {
+      "caption": "Table 44: Facility interview scope and denominators",
+      "number": 44,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 648,
+      "headers": [
+        "Measure",
+        "Health centres",
+        "Schools",
+        "Total"
+      ],
+      "prior_paragraph_exact_text": "The interview analysis counts each programme-list facility once per topic. Multiple returns for a facility are reconciled before analysis. Answers about another institution, statements that do not answer the question and unclassifiable replies are excluded from the relevant denominator. The Mbirizi school response attributed to Kagganda Health Centre is excluded from health-centre analysis pending correction of the identity. Receiving-facility responses are linked to the appropriate programme entry."
+    },
+    "Facility and itemAsset referenceFinding and actionKijuna Health Centre IIIOxygen Therapy Apparatus, Mininum 45L cylinderUGIFT-003939Oxygen therapy apparatus lacks regulators/accessories. This concerns missing parts, not the whole asset.Nyanja Health Centre IIIB.P. Machine (Aneroid wall mounted)UGIFT-012842Two machines, UGIFT-012842 and UGIFT-012843, were reported beyond repair. Disposal approval remains unconfirmed.Paloga Seed Secondary SchoolDesktop ComputerUGIFT-052080Two monitors were reported stolen, while the others remained in use. Confirm which items were affected.Ogur Seed Secondary SchoolDesksUGIFT-057485Furniture in locked rooms could not be verified because keys were unavailable. Confirm its location and condition.Buwembe Health Centre IIIIncubatorUGIFT-114904Incubator reported not received. Check delivery records before concluding that it was lost.Bukimanayi Health Centre IIIWheel ChairUGIFT-115669Wheelchair not seen; possible redistribution unconfirmed. Establish its location.Ikumbya Seed Secondary SchoolDesktop ComputerUGIFT-140448Reported quantities: 29 received, 12 verified, 10 stolen and two faulty. Reconcile receipt, transfer and loss records.Kitojo Health Centre IIIMicroscope BinocularUGIFT-150498Microscope reportedly not received although status says Functional. Resolve the contradiction.Bukiiro Seed Secondary SchoolSystem UnitUGIFT-159973Accounts of 16 system units conflict: described as both present and functional and as stolen. Confirm their status.Rubingo Health Centre IIIInstrument set, ENT Basic for HCIIIUGIFT-188911ENT instrument set reportedly not received. Reconcile supplier and facility receipt records.": {
+      "caption": "Table 45: Asset reconciliation examples",
+      "number": 45,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 652,
+      "headers": [
+        "Facility and item",
+        "Asset reference",
+        "Finding and action"
+      ],
+      "prior_paragraph_exact_text": "The cases below require delivery, custody or condition checks. They do not provide a national total of losses or disposals. Where a report concerns a batch of equipment, the affected items still need to be identified."
+    },
+    "FacilityPhotographic subjectMajanji Health Centre IIIDelivery bed with a torn mattress cover at a health centre, Busia District (Bukedi).Lungulu Seed Secondary SchoolBoxed computers and related equipment in a seed school store, Nwoya District (Acholi).Malaba Seed SchoolUgIFT identification on a desk at a seed school, Tororo District (Bukedi).Got Apwoyo Seed Secondary SchoolUnfinished school block at Got Apwoyo Seed Secondary School, Nwoya District (Acholi).Lwamata Town Council Seed Secondary SchoolBuilding works at a seed secondary school, Kiboga District (Buganda).Butungama Seed Secondary SchoolSchool block awaiting completion at Butungama Seed Secondary School, Ntoroko District (Tooro).Bukibologoto Health Centre IICracked health centre block above collapsed ground, Bulambuli District (Bugisu).Bundege Health Centre IIIStained and peeling ceiling at a health centre, Sironko District (Bugisu).Napak Seed Secondary SchoolStacked desks, chairs and stools at a seed secondary school, Napak District (Karamoja).Butungama Seed Secondary SchoolLaboratory stools and other school furniture in storage, Ntoroko District (Tooro).Kibiri Health Centre IIIBoxed pulse oximeters at a health centre, Makindye-Ssabagabo Municipal Council (Buganda).Ndhew Seed Secondary SchoolBuilding works and construction materials at Ndhew Seed Secondary School, Nebbi District (West Nile).Simu Pondo Health Centre IIIUnfinished laboratory building at a health centre, Sironko District (Bugisu).Namboko Seed Secondary SchoolBroken desk frame at a seed secondary school, Namisindwa District (Bugisu).Sibanga Seed SchoolBooks displayed on library shelves at Sibanga Seed School, Manafwa District (Bugisu).Kamuli HC IIIMaternity block entrance and access ramp at Kamuli HC III, Tororo District (Bukedi).Kyabasara Health Centre IIIHospital beds and screens stacked in storage at a health centre, Kagadi District (Bunyoro).Kihungya Seed Secondary SchoolBiology laboratory under construction at a seed secondary school, Buliisa District (Bunyoro).Older Butiaba Health Centre III facilityFlood-affected older health facility at Butiaba, Buliisa District (Bunyoro).Kaptum Seed Secondary SchoolEmpty computer laboratory at a seed secondary school, Kween District (Sebei).Kalemungole HC IIIProgramme engraving on a weighing scale at Kalemungole HC III, Moroto District (Karamoja).Kalemungole HC IIIWheelchair with programme marking at Kalemungole HC III, Moroto District (Karamoja).Sidok Seed Secondary SchoolUnfinished classroom block at Sidok Seed Secondary School, Kaabong District (Karamoja).Sidok Seed Secondary SchoolLatrine block under construction at Sidok Seed Secondary School, Kaabong District (Karamoja).Kihungya Seed Secondary SchoolUnfinished laboratory interior at Kihungya Seed Secondary School, Buliisa District (Bunyoro).Kihungya Seed Secondary SchoolLibrary interior under construction at Kihungya Seed Secondary School, Buliisa District (Bunyoro).King Solomon Seed Secondary SchoolSchool engraving on wooden furniture at King Solomon Seed Secondary School, Kagadi District (Bunyoro).King Solomon Seed Secondary SchoolBoxed projector and other equipment at King Solomon Seed Secondary School, Kagadi District (Bunyoro).Budde Seed Secondary SchoolProgramme and school engraving on a chair at Budde Seed Secondary School, Butambala District (Buganda).Sisiyi Seed Secondary SchoolICT laboratory block and entrance ramp at Sisiyi Seed Secondary School, Bulambuli District (Bugisu).Majanji HC IIIPedal suction unit in packaging at Majanji HC III, Busia District (Bukedi).Bumufuni Seed Secondary SchoolComputer sets stacked in a store at Bumufuni Seed Secondary School, Bulambuli District (Bugisu).Kitawoi Seed Secondary SchoolICT laboratory interior under construction at Kitawoi Seed Secondary School, Kween District (Sebei).Moyok HC IIIInstitutional engraving on equipment at Moyok HC III, Kween District (Sebei).Kibiri HC IIIHealth centre building at Kibiri HC III, Makindye-Ssabagabo Municipal Council (Buganda).Gyagenda Memorial Seed Secondary SchoolClassroom furnished with desks and a whiteboard at Gyagenda Memorial Seed Secondary School, Kalangala District (Buganda).Kihungya Seed Secondary SchoolClassroom block with earthworks in the foreground at Kihungya Seed Secondary School, Buliisa District (Bunyoro).Kihuukya HC IIIHealth centre buildings and covered walkway at Kihuukya HC III, Hoima City (Bunyoro).Kihuukya HC IIIBinocular microscope at Kihuukya HC III, Hoima City (Bunyoro).King Solomon Seed Secondary SchoolLaboratory benches with cupboard doors detached at King Solomon Seed Secondary School, Kagadi District (Bunyoro).Iriiri Seed Secondary SchoolComputer and library block interior with furniture and stored items at Iriiri Seed Secondary School, Napak District (Karamoja).Kamoru HC IIIMicroscope bearing local facility identification at Kamoru HC III, Kotido District (Karamoja).Aperikira Seed Secondary SchoolEngraving reading APESSS MOES/UGIFT/KABE/SPLRS/2023-24/001 on a desk at Aperikira Seed Secondary School, Kaberamaido District (Teso)Arua Regional Blood BankCompleted blood bank building at Arua Regional Blood Bank, Arua City (West Nile)Arua Regional Blood BankMarkings PEP II/UBTS/COMP/11/016 and UBTS/UGIFT/ARBB/UPS/001 on uninterruptible power supplies at Arua Regional Blood Bank, Arua City (West Nile)Hoima Regional Blood BankDonor couches in the donor room at Hoima Regional Blood Bank, Hoima City (Bunyoro)Hoima Regional Blood BankBenchtop centrifuge at Hoima Regional Blood Bank, Hoima City (Bunyoro)Arua Regional Blood BankBlood bank refrigerator at Arua Regional Blood Bank, Arua City (West Nile)Arua Regional Blood BankPlatelet agitator at Arua Regional Blood Bank, Arua City (West Nile)Benet Health Centre IIIIncomplete staff quarters at Benet Health Centre III, Kween District. Field visit 27 August 2026.Benet Health Centre IIIInterior awaiting completion at Benet Health Centre III, Kween District. Field visit 27 August 2026.Benet Health Centre IIIA further unfinished room at Benet Health Centre III, Kween District. Field visit 27 August 2026.Hoima Regional Blood BankFreezer at Hoima Regional Blood Bank.Soroti Regional Blood BankRefrigerators at Soroti Regional Blood Bank.": {
+      "caption": "Table 46: Photographic schedule",
+      "number": 46,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 655,
+      "headers": [
+        "Facility",
+        "Photographic subject"
+      ],
+      "prior_paragraph_exact_text": "The photographs illustrate facilities, equipment and outstanding works at the time of the visits. They should be read alongside the findings on condition, use and completion. A photograph alone does not establish that equipment was functional or that a facility was ready for handover."
+    },
+    "Asset referenceLocationItemCost UGX mAvailable evidenceUGIFT-119332Kyamwinula Health Centre IIILand20.000Functional.UGIFT-128460Sop Sop Health Centre III70X300M20.000Functional. Good and In Use.UGIFT-177218Luwube Muslim Seed Secondary SchoolLandUnavailableFunctional.UGIFT-183077Kigorobya Seed Secondary SchoolLand0.912Functional. Only a partial service date is available; the exact date requires confirmation.UGIFT-183078Kigorobya Seed Secondary SchoolLand0.912Functional. Only a partial service date is available; the exact date requires confirmation.UGIFT-183079Kigorobya Seed Secondary SchoolLand0.912Functional. Only a partial service date is available; the exact date requires confirmation.UGIFT-183080Kigorobya Seed Secondary SchoolLand0.912Functional. Only a partial service date is available; the exact date requires confirmation.UGIFT-183081Kigorobya Seed Secondary SchoolLand0.912Functional. Only a partial service date is available; the exact date requires confirmation.UGIFT-183082Kigorobya Seed Secondary SchoolLand0.912Functional. Only a partial service date is available; the exact date requires confirmation.UGIFT-183083Kigorobya Seed Secondary SchoolLand0.912Functional. Only a partial service date is available; the exact date requires confirmation.UGIFT-183084Kigorobya Seed Secondary SchoolLand0.912Functional. Only a partial service date is available; the exact date requires confirmation.UGIFT-183085Kigorobya Seed Secondary SchoolLand0.912Functional. Only a partial service date is available; the exact date requires confirmation.UGIFT-183086Kigorobya Seed Secondary SchoolLand0.912Functional. Only a partial service date is available; the exact date requires confirmation.UGIFT-183087Kigorobya Seed Secondary SchoolLand0.912Functional. Only a partial service date is available; the exact date requires confirmation.M161436Kabweri Seed Secondary SchoolSchool Land50.000Functional.M161488Nalubembe Health Centre IIIHospital Land15.000Functional.M183485Kasasira Seed Secondary SchoolSchool Land50.000Functional.M183544Kabweri Health Centre IIIHospital Land15.000Functional.": {
+      "caption": "Table 47: Land records and ownership evidence",
+      "number": 47,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 658,
+      "headers": [
+        "Asset reference",
+        "Location",
+        "Item",
+        "Cost UGX m",
+        "Available evidence"
+      ],
+      "prior_paragraph_exact_text": "Eighteen entries are classified as land, including four at health centres. Ownership, area, tenure and valuation require supporting documents. The table lists these entries for follow-up by the responsible institutions."
+    },
+    "Asset category and coverageRecorded costAccumulated depreciationNet book valueNBV / costMedical, laboratory and research appliances2,843 records; NBV 2,632/2,8431,436.617738.099*546.884*42.6%Outside fixed-asset classification145 records; NBV 145/1451.0000.0000.000n/aFurniture and fittings68 records; NBV 10/6852.4273.696*7.832*67.9%Buildings and structures6 records; NBV 4/6396.40835.986*356.923*90.8%Other classified assets3 records; NBV 3/31.0100.6620.34834.5%ICT equipment2 records; NBV 1/20.552*0.506*0.046*8.3%": {
+      "caption": "Table 48: Recorded financial values for hospitals on local-government books",
+      "number": 48,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 662,
+      "headers": [
+        "Asset category and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "Hospitals on local-government books: 3,067 records. These are included in the report total and shown separately from Health Centres and schools."
+    },
+    "Asset category and coverageRecorded costAccumulated depreciationNet book valueNBV / costTransport equipment4 records; NBV 4/4431.136279.424151.71235.2%": {
+      "caption": "Table 49: Recorded financial values for other local-government locations",
+      "number": 49,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 665,
+      "headers": [
+        "Asset category and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "Other local-government or unassigned locations: 4 records. These are included in the report total and shown separately from Health Centres and schools."
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costComputer components: monitors, CPUs, keyboards and mice70 records; NBV 66/70338.617284.293*54.084*16.0%Chairs and seats69 records; NBV 69/6992.86959.38333.48636.1%Other records outside fixed-asset classes54 records; NBV 54/546.5640.0000.000n/aLaptops and notebooks40 records; NBV 34/40261.360150.858*55.542*26.9%Software and licences31 records; NBV 30/31147.147*147.147*0.000*0.0%Desktop and unspecified computer records26 records; NBV 26/26135.854123.12012.7349.4%UPS systems25 records; NBV 25/2530.72319.55411.16836.4%Desks and benches21 records; NBV 21/2132.23826.3465.89118.3%Vehicles and other transport21 records; NBV 20/214,550.385*3,046.016*1,504.369*33.1%Tablets17 records; NBV 17/1739.24426.16313.08133.3%Printers and photocopiers15 records; NBV 13/15234.901156.781*52.077*24.9%Digital phones and TELA handsets14 records; NBV 14/1410.29010.2900.0000.0%Projectors14 records; NBV 14/14124.300124.3000.0000.0%Servers and network equipment10 records; NBV 10/1070.00060.6679.33313.3%Cabinets, cupboards and shelves9 records; NBV 9/911.93010.3391.59113.3%Other records classified as ICT9 records; NBV 9/932.31732.2620.0540.2%Accessories and protective items6 records; NBV 0/618.640UnavailableUnavailablen/aPaper shredders and binding machines3 records; NBV 3/310.8009.3601.44013.3%Water dispensers3 records; NBV 3/32.0401.8700.1708.3%Audio-visual, survey and other ICT equipment1 record; NBV 1/154.10023.44330.65756.7%Total458 records; NBV 438/4586,204.318*4,312.194*1,785.678*29.3%": {
+      "caption": "Table 50: Financial values by asset type at MoFPED",
+      "number": 50,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 673,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "MoFPED"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costComputer components: monitors, CPUs, keyboards and mice48 records; NBV 40/4862.25923.859*31.200*56.7%UPS systems14 records; NBV 10/1413.0765.001*6.539*56.7%Desktop and unspecified computer records8 records; NBV 4/822.01615.961*2.455*13.3%Printers and photocopiers8 records; NBV 6/867.48350.979*14.704*22.4%Laptops and notebooks5 records; NBV 5/540.08017.36822.71256.7%Audio-visual, survey and other ICT equipment1 record; NBV 1/154.10023.44330.65756.7%Other or insufficiently described items1 record; NBV 0/1UnavailableUnavailableUnavailablen/aTablets1 record; NBV 1/10.9000.3900.51056.7%Vehicles and other transport1 record; NBV 1/1196.018189.4846.5343.3%Total87 records; NBV 68/87455.932*326.485*115.311*26.1%": {
+      "caption": "Table 51: Financial values by asset type at MoWT",
+      "number": 51,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 676,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "MoWT"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costDigital phones and TELA handsets9,324 records; NBV 9,324/9,32410,847.9247,774.5693,073.35528.3%Tablets1,001 records; NBV 1,001/1,0011,995.3471,591.326404.02120.2%Laptops and notebooks456 records; NBV 456/4562,043.7881,206.684837.10441.0%Printers and photocopiers2 records; NBV 2/238.07034.8973.1728.3%Total10,783 records; NBV 10,783/10,78314,925.12810,607.4774,317.65228.9%": {
+      "caption": "Table 52: Financial values by asset type at MoES",
+      "number": 52,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 679,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "MoES"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costTablets819 records; NBV 819/819623.690429.317194.37331.2%Accessories and protective items784 records; NBV 778/784306.274*82.589*163.388*66.4%Computer components: monitors, CPUs, keyboards and mice340 records; NBV 340/340823.828247.120576.61270.0%Laptops and notebooks49 records; NBV 49/49481.164158.325322.83967.1%Printers and photocopiers21 records; NBV 21/2172.53421.76050.77470.0%Printer supplies and consumables15 records; NBV 15/1512.6740.0000.000n/aSoftware and licences5 records; NBV 5/58.0005.4672.53331.7%Other records classified as ICT4 records; NBV 4/420.9926.29814.69470.0%Vehicles and other transport4 records; NBV 4/4500.040425.03475.00615.0%Audio-visual, survey and other ICT equipment3 records; NBV 2/33.829*1.149*2.680*70.0%Projectors1 record; NBV 1/13.5323.0020.53015.0%Total2,045 records; NBV 2,038/2,0452,856.557*1,380.060*1,403.430*50.4%": {
+      "caption": "Table 53: Financial values by asset type at MAAIF",
+      "number": 53,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 682,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "MAAIF"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costAccessories and protective items148 records; NBV 148/148134.4180.0000.000n/aPrinter supplies and consumables50 records; NBV 50/5040.9500.0000.000n/aLaptops and notebooks23 records; NBV 23/23137.27772.71464.56347.0%Motorcycles23 records; NBV 23/23418.000202.556215.44451.5%Printers and photocopiers6 records; NBV 6/667.27833.40633.87250.3%Paper shredders and binding machines4 records; NBV 4/44.8312.4152.41550.0%Servers and network equipment4 records; NBV 4/412.8006.4006.40050.0%Vehicles and other transport2 records; NBV 1/2371.136123.712*61.856*33.3%Total260 records; NBV 259/2601,186.690441.202*384.551*46.6%": {
+      "caption": "Table 54: Financial values by asset type at MoH",
+      "number": 54,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 685,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "MoH"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costLaptops and notebooks10 records; NBV 10/1053.53548.1825.35410.0%Total10 records; NBV 10/1053.53548.1825.35410.0%": {
+      "caption": "Table 55: Financial values by asset type at OPM",
+      "number": 55,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 688,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "OPM"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costTablets2,368 records; NBV 2,348/2,3681,453.253764.511*551.862*41.9%Computer components: monitors, CPUs, keyboards and mice320 records; NBV 320/3202,583.075763.466563.60942.5%UPS systems166 records; NBV 166/166372.850215.868156.98242.1%Laptops and notebooks31 records; NBV 31/31298.532179.917118.61539.7%Audio-visual, survey and other ICT equipment27 records; NBV 4/27116.932*54.943*53.157*49.2%Printers and photocopiers16 records; NBV 16/16117.20565.33451.87044.3%Projectors5 records; NBV 5/556.55232.98923.56341.7%Servers and network equipment4 records; NBV 4/412.4007.2335.16741.7%Other records classified as ICT2 records; NBV 2/219.1838.38010.80356.3%Total2,939 records; NBV 2,896/2,9395,029.982*2,092.642*1,535.627*42.3%": {
+      "caption": "Table 56: Financial values by asset type at MoWE",
+      "number": 56,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 691,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "MoWE"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costLaptops and notebooks8 records; NBV 6/836.12013.260*14.860*52.8%Tablets2 records; NBV 0/210.060UnavailableUnavailablen/aTotal10 records; NBV 6/1046.18013.260*14.860*52.8%": {
+      "caption": "Table 57: Financial values by asset type at MoGLSD",
+      "number": 57,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 694,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "MoGLSD"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costDesktop and unspecified computer records4 records; NBV 4/416.00012.0004.00025.0%Printers and photocopiers2 records; NBV 2/230.82420.8419.98332.4%Total6 records; NBV 6/646.82432.84113.98329.9%": {
+      "caption": "Table 58: Financial values by asset type at NEMA",
+      "number": 58,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 697,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "NEMA"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costLaptops and notebooks3 records; NBV 3/327.63011.97315.65756.7%Printers and photocopiers1 record; NBV 1/11.8250.7911.03456.7%Tablets1 record; NBV 1/10.6990.3030.39656.7%Total5 records; NBV 5/530.15413.06717.08756.7%": {
+      "caption": "Table 59: Financial values by asset type at PPDA",
+      "number": 59,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 700,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "PPDA"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costLaptops and notebooks16 records; NBV 16/16188.79561.597127.19867.4%Printers and photocopiers2 records; NBV 2/239.9789.99529.98475.0%Vehicles and other transport2 records; NBV 2/2160.00040.000120.00075.0%Total20 records; NBV 20/20388.774111.592277.18271.3%": {
+      "caption": "Table 60: Financial values by asset type at OAG",
+      "number": 60,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 703,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "OAG"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costComputer components: monitors, CPUs, keyboards and mice4 records; NBV 3/416.0003.400*8.600*71.7%Laptops and notebooks4 records; NBV 4/439.13410.17328.96174.0%Desktop and unspecified computer records2 records; NBV 2/28.0001.4676.53381.7%Printers and photocopiers2 records; NBV 2/231.66721.11110.55633.3%Vehicles and other transport1 record; NBV 1/1248.520248.5200.0000.0%Total13 records; NBV 12/13343.320284.671*54.650*16.1%": {
+      "caption": "Table 61: Financial values by asset type at MoLG",
+      "number": 61,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 706,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "MoLG"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costMotorcycles25 records; NBV 24/25483.750123.840*340.560*73.3%Accessories and protective items2 records; NBV 2/23.6000.0000.000n/aTotal27 records; NBV 26/27487.350123.840*340.560*73.3%": {
+      "caption": "Table 62: Financial values by asset type at MoLHUD",
+      "number": 62,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 709,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "MoLHUD"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costLaboratory and blood-processing equipment48 records; NBV 48/4813.80911.0092.80020.3%Refrigerators, freezers and cold storage32 records; NBV 32/3210.8078.3042.50323.2%Power, water and other service equipment30 records; NBV 29/30389.062*145.262*120.399*45.3%Other records classified as medical or laboratory29 records; NBV 20/296.487*4.812*1.675*25.8%Scales and balances24 records; NBV 24/248.3325.9082.42429.1%Beds, cots, mattresses and couches21 records; NBV 21/217.8505.3942.45531.3%Desktop and unspecified computer records17 records; NBV 17/1748.15017.43830.71363.8%Other furniture and fittings16 records; NBV 16/163.1001.6021.49848.3%Cabinets, cupboards and shelves15 records; NBV 15/157.8403.7994.04151.5%Other medical and laboratory items14 records; NBV 13/144.191*2.305*1.886*45.0%Other records outside fixed-asset classes9 records; NBV 9/90.0000.0000.000n/aTables8 records; NBV 8/86.8003.5133.28748.3%Blood-pressure equipment7 records; NBV 7/72.0340.8111.22460.2%Laptops and notebooks7 records; NBV 7/73.8643.3210.54314.0%Chairs and seats6 records; NBV 6/62.6761.3501.32649.5%Sterilization, disinfection and waste items5 records; NBV 5/51.8170.9680.84946.7%Microscopes4 records; NBV 4/41.4321.0260.40628.3%Other records classified as ICT4 records; NBV 4/45.9643.0812.88348.3%Servers and network equipment4 records; NBV 4/413.6006.1777.42354.6%Desks and benches3 records; NBV 3/31.5000.7750.72548.3%Other records classified as furniture3 records; NBV 3/3168.46887.04281.42648.3%Printers and photocopiers3 records; NBV 3/37.5523.5524.00053.0%UPS systems3 records; NBV 3/31.6561.0760.58035.0%Vehicles and other transport3 records; NBV 3/3240.000124.000116.00048.3%Accessories and protective items2 records; NBV 0/2UnavailableUnavailableUnavailablen/aAudio-visual, survey and other ICT equipment2 records; NBV 2/24.8604.4550.4058.3%Patient support and clinical furniture2 records; NBV 2/20.7160.3700.34648.3%Other records classified as buildings1 record; NBV 1/1187.49624.218163.27887.1%Projectors1 record; NBV 1/12.9820.7952.18773.3%Stools1 record; NBV 1/10.0700.0360.03448.3%Total324 records; NBV 311/3241,153.115*472.399*557.316*54.1%": {
+      "caption": "Table 63: Financial values by asset type at Arua Regional Blood Bank",
+      "number": 63,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 712,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "Arua Regional Blood Bank"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costLaboratory and blood-processing equipment60 records; NBV 60/6021.21114.8376.37430.1%Scales and balances30 records; NBV 30/309.7907.2132.57726.3%Refrigerators, freezers and cold storage28 records; NBV 28/2810.9867.1173.86935.2%Power, water and other service equipment14 records; NBV 14/148.8645.5343.33037.6%Beds, cots, mattresses and couches12 records; NBV 12/124.4633.1241.33930.0%Patient support and clinical furniture6 records; NBV 6/62.1471.5030.64430.0%Sterilization, disinfection and waste items6 records; NBV 6/62.1891.5330.65730.0%Other records classified as medical or laboratory3 records; NBV 3/31.1160.7810.33530.0%Other furniture and fittings2 records; NBV 2/20.7160.1910.52573.3%Cabinets, cupboards and shelves1 record; NBV 1/1251.4396.705244.73497.3%Stools1 record; NBV 1/10.0700.0230.04766.7%Total163 records; NBV 163/163312.99148.561264.43084.5%": {
+      "caption": "Table 64: Financial values by asset type at Hoima Regional Blood Bank",
+      "number": 64,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 715,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "Hoima Regional Blood Bank"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costOther medical and laboratory items38 records; NBV 38/3812.54911.5031.0468.3%Laboratory and blood-processing equipment18 records; NBV 18/184.2353.8820.3538.3%Scales and balances15 records; NBV 15/154.5952.6931.90241.4%Refrigerators, freezers and cold storage14 records; NBV 14/144.2953.9370.3588.3%Beds, cots, mattresses and couches12 records; NBV 12/124.4634.0910.3728.3%Blood-pressure equipment8 records; NBV 8/84.4164.0480.3688.3%Patient support and clinical furniture4 records; NBV 4/41.4321.3120.1198.3%Other records classified as medical or laboratory3 records; NBV 3/31.0740.9840.0898.3%Power, water and other service equipment2 records; NBV 2/20.2000.1830.0178.3%Sterilization, disinfection and waste items1 record; NBV 1/10.3580.0950.26273.3%Total115 records; NBV 115/11537.61532.7294.88613.0%": {
+      "caption": "Table 65: Financial values by asset type at Soroti Regional Blood Bank",
+      "number": 65,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 718,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "Soroti Regional Blood Bank"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costOther medical and laboratory items12,797 records; NBV 11,017/12,79712,859.916*4,227.785*6,523.271*60.7%Beds, cots, mattresses and couches7,473 records; NBV 6,400/7,47313,138.4844,799.540*5,751.624*54.5%Patient support and clinical furniture6,895 records; NBV 5,826/6,8953,843.9201,425.673*1,822.683*56.1%Resuscitation, oxygen and suction equipment5,014 records; NBV 4,375/5,0148,004.034*3,102.561*3,749.447*54.7%Sterilization, disinfection and waste items4,719 records; NBV 4,658/4,719564.976166.216*174.780*51.3%Cabinets, cupboards and shelves4,144 records; NBV 3,615/4,1443,374.6081,295.940*1,614.235*55.5%Other records classified as medical or laboratory3,762 records; NBV 3,295/3,7625,956.768*1,682.465*2,613.657*60.8%Chairs and seats2,959 records; NBV 2,695/2,9591,121.407544.232*467.327*46.2%Desks and benches2,439 records; NBV 2,233/2,439898.270387.384*404.560*51.1%Other records outside fixed-asset classes1,887 records; NBV 1,887/1,88743.7710.0000.000n/aScales and balances1,838 records; NBV 1,557/1,838927.968*370.819*391.460*51.4%Power, water and other service equipment1,719 records; NBV 1,491/1,7191,205.043*531.372*501.107*48.5%Accessories and protective items1,511 records; NBV 1,110/1,511299.40586.303*91.401*51.4%Buildings, components and site infrastructure1,319 records; NBV 1,177/1,319192,676.460*16,224.082*154,922.816*90.5%Blood-pressure equipment1,297 records; NBV 1,114/1,297422.750178.413*185.553*51.0%Stools739 records; NBV 666/739255.022117.896*106.699*47.5%Laboratory and blood-processing equipment600 records; NBV 524/6001,125.611*426.348*557.458*56.7%Refrigerators, freezers and cold storage592 records; NBV 508/5921,980.863677.673*988.100*59.3%Microscopes395 records; NBV 338/395696.639271.695*330.860*54.9%Tables308 records; NBV 308/30860.22652.8627.36412.2%Audio-visual, survey and other ICT equipment243 records; NBV 64/243122.539*47.904*56.261*54.0%Other records classified as buildings242 records; NBV 226/2429,605.390*1,690.046*7,701.724*82.0%Other records classified as furniture193 records; NBV 186/19336.816*20.369*16.448*44.7%Other or insufficiently described items82 records; NBV 72/82460.850*32.003*295.445*90.2%Servers and network equipment72 records; NBV 72/72559.039559.0390.0000.0%Other furniture and fittings45 records; NBV 45/451.5801.0020.57836.6%Computer components: monitors, CPUs, keyboards and mice33 records; NBV 33/3373.07952.19520.88428.6%Desktop and unspecified computer records32 records; NBV 32/3216.13612.0974.03925.0%Printers and photocopiers28 records; NBV 28/2895.87095.8020.0690.1%UPS systems21 records; NBV 21/2129.40029.4000.0000.0%Other records classified as ICT16 records; NBV 14/1637.619*27.633*9.986*26.5%Land records6 records; NBV 5/6104.9050.896*74.104*98.8%Laptops and notebooks3 records; NBV 3/38.0734.4783.59644.5%Motorcycles3 records; NBV 3/374.00062.33311.66715.8%Projectors3 records; NBV 3/39.7655.3914.37444.8%Other records classified as transport2 records; NBV 2/21.1001.1000.0000.0%Digital phones and TELA handsets1 record; NBV 1/10.1500.1500.0000.0%Total63,432 records; NBV 55,604/63,432260,692.452*39,211.095*189,403.577*82.8%": {
+      "caption": "Table 66: Financial values by asset type at Health Centres",
+      "number": 66,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 721,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "Health centres"
+    },
+    "Asset type and coverageRecorded costAccumulated depreciationNet book valueNBV / costChairs and seats37,948 records; NBV 32,808/37,94832,414.1376,082.224*24,913.392*80.4%Stools25,504 records; NBV 24,573/25,5044,186.1131,306.123*2,739.639*67.7%Desks and benches22,358 records; NBV 20,177/22,35818,803.4782,710.851*6,873.881*71.7%Tables16,472 records; NBV 14,157/16,47232,313.5714,749.847*26,531.642*84.8%Other medical and laboratory items5,509 records; NBV 5,265/5,50933,128.711*8,368.224*19,661.304*70.1%Buildings, components and site infrastructure4,782 records; NBV 4,034/4,782345,990.827*38,130.369*187,574.763*83.1%Other records classified as medical or laboratory4,356 records; NBV 4,043/4,3561,152.670*657.041*430.864*39.6%Desktop and unspecified computer records3,769 records; NBV 3,270/3,76912,010.7886,417.939*3,751.758*36.9%Computer components: monitors, CPUs, keyboards and mice3,231 records; NBV 2,844/3,2317,933.2394,018.894*2,782.603*40.9%Other records outside fixed-asset classes3,226 records; NBV 3,226/3,226111.0140.0000.000n/aCabinets, cupboards and shelves3,077 records; NBV 2,878/3,0773,678.681784.281*2,773.997*78.0%UPS systems2,916 records; NBV 2,544/2,9163,131.3981,745.665*951.050*35.3%Other records classified as furniture2,697 records; NBV 2,440/2,697577.819*253.127*173.344*40.6%Power, water and other service equipment2,500 records; NBV 2,405/2,5001,599.132*694.524*644.366*48.1%Books, stationery and other supplies1,374 records; NBV 1,374/1,37440,624.6350.1350.31570.0%Other records classified as buildings1,222 records; NBV 999/1,222127,813.514*23,815.406*86,027.617*78.3%Servers and network equipment1,189 records; NBV 1,086/1,1893,252.573*1,662.756*1,162.473*41.1%Other or insufficiently described items870 records; NBV 317/87026,803.085*980.915*25,378.016*96.3%Other records classified as ICT509 records; NBV 443/5091,603.073*723.534*677.750*48.4%Audio-visual, survey and other ICT equipment460 records; NBV 377/4601,257.649*730.112*348.377*32.3%Other furniture and fittings400 records; NBV 398/40047.534*25.823*21.361*45.3%Projectors287 records; NBV 243/287790.656300.143*340.593*53.2%Printers and photocopiers240 records; NBV 199/240704.566288.316*306.530*51.5%Scales and balances136 records; NBV 134/13643.697*25.916*17.423*40.2%Accessories and protective items74 records; NBV 73/7467.756*58.137*9.619*14.2%Microscopes59 records; NBV 54/5923.83415.110*3.814*20.2%Beds, cots, mattresses and couches52 records; NBV 52/5213.00011.5561.44411.1%Land records14 records; NBV 13/14110.029*0.000*110.029*100.0%Laptops and notebooks9 records; NBV 7/934.41311.854*19.159*61.8%Refrigerators, freezers and cold storage7 records; NBV 7/72.8232.5670.2569.1%Software and licences2 records; NBV 2/29.8101.6358.17583.3%Sterilization, disinfection and waste items2 records; NBV 2/20.2000.1780.02211.1%Blood-pressure equipment1 record; NBV 1/10.3210.0860.23573.3%Laboratory and blood-processing equipment1 record; NBV 1/10.3000.0000.000n/aPatient support and clinical furniture1 record; NBV 1/10.3750.0000.000n/aPrinter supplies and consumables1 record; NBV 1/16.7841.1315.65483.3%Tablets1 record; NBV 1/10.3580.1130.24568.3%Total145,256 records; NBV 130,449/145,256700,242.561*104,574.530*394,241.709*79.0%": {
+      "caption": "Table 67: Financial values by asset type at schools",
+      "number": 67,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 724,
+      "headers": [
+        "Asset type and coverage",
+        "Recorded cost",
+        "Accumulated depreciation",
+        "Net book value",
+        "NBV / cost"
+      ],
+      "prior_paragraph_exact_text": "Schools"
+    },
+    "CommentSubjectDispositionOlder 59MoFPED broken assetsCurrent Functional/Faulty codes recalculated; status and source remarks distinguished in the MoFPED section.Older 64Financial analysis by asset typeFinancial schedules by classification and by detailed asset type provided for every MDA, each blood bank, health centres and schools, with costs, depreciation, NBV and a matched NBV/cost ratio.Older 68MoWT percentagesCounts and denominators refreshed from the current MoWT book.Older 74MoES condition and identificationSeparate current status and identifier tables retained and refreshed.Older 78MAAIF condition and identificationSeparate current tables and full-record denominators supplied.Older 81MoH other assetsBinding machines, shredders and helmet records reconciled to the current book. Three named power items traced to Kyamwinula on the Tororo Municipal Council book; programme attribution and the further three implied items remain unresolved.Older 94NEMA percentagesRecomputed against the current NEMA book.Older 96PPDA costsCurrent recorded values used, with cost-estimate and date limitations disclosed.Older 99OAG percentagesCurrent condition and tag-field percentages calculated consistently.Older 103Photocopier terminologyThe MoLG figure uses Photocopiers. Shared identifiers are disclosed to avoid treating two asset records as two confirmed physical items.Older 144School identification tableRedundant movable-assets column removed; category population and identifier fields reconciled.Older 177Facility reconciliation39 distinct exceptions reconciled; renamed matched sites excluded from that exception total.Newer 102Blood-bank analysisArua, Hoima and Soroti have separate availability, status, identification and category-finance analyses.Newer 111Land detailThe four health-centre land entries are listed with recorded costs and available evidence.Newer 127Additional health photographsThree views of Benet Health Centre III show unfinished works during the visit on 27 August 2026.Newer 175Obsolete and unserviceable assetsTwo blood-pressure machines at Nyanja Health Centre III were reported beyond repair. Disposal approval remains unconfirmed.Newer 176Missing and unrecorded assetsExamples distinguish items not received, access restrictions, stolen components, missing parts and conflicting accounts.Newer 179Recommendation per challengeThe action schedule covers all ten challenge themes, responsible officers and evidence required to confirm completion.": {
+      "caption": "Table 68: Responses to reviewer comments",
+      "number": 68,
+      "placement": "immediately_above",
+      "highlight": "green",
+      "body_index_at_audit": 728,
+      "headers": [
+        "Comment",
+        "Subject",
+        "Disposition"
+      ],
+      "prior_paragraph_exact_text": "The table below summarises the issues raised, the corresponding findings and any further action required."
+    }
+  },
+  "paragraph_insertions": [
+    {
+      "before_exact_table_text": "GapResponsible officersActionEvidence of completionPowerLG engineers and facility managersAssess electrical loads and complete safe grid or suitable alternative supply before testing and issuing idle equipment.Connection and electrical test recordsStaffingDistrict service authorities and sector ministriesMatch staffing needs to operating rooms and equipment; deploy qualified staff through approved staffing and budget processes.Approved deployment and duty rostersSpaceLG engineers and sector departmentsInspect room suitability, identify overcrowded services and sequence building completion or adaptations around service needs.Room allocation and completion recordsSecurityAccounting Officers and facility governing bodiesPrioritise vulnerable stores and ICT rooms; provide secure storage, access controls and risk-based fencing.Security inspection and custodian logsMaintenanceFacility managers and district technical teamsSet funded maintenance schedules, record faults and escalate major repairs to the responsible workshop or supplier.Fault register and closed repair ordersStaff housingLG planners, engineers and sector departmentsIdentify housing constraints affecting attendance; complete contracted quarters and plan additional accommodation where justified.Occupancy and outstanding-work schedulesWaterDistrict water officers and facility managersRestore reliable water and test storage, supply and sanitation connections before putting dependent equipment into use.Water availability and system test recordsTrainingSector technical teams and suppliersDemonstrate operation, safety and basic care to named users; confirm competence and provide a support contact.Training attendance and competency sign-offWorksAccounting Officers, engineers and contractorsAgree site-specific defects and completion lists, milestones and handover requirements; verify each closure on site.Inspection certificates and signed handoverInstallation and deliveryProcurement units, suppliers and facility managersReconcile delivery notes, obtain missing parts, install equipment in ready rooms and complete acceptance tests.Delivery reconciliation and acceptance tests",
+      "text": "Table 35 sets out the actions, responsible officers and evidence of completion.",
+      "highlight": "green",
+      "body_index_at_audit": 601
+    }
+  ],
+  "protected_reference_validation": {
+    "actual_section3_2_heading_index": 277,
+    "actual_section3_3_heading_index": 291,
+    "protected_paragraph_exact_text": "Financial value of assets: recorded costs total UGX 32,054,743,836 across 16,651 of 16,663 records. Accumulated depreciation totals UGX 19,787,511,232 and net book value totals UGX 10,265,924,979 at 30 September 2026. Net book value remains unavailable for 96 records. The table below gives the category breakdown and identifies any unavailable amounts.",
+    "replacement_sentence": "Table 2 also identifies unavailable amounts.",
+    "table2_MDA_row": "Ministries and agencies16,663 records; NBV16,567/16,66332,054.744*19,787.511*10,265.925*34.2%",
+    "support": "Table2 amounts carry available-only asterisks; its note says one or more amounts are missing or pending calculation and displays NBVcoverage."
+  },
+  "notes": [
+    "Keys are exact concatenated w:t text from latestfinal DOCX. Resolve exact matches before mutating because newcaptions shiftindices.",
+    "One repeated photograph-intro text occurs twice (HealthCentres502 andSchools539), with different Figure ranges. For this key read occurrences array and usepreceding_exact_text or body_index_at_audit. Flatparagraph_corrections has44entries.",
+    "Insert Table35-68 captions in green; all belong to retained newsections5.1 orAppendicesA-L.",
+    "The protected section3.2 change is only the financial table reference, as explicitly authorized byparent metric-reconciliation instruction. Otherprotectedsections1-through3.2prose remains untouched.",
+    "Seven photograph-layouttables are referenced as figure ranges, not numbered as datatables.",
+    "Appendices mainheading exactoldtext Annexures Appendices is replaced withAppendices."
+  ],
+  "counts": {
+    "paragraph_corrections": 44,
+    "unique_old_text_keys": 43,
+    "new_table_captions": 34,
+    "inserted_paragraphs": 1
+  }
+}

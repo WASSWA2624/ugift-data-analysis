@@ -1,0 +1,1172 @@
+{
+  "source_sha256": "72e5d11f3211cdc4b9a04b47d290d815d2a743027e67ae45405d57138e7f3691",
+  "population": "Current REF AU == NO, exactly 13,520 records.",
+  "method": "Documented prior reason-rule precedence applied to current BL remarks, with generic leading Faulty label and accounting-review provenance removed. Every row assigned once. Reasons are wording-based; repeated aggregate remarks need physical validation before interpreting them as individual damage/storage counts.",
+  "labels": {
+    "not_functional": "Recorded as not functional",
+    "damaged": "Broken down or damaged",
+    "storage_other": "In storage: other",
+    "not_seen": "Recorded as supplied but not seen or not verified at the visit",
+    "storage_new": "In storage: new, boxed or unopened",
+    "consumables": "Missing accessories, parts or consumables",
+    "held_elsewhere": "Held elsewhere or transferred (district store or another facility)",
+    "power": "Awaiting power or electricity",
+    "storage_good": "In storage: stated functional or in good condition",
+    "other": "Other stated reason",
+    "skills": "Users not trained or do not know how to use the asset",
+    "building": "Building, room or facility not ready (under construction, not commissioned or no space)",
+    "stolen_missing": "Stolen, lost or missing",
+    "obsolete": "Obsolete, condemned, disposed of or beyond repair",
+    "installation": "Awaiting installation or assembly",
+    "not_received": "Not received or not delivered to the facility",
+    "supplier_pending": "Not yet handed over by the supplier (still being made)"
+  },
+  "counts": {
+    "not_functional": 10230,
+    "damaged": 1447,
+    "storage_other": 851,
+    "not_seen": 4,
+    "storage_new": 85,
+    "consumables": 69,
+    "held_elsewhere": 4,
+    "power": 247,
+    "storage_good": 150,
+    "other": 79,
+    "skills": 15,
+    "building": 178,
+    "stolen_missing": 61,
+    "obsolete": 7,
+    "installation": 54,
+    "not_received": 3,
+    "supplier_pending": 36
+  },
+  "by_institution": {
+    "Ministries and agencies": {
+      "not_functional": 20
+    },
+    "Health centres": {
+      "not_functional": 4026,
+      "damaged": 387,
+      "storage_other": 819,
+      "not_seen": 4,
+      "storage_new": 60,
+      "consumables": 66,
+      "held_elsewhere": 3,
+      "power": 52,
+      "storage_good": 150,
+      "other": 60,
+      "skills": 3,
+      "stolen_missing": 1,
+      "building": 22,
+      "obsolete": 7,
+      "installation": 10,
+      "not_received": 3
+    },
+    "Hospitals on local-government books": {
+      "not_functional": 12
+    },
+    "Schools": {
+      "not_functional": 6161,
+      "building": 156,
+      "damaged": 1058,
+      "installation": 44,
+      "power": 195,
+      "stolen_missing": 60,
+      "consumables": 3,
+      "storage_other": 32,
+      "other": 8,
+      "held_elsewhere": 1,
+      "storage_new": 25,
+      "supplier_pending": 36,
+      "skills": 12
+    },
+    "Regional blood banks": {
+      "other": 11,
+      "not_functional": 11,
+      "damaged": 2
+    }
+  },
+  "samples": {
+    "not_functional": [
+      {
+        "row": 20,
+        "asset_number": "UGIFT-209331",
+        "facility": "UNSPECIFIED",
+        "item": "Double Cabin Pick-up",
+        "source_remarks": "Not functional.",
+        "classification_text": "|| || not functional."
+      },
+      {
+        "row": 283,
+        "asset_number": "UGIFT-209598",
+        "facility": "UNSPECIFIED",
+        "item": "Dell Optiplex Desktop Computer",
+        "source_remarks": "Not functional.",
+        "classification_text": "|| || not functional."
+      },
+      {
+        "row": 284,
+        "asset_number": "UGIFT-209599",
+        "facility": "UNSPECIFIED",
+        "item": "Dell Optiplex Desktop Computer",
+        "source_remarks": "Not functional.",
+        "classification_text": "|| || not functional."
+      },
+      {
+        "row": 285,
+        "asset_number": "UGIFT-209600",
+        "facility": "UNSPECIFIED",
+        "item": "Dell Optiplex Desktop Computer",
+        "source_remarks": "Not functional.",
+        "classification_text": "|| || not functional."
+      },
+      {
+        "row": 286,
+        "asset_number": "UGIFT-209601",
+        "facility": "UNSPECIFIED",
+        "item": "Apc-ups 1000VA",
+        "source_remarks": "Not functional.",
+        "classification_text": "|| || not functional."
+      },
+      {
+        "row": 287,
+        "asset_number": "UGIFT-209602",
+        "facility": "UNSPECIFIED",
+        "item": "Dell Optiplex Desktop Computer",
+        "source_remarks": "Not functional.",
+        "classification_text": "|| || not functional."
+      },
+      {
+        "row": 288,
+        "asset_number": "UGIFT-209603",
+        "facility": "UNSPECIFIED",
+        "item": "Dell Optiplex Desktop Computer",
+        "source_remarks": "Not functional.",
+        "classification_text": "|| || not functional."
+      },
+      {
+        "row": 289,
+        "asset_number": "UGIFT-209604",
+        "facility": "UNSPECIFIED",
+        "item": "Dell Optiplex Desktop Computer",
+        "source_remarks": "Not functional.",
+        "classification_text": "|| || not functional."
+      }
+    ],
+    "damaged": [
+      {
+        "row": 16996,
+        "asset_number": "UGIFT-000059",
+        "facility": "Butawata Health Centre III",
+        "item": "Wheel Chair",
+        "source_remarks": "Not functional. Wheelchair was spoilt.",
+        "classification_text": "|| || not functional. wheelchair was spoilt."
+      },
+      {
+        "row": 17063,
+        "asset_number": "UGIFT-000126",
+        "facility": "Butawata Health Centre III",
+        "item": "Oxygen Concentrator, Duo Flow",
+        "source_remarks": "Not functional. Machine no longer use it over heats.",
+        "classification_text": "|| || not functional. machine no longer use it over heats."
+      },
+      {
+        "row": 17115,
+        "asset_number": "UGIFT-000178",
+        "facility": "Butawata Health Centre III",
+        "item": "Office Chair",
+        "source_remarks": "Not functional. Got spoilt after 2 weeks of use.",
+        "classification_text": "|| || not functional. got spoilt after 2 weeks of use."
+      },
+      {
+        "row": 19060,
+        "asset_number": "UGIFT-002123",
+        "facility": "Railway Health Centre III",
+        "item": "Wheel Chair",
+        "source_remarks": "Not functional. All 3 faulty.",
+        "classification_text": "|| || not functional. all 3 faulty."
+      },
+      {
+        "row": 19061,
+        "asset_number": "UGIFT-002124",
+        "facility": "Railway Health Centre III",
+        "item": "Wheel Chair",
+        "source_remarks": "Not functional. All 3 faulty.",
+        "classification_text": "|| || not functional. all 3 faulty."
+      },
+      {
+        "row": 19062,
+        "asset_number": "UGIFT-002125",
+        "facility": "Railway Health Centre III",
+        "item": "Wheel Chair",
+        "source_remarks": "Not functional. All 3 faulty.",
+        "classification_text": "|| || not functional. all 3 faulty."
+      },
+      {
+        "row": 20004,
+        "asset_number": "UGIFT-003067",
+        "facility": "Butawata Health Centre III",
+        "item": "Wheel Chair",
+        "source_remarks": "Not functional. Wheelchair was spoilt.",
+        "classification_text": "|| || not functional. wheelchair was spoilt."
+      },
+      {
+        "row": 20071,
+        "asset_number": "UGIFT-003134",
+        "facility": "Butawata Health Centre III",
+        "item": "Oxygen Concentrator, Duo Flow",
+        "source_remarks": "Not functional. Machine no longer use it over heats.",
+        "classification_text": "|| || not functional. machine no longer use it over heats."
+      }
+    ],
+    "storage_other": [
+      {
+        "row": 17056,
+        "asset_number": "UGIFT-000119",
+        "facility": "Butawata Health Centre III",
+        "item": "Resuscitator Manual, Adult, with all mask sizes",
+        "source_remarks": "Not functional. In the store.",
+        "classification_text": "|| || not functional. in the store."
+      },
+      {
+        "row": 17100,
+        "asset_number": "UGIFT-000163",
+        "facility": "Butawata Health Centre III",
+        "item": "Bubble CPAP",
+        "source_remarks": "Not functional. In the store.",
+        "classification_text": "|| || not functional. in the store."
+      },
+      {
+        "row": 17163,
+        "asset_number": "UGIFT-000226",
+        "facility": "Kabweza Health Centre III",
+        "item": "Glucometer",
+        "source_remarks": "Not functional. Items in the store.",
+        "classification_text": "|| || not functional. items in the store."
+      },
+      {
+        "row": 17273,
+        "asset_number": "UGIFT-000336",
+        "facility": "Kabweza Health Centre III",
+        "item": "Resuscitator Manual, Adult, with all mask sizes",
+        "source_remarks": "Not functional. The resuscitators were in the store.",
+        "classification_text": "|| || not functional. the resuscitators were in the store."
+      },
+      {
+        "row": 17392,
+        "asset_number": "UGIFT-000455",
+        "facility": "Kyankaramata Health Centre III",
+        "item": "Counting chamber Neubauer- Improved",
+        "source_remarks": "Not functional. Items in the store.",
+        "classification_text": "|| || not functional. items in the store."
+      },
+      {
+        "row": 17393,
+        "asset_number": "UGIFT-000456",
+        "facility": "Kyankaramata Health Centre III",
+        "item": "Counting chamber Neubauer- Improved",
+        "source_remarks": "Not functional. The equipment is still in the laboratory store.",
+        "classification_text": "|| || not functional. the equipment is still in the laboratory store."
+      },
+      {
+        "row": 17399,
+        "asset_number": "UGIFT-000462",
+        "facility": "Kyankaramata Health Centre III",
+        "item": "Drip Stand",
+        "source_remarks": "Not functional. Facility received 5 movable drip stands that are in the store.",
+        "classification_text": "|| || not functional. facility received 5 movable drip stands that are in the store."
+      },
+      {
+        "row": 17413,
+        "asset_number": "UGIFT-000476",
+        "facility": "Kyankaramata Health Centre III",
+        "item": "Haemoglobin Meter, Digital",
+        "source_remarks": "Not functional. Items are still in the store.",
+        "classification_text": "|| || not functional. items are still in the store."
+      }
+    ],
+    "not_seen": [
+      {
+        "row": 17215,
+        "asset_number": "SL304",
+        "facility": "Kabweza Health Centre III",
+        "item": "Diagnostic Equipment Set for OPD",
+        "source_remarks": "Not functional. The items were available but couldn’t be verified because one staff with the keys was on leave.",
+        "classification_text": "|| || not functional. the items were available but couldn't be verified because one staff with the keys was on leave."
+      },
+      {
+        "row": 17425,
+        "asset_number": "UGIFT-000488",
+        "facility": "Kyankaramata Health Centre III",
+        "item": "Refrigerator, Basic",
+        "source_remarks": "Not functional. The fridge wasn’t available at the facility thus couldn’t be verified.",
+        "classification_text": "|| || not functional. the fridge wasn't available at the facility thus couldn't be verified."
+      },
+      {
+        "row": 17775,
+        "asset_number": "UGIFT-000838",
+        "facility": "Myeri Health Centre III",
+        "item": "Refrigerator, Basic",
+        "source_remarks": "Not functional. The fridge wasn’t available at the facility thus couldn’t be verified.",
+        "classification_text": "|| || not functional. the fridge wasn't available at the facility thus couldn't be verified."
+      },
+      {
+        "row": 19810,
+        "asset_number": "UGIFT-002873",
+        "facility": "Myeri Health Centre III",
+        "item": "Refrigerator, Basic",
+        "source_remarks": "Not functional. The fridge wasn’t available at the facility thus couldn’t be verified.",
+        "classification_text": "|| || not functional. the fridge wasn't available at the facility thus couldn't be verified."
+      }
+    ],
+    "storage_new": [
+      {
+        "row": 17386,
+        "asset_number": "UGIFT-000449",
+        "facility": "Kyankaramata Health Centre III",
+        "item": "B.P. Machine (Aneroid wall mounted)",
+        "source_remarks": "Not functional. Machines are in the store not yet used.",
+        "classification_text": "|| || not functional. machines are in the store not yet used."
+      },
+      {
+        "row": 17423,
+        "asset_number": "UGIFT-000486",
+        "facility": "Kyankaramata Health Centre III",
+        "item": "Patient Screen",
+        "source_remarks": "Not functional. The 4 newly delivered patient screens were still in the store in their box.",
+        "classification_text": "|| || not functional. the 4 newly delivered patient screens were still in the store in their box."
+      },
+      {
+        "row": 17431,
+        "asset_number": "HU-102",
+        "facility": "Kyankaramata Health Centre III",
+        "item": "Stove, Gas",
+        "source_remarks": "Not functional. Items in the store, still in boxes.",
+        "classification_text": "|| || not functional. items in the store, still in boxes."
+      },
+      {
+        "row": 17529,
+        "asset_number": "UGIFT-000592",
+        "facility": "Kyankaramata Health Centre III",
+        "item": "Bag Valve mask (Ambu Bag), Neonatal",
+        "source_remarks": "Not functional. Items were packed in.",
+        "classification_text": "|| || not functional. items were packed in."
+      },
+      {
+        "row": 17734,
+        "asset_number": "UGIFT-000797",
+        "facility": "Myeri Health Centre III",
+        "item": "B.P. Machine (Aneroid wall mounted)",
+        "source_remarks": "Not functional. Machines are in the store not yet used.",
+        "classification_text": "|| || not functional. machines are in the store not yet used."
+      },
+      {
+        "row": 17772,
+        "asset_number": "UGIFT-000835",
+        "facility": "Myeri Health Centre III",
+        "item": "Patient Screen",
+        "source_remarks": "Not functional. The 4 newly delivered patient screens were still in the store in their box.",
+        "classification_text": "|| || not functional. the 4 newly delivered patient screens were still in the store in their box."
+      },
+      {
+        "row": 17783,
+        "asset_number": "UGIFT-000846",
+        "facility": "Myeri Health Centre III",
+        "item": "Stove, Gas",
+        "source_remarks": "Not functional. Items in the store, still in boxes.",
+        "classification_text": "|| || not functional. items in the store, still in boxes."
+      },
+      {
+        "row": 17896,
+        "asset_number": "UGIFT-000959",
+        "facility": "Myeri Health Centre III",
+        "item": "Bag Valve mask (Ambu Bag), Neonatal",
+        "source_remarks": "Not functional. Items were packed in.",
+        "classification_text": "|| || not functional. items were packed in."
+      }
+    ],
+    "consumables": [
+      {
+        "row": 17410,
+        "asset_number": "UGIFT-000473",
+        "facility": "Kyankaramata Health Centre III",
+        "item": "Glucometer",
+        "source_remarks": "Not functional. The facility used up all the tubes and cannot obtain other since they are not available at NMS.",
+        "classification_text": "|| || not functional. the facility used up all the tubes and cannot obtain other since they are not available at nms."
+      },
+      {
+        "row": 17478,
+        "asset_number": "UGIFT-000541",
+        "facility": "Kyankaramata Health Centre III",
+        "item": "Oxygen Therapy Apparatus, Minimum 45L cylinder",
+        "source_remarks": "Not functional. Items are still in the store and tanks need to be refilled.",
+        "classification_text": "|| || not functional. items are still in the store and tanks need to be refilled."
+      },
+      {
+        "row": 17759,
+        "asset_number": "UGIFT-000822",
+        "facility": "Myeri Health Centre III",
+        "item": "Glucometer",
+        "source_remarks": "Not functional. The facility used up all the tubes and cannot obtain other since they are not available at NMS.",
+        "classification_text": "|| || not functional. the facility used up all the tubes and cannot obtain other since they are not available at nms."
+      },
+      {
+        "row": 17833,
+        "asset_number": "UGIFT-000896",
+        "facility": "Myeri Health Centre III",
+        "item": "Oxygen Therapy Apparatus, Minimum 45L cylinder",
+        "source_remarks": "Not functional. Items are still in the store, and tanks need to be refilled.",
+        "classification_text": "|| || not functional. items are still in the store, and tanks need to be refilled."
+      },
+      {
+        "row": 19794,
+        "asset_number": "UGIFT-002857",
+        "facility": "Myeri Health Centre III",
+        "item": "Glucometer",
+        "source_remarks": "Not functional. The facility used up all the tubes and cannot obtain other since they are not available at NMS.",
+        "classification_text": "|| || not functional. the facility used up all the tubes and cannot obtain other since they are not available at nms."
+      },
+      {
+        "row": 19868,
+        "asset_number": "UGIFT-002931",
+        "facility": "Myeri Health Centre III",
+        "item": "Oxygen Therapy Apparatus, Minimum 45L cylinder",
+        "source_remarks": "Not functional. Items are still in the store, and tanks need to be refilled.",
+        "classification_text": "|| || not functional. items are still in the store, and tanks need to be refilled."
+      },
+      {
+        "row": 20139,
+        "asset_number": "UGIFT-003202",
+        "facility": "Kasamba Health Centre III",
+        "item": "B.P. Machine, Digital",
+        "source_remarks": "Not functional. Not working due to lack of battery.",
+        "classification_text": "|| || not functional. not working due to lack of battery."
+      },
+      {
+        "row": 20151,
+        "asset_number": "UGIFT-003214",
+        "facility": "Kasamba Health Centre III",
+        "item": "Glucometer",
+        "source_remarks": "Not functional. Not working because of cuvettes. Cuvettes are not compatible with device.",
+        "classification_text": "|| || not functional. not working because of cuvettes. cuvettes are not compatible with device."
+      }
+    ],
+    "held_elsewhere": [
+      {
+        "row": 17430,
+        "asset_number": "UGIFT-000493",
+        "facility": "Kyankaramata Health Centre III",
+        "item": "Stretcher",
+        "source_remarks": "Not functional. The facility received the stretcher, but I did not verify it because it was requested by kyenjojo hospital.",
+        "classification_text": "|| || not functional. the facility received the stretcher, but i did not verify it because it was requested by kyenjojo hospital."
+      },
+      {
+        "row": 132573,
+        "asset_number": "UGIFT-115680",
+        "facility": "Bukimanayi Health Centre III",
+        "item": "Diagnostic Equipment Set for OPD (01 seen)",
+        "source_remarks": "Not functional. One in store. One redistributed.",
+        "classification_text": "|| || not functional. one in store. one redistributed."
+      },
+      {
+        "row": 132611,
+        "asset_number": "UGIFT-115718",
+        "facility": "Bukimanayi Health Centre III",
+        "item": "Oxygen Concentrator, Duo Flow",
+        "source_remarks": "Not functional. Only one seen. Redistributed to Bugobero. One in store.",
+        "classification_text": "|| || not functional. only one seen. redistributed to bugobero. one in store."
+      },
+      {
+        "row": 134113,
+        "asset_number": "UGIFT-117220",
+        "facility": "Sibanga Seed Secondary School",
+        "item": "UPS",
+        "source_remarks": "Not functional. Not in use. All at the district in store.",
+        "classification_text": "|| || not functional. not in use. all at the district in store."
+      }
+    ],
+    "power": [
+      {
+        "row": 19457,
+        "asset_number": "UGIFT-002520",
+        "facility": "Gayaza Health Centre III",
+        "item": "Autoclave 20 Liters.,Duo Operated",
+        "source_remarks": "Not functional. Not yet functional. Not in use due to electricity issues.",
+        "classification_text": "|| || not functional. not yet functional. not in use due to electricity issues."
+      },
+      {
+        "row": 19505,
+        "asset_number": "UGIFT-002568",
+        "facility": "Gayaza Health Centre III",
+        "item": "Audio Visual Equipment",
+        "source_remarks": "Not functional. Functional but not operational. In good shape but still in store due to electricity issues.",
+        "classification_text": "|| || not functional. functional but not operational. in good shape but still in store due to electricity issues."
+      },
+      {
+        "row": 19546,
+        "asset_number": "UGIFT-002609",
+        "facility": "Gayaza Health Centre III",
+        "item": "Suction Apparatus, (Electric)",
+        "source_remarks": "Not functional. The facility is using the manual device version due to electricity issues.",
+        "classification_text": "|| || not functional. the facility is using the manual device version due to electricity issues."
+      },
+      {
+        "row": 19549,
+        "asset_number": "20210722263",
+        "facility": "Gayaza Health Centre III",
+        "item": "Oxygen Concentrator, Duo Flow",
+        "source_remarks": "Not functional. Not yet functional. In good shape but not yet in use due to electricity issues.",
+        "classification_text": "|| || not functional. not yet functional. in good shape but not yet in use due to electricity issues."
+      },
+      {
+        "row": 19556,
+        "asset_number": "UGIFT-002619",
+        "facility": "Gayaza Health Centre III",
+        "item": "Baby Cot",
+        "source_remarks": "Not functional. Functional but not yet operational. Electricity issues.",
+        "classification_text": "|| || not functional. functional but not yet operational. electricity issues."
+      },
+      {
+        "row": 19557,
+        "asset_number": "UGIFT-002620",
+        "facility": "Gayaza Health Centre III",
+        "item": "Baby Cot",
+        "source_remarks": "Not functional. Functional but not yet operational. Electricity issues.",
+        "classification_text": "|| || not functional. functional but not yet operational. electricity issues."
+      },
+      {
+        "row": 19558,
+        "asset_number": "UGIFT-002621",
+        "facility": "Gayaza Health Centre III",
+        "item": "Baby Cot",
+        "source_remarks": "Not functional. Functional but not yet operational. Electricity issues.",
+        "classification_text": "|| || not functional. functional but not yet operational. electricity issues."
+      },
+      {
+        "row": 19559,
+        "asset_number": "UGIFT-002622",
+        "facility": "Gayaza Health Centre III",
+        "item": "Baby Cot",
+        "source_remarks": "Not functional. Functional but not operational. Due to electricity issues.",
+        "classification_text": "|| || not functional. functional but not operational. due to electricity issues."
+      }
+    ],
+    "storage_good": [
+      {
+        "row": 19548,
+        "asset_number": "UGIFT-002611",
+        "facility": "Gayaza Health Centre III",
+        "item": "Nebulizer, Ultrasonic",
+        "source_remarks": "Not functional. Functioning but still in store.",
+        "classification_text": "|| || not functional. functioning but still in store."
+      },
+      {
+        "row": 19653,
+        "asset_number": "UGIFT-002716",
+        "facility": "Kigoyera Health Centre III",
+        "item": "Weighing Scale, Infant",
+        "source_remarks": "Not functional. Functional but not operational. In store.",
+        "classification_text": "|| || not functional. functional but not operational. in store."
+      },
+      {
+        "row": 19703,
+        "asset_number": "UGIFT-002766",
+        "facility": "Kigoyera Health Centre III",
+        "item": "Nebulizer, Ultrasonic",
+        "source_remarks": "Not functional. Functioning but still in store.",
+        "classification_text": "|| || not functional. functioning but still in store."
+      },
+      {
+        "row": 76572,
+        "asset_number": "UGIFT-059675",
+        "facility": "Aganga Health Centre III",
+        "item": "Nebulizer, Ultrasonic",
+        "source_remarks": "Not functional. Still in the store. Good condition, still in store.",
+        "classification_text": "|| || not functional. still in the store. good condition, still in store."
+      },
+      {
+        "row": 88943,
+        "asset_number": "UGIFT-072047",
+        "facility": "Awei Health Centre III",
+        "item": "Weighing Scale, Infant",
+        "source_remarks": "Not functional. Good working condition and 1 is still in the store.",
+        "classification_text": "|| || not functional. good working condition and 1 is still in the store."
+      },
+      {
+        "row": 88944,
+        "asset_number": "UGIFT-072048",
+        "facility": "Awei Health Centre III",
+        "item": "Weighing Scale, Infant",
+        "source_remarks": "Not functional. Good working condition and 1 is still in the store.",
+        "classification_text": "|| || not functional. good working condition and 1 is still in the store."
+      },
+      {
+        "row": 90454,
+        "asset_number": "UGIFT-073558",
+        "facility": "Abia Health Centre III",
+        "item": "Wheel Chair",
+        "source_remarks": "Not functional. FUNCTIONING NON FUNCTIONING. GOOD CONDITION STILL IN STORE.",
+        "classification_text": "|| || not functional. functioning non functioning. good condition still in store."
+      },
+      {
+        "row": 90455,
+        "asset_number": "UGIFT-073559",
+        "facility": "Abia Health Centre III",
+        "item": "Wheel Chair",
+        "source_remarks": "Not functional. FUNCTIONING NON FUNCTIONING. GOOD CONDITION STILL IN STORE.",
+        "classification_text": "|| || not functional. functioning non functioning. good condition still in store."
+      }
+    ],
+    "other": [
+      {
+        "row": 20334,
+        "asset_number": "UGIFT-003397",
+        "facility": "Nakawala Health Centre III",
+        "item": "Glucometer",
+        "source_remarks": "Not functional. Not working because they were expired.",
+        "classification_text": "|| || not functional. not working because they were expired."
+      },
+      {
+        "row": 20335,
+        "asset_number": "UGIFT-003398",
+        "facility": "Nakawala Health Centre III",
+        "item": "Haemoglobin Meter, Digital",
+        "source_remarks": "Not functional. Were expired. Not working because it was expired.",
+        "classification_text": "|| || not functional. were expired. not working because it was expired."
+      },
+      {
+        "row": 22381,
+        "asset_number": "UGIFT-005444",
+        "facility": "Bulaga Health Centre III",
+        "item": "Resuscitator Manual, Adult, with all mask sizes",
+        "source_remarks": "Not functional. Functional but not in use. They have no patients who need them yet. No engravement.",
+        "classification_text": "|| || not functional. functional but not in use. they have no patients who need them yet. no engravement."
+      },
+      {
+        "row": 22382,
+        "asset_number": "UGIFT-005445",
+        "facility": "Bulaga Health Centre III",
+        "item": "Resuscitator Manual, Adult, with all mask sizes",
+        "source_remarks": "Not functional. Functional but not in use. They have no patients who need them yet. No engravement.",
+        "classification_text": "|| || not functional. functional but not in use. they have no patients who need them yet. no engravement."
+      },
+      {
+        "row": 54034,
+        "asset_number": "UGIFT-037126",
+        "facility": "Arua Regional Blood Bank",
+        "item": "thermometors for blood transportation and storage monitoring",
+        "source_remarks": "Not functional. All consumed. Not in use.",
+        "classification_text": "|| || not functional. all consumed. not in use."
+      },
+      {
+        "row": 54035,
+        "asset_number": "UGIFT-037127",
+        "facility": "Arua Regional Blood Bank",
+        "item": "thermometors for blood transportation and storage monitoring",
+        "source_remarks": "Not functional. All consumed. Not in use.",
+        "classification_text": "|| || not functional. all consumed. not in use."
+      },
+      {
+        "row": 54036,
+        "asset_number": "UGIFT-037128",
+        "facility": "Arua Regional Blood Bank",
+        "item": "thermometors for blood transportation and storage monitoring",
+        "source_remarks": "Not functional. All consumed. Not in use.",
+        "classification_text": "|| || not functional. all consumed. not in use."
+      },
+      {
+        "row": 54037,
+        "asset_number": "UGIFT-037129",
+        "facility": "Arua Regional Blood Bank",
+        "item": "thermometors for blood transportation and storage monitoring",
+        "source_remarks": "Not functional. All consumed. Not in use.",
+        "classification_text": "|| || not functional. all consumed. not in use."
+      }
+    ],
+    "skills": [
+      {
+        "row": 20385,
+        "asset_number": "UGIFT-003448",
+        "facility": "Nakawala Health Centre III",
+        "item": "Kangaroo Mother Care Chair",
+        "source_remarks": "Not functional. Not in use because they don’t know how to use it.",
+        "classification_text": "|| || not functional. not in use because they don't know how to use it."
+      },
+      {
+        "row": 26493,
+        "asset_number": "UGIFT-009585",
+        "facility": "Bubago Health Centre III",
+        "item": "Oxygen Concentrator, Duo Flow",
+        "source_remarks": "Not functional. Not operational. Received but facility Staff were not trained to use the equipment.",
+        "classification_text": "|| || not functional. not operational. received but facility staff were not trained to use the equipment."
+      },
+      {
+        "row": 72304,
+        "asset_number": "UGIFT-055407",
+        "facility": "Tekulu Health Centre III",
+        "item": "Desktop Computer",
+        "source_remarks": "Not functional. Not in use (1).This is because the health personnels do not know how to use it.",
+        "classification_text": "|| || not functional. not in use (1).this is because the health personnels do not know how to use it."
+      },
+      {
+        "row": 209683,
+        "asset_number": "UGIFT-192797",
+        "facility": "Christ the King Mpasana Seed Secondary School",
+        "item": "Fire extinguishers",
+        "source_remarks": "Not functional. Expired in June 2026. The administrators don’t know how to use them. ICT. ADMINISTRATION BLOCK.",
+        "classification_text": "|| || not functional. expired in june 2026. the administrators don't know how to use them. ict. administration block."
+      },
+      {
+        "row": 209684,
+        "asset_number": "UGIFT-192798",
+        "facility": "Christ the King Mpasana Seed Secondary School",
+        "item": "Fire extinguishers",
+        "source_remarks": "Not functional. Expired in June 2026. The administrators don’t know how to use them. ICT. ADMINISTRATION BLOCK.",
+        "classification_text": "|| || not functional. expired in june 2026. the administrators don't know how to use them. ict. administration block."
+      },
+      {
+        "row": 209685,
+        "asset_number": "UGIFT-192799",
+        "facility": "Christ the King Mpasana Seed Secondary School",
+        "item": "Fire extinguishers",
+        "source_remarks": "Not functional. Expired in June 2026. The administrators don’t know how to use them. ICT. ADMINISTRATION BLOCK.",
+        "classification_text": "|| || not functional. expired in june 2026. the administrators don't know how to use them. ict. administration block."
+      },
+      {
+        "row": 209686,
+        "asset_number": "UGIFT-192800",
+        "facility": "Christ the King Mpasana Seed Secondary School",
+        "item": "Fire extinguishers",
+        "source_remarks": "Not functional. Expired in June 2026. The administrators don’t know how to use them. ICT. ADMINISTRATION BLOCK.",
+        "classification_text": "|| || not functional. expired in june 2026. the administrators don't know how to use them. ict. administration block."
+      },
+      {
+        "row": 209687,
+        "asset_number": "UGIFT-192801",
+        "facility": "Christ the King Mpasana Seed Secondary School",
+        "item": "Fire extinguishers",
+        "source_remarks": "Not functional. Expired in June 2026. The administrators don’t know how to use them. ICT. ADMINISTRATION BLOCK.",
+        "classification_text": "|| || not functional. expired in june 2026. the administrators don't know how to use them. ict. administration block."
+      }
+    ],
+    "building": [
+      {
+        "row": 22883,
+        "asset_number": "UGIFT-005974",
+        "facility": "Bwesumbu Seed Secondary School",
+        "item": "Water Tanks",
+        "source_remarks": "Not functional. Not yet functional. Tanks are not yet fixed but there is a plan. The kitchen block is not in the contract.",
+        "classification_text": "|| || not functional. not yet functional. tanks are not yet fixed but there is a plan. the kitchen block is not in the contract. || [building asset]"
+      },
+      {
+        "row": 22895,
+        "asset_number": "UGIFT-005986",
+        "facility": "Bwesumbu Seed Secondary School",
+        "item": "Water Tanks",
+        "source_remarks": "Not functional. Not yet functional. Tanks are not yet fixed but there is a plan. The kitchen block is not in the contract.",
+        "classification_text": "|| || not functional. not yet functional. tanks are not yet fixed but there is a plan. the kitchen block is not in the contract. || [building asset]"
+      },
+      {
+        "row": 25470,
+        "asset_number": "UGIFT-008562",
+        "facility": "Budomero Health Centre III",
+        "item": "Bed, Pediatric Patient, With Mattress",
+        "source_remarks": "Not functional. Not in use because of limitted space. Not engraved.",
+        "classification_text": "|| || not functional. not in use because of limitted space. not engraved."
+      },
+      {
+        "row": 25471,
+        "asset_number": "UGIFT-008563",
+        "facility": "Budomero Health Centre III",
+        "item": "Bed, Pediatric Patient, With Mattress",
+        "source_remarks": "Not functional. Not in use because of limitted space. Not engraved.",
+        "classification_text": "|| || not functional. not in use because of limitted space. not engraved."
+      },
+      {
+        "row": 25472,
+        "asset_number": "UGIFT-008564",
+        "facility": "Budomero Health Centre III",
+        "item": "Bed, Pediatric Patient, With Mattress",
+        "source_remarks": "Not functional. Not in use because of limitted space. Not engraved.",
+        "classification_text": "|| || not functional. not in use because of limitted space. not engraved."
+      },
+      {
+        "row": 45085,
+        "asset_number": "UGIFT-028177",
+        "facility": "Omot Health Centre III",
+        "item": "Non Residential Buildings",
+        "source_remarks": "Not functional. In complete. Not use.",
+        "classification_text": "|| || not functional. in complete. not use. || [building asset]"
+      },
+      {
+        "row": 45417,
+        "asset_number": "UGIFT-028509",
+        "facility": "Okinya Health Centre III",
+        "item": "Non Residential Buildings",
+        "source_remarks": "Not functional. In complete. Not use.",
+        "classification_text": "|| || not functional. in complete. not use. || [building asset]"
+      },
+      {
+        "row": 48209,
+        "asset_number": "UGIFT-031301",
+        "facility": "Mamba Seed Secondary School",
+        "item": "School Desks",
+        "source_remarks": "Not functional. Still under construction have been delivered / installed. Construction remark concerns the building. Equipment retains its recorded availability date.",
+        "classification_text": "|| || not functional. still under construction have been delivered / installed. construction remark concerns the building. equipment retains its recorded availability date."
+      }
+    ],
+    "stolen_missing": [
+      {
+        "row": 24922,
+        "asset_number": "UGIFT-008013",
+        "facility": "Masaka Health Centre III",
+        "item": "Bowl, Kick",
+        "source_remarks": "Not functional. INCOMPELET PARTS AS WRE MISSING.",
+        "classification_text": "|| || not functional. incompelet parts as wre missing."
+      },
+      {
+        "row": 68977,
+        "asset_number": "UGIFT-052080",
+        "facility": "Paloga Seed Secondary School",
+        "item": "Desktop Computer",
+        "source_remarks": "Not functional. Good and functional 2 monitors stolen. All others in use.",
+        "classification_text": "|| || not functional. good and functional 2 monitors stolen. all others in use."
+      },
+      {
+        "row": 68978,
+        "asset_number": "UGIFT-052081",
+        "facility": "Paloga Seed Secondary School",
+        "item": "Desktop Computer",
+        "source_remarks": "Not functional. Good and functional 2 monitors stolen. All others in use.",
+        "classification_text": "|| || not functional. good and functional 2 monitors stolen. all others in use."
+      },
+      {
+        "row": 68979,
+        "asset_number": "UGIFT-052082",
+        "facility": "Paloga Seed Secondary School",
+        "item": "Desktop Computer",
+        "source_remarks": "Not functional. Good and functional 2 monitors stolen. All others in use.",
+        "classification_text": "|| || not functional. good and functional 2 monitors stolen. all others in use."
+      },
+      {
+        "row": 68980,
+        "asset_number": "UGIFT-052083",
+        "facility": "Paloga Seed Secondary School",
+        "item": "Desktop Computer",
+        "source_remarks": "Not functional. Good and functional 2 monitors stolen. All others in use.",
+        "classification_text": "|| || not functional. good and functional 2 monitors stolen. all others in use."
+      },
+      {
+        "row": 68981,
+        "asset_number": "UGIFT-052084",
+        "facility": "Paloga Seed Secondary School",
+        "item": "Desktop Computer",
+        "source_remarks": "Not functional. Good and functional 2 monitors stolen. All others in use.",
+        "classification_text": "|| || not functional. good and functional 2 monitors stolen. all others in use."
+      },
+      {
+        "row": 68982,
+        "asset_number": "UGIFT-052085",
+        "facility": "Paloga Seed Secondary School",
+        "item": "Desktop Computer",
+        "source_remarks": "Not functional. Good and functional 2 monitors stolen. All others in use.",
+        "classification_text": "|| || not functional. good and functional 2 monitors stolen. all others in use."
+      },
+      {
+        "row": 68983,
+        "asset_number": "UGIFT-052086",
+        "facility": "Paloga Seed Secondary School",
+        "item": "Desktop Computer",
+        "source_remarks": "Not functional. Good and functional 2 monitors stolen. All others in use.",
+        "classification_text": "|| || not functional. good and functional 2 monitors stolen. all others in use."
+      }
+    ],
+    "obsolete": [
+      {
+        "row": 29750,
+        "asset_number": "UGIFT-012842",
+        "facility": "Nyanja Health Centre III",
+        "item": "B.P. Machine (Aneroid wall mounted)",
+        "source_remarks": "Not functional. Spoilt. Beyond repair, need new replacement.",
+        "classification_text": "|| || not functional. spoilt. beyond repair, need new replacement."
+      },
+      {
+        "row": 29751,
+        "asset_number": "UGIFT-012843",
+        "facility": "Nyanja Health Centre III",
+        "item": "B.P. Machine (Aneroid wall mounted)",
+        "source_remarks": "Not functional. Spoilt. Beyond repair, need new replacement.Poor-quality items delivered.",
+        "classification_text": "|| || not functional. spoilt. beyond repair, need new replacement.poor-quality items delivered."
+      },
+      {
+        "row": 87907,
+        "asset_number": "UGIFT-071011",
+        "facility": "Abalang Health Centre III",
+        "item": "Refrigerator, Basic",
+        "source_remarks": "Not functional. It is old model.",
+        "classification_text": "|| || not functional. it is old model."
+      },
+      {
+        "row": 87908,
+        "asset_number": "UGIFT-071012",
+        "facility": "Abalang Health Centre III",
+        "item": "Refrigerator, Basic",
+        "source_remarks": "Not functional. It is old model.",
+        "classification_text": "|| || not functional. it is old model."
+      },
+      {
+        "row": 88047,
+        "asset_number": "UGIFT-071151",
+        "facility": "Abalang Health Centre III",
+        "item": "Haemoglobin Meter, Sahli",
+        "source_remarks": "Not functional. Out dated.",
+        "classification_text": "|| || not functional. out dated."
+      },
+      {
+        "row": 88048,
+        "asset_number": "UGIFT-071152",
+        "facility": "Abalang Health Centre III",
+        "item": "Haemoglobin Meter, Sahli",
+        "source_remarks": "Not functional. Out dated.",
+        "classification_text": "|| || not functional. out dated."
+      },
+      {
+        "row": 92147,
+        "asset_number": "UGIFT-075251",
+        "facility": "Aeket Health Centre III",
+        "item": "Haemoglobin Meter, Sahli",
+        "source_remarks": "Not functional. Not in use. It is Outdated.; Date review (5 October 2026): Restored original partial date precision; no exact day is stated. Original values and source evidence are retained in the date review audit.",
+        "classification_text": "|| || not functional. not in use. it is outdated."
+      }
+    ],
+    "installation": [
+      {
+        "row": 36919,
+        "asset_number": "UGIFT-020011",
+        "facility": "Wairasa Seed Secondary School",
+        "item": "Air Conditioner",
+        "source_remarks": "Not functional. Functional but not installed. Boxe in store.",
+        "classification_text": "|| || not functional. functional but not installed. boxe in store."
+      },
+      {
+        "row": 39411,
+        "asset_number": "UGIFT-022503",
+        "facility": "Mpiita Seed Secondary School",
+        "item": "CCTV Camera",
+        "source_remarks": "Not functional. Received but not installed.",
+        "classification_text": "|| || not functional. received but not installed."
+      },
+      {
+        "row": 44996,
+        "asset_number": "UGIFT-028088",
+        "facility": "Lapirin Health Centre III",
+        "item": "Oxygen Therapy Apparatus, Minimum 45Lcylinder",
+        "source_remarks": "Not functional. Still new and not in use. New not connected and not in use.",
+        "classification_text": "|| || not functional. still new and not in use. new not connected and not in use."
+      },
+      {
+        "row": 44997,
+        "asset_number": "UGIFT-028089",
+        "facility": "Lapirin Health Centre III",
+        "item": "Oxygen Therapy Apparatus, Minimum 45Lcylinder",
+        "source_remarks": "Not functional. Still new and not in use. New not connected and not in use.",
+        "classification_text": "|| || not functional. still new and not in use. new not connected and not in use."
+      },
+      {
+        "row": 48267,
+        "asset_number": "UGIFT-031359",
+        "facility": "Mamba Seed Secondary School",
+        "item": "LAN",
+        "source_remarks": "Not functional. Delivered but not installed.",
+        "classification_text": "|| || not functional. delivered but not installed. || [building asset]"
+      },
+      {
+        "row": 49360,
+        "asset_number": "UGIFT-032452",
+        "facility": "Ndhew Seed Secondary School",
+        "item": "Water Tanks",
+        "source_remarks": "Not functional. Not yet installed.",
+        "classification_text": "|| || not functional. not yet installed. || [building asset]"
+      },
+      {
+        "row": 50215,
+        "asset_number": "UGIFT-033307",
+        "facility": "Amei Seed Secondary School",
+        "item": "Water Tanks",
+        "source_remarks": "Not functional. Not yet installed.",
+        "classification_text": "|| || not functional. not yet installed. || [building asset]"
+      },
+      {
+        "row": 51519,
+        "asset_number": "UGIFT-034611",
+        "facility": "Kango Seed Secondary School",
+        "item": "Water Tanks",
+        "source_remarks": "Not functional. Not yet installed.",
+        "classification_text": "|| || not functional. not yet installed. || [building asset]"
+      }
+    ],
+    "not_received": [
+      {
+        "row": 98589,
+        "asset_number": "UGIFT-081693",
+        "facility": "Aliakamer Health Centre III",
+        "item": "Desk",
+        "source_remarks": "Not functional. Not in use. Not deliverd.",
+        "classification_text": "|| || not functional. not in use. not deliverd."
+      },
+      {
+        "row": 131797,
+        "asset_number": "UGIFT-114904",
+        "facility": "Buwembe Health Centre III",
+        "item": "Incubator",
+        "source_remarks": "Not functional. We were told by the focal person that they were not received.",
+        "classification_text": "|| || not functional. we were told by the focal person that they were not received."
+      },
+      {
+        "row": 205797,
+        "asset_number": "UGIFT-188911",
+        "facility": "Rubingo Health Centre III",
+        "item": "Instrument set, ENT Basic for HCIII",
+        "source_remarks": "Not functional. These sets were not received by the facility, and they were marked with an Asterix.",
+        "classification_text": "|| || not functional. these sets were not received by the facility, and they were marked with an asterix."
+      }
+    ],
+    "supplier_pending": [
+      {
+        "row": 205650,
+        "asset_number": "UGIFT-188764",
+        "facility": "Bukuuku Community Seed Secondary School",
+        "item": "Computer lab",
+        "source_remarks": "Not functional. Not yet functional. Work still in progress.",
+        "classification_text": "|| || not functional. not yet functional. work still in progress."
+      },
+      {
+        "row": 207502,
+        "asset_number": "UGIFT-190616",
+        "facility": "Kyarusozi Seed Secondary School",
+        "item": "Lockable shelves",
+        "source_remarks": "Not functional. 34 shelves in the finishing pahse.",
+        "classification_text": "|| || not functional. 34 shelves in the finishing pahse."
+      },
+      {
+        "row": 207503,
+        "asset_number": "UGIFT-190617",
+        "facility": "Kyarusozi Seed Secondary School",
+        "item": "Lockable shelves",
+        "source_remarks": "Not functional. 34 shelves in the finishing pahse.",
+        "classification_text": "|| || not functional. 34 shelves in the finishing pahse."
+      },
+      {
+        "row": 207504,
+        "asset_number": "UGIFT-190618",
+        "facility": "Kyarusozi Seed Secondary School",
+        "item": "Lockable shelves",
+        "source_remarks": "Not functional. 34 shelves in the finishing pahse.",
+        "classification_text": "|| || not functional. 34 shelves in the finishing pahse."
+      },
+      {
+        "row": 207505,
+        "asset_number": "UGIFT-190619",
+        "facility": "Kyarusozi Seed Secondary School",
+        "item": "Lockable shelves",
+        "source_remarks": "Not functional. 34 shelves in the finishing pahse.",
+        "classification_text": "|| || not functional. 34 shelves in the finishing pahse."
+      },
+      {
+        "row": 207506,
+        "asset_number": "UGIFT-190620",
+        "facility": "Kyarusozi Seed Secondary School",
+        "item": "Lockable shelves",
+        "source_remarks": "Not functional. 34 shelves in the finishing pahse.",
+        "classification_text": "|| || not functional. 34 shelves in the finishing pahse."
+      },
+      {
+        "row": 207507,
+        "asset_number": "UGIFT-190621",
+        "facility": "Kyarusozi Seed Secondary School",
+        "item": "Lockable shelves",
+        "source_remarks": "Not functional. 34 shelves in the finishing pahse.",
+        "classification_text": "|| || not functional. 34 shelves in the finishing pahse."
+      },
+      {
+        "row": 207508,
+        "asset_number": "UGIFT-190622",
+        "facility": "Kyarusozi Seed Secondary School",
+        "item": "Lockable shelves",
+        "source_remarks": "Not functional. 34 shelves in the finishing pahse.",
+        "classification_text": "|| || not functional. 34 shelves in the finishing pahse."
+      }
+    ]
+  },
+  "figure_pairs": [
+    [
+      "Recorded as not functional",
+      10230
+    ],
+    [
+      "Broken down or damaged",
+      1447
+    ],
+    [
+      "In storage: other",
+      851
+    ],
+    [
+      "Awaiting power or electricity",
+      247
+    ],
+    [
+      "Building, room or facility not ready (under construction, not commissioned or no space)",
+      178
+    ],
+    [
+      "In storage: stated functional or in good condition",
+      150
+    ],
+    [
+      "In storage: new, boxed or unopened",
+      85
+    ],
+    [
+      "Other stated reason",
+      79
+    ],
+    [
+      "Missing accessories, parts or consumables",
+      69
+    ],
+    [
+      "Stolen, lost or missing",
+      61
+    ],
+    [
+      "Awaiting installation or assembly",
+      54
+    ],
+    [
+      "Not yet handed over by the supplier (still being made)",
+      36
+    ],
+    [
+      "Users not trained or do not know how to use the asset",
+      15
+    ],
+    [
+      "Obsolete, condemned, disposed of or beyond repair",
+      7
+    ],
+    [
+      "Recorded as supplied but not seen or not verified at the visit",
+      4
+    ],
+    [
+      "Held elsewhere or transferred (district store or another facility)",
+      4
+    ],
+    [
+      "Not received or not delivered to the facility",
+      3
+    ]
+  ],
+  "note": "No-reason rows are explicit and remain in the denominator. This chart reports stated wording categories, not a confirmed broken/in-store condition partition."
+}

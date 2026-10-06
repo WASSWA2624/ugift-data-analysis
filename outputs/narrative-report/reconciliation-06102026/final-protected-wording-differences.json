@@ -1,0 +1,865 @@
+{
+  "sha256": "125293b7c47a45a1e8e506070f775292e31b093474a88881f745a6569954fdd1",
+  "range": "Sections 1 through and including 3.2",
+  "unchanged_paragraphs": [
+    {
+      "original_i": 57,
+      "final_i": 152
+    },
+    {
+      "original_i": 58,
+      "final_i": 153
+    },
+    {
+      "original_i": 59,
+      "final_i": 154
+    },
+    {
+      "original_i": 60,
+      "final_i": 155
+    },
+    {
+      "original_i": 61,
+      "final_i": 156
+    },
+    {
+      "original_i": 62,
+      "final_i": 157
+    },
+    {
+      "original_i": 63,
+      "final_i": 158
+    },
+    {
+      "original_i": 64,
+      "final_i": 159
+    },
+    {
+      "original_i": 65,
+      "final_i": 160
+    },
+    {
+      "original_i": 66,
+      "final_i": 161
+    },
+    {
+      "original_i": 67,
+      "final_i": 162
+    },
+    {
+      "original_i": 68,
+      "final_i": 163
+    },
+    {
+      "original_i": 69,
+      "final_i": 164
+    },
+    {
+      "original_i": 70,
+      "final_i": 165
+    },
+    {
+      "original_i": 71,
+      "final_i": 166
+    },
+    {
+      "original_i": 72,
+      "final_i": 167
+    },
+    {
+      "original_i": 73,
+      "final_i": 168
+    },
+    {
+      "original_i": 74,
+      "final_i": 169
+    },
+    {
+      "original_i": 75,
+      "final_i": 170
+    },
+    {
+      "original_i": 76,
+      "final_i": 171
+    },
+    {
+      "original_i": 77,
+      "final_i": 172
+    },
+    {
+      "original_i": 78,
+      "final_i": 173
+    },
+    {
+      "original_i": 79,
+      "final_i": 174
+    },
+    {
+      "original_i": 80,
+      "final_i": 175
+    },
+    {
+      "original_i": 81,
+      "final_i": 176
+    },
+    {
+      "original_i": 82,
+      "final_i": 177
+    },
+    {
+      "original_i": 83,
+      "final_i": 178
+    },
+    {
+      "original_i": 84,
+      "final_i": 179
+    },
+    {
+      "original_i": 85,
+      "final_i": 180
+    },
+    {
+      "original_i": 86,
+      "final_i": 181
+    },
+    {
+      "original_i": 87,
+      "final_i": 182
+    },
+    {
+      "original_i": 88,
+      "final_i": 183
+    },
+    {
+      "original_i": 89,
+      "final_i": 184
+    },
+    {
+      "original_i": 90,
+      "final_i": 185
+    },
+    {
+      "original_i": 91,
+      "final_i": 186
+    },
+    {
+      "original_i": 92,
+      "final_i": 187
+    },
+    {
+      "original_i": 93,
+      "final_i": 188
+    },
+    {
+      "original_i": 94,
+      "final_i": 189
+    },
+    {
+      "original_i": 95,
+      "final_i": 190
+    },
+    {
+      "original_i": 96,
+      "final_i": 191
+    },
+    {
+      "original_i": 97,
+      "final_i": 192
+    },
+    {
+      "original_i": 98,
+      "final_i": 193
+    },
+    {
+      "original_i": 99,
+      "final_i": 194
+    },
+    {
+      "original_i": 100,
+      "final_i": 195
+    },
+    {
+      "original_i": 101,
+      "final_i": 196
+    },
+    {
+      "original_i": 102,
+      "final_i": 197
+    },
+    {
+      "original_i": 103,
+      "final_i": 198
+    },
+    {
+      "original_i": 104,
+      "final_i": 199
+    },
+    {
+      "original_i": 105,
+      "final_i": 200
+    },
+    {
+      "original_i": 106,
+      "final_i": 201
+    },
+    {
+      "original_i": 107,
+      "final_i": 202
+    },
+    {
+      "original_i": 108,
+      "final_i": 203
+    },
+    {
+      "original_i": 109,
+      "final_i": 204
+    },
+    {
+      "original_i": 110,
+      "final_i": 205
+    },
+    {
+      "original_i": 111,
+      "final_i": 206
+    },
+    {
+      "original_i": 112,
+      "final_i": 207
+    },
+    {
+      "original_i": 113,
+      "final_i": 208
+    },
+    {
+      "original_i": 114,
+      "final_i": 209
+    },
+    {
+      "original_i": 115,
+      "final_i": 210
+    },
+    {
+      "original_i": 116,
+      "final_i": 211
+    },
+    {
+      "original_i": 117,
+      "final_i": 212
+    },
+    {
+      "original_i": 118,
+      "final_i": 213
+    },
+    {
+      "original_i": 119,
+      "final_i": 214
+    },
+    {
+      "original_i": 120,
+      "final_i": 215
+    },
+    {
+      "original_i": 121,
+      "final_i": 216
+    },
+    {
+      "original_i": 122,
+      "final_i": 217
+    },
+    {
+      "original_i": 123,
+      "final_i": 218
+    },
+    {
+      "original_i": 124,
+      "final_i": 219
+    },
+    {
+      "original_i": 125,
+      "final_i": 220
+    },
+    {
+      "original_i": 126,
+      "final_i": 221
+    },
+    {
+      "original_i": 127,
+      "final_i": 222
+    },
+    {
+      "original_i": 128,
+      "final_i": 223
+    },
+    {
+      "original_i": 129,
+      "final_i": 224
+    },
+    {
+      "original_i": 130,
+      "final_i": 225
+    },
+    {
+      "original_i": 131,
+      "final_i": 226
+    },
+    {
+      "original_i": 132,
+      "final_i": 227
+    },
+    {
+      "original_i": 133,
+      "final_i": 228
+    },
+    {
+      "original_i": 134,
+      "final_i": 229
+    },
+    {
+      "original_i": 135,
+      "final_i": 230
+    },
+    {
+      "original_i": 136,
+      "final_i": 231
+    },
+    {
+      "original_i": 137,
+      "final_i": 232
+    },
+    {
+      "original_i": 138,
+      "final_i": 233
+    },
+    {
+      "original_i": 139,
+      "final_i": 234
+    },
+    {
+      "original_i": 140,
+      "final_i": 235
+    },
+    {
+      "original_i": 143,
+      "final_i": 238
+    },
+    {
+      "original_i": 144,
+      "final_i": 239
+    },
+    {
+      "original_i": 145,
+      "final_i": 240
+    },
+    {
+      "original_i": 146,
+      "final_i": 241
+    },
+    {
+      "original_i": 147,
+      "final_i": 242
+    },
+    {
+      "original_i": 148,
+      "final_i": 243
+    },
+    {
+      "original_i": 150,
+      "final_i": 246
+    },
+    {
+      "original_i": 152,
+      "final_i": 247
+    },
+    {
+      "original_i": 153,
+      "final_i": 248
+    },
+    {
+      "original_i": 154,
+      "final_i": 249
+    },
+    {
+      "original_i": 155,
+      "final_i": 250
+    },
+    {
+      "original_i": 157,
+      "final_i": 252
+    },
+    {
+      "original_i": 158,
+      "final_i": 253
+    },
+    {
+      "original_i": 160,
+      "final_i": 255
+    },
+    {
+      "original_i": 163,
+      "final_i": 258
+    },
+    {
+      "original_i": 164,
+      "final_i": 259
+    },
+    {
+      "original_i": 167,
+      "final_i": 262
+    },
+    {
+      "original_i": 171,
+      "final_i": 267
+    },
+    {
+      "original_i": 173,
+      "final_i": 268
+    },
+    {
+      "original_i": 176,
+      "final_i": 271
+    },
+    {
+      "original_i": 178,
+      "final_i": 273
+    },
+    {
+      "original_i": 180,
+      "final_i": 275
+    },
+    {
+      "original_i": 182,
+      "final_i": 277
+    },
+    {
+      "original_i": 183,
+      "final_i": 278
+    },
+    {
+      "original_i": 186,
+      "final_i": 282
+    },
+    {
+      "original_i": 188,
+      "final_i": 283
+    },
+    {
+      "original_i": 190,
+      "final_i": 285
+    },
+    {
+      "original_i": 192,
+      "final_i": 288
+    },
+    {
+      "original_i": 194,
+      "final_i": 289
+    }
+  ],
+  "changed_paragraphs": [
+    {
+      "original_i": 149,
+      "final_i": 244,
+      "original_text": "Overall, the Seed Secondary Schools hold the majority of assets 63.4% (145,256), followed by Health Centres with 27.7% (63,432). MDAs hold 7.3% (16,663) and regional Blood Banks with 0.3% (602). In addition, some assets were found to have been reallocated by LGs from Health Center to hospitals such as Rukoki general hospital in Kasese Municipality.",
+      "final_text": "Overall, the Seed Secondary Schools hold the majority of assets 63.4% (145,256), followed by Health Centres with 27.7% (63,432). MDAs hold 7.3% (16,663) and regional Blood Banks with 0.3% (602). In addition, some assets were found to have been reallocated by LGs from Health Center to hospitals such as Rukoki general hospital in Kasese Municipality. Hospitals hold 3,067 assets (1.3%) and other local-government locations hold four (less than 0.1%).",
+      "inline_green_removed": false,
+      "entirely_green_source": false,
+      "word_changes": [
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "Hospitals hold 3,067 assets (1.3%) and other local-government locations hold four (less than 0.1%)."
+        }
+      ]
+    },
+    {
+      "original_i": 159,
+      "final_i": 254,
+      "original_text": "Verification also noted that over 7000 assets mainly in seed secondary schools and Health Centres had not been used requiring installation or the facility itself was not yet ready. Notable among the facilities include Lungulu Seed Secondary School in Nwoya District where desktop computers, a printer and UPS units were still boxed because the school was waiting for power connection. At Nansanga Seed Secondary School in Budaka, 27 of 28 desktop computers remained packed for lack of reliable power.",
+      "final_text": "Verification also noted that 13,520 assets, mainly in seed secondary schools and Health Centres, were classified as faulty and out of use. Some were awaiting installation or the facility itself was not yet ready. Notable among the facilities include Lungulu Seed Secondary School in Nwoya District where desktop computers, a printer and UPS units were still boxed because the school was waiting for power connection. At Nansanga Seed Secondary School in Budaka, 27 of 28 desktop computers remained packed for lack of reliable power.",
+      "inline_green_removed": false,
+      "entirely_green_source": false,
+      "word_changes": [
+        {
+          "operation": "replace",
+          "original": "over 7000 assets",
+          "final": "13,520 assets,"
+        },
+        {
+          "operation": "replace",
+          "original": "Centres had not been used requiring",
+          "final": "Centres, were classified as faulty and out of use. Some were awaiting"
+        }
+      ]
+    },
+    {
+      "original_i": 161,
+      "final_i": 257,
+      "original_text": "Figure 2: Reasons for equipment not in use",
+      "final_text": "Figure 2: Reasons for equipment not in use reported by facilities (156 respondents; multiple responses)",
+      "inline_green_removed": false,
+      "entirely_green_source": false,
+      "word_changes": [
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "reported by facilities (156 respondents; multiple responses)"
+        }
+      ]
+    },
+    {
+      "original_i": 168,
+      "final_i": 263,
+      "original_text": "The verification revealed that only 49,457 (22.8%) of the movable assets were engraved and 22,253 (9.7%) were not engraved. Out of the engraved assets, 23,434 (10.8%) carried the UgIFT marking on them as a form of identification.",
+      "final_text": "The verification revealed that 50,329 (22.0%) of the assets had usable identifiers and 178,695 (78.0%) had no usable identifier recorded. Of all assets, 22,253 (9.7%) had identifiers containing UgIFT or UGFT as a form of identification.",
+      "inline_green_removed": false,
+      "entirely_green_source": false,
+      "word_changes": [
+        {
+          "operation": "replace",
+          "original": "only 49,457 (22.8%)",
+          "final": "50,329 (22.0%)"
+        },
+        {
+          "operation": "delete",
+          "original": "movable",
+          "final": ""
+        },
+        {
+          "operation": "replace",
+          "original": "were engraved",
+          "final": "had usable identifiers"
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "178,695 (78.0%) had no usable identifier recorded. Of all assets,"
+        },
+        {
+          "operation": "replace",
+          "original": "were not engraved. Out of the engraved assets, 23,434 (10.8%) carried the",
+          "final": "had identifiers containing"
+        },
+        {
+          "operation": "replace",
+          "original": "marking on them",
+          "final": "or UGFT"
+        }
+      ]
+    },
+    {
+      "original_i": 169,
+      "final_i": 264,
+      "original_text": "Identification varied at the different asset locations. Identifiers are recorded for 30.3% of MDA records, 24.5% of school records and 15.0% of health-centre records. Among the MDAs, the Ministry of Education and Sports accounts for most of the ministry assets that were not engraved, and these were mainly the TELA handsets and tablets. The details of asset identification are provided in figure 3.",
+      "final_text": "Identification varied at the different asset locations. Identifiers are recorded for 30.3% of MDA records, 24.5% of school records and 15.0% of health-centre records. Among the MDAs, the Ministry of Education and Sports accounts for most of the ministry assets without usable identifiers, and these were mainly the TELA handsets and tablets. The details of asset identification are provided in figure 3.",
+      "inline_green_removed": false,
+      "entirely_green_source": false,
+      "word_changes": [
+        {
+          "operation": "replace",
+          "original": "that were not engraved,",
+          "final": "without usable identifiers,"
+        }
+      ]
+    },
+    {
+      "original_i": 177,
+      "final_i": 272,
+      "original_text": "Overall, the assets across the different institutions had a recorded value of UGX Based on the straight-line depreciation method, the depreciation value was and the net book value was UGX as at 30th September values vary by classification with MDAs at UGX 31,822,306,095, Blood Banks UGX 1,451,584,715, Seed Secondary Schools UGX 678,247,549,426 and Health Centers UGX 259,662,849,164 as indicated in the table 2.",
+      "final_text": "Overall, the 229,024 assets across the different institutions had an available recorded value of UGX 996,812,628,890. Based on the straight-line depreciation method, available accumulated depreciation was UGX 165,185,197,307 and available net book value was UGX 595,801,587,531 as at 30th September 2026. Recorded values vary by institution, with MDAs at UGX 32,054,743,836, Blood Banks at UGX 1,503,720,926, Seed Secondary Schools at UGX 700,242,561,371 and Health Centres at UGX 260,692,452,291, as indicated in table 2. Hospital and other local-government assets account for the remaining UGX 2,319,150,466. These available totals cover different populations; Appendix A reconciles cost less depreciation to net book value for assets with complete accounting information.",
+      "inline_green_removed": true,
+      "entirely_green_source": false,
+      "word_changes": [
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "229,024"
+        },
+        {
+          "operation": "replace",
+          "original": "a",
+          "final": "an available"
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "996,812,628,890."
+        },
+        {
+          "operation": "replace",
+          "original": "the",
+          "final": "available accumulated"
+        },
+        {
+          "operation": "delete",
+          "original": "value",
+          "final": ""
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "UGX 165,185,197,307"
+        },
+        {
+          "operation": "replace",
+          "original": "the",
+          "final": "available"
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "595,801,587,531"
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "2026. Recorded"
+        },
+        {
+          "operation": "replace",
+          "original": "classification",
+          "final": "institution,"
+        },
+        {
+          "operation": "replace",
+          "original": "31,822,306,095,",
+          "final": "32,054,743,836,"
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "at"
+        },
+        {
+          "operation": "replace",
+          "original": "1,451,584,715,",
+          "final": "1,503,720,926,"
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "at"
+        },
+        {
+          "operation": "replace",
+          "original": "678,247,549,426",
+          "final": "700,242,561,371"
+        },
+        {
+          "operation": "replace",
+          "original": "Centers",
+          "final": "Centres at"
+        },
+        {
+          "operation": "replace",
+          "original": "259,662,849,164",
+          "final": "260,692,452,291,"
+        },
+        {
+          "operation": "delete",
+          "original": "the",
+          "final": ""
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "Hospital and other local-government assets account for the remaining UGX 2,319,150,466. These available totals cover different populations; Appendix A reconciles cost less depreciation to net book value for assets with complete accounting information."
+        }
+      ]
+    },
+    {
+      "original_i": 184,
+      "final_i": 279,
+      "original_text": "The exercise verified 16,668 assets of the different categories across all the thirteen Ministries and agencies. In terms of categorization, the exercise verified 15,136 ICT equipment including desktop computers, laptops, tablets, Uninterruptible Power Supply (UPS), 76 Vehicles and motorcycles, 99 Furniture and fittings and 1,357 small equipment including shredders, binders, projectors among others.",
+      "final_text": "The exercise recorded 16,663 assets of the different categories across all the thirteen asset-holding Ministries and agencies. In terms of categorization, the exercise recorded 15,192 ICT equipment items including desktop computers, laptops, tablets and Uninterruptible Power Supply (UPS) units, 77 transport items, 99 furniture and fittings, 48 other classified assets, 1,235 items outside fixed-asset classification and 12 unclassified entries.",
+      "inline_green_removed": true,
+      "entirely_green_source": false,
+      "word_changes": [
+        {
+          "operation": "replace",
+          "original": "verified 16,668",
+          "final": "recorded 16,663"
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "asset-holding"
+        },
+        {
+          "operation": "replace",
+          "original": "verified 15,136",
+          "final": "recorded 15,192"
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "items"
+        },
+        {
+          "operation": "replace",
+          "original": "tablets,",
+          "final": "tablets and"
+        },
+        {
+          "operation": "replace",
+          "original": "(UPS), 76 Vehicles",
+          "final": "(UPS) units, 77 transport items, 99 furniture"
+        },
+        {
+          "operation": "replace",
+          "original": "motorcycles, 99 Furniture",
+          "final": "fittings, 48 other classified assets, 1,235 items outside fixed-asset classification"
+        },
+        {
+          "operation": "replace",
+          "original": "fittings and 1,357 small equipment including shredders, binders, projectors among others.",
+          "final": "12 unclassified entries."
+        }
+      ]
+    },
+    {
+      "original_i": 185,
+      "final_i": 280,
+      "original_text": "By location, most assets (64.7%) were at MoES, MoWE and MAAIF while PPDA was found with only five assets including three Lenovo think pad Laptops, one HP Laser Jet Color Printer and one Samsung Galaxy tablet as indicated in figure 4 below.",
+      "final_text": "By location, most MDA assets (94.6%) were at MoES, MoWE and MAAIF while PPDA was found with only five assets including three Lenovo think pad Laptops, one HP Laser Jet Color Printer and one Samsung Galaxy tablet as indicated in figure 4 below.",
+      "inline_green_removed": true,
+      "entirely_green_source": false,
+      "word_changes": [
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "MDA"
+        },
+        {
+          "operation": "replace",
+          "original": "(64.7%)",
+          "final": "(94.6%)"
+        }
+      ]
+    },
+    {
+      "original_i": 189,
+      "final_i": 284,
+      "original_text": "At MDA level, apart from Ministry of Health that had one double cabin boarded off and three broken laptops at the Office of the Prime minister, the rest of the assets 16,664 (99.9%) were in good condition and were in use. The Ministry of Education and Sports holds 10,783 of these assets, mainly TELA handsets and tablets and were all in use at the different schools across the country. LGFC and MoPS indicated that they never received UgIFT assets.",
+      "final_text": "At MDA level, apart from sixteen faulty assets at Ministry of Works and Transport, one faulty double-cabin pickup at Ministry of Health and three faulty laptops at the Office of the Prime Minister, the rest of the assets, 16,643 (99.9%), were recorded as functional and in use. The Ministry of Education and Sports holds 10,783 of these assets, mainly TELA handsets and tablets, all recorded as in use at the different schools across the country. LGFC and MoPS indicated that they never received UgIFT assets.",
+      "inline_green_removed": true,
+      "entirely_green_source": false,
+      "word_changes": [
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "sixteen faulty assets at Ministry of Works and Transport, one faulty double-cabin pickup at"
+        },
+        {
+          "operation": "delete",
+          "original": "that had one double cabin boarded off",
+          "final": ""
+        },
+        {
+          "operation": "replace",
+          "original": "broken",
+          "final": "faulty"
+        },
+        {
+          "operation": "replace",
+          "original": "minister,",
+          "final": "Minister,"
+        },
+        {
+          "operation": "replace",
+          "original": "assets 16,664 (99.9%)",
+          "final": "assets, 16,643 (99.9%),"
+        },
+        {
+          "operation": "replace",
+          "original": "in good condition",
+          "final": "recorded as functional"
+        },
+        {
+          "operation": "delete",
+          "original": "were",
+          "final": ""
+        },
+        {
+          "operation": "replace",
+          "original": "tablets and were",
+          "final": "tablets,"
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "recorded as"
+        }
+      ]
+    },
+    {
+      "original_i": 191,
+      "final_i": 286,
+      "original_text": "At MDA level, there were 15,401 movable assets, of which 4,843 (31.4%) were engraved with 4,730 assets (30.7%) bearing the UgIFT marking. Majority of assets 10,558 (68.6%) were not engraved. The figure 5 below shows the identification status of the assets at the different MDAs.",
+      "final_text": "At MDA level, there were 16,663 asset records, of which 5,045 (30.3%) had usable identifiers, with 4,925 assets (29.6%) bearing UgIFT or UGFT in the tag field and 120 (0.7%) carrying another identifier. The majority of assets, 11,618 (69.7%), had no usable tag recorded. The figure 5 below shows the identification status of the assets at the different MDAs. These tag-field counts do not confirm physical engraving.",
+      "inline_green_removed": true,
+      "entirely_green_source": false,
+      "word_changes": [
+        {
+          "operation": "replace",
+          "original": "15,401 movable assets,",
+          "final": "16,663 asset records,"
+        },
+        {
+          "operation": "replace",
+          "original": "4,843 (31.4%) were engraved",
+          "final": "5,045 (30.3%) had usable identifiers,"
+        },
+        {
+          "operation": "replace",
+          "original": "4,730",
+          "final": "4,925"
+        },
+        {
+          "operation": "replace",
+          "original": "(30.7%)",
+          "final": "(29.6%)"
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "UgIFT or UGFT in"
+        },
+        {
+          "operation": "replace",
+          "original": "UgIFT marking. Majority",
+          "final": "tag field and 120 (0.7%) carrying another identifier. The majority"
+        },
+        {
+          "operation": "replace",
+          "original": "assets 10,558 (68.6%) were not engraved.",
+          "final": "assets, 11,618 (69.7%), had no usable tag recorded."
+        },
+        {
+          "operation": "insert",
+          "original": "",
+          "final": "These tag-field counts do not confirm physical engraving."
+        }
+      ]
+    },
+    {
+      "original_i": 195,
+      "final_i": 290,
+      "original_text": "Financial value of assets: recorded costs total UGX 32,054,743,836 across 16,651 of 16,663 records. Accumulated depreciation totals UGX 19,787,511,232 and net book value totals UGX 10,265,924,979 at 30 September 2026. Net book value remains unavailable for 96 records. The table below gives the category breakdown and identifies any unavailable amounts.",
+      "final_text": "Financial value of assets: recorded costs total UGX 32,054,743,836 across 16,651 of 16,663 records. Accumulated depreciation totals UGX 19,787,511,232 and net book value totals UGX 10,265,924,979 at 30 September 2026. Net book value remains unavailable for 96 records. Table 2 also identifies unavailable amounts.",
+      "inline_green_removed": false,
+      "entirely_green_source": true,
+      "word_changes": [
+        {
+          "operation": "replace",
+          "original": "The table below gives the category breakdown and",
+          "final": "Table 2 also"
+        },
+        {
+          "operation": "delete",
+          "original": "any",
+          "final": ""
+        }
+      ]
+    }
+  ]
+}

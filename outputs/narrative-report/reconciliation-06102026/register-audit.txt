@@ -1,0 +1,86 @@
+READ-ONLY CANONICAL REGISTER AUDIT
+Source SHA256: 72e5d11f3211cdc4b9a04b47d290d815d2a743027e67ae45405d57138e7f3691
+Independent recomputation matched prior cache: True
+Asset Register!A2:BL229025
+All 229,024 current REF rows including expensed, not recognized, not capitalized and unresolved entries. Every row has one unit. No exclusions for valuation, categories or item count.
+REF source workbook hash verified identical to prior read-only row snapshot. Values independently aggregated using Decimal; no source workbook or report edits.
+Exact national MDA books and regional blood-bank books first; then current LOCATION_SEGMENT3 names classified hospital, health centre, school or other. These are not programme-list coverage counts.
+Register categories C/D/E retained, including recorded classification errors. Financial fine item groups use existing description crosswalk AX/B and limited BA refinements; they reconcile exactly to their institutional totals.
+Sum numeric saved M, AK, AL and BI separately. Missing/text Pending calculation is unavailable rather than zero. Complete accounting comparison uses G CAPITALIZED/CIP only, with all M/AK/BI numeric. Its cost-depreciation=NBV and NBV/cost ratio refer to one matching subset.
+BK Functional/Faulty; AU YES/NO. These fields agree exactly. Faulty encompasses multiple forms of non-use; cannot support a separate validated broken/in-store partition.
+AP with placeholders removed. UgIFT/UGFT lexical check removes spaces, slashes, underscores and hyphens. Presence of an identifier does not independently prove physical engraving.
+M styles 2 (orange/other-government comparison) and 5 (blue/same-government comparison) mark existing borrowed estimates; style4 unfilled. Do not reinterpret these estimates as verified procurement/market values.
+Land asset count only. Textual site dimensions are retained as source wording; no authoritative aggregate land-area field exists and dimensions must not be turned into site valuation or total area without a consistent unit.
+
+HEADLINE METRICS
+{
+  "rows": 229024,
+  "unit_sum": 229024,
+  "cost_numeric_rows": 227938,
+  "cost_sum": 996812628889.6,
+  "cost_zero_rows": 20260,
+  "accumulated_depreciation_numeric_rows": 206012,
+  "accumulated_depreciation_sum": 165185197307.0,
+  "accumulated_depreciation_zero_rows": 25593,
+  "ytd_depreciation_numeric_rows": 206012,
+  "ytd_depreciation_sum": 10793939755,
+  "ytd_depreciation_zero_rows": 43576,
+  "net_book_value_numeric_rows": 206008,
+  "net_book_value_sum": 595801587530.9434,
+  "net_book_value_zero_rows": 48546,
+  "functional": 215504,
+  "faulty": 13520,
+  "in_use_yes": 215504,
+  "in_use_no": 13520,
+  "capitalized": 200704,
+  "cip": 298,
+  "no_tag_recorded": 178695,
+  "rows_not_classified_as_buildings_or_land": 219233,
+  "movable_no_tag_recorded": 169564,
+  "all_three_financial_numeric_rows": 205960,
+  "matched_numeric_cost_sum": 806069720207.9833,
+  "matched_numeric_dep_sum": 165185197307.0,
+  "matched_numeric_nbv_sum": 595801587530.9434,
+  "complete_recognized_rows": 180730,
+  "complete_recognized_cost_sum": 760986784837.9434,
+  "complete_recognized_dep_sum": 165185197307.0,
+  "complete_recognized_nbv_sum": 595801587530.9434,
+  "complete_recognized_reconciliation_failures": 0,
+  "other_identifier": 28076,
+  "movable_other_identifier": 27501,
+  "cost_unavailable_rows": 1086,
+  "accumulated_depreciation_unavailable_rows": 23012,
+  "ytd_depreciation_unavailable_rows": 23012,
+  "net_book_value_unavailable_rows": 23016,
+  "ugift_text_identifier": 22253,
+  "movable_ugift_text_identifier": 22168
+}
+
+GROUP TOTALS
+Ministries and agencies: 16,663; Functional 16,643; Faulty 20; UGIFT tag 4,925; other tag 120; no tag 11,618; available cost 32054743835.82; depreciation 19787511232; NBV 10265924978.88
+Health centres: 63,432; Functional 57,759; Faulty 5,673; UGIFT tag 3,824; other tag 5,717; no tag 53,891; available cost 260692452290.56000000503; depreciation 39211094699.99999999992; NBV 189403577196.84333333939
+Regional blood banks: 602; Functional 578; Faulty 24; UGIFT tag 26; other tag 50; no tag 526; available cost 1503720926; depreciation 553688842; NBV 826632084
+Hospitals on local-government books: 3,067; Functional 3,055; Faulty 12; UGIFT tag 0; other tag 62; no tag 3,005; available cost 1888014728.0000000003; depreciation 778948461; NBV 912032764.0000000001
+Schools: 145,256; Functional 137,465; Faulty 7,791; UGIFT tag 13,478; other tag 22,123; no tag 109,655; available cost 700242561371.22000060498; depreciation 104574530246.00000001; NBV 394241708595.22000062546
+Other local-government or unassigned locations: 4; Functional 4; Faulty 0; UGIFT tag 0; other tag 4; no tag 0; available cost 431135738; depreciation 279423826; NBV 151711912
+
+DATE COUNTS
+{
+  "month_only": 2987,
+  "within_programme_window": 197721,
+  "status_or_other_text": 16815,
+  "pre_commencement": 3345,
+  "purchase_after_service": 787,
+  "year_only": 7701,
+  "year_period": 455
+}
+
+ESTIMATED COSTS
+{"rows": 166593, "sum": 821736918303.73, "share_of_available_cost": 82.43644738119984}
+
+DISCREPANCIES AND REPORT RECONCILIATION
+The executive summary uses the correct current 229,024 total. School table0 before section3.2 uses 145,376 and the old six-category taxonomy; the current school group totals145,256. Its stale 137,585 in-use number must become137,465 when retaining the current school denominator. It should not preserve unsupported broken/store splits as current physically verified condition measures.
+The mixed old/new MDA prose contains duplicate earlier figures. Revised present financial tables match these independently reconciled values, including available-amount limitations.
+Available cost minus separately available depreciation does not equal separately available NBV. The matching CAPITALIZED/CIP subset contains 180,730 complete records: cost UGX 760,986,784,837.9434 less depreciation UGX 165,185,197,307 equals NBV UGX 595,801,587,530.9434. No missing amount may be fabricated as zero.
+Do not exclude18,218 EXPENSED rows from the report population unless specifically authorized: the stopped analysis in tmp/report-excluding-expensed-20261006 is not a report basis.
+Survey, programme-facility, completion, location-name exception and photograph counts originate in facility/field evidence, not this asset-register workbook. Keep these evidence definitions intact rather than forcing them to229,024 assets.

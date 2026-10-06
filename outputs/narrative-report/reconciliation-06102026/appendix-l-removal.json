@@ -1,0 +1,27 @@
+{
+  "source_sha256": "167911fcdfddb87f069628c94584e3ffc0a7a39d976dd84384cf6aa3675901b7",
+  "appendix_start_body_index": 761,
+  "removed_blocks": [
+    {
+      "tag": "p",
+      "text": "Appendix L Responses to reviewer comments"
+    },
+    {
+      "tag": "p",
+      "text": "Table 68 summarises the issues raised, the corresponding findings and any further action required."
+    },
+    {
+      "tag": "p",
+      "text": "Table 68: Responses to reviewer comments"
+    },
+    {
+      "tag": "tbl",
+      "text": "CommentSubjectDispositionOlder 59MoFPED broken assetsCurrent Functional/Faulty codes recalculated; status and source remarks distinguished in the MoFPED section.Older 64Financial analysis by asset typeFinancial schedules by classification and by detailed asset type provided for every MDA, each blood bank, health centres and schools, with costs, depreciation, NBV and a matched NBV/cost ratio.Older 68MoWT percentagesCounts and denominators refreshed from the current MoWT book.Older 74MoES condition and identificationSeparate current status and identifier tables retained and refreshed.Older 78MAAIF condition and identificationSeparate current tables and full-record denominators supplied.Older 81MoH other assetsBinding machines, shredders and helmet records reconciled to the current book. Three named power items traced to Kyamwinula on the Tororo Municipal Council book; programme attribution and the further three implied items remain unresolved.Older 94NEMA percentagesRecomputed against the current NEMA book.Older 96PPDA costsCurrent recorded values used, with cost-estimate and date limitations disclosed.Older 99OAG percentagesCurrent condition and tag-field percentages calculated consistently.Older 103Photocopier terminologyThe MoLG figure uses Photocopiers. Shared identifiers are disclosed to avoid treating two asset records as two confirmed physical items.Older 144School identification tableRedundant movable-assets column removed; category population and identifier fields reconciled.Older 177Facility reconciliation39 distinct exceptions reconciled; renamed matched sites excluded from that exception total.Newer 102Blood-bank analysisArua, Hoima and Soroti have separate availability, status, identification and category-finance analyses.Newer 111Land detailThe four health-centre land entries are listed with recorded costs and available evidence.Newer 127Additional health photographsThree views of Benet Health Centre III show unfinished works during the visit on 27 August 2026.Newer 175Obsolete and unserviceable assetsTwo blood-pressure machines at Nyanja Health Centre III were reported beyond repair. Disposal approval remains unconfirmed.Newer 176Missing and unrecorded assetsExamples distinguish items not received, access restrictions, stolen components, missing parts and conflicting accounts.Newer 179Recommendation per challengeThe action schedule covers all ten challenge themes, responsible officers and evidence required to confirm completion."
+    },
+    {
+      "tag": "p",
+      "text": ""
+    }
+  ],
+  "output_sha256": "a13e26d7cc9d1ff572729848a9615818abdc60dd8b63529563fc7d64b95599ae"
+}

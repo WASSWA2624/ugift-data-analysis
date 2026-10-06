@@ -1,0 +1,100 @@
+{
+  "sha256": "5030efd88ac0fcc9c1a4374eb270109efaeedd852767191bcbc57c692b89a791",
+  "review_basis_sha256": "125293b7c47a45a1e8e506070f775292e31b093474a88881f745a6569954fdd1",
+  "protected_nonempty_paragraphs_reviewed": 124,
+  "exactly_unchanged_paragraphs": 113,
+  "metric_and_coverage_paragraphs": 11,
+  "metric_and_coverage_changes": [
+    {
+      "original_i": 149,
+      "final_i": 243,
+      "reason": "Complete the institution population so the narrative totals tally.",
+      "expected_text": "Overall, the Seed Secondary Schools hold the majority of assets 63.4% (145,256), followed by Health Centres with 27.7% (63,432). MDAs hold 7.3% (16,663) and regional Blood Banks with 0.3% (602). In addition, some assets were found to have been reallocated by LGs from Health Center to hospitals such as Rukoki general hospital in Kasese Municipality. Hospitals hold 3,067 assets (1.3%) and other local-government locations hold four (less than 0.1%).",
+      "actual_text": "Overall, the Seed Secondary Schools hold the majority of assets 63.4% (145,256), followed by Health Centres with 27.7% (63,432). MDAs hold 7.3% (16,663) and regional Blood Banks with 0.3% (602). In addition, some assets were found to have been reallocated by LGs from Health Center to hospitals such as Rukoki general hospital in Kasese Municipality. Hospitals hold 3,067 assets (1.3%) and other local-government locations hold four (less than 0.1%).",
+      "matches_completed_word_review": true
+    },
+    {
+      "original_i": 159,
+      "final_i": 253,
+      "reason": "Correct the non-use total and distinguish recorded Faulty status from waiting for installation.",
+      "expected_text": "Verification also noted that 13,520 assets, mainly in seed secondary schools and Health Centres, were classified as faulty and out of use. Some were awaiting installation or the facility itself was not yet ready. Notable among the facilities include Lungulu Seed Secondary School in Nwoya District where desktop computers, a printer and UPS units were still boxed because the school was waiting for power connection. At Nansanga Seed Secondary School in Budaka, 27 of 28 desktop computers remained packed for lack of reliable power.",
+      "actual_text": "Verification also noted that 13,520 assets, mainly in seed secondary schools and Health Centres, were classified as faulty and out of use. Some were awaiting installation or the facility itself was not yet ready. Notable among the facilities include Lungulu Seed Secondary School in Nwoya District where desktop computers, a printer and UPS units were still boxed because the school was waiting for power connection. At Nansanga Seed Secondary School in Budaka, 27 of 28 desktop computers remained packed for lack of reliable power.",
+      "matches_completed_word_review": true
+    },
+    {
+      "original_i": 161,
+      "final_i": 256,
+      "reason": "Identify the survey respondent denominator and multiple-response basis of Figure 2.",
+      "expected_text": "Figure 2: Reasons for equipment not in use reported by facilities (156 respondents; multiple responses)",
+      "actual_text": "Figure 2: Reasons for equipment not in use reported by facilities (156 respondents; multiple responses)",
+      "matches_completed_word_review": true
+    },
+    {
+      "original_i": 168,
+      "final_i": 262,
+      "reason": "Correct identifier counts, all-asset denominator, and UgIFT/UGFT classification.",
+      "expected_text": "The verification revealed that 50,329 (22.0%) of the assets had usable identifiers and 178,695 (78.0%) had no usable identifier recorded. Of all assets, 22,253 (9.7%) had identifiers containing UgIFT or UGFT as a form of identification.",
+      "actual_text": "The verification revealed that 50,329 (22.0%) of the assets had usable identifiers and 178,695 (78.0%) had no usable identifier recorded. Of all assets, 22,253 (9.7%) had identifiers containing UgIFT or UGFT as a form of identification.",
+      "matches_completed_word_review": true
+    },
+    {
+      "original_i": 169,
+      "final_i": 263,
+      "reason": "Align the MoES description to recorded identifier availability rather than inferred physical engraving.",
+      "expected_text": "Identification varied at the different asset locations. Identifiers are recorded for 30.3% of MDA records, 24.5% of school records and 15.0% of health-centre records. Among the MDAs, the Ministry of Education and Sports accounts for most of the ministry assets without usable identifiers, and these were mainly the TELA handsets and tablets. The details of asset identification are provided in figure 3.",
+      "actual_text": "Identification varied at the different asset locations. Identifiers are recorded for 30.3% of MDA records, 24.5% of school records and 15.0% of health-centre records. Among the MDAs, the Ministry of Education and Sports accounts for most of the ministry assets without usable identifiers, and these were mainly the TELA handsets and tablets. The details of asset identification are provided in figure 3.",
+      "matches_completed_word_review": true
+    },
+    {
+      "original_i": 177,
+      "final_i": 271,
+      "reason": "Correct financial totals, date, institutional population, available coverage and matched-accounting qualifications.",
+      "expected_text": "Overall, the 229,024 assets across the different institutions had an available recorded value of UGX 996,812,628,890. Based on the straight-line depreciation method, available accumulated depreciation was UGX 165,185,197,307 and available net book value was UGX 595,801,587,531 as at 30th September 2026. Recorded values vary by institution, with MDAs at UGX 32,054,743,836, Blood Banks at UGX 1,503,720,926, Seed Secondary Schools at UGX 700,242,561,371 and Health Centers at UGX 260,692,452,291, as indicated in the table 2. Hospital and other local-government assets account for the remaining UGX 2,319,150,466. These available totals cover different populations; Appendix A reconciles cost less depreciation to net book value for assets with complete accounting information.",
+      "actual_text": "Overall, the 229,024 assets across the different institutions had an available recorded value of UGX 996,812,628,890. Based on the straight-line depreciation method, available accumulated depreciation was UGX 165,185,197,307 and available net book value was UGX 595,801,587,531 as at 30th September 2026. Recorded values vary by institution, with MDAs at UGX 32,054,743,836, Blood Banks at UGX 1,503,720,926, Seed Secondary Schools at UGX 700,242,561,371 and Health Centers at UGX 260,692,452,291, as indicated in the table 2. Hospital and other local-government assets account for the remaining UGX 2,319,150,466. These available totals cover different populations; Appendix A reconciles cost less depreciation to net book value for assets with complete accounting information.",
+      "matches_completed_word_review": true
+    },
+    {
+      "original_i": 184,
+      "final_i": 278,
+      "reason": "Correct MDA record count and accounting-category quantities/coverage.",
+      "expected_text": "The exercise recorded 16,663 assets of the different categories across all the thirteen asset-holding Ministries and agencies. In terms of categorization, the exercise recorded 15,192 ICT equipment items including desktop computers, laptops, tablets and Uninterruptible Power Supply (UPS) units, 77 transport items, 99 furniture and fittings, 48 other classified assets, 1,235 items outside fixed-asset classification and 12 unclassified entries.",
+      "actual_text": "The exercise recorded 16,663 assets of the different categories across all the thirteen asset-holding Ministries and agencies. In terms of categorization, the exercise recorded 15,192 ICT equipment items including desktop computers, laptops, tablets and Uninterruptible Power Supply (UPS) units, 77 transport items, 99 furniture and fittings, 48 other classified assets, 1,235 items outside fixed-asset classification and 12 unclassified entries.",
+      "matches_completed_word_review": true
+    },
+    {
+      "original_i": 185,
+      "final_i": 279,
+      "reason": "Correct MDA aggregate percentage and state its denominator.",
+      "expected_text": "By location, most MDA assets (94.6%) were at MoES, MoWE and MAAIF while PPDA was found with only five assets including three Lenovo think pad Laptops, one HP Laser Jet Color Printer and one Samsung Galaxy tablet as indicated in figure 4 below.",
+      "actual_text": "By location, most MDA assets (94.6%) were at MoES, MoWE and MAAIF while PPDA was found with only five assets including three Lenovo think pad Laptops, one HP Laser Jet Color Printer and one Samsung Galaxy tablet as indicated in figure 4 below.",
+      "matches_completed_word_review": true
+    },
+    {
+      "original_i": 189,
+      "final_i": 283,
+      "reason": "Correct faulty/functional totals and distinguish register condition from physical confirmation.",
+      "expected_text": "At MDA level, apart from sixteen faulty assets at Ministry of Works and Transport, one faulty double-cabin pickup at Ministry of Health and three faulty laptops at the Office of the Prime minister, the rest of the assets, 16,643 (99.9%), were recorded as functional and in use. The Ministry of Education and Sports holds 10,783 of these assets, mainly TELA handsets and tablets, all recorded as in use at the different schools across the country. LGFC and MoPS indicated that they never received UgIFT assets.",
+      "actual_text": "At MDA level, apart from sixteen faulty assets at Ministry of Works and Transport, one faulty double-cabin pickup at Ministry of Health and three faulty laptops at the Office of the Prime minister, the rest of the assets, 16,643 (99.9%), were recorded as functional and in use. The Ministry of Education and Sports holds 10,783 of these assets, mainly TELA handsets and tablets, all recorded as in use at the different schools across the country. LGFC and MoPS indicated that they never received UgIFT assets.",
+      "matches_completed_word_review": true
+    },
+    {
+      "original_i": 191,
+      "final_i": 285,
+      "reason": "Correct MDA identifier quantities, denominator and tag-field coverage.",
+      "expected_text": "At MDA level, there were 16,663 asset records, of which 5,045 (30.3%) had usable identifiers, with 4,925 assets (29.6%) bearing UgIFT or UGFT in the tag field and 120 (0.7%) carrying another identifier. The majority of assets, 11,618 (69.7%), had no usable tag recorded. The figure 5 below shows the identification status of the assets at the different MDAs. These tag-field counts do not confirm physical engraving.",
+      "actual_text": "At MDA level, there were 16,663 asset records, of which 5,045 (30.3%) had usable identifiers, with 4,925 assets (29.6%) bearing UgIFT or UGFT in the tag field and 120 (0.7%) carrying another identifier. The majority of assets, 11,618 (69.7%), had no usable tag recorded. The figure 5 below shows the identification status of the assets at the different MDAs. These tag-field counts do not confirm physical engraving.",
+      "matches_completed_word_review": true
+    },
+    {
+      "original_i": 195,
+      "final_i": 289,
+      "reason": "Authorized Table 2 reference identifying unavailable financial amounts.",
+      "expected_text": "Financial value of assets: recorded costs total UGX 32,054,743,836 across 16,651 of 16,663 records. Accumulated depreciation totals UGX 19,787,511,232 and net book value totals UGX 10,265,924,979 at 30 September 2026. Net book value remains unavailable for 96 records. Table 2 also identifies unavailable amounts.",
+      "actual_text": "Financial value of assets: recorded costs total UGX 32,054,743,836 across 16,651 of 16,663 records. Accumulated depreciation totals UGX 19,787,511,232 and net book value totals UGX 10,265,924,979 at 30 September 2026. Net book value remains unavailable for 96 records. Table 2 also identifies unavailable amounts.",
+      "matches_completed_word_review": true
+    }
+  ],
+  "unexpected_metric_paragraph_changes": [],
+  "unexpected_nonmetric_paragraph_changes": [],
+  "no_remaining_protected_nonmetric_wording_changes": true
+}

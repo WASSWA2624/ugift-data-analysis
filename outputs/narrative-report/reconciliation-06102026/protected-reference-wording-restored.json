@@ -1,0 +1,30 @@
+{
+  "source_sha256": "dbbde3f5555a6961bb71877f705ac445d092d9ad8019232e72339dfb4f600db0",
+  "paragraphs": [
+    {
+      "old_text": "Overall, 215,504 assets constituting 94.1%, were classified as functional and in use, while 13,520 (5.9%) were classified as faulty and out of use. The detailed analysis of asset condition is indicated in Table 1.",
+      "text": "Overall, 215,504 assets constituting 94.1%, were classified as functional and in use, while 13,520 (5.9%) were classified as faulty and out of use. The detailed analysis of asset condition is indicated in table 1."
+    },
+    {
+      "old_text": "As indicated in Table 1, most of the deployed assets were already in service while some were in store and still in good condition but not in use. This was attributed mainly to some localized challenges such as power, incomplete structures, untrained staff, among others. Some assets were broken mainly furniture in Seed Secondary Schools and require repair. ",
+      "text": "As indicated in table 1 above, most of the deployed assets were already in service while some were in store and still in good condition but not in use. This was attributed mainly to some localized challenges such as power, incomplete structures, untrained staff, among others. Some assets were broken mainly furniture in Seed Secondary Schools and require repair. "
+    },
+    {
+      "old_text": "Identification varied at the different asset locations. Identifiers are recorded for 30.3% of MDA records, 24.5% of school records and 15.0% of health-centre records. Among the MDAs, the Ministry of Education and Sports accounts for most of the ministry assets without usable identifiers, and these were mainly the TELA handsets and tablets. The details of asset identification are provided in Figure 3.",
+      "text": "Identification varied at the different asset locations. Identifiers are recorded for 30.3% of MDA records, 24.5% of school records and 15.0% of health-centre records. Among the MDAs, the Ministry of Education and Sports accounts for most of the ministry assets without usable identifiers, and these were mainly the TELA handsets and tablets. The details of asset identification are provided in figure 3."
+    },
+    {
+      "old_text": "Overall, the 229,024 assets across the different institutions had an available recorded value of UGX 996,812,628,890. Based on the straight-line depreciation method, available accumulated depreciation was UGX 165,185,197,307 and available net book value was UGX 595,801,587,531 as at 30th September 2026. Recorded values vary by institution, with MDAs at UGX 32,054,743,836, Blood Banks at UGX 1,503,720,926, Seed Secondary Schools at UGX 700,242,561,371 and Health Centres at UGX 260,692,452,291, as indicated in Table 2. Hospital and other local-government assets account for the remaining UGX 2,319,150,466. These available totals cover different populations; Appendix A reconciles cost less depreciation to net book value for assets with complete accounting information.",
+      "text": "Overall, the 229,024 assets across the different institutions had an available recorded value of UGX 996,812,628,890. Based on the straight-line depreciation method, available accumulated depreciation was UGX 165,185,197,307 and available net book value was UGX 595,801,587,531 as at 30th September 2026. Recorded values vary by institution, with MDAs at UGX 32,054,743,836, Blood Banks at UGX 1,503,720,926, Seed Secondary Schools at UGX 700,242,561,371 and Health Centres at UGX 260,692,452,291, as indicated in table 2. Hospital and other local-government assets account for the remaining UGX 2,319,150,466. These available totals cover different populations; Appendix A reconciles cost less depreciation to net book value for assets with complete accounting information."
+    },
+    {
+      "old_text": "By location, most MDA assets (94.6%) were at MoES, MoWE and MAAIF while PPDA was found with only five assets including three Lenovo ThinkPad laptops, one HP LaserJet printer and one Samsung Galaxy tablet as indicated in Figure 4.",
+      "text": "By location, most MDA assets (94.6%) were at MoES, MoWE and MAAIF while PPDA was found with only five assets including three Lenovo ThinkPad laptops, one HP LaserJet printer and one Samsung Galaxy tablet as indicated in figure 4 below."
+    },
+    {
+      "old_text": "At MDA level, there were 16,663 asset records, of which 5,045 (30.3%) had usable identifiers, with 4,925 assets (29.6%) bearing UgIFT or UGFT in the tag field and 120 (0.7%) carrying another identifier. The majority of assets, 11,618 (69.7%), had no usable tag recorded. Figure 5 shows the identification status of the assets at the different MDAs. These tag-field counts do not confirm physical engraving.",
+      "text": "At MDA level, there were 16,663 asset records, of which 5,045 (30.3%) had usable identifiers, with 4,925 assets (29.6%) bearing UgIFT or UGFT in the tag field and 120 (0.7%) carrying another identifier. The majority of assets, 11,618 (69.7%), had no usable tag recorded. Figure 5 below shows the identification status of the assets at the different MDAs. These tag-field counts do not confirm physical engraving."
+    }
+  ],
+  "output_sha256": "b2933d389b3b2c3f957effbb50a9211a43c9799cb8b19d2b28a696425613f8f4"
+}

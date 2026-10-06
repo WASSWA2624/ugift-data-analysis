@@ -1,0 +1,13 @@
+{
+  "tables": 74,
+  "native_charts": 23,
+  "strike_count": 0,
+  "highlight_colours": [
+    "green"
+  ],
+  "chart_checks": [],
+  "unresolved_package_targets": [],
+  "toc_title_present": true,
+  "bookmark_errors": false,
+  "sha256": "5030efd88ac0fcc9c1a4374eb270109efaeedd852767191bcbc57c692b89a791"
+}

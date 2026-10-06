@@ -1,0 +1,83 @@
+{
+  "583": {
+    "table_index": 58,
+    "body_index": 583,
+    "changes": [
+      {
+        "row": 1,
+        "column": 1,
+        "actual": "623.689",
+        "expected": "623.690",
+        "reason": "Recorded source amount or matched-subset ratio"
+      }
+    ]
+  },
+  "613": {
+    "table_index": 68,
+    "body_index": 613,
+    "changes": [
+      {
+        "row": 7,
+        "column": 3,
+        "actual": "30.712",
+        "expected": "30.713",
+        "reason": "Recorded source amount or matched-subset ratio"
+      }
+    ]
+  },
+  "156": {
+    "table_index": 0,
+    "body_index": 156,
+    "replace_rows": [
+      [
+        "Institution group",
+        "Assets",
+        "Functional and in use",
+        "Faulty and not in use"
+      ],
+      [
+        "Schools",
+        "145,256",
+        "137,465",
+        "7,791"
+      ],
+      [
+        "Health centres",
+        "63,432",
+        "57,759",
+        "5,673"
+      ],
+      [
+        "Ministries and agencies",
+        "16,663",
+        "16,643",
+        "20"
+      ],
+      [
+        "Regional blood banks",
+        "602",
+        "578",
+        "24"
+      ],
+      [
+        "Hospitals on local-government books",
+        "3,067",
+        "3,055",
+        "12"
+      ],
+      [
+        "Other local-government or unassigned locations",
+        "4",
+        "4",
+        "0"
+      ],
+      [
+        "Total",
+        "229,024",
+        "215,504",
+        "13,520"
+      ]
+    ],
+    "reason": "Stale school-only table with145,376 denominator and obsolete broken/store partition appears in overall findings; restore matching overall institutional condition table and reconcile to229,024."
+  }
+}

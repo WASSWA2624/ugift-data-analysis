@@ -1,0 +1,26 @@
+{
+  "source_sha256": "faa13685213d29252b710ff1ef01dbcb8df4aef3b102e2a35f8c05302b730ed2",
+  "render_directory": "D:/coding/ugift-data-analysis/outputs/narrative-report/reconciliation-06102026/final-reference-render",
+  "review_method": "Each page inspected individually at original image resolution.",
+  "page_numbers_are": "Physical PDF pages, one-based; printed page numbers are one lower.",
+  "pages": [
+    {"page":62,"result":"pass","content":"Table 38 and Appendix B Table 39; captions with tables, readable, full green retained."},
+    {"page":63,"result":"pass","content":"Table 40 and correction rules; no clipping, overlap or orphan caption."},
+    {"page":64,"result":"pass","content":"Appendix C and Table 41 start; readable full-section green."},
+    {"page":65,"result":"pass","content":"Table 41 continuation with repeated header; Table 42 caption and start stay together."},
+    {"page":66,"result":"pass","content":"Table 42 continuation, repeated header and readable rows."},
+    {"page":67,"result":"pass","content":"Table 42 end; Appendix E/Table 43 caption and first rows together."},
+    {"page":68,"result":"pass","content":"Table 43 continuation, repeated header, no overlap/clipping."},
+    {"page":69,"result":"pass","content":"Table 43 continuation, repeated header, no overlap/clipping."},
+    {"page":70,"result":"pass","content":"Table 43 continuation, repeated header, no overlap/clipping."},
+    {"page":71,"result":"pass","content":"Table 43 continuation, repeated header, no overlap/clipping."},
+    {"page":72,"result":"pass","content":"Appendices F/G and Tables 44/45; captions attached, complete full-section green."},
+    {"page":73,"result":"pass","content":"Table 45 continuation with repeated header; Appendix H/Table 46 caption/start together."},
+    {"page":74,"result":"pass","content":"Table 46 continuation, repeated header and readable photographic schedule."},
+    {"page":75,"result":"pass","content":"Table 46 continuation, repeated header and readable final rows."},
+    {"page":76,"result":"pass","content":"Appendix I/Table 47 caption and start together, no clipping."},
+    {"page":77,"result":"pass","content":"Table 47 continuation and Appendix J/Table 48; no orphan captions. Table 49 introductory paragraph ends the page; caption/table start follow on page 78."}
+  ],
+  "issues": [],
+  "repairs_required": false
+}

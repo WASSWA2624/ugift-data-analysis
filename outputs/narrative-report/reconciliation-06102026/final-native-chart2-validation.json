@@ -1,0 +1,42 @@
+{
+  "report": "D:\\coding\\ugift-data-analysis\\outputs\\narrative-report\\ugift-working-report-06102026-1344-reconciled.docx",
+  "report_sha256": "574772b54a16828bdff7c0d27516e5b2e07f5e9dfd0ad8cdb66161733acf722e",
+  "checked_chart_count": 1,
+  "cache_workbook_cells_checked": 13,
+  "cache_workbook_discrepancies": [],
+  "recipe_discrepancies": [],
+  "charts": [
+    {
+      "part": "word/charts/chart2.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet1.xlsx",
+      "series": [
+        {
+          "label": "Respondent facilities",
+          "categories": [
+            "Power supply",
+            "Training or skills",
+            "Installation",
+            "Incomplete buildings or space",
+            "Accessories or consumables",
+            "Staffing"
+          ],
+          "values": [
+            71.0,
+            52.0,
+            32.0,
+            27.0,
+            15.0,
+            9.0
+          ],
+          "sum": 206.0
+        }
+      ],
+      "following_text": [
+        "Figure 2: Reasons for equipment not in use reported by facilities (156 respondents; multiple responses)",
+        "Source: Primary data analysis",
+        "In addition, broken desks and stools were in classrooms and stores at Seed schools in Namisindwa and Napak. At Arua Regional Blood Bank, six blood pressure machines were recorded as damaged or not functional. The information above is depicted in some of the photos presented below.",
+        "Delivery bed with a torn mattress cover at a health centre, Busia District (Bukedi)Pedal suction unit marked MAJANJI H/C III still in its packing, recorded as not in use for lack of technical knowledge, Majanji Health Centre III, Busia District (Bukedi)Stacked desks, chairs and stools, some recorded as broken and none engraved, at Napak Seed Secondary School, Napak District (Karamoja)Cracked health centre block above collapsed ground, Bulambuli District (Bugisu)Broken desk frame at a seed secondary school, Namisindwa District (Bugisu)Empty ICT and library block with a few chairs and items kept in one corner at Iriiri Seed Secondary School, Napak District (Karamoja), not yet in use while the school remained with the contractorStained and peeling ceiling at a health centre, Sironko District (Bugisu)Flood-affected older health facility at Butiaba, Buliisa District (Bunyoro)Desktop computers, a printer and UPS units still boxed in the store at Lungulu Seed Secondary School, Nwoya District (Acholi), awaiting a power connection for installationLaboratory stools and desks stored and not yet in use at Butungama Seed Secondary School, Ntoroko District (Tooro), where the school buildings were still under constructionHP computer sets stacked in store with cables still bundled and not installed at Bumufuni Seed Secondary School, Bulambuli District (Bugisu)beds and screens stacked in storage at a health centre, Kagadi District (Bunyoro)Boxed projector, air conditioner and other equipment in store at King Solomon Seed Secondary School, Kagadi District (Bunyoro), kept boxed because the school was still under constructionBoxed handheld pulse oximeters at Kibiri Health Centre III, Makindye-Ssabagabo Municipal Council (Buganda), where equipment was still being arranged after the facility opened on 31 August 2026"
+      ]
+    }
+  ]
+}

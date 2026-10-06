@@ -1,0 +1,33 @@
+{
+  "report_sha256": "167911fcdfddb87f069628c94584e3ffc0a7a39d976dd84384cf6aa3675901b7",
+  "tables_checked": 40,
+  "cells_checked": 1288,
+  "failed_cells": 0,
+  "corrections": {},
+  "missing_total_rows": [
+    {
+      "table_index": 54,
+      "body_index": 678,
+      "recommended_total_row": [
+        "Total\n3,067 records; NBV 2,795/3,067",
+        "1,888.015*",
+        "778.948*",
+        "912.033*",
+        "53.9%"
+      ],
+      "note": "Optional total row only: all existing category rows already reconcile to unrounded source totals; rounding may produce UGX 1,000 differences in printed sums."
+    },
+    {
+      "table_index": 55,
+      "body_index": 682,
+      "recommended_total_row": [
+        "Total\n4 records; NBV 4/4",
+        "431.136",
+        "279.424",
+        "151.712",
+        "35.2%"
+      ],
+      "note": "Optional total row only: all existing category rows already reconcile to unrounded source totals; rounding may produce UGX 1,000 differences in printed sums."
+    }
+  ]
+}

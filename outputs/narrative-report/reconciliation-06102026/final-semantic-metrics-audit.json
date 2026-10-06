@@ -1,0 +1,33 @@
+{
+  "report_sha256": "0e60324464482f931c0dc12d4358d17d2774d43d78438fc98da3ac2b1365058e",
+  "counts": {
+    "total": 229024,
+    "known_cost_unresolved_nbv": 21978,
+    "positive_cost_excluded_accounting_treatment": 5336,
+    "overlap_unresolved_and_excluded": 0,
+    "complete_recognized": 180730,
+    "recorded_numeric_salvage_values": 229024,
+    "nonzero_salvage_values": 0,
+    "complete_recognized_reconciliation_failures": 0
+  },
+  "sums": {
+    "available_cost": "996812628889.60000061031",
+    "complete_cost": "760986784837.94333397487",
+    "complete_depreciation": "165185197307.00000000992",
+    "complete_nbv": "595801587530.94333396495",
+    "known_cost_unresolved_nbv": "190742908681.61666663537",
+    "positive_cost_excluded_accounting_treatment": "45082935370.04000000007"
+  },
+  "recognized_cost_bridge_difference": "0E-11",
+  "complete_cost_less_depreciation_minus_nbv": "0E-11",
+  "semantic_conclusions": [
+    "Current all-record counts, institution counts, condition counts, identifiers, dates and available finance totals agree across narrative, tables and charts.",
+    "Known-cost unresolved-NBV records and positive-cost expensed or unrecognized records are separate populations; the financial bridge supports the complete recognized cohort.",
+    "Complete recognized financial comparison is distinct from separately available financial columns; reported NBV/cost percentages use matching accounting populations.",
+    "Register condition codes distinguish in-use flags but do not independently identify physically broken versus stored or uninstalled assets; Appendix C discloses this.",
+    "Survey bases 477, 469, 494, 463, 478 and 505 answer different questions; percentages and scope disclosures agree with current survey summaries.",
+    "Figure 2 uses answer-only reasons from 156 reporting facilities; other question responses use their own stated bases. Categories overlap.",
+    "Programme-list construction status and documented outstanding works are different evidence measures, and the report explicitly prevents addition.",
+    "No actionable cross-section numeric contradiction found."
+  ]
+}

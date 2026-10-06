@@ -1,0 +1,1531 @@
+{
+  "source_sha256": "28e101e9253577ee811167e568cf3cce115511a8ec5b0a636cfba040c2e61e5a",
+  "prose_changes": [
+    {
+      "body_index": 177,
+      "text": "Overall, the 229,024 assets across the different institutions had a recorded value of UGX 996,812,628,890. Based on the straight-line depreciation method, available accumulated depreciation was UGX 165,185,197,307 and available net book value was UGX 595,801,587,531 as at 30th September 2026. Recorded values vary by institution, with MDAs at UGX 32,054,743,836, Blood Banks at UGX 1,503,720,926, Seed Secondary Schools at UGX 700,242,561,371 and Health Centres at UGX 260,692,452,291, as indicated in table 2. The table also includes hospital and other local-government assets. Available costs, depreciation and net book values cover different populations; the financial reconciliation appendix gives the matched accounting population."
+    },
+    {
+      "body_index": 184,
+      "text": "The exercise recorded 16,663 assets of the different categories across all the thirteen asset-holding Ministries and agencies. In terms of categorization, the exercise recorded 15,192 ICT equipment items including desktop computers, laptops, tablets and Uninterruptible Power Supply (UPS) units, 77 transport items, 99 furniture and fittings, 48 other classified assets, 1,235 items outside fixed-asset classification and 12 unclassified entries."
+    },
+    {
+      "body_index": 185,
+      "text": "By location, most MDA assets (94.6%) were at MoES, MoWE and MAAIF while PPDA was found with only five assets including three Lenovo ThinkPad laptops, one HP LaserJet printer and one Samsung Galaxy tablet as indicated in figure 4 below."
+    },
+    {
+      "body_index": 186,
+      "text": "Figure 4: UgFT Assets available at each of the verified MDAs"
+    },
+    {
+      "body_index": 189,
+      "text": "At MDA level, apart from sixteen faulty assets at Ministry of Works and Transport, one faulty double-cabin pickup at Ministry of Health and three faulty laptops at the Office of the Prime Minister, the rest of the assets, 16,643 (99.9%), were recorded as functional and in use. The Ministry of Education and Sports holds 10,783 of these assets, mainly TELA handsets and tablets, all recorded as in use at the different schools across the country. LGFC and MoPS indicated that they never received UgIFT assets."
+    },
+    {
+      "body_index": 191,
+      "text": "At MDA level, there were 16,663 asset records, of which 5,045 (30.3%) had usable identifiers, with 4,925 assets (29.6%) bearing UgIFT or UGFT in the tag field and 120 (0.7%) carrying another identifier. The majority of assets, 11,618 (69.7%), had no usable tag recorded. Figure 5 below shows the identification status of the assets at the different MDAs. These tag-field counts do not confirm physical engraving."
+    },
+    {
+      "body_index": 198,
+      "text": "Asset availability: The ministry keeps a UgIFT asset register and the consolidated register for all MDAs that received UgIFT assets. A total of 458 assets were recorded at the ministry including 230 ICT items, 99 furniture and fittings, 21 transport items, 37 other classified assets, 65 items outside fixed-asset classification and six unclassified entries. The main items were office chairs and desks, desktop computers, tablets and 20 Toyota Hilux double-cabin pickups."
+    },
+    {
+      "body_index": 199,
+      "text": "Condition and functionality: All 458 assets (100.0%) were recorded as functional and in use, and none was classified as faulty."
+    },
+    {
+      "body_index": 201,
+      "text": "Marking and identification: A total of 282 assets (61.6%) had usable identifiers and 176 (38.4%) had no usable tag recorded. Of all 458 assets, 247 (53.9%) had UgIFT or UGFT in the tag field and 35 (7.6%) carried another identifier. The 20 double-cabin pickups were identified by their registration numbers rather than UgIFT tag text. These tag-field counts do not confirm physical engraving."
+    },
+    {
+      "body_index": 202,
+      "text": "Financial Value of assets: The recorded value of the ministry's UgIFT assets is UGX 6,204,318,000. Accumulated depreciation is UGX 4,312,193,629 and net book value is UGX 1,785,677,771 at 30 September 2026. Net book value remains unavailable for 20 records; the figures sum only available amounts."
+    },
+    {
+      "body_index": 207,
+      "text": "Asset availability: The Ministry did not provide a UgIFT Asset Register. The MoWT register contained 87 assets, of which 69 ICT items were mainly desktop computers, monitors, uninterruptible power supply (UPS) units, video-conferencing equipment, printers and photocopiers; one Toyota Hilux pickup; sixteen items outside fixed-asset classification; and one unclassified entry. The sixteen items outside fixed-asset classification were keyboards. The unclassified entry was entered as Ministry of Local Government, as presented in Figure 6. Computer components are recorded separately and are included in these totals."
+    },
+    {
+      "body_index": 208,
+      "text": "Figure 6: Assets verified at MoWT"
+    },
+    {
+      "body_index": 210,
+      "text": "Condition and functionality: Of the 87 assets, 71 (81.6%) were recorded as functional and in use; sixteen (18.4%) were recorded as faulty and not in use."
+    },
+    {
+      "body_index": 211,
+      "text": "Marking and Identification: Of the 87 assets, 79 (90.8%) had usable identifiers, with 77 (88.5%) having UgIFT or UGFT in the tag field and two (2.3%) carrying another identifier; eight (9.2%) had no usable tag recorded."
+    },
+    {
+      "body_index": 212,
+      "text": "Financial Value of assets: The recorded value was established as UGX 455,932,376 as presented in Table 4. Accumulated depreciation is UGX 326,484,882 and net book value is UGX 115,311,494 at 30 September 2026. Net book value remains unavailable for 19 records; the figures sum only available amounts."
+    },
+    {
+      "body_index": 213,
+      "text": "Table 4: MoWT asset values by category"
+    },
+    {
+      "body_index": 217,
+      "text": "Asset availability: The verification at the Ministry of Education and Sports (MoES) established that the ministry had 10,783 assets. All the assets are ICT equipment and these include 9,324 TELA handsets, 1,001 tablets (976 of them inspection tablets), 456 laptops, a photocopier and a printer. The breakdown of these assets is shown below in figure 7. Teacher, Effectiveness and Learner Achievement (TELA) is the system, financed by UgIFT, that the ministry uses to monitor attendance and performance in schools; the handsets and inspection tablets are deployed in local governments and remain MoES assets."
+    },
+    {
+      "body_index": 219,
+      "text": "Figure 7: Assets verified at MoES"
+    },
+    {
+      "body_index": 220,
+      "text": "All the 10,783 assets (100.0%) are recorded as functional and in use. All the 456 laptops are recorded as functional and in use. Their identification status is shown in table 6."
+    },
+    {
+      "body_index": 221,
+      "text": "Table 5: Condition and use of assets at MoES"
+    },
+    {
+      "body_index": 223,
+      "text": "Marking and Identification: Of the 10,783 assets, 458 (4.2%) had UgIFT or UGFT in the tag field, while 10,325 (95.8%) had no usable tag recorded. None of the handset or tablet records has a usable tag recorded; the tag fields do not confirm physical engraving."
+    },
+    {
+      "body_index": 224,
+      "text": "Table 6: Recorded tag content of assets at MoES"
+    },
+    {
+      "body_index": 226,
+      "text": "Financial Value of assets: The recorded value is UGX 14,925,128,359, the highest among the MDAs. Accumulated depreciation is UGX 10,607,476,704 and net book value is UGX 4,317,651,655 at 30 September 2026."
+    },
+    {
+      "body_index": 231,
+      "text": "Asset availability: The team recorded UgIFT assets at the Ministry of Agriculture, Animal Industry and Fisheries (MAAIF) and established that it held 2,045 assets. These included 1,236 ICT equipment items, two transport items and 807 others, comprising 797 outside fixed-asset classification, five other classified assets and five unclassified entries. The ICT items were mainly 819 tablets, 211 computers (162 desktop CPU entries and 49 laptops), 149 monitors and 21 printers. The breakdown of the assets mentioned above is shown in figure 8."
+    },
+    {
+      "body_index": 233,
+      "text": "Figure 8: Assets verified: MAAIF"
+    },
+    {
+      "body_index": 234,
+      "text": "All 2,045 assets (100.0%) are recorded as functional and in use. All 211 computers and 819 tablets are recorded as functional and in use. Identification is reported separately in table 9."
+    },
+    {
+      "body_index": 235,
+      "text": "Table 8: Condition and use of assets at MAAIF"
+    },
+    {
+      "body_index": 237,
+      "text": "Marking and Identification: Of the 2,045 assets, 1,232 (60.2%) had usable identifiers, 1,228 (60.0%) with UgIFT or UGFT in the tag field and four (0.2%) with another identifier; 813 (39.8%) had no usable tag recorded. The denominator includes all ministry records, including items outside fixed-asset classification, and the tag fields do not confirm physical engraving."
+    },
+    {
+      "body_index": 238,
+      "text": "Table 9: Recorded tag content of assets at MAAIF"
+    },
+    {
+      "body_index": 240,
+      "text": "Financial Value of assets: The recorded value was UGX 2,856,556,593. Accumulated depreciation is UGX 1,380,059,505 and net book value is UGX 1,403,429,899 at 30 September 2026. Net book value remains unavailable for 7 records; the figures sum only available amounts."
+    },
+    {
+      "body_index": 246,
+      "text": "Asset availability: A total of 260 assets were recorded. Of the 260 assets, 31 were classified as ICT equipment, 25 as transport equipment (motor vehicles and motorcycles), six as other classified assets and 198 as items outside fixed-asset classification, as indicated in Figure 9."
+    },
+    {
+      "body_index": 249,
+      "text": "Figure 9: Assets verified at MoH"
+    },
+    {
+      "body_index": 250,
+      "text": "Condition and functionality: The assets recorded as functional and in use were 259 (99.6%). Only one asset, a double-cabin pickup, was recorded as faulty and not in use."
+    },
+    {
+      "body_index": 251,
+      "text": "Marking and Identification: Out of the 260 assets, 32 (12.3%) had usable identifiers while 228 (87.7%) had no usable tag recorded. There were fourteen (5.4%) assets with UgIFT or UGFT in the tag field and eighteen (6.9%) with other identifiers. These tag fields do not confirm physical engraving."
+    },
+    {
+      "body_index": 252,
+      "text": "Financial Value of assets: The MoH assets had a recorded value of UGX 1,186,689,609. Accumulated depreciation is UGX 441,202,460 and net book value is UGX 384,551,313 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts."
+    },
+    {
+      "body_index": 258,
+      "text": "Asset availability: Office of the Prime Minister received 10 assets which were all HP laptop computers as shown in Figure 10."
+    },
+    {
+      "body_index": 260,
+      "text": "Figure 10: Assets verified: OPM"
+    },
+    {
+      "body_index": 261,
+      "text": "Condition and functionality: Seven assets (70.0%) were recorded as functional and in use. Three (30.0%) were recorded as faulty and out of use."
+    },
+    {
+      "body_index": 262,
+      "text": "Marking and identification: All the ten laptops (100.0%) had UgIFT or UGFT in the tag field."
+    },
+    {
+      "body_index": 263,
+      "text": "Financial Value of assets: The recorded value of these computers in OPM was UGX 53,535,300. Accumulated depreciation is UGX 48,181,770 and net book value is UGX 5,353,530 at 30 September 2026."
+    },
+    {
+      "body_index": 267,
+      "text": "3.3.7 Ministry of Water and Environment"
+    },
+    {
+      "body_index": 268,
+      "text": "Asset availability: The Asset Verification at the Ministry of Water and Environment found out that the ministry keeps a general register which does not conform to IFMIS Standards. The register recorded 2,939 assets, of which 2,782 were classified as ICT equipment and 157 outside fixed-asset classification. The assets received by the Ministry included 2,368 tablets, of which 2,344 were Euron tablets; computers and related monitors, keyboards and UPS units; and 31 laptops. The Ministry also received sixteen real-time kinematic GPS machines. Computer components are recorded separately and are included in these totals."
+    },
+    {
+      "body_index": 269,
+      "text": "However, other assets were identified which included 157 keyboards recorded with Dell OptiPlex computers, seven survey units described as ground-penetrating radar equipment, 3 Samsung Galaxy Tab S9 tablets, 2 Lenovo ThinkBook notebooks, 1 Kyocera heavy-duty copier, 1 Huawei 65-inch infrared screen and 1 UPS unit. These items are already included in the ministry total."
+    },
+    {
+      "body_index": 270,
+      "text": "Asset condition and functionality: The findings further indicated that all 2,939 assets (100.0%) were recorded as functional and in use, and none was classified as faulty."
+    },
+    {
+      "body_index": 271,
+      "text": "Marking and Identification: The ministry received a total of 2,939 assets, of which 2,897 (98.6%) had usable identifiers, 2,864 (97.4%) with UgIFT or UGFT in the tag field and 33 (1.1%) with another identifier; 42 (1.4%) had no usable tag recorded. These tag fields do not confirm physical engraving."
+    },
+    {
+      "body_index": 272,
+      "text": "Financial Value of the assets: The recorded value was UGX 5,029,981,561. Accumulated depreciation is UGX 2,092,642,121 and net book value is UGX 1,535,627,440 at 30 September 2026. Net book value remains unavailable for 43 records; the figures sum only available amounts."
+    },
+    {
+      "body_index": 277,
+      "text": "Asset availability: The Asset Verification at the Ministry of Gender, Labour and Social Development found out that the ministry keeps a UgIFT asset register which had ten UgIFT assets. These comprised eight Lenovo computers, including four ThinkBook laptops, and two Samsung tablets. Figure 11 presents the UgIFT assets recorded for MoGLSD."
+    },
+    {
+      "body_index": 278,
+      "text": "Asset condition and functionality: The findings further indicate that all ten UgIFT assets (100.0%) were recorded as functional and in use."
+    },
+    {
+      "body_index": 279,
+      "text": "Marking and Identification: Eight Lenovo computers (80.0%) had UgIFT or UGFT in the tag field and the two Samsung tablets (20.0%) had no usable tag recorded."
+    },
+    {
+      "body_index": 280,
+      "text": "Financial Value of the assets: The findings pointed out that the recorded value to be UGX 46,180,000. Accumulated depreciation is UGX 13,260,000 and net book value is UGX 14,860,000 at 30 September 2026. Net book value remains unavailable for 4 records; the figures sum only available amounts."
+    },
+    {
+      "body_index": 285,
+      "text": "Figure 11: Assets verified: MoGLSD"
+    },
+    {
+      "body_index": 288,
+      "text": "National Environment Management Authority (NEMA) had six ICT items: four computers, a printer and a heavy-duty photocopier."
+    },
+    {
+      "body_index": 289,
+      "text": "Condition and functionality: All six assets (100.0%) were recorded as functional and in use."
+    },
+    {
+      "body_index": 291,
+      "text": "Figure 12: Assets verified: NEMA"
+    },
+    {
+      "body_index": 293,
+      "text": "One asset (16.7%), the heavy-duty photocopier, had UgIFT or UGFT in the tag field while the other five (83.3%) had no usable tag recorded."
+    },
+    {
+      "body_index": 294,
+      "text": "Financial value of Assets: The recorded value is UGX 46,824,409. Accumulated depreciation is UGX 32,841,273 and net book value is UGX 13,983,136 at 30 September 2026."
+    },
+    {
+      "body_index": 300,
+      "text": "Asset availability: A total of 5 assets were verified in PPDA; these were 3 Lenovo ThinkPad laptops, a Samsung Galaxy tablet and an HP printer as indicated in Figure 13."
+    },
+    {
+      "body_index": 302,
+      "text": "Figure 13: Assets verified at PPDA"
+    },
+    {
+      "body_index": 303,
+      "text": "Asset condition and functionality: All the five assets (100.0%) were recorded as functional and in use."
+    },
+    {
+      "body_index": 304,
+      "text": "Asset marking and identification: All five assets (laptops, a tablet and a printer) had UgIFT or UGFT in the tag field."
+    },
+    {
+      "body_index": 305,
+      "text": "Financial Value of assets: The MF register states a recorded cost of UGX 30,153,500 for these assets. Accumulated depreciation is UGX 13,066,516 and net book value is UGX 17,086,984 at 30 September 2026."
+    },
+    {
+      "body_index": 310,
+      "text": "Asset availability: Evidence gathered during the verification confirmed that OAG had no UgIFT asset register rather a list which indicated 20 assets; 18 of which were ICT items (16 laptops and 2 printers) and 2 pickup vehicles. The above information is depicted in figure 14."
+    },
+    {
+      "body_index": 311,
+      "text": "Asset condition and functionality: All twenty assets (100.0%) were recorded as functional and in use."
+    },
+    {
+      "body_index": 312,
+      "text": "Asset marking and Identification: Six assets (30.0%) had UgIFT or UGFT in the tag field and fourteen (70.0%) carried other identifiers. The other identifiers were the office's own asset codes or vehicle registration numbers for the two pickups. These tag-field counts do not confirm physical engraving."
+    },
+    {
+      "body_index": 314,
+      "text": "Figure 14: Assets verified at OAG"
+    },
+    {
+      "body_index": 315,
+      "text": "Financial value of Assets: The assets were worth UGX 388,773,680. Accumulated depreciation is UGX 111,591,545 and net book value is UGX 277,182,135 at 30 September 2026."
+    },
+    {
+      "body_index": 320,
+      "text": "Asset availability: The asset verification at the Ministry of Local Government (MoLG) found that the ministry kept a UgIFT asset register and had thirteen UgIFT assets: one double-cabin pickup and twelve ICT items. The ICT assets comprised six computer entries, four laptops and two photocopier entries, one described as heavy duty. Figure 15 presents the UgIFT assets recorded for MoLG."
+    },
+    {
+      "body_index": 323,
+      "text": "Figure 15: Assets verified at MoLG"
+    },
+    {
+      "body_index": 324,
+      "text": "Asset condition and functionality: The findings further indicate that all thirteen assets (100.0%) were recorded as functional and in use."
+    },
+    {
+      "body_index": 325,
+      "text": "Asset marking and identification: Out of the thirteen assets, eight (61.5%) had usable identifiers while five (38.5%) had no usable tag recorded. Of the eight identified assets, seven (53.8% of all assets) had UgIFT or UGFT in the tag field while one (7.7%) carried another identifier. These tag-field counts do not confirm physical engraving."
+    },
+    {
+      "body_index": 326,
+      "text": "Financial Value of assets: The findings pointed out the recorded value to be UGX 343,320,450. Accumulated depreciation is UGX 284,670,827 and net book value is UGX 54,649,623 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts."
+    },
+    {
+      "body_index": 331,
+      "text": "Asset availability: The findings from the verification exercise indicate that MoLH &UD had 27 UgIFT assets. These include 25 Honda motorcycles and two other entries described as Accessories (12-Helmets). The description has not been multiplied by twelve to derive a helmet count."
+    },
+    {
+      "body_index": 333,
+      "text": "Figure 16: Assets verified at MoLHUD"
+    },
+    {
+      "body_index": 334,
+      "text": "Additionally, the ministry received survey equipment and other motorcycles that it gave out to local governments."
+    },
+    {
+      "body_index": 335,
+      "text": "Asset condition and functionality: All the 27 assets (100.0%) were recorded as functional and in use, and none was classified as faulty."
+    },
+    {
+      "body_index": 336,
+      "text": "Asset marking and Identification: None of the 27 assets had UgIFT or UGFT in the tag field. Thirteen (48.1%) had other identifiers and fourteen (51.9%) had no usable tag recorded. The motorcycles' registration numbers are distinguished from UgIFT tag text."
+    },
+    {
+      "body_index": 337,
+      "text": "Financial Value of assets: The findings further indicate the recorded value to be UGX 487,349,999. Accumulated depreciation is UGX 123,840,000 and net book value is UGX 340,559,999 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts."
+    },
+    {
+      "body_index": 343,
+      "text": "UgIFT financed the construction of the Arua and Hoima regional blood banks, which were completed and commissioned, and the rehabilitation of Soroti Regional Blood Bank. The three Blood Banks operate under Uganda Blood Transfusion Services (UBTS) and were verified."
+    },
+    {
+      "body_index": 344,
+      "text": "Asset availability: The three regional blood banks held a total UgFT asset base of 602 recorded assets. The exercise recorded assets at the three regional blood banks as follows: Arua Regional Blood Bank held 324 assets, Hoima Regional Blood Bank had 163 and Soroti Regional Blood Bank had 115 assets. This subtotal excludes assets attributed to other institutions or locations."
+    },
+    {
+      "body_index": 346,
+      "text": "Assets at the regional blood banks were generally recorded as functional and in use: 578 (96.0%) had that status. Only Arua Regional Blood Bank had faulty assets, accounting for all 24 (4.0%) faulty assets in the three-bank total."
+    },
+    {
+      "body_index": 348,
+      "text": "Of the 602 regional blood-bank assets, 76 (12.6%) had usable identifiers and 526 (87.4%) had no usable tag recorded. Twenty-six (4.3%) carried UgIFT or UGFT in the tag field and fifty (8.3%) carried another identifier. These tag-field counts do not confirm physical engraving."
+    },
+    {
+      "body_index": 350,
+      "text": "Available recorded value was UGX 1,503,720,926 and available net book value at 30 September 2026 was UGX 826,632,084. Available accumulated depreciation was UGX 553,688,842. Recorded cost is available for 589 of the 602 regional blood-bank records, and net book value is unavailable for thirteen. The available columns cover different populations; the financial reconciliation appendix gives the matched accounting population."
+    },
+    {
+      "body_index": 351,
+      "text": "Table 20: Recorded value and net book value: Blood banks"
+    },
+    {
+      "body_index": 354,
+      "text": "3.4.1 Arua Regional Blood Bank"
+    },
+    {
+      "body_index": 361,
+      "text": "3.4.2 Hoima Regional Blood Bank"
+    },
+    {
+      "body_index": 368,
+      "text": "3.4.3 Soroti Regional Blood Bank"
+    },
+    {
+      "body_index": 375,
+      "text": "The photos below show some of the asets"
+    },
+    {
+      "body_index": 378,
+      "text": "The programme list at the LG level contained 629 UgIFT facilities, of which 371 were Health Centres and 258 were Seed Secondary Schools. Supporting returns accounted for 590 entries and 39 had discrepancies requiring reconciliation. A total of 208,688 assets were recorded at Health Centres and school locations, of which 63,432 were for Health Centres and 145,256 were for schools. Of the 208,688 assets, 195,224 (93.5%) were recorded as functional and in use while 13,464 (6.5%) were recorded as faulty and not in use. A further 3,067 assets were attributed to hospitals and four to other local-government locations. The details are presented in sections 3.6 (Health Centres) and 3.7 (Seed Secondary Schools)."
+    },
+    {
+      "body_index": 381,
+      "text": "The verification findings indicate that health facilities had 63,432 recorded assets across the different categories which include clinical and laboratory equipment, furniture, maternity ward equipment, ICT equipment, buildings, land and other items. The register includes 7,746 items outside fixed-asset classification. Table 24 and Figure 17 present the assets by category."
+    },
+    {
+      "body_index": 382,
+      "text": "Table 24: Availability of assets in Health Centres"
+    },
+    {
+      "body_index": 385,
+      "text": "Figure 17: Assets verified: Health centres"
+    },
+    {
+      "body_index": 387,
+      "text": "The findings indicate that of the 63,432 health-centre assets, 57,759 (91.1%) were recorded as functional and in use and 5,673 (8.9%) were recorded as faulty and not in use. Figure 18 and Table 25 present the condition of the assets. These two register categories do not establish separate current counts of items in store, broken items and other reasons for non-use."
+    },
+    {
+      "body_index": 389,
+      "text": "Figure 18: Condition of assets: Health centres"
+    },
+    {
+      "body_index": 390,
+      "text": "Table 25: Condition of assets: Health centres"
+    },
+    {
+      "body_index": 392,
+      "text": "The field records describe health-centre assets that were not in use for other reasons, including those not delivered to the facility (still in stores at LGs), idle items, items with missing parts, lack of power, items not required at the facility, rooms or wards unavailable for installation, items held at another facility, items awaiting installation, lost or missing items and equipment unused because staff were not trained or no specialist was available to operate it. Examples include a wall-mounted blood-pressure machine at Butawata Health Centre III (Mubende District) recorded as not functional; a wheelchair at Aarapoo Health Centre III (Serere District) that had not been delivered; a patient screen at Ayer Health Centre III (Kole District) that was on the delivery note but not seen; a paediatric bed at Okwerodot Health Centre III (Kole District) supplied without a mattress; and an autoclave at Anamwany Health Centre III (Amolatar District) unused for lack of electricity. The register's two condition categories do not provide a separate count for these reasons."
+    },
+    {
+      "body_index": 393,
+      "text": "In terms of buildings and structures, health-centre records total 2,260, comprising 487 residential-building entries, 1,402 non-residential-building entries, 364 other-structure entries and seven water-supply-system entries. Residential buildings are staff houses and other buildings described as residential. Some entries require reclassification, so the record total does not establish a count of separate buildings. Table 26 presents the classifications."
+    },
+    {
+      "body_index": 394,
+      "text": "Table 26: Health Centre records classified as buildings and structures"
+    },
+    {
+      "body_index": 397,
+      "text": "Of the 63,432 assets in Health Centres, 9,541 (15.0%) had usable identifiers and 53,891 (85.0%) had no usable tag recorded. It was noted that 3,824 (6.0%) carried UgIFT or UGFT in the tag field and 5,717 (9.0%) carried other identifiers, as depicted in Figure 19 and Table 27. These tag-field counts do not confirm physical engraving."
+    },
+    {
+      "body_index": 399,
+      "text": "Figure 19: Recorded tag content: Health Centres"
+    },
+    {
+      "body_index": 400,
+      "text": "Table 27: Identification of assets at Health centres"
+    },
+    {
+      "body_index": 402,
+      "text": "Financial Value of assets: The findings indicate that the available recorded value of assets was UGX 260,692,452,291 and the available net book value was UGX 189,403,577,197, while available accumulated depreciation was UGX 39,211,094,700 as at 30 September 2026. Table 28 gives the recorded value and net book value. Cost is available for 63,183 of 63,432 records; net book value is unavailable for 7,828. Available columns cover different populations; the financial reconciliation appendix gives the matched accounting population."
+    },
+    {
+      "body_index": 403,
+      "text": "Table 28: Recorded and net book values at Health centres"
+    },
+    {
+      "body_index": 406,
+      "text": "Recorded value is the cost in the verification records. For recognized assets with complete accounting figures, net book value is that cost less accumulated depreciation to 30 September 2026 and is not taken below zero. Available costs, depreciation and net book values cover different populations; the financial reconciliation appendix gives the matched accounting population."
+    },
+    {
+      "body_index": 407,
+      "text": "The photos below show some of the facilities that are complete"
+    },
+    {
+      "body_index": 409,
+      "text": "The photos below show some of the facilities that are Incomplete"
+    },
+    {
+      "body_index": 411,
+      "text": "Figure 24: Unfinished laboratory building at a health centre, Sironko District (Bugisu)"
+    },
+    {
+      "body_index": 416,
+      "text": "3.7 Seed Secondary Schools"
+    },
+    {
+      "body_index": 418,
+      "text": "The findings showed that schools had 145,256 recorded assets covering the following categories: school buildings, water facilities, furniture, computers and related equipment such as monitors, UPS units and keyboards; ICT equipment including printers, photocopiers, cameras and projectors; and other school assets such as laboratory items, electrical items, plant and machinery and sports equipment. Table 29 presents the details. The school group follows recorded locations and includes schools whose programme assignment requires confirmation."
+    },
+    {
+      "body_index": 419,
+      "text": "Table 29: Availability of assets at schools"
+    },
+    {
+      "body_index": 422,
+      "text": "Out of 145,256 assets, 137,465 (94.6%) were recorded as functional and in use. The verification further established that 7,791 (5.4%) were recorded as faulty and not in use. Table 30 indicates the asset condition. These register categories do not establish separate current counts of items in store, broken items and other reasons for non-use."
+    },
+    {
+      "body_index": 423,
+      "text": "Table 30: Condition of assets: schools"
+    },
+    {
+      "body_index": 425,
+      "text": "Functional assets are recorded as in use and faulty assets as not in use. The two condition columns sum to the assets recorded. They do not establish separate counts of good items in store, broken items and other reasons for non-use."
+    },
+    {
+      "body_index": 426,
+      "text": "School furniture and fittings (desks, tables, chairs, shelves and stools) is the largest category with 107,792 assets. Of these, 102,521 were recorded as functional and in use while 5,271 were recorded as faulty. ICT equipment had 10,404 assets recorded as functional and in use."
+    },
+    {
+      "body_index": 428,
+      "text": "Of the 145,256 school assets, 35,601 (24.5%) had usable identifiers while 109,655 (75.5%) had no usable tag recorded. A total of 13,478 (9.3%) carried UgIFT or UGFT in the tag field and 22,123 (15.2%) carried other identifiers, as shown in Table 31. These tag-field counts do not confirm physical engraving."
+    },
+    {
+      "body_index": 429,
+      "text": "Table 31: Identification of assets at schools"
+    },
+    {
+      "body_index": 431,
+      "text": "Movable assets exclude buildings, structures and land. The table groups recorded tag text as UgIFT or UGFT, another identifier or no usable tag. Buildings, structures and land are identified through property and site records rather than engraving."
+    },
+    {
+      "body_index": 432,
+      "text": "3.8 Financial Value of school assets"
+    },
+    {
+      "body_index": 433,
+      "text": "The available recorded value was UGX 700,242,561,371, the available net book value was UGX 394,241,708,595 and available accumulated depreciation was UGX 104,574,530,246 as at 30 September 2026, as shown in Table 32. Cost is available for 144,445 of the 145,256 school records; net book value is unavailable for 14,807. Available columns cover different populations; the financial reconciliation appendix gives the matched accounting population."
+    },
+    {
+      "body_index": 434,
+      "text": "Table 32: Recorded value and net book value: schools"
+    },
+    {
+      "body_index": 437,
+      "text": "Recorded value is the cost in the verification records. For recognized assets with complete accounting figures, net book value is that cost less accumulated depreciation to 30 September 2026. Available costs, depreciation and net book values cover different populations; the financial reconciliation appendix gives the matched accounting population."
+    },
+    {
+      "body_index": 439,
+      "text": "The verification established that there were a number of facilities that were either completed or not completed. Table 33 provides the programme-list construction baseline and the documented outstanding-work findings separately."
+    },
+    {
+      "body_index": 440,
+      "text": "Table 33: Programme-list construction baseline and documented outstanding works"
+    },
+    {
+      "body_index": 442,
+      "text": "Counts are facilities. Programme-list completion labels and the documented outstanding-work findings may concern the same facilities and must not be added together. Outstanding-work counts are documented minimums."
+    },
+    {
+      "body_index": 443,
+      "text": "Table 33 indicates that the programme list recorded 547 facilities as complete and 82 as ongoing before verification. The reviewed evidence identifies at least 70 facilities with incomplete works, comprising 57 schools and thirteen Health Centres, and another thirteen awaiting handover or commissioning, comprising eleven schools and two Health Centres. Some facilities were providing services while works remained incomplete. These findings and the programme-list completion labels describe different matters and must not be added together."
+    },
+    {
+      "body_index": 444,
+      "text": "The photos below show some of the facilities that are complete"
+    },
+    {
+      "body_index": 450,
+      "text": "The verification exercise established that there were mismatches between information from the programme list and what was found on the ground. Out of 629 programme-list entries, 590 (93.8%) had supporting returns and 39 (6.2%) had discrepancies requiring reconciliation. These include entries on the programme list without matching returns or with conflicting location or facility-type information. Renamed facilities already matched to returns are not added to the 39 exceptions. Table 34 provides the details."
+    },
+    {
+      "body_index": 451,
+      "text": "Table 34: Inconsistencies between the programme list and the facilities found"
+    },
+    {
+      "body_index": 453,
+      "text": "Counts are programme-list facilities: 24 Health Centres and fifteen schools, giving 39 distinct exceptions. HC means Health Centre; SSS means Seed Secondary School. Renamed facilities already matched to returns are not added to this total."
+    },
+    {
+      "body_index": 454,
+      "text": "3.12 UgIFT support to service delivery"
+    },
+    {
+      "body_index": 455,
+      "text": "Of the 284 health centres, 238 (83.8%) reported at least one benefit from the UgIFT support. Improved maternity and delivery services were reported by 117 (41.2%), and 51 (18.0%) reported more or safer births at the facility. Improved antenatal, immunisation, laboratory or other specific services were reported by 89 (31.3%), improved access to care or shorter distances by 71 (25.0%) and more patients attending by 61 (21.5%). More than half, 164 (57.7%), linked better services to the equipment and furniture supplied."
+    },
+    {
+      "body_index": 456,
+      "text": "Of the 193 seed schools, 144 (74.6%) reported at least one benefit. A better learning environment, with classrooms, furniture and libraries, was reported by 74 (38.3%), and improved access to secondary education or shorter distances by 59 (30.6%). Practical science or ICT teaching improved at 39 schools (20.2%), and 37 (19.2%) reported higher enrolment. Forty schools (20.7%) also reported jobs and local economic benefits around the school. Figure 44 compares the benefits most often reported by the two types of facility."
+    },
+    {
+      "body_index": 459,
+      "text": "Figure 44: Programme Benefits"
+    },
+    {
+      "body_index": 460,
+      "text": "3.12.1 Gaps and Challenges"
+    },
+    {
+      "body_index": 461,
+      "text": "The main gaps identified by the facilities include; Percentages use 477 facility responses unless a facility type is specified; categories overlap."
+    },
+    {
+      "body_index": 462,
+      "text": "Insufficient Power supply which was reported by 201 facilities (42.1%), including 44.4% of Health Centre respondents and 38.9% of school respondents;"
+    },
+    {
+      "body_index": 463,
+      "text": "Inadequate Staffing which was reported by 32.1% of the facilities (153 of 477)."
+    },
+    {
+      "body_index": 464,
+      "text": "Inadequate space or infrastructure reported by 31.7% of the facilities (151 of 477)."
+    },
+    {
+      "body_index": 465,
+      "text": "Insecurity or absence of fencing reported by 27.0% of the facilities (129 of 477)."
+    },
+    {
+      "body_index": 466,
+      "text": "Limited maintenance support was raised by 22.2% of the facilities (106 of 477)."
+    },
+    {
+      "body_index": 467,
+      "text": "Inadequate staff houses reported by 22.0% of the facilities (105 of 477)."
+    },
+    {
+      "body_index": 468,
+      "text": "Poor water supply reported by 20.1% of the facilities (96 of 477)."
+    },
+    {
+      "body_index": 469,
+      "text": "inadequate training of staff to operate the equipment reported by 28.9% of the health centres (82 of 284), and 1.6% of schools (three of 193)."
+    },
+    {
+      "body_index": 470,
+      "text": "Incomplete or delayed works, handover or commissioning reported by 28.0% of Seed Secondary School respondents (54 of 193) and 10.2% of Health Centre respondents (29 of 284)."
+    },
+    {
+      "body_index": 471,
+      "text": "Equipment not installed, not assembled or delivered incomplete was raised by 17.6% of the facilities (84 of 477)."
+    },
+    {
+      "body_index": 473,
+      "text": "Figure 45: Service gaps and challenges"
+    },
+    {
+      "body_index": 478,
+      "text": "Support from outside the facility was cited by 152 facilities (32.4%): district offices, mainly the District Health Officer, 85 (18.1%); regional referral hospital workshops or national teams 52 (11.1%); hired technicians and artisans 27 (5.8%); and contractors or suppliers under defects liability, guarantee or warranty 12 (2.6%). Major medical equipment repairs depended on this support. Todora Health Centre III in Nwoya worked through the District Health Officer and the Gulu Regional Referral Hospital technical team, Avogera Health Centre III in Buliisa received support from Hoima Regional Referral Hospital, and Bundimulangya Health Centre III in Bundibugyo obtained a team through the District Health Officer."
+    },
+    {
+      "body_index": 480,
+      "text": "Figure 46 compares these arrangements at Health Centres and seed schools. Health Centres relied more on outside technical support (41.4% of health centres against 19.4% of schools), while schools more often had not yet needed maintenance (30.9% against 13.7%)."
+    },
+    {
+      "body_index": 482,
+      "text": "Figure 46: Most facilities met repairs from their own funds or staff"
+    },
+    {
+      "body_index": 483,
+      "text": "Frequency. Few facilities worked to a fixed maintenance interval. Of the 494 programme-list facilities that described how they maintain UgIFT assets or check their condition, 50 (10.1%) did so at a fixed interval. Of these 50, 14 (28.0%) worked annually, 11 (22.0%) monthly, 10 (20.0%) quarterly, 9 (18.0%) every school term, 3 (6.0%) twice a year and 3 (6.0%) weekly or daily, as Figure 47 shows. A further 18 facilities (3.6%) described routine or scheduled servicing without a set interval, mostly scheduled visits by regional referral hospital maintenance teams, and 61 (12.3%) repaired items as the need arose. Ngwedo Seed Secondary School in Buliisa engaged a caretaker every month and used the Directorate of Industrial Training for furniture repairs, while Busaale reviewed asset condition every quarter."
+    },
+    {
+      "body_index": 485,
+      "text": "Figure 47: Annual, monthly and quarterly checks were the most common stated intervals"
+    },
+    {
+      "body_index": 486,
+      "text": "Records. Of the 463 facilities that answered, 318 (68.7%) kept a regular record of asset functionality or breakdowns, 36 (7.8%) kept a partial or informal record, 80 (17.3%) kept none and 29 (6.3%) had not yet started because the assets were new or the facility was not yet operating. Of the 478 facilities that answered, 355 (74.3%) held a record of the UgIFT assets they received, 40 (8.4%) held a partial record, such as delivery notes only or a general register that does not identify UgIFT items, and 83 (17.4%) held none. Kagumba Health Centre III in Kamuli kept an asset condition book, a simple practice that other facilities can adopt."
+    },
+    {
+      "body_index": 487,
+      "text": "4.2 Obsolete and Unserviceable Assets"
+    },
+    {
+      "body_index": 490,
+      "text": "4.3 Missing and Unrecorded Assets"
+    },
+    {
+      "body_index": 499,
+      "text": "Recommendation. Facility managers, district health and education officers, engineers and technical teams should prioritise unsafe furniture, electrical concerns and failed equipment needed for essential services. Withdraw unsafe items, obtain technical assessments and verify safe operation after repair. The broken down and not functional assets should be assessed in order of their effect on care and teaching, beginning with clinical equipment and the school furniture that makes up most of the broken down assets; items beyond economic repair should receive a formal disposal decision. At national level, the Office of the Prime Minister should decide on repair or replacement of its three laptops recorded as faulty, and Uganda Blood Transfusion Services (UBTS) should repair or replace the six blood-pressure machines recorded as faulty at Arua Regional Blood Bank. Keep damaged assets separate from usable assets awaiting installation so that each receives the appropriate action."
+    },
+    {
+      "body_index": 500,
+      "text": "Recommendation. LG Accounting Officers, engineers, health and education officers and contractors should coordinate outstanding buildings, utilities, furniture and equipment through site-specific completion plans for each of the 83 documented facilities with works or handover outstanding, comprising seventy with incomplete works and thirteen awaiting handover or commissioning. These are documented minimums. Installation should follow confirmation that rooms, power, water and security are ready. Stored assets described as new or in good condition should be issued to the rooms where they are needed, and each asset waiting for power or installation should have a named date for connection and testing. Protect services already operating during construction. There should be complete testing and signing off before handover or closing each action."
+    },
+    {
+      "body_index": 501,
+      "text": "Recommendation. District health officers, facility managers, suppliers and regional technical teams should provide practical training for staff who use specialist equipment, starting with the Health Centres that linked idle equipment to a lack of skills, including oxygen equipment users, for example, at Bubago and Sop Sop and staff requiring orientation at Avogera. Handover should include a demonstration, basic maintenance guidance and a named route for technical support. Future supply contracts should make on-site demonstration to the staff who will use the equipment, a condition of acceptance and staffing reviews should take account of the equipment each health centre now holds."
+    },
+    {
+      "body_index": 502,
+      "text": "Recommendation. Institution asset managers and LG finance, health and education officers should engrave all the verified assets with UgIFT markings and confirm their locations and custodians. Assets carrying another marking only should receive the programme identifier at their next check. Resolve the continuing allocation of equipment e.g at Todora, Paraa and Masafu through signed transfer or receipt documentation, bring assets held at district stores to their facilities once rooms are ready, and complete delivery of the items still with suppliers."
+    },
+    {
+      "body_index": 503,
+      "text": "The Ministry of Works and Transport should retain the completed tracing record and keep the confirmed custodians and locations current. Losses should be reported and investigated under the public finance rules, and every facility should hold a list of the UgIFT assets it received, showing each item, its engraving and its custodian. Maintain site, ownership and handover records for buildings and land."
+    },
+    {
+      "body_index": 505,
+      "text": "5.1 Actions to address the reported service gaps"
+    },
+    {
+      "body_index": 509,
+      "text": "Appendix A Financial reconciliation and valuation limitations"
+    },
+    {
+      "body_index": 521,
+      "text": "Appendix B Service date exceptions and supporting evidence"
+    },
+    {
+      "body_index": 531,
+      "text": "Appendix C Definitions used in the analysis"
+    },
+    {
+      "body_index": 540,
+      "text": "Appendix D Programme list exception roster"
+    },
+    {
+      "body_index": 543,
+      "text": "Appendix E Documented outstanding works and handover"
+    },
+    {
+      "body_index": 547,
+      "text": "Appendix F Facility interview scope and denominators"
+    },
+    {
+      "body_index": 551,
+      "text": "Appendix G Asset reconciliation examples"
+    },
+    {
+      "body_index": 554,
+      "text": "Appendix H Photographic schedule"
+    },
+    {
+      "body_index": 557,
+      "text": "Appendix I Land records and ownership evidence"
+    },
+    {
+      "body_index": 561,
+      "text": "Appendix J Additional assets and classification checks"
+    },
+    {
+      "body_index": 569,
+      "text": "Appendix K Financial analysis by asset type"
+    },
+    {
+      "body_index": 149,
+      "text": "Overall, the Seed Secondary Schools hold the majority of assets 63.4% (145,256), followed by Health Centres with 27.7% (63,432). MDAs hold 7.3% (16,663) and regional Blood Banks with 0.3% (602). In addition, some assets were found to have been reallocated by LGs from Health Center to hospitals such as Rukoki general hospital in Kasese Municipality. Hospitals hold 3,067 assets (1.3%) and other local-government locations hold four (less than 0.1%).",
+      "reason": "metric reconciliation"
+    },
+    {
+      "body_index": 159,
+      "text": "Verification also noted that 13,520 assets, mainly in seed secondary schools and Health Centres, were classified as faulty and out of use. Some were awaiting installation or the facility itself was not yet ready. Notable among the facilities include Lungulu Seed Secondary School in Nwoya District where desktop computers, a printer and UPS units were still boxed because the school was waiting for power connection. At Nansanga Seed Secondary School in Budaka, 27 of 28 desktop computers remained packed for lack of reliable power. ",
+      "reason": "metric reconciliation"
+    },
+    {
+      "body_index": 168,
+      "text": "The verification revealed that 50,329 (22.0%) of the assets had usable identifiers and 178,695 (78.0%) had no usable identifier recorded. Of all assets, 22,253 (9.7%) had identifiers containing UgIFT or UGFT as a form of identification.",
+      "reason": "metric reconciliation"
+    },
+    {
+      "body_index": 169,
+      "text": "Identification varied at the different asset locations. Identifiers are recorded for 30.3% of MDA records, 24.5% of school records and 15.0% of health-centre records. Among the MDAs, the Ministry of Education and Sports accounts for most of the ministry assets without usable identifiers, and these were mainly the TELA handsets and tablets. The details of asset identification are provided in figure 3.",
+      "reason": "metric reconciliation"
+    },
+    {
+      "body_index": 177,
+      "text": "Overall, the 229,024 assets across the different institutions had an available recorded value of UGX 996,812,628,890. Based on the straight-line depreciation method, available accumulated depreciation was UGX 165,185,197,307 and available net book value was UGX 595,801,587,531 as at 30th September 2026. Recorded values vary by institution, with MDAs at UGX 32,054,743,836, Blood Banks at UGX 1,503,720,926, Seed Secondary Schools at UGX 700,242,561,371 and Health Centres at UGX 260,692,452,291, as indicated in table 2. Hospital and other local-government assets account for the remaining UGX 2,319,150,466. These available totals cover different populations; Appendix A reconciles cost less depreciation to net book value for assets with complete accounting information.",
+      "reason": "metric reconciliation"
+    }
+  ],
+  "tables_restored": [
+    {
+      "source_block": 641,
+      "destination_block": 156,
+      "rows": [
+        [
+          "MoFPED",
+          "458",
+          "458",
+          "0",
+          "100.0%"
+        ],
+        [
+          "MoWT",
+          "87",
+          "71",
+          "16",
+          "81.6%"
+        ],
+        [
+          "MoES",
+          "10,783",
+          "10,783",
+          "0",
+          "100.0%"
+        ],
+        [
+          "MAAIF",
+          "2,045",
+          "2,045",
+          "0",
+          "100.0%"
+        ],
+        [
+          "MoH",
+          "260",
+          "259",
+          "1",
+          "99.6%"
+        ],
+        [
+          "OPM",
+          "10",
+          "7",
+          "3",
+          "70.0%"
+        ],
+        [
+          "MoWE",
+          "2,939",
+          "2,939",
+          "0",
+          "100.0%"
+        ],
+        [
+          "MoGLSD",
+          "10",
+          "10",
+          "0",
+          "100.0%"
+        ],
+        [
+          "NEMA",
+          "6",
+          "6",
+          "0",
+          "100.0%"
+        ],
+        [
+          "PPDA",
+          "5",
+          "5",
+          "0",
+          "100.0%"
+        ],
+        [
+          "OAG",
+          "20",
+          "20",
+          "0",
+          "100.0%"
+        ],
+        [
+          "MoLG",
+          "13",
+          "13",
+          "0",
+          "100.0%"
+        ],
+        [
+          "MoLHUD",
+          "27",
+          "27",
+          "0",
+          "100.0%"
+        ],
+        [
+          "Health centres",
+          "63,432",
+          "57,759",
+          "5,673",
+          "91.1%"
+        ],
+        [
+          "Seed Secondary Schools",
+          "145,256",
+          "137,465",
+          "7,791",
+          "94.6%"
+        ],
+        [
+          "Blood Banks",
+          "602",
+          "578",
+          "24",
+          "96.0%"
+        ],
+        [
+          "Hospitals on LG books",
+          "3,067",
+          "3,055",
+          "12",
+          "99.6%"
+        ],
+        [
+          "Other LG locations",
+          "4",
+          "4",
+          "0",
+          "100.0%"
+        ],
+        [
+          "Total",
+          "229,024",
+          "215,504",
+          "13,520",
+          "94.1%"
+        ]
+      ]
+    },
+    {
+      "source_block": 141,
+      "destination": "Appendix B"
+    },
+    {
+      "source_block": 637,
+      "destination": "Appendix L"
+    }
+  ],
+  "charts": [
+    {
+      "body_index": 151,
+      "part": "word/charts/chart-reconciled-1.xml",
+      "template": 1,
+      "categories": [
+        "Ministries and agencies",
+        "Blood Banks",
+        "Health Centres",
+        "Seed Secondary Schools",
+        "Hospitals on LG books",
+        "Other LG locations"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          16663,
+          602,
+          63432,
+          145256,
+          3067,
+          4
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 162,
+      "part": "word/charts/chart-reconciled-2.xml",
+      "template": 5,
+      "categories": [
+        "Power supply",
+        "Training or skills",
+        "Installation",
+        "Incomplete buildings or space",
+        "Accessories or consumables",
+        "Staffing"
+      ],
+      "labels": [
+        "Respondent facilities"
+      ],
+      "values": [
+        [
+          71,
+          52,
+          32,
+          27,
+          15,
+          9
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 172,
+      "part": "word/charts/chart-reconciled-3.xml",
+      "template": 2,
+      "categories": [
+        "Ministries and agencies",
+        "Blood Banks",
+        "Health Centres",
+        "Seed Secondary Schools",
+        "Hospitals on LG books",
+        "Other LG locations",
+        "Total"
+      ],
+      "labels": [
+        "UgIFT or UGFT identifier",
+        "Other identifier",
+        "No usable identifier"
+      ],
+      "values": [
+        [
+          0.2955650243053472,
+          0.04318936877076412,
+          0.060285029638037585,
+          0.0927879054909952,
+          0.0,
+          0.0,
+          0.09716448931116389
+        ],
+        [
+          0.007201584348556682,
+          0.08305647840531562,
+          0.09012801109849918,
+          0.15230351930384975,
+          0.020215194000652102,
+          1.0,
+          0.12258977225094313
+        ],
+        [
+          0.6972333913460962,
+          0.8737541528239202,
+          0.8495869592634633,
+          0.7549085752051551,
+          0.9797848059993479,
+          0.0,
+          0.780245738437893
+        ]
+      ],
+      "percent": true
+    },
+    {
+      "body_index": 187,
+      "part": "word/charts/chart-reconciled-4.xml",
+      "template": 3,
+      "categories": [
+        "MoFPED",
+        "MoWT",
+        "MoES",
+        "MAAIF",
+        "MoH",
+        "OPM",
+        "MoWE",
+        "MoGLSD",
+        "NEMA",
+        "PPDA",
+        "OAG",
+        "MoLG",
+        "MoLHUD"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          458,
+          87,
+          10783,
+          2045,
+          260,
+          10,
+          2939,
+          10,
+          6,
+          5,
+          20,
+          13,
+          27
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 193,
+      "part": "word/charts/chart-reconciled-5.xml",
+      "template": 4,
+      "categories": [
+        "MoFPED",
+        "MoWT",
+        "MoES",
+        "MAAIF",
+        "MoH",
+        "OPM",
+        "MoWE",
+        "MoGLSD",
+        "NEMA",
+        "PPDA",
+        "OAG",
+        "MoLG",
+        "MoLHUD"
+      ],
+      "labels": [
+        "UgIFT or UGFT identifier",
+        "Other identifier",
+        "No usable identifier"
+      ],
+      "values": [
+        [
+          0.5393013100436681,
+          0.8850574712643678,
+          0.04247426504683298,
+          0.6004889975550122,
+          0.05384615384615385,
+          1.0,
+          0.9744811160258592,
+          0.8,
+          0.16666666666666666,
+          1.0,
+          0.3,
+          0.5384615384615384,
+          0.0
+        ],
+        [
+          0.07641921397379912,
+          0.022988505747126436,
+          0.0,
+          0.0019559902200488996,
+          0.06923076923076923,
+          0.0,
+          0.01122830894862198,
+          0.0,
+          0.0,
+          0.0,
+          0.7,
+          0.07692307692307693,
+          0.48148148148148145
+        ],
+        [
+          0.38427947598253276,
+          0.09195402298850575,
+          0.9575257349531671,
+          0.3975550122249389,
+          0.8769230769230769,
+          0.0,
+          0.014290575025518884,
+          0.2,
+          0.8333333333333334,
+          0.0,
+          0.0,
+          0.38461538461538464,
+          0.5185185185185185
+        ]
+      ],
+      "percent": true
+    },
+    {
+      "body_index": 209,
+      "part": "word/charts/chart-reconciled-6.xml",
+      "template": 3,
+      "categories": [
+        "ICT equipment",
+        "Outside fixed-asset classification",
+        "Transport equipment",
+        "Unclassified"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          69,
+          16,
+          1,
+          1
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 218,
+      "part": "word/charts/chart-reconciled-7.xml",
+      "template": 3,
+      "categories": [
+        "ICT equipment"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          10783
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 232,
+      "part": "word/charts/chart-reconciled-8.xml",
+      "template": 3,
+      "categories": [
+        "ICT equipment",
+        "Outside fixed-asset classification",
+        "Other classified assets",
+        "Unclassified",
+        "Transport equipment"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          1236,
+          797,
+          5,
+          5,
+          2
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 248,
+      "part": "word/charts/chart-reconciled-9.xml",
+      "template": 3,
+      "categories": [
+        "Outside fixed-asset classification",
+        "ICT equipment",
+        "Transport equipment",
+        "Other classified assets"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          198,
+          31,
+          25,
+          6
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 259,
+      "part": "word/charts/chart-reconciled-10.xml",
+      "template": 3,
+      "categories": [
+        "ICT equipment"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          10
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 284,
+      "part": "word/charts/chart-reconciled-11.xml",
+      "template": 3,
+      "categories": [
+        "ICT equipment"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          10
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 290,
+      "part": "word/charts/chart-reconciled-12.xml",
+      "template": 3,
+      "categories": [
+        "ICT equipment"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          6
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 301,
+      "part": "word/charts/chart-reconciled-13.xml",
+      "template": 3,
+      "categories": [
+        "ICT equipment"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          5
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 313,
+      "part": "word/charts/chart-reconciled-14.xml",
+      "template": 3,
+      "categories": [
+        "ICT equipment",
+        "Transport equipment"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          18,
+          2
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 332,
+      "part": "word/charts/chart-reconciled-15.xml",
+      "template": 3,
+      "categories": [
+        "Transport equipment",
+        "Outside fixed-asset classification"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          25,
+          2
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 322,
+      "part": "word/charts/chart-reconciled-16.xml",
+      "template": 3,
+      "categories": [
+        "Vehicle",
+        "Photocopiers",
+        "Computer components",
+        "Laptops"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          1,
+          2,
+          6,
+          4
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 384,
+      "part": "word/charts/chart-reconciled-17.xml",
+      "template": 3,
+      "categories": [
+        "Medical, laboratory and research appliances",
+        "Furniture and fittings",
+        "Outside fixed-asset classification",
+        "Buildings and structures",
+        "Other classified assets",
+        "ICT equipment",
+        "Unclassified",
+        "Transport equipment",
+        "Land"
+      ],
+      "labels": [
+        "Assets"
+      ],
+      "values": [
+        [
+          36721,
+          15671,
+          7746,
+          2260,
+          537,
+          424,
+          64,
+          5,
+          4
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 388,
+      "part": "word/charts/chart-reconciled-18.xml",
+      "template": 3,
+      "categories": [
+        "Medical, laboratory and research appliances",
+        "Furniture and fittings",
+        "Outside fixed-asset classification",
+        "Buildings and structures",
+        "Other classified assets",
+        "ICT equipment",
+        "Unclassified",
+        "Transport equipment",
+        "Land"
+      ],
+      "labels": [
+        "Faulty assets"
+      ],
+      "values": [
+        [
+          4248,
+          683,
+          515,
+          116,
+          58,
+          50,
+          2,
+          1,
+          0
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 398,
+      "part": "word/charts/chart-reconciled-19.xml",
+      "template": 3,
+      "categories": [
+        "Medical, laboratory and research appliances",
+        "Furniture and fittings",
+        "Outside fixed-asset classification",
+        "Buildings and structures",
+        "Other classified assets",
+        "ICT equipment",
+        "Unclassified",
+        "Transport equipment",
+        "Land"
+      ],
+      "labels": [
+        "Assets with UgIFT or UGFT tag"
+      ],
+      "values": [
+        [
+          1786,
+          1484,
+          356,
+          45,
+          20,
+          133,
+          0,
+          0,
+          0
+        ]
+      ],
+      "percent": false
+    },
+    {
+      "body_index": 458,
+      "part": "word/charts/chart-reconciled-20.xml",
+      "template": 3,
+      "categories": [
+        "Health Centres: any benefit",
+        "Schools: any benefit",
+        "Health Centres: equipment supports services",
+        "Health Centres: maternity services",
+        "Schools: learning environment",
+        "Schools: access to education",
+        "Schools: practical science or ICT"
+      ],
+      "labels": [
+        "Share of respondents"
+      ],
+      "values": [
+        [
+          0.838,
+          0.746,
+          0.5770000000000001,
+          0.41200000000000003,
+          0.38299999999999995,
+          0.306,
+          0.20199999999999999
+        ]
+      ],
+      "percent": true
+    },
+    {
+      "body_index": 472,
+      "part": "word/charts/chart-reconciled-21.xml",
+      "template": 3,
+      "categories": [
+        "Power supply",
+        "Staffing",
+        "Space or infrastructure",
+        "Security or fencing",
+        "Maintenance support",
+        "Staff housing",
+        "Water supply",
+        "Equipment training",
+        "Installation or incomplete delivery",
+        "Works or handover"
+      ],
+      "labels": [
+        "Share of 477 respondents"
+      ],
+      "values": [
+        [
+          0.42100000000000004,
+          0.321,
+          0.317,
+          0.27,
+          0.222,
+          0.22,
+          0.201,
+          0.17800000000000002,
+          0.17600000000000002,
+          0.174
+        ]
+      ],
+      "percent": true
+    },
+    {
+      "body_index": 481,
+      "part": "word/charts/chart-reconciled-22.xml",
+      "template": 3,
+      "categories": [
+        "Repairs from facility funds or staff",
+        "Outside technical support",
+        "Maintenance not yet needed",
+        "No repair arrangement"
+      ],
+      "labels": [
+        "Health Centres (278 respondents)",
+        "Schools (191 respondents)",
+        "All facilities (469 respondents)"
+      ],
+      "values": [
+        [
+          0.601,
+          0.414,
+          0.13699999999999998,
+          0.09
+        ],
+        [
+          0.48700000000000004,
+          0.19399999999999998,
+          0.309,
+          0.057999999999999996
+        ],
+        [
+          0.5539999999999999,
+          0.324,
+          0.207,
+          0.077
+        ]
+      ],
+      "percent": true
+    },
+    {
+      "body_index": 484,
+      "part": "word/charts/chart-reconciled-23.xml",
+      "template": 3,
+      "categories": [
+        "Annually",
+        "Monthly",
+        "Quarterly",
+        "Every school term",
+        "Twice yearly",
+        "Weekly or daily"
+      ],
+      "labels": [
+        "Facilities with a fixed interval"
+      ],
+      "values": [
+        [
+          14,
+          11,
+          10,
+          9,
+          3,
+          3
+        ]
+      ],
+      "percent": false
+    }
+  ],
+  "caption_moves": [
+    151,
+    162,
+    172,
+    187,
+    193,
+    209,
+    481
+  ]
+}

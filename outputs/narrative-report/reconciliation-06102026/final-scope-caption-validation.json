@@ -1,0 +1,150 @@
+{
+  "report_sha256": "0e60324464482f931c0dc12d4358d17d2774d43d78438fc98da3ac2b1365058e",
+  "native_chart_count": 23,
+  "all_native_captions_immediately_below": true,
+  "caption_failures": [],
+  "figure2_caption": "Figure 2: Reasons for equipment not in use reported by facilities (156 respondents; multiple responses)",
+  "figure46_caption": "Figure 46: Most facilities met repairs from their own funds or staff",
+  "appendixC_scope": "The condition descriptions in section 2.5 distinguish physically faulty assets from usable items in store or awaiting installation. The quantitative tables use the current register codes: 215,504 assets marked Functional and in use, and 13,520 marked Faulty and not in use. All entries marked not in use carry the Faulty code in these totals, including usable stored or uninstalled items; the 13,520 therefore does not represent a count of physically broken assets.",
+  "scope_pass": true,
+  "captions": [
+    {
+      "part": "word/charts/chart1.xml",
+      "next_text": "Figure 1: Distribution of assets  ",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart2.xml",
+      "next_text": "Figure 2: Reasons for equipment not in use reported by facilities (156 respondents; multiple responses)",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart3.xml",
+      "next_text": "Figure 3: Asset marking and Identification",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart4.xml",
+      "next_text": "Figure 4: UgFT Assets available at each of the verified MDAs",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart5.xml",
+      "next_text": "Figure 5: Asset marking and Identification at MDAs",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart6.xml",
+      "next_text": "Figure 6: Assets verified at MoWT",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart7.xml",
+      "next_text": "Figure 7: Assets verified at MoES",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart8.xml",
+      "next_text": "Figure 8: Assets verified: MAAIF",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart9.xml",
+      "next_text": "Figure 9: Assets verified at MoH",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart10.xml",
+      "next_text": "Figure 10: Assets verified: OPM",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart11.xml",
+      "next_text": "Figure 11: Assets verified: MoGLSD",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart12.xml",
+      "next_text": "Figure 12: Assets verified: NEMA",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart13.xml",
+      "next_text": "Figure 13: Assets verified at PPDA",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart14.xml",
+      "next_text": "Figure 14: Assets verified at OAG",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart15.xml",
+      "next_text": "Figure 15: Assets verified at MoLG",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart16.xml",
+      "next_text": "Figure 16: Assets verified at MoLHUD",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart17.xml",
+      "next_text": "Figure 17: Assets verified: Health centres",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart18.xml",
+      "next_text": "Figure 18: Faulty assets at Health Centres by category",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart19.xml",
+      "next_text": "Figure 19: Health Centre assets with UgIFT or UGFT identifiers by category",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart20.xml",
+      "next_text": "Figure 44: Programme Benefits",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart21.xml",
+      "next_text": "Figure 45: Service gaps and challenges",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart22.xml",
+      "next_text": "Figure 46: Most facilities met repairs from their own funds or staff",
+      "style": "Caption",
+      "caption_immediately_below": true
+    },
+    {
+      "part": "word/charts/chart23.xml",
+      "next_text": "Figure 47: Annual, monthly and quarterly checks were the most common stated intervals",
+      "style": "Caption",
+      "caption_immediately_below": true
+    }
+  ]
+}

@@ -1,0 +1,619 @@
+P1 CONSULTANCY SERVICES TO VERIFY AND RECORD ASSETS UNDER THE UGIFT PROGRAMME
+P2 REF: MOFPED/UGIFT/CONS/25/26/00015
+P3 ASSET VERIFICATION REPORT
+P4 SUBMITTED BY:
+P6 Plot 31, Bukoto Street
+P7 P.O Box 7657, Kampala, Uganda
++256 (0) 39 2000216/0772525235
+email: cpa@cpa.ug
+P8 www.cpa.com
+P9 6 October 2026
+Financial reporting date 30 September 2026
+P11 Table of Contents
+P12 Executive summary	5
+P13 Priority actions	6
+P14 1 Introduction and background	7
+P15 1.1 Introduction	7
+P16 1.2 Background to the verification	7
+P17 1.3 Justification	8
+P18 1.4 Objectives of the assignment	8
+P19 1.5 Scope of Work	9
+P20 1.6 Expected deliverables	9
+P21 2 Approach and methodology	10
+P22 2.1 Preparation	10
+P23 2.2 Pilot Test	10
+P24 2.3 Data collection	10
+P25 2.4 Quality assurance	11
+P26 2.5 Asset categories, condition, use and identification	11
+P27 2.6 Financial analysis and Valuation	11
+P28 2.7 Analysis and reporting	11
+P29 2.8 Challenges and Limitations to the assignment	11
+P30 3 Findings	13
+P31 3.1 Overall results	13
+P32 3.2 National level Ministries and Agencies results	22
+P33 3.3 MDA specific results	23
+P34 3.3.1 Ministry of Finance, Planning and Economic Development	23
+P35 3.3.2 Ministry of Works and Transport	24
+P36 3.3.3 Ministry of Education and Sports	25
+P37 3.3.4 Ministry of Agriculture, Animal Industry and Fisheries	27
+P38 3.3.5 Ministry of Health	28
+P39 3.3.6 Office of the Prime Minister	29
+P40 3.3.7 Ministry of Water and Environment	30
+P41 3.3.8 Ministry of Gender, Labour and Social Development	31
+P42 3.3.9 National Environment Management Authority	31
+P43 3.3.10 Public Procurement and Disposal of Public Assets Authority	32
+P44 3.3.11 Office of the Auditor General (OAG)	33
+P45 3.3.12 Ministry of Local Government	34
+P46 3.3.13 Ministry of Lands, Housing and Urban Development	35
+P47 3.4 Results from blood banks	37
+P48 3.4.1 Arua Regional Blood Bank	37
+P49 3.4.2 Hoima Regional Blood Bank	38
+P50 3.4.3 Soroti Regional Blood Bank	39
+P51 3.5 Local Government level results	41
+P52 3.6 Health Centres	41
+P53 3.6.1 Availability of the assets	41
+P54 3.6.2 Asset condition and functionality	42
+P55 3.6.3 Asset marking and Identification	44
+P56 3.7 Seed Secondary Schools	47
+P57 3.7.1 Availability of the assets	47
+P58 3.7.2 Asset condition and functionality	48
+P59 3.7.3 Asset marking and Identification	48
+P60 3.8 Financial Value of school assets	49
+P61 3.9 Completion Status of Facilities	50
+P62 3.10 Field Observations,	52
+P63 3.11 Location and Name changes	52
+P64 3.12 UgIFT support to service delivery	53
+P65 3.12.1 Gaps and Challenges	53
+P66 4 Asset management	55
+P67 4.1 Maintenance and repairs	55
+P68 4.2 Obsolete and Unserviceable Assets	56
+P69 4.3 Missing and Unrecorded Assets	56
+P70 5 Recommendations	58
+P71 5.1 Actions to address the reported service gaps	59
+P72 Annexures Appendices	60
+P73 Appendix A Financial reconciliation and valuation limitations	60
+P74 Extent of existing cost estimates	60
+P75 Appendix B Service date exceptions and supporting evidence	61
+P76 Rules for an approved register correction	62
+P77 Appendix C Definitions used in the analysis	63
+P78 Principal references	64
+P79 Appendix D Programme list exception roster	64
+P80 Appendix E Documented outstanding works and handover	66
+P81 Appendix F Facility interview scope and denominators	70
+P82 Appendix G Asset reconciliation examples	71
+P83 Appendix H Photographic schedule	72
+P84 Appendix I Land records and ownership evidence	74
+P85 Appendix J Additional assets and classification checks	76
+P86 Appendix K Financial analysis by asset type	76
+P87 MoFPED	77
+P88 MoWT	78
+P89 MoES	79
+P90 MAAIF	79
+P91 MoH	80
+P92 OPM	80
+P93 MoWE	81
+P94 MoGLSD	81
+P95 NEMA	82
+P96 PPDA	82
+P97 OAG	82
+P98 MoLG	82
+P99 MoLHUD	83
+P100 Arua Regional Blood Bank	83
+P101 Hoima Regional Blood Bank	85
+P102 Soroti Regional Blood Bank	86
+P103 Health centres	86
+P104 Schools	88
+P105 Appendix L Responses to reviewer comments	90
+P107 List of acronyms
+P108 GOU	Government of Uganda
+P109 HC	Health centre
+P110 ICT	Information and communications technology
+P111 IFMIS	Integrated Financial Management Information System
+P112 KCCA	Kampala Capital City Authority
+P113 LGFC	Local Government Finance Commission
+P114 MAAIF	Ministry of Agriculture, Animal Industry and Fisheries
+P115 MDA	Ministry, department or agency
+P116 MoDVA	Ministry of Defence and Veteran Affairs
+P117 MoES	Ministry of Education and Sports
+P118 MOES	Ministry of Education and Sports (as engraved)
+P119 MoFPED	Ministry of Finance, Planning and Economic Development
+P120 MoGLSD	Ministry of Gender, Labour and Social Development
+P121 MoH	Ministry of Health
+P122 MOH	Ministry of Health (as engraved)
+P123 MoLG	Ministry of Local Government
+P124 MoLHUD	Ministry of Lands, Housing and Urban Development
+P125 MoPS	Ministry of Public Service
+P126 MoWE	Ministry of Water and Environment
+P127 MoWT	Ministry of Works and Transport
+P128 NEMA	National Environment Management Authority
+P129 OAG	Office of the Auditor General
+P130 OPM	Office of the Prime Minister
+P131 PforR	Program-for-Results
+P132 PPDA	Public Procurement and Disposal of Public Assets Authority
+P133 RCU	Reform Coordination Unit
+P134 TELA	Teacher Effectiveness and Learner Assessment
+P135 UBTS	Uganda Blood Transfusion Services
+P136 UgIFT	Uganda Intergovernmental Fiscal Transfer
+P137 UGX	Uganda shillings
+P138 UPS	Uninterruptible power supply
+P139 Executive summary
+P140 The findings show a substantial stock of UgIFT assets supporting health care and secondary education, alongside equipment and buildings requiring attention. Facilities reported improvements in their services, but unfinished works, equipment out of use and weaknesses in asset identification limit the benefits. The report sets out the action needed to maintain the assets, complete outstanding works and resolve errors in the financial and custody records.
+P141 A total of 229,024 asset records were identified. Schools account for 145,256 and Health Centres for 63,432. A further 16,663 relate to ministries and agencies, 602 to regional blood banks, 3,067 to hospitals under local governments and four to other local-government locations. The total includes items whose receipt, classification or programme assignment still requires confirmation. These cases must be resolved before the full population can be certified as physically verified UgIFT assets.
+P142 Overall, 215,504 items (94.1%) are classified Functional and 13,520 (5.9%) Faulty, with the same numbers recorded as in use and out of use, respectively. Reasons for non-use include lack of power, unfinished buildings, missing parts and insufficient training. These require different responses. Usable tag details are unavailable for 178,695 items, making identification and custody checks a substantial task.
+P143 Facilities reported improvements in services following UgIFT support. Of 284 health-centre respondents, 238 (83.8%) reported at least one benefit, including improved maternity services, access to care and use of equipment. Of 193 school respondents, 144 (74.6%) reported benefits such as better learning conditions and access to secondary education. These are the facilities’ accounts of changes in their services; the exercise did not measure how much of each change was caused by the programme.
+P144 The programme list contains 629 distinct facility entries. Supporting returns account for 590, while 39 have discrepancies requiring reconciliation. The reviewed evidence identifies at least 70 facilities with incomplete works and 13 others awaiting handover or commissioning. Some facilities were operating while particular buildings or supporting structures remained unfinished. Completion, handover and readiness for use therefore need to be confirmed separately.
+P146 Priority actions
+P147 MoFPED and the responsible institutions should first confirm when assets were placed in service. Of 201,066 full service dates, 3,345 precede programme approval on 27 June 2017. A further 27,958 entries contain partial dates or text, which cannot be accepted as exact service dates. The review also found 787 purchase dates later than the recorded service date. These findings overlap. Each affected date should be checked against receipt, acceptance or commissioning records, together with the asset’s ownership and programme assignment.
+P148 Where a full service date cannot be supported, retain the reported period or status in the supporting records and leave the exact-date field blank until it is confirmed. A purchase date or the programme start date should not be used to fill the gap. Approve supported corrections before migration to IFMIS and recalculate depreciation and net book value where the corrected dates affect them.
+P149 Available recorded costs total UGX 996.813 billion, with costs missing for 1,086 records. Net book value remains unresolved for 23,016 records. For the 180,730 recognized records with complete accounting figures, cost of UGX 760.987 billion less accumulated depreciation of UGX 165.185 billion gives a net book value of UGX 595.802 billion at 30 September 2026. Net book value is the recorded cost remaining after depreciation; it does not measure the asset’s market value or physical condition.
+P150 Cost evidence also needs review. Costs for 166,593 items were estimated by comparison with similar assets. These account for 82.44% of available recorded cost. Of 298 construction-in-progress entries, 275 have zero cost and four have no cost recorded. The recorded amounts therefore cannot establish the full value of unfinished works. Obtain the supporting expenditure or valuation records, resolve missing amounts and approve changes before treating the balances as a verified programme valuation.
+P151 Facility managers, local governments and the responsible ministries should give priority to essential equipment, reliable power and water, user training and outstanding buildings. Keep an action list naming the item or facility, the responsible officer and the agreed completion date. Assess faulty items for repair, replacement or disposal, and review the 22,161 fully depreciated records still marked in use. Reconcile delivery, transfer and custody records before concluding that an asset is missing. The recommendations and appendices provide the specific cases and follow-up required.
+P152 1 Introduction and background
+P153 1.1 Introduction
+P154 This report presents the findings of the UgIFT asset verification undertaken by the Ministry of Finance, Planning and Economic Development as part of programme closure activities. It sets out the status of the assets provided by the programme to the targeted national institutions responsible for supporting the implementation of the programme, Blood Banks and local governments specifically targeting Seed Secondary Schools and health facilities upgraded from Health Centre II to Health Centre III. 
+P155 1.2 Background to the verification
+P156 The Uganda Intergovernmental Fiscal Transfers (UgIFT) Programme is a government programme implemented through a Programme-for-Results (PforR) launched and aligned with the broader IGFT Reform Programme (2015). UgIFT 1.0 began with US$200 million in FY2017/18, supporting Education and Health. This was later expanded through additional financing of US$300 million, including US$240 million in credit and US$60 million in grants, with US$50 million from the IDA Refugee Support Window, expanding beyond Education and Health to water and Environment and Agriculture (micro-scale irrigation) making the overall funding total of US$500 million. 
+P157 The Intergovernmental Fiscal Transfer Reform Programme (IGFT RP) was revised in 2020 to align with the Third National Development Plan (NDP III 2020/21 - 2024/25), and to directly contribute to Four (04) Programmes i.e. Human Capital Development; Public Sector Transformation; Natural Resources, Environment, Climate change, Land and Water Management; and Development Plan Implementation. 
+P158 Overall, the development objective of the UgIFT Programme was to: “Improve the adequacy, equity, and effectiveness of financing and the oversight, management, and delivery of Local Government services in Education, Health, Water and Environment, and Agriculture (micro-scale irrigation), including refugees and their host communities”. 
+P159 Specifically, the Programme sought to: 
+P160 Increase the adequacy and predictability of fiscal transfers to Local Governments for service delivery; 
+P161 Improve the equity and transparency of allocation mechanisms through the introduction of formula-based transfers; 
+P162 Strengthen performance incentives and accountability systems for Local Governments; and 
+P163 Expand access to quality education and health infrastructure, particularly in under-served areas.
+P164 The UgIFT Programme had four components aimed at strengthening the intergovernmental fiscal transfer system while supporting investments in service delivery infrastructure. These included;
+P165 Component 1: Reform of the Intergovernmental Fiscal Transfer System
+P166 This supported the design and implementation of a reformed fiscal transfer framework based on objective and transparent allocation criteria. This resulted into introduction of formula-based grants - Revised allocation formulas reflecting population, infrastructure gaps, and service delivery needs.
+P167 Component 2: Education Infrastructure Development
+P168 This component financed the construction and upgrading of education facilities, particularly government secondary schools in under-served sub-counties. This involved construction and equipping of new secondary schools - classrooms, laboratories, administration blocks, sanitation facilities, teachers’ houses, furniture and ICT equipment in the different local governments. 
+P169 Component 3: Health Infrastructure Development
+P170 This supported investments in health facilities to improve access to primary health care services at the local level. The major outputs under the component were construction and upgrading of health centers - Staff accommodation, sanitation facilities and provision of medical equipment.
+P171 Component 4: Local Government Performance and Institutional Strengthening
+P172 This aimed at strengthening LG capacity in planning, budgeting, procurement, and infrastructure management. Under this component, annual Local Government Performance Assessments have been undertaken across the 176 LGs, capacity building and technical support strengthened monitoring and reporting systems. 
+P173 The Programme was implemented through a clearly defined results framework that connected actions and incentives across three levels of government to strengthen service delivery outcomes. The programme came to an end on 31 December 2025. The following areas of support describe the following outputs under the different components; current asset and facility findings are presented later in this report.
+P174 Budget Support
+P175 Education: 196 of 259 Seed Secondary Schools are complete of which 189 are operational. 
+P176 Health: 354 of 373 health facilities, upgrades/new constructions (HC II to HC III) are complete.
+P177 Water and Environment: 758 - piped water systems, 5,398- point water sources, 7,082 water supply systems rehabilitated, 325 designs completed, and 256 sanitation facilities in the targeted service units.
+P178 Agriculture (Micro-scale Irrigation): Over 6,235 irrigation systems were installed (4,843 hectares under irrigation), 632 irrigation demonstration sites in 135 LGs set up.
+P179 Refugee intervention: 51 primary schools and 35 health facilities in refugee hosting districts (RHD) were transitioned and integrated into the LG service.
+P180 Blood Banks: Regional Blood Banks in Arua and Hoima were completed and commissioned while Soroti Regional Blood Bank was rehabilitated. 
+P181 2.	Grant management 
+P182 Assets for institutional strengthening and retooling including ICT equipment and vehicles were provided. The Ministry of Finance, Planning and Economic Development (MoFPED) through PFM Coordination Unit (RCU) manages the Government of Uganda counterpart funding of the programme to support the grant management component of the UgIFT programme. The grant management supports in financing of Central Government actions intended to achieve programme objectives and Disbursement Linked Indicators (DLIs). To this end, MoFPED through RCU supported MDAs to acquire different assets meant to support programme implementation. 
+P183 1.3 Justification
+P184 The UgIFT programme came to an end on 31st December 2025. As part of the programme’s closure activities, MoFPED, through RCU, commissioned an end-of-programme asset verification exercise to take stock of the assets procured under the programme and to establish where those assets were, how they were being used as part of the processes to hand them over to government for sustainability purposes. 
+P185 1.4 Objectives of the assignment
+P186 The objective of the assignment was to undertake verification and recording of all assets acquired under the UgIFT Programme. Specifically, the assignment intended to; 
+P187 Identify and verify the existence of the assets
+P188 Verify the assets condition and status: specifically, the condition on functionality, usage/performance and location among others
+P189 Assess financial management aspects: residual value of the investments/hardware/tools for purposes of financial reporting for project closure
+P190 List the assets that are obsolete, unserviceable and require disposal
+P191 Develop a computerized database of the investment/hardware/tools to facilitate recording of new deployed assets/investments.
+P192 Undertake PFM Assessment on Asset Management practices (including sustainability, Operations and Maintenance) of the UgIFT implementing LGs 
+P193 1.5 Scope of Work
+P194 The assignment covered institutions at national and local government level that directly implemented the UgIFT programme through coordination, support and implementation. At local government level, the study focused on upgraded health facilities and Seed Secondary Schools that received assets under the programme. Health Centers and other local-government assets are also reported separately.
+P195 Specifically, the assignment involved the following tasks;  
+P196 Verification of the Asset’s Records of targeted ministries departments and agencies and local governments 
+P197 Physical and Functional Verification of assets
+P198 Data Consolidation for generation of a single data base of assets provided by the program
+P199 Generation of an IFMIS ready Asset Register for Integration, and Migration into IFMIS 
+P200 Review of the UgIFT Asset Management Practices
+P201 1.6 Expected deliverables
+P202 Key expected outputs of the consultant include:
+P203 Report with the list and current status of assets acquired under the programmes;
+P204 An automated up-to-date assets data base of UgIFT Investments across MDALGs;
+P205 Report on the estimated value of assets under the programme as well as operations and maintenance arrangements;
+P206 IFMIS-Ready Asset Register and Data Migration Report
+P207 Report on functionality of assets relating to systems investments;
+P208 Report on Assessment of Asset Management Practices, Risks and recommendations. 
+P209 2 Approach and methodology
+P210 The verification exercise was conducted using a participatory and consultative process and implemented in three interlinked phases: Preparatory and inception phase, Data collection phase and the report writing phase. 
+P211 2.1 Preparation
+P212 After signing of the contract, the assignment commenced with an entry meeting on 28th May 2026. During this meeting, the Client specified target MDAs to be visited, the LG stakeholders to be reached as well as the documents to be reviewed. The Inception phase was completed and the inception report submitted on 18th June, 2026 which provided an agreed scope, approach and work plan for the exercise. 
+P213 2.2 Pilot Test
+P214 The team also undertook a pilot test in Wakiso District Local Government, with verification carried out at Buloba Health Centre III and Sumbwe Seed Secondary School. During the pilot test, it was found out that, among others, there are cases of mismatches of facility names, that UgIFT assets can be integrated into the general LG asset register. This facilitated improving the design of the data collection process including; design of data collection tools, determining the timeline for data collection and estimated costs.
+P215 2.3 Data collection
+P216 This exercise was undertaken in two phases first at National level and later at the Local government level. 
+P217 National level: Physical visits to verify assets provided by the programme at the national-level was completed on the 19th of August 2026. This covered 15 MDAs including; Ministry of Works and Transport (MoWT); Ministry of Education and Sports (MoES); Ministry of Agriculture, Animal Industries and Fisheries (MAAIF); Ministry of Health (MoH); Office of the Prime Minister (OPM); Ministry of Water and Environment (MoWE); Ministry of Gender, Labour and Social Development (MoGLSD); Local Government Finance Commission; National Environment Management Authority (NEMA); Public Procurement and Disposal of Assets Authority (PPDA); Office of the Auditor General (OAG); Ministry of Public Service (MoPs); Ministry of Lands, Housing and Urban Development (MoLHUD); Ministry of Local Government (MoLG) and Ministry of Finance, Planning and Economic Development (MoFPED). Additionally, three Blood Banks of Hoima, Arua and Soroti were covered.
+P218 Local government level: The local government verification targeted UgIFT upgraded or constructed Health Centres and Seed Secondary Schools. The programme reconciliation list contains 629 distinct entries: 371 Health Centres and 258 schools under 160 recorded local government names. The process began with training of field teams prior to the actual field verification.
+P219 Training of field teams: A total of 85 Research Assistants (RAs) and 7 Regional Supervisors were trained. The training took place from 21st to 23rd August 2026 while physical verification started on the 24th of August 2026. During the asset verification, the RAs visited Seed Secondary Schools, Health Centres and Blood Banks. 
+P220 Physical verification: This exercise commenced on the 24th of August 2026 and was completed on 17th September 2026. The local government physical verification involved entry meetings with the LG leadership at the LG headquarters for authorization and review of reports relating to UgIFT assets, key informant interviews with the technical teams especially the Chief Administrative Officers, Finance Officers, District Health Officers and District Education Officers. Thereafter, the RAs proceeded to the facilities for physical verification of the assets.
+P221 At local government level, the programme list had 629 facilities: 371 Health Centres and 258 Seed Secondary Schools. The list recorded 547 facilities (87.0%) as complete and 82 (13.0%) as ongoing. The ongoing works were more common among Seed Secondary Schools (63, or 24.4%) than among Health Centres (19, or 5.1%). 
+P222 2.4 Quality assurance
+P223 Regional supervisors checked daily field activity and reviewed the completed tools. The central technical team carried out spot checks and helped resolve operational questions. Teams compared institutional asset information with the items and explanations provided during visits, while supervisors referred matters requiring clarification to the team leader and field coordinator.
+P224 2.5 Asset categories, condition, use and identification
+P225 Asset categories: Each entry in the Asset Register represents one recorded unit. The analysis covers buildings, ICT equipment, transport equipment, furniture and fittings, medical, laboratory and research equipment, other classified assets, items outside fixed-asset classification and unclassified entries. Assets are grouped by the institution or beneficiary to which they are attributed. 
+P226 Condition and use: Condition and use were reported for each asset during the verification. A working asset is one recorded as functional and in use. An asset recorded as faulty was reported as not working and not in use. This included assets that were broken down or damaged. An asset that was new and in store was recorded as functional but not in use. Additionally, an asset that was held elsewhere, not yet delivered or awaiting power installation, completion of buildings or trained users, was also recorded as functional but not in use. 
+P227 Identification: An asset is properly identified when carried a UgIFT programme marking. However, there were other assets that had no UgIFT marking but the officers on ground identified them as UgIFT assets.   
+P228 2.6 Financial analysis and Valuation
+P229 The Government of Uganda Asset Accounting Policies and Guidelines 2023 was used to determine as the policy basis for determining recorded values, depreciation and net book values. Financial values are reported as at 30th September 2026. Straight-line depreciation was applied where the required information was available. 
+P230 2.7 Analysis and reporting
+P231 Analysis and reporting was done through triangulation of the literature from different policy, Planning and Financial documents including: Government of Uganda Asset Accounting Policies and Guidelines 2023; asset registers; asset records at national and local government levels; physical inspections; discussions with facility managers; photographs and asset counts for each institution. 
+P232 2.8 Challenges and Limitations to the assignment
+P233 Difficult terrain and poor physical accessibility of facilities: Physical accessibility presented a significant operational challenge especially for facilities located in areas characterised by difficult terrain and limited transport accessibility such as Bwesumbu HC III, Bwesumbu Seed School, Buhuhira and Kabingo in Kasese District. In addition, accessing facilities within the Island was difficult, time consuming and expensive. This led the teams to overshoot the anticipated time for data collection. 
+P234 High transportation cost: Given the national wide coverage, the rising fuel prices led to high field costs. The field teams spent more money than was anticipated. The costs were extra ordinarily higher for island facilities like Kalangala, Buvuma, Mayuge among others. For instance, Kalangala had 3 facilities with long distance on water that required hiring a private boat since it was not a common route to the transporters and outside the ferry schedules. A similar situation was encountered in Buvuma and Namayingo districts. 
+P235 Poor record keeping: In many LGs and facilities, there were no clear records about the assets delivered under UgIFT. The LGs and the facilities had incomplete or missing UgIFT asset registers which delayed data collection. Subsequently, the teams took longer in such facilities identifying the assets as most of these were not engraved with the UgIFT identifiers while others were not engraved at all. In addition, the field teams encountered situations where some Assets could not be physically accessed especially for schools since it was holiday time. 
+P237 	
+P238 3 Findings
+P239 This section presents results of the verification exercise based on the specific objectives. The results are presented in different results levels indicating availability of assets, asset condition and functionality, asset marking and identification and the financial analysis in each subsection. 
+P240 3.1 Overall results 
+P241 This section provides an overall view of the UgFT asset status combining both National level agencies and schools and health centres. 
+P242 Overall asset availability 
+P243 A total of 229,024 assets are recorded across the targeted MDAs, beneficiary Blood Banks, Upgraded Health Centres and Seed Secondary School. These include vehicles, laptops, printers, desktop computers, projectors, cameras, furniture (desks, chairs, tables and stools), UPS systems, digital phones, paper shredders, tablets and clinical equipment, among others. 
+P244 Overall, the Seed Secondary Schools hold the majority of assets 63.4% (145,256), followed by Health Centres with 27.7% (63,432). MDAs hold 7.3% (16,663) and regional Blood Banks with 0.3% (602). In addition, some assets were found to have been reallocated by LGs from Health Center to hospitals such as Rukoki general hospital in Kasese Municipality. Hospitals hold 3,067 assets (1.3%) and other local-government locations hold four (less than 0.1%).
+P246 Figure 1: Distribution of assets  
+P247 Source: Primary data analysis
+P248 Overall asset Condition and functionality
+P249 Overall, 215,504 assets constituting 94.1%, were classified as functional and in use, while 13,520 (5.9%) were classified as faulty and out of use. The detailed analysis of asset condition is indicated in table 1.
+P250 Table 1: Overall condition of UgIFT assets and functionality
+P251 Source: Primary data analysis
+P252 As indicated in table 1 above, most of the deployed assets were already in service while some were in store and still in good condition but not in use. This was attributed mainly to some localized challenges such as power, incomplete structures, untrained staff, among others. Some assets were broken mainly furniture in Seed Secondary Schools and require repair. 
+P253 Verification also noted that 13,520 assets, mainly in seed secondary schools and Health Centres, were classified as faulty and out of use. Some were awaiting installation or the facility itself was not yet ready. Notable among the facilities include Lungulu Seed Secondary School in Nwoya District where desktop computers, a printer and UPS units were still boxed because the school was waiting for power connection. At Nansanga Seed Secondary School in Budaka, 27 of 28 desktop computers remained packed for lack of reliable power. 
+P254 Figure 2 shows the reasons for non-deployment of some of the assets even when they were found to be in good condition. 
+P256 Figure 2: Reasons for equipment not in use reported by facilities (156 respondents; multiple responses)
+P257 Source: Primary data analysis
+P258 In addition, broken desks and stools were in classrooms and stores at Seed schools in Namisindwa and Napak. At Arua Regional Blood Bank, six blood pressure machines were recorded as damaged or not functional. The information above is depicted in some of the photos presented below.
+P260 Asset Marking and Identification
+P261 The verification revealed that 50,329 (22.0%) of the assets had usable identifiers and 178,695 (78.0%) had no usable identifier recorded. Of all assets, 22,253 (9.7%) had identifiers containing UgIFT or UGFT as a form of identification.
+P262 Identification varied at the different asset locations. Identifiers are recorded for 30.3% of MDA records, 24.5% of school records and 15.0% of health-centre records. Among the MDAs, the Ministry of Education and Sports accounts for most of the ministry assets without usable identifiers, and these were mainly the TELA handsets and tablets. The details of asset identification are provided in figure 3.
+P265 Figure 3: Asset marking and Identification
+P266 Below are some of the photos depicting the different markings and identification engravements of assets across the institutions
+P268 Financial analysis/ valuation
+P269 Overall, the 229,024 assets across the different institutions had an available recorded value of UGX 996,812,628,890. Based on the straight-line depreciation method, available accumulated depreciation was UGX 165,185,197,307 and available net book value was UGX 595,801,587,531 as at 30th September 2026. Recorded values vary by institution, with MDAs at UGX 32,054,743,836, Blood Banks at UGX 1,503,720,926, Seed Secondary Schools at UGX 700,242,561,371 and Health Centres at UGX 260,692,452,291, as indicated in table 2. Hospital and other local-government assets account for the remaining UGX 2,319,150,466. These available totals cover different populations; Appendix A reconciles cost less depreciation to net book value for assets with complete accounting information.
+P270 Table 2: Overall Recorded asset value and net book value
+P271 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P273 3.2 National level Ministries and Agencies results
+P274 Overall Asset availability at Ministries and Agencies
+P275 The exercise recorded 16,663 assets of the different categories across all the thirteen asset-holding Ministries and agencies. In terms of categorization, the exercise recorded 15,192 ICT equipment items including desktop computers, laptops, tablets and Uninterruptible Power Supply (UPS) units, 77 transport items, 99 furniture and fittings, 48 other classified assets, 1,235 items outside fixed-asset classification and 12 unclassified entries.
+P276 By location, most MDA assets (94.6%) were at MoES, MoWE and MAAIF while PPDA was found with only five assets including three Lenovo ThinkPad laptops, one HP LaserJet printer and one Samsung Galaxy tablet as indicated in figure 4 below.
+P278 Figure 4: UgFT Assets available at each of the verified MDAs
+P279 MDA asset Condition and functionality
+P280 At MDA level, apart from sixteen faulty assets at Ministry of Works and Transport, one faulty double-cabin pickup at Ministry of Health and three faulty laptops at the Office of the Prime Minister, the rest of the assets, 16,643 (99.9%), were recorded as functional and in use. The Ministry of Education and Sports holds 10,783 of these assets, mainly TELA handsets and tablets, all recorded as in use at the different schools across the country. LGFC and MoPS indicated that they never received UgIFT assets.
+P281 Asset marking and Identification 
+P282 At MDA level, there were 16,663 asset records, of which 5,045 (30.3%) had usable identifiers, with 4,925 assets (29.6%) bearing UgIFT or UGFT in the tag field and 120 (0.7%) carrying another identifier. The majority of assets, 11,618 (69.7%), had no usable tag recorded. Figure 5 below shows the identification status of the assets at the different MDAs. These tag-field counts do not confirm physical engraving.
+P284 Figure 5: Asset marking and Identification at MDAs
+P285 Financial analysis/ valuation
+P286 Financial value of assets: recorded costs total UGX 32,054,743,836 across 16,651 of 16,663 records. Accumulated depreciation totals UGX 19,787,511,232 and net book value totals UGX 10,265,924,979 at 30 September 2026. Net book value remains unavailable for 96 records. The table below gives the category breakdown and identifies any unavailable amounts.
+P287 3.3 MDA specific results 
+P288 3.3.1 Ministry of Finance, Planning and Economic Development
+P289 Asset availability: The ministry keeps a UgIFT asset register and the consolidated register for all MDAs that received UgIFT assets. A total of 458 assets were recorded at the ministry including 230 ICT items, 99 furniture and fittings, 21 transport items, 37 other classified assets, 65 items outside fixed-asset classification and six unclassified entries. The main items were office chairs and desks, desktop computers, tablets and 20 Toyota Hilux double-cabin pickups.
+P290 Condition and functionality: All 458 assets (100.0%) were recorded as functional and in use, and none was classified as faulty.
+P291 Reports described spoilt keyboards and UPS units, computers that freeze and laptop losses. The affected quantities and individual assets were not specified, so the number of broken or lost items could not be established. The asset manager should identify the affected items and reconcile the damage and loss reports.
+P292 Marking and identification: A total of 282 assets (61.6%) had usable identifiers and 176 (38.4%) had no usable tag recorded. Of all 458 assets, 247 (53.9%) had UgIFT or UGFT in the tag field and 35 (7.6%) carried another identifier. The 20 double-cabin pickups were identified by their registration numbers rather than UgIFT tag text. These tag-field counts do not confirm physical engraving.
+P293 Financial Value of assets: The recorded value of the ministry's UgIFT assets is UGX 6,204,318,000. Accumulated depreciation is UGX 4,312,193,629 and net book value is UGX 1,785,677,771 at 30 September 2026. Net book value remains unavailable for 20 records; the figures sum only available amounts.
+P294 Table 3: Recorded costs and available accounting values at MoFPED
+P295 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P296 3.3.2 Ministry of Works and Transport
+P297 Asset availability: The Ministry did not provide a UgIFT Asset Register. The MoWT register contained 87 assets, of which 69 ICT items were mainly desktop computers, monitors, uninterruptible power supply (UPS) units, video-conferencing equipment, printers and photocopiers; one Toyota Hilux pickup; sixteen items outside fixed-asset classification; and one unclassified entry. The sixteen items outside fixed-asset classification were keyboards. The unclassified entry was entered as Ministry of Local Government, as presented in Figure 6. Computer components are recorded separately and are included in these totals.
+P299 Figure 6: Assets verified at MoWT
+P300 Condition and functionality: Of the 87 assets, 71 (81.6%) were recorded as functional and in use; sixteen (18.4%) were recorded as faulty and not in use.
+P301 Marking and Identification: Of the 87 assets, 79 (90.8%) had usable identifiers, with 77 (88.5%) having UgIFT or UGFT in the tag field and two (2.3%) carrying another identifier; eight (9.2%) had no usable tag recorded.
+P302 Financial Value of assets: The recorded value was established as UGX 455,932,376 as presented in Table 4. Accumulated depreciation is UGX 326,484,882 and net book value is UGX 115,311,494 at 30 September 2026. Net book value remains unavailable for 19 records; the figures sum only available amounts.
+P303 Table 4: MoWT asset values by category
+P304 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P305 3.3.3 Ministry of Education and Sports
+P306 Asset availability: The verification at the Ministry of Education and Sports (MoES) established that the ministry had 10,783 assets. All the assets are ICT equipment and these include 9,324 TELA handsets, 1,001 tablets (976 of them inspection tablets), 456 laptops, a photocopier and a printer. The breakdown of these assets is shown below in figure 7. Teacher, Effectiveness and Learner Achievement (TELA) is the system, financed by UgIFT, that the ministry uses to monitor attendance and performance in schools; the handsets and inspection tablets are deployed in local governments and remain MoES assets.
+P308 Figure 7: Assets verified at MoES
+P309 All the 10,783 assets (100.0%) are recorded as functional and in use. All the 456 laptops are recorded as functional and in use. Their identification status is shown in table 6.
+P310 Table 5: Condition and use of assets at MoES
+P311 Marking and Identification: Of the 10,783 assets, 458 (4.2%) had UgIFT or UGFT in the tag field, while 10,325 (95.8%) had no usable tag recorded. None of the handset or tablet records has a usable tag recorded; the tag fields do not confirm physical engraving.
+P312 Table 6: Recorded tag content of assets at MoES
+P313 Financial Value of assets: The recorded value is UGX 14,925,128,359, the highest among the MDAs. Accumulated depreciation is UGX 10,607,476,704 and net book value is UGX 4,317,651,655 at 30 September 2026.
+P314 Table 7: Recorded costs and available accounting values at MoES
+P315 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P316 3.3.4 Ministry of Agriculture, Animal Industry and Fisheries
+P317 Asset availability: The team recorded UgIFT assets at the Ministry of Agriculture, Animal Industry and Fisheries (MAAIF) and established that it held 2,045 assets. These included 1,236 ICT equipment items, two transport items and 807 others, comprising 797 outside fixed-asset classification, five other classified assets and five unclassified entries. The ICT items were mainly 819 tablets, 211 computers (162 desktop CPU entries and 49 laptops), 149 monitors and 21 printers. The breakdown of the assets mentioned above is shown in figure 8.
+P319 Figure 8: Assets verified: MAAIF
+P320 All 2,045 assets (100.0%) are recorded as functional and in use. All 211 computers and 819 tablets are recorded as functional and in use. Identification is reported separately in table 9.
+P321 Table 8: Condition and use of assets at MAAIF
+P322 Marking and Identification: Of the 2,045 assets, 1,232 (60.2%) had usable identifiers, 1,228 (60.0%) with UgIFT or UGFT in the tag field and four (0.2%) with another identifier; 813 (39.8%) had no usable tag recorded. The denominator includes all ministry records, including items outside fixed-asset classification, and the tag fields do not confirm physical engraving.
+P323 Table 9: Recorded tag content of assets at MAAIF
+P324 Financial Value of assets: The recorded value was UGX 2,856,556,593. Accumulated depreciation is UGX 1,380,059,505 and net book value is UGX 1,403,429,899 at 30 September 2026. Net book value remains unavailable for 7 records; the figures sum only available amounts.
+P325 Table 10: Recorded costs and available accounting values at MAAIF
+P326 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P327 3.3.5 Ministry of Health
+P328 The verification at the MoH did not find the Ugift Asset Register but relied on the listing provided by the Ministry of Finance, Planning and Economic Development. 
+P329 Asset availability: A total of 260 assets were recorded. Of the 260 assets, 31 were classified as ICT equipment, 25 as transport equipment (motor vehicles and motorcycles), six as other classified assets and 198 as items outside fixed-asset classification, as indicated in Figure 9.
+P330 The Ministry of Health’s other items include two heavy-duty binding machines, two CC20240 paper shredders and 12 entries described as Accessories (12-Helmets). All 12 helmet entries share asset number UGIFT-217204, so the identity and quantity of the helmets require confirmation. The reported total of six power items remains unreconciled. Three have been traced to Kyamwinula Health Centre III under Tororo Municipal Council: one power bank and two regulators (UGIFT-118553–UGIFT-118555). These are already included in the health-centre total. These items are also associated with TASO or RHITES E, so their attribution to UgIFT requires confirmation. The other three power items have not been identified.
+P332 Figure 9: Assets verified at MoH
+P333 Condition and functionality: The assets recorded as functional and in use were 259 (99.6%). Only one asset, a double-cabin pickup, was recorded as faulty and not in use.
+P334 Marking and Identification: Out of the 260 assets, 32 (12.3%) had usable identifiers while 228 (87.7%) had no usable tag recorded. There were fourteen (5.4%) assets with UgIFT or UGFT in the tag field and eighteen (6.9%) with other identifiers. These tag fields do not confirm physical engraving.
+P335 Financial Value of assets: The MoH assets had a recorded value of UGX 1,186,689,609. Accumulated depreciation is UGX 441,202,460 and net book value is UGX 384,551,313 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts.
+P336 Table 11: Recorded costs and available accounting values at MoH
+P337 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P338 3.3.6 Office of the Prime Minister
+P339 The Assets Register for the Office of the Prime Minister was not obtained and no list of assets was provided.  The verification relied on the listing obtained from the Ministry of Finance, Planning and Economic Development.  
+P340 Asset availability: Office of the Prime Minister received 10 assets which were all HP laptop computers as shown in Figure 10.
+P342 Figure 10: Assets verified: OPM
+P343 Condition and functionality: Seven assets (70.0%) were recorded as functional and in use. Three (30.0%) were recorded as faulty and out of use.
+P344 Marking and identification: All the ten laptops (100.0%) had UgIFT or UGFT in the tag field.
+P345 Financial Value of assets: The recorded value of these computers in OPM was UGX 53,535,300. Accumulated depreciation is UGX 48,181,770 and net book value is UGX 5,353,530 at 30 September 2026.
+P346 Table 12: Recorded costs and available accounting values at OPM
+P347 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P348 3.3.7 Ministry of Water and Environment
+P349 Asset availability: The Asset Verification at the Ministry of Water and Environment found out that the ministry keeps a general register which does not conform to IFMIS Standards. The register recorded 2,939 assets, of which 2,782 were classified as ICT equipment and 157 outside fixed-asset classification. The assets received by the Ministry included 2,368 tablets, of which 2,344 were Euron tablets; computers and related monitors, keyboards and UPS units; and 31 laptops. The Ministry also received sixteen real-time kinematic GPS machines. Computer components are recorded separately and are included in these totals.
+P350 However, other assets were identified which included 157 keyboards recorded with Dell OptiPlex computers, seven survey units described as ground-penetrating radar equipment, 3 Samsung Galaxy Tab S9 tablets, 2 Lenovo ThinkBook notebooks, 1 Kyocera heavy-duty copier, 1 Huawei 65-inch infrared screen and 1 UPS unit. These items are already included in the ministry total.
+P351 Asset condition and functionality: The findings further indicated that all 2,939 assets (100.0%) were recorded as functional and in use, and none was classified as faulty.
+P352 Marking and Identification: The ministry received a total of 2,939 assets, of which 2,897 (98.6%) had usable identifiers, 2,864 (97.4%) with UgIFT or UGFT in the tag field and 33 (1.1%) with another identifier; 42 (1.4%) had no usable tag recorded. These tag fields do not confirm physical engraving.
+P353 Financial Value of the assets: The recorded value was UGX 5,029,981,561. Accumulated depreciation is UGX 2,092,642,121 and net book value is UGX 1,535,627,440 at 30 September 2026. Net book value remains unavailable for 43 records; the figures sum only available amounts.
+P354 Table 13: Recorded costs and available accounting values at MoWE
+P355 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P356 3.3.8 Ministry of Gender, Labour and Social Development
+P357 Asset availability: The Asset Verification at the Ministry of Gender, Labour and Social Development found out that the ministry keeps a UgIFT asset register which had ten UgIFT assets. These comprised eight Lenovo computers, including four ThinkBook laptops, and two Samsung tablets. Figure 11 presents the UgIFT assets recorded for MoGLSD.
+P358 Asset condition and functionality: The findings further indicate that all ten UgIFT assets (100.0%) were recorded as functional and in use.
+P359 Marking and Identification: Eight Lenovo computers (80.0%) had UgIFT or UGFT in the tag field and the two Samsung tablets (20.0%) had no usable tag recorded.
+P360 Financial Value of the assets: The findings pointed out that the recorded value to be UGX 46,180,000. Accumulated depreciation is UGX 13,260,000 and net book value is UGX 14,860,000 at 30 September 2026. Net book value remains unavailable for 4 records; the figures sum only available amounts.
+P361 Table 14: Recorded costs and available accounting values at MoGLSD
+P362 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P364 Figure 11: Assets verified: MoGLSD
+P365 3.3.9 National Environment Management Authority
+P366 Asset availability:
+P367 National Environment Management Authority (NEMA) had six ICT items: four computers, a printer and a heavy-duty photocopier.
+P368 Condition and functionality: All six assets (100.0%) were recorded as functional and in use.
+P370 Figure 12: Assets verified: NEMA
+P371 Asset marking and identification:
+P372 One asset (16.7%), the heavy-duty photocopier, had UgIFT or UGFT in the tag field while the other five (83.3%) had no usable tag recorded.
+P373 Financial value of Assets: The recorded value is UGX 46,824,409. Accumulated depreciation is UGX 32,841,273 and net book value is UGX 13,983,136 at 30 September 2026.
+P374 Table 15: Recorded costs and available accounting values at NEMA
+P375 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P376 3.3.10 Public Procurement and Disposal of Public Assets Authority
+P377 Public Procurement and Disposal of Public Assets Authority (PPDA) did not provide a Ugift Asset Register. The verification relied on the information obtained from the Ministry of Finance, Planning and Economic Development. 
+P378 Asset availability: A total of 5 assets were verified in PPDA; these were 3 Lenovo ThinkPad laptops, a Samsung Galaxy tablet and an HP printer as indicated in Figure 13.
+P380 Figure 13: Assets verified at PPDA
+P381 Asset condition and functionality: All the five assets (100.0%) were recorded as functional and in use.
+P382 Asset marking and identification: All five assets (laptops, a tablet and a printer) had UgIFT or UGFT in the tag field.
+P383 Financial Value of assets: The MF register states a recorded cost of UGX 30,153,500 for these assets. Accumulated depreciation is UGX 13,066,516 and net book value is UGX 17,086,984 at 30 September 2026.
+P384 Table 16: Recorded costs and available accounting values at PPDA
+P385 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P386 3.3.11 Office of the Auditor General (OAG)
+P387 Asset availability: Evidence gathered during the verification confirmed that OAG had no UgIFT asset register rather a list which indicated 20 assets; 18 of which were ICT items (16 laptops and 2 printers) and 2 pickup vehicles. The above information is depicted in figure 14.
+P388 Asset condition and functionality: All twenty assets (100.0%) were recorded as functional and in use.
+P389 Asset marking and Identification: Six assets (30.0%) had UgIFT or UGFT in the tag field and fourteen (70.0%) carried other identifiers. The other identifiers were the office's own asset codes or vehicle registration numbers for the two pickups. These tag-field counts do not confirm physical engraving.
+P391 Figure 14: Assets verified at OAG
+P392 Financial value of Assets: The assets were worth UGX 388,773,680. Accumulated depreciation is UGX 111,591,545 and net book value is UGX 277,182,135 at 30 September 2026.
+P393 Table 17: Recorded costs and available accounting values at OAG
+P394 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P395 3.3.12 Ministry of Local Government
+P396 Asset availability: The asset verification at the Ministry of Local Government (MoLG) found that the ministry kept a UgIFT asset register and had thirteen UgIFT assets: one double-cabin pickup and twelve ICT items. The ICT assets comprised six computer entries, four laptops and two photocopier entries, one described as heavy duty. Figure 15 presents the UgIFT assets recorded for MoLG.
+P397 The two photocopier entries share the identifier UGIFT-MOLG/PHC/23-01. Their identity requires reconciliation to establish whether they are two separate items. Computer components are counted separately in the figure.
+P399 Figure 15: Assets verified at MoLG
+P400 Asset condition and functionality: The findings further indicate that all thirteen assets (100.0%) were recorded as functional and in use.
+P401 Asset marking and identification: Out of the thirteen assets, eight (61.5%) had usable identifiers while five (38.5%) had no usable tag recorded. Of the eight identified assets, seven (53.8% of all assets) had UgIFT or UGFT in the tag field while one (7.7%) carried another identifier. These tag-field counts do not confirm physical engraving.
+P402 Financial Value of assets: The findings pointed out the recorded value to be UGX 343,320,450. Accumulated depreciation is UGX 284,670,827 and net book value is UGX 54,649,623 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts.
+P403 Table 18: Recorded costs and available accounting values at MoLG
+P404 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P405 3.3.13 Ministry of Lands, Housing and Urban Development
+P406 Asset availability: The findings from the verification exercise indicate that MoLH &UD had 27 UgIFT assets. These include 25 Honda motorcycles and two other entries described as Accessories (12-Helmets). The description has not been multiplied by twelve to derive a helmet count.
+P408 Figure 16: Assets verified at MoLHUD
+P409 Additionally, the ministry received survey equipment and other motorcycles that it gave out to local governments.
+P410 Asset condition and functionality: All the 27 assets (100.0%) were recorded as functional and in use, and none was classified as faulty.
+P411 Asset marking and Identification: None of the 27 assets had UgIFT or UGFT in the tag field. Thirteen (48.1%) had other identifiers and fourteen (51.9%) had no usable tag recorded. The motorcycles' registration numbers are distinguished from UgIFT tag text.
+P412 Financial Value of assets: The findings further indicate the recorded value to be UGX 487,349,999. Accumulated depreciation is UGX 123,840,000 and net book value is UGX 340,559,999 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts.
+P413 Table 19: Recorded costs and available accounting values at MoLHUD
+P414 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P416 3.4 Results from blood banks
+P417 UgIFT financed the construction of the Arua and Hoima regional blood banks, which were completed and commissioned, and the rehabilitation of Soroti Regional Blood Bank. The three Blood Banks operate under Uganda Blood Transfusion Services (UBTS) and were verified.
+P418 Asset availability: The three regional blood banks held a total UgFT asset base of 602 recorded assets. The exercise recorded assets at the three regional blood banks as follows: Arua Regional Blood Bank held 324 assets, Hoima Regional Blood Bank had 163 and Soroti Regional Blood Bank had 115 assets. This subtotal excludes assets attributed to other institutions or locations.
+P419 Asset Condition and functionality
+P420 Assets at the regional blood banks were generally recorded as functional and in use: 578 (96.0%) had that status. Only Arua Regional Blood Bank had faulty assets, accounting for all 24 (4.0%) faulty assets in the three-bank total.
+P421 Marking and Identification
+P422 Of the 602 regional blood-bank assets, 76 (12.6%) had usable identifiers and 526 (87.4%) had no usable tag recorded. Twenty-six (4.3%) carried UgIFT or UGFT in the tag field and fifty (8.3%) carried another identifier. These tag-field counts do not confirm physical engraving.
+P423 Financial aspects
+P424 Available recorded value was UGX 1,503,720,926 and available net book value at 30 September 2026 was UGX 826,632,084. Available accumulated depreciation was UGX 553,688,842. Recorded cost is available for 589 of the 602 regional blood-bank records, and net book value is unavailable for thirteen. The available columns cover different populations; the financial reconciliation appendix gives the matched accounting population.
+P425 Table 20: Recorded value and net book value: Blood banks
+P426 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P427 3.4.1 Arua Regional Blood Bank
+P428 Arua Regional Blood Bank accounts for 324 assets. Of these, 300 (92.6%) are classified as functional and in use, while 24 (7.4%) are classified as faulty and not in use. The faulty items require individual assessment for repair or replacement.
+P429 Marking and identification: Twenty-six assets (8.0%) have identifiers containing UgIFT or UGFT, 48 (14.8%) have another identifier and 250 (77.2%) have no usable identifier. Physical engraving still requires confirmation.
+P430 Financial value of assets: recorded costs total UGX 1,153,114,971 across 311 of 324 records. Accumulated depreciation totals UGX 472,399,460 and net book value totals UGX 557,315,511 at 30 September 2026. Net book value remains unavailable for 13 records. The table below gives the category breakdown and identifies any unavailable amounts.
+P431 Table 21: Asset categories at Arua Regional Blood Bank
+P432 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P433 3.4.2 Hoima Regional Blood Bank
+P434 Hoima Regional Blood Bank accounts for 163 assets, all classified as functional and in use (100.0%).
+P435 Marking and identification: No asset has an identifier containing UgIFT or UGFT. Two assets (1.2%) have other identifiers and 161 (98.8%) have no usable identifier. Physical engraving still requires confirmation.
+P436 Financial value of assets: recorded costs total UGX 312,990,807 across 163 of 163 records. Accumulated depreciation totals UGX 48,560,694 and net book value totals UGX 264,430,113 at 30 September 2026. All records have a calculated net book value. The table below gives the category breakdown and identifies any unavailable amounts.
+P437 Table 22: Asset categories at Hoima Regional Blood Bank
+P438 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P439 3.4.3 Soroti Regional Blood Bank
+P440 Soroti Regional Blood Bank accounts for 115 assets, all classified as functional and in use (100.0%).
+P441 Marking and identification: None of the 115 assets has a usable identifier. Physical engraving still requires confirmation.
+P442 Financial value of assets: recorded costs total UGX 37,615,148 across 115 of 115 records. Accumulated depreciation totals UGX 32,728,688 and net book value totals UGX 4,886,460 at 30 September 2026. All records have a calculated net book value. The table below gives the category breakdown and identifies any unavailable amounts.
+P443 Table 23: Asset categories at Soroti Regional Blood Bank
+P444 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P445 The photos below show some of the asets
+P446 3.5 Local Government level results 
+P447 The programme list at the LG level contained 629 UgIFT facilities, of which 371 were Health Centres and 258 were Seed Secondary Schools. Supporting returns accounted for 590 entries and 39 had discrepancies requiring reconciliation. A total of 208,688 assets were recorded at Health Centres and school locations, of which 63,432 were for Health Centres and 145,256 were for schools. Of the 208,688 assets, 195,224 (93.5%) were recorded as functional and in use while 13,464 (6.5%) were recorded as faulty and not in use. A further 3,067 assets were attributed to hospitals and four to other local-government locations. The details are presented in sections 3.6 (Health Centres) and 3.7 (Seed Secondary Schools).
+P448 3.6 Health Centres
+P449 3.6.1 Availability of the assets
+P450 The verification findings indicate that health facilities had 63,432 recorded assets across the different categories which include clinical and laboratory equipment, furniture, maternity ward equipment, ICT equipment, buildings, land and other items. The register includes 7,746 items outside fixed-asset classification. Table 24 and Figure 17 present the assets by category.
+P451 Table 24: Availability of assets in Health Centres
+P453 Figure 17: Assets verified: Health centres
+P454 3.6.2 Asset condition and functionality
+P455 The findings indicate that of the 63,432 health-centre assets, 57,759 (91.1%) were recorded as functional and in use and 5,673 (8.9%) were recorded as faulty and not in use. Figure 18 and Table 25 present the condition of the assets. These two register categories do not establish separate current counts of items in store, broken items and other reasons for non-use.
+P457 Figure 18: Faulty assets at Health Centres by category
+P458 Table 25: Condition of assets: Health centres
+P459 The field records describe health-centre assets that were not in use for other reasons, including those not delivered to the facility (still in stores at LGs), idle items, items with missing parts, lack of power, items not required at the facility, rooms or wards unavailable for installation, items held at another facility, items awaiting installation, lost or missing items and equipment unused because staff were not trained or no specialist was available to operate it. Examples include a wall-mounted blood-pressure machine at Butawata Health Centre III (Mubende District) recorded as not functional; a wheelchair at Aarapoo Health Centre III (Serere District) that had not been delivered; a patient screen at Ayer Health Centre III (Kole District) that was on the delivery note but not seen; a paediatric bed at Okwerodot Health Centre III (Kole District) supplied without a mattress; and an autoclave at Anamwany Health Centre III (Amolatar District) unused for lack of electricity. The register's two condition categories do not provide a separate count for these reasons.
+P460 In terms of buildings and structures, health-centre records total 2,260, comprising 487 residential-building entries, 1,402 non-residential-building entries, 364 other-structure entries and seven water-supply-system entries. Residential buildings are staff houses and other buildings described as residential. Some entries require reclassification, so the record total does not establish a count of separate buildings. Table 26 presents the classifications.
+P461 Table 26: Health Centre records classified as buildings and structures
+P462 3.6.3 Asset marking and Identification
+P463 Of the 63,432 assets in Health Centres, 9,541 (15.0%) had usable identifiers and 53,891 (85.0%) had no usable tag recorded. It was noted that 3,824 (6.0%) carried UgIFT or UGFT in the tag field and 5,717 (9.0%) carried other identifiers, as depicted in Figure 19 and Table 27. These tag-field counts do not confirm physical engraving.
+P465 Figure 19: Health Centre assets with UgIFT or UGFT identifiers by category
+P466 Table 27: Identification of assets at Health centres
+P467 Financial Value of assets: The findings indicate that the available recorded value of assets was UGX 260,692,452,291 and the available net book value was UGX 189,403,577,197, while available accumulated depreciation was UGX 39,211,094,700 as at 30 September 2026. Table 28 gives the recorded value and net book value. Cost is available for 63,183 of 63,432 records; net book value is unavailable for 7,828. Available columns cover different populations; the financial reconciliation appendix gives the matched accounting population.
+P468 Table 28: Recorded and net book values at Health centres
+P469 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P470 Recorded value is the cost in the verification records. For recognized assets with complete accounting figures, net book value is that cost less accumulated depreciation to 30 September 2026 and is not taken below zero. Available costs, depreciation and net book values cover different populations; the financial reconciliation appendix gives the matched accounting population.
+P471 The photos below show some of the facilities that are complete
+P472 The photos below show some of the facilities that are Incomplete
+P474 Figure 24: Unfinished laboratory building at a health centre, Sironko District (Bugisu)
+P475 The following three photographs show different views of Benet Health Centre III in Kween District. At the field visit on 27 August 2026, staff quarters were incomplete, another structure awaited completion and handover, and equipment was still in store.
+P477 Figure 27: A further unfinished room at Benet Health Centre III, Kween District. Field visit 27 August 2026.
+P478 3.7 Seed Secondary Schools
+P479 3.7.1 Availability of the assets
+P480 The findings showed that schools had 145,256 recorded assets covering the following categories: school buildings, water facilities, furniture, computers and related equipment such as monitors, UPS units and keyboards; ICT equipment including printers, photocopiers, cameras and projectors; and other school assets such as laboratory items, electrical items, plant and machinery and sports equipment. Table 29 presents the details. The school group follows recorded locations and includes schools whose programme assignment requires confirmation.
+P481 Table 29: Availability of assets at schools
+P482 3.7.2 Asset condition and functionality
+P483 Out of 145,256 assets, 137,465 (94.6%) were recorded as functional and in use. The verification further established that 7,791 (5.4%) were recorded as faulty and not in use. Table 30 indicates the asset condition. These register categories do not establish separate current counts of items in store, broken items and other reasons for non-use.
+P484 Table 30: Condition of assets: schools
+P485 Functional assets are recorded as in use and faulty assets as not in use. The two condition columns sum to the assets recorded. They do not establish separate counts of good items in store, broken items and other reasons for non-use.
+P486 School furniture and fittings (desks, tables, chairs, shelves and stools) is the largest category with 107,792 assets. Of these, 102,521 were recorded as functional and in use while 5,271 were recorded as faulty. ICT equipment had 10,404 assets recorded as functional and in use.
+P487 3.7.3 Asset marking and Identification
+P488 Of the 145,256 school assets, 35,601 (24.5%) had usable identifiers while 109,655 (75.5%) had no usable tag recorded. A total of 13,478 (9.3%) carried UgIFT or UGFT in the tag field and 22,123 (15.2%) carried other identifiers, as shown in Table 31. These tag-field counts do not confirm physical engraving.
+P489 Table 31: Identification of assets at schools
+P490 Movable assets exclude buildings, structures and land. The table groups recorded tag text as UgIFT or UGFT, another identifier or no usable tag. Buildings, structures and land are identified through property and site records rather than engraving.
+P491 3.8 Financial Value of school assets
+P492 The available recorded value was UGX 700,242,561,371, the available net book value was UGX 394,241,708,595 and available accumulated depreciation was UGX 104,574,530,246 as at 30 September 2026, as shown in Table 32. Cost is available for 144,445 of the 145,256 school records; net book value is unavailable for 14,807. Available columns cover different populations; the financial reconciliation appendix gives the matched accounting population.
+P493 Table 32: Recorded value and net book value: schools
+P494 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P495 Recorded value is the cost in the verification records. For recognized assets with complete accounting figures, net book value is that cost less accumulated depreciation to 30 September 2026. Available costs, depreciation and net book values cover different populations; the financial reconciliation appendix gives the matched accounting population.
+P496 3.9 Completion Status of Facilities
+P497 The verification established that there were a number of facilities that were either completed or not completed. Table 33 provides the programme-list construction baseline and the documented outstanding-work findings separately.
+P498 Table 33: Programme-list construction baseline and documented outstanding works
+P499 Counts are facilities. Programme-list completion labels and the documented outstanding-work findings may concern the same facilities and must not be added together. Outstanding-work counts are documented minimums.
+P500 Table 33 indicates that the programme list recorded 547 facilities as complete and 82 as ongoing before verification. The reviewed evidence identifies at least 70 facilities with incomplete works, comprising 57 schools and thirteen Health Centres, and another thirteen awaiting handover or commissioning, comprising eleven schools and two Health Centres. Some facilities were providing services while works remained incomplete. These findings and the programme-list completion labels describe different matters and must not be added together.
+P501 The photos below show some of the facilities that are complete
+P502 The photos below show some of the facilities that are still under construction
+P503 3.10 Field Observations, 
+P504 3.11 Location and Name changes
+P505 The verification exercise established that there were mismatches between information from the programme list and what was found on the ground. Out of 629 programme-list entries, 590 (93.8%) had supporting returns and 39 (6.2%) had discrepancies requiring reconciliation. These include entries on the programme list without matching returns or with conflicting location or facility-type information. Renamed facilities already matched to returns are not added to the 39 exceptions. Table 34 provides the details.
+P506 Table 34: Inconsistencies between the programme list and the facilities found
+P507 Counts are programme-list facilities: 24 Health Centres and fifteen schools, giving 39 distinct exceptions. HC means Health Centre; SSS means Seed Secondary School. Renamed facilities already matched to returns are not added to this total.
+P508 3.12 UgIFT support to service delivery
+P509 Of the 284 health centres, 238 (83.8%) reported at least one benefit from the UgIFT support. Improved maternity and delivery services were reported by 117 (41.2%), and 51 (18.0%) reported more or safer births at the facility. Improved antenatal, immunisation, laboratory or other specific services were reported by 89 (31.3%), improved access to care or shorter distances by 71 (25.0%) and more patients attending by 61 (21.5%). More than half, 164 (57.7%), linked better services to the equipment and furniture supplied.
+P510 Of the 193 seed schools, 144 (74.6%) reported at least one benefit. A better learning environment, with classrooms, furniture and libraries, was reported by 74 (38.3%), and improved access to secondary education or shorter distances by 59 (30.6%). Practical science or ICT teaching improved at 39 schools (20.2%), and 37 (19.2%) reported higher enrolment. Forty schools (20.7%) also reported jobs and local economic benefits around the school. Figure 44 compares the benefits most often reported by the two types of facility.
+P511 Percentages use 284 health-centre and 193 school responses. A facility could report several benefits. These are respondents' accounts of service changes; the exercise did not measure a causal effect. The school response attributed to Kagganda Health Centre was excluded because its identity was not confirmed.
+P513 Figure 44: Programme Benefits
+P514 3.12.1 Gaps and Challenges
+P515 The main gaps identified by the facilities include; Percentages use 477 facility responses unless a facility type is specified; categories overlap.
+P516 Insufficient Power supply which was reported by 201 facilities (42.1%), including 44.4% of Health Centre respondents and 38.9% of school respondents;
+P517 Inadequate Staffing which was reported by 32.1% of the facilities (153 of 477).
+P518 Inadequate space or infrastructure reported by 31.7% of the facilities (151 of 477).
+P519 Insecurity or absence of fencing reported by 27.0% of the facilities (129 of 477).
+P520 Limited maintenance support was raised by 22.2% of the facilities (106 of 477).
+P521 Inadequate staff houses reported by 22.0% of the facilities (105 of 477).
+P522 Poor water supply reported by 20.1% of the facilities (96 of 477).
+P523 inadequate training of staff to operate the equipment reported by 28.9% of the health centres (82 of 284), and 1.6% of schools (three of 193).
+P524 Incomplete or delayed works, handover or commissioning reported by 28.0% of Seed Secondary School respondents (54 of 193) and 10.2% of Health Centre respondents (29 of 284).
+P525 Equipment not installed, not assembled or delivered incomplete was raised by 17.6% of the facilities (84 of 477).
+P527 Figure 45: Service gaps and challenges
+P528 4 Asset management 
+P529 4.1 Maintenance and repairs
+P530 Maintenance keeps UgIFT assets working for the services they were bought to support. Most of the verified assets are furniture, clinical equipment and computers in daily use at Health Centres and seed schools, where wear and breakage are to be expected. Routine checks, a record of faults and a dependable route for repair decide whether a broken item returns to use quickly or stays out of service. During the verification, each facility was asked how it maintains, repairs, services or replaces UgIFT assets and whether it keeps a regular record of their functionality or breakdown.
+P531 Repair arrangements. Of the 469 facilities that described their maintenance arrangements, 260 (55.4%) met repairs at facility level, from their own funds or with their own staff. Health Centres named Primary Health Care funds (94 of 278, 33.8%), while schools named the capitation or Universal Secondary Education grant, parents' contributions or the school budget (52 of 191, 27.2%). Busaale Health Centre III in Kayunga used Primary Health Care funds for repairs, and Kagumba Seed Secondary School in Kamuli had repaired broken furniture during the second term. A facility could describe more than one arrangement.
+P532 Support from outside the facility was cited by 152 facilities (32.4%): district offices, mainly the District Health Officer, 85 (18.1%); regional referral hospital workshops or national teams 52 (11.1%); hired technicians and artisans 27 (5.8%); and contractors or suppliers under defects liability, guarantee or warranty 12 (2.6%). Major medical equipment repairs depended on this support. Todora Health Centre III in Nwoya worked through the District Health Officer and the Gulu Regional Referral Hospital technical team, Avogera Health Centre III in Buliisa received support from Hoima Regional Referral Hospital, and Bundimulangya Health Centre III in Bundibugyo obtained a team through the District Health Officer.
+P533 In all, 97 facilities (20.7%), 59 of them schools, had not yet needed maintenance because the assets were new, not yet handed over or the buildings were still under construction, and 36 (7.7%) reported no repair arrangement, with broken items set aside or not repaired. Funds for maintenance and repair were reported as insufficient, particularly for major repairs, by 32 of the 505 facilities that described maintenance or challenges (6.3%). At Kyankaramata Health Centre III in Kyenjojo, Primary Health Care funds met minor repairs, but the cost of major repairs was a constraint.
+P534 Figure 46 compares these arrangements at Health Centres and seed schools. Health Centres relied more on outside technical support (41.4% of health centres against 19.4% of schools), while schools more often had not yet needed maintenance (30.9% against 13.7%).
+P536 Figure 46: Most facilities met repairs from their own funds or staff
+P537 Frequency. Few facilities worked to a fixed maintenance interval. Of the 494 programme-list facilities that described how they maintain UgIFT assets or check their condition, 50 (10.1%) did so at a fixed interval. Of these 50, 14 (28.0%) worked annually, 11 (22.0%) monthly, 10 (20.0%) quarterly, 9 (18.0%) every school term, 3 (6.0%) twice a year and 3 (6.0%) weekly or daily, as Figure 47 shows. A further 18 facilities (3.6%) described routine or scheduled servicing without a set interval, mostly scheduled visits by regional referral hospital maintenance teams, and 61 (12.3%) repaired items as the need arose. Ngwedo Seed Secondary School in Buliisa engaged a caretaker every month and used the Directorate of Industrial Training for furniture repairs, while Busaale reviewed asset condition every quarter.
+P539 Figure 47: Annual, monthly and quarterly checks were the most common stated intervals
+P540 Records. Of the 463 facilities that answered, 318 (68.7%) kept a regular record of asset functionality or breakdowns, 36 (7.8%) kept a partial or informal record, 80 (17.3%) kept none and 29 (6.3%) had not yet started because the assets were new or the facility was not yet operating. Of the 478 facilities that answered, 355 (74.3%) held a record of the UgIFT assets they received, 40 (8.4%) held a partial record, such as delivery notes only or a general register that does not identify UgIFT items, and 83 (17.4%) held none. Kagumba Health Centre III in Kamuli kept an asset condition book, a simple practice that other facilities can adopt.
+P541 4.2 Obsolete and Unserviceable Assets
+P542 Two wall-mounted aneroid blood-pressure machines at Nyanja Health Centre III, UGIFT-012842 and UGIFT-012843, were reported as spoilt, beyond repair and requiring replacement. Disposal approval or completion has not been confirmed.
+P543 A certified inventory of obsolete assets and an approved disposal schedule have not been established. Faulty equipment should be assessed individually for repair, replacement or disposal.
+P544 4.3 Missing and Unrecorded Assets
+P545 Assets reported stolen, items not received, equipment with missing accessories and items that could not be accessed during the visit require different follow-up. These circumstances cannot be combined into a single count of losses.
+P546 For example, the incubator at Buwembe Health Centre III (UGIFT-114904) and the ENT instrument set at Rubingo Health Centre III (UGIFT-188911) were reported not received. The wheelchair at Bukimanayi Health Centre III (UGIFT-115669) was not seen, and the officer in charge could not confirm whether it had been redistributed. Check delivery and transfer records before concluding that these assets were lost.
+P547 At Paloga Seed Secondary School, two monitors were reported stolen, while the others remained in use. At Bukiiro Seed Secondary School, accounts of 16 system units conflict: they were described as both present and functional and as stolen. Their status requires confirmation. At Ogur Seed Secondary School, furniture in locked rooms could not be verified because keys were unavailable; this is an access limitation, not evidence of loss.
+P548 The number of assets omitted from facility registers has not been established. A missing local asset register, an inaccessible item and a stolen asset should remain separate findings. Further examples and the required checks are set out in the asset reconciliation appendix.
+P550 5 Recommendations
+P551 Recommendation. Facility managers and school governing bodies should keep the local and regional repair arrangements that already work and adopt a fixed routine: a condition check at least every school term in schools and every quarter in health centres, and a full count of UgIFT assets each year. Each facility should keep a condition book or fault list naming each item requiring action, the responsible person and the agreed completion date; the 36 facilities with no repair arrangement and the 80 with no functionality or breakdown record should set these up first.
+P552 District health and education offices should review unresolved repairs each quarter and arrange technical assistance, and regional referral hospital workshops should include UgIFT equipment in their scheduled visits. Annual maintenance plans should separate minor repairs from major repairs such that the minor repairs be met from Primary Health Care funds or school grants, while major repairs can be handled through district or national funding.
+P553 Recommendation. Facility managers, district health and education officers, engineers and technical teams should prioritise unsafe furniture, electrical concerns and failed equipment needed for essential services. Withdraw unsafe items, obtain technical assessments and verify safe operation after repair. The broken down and not functional assets should be assessed in order of their effect on care and teaching, beginning with clinical equipment and the school furniture that makes up most of the broken down assets; items beyond economic repair should receive a formal disposal decision. At national level, the Office of the Prime Minister should decide on repair or replacement of its three laptops recorded as faulty, and Uganda Blood Transfusion Services (UBTS) should repair or replace the six blood-pressure machines recorded as faulty at Arua Regional Blood Bank. Keep damaged assets separate from usable assets awaiting installation so that each receives the appropriate action.
+P554 Recommendation. LG Accounting Officers, engineers, health and education officers and contractors should coordinate outstanding buildings, utilities, furniture and equipment through site-specific completion plans for each of the 83 documented facilities with works or handover outstanding, comprising seventy with incomplete works and thirteen awaiting handover or commissioning. These are documented minimums. Installation should follow confirmation that rooms, power, water and security are ready. Stored assets described as new or in good condition should be issued to the rooms where they are needed, and each asset waiting for power or installation should have a named date for connection and testing. Protect services already operating during construction. There should be complete testing and signing off before handover or closing each action.
+P555 Recommendation. District health officers, facility managers, suppliers and regional technical teams should provide practical training for staff who use specialist equipment, starting with the Health Centres that linked idle equipment to a lack of skills, including oxygen equipment users, for example, at Bubago and Sop Sop and staff requiring orientation at Avogera. Handover should include a demonstration, basic maintenance guidance and a named route for technical support. Future supply contracts should make on-site demonstration to the staff who will use the equipment, a condition of acceptance and staffing reviews should take account of the equipment each health centre now holds.
+P556 Recommendation. Institution asset managers and LG finance, health and education officers should engrave all the verified assets with UgIFT markings and confirm their locations and custodians. Assets carrying another marking only should receive the programme identifier at their next check. Resolve the continuing allocation of equipment e.g at Todora, Paraa and Masafu through signed transfer or receipt documentation, bring assets held at district stores to their facilities once rooms are ready, and complete delivery of the items still with suppliers.
+P557 The Ministry of Works and Transport should retain the completed tracing record and keep the confirmed custodians and locations current. Losses should be reported and investigated under the public finance rules, and every facility should hold a list of the UgIFT assets it received, showing each item, its engraving and its custodian. Maintain site, ownership and handover records for buildings and land.
+P558 Recommendation. The Ministry of Finance, Planning and Economic Development, with the Ministry of Health, the Ministry of Education and Sports and the local governments concerned, should approve a corrected programme list after rectifying the inconsistencies. The corrected list should then guide decisions wherever planned locations differed from what teams found. 
+P559 5.1 Actions to address the reported service gaps
+P561 Annexures Appendices
+P562 Appendix A Financial reconciliation and valuation limitations
+P563 The financial reporting date is 30 September 2026. Year-to-date depreciation covers 1 July to 30 September 2026. Amounts below are in Uganda shillings, rounded to the nearest shilling after the totals are calculated. Only available amounts are added; blank cells and entries marked Pending calculation are not treated as zero. Each record has one unit, so no further quantity multiplier is applied.
+P564 The cost, depreciation and net book value totals do not all cover the same records. A direct comparison is possible for 180,730 records classified CAPITALIZED or construction in progress (CIP), where all three amounts are available. Their recorded cost of UGX 760,986,784,838 less accumulated depreciation of UGX 165,185,197,307 gives net book value of UGX 595,801,587,531. For this group, net book value is 78.3% of cost. This is the share of recorded cost that has not been depreciated; it does not measure physical condition, service performance or market value.
+P565 There are 21,978 records with a known cost but no calculated net book value. A further 5,336 records have positive costs but are treated as expenses or are not recognized as assets under the accounting treatment applied. Their costs must be excluded from the comparison above. This explains why subtracting all available depreciation from the full recorded cost does not give the reported net book value.
+P566 Extent of existing cost estimates
+P567 Costs for 166,593 items were estimated by comparison with other assets, totalling UGX 821,736,918,304, or 82.44% of available recorded cost. These estimates require supporting valuation evidence. The other available costs also require acquisition or valuation records before they can be accepted as verified amounts. Costs remain missing for a further 1,086 items.
+P568 Construction in progress requires particular care. Of 298 CIP records, 275 carry zero cost, 19 have positive cost totalling UGX 1,168,217,300 and four have missing cost. The reported CIP balance is therefore not a measure of the full value of unfinished works or the amount required to finish them. These are asset records, not 298 distinct incomplete facilities.
+P569 Depreciation includes the service month and is limited to cost less salvage value. Year-to-date depreciation is the increase in accumulated depreciation since the start of the financial year. All recorded salvage values are zero. The underlying dates and cost evidence require confirmation before the balances can be treated as verified amounts.
+P570 There are 23,154 fully depreciated items, including 22,161 still marked in use. These assets need a review of their condition and remaining useful life. A zero net book value alone is not a reason to regard an asset as failed, disposed of or due for replacement. The financial tables use the existing accounting classifications. Errors, such as diagnostic equipment classified as buildings, need supporting evidence and correction before category totals can be used as physical inventories.
+P571 Appendix B Service date exceptions and supporting evidence
+P572 Service-date entries across all assets
+P573 Categories are mutually exclusive; rounded percentages may not total 100.0%.
+P574 The cases below illustrate service-date problems and the decisions required. They are examples rather than a complete list of all date exceptions. Asset references and facility names are provided to support follow-up.
+P575 The shared 1 January 2014 value covers 260 wooden-chair records at Labongo Amida, 266 at Makokoto, 303 at Nyamarwa and 203 at Namungo. The original returns for these groups provide no service date. The sampled Kyamwinula source likewise lacks a service-date field and provides no full date to justify the stated date of 1 March 2012. The sampled Nkokonjeru return expressly states that receipt or service timing was not recorded. The dates therefore remain unresolved; the source material does not support replacement dates.
+P576 Rules for an approved register correction
+P577 Enter a full calendar date only when the evidence shows when the identified asset became available for use. Keep the source’s original wording and level of detail in the supporting record. A month, year, financial year or commissioning status must not be entered as though it were a full date.
+P578 Leave the date field blank in the corrected register where a full date cannot be supported. Record the reason, original value and source reference separately. Keep any work-in-progress or undelivered status visible even when the date is blank.
+P579 Where the source supports an early date, establish whether the asset predates UgIFT or has been assigned to the wrong beneficiary or programme. Do not simply move the year forward or remove the asset from the register. Record the approved decision about its ownership and programme assignment.
+P580 Before approving changes, compare purchase and service dates, check repeated entries and confirm which physical units they describe. A date may be applied to a whole batch only where the documents identify both the batch and the relevant event. Similar item names or dates at another facility are not sufficient evidence.
+P581 For each approved change, record the original and revised values, supporting evidence, decision, responsible officer and review date. Recalculate depreciation, net book value and any recoverable amount based on net book value. Retain independently supported recoverable amounts separately. Check the resulting balances and outstanding exceptions before migration to IFMIS.
+P582 Appendix C Definitions used in the analysis
+P583 The condition descriptions in section 2.5 distinguish physically faulty assets from usable items in store or awaiting installation. The quantitative tables use the current register codes: 215,504 assets marked Functional and in use, and 13,520 marked Faulty and not in use. All entries marked not in use carry the Faulty code in these totals, including usable stored or uninstalled items; the 13,520 therefore does not represent a count of physically broken assets.
+P584 The definitions below explain how quantities, condition and financial values are presented. Unresolved receipt, ownership and classification matters are included in the relevant schedules for follow-up.
+P585 The analysis distinguishes the thirteen asset-holding MDAs, the three regional blood banks, health centres, schools, hospitals and other local-government locations. Institution totals, programme-list facilities and interview respondents represent different populations and should not be used interchangeably.
+P586 Asset numbers are missing for 1,923 entries, while 34 state Not engraved. Three linked asset-number entries disagree: one at Birembo Health Centre III and two at Namungo Seed Secondary School. There are also 355 repeated asset-number values and 323 repeated serial-number values within individual institution books. Quantities and supporting records should be checked before any assets are counted as duplicates.
+P587 Principal references
+P588 Programme chronology: World Bank UgIFT Additional Financing programme paper, section I, paragraph 1, printed page 1.
+P589 Accounting policy context: Government of Uganda Asset Accounting Policies and Guidelines 2023, sections 3.3.5.2, 5.5, 5.7 and 5.9; pages 49, 67 and 68.
+P590 Field photographs and reports describe conditions at the time of the visits. Photographs alone cannot confirm functionality, completion, programme ownership or current condition.
+P591 Appendix D Programme list exception roster
+P592 The 39 entries below explain gaps or differences between the programme list and the available asset returns. Reported absence is not an independent finding that a facility does not exist. A receiving facility already on the list is counted once.
+P593 Appendix E Documented outstanding works and handover
+P594 This schedule lists the 70 facilities with documented incomplete works and the 13 additional facilities awaiting handover or commissioning. It is a minimum list of documented cases, not a certification of the remaining facilities. A facility may operate while a block or ancillary structure remains unfinished.
+P595 Two additional locations outside this programme-list schedule, have outstanding works or commissioning: Bukuuku Community Seed Secondary School has staff quarters and a kitchen under construction; Kibuzigye Seed Secondary School has a kitchen recorded as completed and operational but not yet commissioned. Their programme-list attribution requires reconciliation.
+P596 Appendix F Facility interview scope and denominators
+P597 The interview analysis counts each programme-list facility once per topic. Multiple returns for a facility are reconciled before analysis. Answers about another institution, statements that do not answer the question and unclassifiable replies are excluded from the relevant denominator. The Mbirizi school response attributed to Kagganda Health Centre is excluded from health-centre analysis pending correction of the identity. Receiving-facility responses are linked to the appropriate programme entry.
+P598 A benefit or challenge percentage uses the respondents to that question, not all 629 programme-list entries. Topic categories overlap. The broader challenge measure includes both an explicitly described problem and a request for its remedy; it should not be confused with the narrower count of explicit complaints. The 50 fixed-interval responses combine maintenance and condition-check information. Forty-four facility responses share wording with another return, so the findings should be read as accounts reported by facilities, rather than independent measurements of impact.
+P599 Appendix G Asset reconciliation examples
+P600 The cases below require delivery, custody or condition checks. They do not provide a national total of losses or disposals. Where a report concerns a batch of equipment, the affected items still need to be identified.
+P601 Appendix H Photographic schedule
+P602 The photographs illustrate facilities, equipment and outstanding works at the time of the visits. They should be read alongside the findings on condition, use and completion. A photograph alone does not establish that equipment was functional or that a facility was ready for handover.
+P603 Appendix I Land records and ownership evidence
+P604 Eighteen entries are classified as land, including four at health centres. Ownership, area, tenure and valuation require supporting documents. The table lists these entries for follow-up by the responsible institutions.
+P605 Costs include nil amounts and estimates.
+P606 Appendix J Additional assets and classification checks
+P607 Hospitals on local-government books: 3,067 records. These are included in the report total and shown separately from Health Centres and schools.
+P608 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P609 Other local-government or unassigned locations: 4 records. These are included in the report total and shown separately from Health Centres and schools.
+P610 Amounts are in UGX million, rounded to three decimals. * Available amounts only; one or more amounts are missing or pending calculation. NBV coverage is given for each category. NBV/cost compares complete accounting records and does not measure physical condition. n/a means a comparable ratio is unavailable.
+P611 Review the classification of diagnostic sets listed under buildings and structures. Confirm item descriptions, account mapping, ownership and useful life before migration to IFMIS.
+P612 Appendix K Financial analysis by asset type
+P613 The following tables present financial values by asset type for each ministry, regional blood bank, Health Centres and schools. They separate laptops, printers, furniture, medical equipment and other items while retaining the full institution totals. Recorded costs, accumulated depreciation and net book values agree with the broader financial analysis in the report.
+P614 Items are grouped by their descriptions, with accounting categories used where the description is insufficient. Each record represents one unit. A desktop-computer description may refer to a system unit or an incomplete set; separately listed monitors, CPUs, keyboards and mice are therefore shown as components. Accessories and supplies are included even where they are not recognized as fixed assets. Unclear descriptions are reported separately. Some descriptions differ from their accounting categories: for example, Van de Graaff generators and strip cups classified as transport are grouped here as laboratory items. Their accounting classifications require correction.
+P615 Amounts are in UGX million at 30 September 2026, rounded to three decimals. An asterisk means the total includes available amounts only; Unavailable means none of the amounts for that measure can be calculated. NBV coverage shows how many records have a net book value. The NBV/cost ratio uses only CAPITALIZED or CIP records with cost, depreciation and net book value all available. It shows the share of cost not yet depreciated, not physical condition or market value. n/a means there is no positive cost on that comparable basis.
+P616 MoFPED
+P617 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P618 MoWT
+P619 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P620 MoES
+P621 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P622 MAAIF
+P623 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P624 MoH
+P625 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P626 OPM
+P627 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P628 MoWE
+P629 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P630 MoGLSD
+P631 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P632 NEMA
+P633 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P634 PPDA
+P635 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P636 OAG
+P637 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P638 MoLG
+P639 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P640 MoLHUD
+P641 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P642 Arua Regional Blood Bank
+P643 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P644 Hoima Regional Blood Bank
+P645 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P646 Soroti Regional Blood Bank
+P647 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P648 Health centres
+P649 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P650 Schools
+P651 Amounts in UGX million. * Available amounts only. NBV/cost compares the same complete records.
+P652 Appendix L Responses to reviewer comments
+P653 The table below summarises the issues raised, the corresponding findings and any further action required.

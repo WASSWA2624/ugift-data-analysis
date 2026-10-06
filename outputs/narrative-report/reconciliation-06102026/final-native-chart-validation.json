@@ -1,0 +1,861 @@
+{
+  "report": "D:\\coding\\ugift-data-analysis\\outputs\\narrative-report\\ugift-working-report-06102026-1344-reconciled.docx",
+  "report_sha256": "167911fcdfddb87f069628c94584e3ffc0a7a39d976dd84384cf6aa3675901b7",
+  "checked_chart_count": 23,
+  "cache_workbook_cells_checked": 375,
+  "cache_workbook_discrepancies": [],
+  "recipe_discrepancies": [],
+  "charts": [
+    {
+      "part": "word/charts/chart1.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "Ministries and agencies",
+            "Blood Banks",
+            "Health Centres",
+            "Seed Secondary Schools",
+            "Hospitals on LG books",
+            "Other LG locations"
+          ],
+          "values": [
+            16663.0,
+            602.0,
+            63432.0,
+            145256.0,
+            3067.0,
+            4.0
+          ],
+          "sum": 229024.0
+        }
+      ],
+      "following_text": [
+        "Figure 1: Distribution of assets  ",
+        "Source: Primary data analysis",
+        "Overall asset Condition and functionality",
+        "Overall, 215,504 assets constituting 94.1%, were classified as functional and in use, while 13,520 (5.9%) were classified as faulty and out of use. The detailed analysis of asset condition is indicated in table 1."
+      ]
+    },
+    {
+      "part": "word/charts/chart2.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet1.xlsx",
+      "series": [
+        {
+          "label": "Respondent facilities",
+          "categories": [
+            "Power supply",
+            "Training or skills",
+            "Installation",
+            "Incomplete buildings or space",
+            "Accessories or consumables",
+            "Staffing"
+          ],
+          "values": [
+            71.0,
+            52.0,
+            32.0,
+            27.0,
+            15.0,
+            9.0
+          ],
+          "sum": 206.0
+        }
+      ],
+      "following_text": [
+        "Figure 2: Reasons for equipment not in use reported by facilities (156 respondents; multiple responses)",
+        "Source: Primary data analysis",
+        "In addition, broken desks and stools were in classrooms and stores at Seed schools in Namisindwa and Napak. At Arua Regional Blood Bank, six blood pressure machines were recorded as damaged or not functional. The information above is depicted in some of the photos presented below.",
+        "Delivery bed with a torn mattress cover at a health centre, Busia District (Bukedi)Pedal suction unit marked MAJANJI H/C III still in its packing, recorded as not in use for lack of technical knowledge, Majanji Health Centre III, Busia District (Bukedi)Stacked desks, chairs and stools, some recorded as broken and none engraved, at Napak Seed Secondary School, Napak District (Karamoja)Cracked health centre block above collapsed ground, Bulambuli District (Bugisu)Broken desk frame at a seed secondary school, Namisindwa District (Bugisu)Empty ICT and library block with a few chairs and items kept in one corner at Iriiri Seed Secondary School, Napak District (Karamoja), not yet in use while the school remained with the contractorStained and peeling ceiling at a health centre, Sironko District (Bugisu)Flood-affected older health facility at Butiaba, Buliisa District (Bunyoro)Desktop computers, a printer and UPS units still boxed in the store at Lungulu Seed Secondary School, Nwoya District (Acholi), awaiting a power connection for installationLaboratory stools and desks stored and not yet in use at Butungama Seed Secondary School, Ntoroko District (Tooro), where the school buildings were still under constructionHP computer sets stacked in store with cables still bundled and not installed at Bumufuni Seed Secondary School, Bulambuli District (Bugisu)beds and screens stacked in storage at a health centre, Kagadi District (Bunyoro)Boxed projector, air conditioner and other equipment in store at King Solomon Seed Secondary School, Kagadi District (Bunyoro), kept boxed because the school was still under constructionBoxed handheld pulse oximeters at Kibiri Health Centre III, Makindye-Ssabagabo Municipal Council (Buganda), where equipment was still being arranged after the facility opened on 31 August 2026"
+      ]
+    },
+    {
+      "part": "word/charts/chart3.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet2.xlsx",
+      "series": [
+        {
+          "label": "UgIFT or UGFT identifier",
+          "categories": [
+            "Ministries and agencies",
+            "Blood Banks",
+            "Health Centres",
+            "Seed Secondary Schools",
+            "Hospitals on LG books",
+            "Other LG locations",
+            "Total"
+          ],
+          "values": [
+            0.2955650243053472,
+            0.04318936877076412,
+            0.060285029638037585,
+            0.0927879054909952,
+            0.0,
+            0.0,
+            0.09716448931116389
+          ],
+          "sum": 0.588991817516308
+        },
+        {
+          "label": "Other identifier",
+          "categories": [
+            "Ministries and agencies",
+            "Blood Banks",
+            "Health Centres",
+            "Seed Secondary Schools",
+            "Hospitals on LG books",
+            "Other LG locations",
+            "Total"
+          ],
+          "values": [
+            0.007201584348556682,
+            0.08305647840531562,
+            0.09012801109849918,
+            0.15230351930384975,
+            0.020215194000652102,
+            1.0,
+            0.12258977225094313
+          ],
+          "sum": 1.4754945594078164
+        },
+        {
+          "label": "No usable identifier",
+          "categories": [
+            "Ministries and agencies",
+            "Blood Banks",
+            "Health Centres",
+            "Seed Secondary Schools",
+            "Hospitals on LG books",
+            "Other LG locations",
+            "Total"
+          ],
+          "values": [
+            0.6972333913460962,
+            0.8737541528239202,
+            0.8495869592634633,
+            0.7549085752051551,
+            0.9797848059993479,
+            0.0,
+            0.780245738437893
+          ],
+          "sum": 4.935513623075876
+        }
+      ],
+      "following_text": [
+        "Figure 3: Asset marking and Identification",
+        "Below are some of the photos depicting the different markings and identification engravements of assets across the institutions",
+        "Engraving reading GOU/MOH-UGIFT PROJECT FY/2023/2024 on a desk at Namwaya Health Centre III, Tororo DistrictEngraving reading APESSS MOES/UGIFT/KABE/SPLRS/2023-24/001 on a desk at Aperikira Seed Secondary School, Kaberamaido DistrictChair engraved UgIFT/ BUDDE SEED S.S M-PHALL CHAIR with a serial number at Budde Seed Secondary School, Butambala DistrictWheelchair backrest marked GOU/MOH UGIFT-PROJECT. FY2023/2024 at Kalemungole Health Centre III, Moroto DistrictEngraving reading GOU/MOH-UGIFT PROJECT FY2023-2024/01 on a weighing scale at Kalemungole Health Centre III, Moroto DistrictMicroscope marked KAMORU HC III by hand at Kamoru Health Centre III, Kotido DistricEngraving reading KING SOLOMON SEED SECONDARY SCHOOL, without a UgIFT marking, on furniture at King Solomon Seed Secondary School, Kagadi DistrictEngraving reading KWN/MED-EQ/MOYOK HCIII on a steel cupboard at Moyok Health Centre III, Kween District"
+      ]
+    },
+    {
+      "part": "word/charts/chart4.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet3.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "MoFPED",
+            "MoWT",
+            "MoES",
+            "MAAIF",
+            "MoH",
+            "OPM",
+            "MoWE",
+            "MoGLSD",
+            "NEMA",
+            "PPDA",
+            "OAG",
+            "MoLG",
+            "MoLHUD"
+          ],
+          "values": [
+            458.0,
+            87.0,
+            10783.0,
+            2045.0,
+            260.0,
+            10.0,
+            2939.0,
+            10.0,
+            6.0,
+            5.0,
+            20.0,
+            13.0,
+            27.0
+          ],
+          "sum": 16663.0
+        }
+      ],
+      "following_text": [
+        "Figure 4: UgFT Assets available at each of the verified MDAs",
+        "MDA asset Condition and functionality",
+        "At MDA level, apart from sixteen faulty assets at Ministry of Works and Transport, one faulty double-cabin pickup at Ministry of Health and three faulty laptops at the Office of the Prime minister, the rest of the assets, 16,643 (99.9%), were recorded as functional and in use. The Ministry of Education and Sports holds 10,783 of these assets, mainly TELA handsets and tablets, all recorded as in use at the different schools across the country. LGFC and MoPS indicated that they never received UgIFT assets.",
+        "Asset marking and Identification "
+      ]
+    },
+    {
+      "part": "word/charts/chart5.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet4.xlsx",
+      "series": [
+        {
+          "label": "UgIFT or UGFT identifier",
+          "categories": [
+            "MoFPED",
+            "MoWT",
+            "MoES",
+            "MAAIF",
+            "MoH",
+            "OPM",
+            "MoWE",
+            "MoGLSD",
+            "NEMA",
+            "PPDA",
+            "OAG",
+            "MoLG",
+            "MoLHUD"
+          ],
+          "values": [
+            0.5393013100436681,
+            0.8850574712643678,
+            0.04247426504683298,
+            0.6004889975550122,
+            0.05384615384615385,
+            1.0,
+            0.9744811160258592,
+            0.8,
+            0.16666666666666666,
+            1.0,
+            0.3,
+            0.5384615384615384,
+            0.0
+          ],
+          "sum": 6.9007775189100995
+        },
+        {
+          "label": "Other identifier",
+          "categories": [
+            "MoFPED",
+            "MoWT",
+            "MoES",
+            "MAAIF",
+            "MoH",
+            "OPM",
+            "MoWE",
+            "MoGLSD",
+            "NEMA",
+            "PPDA",
+            "OAG",
+            "MoLG",
+            "MoLHUD"
+          ],
+          "values": [
+            0.07641921397379912,
+            0.022988505747126436,
+            0.0,
+            0.0019559902200488996,
+            0.06923076923076923,
+            0.0,
+            0.01122830894862198,
+            0.0,
+            0.0,
+            0.0,
+            0.7,
+            0.07692307692307693,
+            0.48148148148148145
+          ],
+          "sum": 1.440227346524924
+        },
+        {
+          "label": "No usable identifier",
+          "categories": [
+            "MoFPED",
+            "MoWT",
+            "MoES",
+            "MAAIF",
+            "MoH",
+            "OPM",
+            "MoWE",
+            "MoGLSD",
+            "NEMA",
+            "PPDA",
+            "OAG",
+            "MoLG",
+            "MoLHUD"
+          ],
+          "values": [
+            0.38427947598253276,
+            0.09195402298850575,
+            0.9575257349531671,
+            0.3975550122249389,
+            0.8769230769230769,
+            0.0,
+            0.014290575025518884,
+            0.2,
+            0.8333333333333334,
+            0.0,
+            0.0,
+            0.38461538461538464,
+            0.5185185185185185
+          ],
+          "sum": 4.658995134564977
+        }
+      ],
+      "following_text": [
+        "Figure 5: Asset marking and Identification at MDAs",
+        "Financial analysis/ valuation",
+        "Financial value of assets: recorded costs total UGX 32,054,743,836 across 16,651 of 16,663 records. Accumulated depreciation totals UGX 19,787,511,232 and net book value totals UGX 10,265,924,979 at 30 September 2026. Net book value remains unavailable for 96 records. Table 2 also identifies unavailable amounts.",
+        "3.3 MDA specific results "
+      ]
+    },
+    {
+      "part": "word/charts/chart6.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet5.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "ICT equipment",
+            "Outside fixed-asset classification",
+            "Transport equipment",
+            "Unclassified"
+          ],
+          "values": [
+            69.0,
+            16.0,
+            1.0,
+            1.0
+          ],
+          "sum": 87.0
+        }
+      ],
+      "following_text": [
+        "Figure 6: Assets verified at MoWT",
+        "Condition and functionality: Of the 87 assets, 71 (81.6%) were recorded as functional and in use; sixteen (18.4%) were recorded as faulty and not in use.",
+        "Marking and Identification: Of the 87 assets, 79 (90.8%) had usable identifiers, with 77 (88.5%) having UgIFT or UGFT in the tag field and two (2.3%) carrying another identifier; eight (9.2%) had no usable tag recorded.",
+        "Financial Value of assets: The recorded value was established as UGX 455,932,376 as presented in Table 4. Accumulated depreciation is UGX 326,484,882 and net book value is UGX 115,311,494 at 30 September 2026. Net book value remains unavailable for 19 records; the figures sum only available amounts."
+      ]
+    },
+    {
+      "part": "word/charts/chart7.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet6.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "ICT equipment"
+          ],
+          "values": [
+            10783.0
+          ],
+          "sum": 10783.0
+        }
+      ],
+      "following_text": [
+        "Figure 7: Assets verified at MoES",
+        "All the 10,783 assets (100.0%) are recorded as functional and in use. All the 456 laptops are recorded as functional and in use. Their identification status is shown in Table 6. Table 5 presents condition and use.",
+        "Table 5: Condition and use of assets at MoES",
+        "ConditionRecordsShareFunctional10,783100.0%Faulty00.0%Total10,783100.0%"
+      ]
+    },
+    {
+      "part": "word/charts/chart8.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet7.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "ICT equipment",
+            "Outside fixed-asset classification",
+            "Other classified assets",
+            "Unclassified",
+            "Transport equipment"
+          ],
+          "values": [
+            1236.0,
+            797.0,
+            5.0,
+            5.0,
+            2.0
+          ],
+          "sum": 2045.0
+        }
+      ],
+      "following_text": [
+        "Figure 8: Assets verified: MAAIF",
+        "All 2,045 assets (100.0%) are recorded as functional and in use. All 211 computers and 819 tablets are recorded as functional and in use. Identification is reported separately in Table 9. Table 8 presents condition and use.",
+        "Table 8: Condition and use of assets at MAAIF",
+        "ConditionRecordsShareFunctional2,045100.0%Faulty00.0%Total2,045100.0%"
+      ]
+    },
+    {
+      "part": "word/charts/chart9.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet8.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "Outside fixed-asset classification",
+            "ICT equipment",
+            "Transport equipment",
+            "Other classified assets"
+          ],
+          "values": [
+            198.0,
+            31.0,
+            25.0,
+            6.0
+          ],
+          "sum": 260.0
+        }
+      ],
+      "following_text": [
+        "Figure 9: Assets verified at MoH",
+        "Condition and functionality: The assets recorded as functional and in use were 259 (99.6%). Only one asset, a double-cabin pickup, was recorded as faulty and not in use.",
+        "Marking and Identification: Out of the 260 assets, 32 (12.3%) had usable identifiers while 228 (87.7%) had no usable tag recorded. There were fourteen (5.4%) assets with UgIFT or UGFT in the tag field and eighteen (6.9%) with other identifiers. These tag fields do not confirm physical engraving.",
+        "Financial Value of assets: The MoH assets had a recorded value of UGX 1,186,689,609. Accumulated depreciation is UGX 441,202,460 and net book value is UGX 384,551,313 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts. Table 11 presents the category breakdown."
+      ]
+    },
+    {
+      "part": "word/charts/chart10.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet9.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "ICT equipment"
+          ],
+          "values": [
+            10.0
+          ],
+          "sum": 10.0
+        }
+      ],
+      "following_text": [
+        "Figure 10: Assets verified: OPM",
+        "Condition and functionality: Seven assets (70.0%) were recorded as functional and in use. Three (30.0%) were recorded as faulty and out of use.",
+        "Marking and identification: All the ten laptops (100.0%) had UgIFT or UGFT in the tag field.",
+        "Financial Value of assets: The recorded value of these computers in OPM was UGX 53,535,300. Accumulated depreciation is UGX 48,181,770 and net book value is UGX 5,353,530 at 30 September 2026. Table 12 presents the category breakdown."
+      ]
+    },
+    {
+      "part": "word/charts/chart11.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet10.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "ICT equipment"
+          ],
+          "values": [
+            10.0
+          ],
+          "sum": 10.0
+        }
+      ],
+      "following_text": [
+        "Figure 11: Assets verified: MoGLSD",
+        "3.3.9 National Environment Management Authority",
+        "Asset availability:",
+        "National Environment Management Authority (NEMA) had six ICT items: four computers, a printer and a heavy-duty photocopier. Figure 12 presents the asset categories."
+      ]
+    },
+    {
+      "part": "word/charts/chart12.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet11.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "ICT equipment"
+          ],
+          "values": [
+            6.0
+          ],
+          "sum": 6.0
+        }
+      ],
+      "following_text": [
+        "Figure 12: Assets verified: NEMA",
+        "Asset marking and identification:",
+        "One asset (16.7%), the heavy-duty photocopier, had UgIFT or UGFT in the tag field while the other five (83.3%) had no usable tag recorded.",
+        "Financial value of Assets: The recorded value is UGX 46,824,409. Accumulated depreciation is UGX 32,841,273 and net book value is UGX 13,983,136 at 30 September 2026. Table 15 presents the category breakdown."
+      ]
+    },
+    {
+      "part": "word/charts/chart13.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet12.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "ICT equipment"
+          ],
+          "values": [
+            5.0
+          ],
+          "sum": 5.0
+        }
+      ],
+      "following_text": [
+        "Figure 13: Assets verified at PPDA",
+        "Asset condition and functionality: All the five assets (100.0%) were recorded as functional and in use.",
+        "Asset marking and identification: All five assets (laptops, a tablet and a printer) had UgIFT or UGFT in the tag field.",
+        "Financial Value of assets: The MF register states a recorded cost of UGX 30,153,500 for these assets. Accumulated depreciation is UGX 13,066,516 and net book value is UGX 17,086,984 at 30 September 2026. Table 16 presents the category breakdown."
+      ]
+    },
+    {
+      "part": "word/charts/chart14.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet13.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "ICT equipment",
+            "Transport equipment"
+          ],
+          "values": [
+            18.0,
+            2.0
+          ],
+          "sum": 20.0
+        }
+      ],
+      "following_text": [
+        "Figure 14: Assets verified at OAG",
+        "Financial value of Assets: The assets were worth UGX 388,773,680. Accumulated depreciation is UGX 111,591,545 and net book value is UGX 277,182,135 at 30 September 2026. Table 17 presents the category breakdown.",
+        "Table 17: Recorded costs and available accounting values at OAG",
+        "Asset category and coverageRecorded costAccumulated depreciationNet book valueNBV / costICT equipment18 records; NBV 18/18228.77471.592157.18268.7%Transport equipment2 records; NBV 2/2160.00040.000120.00075.0%Total 20 assets; NBV 20/20388.774111.592277.18271.3%"
+      ]
+    },
+    {
+      "part": "word/charts/chart15.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet14.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "Vehicle",
+            "Photocopiers",
+            "Computer components",
+            "Laptops"
+          ],
+          "values": [
+            1.0,
+            2.0,
+            6.0,
+            4.0
+          ],
+          "sum": 13.0
+        }
+      ],
+      "following_text": [
+        "Figure 15: Assets verified at MoLG",
+        "Asset condition and functionality: The findings further indicate that all thirteen assets (100.0%) were recorded as functional and in use.",
+        "Asset marking and identification: Out of the thirteen assets, eight (61.5%) had usable identifiers while five (38.5%) had no usable tag recorded. Of the eight identified assets, seven (53.8% of all assets) had UgIFT or UGFT in the tag field while one (7.7%) carried another identifier. These tag-field counts do not confirm physical engraving.",
+        "Financial Value of assets: The findings pointed out the recorded value to be UGX 343,320,450. Accumulated depreciation is UGX 284,670,827 and net book value is UGX 54,649,623 at 30 September 2026. Net book value remains unavailable for 1 record; the figures sum only available amounts. Table 18 presents the category breakdown."
+      ]
+    },
+    {
+      "part": "word/charts/chart16.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet15.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "Transport equipment",
+            "Outside fixed-asset classification"
+          ],
+          "values": [
+            25.0,
+            2.0
+          ],
+          "sum": 27.0
+        }
+      ],
+      "following_text": [
+        "Figure 16: Assets verified at MoLHUD",
+        "Additionally, the ministry received survey equipment and other motorcycles that it gave out to local governments.",
+        "Asset condition and functionality: All the 27 assets (100.0%) were recorded as functional and in use, and none was classified as faulty.",
+        "Asset marking and Identification: None of the 27 assets had UgIFT or UGFT in the tag field. Thirteen (48.1%) had other identifiers and fourteen (51.9%) had no usable tag recorded. The motorcycles' registration numbers are distinguished from UgIFT tag text."
+      ]
+    },
+    {
+      "part": "word/charts/chart17.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet16.xlsx",
+      "series": [
+        {
+          "label": "Assets",
+          "categories": [
+            "Medical, laboratory and research appliances",
+            "Furniture and fittings",
+            "Outside fixed-asset classification",
+            "Buildings and structures",
+            "Other classified assets",
+            "ICT equipment",
+            "Unclassified",
+            "Transport equipment",
+            "Land"
+          ],
+          "values": [
+            36721.0,
+            15671.0,
+            7746.0,
+            2260.0,
+            537.0,
+            424.0,
+            64.0,
+            5.0,
+            4.0
+          ],
+          "sum": 63432.0
+        }
+      ],
+      "following_text": [
+        "Figure 17: Assets verified: Health centres",
+        "3.6.2 Asset condition and functionality",
+        "The findings indicate that of the 63,432 health-centre assets, 57,759 (91.1%) were recorded as functional and in use and 5,673 (8.9%) were recorded as faulty and not in use. Figure 18 and Table 25 present the condition of the assets. These two register categories do not establish separate current counts of items in store, broken items and other reasons for non-use."
+      ]
+    },
+    {
+      "part": "word/charts/chart18.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet17.xlsx",
+      "series": [
+        {
+          "label": "Faulty assets",
+          "categories": [
+            "Medical, laboratory and research appliances",
+            "Furniture and fittings",
+            "Outside fixed-asset classification",
+            "Buildings and structures",
+            "Other classified assets",
+            "ICT equipment",
+            "Unclassified",
+            "Transport equipment",
+            "Land"
+          ],
+          "values": [
+            4248.0,
+            683.0,
+            515.0,
+            116.0,
+            58.0,
+            50.0,
+            2.0,
+            1.0,
+            0.0
+          ],
+          "sum": 5673.0
+        }
+      ],
+      "following_text": [
+        "Figure 18: Faulty assets at Health Centres by category",
+        "Table 25: Condition of assets: Health centres",
+        "Asset categoryRecordsFunctionalFaultyMedical, laboratory and research appliances36,72132,4734,248Furniture and fittings15,67114,988683Outside fixed-asset classification7,7467,231515Buildings and structures2,2602,144116Other classified assets53747958ICT equipment42437450Unclassified64622Transport equipment541Land440Total63,43257,7595,673",
+        "The field records describe health-centre assets that were not in use for other reasons, including those not delivered to the facility (still in stores at LGs), idle items, items with missing parts, lack of power, items not required at the facility, rooms or wards unavailable for installation, items held at another facility, items awaiting installation, lost or missing items and equipment unused because staff were not trained or no specialist was available to operate it. Examples include a wall-mounted blood-pressure machine at Butawata Health Centre III (Mubende District) recorded as not functional; a wheelchair at Aarapoo Health Centre III (Serere District) that had not been delivered; a patient screen at Ayer Health Centre III (Kole District) that was on the delivery note but not seen; a paediatric bed at Okwerodot Health Centre III (Kole District) supplied without a mattress; and an autoclave at Anamwany Health Centre III (Amolatar District) unused for lack of electricity. The register's two condition categories do not provide a separate count for these reasons."
+      ]
+    },
+    {
+      "part": "word/charts/chart19.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet18.xlsx",
+      "series": [
+        {
+          "label": "Assets with UgIFT or UGFT tag",
+          "categories": [
+            "Medical, laboratory and research appliances",
+            "Furniture and fittings",
+            "Outside fixed-asset classification",
+            "Buildings and structures",
+            "Other classified assets",
+            "ICT equipment",
+            "Unclassified",
+            "Transport equipment",
+            "Land"
+          ],
+          "values": [
+            1786.0,
+            1484.0,
+            356.0,
+            45.0,
+            20.0,
+            133.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sum": 3824.0
+        }
+      ],
+      "following_text": [
+        "Figure 19: Health Centre assets with UgIFT or UGFT identifiers by category",
+        "Table 27: Identification of assets at Health centres",
+        "Asset categoryRecordsUgIFT textOther identifierNo usable tagMedical, laboratory and research appliances36,7211,7862,82632,109Furniture and fittings15,6711,4841,88812,299Outside fixed-asset classification7,7463566896,701Buildings and structures2,260451792,036Other classified assets5372043474ICT equipment42413332259Unclassified6405410Transport equipment5041Land4022Total63,4323,8245,71753,891",
+        "Financial Value of assets: The findings indicate that the available recorded value of assets was UGX 260,692,452,291 and the available net book value was UGX 189,403,577,197, while available accumulated depreciation was UGX 39,211,094,700 as at 30 September 2026. Table 28 gives the recorded value and net book value. Cost is available for 63,183 of 63,432 records; net book value is unavailable for 7,828. Available columns cover different populations; the financial reconciliation appendix gives the matched accounting population."
+      ]
+    },
+    {
+      "part": "word/charts/chart20.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet19.xlsx",
+      "series": [
+        {
+          "label": "Share of respondents",
+          "categories": [
+            "Health Centres: any benefit",
+            "Schools: any benefit",
+            "Health Centres: equipment supports services",
+            "Health Centres: maternity services",
+            "Schools: learning environment",
+            "Schools: access to education",
+            "Schools: practical science or ICT"
+          ],
+          "values": [
+            0.838,
+            0.746,
+            0.5770000000000001,
+            0.41200000000000003,
+            0.38299999999999995,
+            0.306,
+            0.20199999999999999
+          ],
+          "sum": 3.464
+        }
+      ],
+      "following_text": [
+        "Figure 44: Programme Benefits",
+        "3.12.1 Gaps and Challenges",
+        "The main gaps identified by the facilities include; Percentages use 477 facility responses unless a facility type is specified; categories overlap.",
+        "Insufficient Power supply which was reported by 201 facilities (42.1%), including 44.4% of Health Centre respondents and 38.9% of school respondents;"
+      ]
+    },
+    {
+      "part": "word/charts/chart21.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet20.xlsx",
+      "series": [
+        {
+          "label": "Share of 477 respondents",
+          "categories": [
+            "Power supply",
+            "Staffing",
+            "Space or infrastructure",
+            "Security or fencing",
+            "Maintenance support",
+            "Staff housing",
+            "Water supply",
+            "Equipment training",
+            "Installation or incomplete delivery",
+            "Works or handover"
+          ],
+          "values": [
+            0.42100000000000004,
+            0.321,
+            0.317,
+            0.27,
+            0.222,
+            0.22,
+            0.201,
+            0.17800000000000002,
+            0.17600000000000002,
+            0.174
+          ],
+          "sum": 2.5
+        }
+      ],
+      "following_text": [
+        "Figure 45: Service gaps and challenges",
+        "4 Asset management ",
+        "4.1 Maintenance and repairs",
+        "Maintenance keeps UgIFT assets working for the services they were bought to support. Most of the verified assets are furniture, clinical equipment and computers in daily use at Health Centres and seed schools, where wear and breakage are to be expected. Routine checks, a record of faults and a dependable route for repair decide whether a broken item returns to use quickly or stays out of service. During the verification, each facility was asked how it maintains, repairs, services or replaces UgIFT assets and whether it keeps a regular record of their functionality or breakdown."
+      ]
+    },
+    {
+      "part": "word/charts/chart22.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet21.xlsx",
+      "series": [
+        {
+          "label": "Health Centres (278 respondents)",
+          "categories": [
+            "Repairs from facility funds or staff",
+            "Outside technical support",
+            "Maintenance not yet needed",
+            "No repair arrangement"
+          ],
+          "values": [
+            0.601,
+            0.414,
+            0.13699999999999998,
+            0.09
+          ],
+          "sum": 1.242
+        },
+        {
+          "label": "Schools (191 respondents)",
+          "categories": [
+            "Repairs from facility funds or staff",
+            "Outside technical support",
+            "Maintenance not yet needed",
+            "No repair arrangement"
+          ],
+          "values": [
+            0.48700000000000004,
+            0.19399999999999998,
+            0.309,
+            0.057999999999999996
+          ],
+          "sum": 1.048
+        },
+        {
+          "label": "All facilities (469 respondents)",
+          "categories": [
+            "Repairs from facility funds or staff",
+            "Outside technical support",
+            "Maintenance not yet needed",
+            "No repair arrangement"
+          ],
+          "values": [
+            0.5539999999999999,
+            0.324,
+            0.207,
+            0.077
+          ],
+          "sum": 1.162
+        }
+      ],
+      "following_text": [
+        "Figure 46: Most facilities met repairs from their own funds or staff",
+        "Frequency. Few facilities worked to a fixed maintenance interval. Of the 494 programme-list facilities that described how they maintain UgIFT assets or check their condition, 50 (10.1%) did so at a fixed interval. Of these 50, 14 (28.0%) worked annually, 11 (22.0%) monthly, 10 (20.0%) quarterly, 9 (18.0%) every school term, 3 (6.0%) twice a year and 3 (6.0%) weekly or daily, as Figure 47 shows. A further 18 facilities (3.6%) described routine or scheduled servicing without a set interval, mostly scheduled visits by regional referral hospital maintenance teams, and 61 (12.3%) repaired items as the need arose. Ngwedo Seed Secondary School in Buliisa engaged a caretaker every month and used the Directorate of Industrial Training for furniture repairs, while Busaale reviewed asset condition every quarter.",
+        "Figure 47: Annual, monthly and quarterly checks were the most common stated intervals"
+      ]
+    },
+    {
+      "part": "word/charts/chart23.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet22.xlsx",
+      "series": [
+        {
+          "label": "Facilities with a fixed interval",
+          "categories": [
+            "Annually",
+            "Monthly",
+            "Quarterly",
+            "Every school term",
+            "Twice yearly",
+            "Weekly or daily"
+          ],
+          "values": [
+            14.0,
+            11.0,
+            10.0,
+            9.0,
+            3.0,
+            3.0
+          ],
+          "sum": 50.0
+        }
+      ],
+      "following_text": [
+        "Figure 47: Annual, monthly and quarterly checks were the most common stated intervals",
+        "Records. Of the 463 facilities that answered, 318 (68.7%) kept a regular record of asset functionality or breakdowns, 36 (7.8%) kept a partial or informal record, 80 (17.3%) kept none and 29 (6.3%) had not yet started because the assets were new or the facility was not yet operating. Of the 478 facilities that answered, 355 (74.3%) held a record of the UgIFT assets they received, 40 (8.4%) held a partial record, such as delivery notes only or a general register that does not identify UgIFT items, and 83 (17.4%) held none. Kagumba Health Centre III in Kamuli kept an asset condition book, a simple practice that other facilities can adopt.",
+        "4.2 Obsolete and Unserviceable Assets",
+        "Two wall-mounted aneroid blood-pressure machines at Nyanja Health Centre III, UGIFT-012842 and UGIFT-012843, were reported as spoilt, beyond repair and requiring replacement. Disposal approval or completion has not been confirmed."
+      ]
+    }
+  ]
+}

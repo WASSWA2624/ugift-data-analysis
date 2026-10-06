@@ -1,0 +1,69 @@
+{
+  "report": "D:\\coding\\ugift-data-analysis\\outputs\\narrative-report\\ugift-working-report-06102026-1344-reconciled.docx",
+  "report_sha256": "574772b54a16828bdff7c0d27516e5b2e07f5e9dfd0ad8cdb66161733acf722e",
+  "checked_chart_count": 1,
+  "cache_workbook_cells_checked": 27,
+  "cache_workbook_discrepancies": [],
+  "recipe_discrepancies": [],
+  "charts": [
+    {
+      "part": "word/charts/chart22.xml",
+      "embedded_workbook": "word/embeddings/Microsoft_Excel_Worksheet21.xlsx",
+      "series": [
+        {
+          "label": "Health Centres (278 respondents)",
+          "categories": [
+            "Repairs from facility funds or staff",
+            "Outside technical support",
+            "Maintenance not yet needed",
+            "No repair arrangement"
+          ],
+          "values": [
+            0.601,
+            0.414,
+            0.13699999999999998,
+            0.09
+          ],
+          "sum": 1.242
+        },
+        {
+          "label": "Schools (191 respondents)",
+          "categories": [
+            "Repairs from facility funds or staff",
+            "Outside technical support",
+            "Maintenance not yet needed",
+            "No repair arrangement"
+          ],
+          "values": [
+            0.48700000000000004,
+            0.19399999999999998,
+            0.309,
+            0.057999999999999996
+          ],
+          "sum": 1.048
+        },
+        {
+          "label": "All facilities (469 respondents)",
+          "categories": [
+            "Repairs from facility funds or staff",
+            "Outside technical support",
+            "Maintenance not yet needed",
+            "No repair arrangement"
+          ],
+          "values": [
+            0.5539999999999999,
+            0.324,
+            0.207,
+            0.077
+          ],
+          "sum": 1.162
+        }
+      ],
+      "following_text": [
+        "Figure 46: Most facilities met repairs from their own funds or staff",
+        "Frequency. Few facilities worked to a fixed maintenance interval. Of the 494 programme-list facilities that described how they maintain UgIFT assets or check their condition, 50 (10.1%) did so at a fixed interval. Of these 50, 14 (28.0%) worked annually, 11 (22.0%) monthly, 10 (20.0%) quarterly, 9 (18.0%) every school term, 3 (6.0%) twice a year and 3 (6.0%) weekly or daily, as Figure 47 shows. A further 18 facilities (3.6%) described routine or scheduled servicing without a set interval, mostly scheduled visits by regional referral hospital maintenance teams, and 61 (12.3%) repaired items as the need arose. Ngwedo Seed Secondary School in Buliisa engaged a caretaker every month and used the Directorate of Industrial Training for furniture repairs, while Busaale reviewed asset condition every quarter.",
+        "Figure 47: Annual, monthly and quarterly checks were the most common stated intervals"
+      ]
+    }
+  ]
+}
