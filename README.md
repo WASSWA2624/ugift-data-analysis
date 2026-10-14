@@ -12,7 +12,8 @@ Source records, reconciliation scripts and asset registers for UgIFT verificatio
 | `outputs/asset-register-baseline/` | Earlier register, data dictionary and facility book directory. |
 | `outputs/narrative-report/` | Narrative report and its historical source log. |
 | `outputs/report-templates/` | Reference report templates. |
-| `tmp/` | Local working files; some contain intermediate evidence or reproducible review outputs. |
+| `outputs/working-drafts-ugift/` | Received report drafts and reviewer comments retained as source evidence. |
+| `tmp/` | Historical review evidence, analysis scripts and pre-review backups. |
 
 Run scripts from the repository root with Python and the required libraries (`openpyxl`, `xlrd` and `python-docx` for the main register pipeline). Close the output workbooks in Excel before regeneration.
 
@@ -23,3 +24,5 @@ python scripts/list_book_codes.py
 ```
 
 See [register population rules](outputs/PROMPT_POPULATE_ASSET_REGISTERS.md) for source-selection and completion rules, and [the current package README](outputs/asset-register/README.md) for its validation status. Rebuilding replaces generated workbooks; preserve reviewed amendments before running it. Source deliveries and audit evidence must be preserved when removing duplicate or superseded outputs.
+
+The legacy `raw-data-ungrouped/ugift-team-10-15/tmp/` folder retains 48 original photographs and one earlier chat that were not preserved elsewhere. Source intake and change tracking exclude this folder. Obsolete helpers, duplicate extractions, bytecode, older render outputs and completed workbook staging files were removed during the October 2026 cleanup; source documents, reviewer comments, published audits and pre-review backups remain available.

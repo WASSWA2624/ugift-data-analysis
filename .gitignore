@@ -2,6 +2,9 @@
 __pycache__/
 *.pyc
 
+# Local scheduler process lock
+/.claude/scheduled_tasks.lock
+
 # Office lock files
 ~$*.xlsx
 ~$*.xls
