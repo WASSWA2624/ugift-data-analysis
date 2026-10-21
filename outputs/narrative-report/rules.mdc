@@ -1,7 +1,7 @@
 ---
 alwaysApply: true
 ---
-- Apply all updates consistently to both PDF and Word (DOCX) versions of the UgIFT asset verification reports in this directory.
+- Maintain `UGIFT-DRAFT-REPORT-21102026.docx` as the sole retained draft report in this directory. Apply updates directly to this unrestricted editable Word document; do not retain duplicate Word or PDF drafts.
 - Use clear, report-style language in your writing.
 - Ensure that any modifications to the report are also updated in the Table of Contents (TOC).
 - Before making any changes, confirm that you understand these requirements.

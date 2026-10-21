@@ -19,7 +19,7 @@ Charts written under `outputs/narrative-report/figures/chart_2909_*.png`, plus r
 
 # UgIFT narrative report source log
 
-Final report: `outputs/narrative-report/UgIFT Asset Verification Report.docx`.
+Current draft report: `outputs/narrative-report/UGIFT-DRAFT-REPORT-21102026.docx`. This unrestricted editable document is the sole retained draft-report copy.
 
 ## Internal provenance and report presentation
 

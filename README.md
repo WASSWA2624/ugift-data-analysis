@@ -10,9 +10,8 @@ Source records, reconciliation scripts and asset registers for UgIFT verificatio
 | `scripts/`, `tests/` | Register generation, reconciliation and checks. |
 | [Current asset registers](outputs/asset-register/README.md) | SK source register, MF mapping and canonical completed REF register, with package status and book-code index. |
 | `outputs/asset-register-baseline/` | Earlier register, data dictionary and facility book directory. |
-| `outputs/narrative-report/` | Narrative report and its historical source log. |
+| [Current draft report](outputs/narrative-report/UGIFT-DRAFT-REPORT-21102026.docx) | Sole retained draft report, fully editable, with its historical source log in the same directory. |
 | `outputs/report-templates/` | Reference report templates. |
-| `outputs/working-drafts-ugift/` | Received report drafts and reviewer comments retained as source evidence. |
 | `tmp/` | Historical review evidence, analysis scripts and pre-review backups. |
 
 Run scripts from the repository root with Python and the required libraries (`openpyxl`, `xlrd` and `python-docx` for the main register pipeline). Close the output workbooks in Excel before regeneration.
