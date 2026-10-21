@@ -10,6 +10,8 @@ It contains 228,638 assets on the `Asset Register` worksheet. This is the final 
 | `UGIFT-ASSET-REGISTER-21102026-AUDIT.zip` | Consolidated audit history, source exceptions and final verification evidence. |
 | `README.md` | Current package guide. |
 
+On 21 October 2026 the 976 Ministry of Education and Sports inspection tablets had their asset number (`E_INSPECTION_DES_nnnn`) written into `TAG_NUMBER` and `ATTRIBUTE6(Tag Number (engrave no.))`, replacing `Not engraved`; for TELA devices the asset number is the engraved identifier. The TELA phones carry no asset or tag number (the TELA master list gives IMEIs only) and remain `Not engraved`. No other cell changed. The register now records 22,096 assets with UgIFT markings, 29,038 with other markings and 177,504 not engraved.
+
 The audit archive's `manifest.json` records the workbook SHA-256 and checksums for every preserved audit file. The latest scope verification is in `verification/hospital-restoration-work/`; `history/` and the other verification folders retain earlier evidence and may describe superseded asset populations. The archive contains no duplicate workbooks.
 
 Superseded workbooks, Excel temporary files and completed work folders have been removed. Original source deliveries remain in the repository's source-data folders.

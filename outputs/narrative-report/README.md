@@ -5,6 +5,9 @@
 | File | Purpose |
 |---|---|
 | `UGIFT-DRAFT-REPORT-21102026.docx` | Current editable draft report. |
+| `fig-01.png` | Figure 1 image: overall asset distribution by location, with hospital-held assets merged into Health Centres. |
+| `fig-01.xlsx` | Source workbook for Figure 1 (data sheet and chart); the same workbook is embedded in the report. |
+| `damaged-assets-photo-table.docx` | Photo table of 8 high-value assets recorded faulty or broken: 4 from Seed Secondary Schools and 4 from Health Centres, with captions. |
 | `rules.mdc` | Editing rules for maintaining the report and its table of contents. |
 | `sources.md` | Historical analysis, source references and editorial provenance. |
 | `README.md` | Current folder guide. |
