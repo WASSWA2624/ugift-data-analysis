@@ -1,3 +1,7 @@
+# Historical narrative report source log
+
+This file preserves earlier analysis and editorial provenance. Dated figures, structures and working-file paths below describe historical revisions; the current retained Word document governs the report's present wording and figures. Obsolete local figure exports and reconciliation work folders were removed on 21 October 2026 and remain recoverable from Git history where previously tracked.
+
 # Revision of 30 September 2026
 
 Sections 4.2.5 to 4.2.17 reproduce the draft report sections 4.1.1 to 4.1.13 in the draft's wording. The counts, shares and recorded values in those sections already match Tables 9 to 12, so the figures were not changed. KCCA and MoDVA remain outside this population and have no narrative. Each institution has a composition chart, `outputs/narrative-report/figures/chart_mda_*.png`, using the category counts stated in that narrative. Those counts sum to the institution total in Table 9. OPM's chart shows the 7 working and 3 damaged laptops stated in its narrative. GPS was added to the list of acronyms. Sections outside 4.2.5 to 4.2.17 were not rewritten. The contents and list of figures include the new headings and charts.
