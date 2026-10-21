@@ -1,4 +1,7 @@
-"""Repair BOOK_TYPE_CODE and FACILITY_NAME in the UgIFT asset register.
+"""Repair BOOK_TYPE_CODE and FACILITY_NAME in a historical baseline workbook.
+
+This legacy tool requires an explicit path to a recovered baseline workbook.
+It expects the old Source Lines layout and does not support the current register.
 
 The resolver follows a strict evidence order:
 
@@ -41,7 +44,6 @@ from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.table import TableColumn
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_PATH = ROOT / "outputs" / "asset-register-baseline" / "UgIFT Asset Register.xlsx"
 RECONCILIATION_PATH = ROOT / "raw-data-grouped" / "facility-reconciliation.csv"
 LOCATION_MASTER_PATH = ROOT / "Location(3)2.xlsx"
 GIT_WORKBOOK_PATH = "outputs/asset-register-baseline/UgIFT Asset Register.xlsx"
@@ -1769,10 +1771,10 @@ def build(path: Path, from_git_head: bool, dry_run: bool = False) -> dict[str, o
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("path", nargs="?", type=Path, default=DEFAULT_PATH)
+    parser = argparse.ArgumentParser(description="Legacy repair tool for historical baseline workbooks.")
+    parser.add_argument("path", type=Path, help="Path to a recovered historical baseline workbook.")
     parser.add_argument(
-        "--from-git-head", action="store_true", help="Start from the clean committed workbook."
+        "--from-git-head", action="store_true", help="Start from the baseline workbook in the checked-out Git revision."
     )
     parser.add_argument("--dry-run", action="store_true", help="Resolve and report values without saving.")
     return parser.parse_args()

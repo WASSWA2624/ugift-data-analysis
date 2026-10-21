@@ -1,4 +1,6 @@
-# Prompt: build the UgIFT asset registers
+# Historical UgIFT register build instructions
+
+The current retained register is `outputs/asset-register/UGIFT-ASSET-REGISTER-21102026.xlsx`. These instructions describe the earlier three-workbook pipeline and do not replay all later reconciliations. See [the current package guide](asset-register/README.md) for the reviewed workbook and consolidated audit evidence.
 
 You are populating three workbooks. Do the stages in order. Read `GOU Asset Accounting Policies and Guidelines 2023.pdf` from start to finish before filling the MF or REF workbook, including the recognition, measurement, depreciation and small-asset sections and Annex 1. You are the accountant for this register. You already know how each calculated column on `outputs/asset-register/REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx` is derived. Calculate those columns on every REF row. Do not leave a calculated amount blank when its inputs can be read or borrowed.
 
@@ -25,7 +27,6 @@ Read these before writing any row:
 - `GOU Asset Accounting Policies and Guidelines 2023.pdf` (April 2023), especially sections 3.2.1, 3.2.2, 3.2.3, 3.3.3, 3.3.5, 5.5, 5.7 and 5.14, and Annex 1 and Annex 2
 - `Sample Header of Asset Register..xlsx` (the 64 headers and one example row)
 - `Location(3)2.xlsx`, the IFMS location master: the vote codes and departments IFMS accepts
-- `outputs/asset-register-baseline/UgIFT Asset Register Data Dictionary.xlsx` for the one-row-per-asset rule already used on existing assets
 
 Outputs:
 

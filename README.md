@@ -9,7 +9,6 @@ Source records, reconciliation scripts and asset registers for UgIFT verificatio
 | `new-templates-to-follow/`, `reference/` | Register layouts and accounting reference data. |
 | `scripts/`, `tests/` | Register generation, reconciliation and checks. |
 | [Current asset register](outputs/asset-register/UGIFT-ASSET-REGISTER-21102026.xlsx) | Sole updated register, with a package guide and consolidated audit archive in the same directory. |
-| `outputs/asset-register-baseline/` | Earlier register, data dictionary and facility book directory. |
 | [Current draft report](outputs/narrative-report/UGIFT-DRAFT-REPORT-21102026.docx) | Sole retained draft report, fully editable, with its historical source log in the same directory. |
 | `outputs/report-templates/` | Reference report templates. |
 | `tmp/` | Historical review evidence, analysis scripts and pre-review backups. |
