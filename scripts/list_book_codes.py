@@ -1,4 +1,4 @@
-"""Refresh the package README's BOOK_TYPE_CODE index from the REF register."""
+"""Refresh the package README's BOOK_TYPE_CODE index from the current register."""
 
 from __future__ import annotations
 
@@ -6,6 +6,7 @@ import argparse
 import html
 import re
 import zipfile
+import xml.etree.ElementTree as ET
 from collections import Counter
 from pathlib import Path
 
@@ -13,19 +14,25 @@ SOURCE = (
     Path(__file__).resolve().parents[1]
     / "outputs"
     / "asset-register"
-    / "REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx"
+    / "UGIFT-ASSET-REGISTER-21102026.xlsx"
 )
 OUTPUT = SOURCE.with_name("README.md")
 INDEX_START = "<!-- book-type-code:start -->"
 INDEX_END = "<!-- book-type-code:end -->"
-TEXT = re.compile(br'<c r="A\d+"[^>]*><is><t[^>]*>([^<]*)</t>')
-NUMBER = re.compile(br'<c r="A\d+"[^>]*><v>([^<]*)</v>')
+CELL = re.compile(br'<c\b(?=[^>]*\br="A\d+")[^>]*(?<!/)>.*?</c>', re.DOTALL)
+CELL_TYPE = re.compile(br'\bt="([^"]*)"')
+TEXT = re.compile(br'<t(?:\s[^>]*)?>(.*?)</t>', re.DOTALL)
+NUMBER = re.compile(br'<v>([^<]*)</v>')
+NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
+
+
+def _normalize_text(text: str) -> str:
+    text = text.replace("\u2028", " ").replace("\u2029", " ")
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def cell_text(raw: bytes) -> str:
-    text = html.unescape(raw.decode("utf-8", "replace"))
-    text = text.replace("\u2028", " ").replace("\u2029", " ")
-    return re.sub(r"\s+", " ", text).strip()
+    return _normalize_text(html.unescape(raw.decode("utf-8", "replace")))
 
 
 def book_code_index_counts(markdown: str) -> Counter[str]:
@@ -44,9 +51,22 @@ def book_code_index_counts(markdown: str) -> Counter[str]:
 
 
 def book_code_counts(source: Path) -> Counter[str]:
-    """Count the builder's inline book codes without loading the entire sheet."""
+    """Count inline, shared-string and numeric codes without loading the sheet."""
     counts: Counter[str] = Counter()
     with zipfile.ZipFile(source) as workbook, workbook.open("xl/worksheets/sheet1.xml") as sheet:
+        shared_strings: list[str] = []
+        if "xl/sharedStrings.xml" in workbook.namelist():
+            with workbook.open("xl/sharedStrings.xml") as strings:
+                for _, element in ET.iterparse(strings, events=("end",)):
+                    if element.tag == NS + "si":
+                        parts = []
+                        for child in element:
+                            if child.tag == NS + "t":
+                                parts.append(child.text or "")
+                            elif child.tag == NS + "r":
+                                parts.append(child.findtext(NS + "t", ""))
+                        shared_strings.append("".join(parts))
+                        element.clear()
         pending = b""
         while chunk := sheet.read(1024 * 1024):
             pending += chunk
@@ -55,23 +75,31 @@ def book_code_counts(source: Path) -> Counter[str]:
                 continue
             boundary += len(b"</row>")
             complete, pending = pending[:boundary], pending[boundary:]
-            for pattern in (TEXT, NUMBER):
-                counts.update(cell_text(value) for value in pattern.findall(complete))
+            for cell in CELL.findall(complete):
+                kind = CELL_TYPE.search(cell)
+                value = NUMBER.search(cell)
+                if kind is not None and kind.group(1) == b"s":
+                    if value is not None:
+                        counts[_normalize_text(shared_strings[int(value.group(1))])] += 1
+                elif text := TEXT.findall(cell):
+                    counts[cell_text(b"".join(text))] += 1
+                elif value is not None:
+                    counts[cell_text(value.group(1))] += 1
     counts.pop("BOOK_TYPE_CODE", None)  # the header cell A1 is not a code
     return counts
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--ref", type=Path, default=SOURCE, help="REF workbook to read")
-    parser.add_argument("--out", type=Path, help="Markdown output path; defaults to README.md beside the REF workbook")
+    parser.add_argument("--ref", type=Path, default=SOURCE, help="Asset-register workbook to read")
+    parser.add_argument("--out", type=Path, help="Markdown output path; defaults to README.md beside the workbook")
     args = parser.parse_args()
     output = args.out or args.ref.with_name(OUTPUT.name)
     counts = book_code_counts(args.ref)
     lines = [
         "## BOOK_TYPE_CODE",
         "",
-        f"{len(counts):,} unique values in `REF_ALL_UGIFT_ASSET_REGISTER_MF_TEMPLATE.xlsx`.",
+        f"{len(counts):,} unique values in `{args.ref.name}`.",
         "",
         "| No. | Book code | Rows |",
         "|---:|---|---:|",
