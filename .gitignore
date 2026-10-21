@@ -48,6 +48,19 @@ raw-data-grouped/_multi-team/teams-10-15/final-UGiFT-report-karamojja-6-teams/UG
 /tmp/
 /scripts/__pycache__/
 
+# Local copies at or above GitHub's 50 MB warning, plus review scratch.
+# The tracked register workbook stays in git. These extras stay on disk only.
+.playwright-mcp/
+output/pdf/
+outputs/asset-register/hospital-restoration-work/
+outputs/asset-register/remarks-cleanup-work/
+outputs/asset-register/report-structure-work/
+outputs/asset-register/scope-removal-work/
+outputs/asset-register/status-normalization-work/
+outputs/asset-register/ugift-asset-register-cleaned.xlsx
+outputs/asset-register/ugift-asset-register-reconciled.xlsx
+outputs/asset-register/ugift-reconciliation-change-audit.zip
+
 # GitHub rejects files over 100 MB. Keep these local only.
 new-raw-data-221092026-1114/new-raw-data-22092026-1556/UGIFT DEPAUL.zip
 new-raw-data-221092026-1114/new-raw-data-24092026-0535/UGIFT DEPAUL.zip
