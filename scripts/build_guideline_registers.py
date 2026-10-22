@@ -89,7 +89,7 @@ CENTRAL_KINDS = {"MDA", "Hospital", "Blood bank", "Local government office", "He
 # office and kitchen ware, hand tools and cleaning items, computer accessories that are
 # no asset on their own, and single-patient or measuring aids.
 LOOSE = re.compile(
-    r"\b(kettles?|spoons?|(?<!tuning )forks?(?!\s?lift)|cutlery|knives|plates|cups|mugs|jugs|flasks?(?!\s*(?:volumetric|conical|erlenmeyer|round))|thermos(?:es)?|"
+    r"\b(kettles?|spoons?|(?<!tuning )forks?(?!\s?lift)|cutlery|knives|plates|(?<!\bstrip[ -])cups|mugs|jugs|flasks?(?!\s*(?:volumetric|conical|erlenmeyer|round))|thermos(?:es)?|"
     r"calculators?|stap+lers?|stap+ling machines?|pen-?holders?|punches|punch|punching machines?|paper punch(?:es|ers)?|paper trays?|"
     r"(?:office|file|document|letter|desk|in|out) trays?|pin-?holders?|staple holders?|drawing pins?|office pins?|pins?(?!\s*boards?)\b|type\s?writers?|"
     r"wall clocks?|clocks?|stop ?watch(?:es)?|timers?|scissors?|cord scissors?|spatulas?|rulers?|dusters?|files?(?:\s+and\s+folders?)?\b(?!\s*(?:cabinet|server))|folders?|"
@@ -706,6 +706,8 @@ OPTICAL = (MACHINERY, OTHER, "PRECISION OPTICAL INSTRUMENTS", 60, True)
 STRUCTURE = ("BUILDINGS AND STRUCTURES", "STRUCTURES", "OTHER STRUCTURES", 240, True)
 # Field spellings Annex 1 already names. These are read before the broader patterns.
 SPELLING_CLASSES = (
+    # These science apparatus names take precedence over vehicle and power equipment.
+    (re.compile(r"(?i)^\s*(?:van[\s-]+de[\s-]+gr(?:a{1,2}f{1,2}|aph)[\s-]+generators?|strip[ -]cups?)\b"), MEDICAL),
     (re.compile(r"(?i)\b(?:delivery|hospital|patient|examination|maternity|theatre|operating|icu|hydraulic)\b.{0,40}\bbeds?\b|\bbeds?\b.{0,40}\b(?:delivery|hospital|patient|examination|maternity|hydraulic)\b"), MEDICAL),
     (re.compile(r"(?i)\b(resuscitators?|defibrillators?|donor couches?|gas cylinders?|venturi masks?|crash carts?|patient monitoring|tube welders?|tube sealers?|glucom+eters?|oxgyen|thermomet[eo]rs?|barometers?|calorimeters?|plotting compass(?:es)?|screw jacks?|tourniquets?|flow splitters?|auto\s*claves?|sunction)\b"), MEDICAL),
     (re.compile(r"(?i)\bdiagno[a-z]{1,3}tic\b"), MEDICAL),

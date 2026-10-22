@@ -1,0 +1,427 @@
+{
+  "source_sha256": "ebb433042d1fc6cec104b7508fea98c9cb5fd23a243071b34a15ddc5b9dadda5",
+  "output_sha256": "a2e4caba7e87b7e58def0d5f73ac32ea6ddb9548b72e3f5acc0e38a39e7090a3",
+  "changed_assets": 8,
+  "changed_cells": 24,
+  "columns": [
+    "D",
+    "E",
+    "V"
+  ],
+  "worksheet_data_rows": 228638,
+  "all_other_cells_formulas_and_styles_unchanged": true,
+  "all_other_package_parts_unchanged": true,
+  "useful_lives_and_financial_values_preserved": true,
+  "assets": [
+    {
+      "row": 103671,
+      "B": "Van de Graaff generator",
+      "D": "TRANSPORT EQUIPMENT",
+      "E": "LIGHT VEHICLES",
+      "H": 1,
+      "J": "SECONDARY EDUCATION",
+      "K": "Aperikira Seed Secondary School",
+      "M": 196018110,
+      "V": "231212",
+      "AI": 120,
+      "AK": 32669685,
+      "AZ": "UGIFT-087157",
+      "BI": 163348425
+    },
+    {
+      "row": 103672,
+      "B": "Strip cup",
+      "D": "TRANSPORT EQUIPMENT",
+      "E": "LIGHT VEHICLES",
+      "H": 1,
+      "J": "SECONDARY EDUCATION",
+      "K": "Aperikira Seed Secondary School",
+      "M": 196018110,
+      "V": "231212",
+      "AI": 120,
+      "AK": 16334843,
+      "AZ": "UGIFT-087158",
+      "BI": 179683267
+    },
+    {
+      "row": 103673,
+      "B": "Strip cup",
+      "D": "TRANSPORT EQUIPMENT",
+      "E": "LIGHT VEHICLES",
+      "H": 1,
+      "J": "SECONDARY EDUCATION",
+      "K": "Aperikira Seed Secondary School",
+      "M": 196018110,
+      "V": "231212",
+      "AI": 120,
+      "AK": 16334843,
+      "AZ": "UGIFT-087159",
+      "BI": 179683267
+    },
+    {
+      "row": 113180,
+      "B": "Van De Graaf Generator",
+      "D": "TRANSPORT EQUIPMENT",
+      "E": "LIGHT VEHICLES",
+      "H": 1,
+      "J": "SECONDARY EDUCATION",
+      "K": "Apapai Seed Secondary School",
+      "M": 196018110,
+      "V": "231212",
+      "AI": 60,
+      "AK": 179683268,
+      "AZ": "UGIFT-096667",
+      "BI": 16334842
+    },
+    {
+      "row": 115324,
+      "B": "Van-de-graph Generator",
+      "D": "TRANSPORT EQUIPMENT",
+      "E": "LIGHT VEHICLES",
+      "H": 1,
+      "J": "SECONDARY EDUCATION",
+      "K": "Akadot Seed Secondary School",
+      "M": 80000000,
+      "V": "231212",
+      "AI": 60,
+      "AK": 24000000,
+      "AZ": "UGIFT-098811",
+      "BI": 56000000
+    },
+    {
+      "row": 116522,
+      "B": "Van-de-graph Generator",
+      "D": "TRANSPORT EQUIPMENT",
+      "E": "LIGHT VEHICLES",
+      "H": 1,
+      "J": "SECONDARY EDUCATION",
+      "K": "Olok Seed Secondary School",
+      "M": 196018110,
+      "V": "231212",
+      "AI": 60,
+      "AK": 58805433,
+      "AZ": "UGIFT-100009",
+      "BI": 137212677
+    },
+    {
+      "row": 165273,
+      "B": "Van de Graaff generator",
+      "D": "TRANSPORT EQUIPMENT",
+      "E": "LIGHT VEHICLES",
+      "H": 1,
+      "J": "SECONDARY EDUCATION",
+      "K": "Nabwigulu Seed Secondary School",
+      "M": 196018110,
+      "V": "231212",
+      "AI": 60,
+      "AK": 65339370,
+      "AZ": "UGIFT-148776",
+      "BI": 130678740
+    },
+    {
+      "row": 195037,
+      "B": "Van De Graaf Generator",
+      "D": "TRANSPORT EQUIPMENT",
+      "E": "LIGHT VEHICLES",
+      "H": 1,
+      "J": "SECONDARY EDUCATION",
+      "K": "Kijunjubwa Seed Secondary School",
+      "M": 196018110,
+      "V": "231212",
+      "AI": 60,
+      "AK": 179683268,
+      "AZ": "UGIFT-178531",
+      "BI": 16334842
+    }
+  ],
+  "changes": [
+    {
+      "sheet": "Asset Register",
+      "cell": "D103671",
+      "expected": "TRANSPORT EQUIPMENT",
+      "value": "OTHER MACHINERY AND EQUIPMENT",
+      "identity": {
+        "B": "Van de Graaff generator",
+        "K": "Aperikira Seed Secondary School",
+        "AZ": "UGIFT-087157"
+      },
+      "preview_cell": "D2"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "E103671",
+      "expected": "LIGHT VEHICLES",
+      "value": "MED LAB RESEARCH APPLIANCES",
+      "identity": {
+        "B": "Van de Graaff generator",
+        "K": "Aperikira Seed Secondary School",
+        "AZ": "UGIFT-087157"
+      },
+      "preview_cell": "E2"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "V103671",
+      "expected": "231212",
+      "value": "231233",
+      "identity": {
+        "B": "Van de Graaff generator",
+        "K": "Aperikira Seed Secondary School",
+        "AZ": "UGIFT-087157"
+      },
+      "preview_cell": "V2"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "D103672",
+      "expected": "TRANSPORT EQUIPMENT",
+      "value": "OTHER MACHINERY AND EQUIPMENT",
+      "identity": {
+        "B": "Strip cup",
+        "K": "Aperikira Seed Secondary School",
+        "AZ": "UGIFT-087158"
+      },
+      "preview_cell": "D3"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "E103672",
+      "expected": "LIGHT VEHICLES",
+      "value": "MED LAB RESEARCH APPLIANCES",
+      "identity": {
+        "B": "Strip cup",
+        "K": "Aperikira Seed Secondary School",
+        "AZ": "UGIFT-087158"
+      },
+      "preview_cell": "E3"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "V103672",
+      "expected": "231212",
+      "value": "231233",
+      "identity": {
+        "B": "Strip cup",
+        "K": "Aperikira Seed Secondary School",
+        "AZ": "UGIFT-087158"
+      },
+      "preview_cell": "V3"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "D103673",
+      "expected": "TRANSPORT EQUIPMENT",
+      "value": "OTHER MACHINERY AND EQUIPMENT",
+      "identity": {
+        "B": "Strip cup",
+        "K": "Aperikira Seed Secondary School",
+        "AZ": "UGIFT-087159"
+      },
+      "preview_cell": "D4"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "E103673",
+      "expected": "LIGHT VEHICLES",
+      "value": "MED LAB RESEARCH APPLIANCES",
+      "identity": {
+        "B": "Strip cup",
+        "K": "Aperikira Seed Secondary School",
+        "AZ": "UGIFT-087159"
+      },
+      "preview_cell": "E4"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "V103673",
+      "expected": "231212",
+      "value": "231233",
+      "identity": {
+        "B": "Strip cup",
+        "K": "Aperikira Seed Secondary School",
+        "AZ": "UGIFT-087159"
+      },
+      "preview_cell": "V4"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "D113180",
+      "expected": "TRANSPORT EQUIPMENT",
+      "value": "OTHER MACHINERY AND EQUIPMENT",
+      "identity": {
+        "B": "Van De Graaf Generator",
+        "K": "Apapai Seed Secondary School",
+        "AZ": "UGIFT-096667"
+      },
+      "preview_cell": "D5"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "E113180",
+      "expected": "LIGHT VEHICLES",
+      "value": "MED LAB RESEARCH APPLIANCES",
+      "identity": {
+        "B": "Van De Graaf Generator",
+        "K": "Apapai Seed Secondary School",
+        "AZ": "UGIFT-096667"
+      },
+      "preview_cell": "E5"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "V113180",
+      "expected": "231212",
+      "value": "231233",
+      "identity": {
+        "B": "Van De Graaf Generator",
+        "K": "Apapai Seed Secondary School",
+        "AZ": "UGIFT-096667"
+      },
+      "preview_cell": "V5"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "D115324",
+      "expected": "TRANSPORT EQUIPMENT",
+      "value": "OTHER MACHINERY AND EQUIPMENT",
+      "identity": {
+        "B": "Van-de-graph Generator",
+        "K": "Akadot Seed Secondary School",
+        "AZ": "UGIFT-098811"
+      },
+      "preview_cell": "D6"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "E115324",
+      "expected": "LIGHT VEHICLES",
+      "value": "MED LAB RESEARCH APPLIANCES",
+      "identity": {
+        "B": "Van-de-graph Generator",
+        "K": "Akadot Seed Secondary School",
+        "AZ": "UGIFT-098811"
+      },
+      "preview_cell": "E6"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "V115324",
+      "expected": "231212",
+      "value": "231233",
+      "identity": {
+        "B": "Van-de-graph Generator",
+        "K": "Akadot Seed Secondary School",
+        "AZ": "UGIFT-098811"
+      },
+      "preview_cell": "V6"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "D116522",
+      "expected": "TRANSPORT EQUIPMENT",
+      "value": "OTHER MACHINERY AND EQUIPMENT",
+      "identity": {
+        "B": "Van-de-graph Generator",
+        "K": "Olok Seed Secondary School",
+        "AZ": "UGIFT-100009"
+      },
+      "preview_cell": "D7"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "E116522",
+      "expected": "LIGHT VEHICLES",
+      "value": "MED LAB RESEARCH APPLIANCES",
+      "identity": {
+        "B": "Van-de-graph Generator",
+        "K": "Olok Seed Secondary School",
+        "AZ": "UGIFT-100009"
+      },
+      "preview_cell": "E7"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "V116522",
+      "expected": "231212",
+      "value": "231233",
+      "identity": {
+        "B": "Van-de-graph Generator",
+        "K": "Olok Seed Secondary School",
+        "AZ": "UGIFT-100009"
+      },
+      "preview_cell": "V7"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "D165273",
+      "expected": "TRANSPORT EQUIPMENT",
+      "value": "OTHER MACHINERY AND EQUIPMENT",
+      "identity": {
+        "B": "Van de Graaff generator",
+        "K": "Nabwigulu Seed Secondary School",
+        "AZ": "UGIFT-148776"
+      },
+      "preview_cell": "D8"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "E165273",
+      "expected": "LIGHT VEHICLES",
+      "value": "MED LAB RESEARCH APPLIANCES",
+      "identity": {
+        "B": "Van de Graaff generator",
+        "K": "Nabwigulu Seed Secondary School",
+        "AZ": "UGIFT-148776"
+      },
+      "preview_cell": "E8"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "V165273",
+      "expected": "231212",
+      "value": "231233",
+      "identity": {
+        "B": "Van de Graaff generator",
+        "K": "Nabwigulu Seed Secondary School",
+        "AZ": "UGIFT-148776"
+      },
+      "preview_cell": "V8"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "D195037",
+      "expected": "TRANSPORT EQUIPMENT",
+      "value": "OTHER MACHINERY AND EQUIPMENT",
+      "identity": {
+        "B": "Van De Graaf Generator",
+        "K": "Kijunjubwa Seed Secondary School",
+        "AZ": "UGIFT-178531"
+      },
+      "preview_cell": "D9"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "E195037",
+      "expected": "LIGHT VEHICLES",
+      "value": "MED LAB RESEARCH APPLIANCES",
+      "identity": {
+        "B": "Van De Graaf Generator",
+        "K": "Kijunjubwa Seed Secondary School",
+        "AZ": "UGIFT-178531"
+      },
+      "preview_cell": "E9"
+    },
+    {
+      "sheet": "Asset Register",
+      "cell": "V195037",
+      "expected": "231212",
+      "value": "231233",
+      "identity": {
+        "B": "Van De Graaf Generator",
+        "K": "Kijunjubwa Seed Secondary School",
+        "AZ": "UGIFT-178531"
+      },
+      "preview_cell": "V9"
+    }
+  ]
+}
