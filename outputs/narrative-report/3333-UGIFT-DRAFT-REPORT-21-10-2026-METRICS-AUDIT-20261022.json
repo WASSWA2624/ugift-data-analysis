@@ -1,0 +1,2493 @@
+{
+  "completed_utc": "2026-10-22T12:06:30.275258+00:00",
+  "output": "D:\\coding\\ugift-data-analysis\\outputs\\narrative-report\\3333-UGIFT-DRAFT-REPORT-21-10-2026-.docx",
+  "before_sha256": "a3e4468150b6b4a289200725a56464c08ec586377cc053f49cdcf628d0e96c4a",
+  "after_sha256": "98791deae8e19b12b1722a3bfc74cbfddfa346d4e014d0b74f6742cac1a02987",
+  "source_register": "D:\\coding\\ugift-data-analysis\\outputs\\asset-register\\UGIFT-ASSET-REGISTER-21102026.xlsx",
+  "source_register_sha256": "ebb433042d1fc6cec104b7508fea98c9cb5fd23a243071b34a15ddc5b9dadda5",
+  "scope": "Numeric/metric values in Asset availability and Asset marking/identification only, including existing tables, native chart data, embedded workbooks and current figure annotations.",
+  "summary": {
+    "narrative_metric": 87,
+    "count_in_words": 7,
+    "table_metric": 50,
+    "changed_paragraphs": 64,
+    "native_chart_values": 57,
+    "matching_embedded_workbook_cells": 57,
+    "figure_annotation_values": 4,
+    "changed_package_parts": 12,
+    "unchanged_package_parts": 119,
+    "pages_before": 58,
+    "pages_after": 58
+  },
+  "validation": {
+    "all_2121_accepted_paragraph_texts_match_approved_span_changes": true,
+    "restoring_64_target_paragraphs_restores_original_document_xml_canonically": true,
+    "zip_crc_pass": true,
+    "prior_deletions_and_67_red_unstruck_paragraphs_preserved": true,
+    "all_155_eligible_table_values_115_chart_points_115_embedded_cells_verified": true,
+    "all_58_rendered_pages_visually_reviewed": true,
+    "toc_target_start_pages_and_cached_page_references_unchanged": true,
+    "fonts_styles_labels_financial_condition_sections_and_other_parts_preserved": true
+  },
+  "marking_definition": {
+    "authority": "Git4d88c3e7: outputs/narrative-report/reconciliation-06102026/audit_register_metrics.py tag_status()",
+    "field": "AP TAG_NUMBER",
+    "empty_tag_values": [
+      "",
+      "-",
+      "n/a",
+      "na",
+      "none",
+      "not",
+      "not available",
+      "not engraved",
+      "unknown",
+      "unspecified"
+    ],
+    "programme_match": "ugift|ugft after removing whitespace, slash, underscore and hyphen; case-insensitive",
+    "meaning": "Recorded AP identifier/mark content. Identifier presence does not independently prove physical engraving. Existing table three-way definition retained.",
+    "negative_or_mixed_embedded_text_rule": "Potential non-placeholder negative/mixed phrases are listed for review; approved function itself is unchanged."
+  },
+  "preserved_wording_limitations": [
+    "MoES: None of the handsets or tablets carries an engravement mark (unchanged at user instruction).",
+    "MoES marking table has no existing Other identifiers row; 976 other identifiers cannot be added without changing its structure/wording.",
+    "MoLHUD motorcycle/registration-number sentence preserved although its recorded-identifier counts are now zero.",
+    "Condition/functionality and financial sections are outside the authorised report update scope."
+  ],
+  "changes": [
+    {
+      "paragraph": 259,
+      "start": 78,
+      "end": 84,
+      "old": "50,158",
+      "new": "52,584",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 259,
+      "start": 87,
+      "end": 92,
+      "old": "21.9%",
+      "new": "23.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 259,
+      "start": 133,
+      "end": 140,
+      "old": "178,480",
+      "new": "176,054",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 259,
+      "start": 143,
+      "end": 148,
+      "old": "78.1%",
+      "new": "77.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 259,
+      "start": 179,
+      "end": 185,
+      "old": "22,096",
+      "new": "21,559",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 259,
+      "start": 187,
+      "end": 191,
+      "old": "9.7%",
+      "new": "9.4%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 259,
+      "start": 312,
+      "end": 317,
+      "old": "30.0%",
+      "new": "35.7%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 259,
+      "start": 334,
+      "end": 339,
+      "old": "24.5%",
+      "new": "26.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 259,
+      "start": 362,
+      "end": 367,
+      "old": "15.0%",
+      "new": "14.2%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 645,
+      "start": 43,
+      "end": 49,
+      "old": "50,158",
+      "new": "52,584",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 645,
+      "start": 51,
+      "end": 56,
+      "old": "21.9%",
+      "new": "23.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 645,
+      "start": 85,
+      "end": 92,
+      "old": "178,480",
+      "new": "176,054",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 645,
+      "start": 94,
+      "end": 99,
+      "old": "78.1%",
+      "new": "77.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 645,
+      "start": 136,
+      "end": 142,
+      "old": "22,096",
+      "new": "21,559",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 645,
+      "start": 144,
+      "end": 149,
+      "old": "44.1%",
+      "new": "41.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 645,
+      "start": 191,
+      "end": 197,
+      "old": "28,062",
+      "new": "31,025",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 645,
+      "start": 199,
+      "end": 204,
+      "old": "55.9%",
+      "new": "59.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 753,
+      "start": 92,
+      "end": 97,
+      "old": "4,879",
+      "new": "5,814",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 753,
+      "start": 100,
+      "end": 105,
+      "old": "30.0%",
+      "new": "35.7%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 753,
+      "start": 138,
+      "end": 143,
+      "old": "4,768",
+      "new": "4,774",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 753,
+      "start": 188,
+      "end": 191,
+      "old": "111",
+      "new": "1,040",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 753,
+      "start": 193,
+      "end": 197,
+      "old": "0.7%",
+      "new": "6.4%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 753,
+      "start": 233,
+      "end": 239,
+      "old": "11,403",
+      "new": "10,468",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 753,
+      "start": 242,
+      "end": 247,
+      "old": "70.0%",
+      "new": "64.3%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 770,
+      "start": 39,
+      "end": 42,
+      "old": "282",
+      "new": "295",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 770,
+      "start": 51,
+      "end": 56,
+      "old": "61.6%",
+      "new": "64.4%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 770,
+      "start": 85,
+      "end": 88,
+      "old": "176",
+      "new": "163",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 770,
+      "start": 90,
+      "end": 95,
+      "old": "38.4%",
+      "new": "35.6%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 770,
+      "start": 144,
+      "end": 147,
+      "old": "247",
+      "new": "277",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 770,
+      "start": 149,
+      "end": 154,
+      "old": "53.9%",
+      "new": "60.5%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 770,
+      "start": 195,
+      "end": 197,
+      "old": "35",
+      "new": "18",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 770,
+      "start": 199,
+      "end": 203,
+      "old": "7.6%",
+      "new": "3.9%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 834,
+      "start": 52,
+      "end": 54,
+      "old": "79",
+      "new": "78",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 834,
+      "start": 56,
+      "end": 61,
+      "old": "90.8%",
+      "new": "89.7%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 834,
+      "start": 150,
+      "end": 154,
+      "old": "2.3%",
+      "new": "1.1%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 834,
+      "start": 221,
+      "end": 225,
+      "old": "9.2%",
+      "new": "10.3%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 834,
+      "start": 145,
+      "end": 148,
+      "old": "two",
+      "new": "one",
+      "kind": "count_in_words"
+    },
+    {
+      "paragraph": 834,
+      "start": 214,
+      "end": 219,
+      "old": "eight",
+      "new": "nine",
+      "kind": "count_in_words"
+    },
+    {
+      "paragraph": 941,
+      "start": 64,
+      "end": 69,
+      "old": "1,232",
+      "new": "1,204",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 941,
+      "start": 71,
+      "end": 76,
+      "old": "60.2%",
+      "new": "58.9%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 941,
+      "start": 92,
+      "end": 97,
+      "old": "1,228",
+      "new": "1,204",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 941,
+      "start": 99,
+      "end": 104,
+      "old": "60.0%",
+      "new": "58.9%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 941,
+      "start": 135,
+      "end": 136,
+      "old": "4",
+      "new": "0",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 941,
+      "start": 138,
+      "end": 142,
+      "old": "0.2%",
+      "new": "0.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 941,
+      "start": 177,
+      "end": 180,
+      "old": "813",
+      "new": "841",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 941,
+      "start": 182,
+      "end": 187,
+      "old": "39.8%",
+      "new": "41.1%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1006,
+      "start": 56,
+      "end": 58,
+      "old": "24",
+      "new": "14",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1006,
+      "start": 60,
+      "end": 65,
+      "old": "47.1%",
+      "new": "27.5%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1006,
+      "start": 87,
+      "end": 89,
+      "old": "27",
+      "new": "37",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1006,
+      "start": 91,
+      "end": 96,
+      "old": "52.9%",
+      "new": "72.5%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1006,
+      "start": 170,
+      "end": 172,
+      "old": "10",
+      "new": "0",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1006,
+      "start": 174,
+      "end": 179,
+      "old": "19.6%",
+      "new": "0.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1217,
+      "start": 63,
+      "end": 68,
+      "old": "61.5%",
+      "new": "53.8%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1217,
+      "start": 96,
+      "end": 101,
+      "old": "38.5%",
+      "new": "46.2%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1217,
+      "start": 157,
+      "end": 162,
+      "old": "53.8%",
+      "new": "100.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1217,
+      "start": 56,
+      "end": 61,
+      "old": "eight",
+      "new": "seven",
+      "kind": "count_in_words"
+    },
+    {
+      "paragraph": 1217,
+      "start": 90,
+      "end": 94,
+      "old": "five",
+      "new": "six",
+      "kind": "count_in_words"
+    },
+    {
+      "paragraph": 1217,
+      "start": 121,
+      "end": 126,
+      "old": "eight",
+      "new": "seven",
+      "kind": "count_in_words"
+    },
+    {
+      "paragraph": 1217,
+      "start": 204,
+      "end": 207,
+      "old": "one",
+      "new": "none",
+      "kind": "count_in_words"
+    },
+    {
+      "paragraph": 1255,
+      "start": 95,
+      "end": 97,
+      "old": "12",
+      "new": "0",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1255,
+      "start": 100,
+      "end": 106,
+      "old": "100.0%",
+      "new": "0.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1255,
+      "start": 135,
+      "end": 136,
+      "old": "0",
+      "new": "12",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1255,
+      "start": 139,
+      "end": 143,
+      "old": "0.0%",
+      "new": "100.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1288,
+      "start": 73,
+      "end": 75,
+      "old": "76",
+      "new": "26",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1288,
+      "start": 77,
+      "end": 82,
+      "old": "12.6%",
+      "new": "4.3%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1288,
+      "start": 110,
+      "end": 113,
+      "old": "526",
+      "new": "559",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1288,
+      "start": 115,
+      "end": 120,
+      "old": "87.4%",
+      "new": "92.9%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1288,
+      "start": 162,
+      "end": 166,
+      "old": "4.3%",
+      "new": "60.5%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1288,
+      "start": 195,
+      "end": 197,
+      "old": "50",
+      "new": "17",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1288,
+      "start": 199,
+      "end": 203,
+      "old": "8.3%",
+      "new": "39.5%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1323,
+      "start": 102,
+      "end": 104,
+      "old": "48",
+      "new": "17",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1323,
+      "start": 106,
+      "end": 111,
+      "old": "14.8%",
+      "new": "5.2%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1323,
+      "start": 141,
+      "end": 144,
+      "old": "250",
+      "new": "281",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1323,
+      "start": 146,
+      "end": 151,
+      "old": "77.2%",
+      "new": "86.7%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1379,
+      "start": 88,
+      "end": 92,
+      "old": "1.2%",
+      "new": "0.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1379,
+      "start": 129,
+      "end": 132,
+      "old": "161",
+      "new": "163",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1379,
+      "start": 134,
+      "end": 139,
+      "old": "98.8%",
+      "new": "100.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1379,
+      "start": 76,
+      "end": 79,
+      "old": "Two",
+      "new": "Zero",
+      "kind": "count_in_words"
+    },
+    {
+      "paragraph": 1579,
+      "start": 74,
+      "end": 79,
+      "old": "9,541",
+      "new": "9,019",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1579,
+      "start": 81,
+      "end": 86,
+      "old": "15.0%",
+      "new": "14.2%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1579,
+      "start": 108,
+      "end": 114,
+      "old": "53,891",
+      "new": "54,413",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1579,
+      "start": 116,
+      "end": 121,
+      "old": "85.0%",
+      "new": "85.8%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1579,
+      "start": 160,
+      "end": 165,
+      "old": "3,824",
+      "new": "3,757",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1579,
+      "start": 167,
+      "end": 171,
+      "old": "6.0%",
+      "new": "5.9%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1579,
+      "start": 200,
+      "end": 205,
+      "old": "5,717",
+      "new": "5,262",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1579,
+      "start": 207,
+      "end": 211,
+      "old": "9.0%",
+      "new": "8.3%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1802,
+      "start": 66,
+      "end": 72,
+      "old": "35,600",
+      "new": "37,700",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1802,
+      "start": 74,
+      "end": 79,
+      "old": "24.5%",
+      "new": "26.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1802,
+      "start": 101,
+      "end": 108,
+      "old": "109,655",
+      "new": "107,555",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1802,
+      "start": 110,
+      "end": 115,
+      "old": "75.5%",
+      "new": "74.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1802,
+      "start": 147,
+      "end": 153,
+      "old": "13,478",
+      "new": "13,002",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1802,
+      "start": 155,
+      "end": 159,
+      "old": "9.3%",
+      "new": "9.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1802,
+      "start": 185,
+      "end": 191,
+      "old": "22,122",
+      "new": "24,698",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 1802,
+      "start": 193,
+      "end": 198,
+      "old": "15.2%",
+      "new": "17.0%",
+      "kind": "narrative_metric"
+    },
+    {
+      "paragraph": 899,
+      "start": 0,
+      "end": 6,
+      "old": "10,325",
+      "new": "9,349",
+      "kind": "table_metric",
+      "table": 11,
+      "row": 3,
+      "cell": 2
+    },
+    {
+      "paragraph": 900,
+      "start": 0,
+      "end": 5,
+      "old": "95.8%",
+      "new": "86.7%",
+      "kind": "table_metric",
+      "table": 11,
+      "row": 3,
+      "cell": 3
+    },
+    {
+      "paragraph": 948,
+      "start": 0,
+      "end": 5,
+      "old": "1,228",
+      "new": "1,204",
+      "kind": "table_metric",
+      "table": 14,
+      "row": 2,
+      "cell": 2
+    },
+    {
+      "paragraph": 949,
+      "start": 0,
+      "end": 5,
+      "old": "60.0%",
+      "new": "58.9%",
+      "kind": "table_metric",
+      "table": 14,
+      "row": 2,
+      "cell": 3
+    },
+    {
+      "paragraph": 951,
+      "start": 0,
+      "end": 1,
+      "old": "4",
+      "new": "0",
+      "kind": "table_metric",
+      "table": 14,
+      "row": 3,
+      "cell": 2
+    },
+    {
+      "paragraph": 952,
+      "start": 0,
+      "end": 4,
+      "old": "0.2%",
+      "new": "0.0%",
+      "kind": "table_metric",
+      "table": 14,
+      "row": 3,
+      "cell": 3
+    },
+    {
+      "paragraph": 954,
+      "start": 0,
+      "end": 3,
+      "old": "813",
+      "new": "841",
+      "kind": "table_metric",
+      "table": 14,
+      "row": 4,
+      "cell": 2
+    },
+    {
+      "paragraph": 955,
+      "start": 0,
+      "end": 5,
+      "old": "39.8%",
+      "new": "41.1%",
+      "kind": "table_metric",
+      "table": 14,
+      "row": 4,
+      "cell": 3
+    },
+    {
+      "paragraph": 1591,
+      "start": 0,
+      "end": 5,
+      "old": "1,786",
+      "new": "1,730",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 2,
+      "cell": 3
+    },
+    {
+      "paragraph": 1592,
+      "start": 0,
+      "end": 5,
+      "old": "2,826",
+      "new": "2,555",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 2,
+      "cell": 4
+    },
+    {
+      "paragraph": 1593,
+      "start": 0,
+      "end": 6,
+      "old": "32,109",
+      "new": "32,436",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 2,
+      "cell": 5
+    },
+    {
+      "paragraph": 1596,
+      "start": 0,
+      "end": 5,
+      "old": "1,484",
+      "new": "1,474",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 3,
+      "cell": 3
+    },
+    {
+      "paragraph": 1597,
+      "start": 0,
+      "end": 5,
+      "old": "1,888",
+      "new": "1,828",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 3,
+      "cell": 4
+    },
+    {
+      "paragraph": 1598,
+      "start": 0,
+      "end": 6,
+      "old": "12,299",
+      "new": "12,369",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 3,
+      "cell": 5
+    },
+    {
+      "paragraph": 1602,
+      "start": 0,
+      "end": 3,
+      "old": "689",
+      "new": "676",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 4,
+      "cell": 4
+    },
+    {
+      "paragraph": 1603,
+      "start": 0,
+      "end": 5,
+      "old": "6,701",
+      "new": "6,714",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 4,
+      "cell": 5
+    },
+    {
+      "paragraph": 1606,
+      "start": 0,
+      "end": 2,
+      "old": "45",
+      "new": "44",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 5,
+      "cell": 3
+    },
+    {
+      "paragraph": 1607,
+      "start": 0,
+      "end": 3,
+      "old": "179",
+      "new": "148",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 5,
+      "cell": 4
+    },
+    {
+      "paragraph": 1608,
+      "start": 0,
+      "end": 5,
+      "old": "2,036",
+      "new": "2,068",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 5,
+      "cell": 5
+    },
+    {
+      "paragraph": 1612,
+      "start": 0,
+      "end": 2,
+      "old": "43",
+      "new": "36",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 6,
+      "cell": 4
+    },
+    {
+      "paragraph": 1613,
+      "start": 0,
+      "end": 3,
+      "old": "474",
+      "new": "481",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 6,
+      "cell": 5
+    },
+    {
+      "paragraph": 1617,
+      "start": 0,
+      "end": 2,
+      "old": "32",
+      "new": "13",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 7,
+      "cell": 4
+    },
+    {
+      "paragraph": 1618,
+      "start": 0,
+      "end": 3,
+      "old": "259",
+      "new": "278",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 7,
+      "cell": 5
+    },
+    {
+      "paragraph": 1622,
+      "start": 0,
+      "end": 2,
+      "old": "54",
+      "new": "4",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 8,
+      "cell": 4
+    },
+    {
+      "paragraph": 1623,
+      "start": 0,
+      "end": 2,
+      "old": "10",
+      "new": "60",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 8,
+      "cell": 5
+    },
+    {
+      "paragraph": 1627,
+      "start": 0,
+      "end": 1,
+      "old": "4",
+      "new": "0",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 9,
+      "cell": 4
+    },
+    {
+      "paragraph": 1628,
+      "start": 0,
+      "end": 1,
+      "old": "1",
+      "new": "5",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 9,
+      "cell": 5
+    },
+    {
+      "paragraph": 1636,
+      "start": 0,
+      "end": 5,
+      "old": "3,824",
+      "new": "3,757",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 11,
+      "cell": 3
+    },
+    {
+      "paragraph": 1637,
+      "start": 0,
+      "end": 5,
+      "old": "5,717",
+      "new": "5,262",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 11,
+      "cell": 4
+    },
+    {
+      "paragraph": 1638,
+      "start": 0,
+      "end": 6,
+      "old": "53,891",
+      "new": "54,413",
+      "kind": "table_metric",
+      "table": 33,
+      "row": 11,
+      "cell": 5
+    },
+    {
+      "paragraph": 1812,
+      "start": 0,
+      "end": 6,
+      "old": "12,985",
+      "new": "12,519",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 2,
+      "cell": 3
+    },
+    {
+      "paragraph": 1813,
+      "start": 0,
+      "end": 6,
+      "old": "18,503",
+      "new": "22,107",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 2,
+      "cell": 4
+    },
+    {
+      "paragraph": 1814,
+      "start": 0,
+      "end": 6,
+      "old": "76,304",
+      "new": "73,166",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 2,
+      "cell": 5
+    },
+    {
+      "paragraph": 1817,
+      "start": 0,
+      "end": 3,
+      "old": "315",
+      "new": "313",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 3,
+      "cell": 3
+    },
+    {
+      "paragraph": 1818,
+      "start": 1,
+      "end": 6,
+      "old": "2,425",
+      "new": "1,615",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 3,
+      "cell": 4
+    },
+    {
+      "paragraph": 1819,
+      "start": 0,
+      "end": 5,
+      "old": "9,295",
+      "new": "10,107",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 3,
+      "cell": 5
+    },
+    {
+      "paragraph": 1823,
+      "start": 0,
+      "end": 3,
+      "old": "452",
+      "new": "439",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 4,
+      "cell": 4
+    },
+    {
+      "paragraph": 1824,
+      "start": 0,
+      "end": 5,
+      "old": "8,629",
+      "new": "8,642",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 4,
+      "cell": 5
+    },
+    {
+      "paragraph": 1827,
+      "start": 0,
+      "end": 2,
+      "old": "40",
+      "new": "32",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 5,
+      "cell": 3
+    },
+    {
+      "paragraph": 1828,
+      "start": 0,
+      "end": 3,
+      "old": "391",
+      "new": "191",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 5,
+      "cell": 4
+    },
+    {
+      "paragraph": 1829,
+      "start": 0,
+      "end": 5,
+      "old": "7,074",
+      "new": "7,282",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 5,
+      "cell": 5
+    },
+    {
+      "paragraph": 1833,
+      "start": 0,
+      "end": 3,
+      "old": "242",
+      "new": "241",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 6,
+      "cell": 4
+    },
+    {
+      "paragraph": 1834,
+      "start": 0,
+      "end": 5,
+      "old": "5,241",
+      "new": "5,242",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 6,
+      "cell": 5
+    },
+    {
+      "paragraph": 1838,
+      "start": 0,
+      "end": 2,
+      "old": "96",
+      "new": "93",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 7,
+      "cell": 4
+    },
+    {
+      "paragraph": 1839,
+      "start": 0,
+      "end": 5,
+      "old": "2,603",
+      "new": "2,606",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 7,
+      "cell": 5
+    },
+    {
+      "paragraph": 1843,
+      "start": 0,
+      "end": 2,
+      "old": "10",
+      "new": "9",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 8,
+      "cell": 4
+    },
+    {
+      "paragraph": 1844,
+      "start": 0,
+      "end": 3,
+      "old": "490",
+      "new": "491",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 8,
+      "cell": 5
+    },
+    {
+      "paragraph": 1857,
+      "start": 0,
+      "end": 6,
+      "old": "13,478",
+      "new": "13,002",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 11,
+      "cell": 3
+    },
+    {
+      "paragraph": 1858,
+      "start": 1,
+      "end": 7,
+      "old": "22,122",
+      "new": "24,698",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 11,
+      "cell": 4
+    },
+    {
+      "paragraph": 1859,
+      "start": 0,
+      "end": 7,
+      "old": "109,655",
+      "new": "107,555",
+      "kind": "table_metric",
+      "table": 38,
+      "row": 11,
+      "cell": 5
+    }
+  ],
+  "chart_and_annotation_resources": {
+    "source_docx": "D:\\coding\\ugift-data-analysis\\outputs\\narrative-report\\3333-UGIFT-DRAFT-REPORT-21-10-2026-.docx",
+    "source_docx_sha256": "a3e4468150b6b4a289200725a56464c08ec586377cc053f49cdcf628d0e96c4a",
+    "source_asset_workbook_sha256": "ebb433042d1fc6cec104b7508fea98c9cb5fd23a243071b34a15ddc5b9dadda5",
+    "output_root": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\resources",
+    "authoring": "Artifact Tool imported, assigned typed numeric cells, recalculated once per workbook and exported. Only authored numeric cell values transplanted into original package XML.",
+    "native_chart_parts": [
+      {
+        "part": "word/charts/chart1.xml",
+        "output_path": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\resources\\word\\charts\\chart1.xml",
+        "source_sha256": "1c648db764ce907575aed9a71a94425d357930f497fdb21d81e51062a0d62f8b",
+        "output_sha256": "d73163e05bba4779fb27670e6b54947ea341f0df03781a1f54c81110b0dd4576",
+        "point_count": 2,
+        "points": [
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 0,
+            "before": "16663",
+            "after": "16282"
+          },
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 3,
+            "before": "145256",
+            "after": "145255"
+          }
+        ],
+        "all_bytes_outside_target_numeric_cache_values_identical": true
+      },
+      {
+        "part": "word/charts/chart10.xml",
+        "output_path": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\resources\\word\\charts\\chart10.xml",
+        "source_sha256": "4209564c4584595ba3f8b5ff36bb217b7b7bf554c08b4675ee7013ec212337d3",
+        "output_sha256": "20c21f5ba35b2e35174631a8891b49c7c0bf1aec601ee385d90268ffabe76f2a",
+        "point_count": 2,
+        "points": [
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 0,
+            "before": "25",
+            "after": "12"
+          },
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 1,
+            "before": "2",
+            "after": "0"
+          }
+        ],
+        "all_bytes_outside_target_numeric_cache_values_identical": true
+      },
+      {
+        "part": "word/charts/chart4.xml",
+        "output_path": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\resources\\word\\charts\\chart4.xml",
+        "source_sha256": "fb264c65a546c5597cd436586c57c06a512cef2b62a26a8b5228bfc932a1bab0",
+        "output_sha256": "3016d598a0bf23955a6442c9eeb2127361790c4bb18d3f5ffc3add0798762710",
+        "point_count": 13,
+        "points": [
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 0,
+            "before": "0.29283871760225999",
+            "after": "0.293207222699914"
+          },
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 2,
+            "before": "6.0285029638037502E-2",
+            "after": "0.05922878042628327"
+          },
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 3,
+            "before": "9.2788544284189797E-2",
+            "after": "0.08951154865581219"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 0,
+            "before": "6.8173443065962401E-3",
+            "after": "0.06387421692666749"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 1,
+            "before": "8.3056478405315604E-2",
+            "after": "0.02823920265780731"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 2,
+            "before": "9.0128011098499106E-2",
+            "after": "0.08295497540673477"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 3,
+            "before": "0.15229768338439201",
+            "after": "0.17003201266737805"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 4,
+            "before": "2.0215194000652099E-2",
+            "after": "0.0026084121291164004"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 0,
+            "before": "0.70034393809114304",
+            "after": "0.6429185603734185"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 1,
+            "before": "0.87375415282391999",
+            "after": "0.9285714285714286"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 2,
+            "before": "0.84958695926346295",
+            "after": "0.857816244166982"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 3,
+            "before": "0.75491377233141699",
+            "after": "0.7404564386768098"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 4,
+            "before": "0.97978480599934703",
+            "after": "0.9973915878708836"
+          }
+        ],
+        "all_bytes_outside_target_numeric_cache_values_identical": true
+      },
+      {
+        "part": "word/charts/chart5.xml",
+        "output_path": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\resources\\word\\charts\\chart5.xml",
+        "source_sha256": "2b72538f64fe895ae0dec981be102f61f8a272ae41177e2c37c63c0e4fcea1bb",
+        "output_sha256": "711d5b1b3267978069af7e51eef7c7593c4af36521fc80faa4f00fa80664f66d",
+        "point_count": 22,
+        "points": [
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 0,
+            "before": "0.53930131004366799",
+            "after": "0.6048034934497817"
+          },
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 3,
+            "before": "0.60048899755501195",
+            "after": "0.5887530562347189"
+          },
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 4,
+            "before": "5.3846153846153801E-2",
+            "after": "0.27450980392156865"
+          },
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 6,
+            "before": "0.97448111602585896",
+            "after": "0.9730409777138749"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 0,
+            "before": "7.6419213973799097E-2",
+            "after": "0.039301310043668124"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 1,
+            "before": "2.2988505747126398E-2",
+            "after": "0.011494252873563218"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 2,
+            "before": "0",
+            "after": "0.09051284429194102"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 3,
+            "before": "1.9559902200489E-3",
+            "after": "0"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 4,
+            "before": "6.9230769230769207E-2",
+            "after": "0"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 6,
+            "before": "1.1228308948621901E-2",
+            "after": "0.01186196980589504"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 10,
+            "before": "0.7",
+            "after": "0.6"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 11,
+            "before": "7.69230769230769E-2",
+            "after": "0"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 12,
+            "before": "0.48148148148148101",
+            "after": "0"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 0,
+            "before": "0.38427947598253198",
+            "after": "0.3558951965065502"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 1,
+            "before": "9.1954022988505704E-2",
+            "after": "0.10344827586206896"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 2,
+            "before": "0.95752573495316695",
+            "after": "0.867012890661226"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 3,
+            "before": "0.397555012224938",
+            "after": "0.41124694376528115"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 4,
+            "before": "0.87692307692307603",
+            "after": "0.7254901960784313"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 6,
+            "before": "1.42905750255188E-2",
+            "after": "0.01509705248023005"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 10,
+            "before": "0",
+            "after": "0.1"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 11,
+            "before": "0.38461538461538403",
+            "after": "0.46153846153846156"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 12,
+            "before": "0.51851851851851805",
+            "after": "1"
+          }
+        ],
+        "all_bytes_outside_target_numeric_cache_values_identical": true
+      },
+      {
+        "part": "word/charts/chart6.xml",
+        "output_path": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\resources\\word\\charts\\chart6.xml",
+        "source_sha256": "742caa6e581a3c36db8516c5f492a7df48c132b6bcc59e79df41b9c0733353aa",
+        "output_sha256": "5e0f1c404a57bd38fdf06309db3558d54d9ee65463eba3981ed42d433203cb40",
+        "point_count": 18,
+        "points": [
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 0,
+            "before": "0.53930131004366799",
+            "after": "0.6048034934497817"
+          },
+          {
+            "series_index_1based": 1,
+            "point_index_0based": 3,
+            "before": "0.60048899755501195",
+            "after": "0.5887530562347189"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 0,
+            "before": "7.6419213973799097E-2",
+            "after": "0.039301310043668124"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 1,
+            "before": "2.2988505747126398E-2",
+            "after": "0.011494252873563218"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 2,
+            "before": "0",
+            "after": "0.09051284429194102"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 3,
+            "before": "1.95599022004889E-3",
+            "after": "0"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 4,
+            "before": "0.19607843137254899",
+            "after": "0"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 10,
+            "before": "0.7",
+            "after": "0.6"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 11,
+            "before": "7.69230769230769E-2",
+            "after": "0"
+          },
+          {
+            "series_index_1based": 2,
+            "point_index_0based": 12,
+            "before": "1",
+            "after": "0"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 0,
+            "before": "0.38427947598253198",
+            "after": "0.3558951965065502"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 1,
+            "before": "9.1954022988505704E-2",
+            "after": "0.10344827586206896"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 2,
+            "before": "0.95752573495316695",
+            "after": "0.867012890661226"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 3,
+            "before": "0.397555012224938",
+            "after": "0.41124694376528115"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 4,
+            "before": "0.52941176470588203",
+            "after": "0.7254901960784313"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 10,
+            "before": "0",
+            "after": "0.1"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 11,
+            "before": "0.38461538461538403",
+            "after": "0.46153846153846156"
+          },
+          {
+            "series_index_1based": 3,
+            "point_index_0based": 12,
+            "before": "0",
+            "after": "1"
+          }
+        ],
+        "all_bytes_outside_target_numeric_cache_values_identical": true
+      }
+    ],
+    "embedded_workbooks": [
+      {
+        "part": "word/embeddings/Microsoft_Excel_Worksheet.xlsx",
+        "output_path": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\resources\\word\\embeddings\\Microsoft_Excel_Worksheet.xlsx",
+        "source_sha256": "1f4882f2702db8daa19e94647d705566fb6cd9e969375c13c4c63b79589fd628",
+        "output_sha256": "8168e69bf197e9a9b4434d6c30ce6fbdc00ddff1cbd474934c1fe0ecb3486069",
+        "changed_package_parts": [
+          "xl/worksheets/sheet1.xml"
+        ],
+        "untouched_package_parts_byte_identical": true,
+        "worksheet_bytes_outside_target_numeric_values_identical": true,
+        "cells": [
+          {
+            "cell": "B2",
+            "before": 16663,
+            "after": 16282,
+            "chart_part": "word/charts/chart1.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 0,
+            "before_serialized": "16663",
+            "authored_after_serialized": "16282"
+          },
+          {
+            "cell": "B5",
+            "before": 145256,
+            "after": 145255,
+            "chart_part": "word/charts/chart1.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 3,
+            "before_serialized": "145256",
+            "authored_after_serialized": "145255"
+          }
+        ],
+        "inner_chart_cache_updates": []
+      },
+      {
+        "part": "word/embeddings/Microsoft_Excel_Worksheet9.xlsx",
+        "output_path": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\resources\\word\\embeddings\\Microsoft_Excel_Worksheet9.xlsx",
+        "source_sha256": "2f51953f28e5e2ea3ff7c35b5f8291e4a9cd969973c017454df166328ea04640",
+        "output_sha256": "b22e6e4d6dc307a5611629be3ece074da041f0cc0e6cd67ff2061a499856e899",
+        "changed_package_parts": [
+          "xl/worksheets/sheet1.xml"
+        ],
+        "untouched_package_parts_byte_identical": true,
+        "worksheet_bytes_outside_target_numeric_values_identical": true,
+        "cells": [
+          {
+            "cell": "B2",
+            "before": 25,
+            "after": 12,
+            "chart_part": "word/charts/chart10.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 0,
+            "before_serialized": "25",
+            "authored_after_serialized": "12"
+          },
+          {
+            "cell": "B3",
+            "before": 2,
+            "after": 0,
+            "chart_part": "word/charts/chart10.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 1,
+            "before_serialized": "2",
+            "authored_after_serialized": "0"
+          }
+        ],
+        "inner_chart_cache_updates": []
+      },
+      {
+        "part": "word/embeddings/Microsoft_Excel_Worksheet3.xlsx",
+        "output_path": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\resources\\word\\embeddings\\Microsoft_Excel_Worksheet3.xlsx",
+        "source_sha256": "bc9f100fbd7c0a49ee6bc82cb46a50caf8646470c9934fcb3724c569f41cc227",
+        "output_sha256": "14e4afe62bc02c0d9183057c8b5fa811ecdb5661bb37407e2830c94a05714973",
+        "changed_package_parts": [
+          "xl/worksheets/sheet1.xml"
+        ],
+        "untouched_package_parts_byte_identical": true,
+        "worksheet_bytes_outside_target_numeric_values_identical": true,
+        "cells": [
+          {
+            "cell": "B2",
+            "before": 0.29283871760226,
+            "after": 0.293207222699914,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 0,
+            "before_serialized": "0.29283871760225999",
+            "authored_after_serialized": "0.293207222699914"
+          },
+          {
+            "cell": "B4",
+            "before": 0.0602850296380375,
+            "after": 0.05922878042628327,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 2,
+            "before_serialized": "6.0285029638037502E-2",
+            "authored_after_serialized": "0.05922878042628327"
+          },
+          {
+            "cell": "B5",
+            "before": 0.0927885442841898,
+            "after": 0.08951154865581219,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 3,
+            "before_serialized": "9.2788544284189797E-2",
+            "authored_after_serialized": "0.08951154865581219"
+          },
+          {
+            "cell": "C2",
+            "before": 0.00681734430659624,
+            "after": 0.06387421692666749,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 0,
+            "before_serialized": "6.8173443065962401E-3",
+            "authored_after_serialized": "0.06387421692666749"
+          },
+          {
+            "cell": "C3",
+            "before": 0.0830564784053156,
+            "after": 0.02823920265780731,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 1,
+            "before_serialized": "8.3056478405315604E-2",
+            "authored_after_serialized": "0.02823920265780731"
+          },
+          {
+            "cell": "C4",
+            "before": 0.0901280110984991,
+            "after": 0.08295497540673477,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 2,
+            "before_serialized": "9.0128011098499106E-2",
+            "authored_after_serialized": "0.08295497540673477"
+          },
+          {
+            "cell": "C5",
+            "before": 0.152297683384392,
+            "after": 0.17003201266737805,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 3,
+            "before_serialized": "0.15229768338439201",
+            "authored_after_serialized": "0.17003201266737805"
+          },
+          {
+            "cell": "C6",
+            "before": 0.0202151940006521,
+            "after": 0.0026084121291164004,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 4,
+            "before_serialized": "2.0215194000652099E-2",
+            "authored_after_serialized": "0.0026084121291164004"
+          },
+          {
+            "cell": "D2",
+            "before": 0.700343938091143,
+            "after": 0.6429185603734185,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 0,
+            "before_serialized": "0.70034393809114304",
+            "authored_after_serialized": "0.6429185603734185"
+          },
+          {
+            "cell": "D3",
+            "before": 0.87375415282392,
+            "after": 0.9285714285714286,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 1,
+            "before_serialized": "0.87375415282391999",
+            "authored_after_serialized": "0.9285714285714286"
+          },
+          {
+            "cell": "D4",
+            "before": 0.849586959263463,
+            "after": 0.857816244166982,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 2,
+            "before_serialized": "0.84958695926346295",
+            "authored_after_serialized": "0.857816244166982"
+          },
+          {
+            "cell": "D5",
+            "before": 0.754913772331417,
+            "after": 0.7404564386768098,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 3,
+            "before_serialized": "0.75491377233141699",
+            "authored_after_serialized": "0.7404564386768098"
+          },
+          {
+            "cell": "D6",
+            "before": 0.979784805999347,
+            "after": 0.9973915878708836,
+            "chart_part": "word/charts/chart4.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 4,
+            "before_serialized": "0.97978480599934703",
+            "authored_after_serialized": "0.9973915878708836"
+          }
+        ],
+        "inner_chart_cache_updates": []
+      },
+      {
+        "part": "word/embeddings/Microsoft_Excel_Worksheet4.xlsx",
+        "output_path": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\resources\\word\\embeddings\\Microsoft_Excel_Worksheet4.xlsx",
+        "source_sha256": "231a4191402a40a0e75eff34ac42dd7857ee918cb4fe7fd0a9e0d7c1c794e7b6",
+        "output_sha256": "e4f54bfb8dd0ee5fa8cb6fbb94b7c757fd4cfbd8a982275a9aee50fa05c231c2",
+        "changed_package_parts": [
+          "xl/worksheets/sheet1.xml"
+        ],
+        "untouched_package_parts_byte_identical": true,
+        "worksheet_bytes_outside_target_numeric_values_identical": true,
+        "cells": [
+          {
+            "cell": "B2",
+            "before": 0.539301310043668,
+            "after": 0.6048034934497817,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 0,
+            "before_serialized": "0.53930131004366799",
+            "authored_after_serialized": "0.6048034934497817"
+          },
+          {
+            "cell": "B5",
+            "before": 0.600488997555012,
+            "after": 0.5887530562347189,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 3,
+            "before_serialized": "0.60048899755501195",
+            "authored_after_serialized": "0.5887530562347189"
+          },
+          {
+            "cell": "B6",
+            "before": 0.0538461538461538,
+            "after": 0.27450980392156865,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 4,
+            "before_serialized": "5.3846153846153801E-2",
+            "authored_after_serialized": "0.27450980392156865"
+          },
+          {
+            "cell": "B8",
+            "before": 0.974481116025859,
+            "after": 0.9730409777138749,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 6,
+            "before_serialized": "0.97448111602585896",
+            "authored_after_serialized": "0.9730409777138749"
+          },
+          {
+            "cell": "C2",
+            "before": 0.0764192139737991,
+            "after": 0.039301310043668124,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 0,
+            "before_serialized": "7.6419213973799097E-2",
+            "authored_after_serialized": "0.039301310043668124"
+          },
+          {
+            "cell": "C3",
+            "before": 0.0229885057471264,
+            "after": 0.011494252873563218,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 1,
+            "before_serialized": "2.2988505747126398E-2",
+            "authored_after_serialized": "0.011494252873563218"
+          },
+          {
+            "cell": "C4",
+            "before": 0,
+            "after": 0.09051284429194102,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 2,
+            "before_serialized": "0",
+            "authored_after_serialized": "0.09051284429194102"
+          },
+          {
+            "cell": "C5",
+            "before": 0.0019559902200489,
+            "after": 0.0,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 3,
+            "before_serialized": "1.9559902200489E-3",
+            "authored_after_serialized": "0"
+          },
+          {
+            "cell": "C6",
+            "before": 0.0692307692307692,
+            "after": 0.0,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 4,
+            "before_serialized": "6.9230769230769207E-2",
+            "authored_after_serialized": "0"
+          },
+          {
+            "cell": "C8",
+            "before": 0.0112283089486219,
+            "after": 0.01186196980589504,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 6,
+            "before_serialized": "1.1228308948621901E-2",
+            "authored_after_serialized": "0.01186196980589504"
+          },
+          {
+            "cell": "C12",
+            "before": 0.7,
+            "after": 0.6,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 10,
+            "before_serialized": "0.7",
+            "authored_after_serialized": "0.6"
+          },
+          {
+            "cell": "C13",
+            "before": 0.0769230769230769,
+            "after": 0.0,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 11,
+            "before_serialized": "7.69230769230769E-2",
+            "authored_after_serialized": "0"
+          },
+          {
+            "cell": "C14",
+            "before": 0.481481481481481,
+            "after": 0.0,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 12,
+            "before_serialized": "0.48148148148148101",
+            "authored_after_serialized": "0"
+          },
+          {
+            "cell": "D2",
+            "before": 0.384279475982532,
+            "after": 0.3558951965065502,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 0,
+            "before_serialized": "0.38427947598253198",
+            "authored_after_serialized": "0.3558951965065502"
+          },
+          {
+            "cell": "D3",
+            "before": 0.0919540229885057,
+            "after": 0.10344827586206896,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 1,
+            "before_serialized": "9.1954022988505704E-2",
+            "authored_after_serialized": "0.10344827586206896"
+          },
+          {
+            "cell": "D4",
+            "before": 0.957525734953167,
+            "after": 0.867012890661226,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 2,
+            "before_serialized": "0.95752573495316695",
+            "authored_after_serialized": "0.867012890661226"
+          },
+          {
+            "cell": "D5",
+            "before": 0.397555012224938,
+            "after": 0.41124694376528115,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 3,
+            "before_serialized": "0.397555012224938",
+            "authored_after_serialized": "0.41124694376528115"
+          },
+          {
+            "cell": "D6",
+            "before": 0.876923076923076,
+            "after": 0.7254901960784313,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 4,
+            "before_serialized": "0.87692307692307603",
+            "authored_after_serialized": "0.7254901960784313"
+          },
+          {
+            "cell": "D8",
+            "before": 0.0142905750255188,
+            "after": 0.01509705248023005,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 6,
+            "before_serialized": "1.42905750255188E-2",
+            "authored_after_serialized": "0.01509705248023005"
+          },
+          {
+            "cell": "D12",
+            "before": 0,
+            "after": 0.1,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 10,
+            "before_serialized": "0",
+            "authored_after_serialized": "0.1"
+          },
+          {
+            "cell": "D13",
+            "before": 0.384615384615384,
+            "after": 0.46153846153846156,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 11,
+            "before_serialized": "0.38461538461538403",
+            "authored_after_serialized": "0.46153846153846156"
+          },
+          {
+            "cell": "D14",
+            "before": 0.518518518518518,
+            "after": 1.0,
+            "chart_part": "word/charts/chart5.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 12,
+            "before_serialized": "0.51851851851851805",
+            "authored_after_serialized": "1"
+          }
+        ],
+        "inner_chart_cache_updates": []
+      },
+      {
+        "part": "word/embeddings/Microsoft_Excel_Worksheet5.xlsx",
+        "output_path": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\resources\\word\\embeddings\\Microsoft_Excel_Worksheet5.xlsx",
+        "source_sha256": "a61fad9742e79d11b4731aae330d63189f54469b2fbc51edc43fa4c2380fcdbb",
+        "output_sha256": "f373240e833631ee2d08a0f0661f83834028efbd388e4a946b659aa926f6e480",
+        "changed_package_parts": [
+          "xl/worksheets/sheet1.xml"
+        ],
+        "untouched_package_parts_byte_identical": true,
+        "worksheet_bytes_outside_target_numeric_values_identical": true,
+        "cells": [
+          {
+            "cell": "B2",
+            "before": 0.539301310043668,
+            "after": 0.6048034934497817,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 0,
+            "before_serialized": "0.53930131004366799",
+            "authored_after_serialized": "0.6048034934497817"
+          },
+          {
+            "cell": "B5",
+            "before": 0.600488997555012,
+            "after": 0.5887530562347189,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 1,
+            "point_index_0based": 3,
+            "before_serialized": "0.60048899755501195",
+            "authored_after_serialized": "0.5887530562347189"
+          },
+          {
+            "cell": "C2",
+            "before": 0.0764192139737991,
+            "after": 0.039301310043668124,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 0,
+            "before_serialized": "7.6419213973799097E-2",
+            "authored_after_serialized": "0.039301310043668124"
+          },
+          {
+            "cell": "C3",
+            "before": 0.0229885057471264,
+            "after": 0.011494252873563218,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 1,
+            "before_serialized": "2.2988505747126398E-2",
+            "authored_after_serialized": "0.011494252873563218"
+          },
+          {
+            "cell": "C4",
+            "before": 0,
+            "after": 0.09051284429194102,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 2,
+            "before_serialized": "0",
+            "authored_after_serialized": "0.09051284429194102"
+          },
+          {
+            "cell": "C5",
+            "before": 0.00195599022004889,
+            "after": 0.0,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 3,
+            "before_serialized": "1.95599022004889E-3",
+            "authored_after_serialized": "0"
+          },
+          {
+            "cell": "C6",
+            "before": 0.196078431372549,
+            "after": 0.0,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 4,
+            "before_serialized": "0.19607843137254899",
+            "authored_after_serialized": "0"
+          },
+          {
+            "cell": "C12",
+            "before": 0.7,
+            "after": 0.6,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 10,
+            "before_serialized": "0.7",
+            "authored_after_serialized": "0.6"
+          },
+          {
+            "cell": "C13",
+            "before": 0.0769230769230769,
+            "after": 0.0,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 11,
+            "before_serialized": "7.69230769230769E-2",
+            "authored_after_serialized": "0"
+          },
+          {
+            "cell": "C14",
+            "before": 1,
+            "after": 0.0,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 2,
+            "point_index_0based": 12,
+            "before_serialized": "1",
+            "authored_after_serialized": "0"
+          },
+          {
+            "cell": "D2",
+            "before": 0.384279475982532,
+            "after": 0.3558951965065502,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 0,
+            "before_serialized": "0.38427947598253198",
+            "authored_after_serialized": "0.3558951965065502"
+          },
+          {
+            "cell": "D3",
+            "before": 0.0919540229885057,
+            "after": 0.10344827586206896,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 1,
+            "before_serialized": "9.1954022988505704E-2",
+            "authored_after_serialized": "0.10344827586206896"
+          },
+          {
+            "cell": "D4",
+            "before": 0.957525734953167,
+            "after": 0.867012890661226,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 2,
+            "before_serialized": "0.95752573495316695",
+            "authored_after_serialized": "0.867012890661226"
+          },
+          {
+            "cell": "D5",
+            "before": 0.397555012224938,
+            "after": 0.41124694376528115,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 3,
+            "before_serialized": "0.397555012224938",
+            "authored_after_serialized": "0.41124694376528115"
+          },
+          {
+            "cell": "D6",
+            "before": 0.529411764705882,
+            "after": 0.7254901960784313,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 4,
+            "before_serialized": "0.52941176470588203",
+            "authored_after_serialized": "0.7254901960784313"
+          },
+          {
+            "cell": "D12",
+            "before": 0,
+            "after": 0.1,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 10,
+            "before_serialized": "0",
+            "authored_after_serialized": "0.1"
+          },
+          {
+            "cell": "D13",
+            "before": 0.384615384615384,
+            "after": 0.46153846153846156,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 11,
+            "before_serialized": "0.38461538461538403",
+            "authored_after_serialized": "0.46153846153846156"
+          },
+          {
+            "cell": "D14",
+            "before": 0,
+            "after": 1.0,
+            "chart_part": "word/charts/chart6.xml",
+            "series_index_1based": 3,
+            "point_index_0based": 12,
+            "before_serialized": "0",
+            "authored_after_serialized": "1"
+          }
+        ],
+        "inner_chart_cache_updates": []
+      }
+    ],
+    "docx_modified": false,
+    "summary": {
+      "embedded_workbook_count": 5,
+      "native_chart_part_count": 5,
+      "embedded_numeric_cell_updates": 57,
+      "native_chart_numeric_cache_updates": 57,
+      "inner_chart_numeric_cache_updates": 0,
+      "labels_styles_formulas_and_relationships_unchanged": true,
+      "drawing_overlay_part_count": 1,
+      "drawing_overlay_current_numeric_label_updates": 4,
+      "total_output_word_package_parts": 11
+    },
+    "final_validation": {
+      "all_output_xlsx_crc_checks_pass": true,
+      "five_resource_workbooks_change_only_xl_worksheets_sheet1_xml": true,
+      "artifact_runner_exit_code": 1,
+      "artifact_all_five_exports_and_completed_verification_log_present": true,
+      "artifact_runner_note": "The runtime returned exit status1 after logging all five successful exports without an error trace. All target numeric values, formula preservation, saved ZIP CRCs and package byte differences were independently verified.",
+      "previews_inspected_before_and_after": true,
+      "preview_scope_note": "Original compact data-view formatting was preserved, including pre-existing clipped labels. Final native Word-chart visual verification belongs to parent document rendering.",
+      "source_docx_current_sha256": "a3e4468150b6b4a289200725a56464c08ec586377cc053f49cdcf628d0e96c4a",
+      "source_docx_unchanged_at_resource_validation": true
+    },
+    "drawing_overlay_parts": [
+      {
+        "part": "word/drawings/drawing2.xml",
+        "output_path": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\resources\\word\\drawings\\drawing2.xml",
+        "source_sha256": "3655a7549616d5f9b29040dc9831609b96059d2ae9eae38560d07a949c33f5f4",
+        "output_sha256": "b6579cc278cb719532f4a2477e9c65d66a530b4ebf3233fad98a18484985a8c2",
+        "numeric_label_changes": [
+          {
+            "shape_index_1based": 6,
+            "shape_id": "7",
+            "shape_name": "TextBox 6",
+            "label": "MoH / Other Markings",
+            "before": "19.6%",
+            "struck_historical_value": false,
+            "shape_background": "00FF00",
+            "proposed": "0.0%",
+            "source_formula": "scopes['MOH BK'].marking['other'] / scopes['MOH BK'].assets *100",
+            "changed": true,
+            "action": "update_current_numeric_text"
+          },
+          {
+            "shape_index_1based": 9,
+            "shape_id": "10",
+            "shape_name": "TextBox 9",
+            "label": "MoH / Not Engraved",
+            "before": "52.9%",
+            "struck_historical_value": false,
+            "shape_background": "00FF00",
+            "proposed": "72.5%",
+            "source_formula": "scopes['MOH BK'].marking['not_engraved'] / scopes['MOH BK'].assets *100",
+            "changed": true,
+            "action": "update_current_numeric_text"
+          },
+          {
+            "shape_index_1based": 21,
+            "shape_id": "22",
+            "shape_name": "TextBox 21",
+            "label": "MoLHUD / Other Markings",
+            "before": "100.0%",
+            "struck_historical_value": false,
+            "shape_background": "00FF00",
+            "proposed": "0.0%",
+            "source_formula": "scopes['MOLHUD BK'].marking['other'] / scopes['MOLHUD BK'].assets *100",
+            "changed": true,
+            "action": "update_current_numeric_text"
+          },
+          {
+            "shape_index_1based": 24,
+            "shape_id": "25",
+            "shape_name": "TextBox 24",
+            "label": "MoLHUD / Not Engraved",
+            "before": "0.0%",
+            "struck_historical_value": false,
+            "shape_background": "00FF00",
+            "proposed": "100.0%",
+            "source_formula": "scopes['MOLHUD BK'].marking['not_engraved'] / scopes['MOLHUD BK'].assets *100",
+            "changed": true,
+            "action": "update_current_numeric_text"
+          }
+        ],
+        "all_bytes_outside_current_numeric_label_text_identical": true
+      }
+    ],
+    "drawing_overlay_audit_path": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\drawing-overlay-verification.json"
+  },
+  "pagination_verification": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\toc-delivery-pagination-verification.json",
+  "visual_verification": "D:\\coding\\ugift-data-analysis\\tmp\\report-metrics-20261022\\delivery-pages45-58-visual-review.json"
+}
