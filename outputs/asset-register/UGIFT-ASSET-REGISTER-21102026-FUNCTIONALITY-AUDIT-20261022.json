@@ -1,0 +1,379 @@
+{
+  "completed_utc": "2026-10-22T10:09:29.243739+00:00",
+  "source": "D:\\coding\\ugift-data-analysis\\outputs\\asset-register\\UGIFT-ASSET-REGISTER-21102026.xlsx",
+  "output": "D:\\coding\\ugift-data-analysis\\outputs\\asset-register\\UGIFT-ASSET-REGISTER-21102026.xlsx",
+  "delivery_note": null,
+  "backup": "D:\\coding\\ugift-data-analysis\\tmp\\mda-status-correction-20261022\\before.xlsx",
+  "scope": "Restore reliably matched MDA Faulty-to-Functional changes in equipment status only, synchronize the generated functionality word in remarks, and highlight recorded Faulty MDA statuses.",
+  "policy": "Retain all 1,965 blank-origin Functional assignments. No ownership, in-use, financial, quantity or other asset fields were changed.",
+  "history": {
+    "earlier_faulty_evidence": "82d11c16, 27 September 2026: MoWT 16, OPM 3, MoH 1.",
+    "faulty_to_functional_commit": "21d8a9e3, 6 October 2026 17:29:56 Africa/Kampala: 16 MoWT records changed from Faulty to Functional; IN_USE_FLAG remained NO.",
+    "scan": "All thirteen MDA books were traced across canonical and legacy schemas, including 28 unique MF/REF blobs for 27 September to 2 October, 22 REF snapshots from 2 to 6 October and 15 unique post-change workbook blobs through 21 October.",
+    "mofped": "No reliably matched Faulty-to-Functional Finance asset was identified. All 458 current MOFPED BK statuses remain Functional.",
+    "source_qualification": "The 16 MoWT source remarks said: Not verified due to limited information about their location. This correction restores the earlier register classification; it is not a new physical-condition inspection.",
+    "excluded_legacy_records": "Five legacy DATA CENTRE software rows had a header-derived Faulty classification and no reliable one-to-one current asset match. They were not treated as five verified faulty assets."
+  },
+  "assets_restored": [
+    {
+      "row": 283,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209598",
+      "tag": "UGIFT-MOWT/MON/22-01",
+      "description": "Dell Optiplex Desktop Computer",
+      "in_use": "NO"
+    },
+    {
+      "row": 284,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209599",
+      "tag": "UGIFT-MOWT/KBD/22-01",
+      "description": "Dell Optiplex Desktop Computer",
+      "in_use": "NO"
+    },
+    {
+      "row": 285,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209600",
+      "tag": "UGIFT-MOWT/CPU/22-01",
+      "description": "Dell Optiplex Desktop Computer",
+      "in_use": "NO"
+    },
+    {
+      "row": 286,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209601",
+      "tag": "UGIFT-MOWT/UPS/22-01",
+      "description": "Apc-ups 1000VA",
+      "in_use": "NO"
+    },
+    {
+      "row": 287,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209602",
+      "tag": "UGIFT-MOWT/MON/22-02",
+      "description": "Dell Optiplex Desktop Computer",
+      "in_use": "NO"
+    },
+    {
+      "row": 288,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209603",
+      "tag": "UGIFT-MOWT/KBD/22-02",
+      "description": "Dell Optiplex Desktop Computer",
+      "in_use": "NO"
+    },
+    {
+      "row": 289,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209604",
+      "tag": "UGIFT-MOWT/CPU/22-02",
+      "description": "Dell Optiplex Desktop Computer",
+      "in_use": "NO"
+    },
+    {
+      "row": 290,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209605",
+      "tag": "UGIFT-MOWT/UPS/22-02",
+      "description": "Apc-ups 1000VA",
+      "in_use": "NO"
+    },
+    {
+      "row": 291,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209606",
+      "tag": "UGIFT-MOWT/MON/22-03",
+      "description": "Dell Optiplex Desktop Computer",
+      "in_use": "NO"
+    },
+    {
+      "row": 292,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209607",
+      "tag": "UGIFT-MOWT/KBD/22-03",
+      "description": "Dell Optiplex Desktop Computer",
+      "in_use": "NO"
+    },
+    {
+      "row": 293,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209608",
+      "tag": "UGIFT-MOWT/CPU/22-03",
+      "description": "Dell Optiplex Desktop Computer",
+      "in_use": "NO"
+    },
+    {
+      "row": 294,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209609",
+      "tag": "UGIFT-MOWT/UPS/22-03",
+      "description": "Apc-ups 1000VA",
+      "in_use": "NO"
+    },
+    {
+      "row": 295,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209610",
+      "tag": "UGIFT-MOWT/MON/22-04",
+      "description": "Dell Optiplex Desktop Computer",
+      "in_use": "NO"
+    },
+    {
+      "row": 296,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209611",
+      "tag": "UGIFT-MOWT/KBD/22-04",
+      "description": "Dell Optiplex Desktop Computer",
+      "in_use": "NO"
+    },
+    {
+      "row": 297,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209612",
+      "tag": "UGIFT-MOWT/CPU/22-04",
+      "description": "Dell Optiplex Desktop Computer",
+      "in_use": "NO"
+    },
+    {
+      "row": 298,
+      "book": "MOWT BK",
+      "asset_number": "UGIFT-209613",
+      "tag": "UGIFT-MOWT/UPS/22-04",
+      "description": "Apc-ups 1000VA",
+      "in_use": "NO"
+    }
+  ],
+  "cell_changes": [
+    {
+      "cell": "BK283",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL283",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK284",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL284",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK285",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL285",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK286",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL286",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK287",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL287",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK288",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL288",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK289",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL289",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK290",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL290",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK291",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL291",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK292",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL292",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK293",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL293",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK294",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL294",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK295",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL295",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK296",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL296",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK297",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL297",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    },
+    {
+      "cell": "BK298",
+      "old": "Functional",
+      "value": "Faulty"
+    },
+    {
+      "cell": "BL298",
+      "old": "Functional, In store. Not engraved.",
+      "value": "Faulty, In store. Not engraved."
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "changed_cells": 32,
+    "status_restorations": 16,
+    "preserved_package_parts": [
+      "[Content_Types].xml",
+      "_rels/.rels",
+      "xl/workbook.xml",
+      "xl/_rels/workbook.xml.rels",
+      "xl/theme/theme1.xml",
+      "xl/sharedStrings.xml",
+      "docProps/core.xml",
+      "docProps/app.xml"
+    ],
+    "other_worksheet_xml_byte_identical": true,
+    "preserved_formulas_and_non_target_cells": true,
+    "mda_counts_after": {
+      "MAAIF BK": {
+        "Functional": 2045
+      },
+      "MGLSD BK": {
+        "Functional": 10
+      },
+      "MOES BK": {
+        "Functional": 10783
+      },
+      "MOFPED BK": {
+        "Functional": 458
+      },
+      "MOH BK": {
+        "Functional": 50,
+        "Faulty": 1
+      },
+      "MOLG BK": {
+        "Functional": 13
+      },
+      "MOLHUD BK": {
+        "Functional": 12
+      },
+      "MOWE BK": {
+        "Functional": 2782
+      },
+      "MOWT BK": {
+        "Functional": 71,
+        "Faulty": 16
+      },
+      "NEMA BK": {
+        "Functional": 6
+      },
+      "OAG BK": {
+        "Functional": 20
+      },
+      "OPM BK": {
+        "Functional": 7,
+        "Faulty": 3
+      },
+      "PPDA BK": {
+        "Functional": 5
+      }
+    },
+    "source_sha256": "99318ea93759289eed1c08f777587d05b7419839a76d94407ccc07ebde0d5087",
+    "candidate_sha256": "9700c29c055592fd9bc6091e54ab8e4aa990f810ffc34fef0025a1c87b4d3f02"
+  },
+  "subsequent_update": {
+    "completed_utc": "2026-10-22T10:28:34.456666+00:00",
+    "faulty_highlighting_removed": true,
+    "restored_statuses_preserved": true,
+    "current_output_sha256": "c7bcdb6dd3804585b395f0827cf2b774cb4a357ce1b1d379e1b5de674de44ee1",
+    "device_number_audit": "D:\\coding\\ugift-data-analysis\\outputs\\asset-register\\UGIFT-ASSET-REGISTER-21102026-DEVICE-NUMBER-AUDIT-20261022.json"
+  }
+}
